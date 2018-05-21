@@ -1,0 +1,245 @@
+body{padding: 0 0 98px;}
+/*导航*/
+
+/*title特殊样式*/
+.default > div.title{
+	padding-left: 90px; z-index: 2;
+}
+.default > div.title:before{
+	width: 44px; height: 80px;
+	top: 0;
+}
+#Star.default > div.title:before{
+	background: url(../images/icon_home_star.png) no-repeat center; background-size: 44px;
+}
+#Match.default > div.title:before{
+	background: url(../images/icon_home_recommend.png) no-repeat center; background-size: 44px;
+}
+#Package.default > div.title:before{
+	background: url(../images/icon_home_package.png) no-repeat center; background-size: 44px;
+}
+#NewMatch.default > div.title:before{
+	background: url(../images/icon_home_new.png) no-repeat center; background-size: 44px;
+}
+
+/*焦点图*/
+#Focus{
+	height: 320px;
+	margin-top: 0;
+	overflow: hidden;
+	position: relative;
+}
+#Focus > a{
+	width: 100%; height: 100%;
+	display: block;
+	visibility: hidden;
+	transform: translateX(100%); -ms-transform: translateX(100%); -webkit-transform: translateX(100%); -o-transform: translateX(100%); -moz-transform: translateX(100%);
+	transition: all 0.3s; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s;
+	position: absolute; top: 0; left: 0; z-index: -1;
+}
+#Focus > a.before{
+	z-index: 3;
+	visibility: visible;
+	transform: translateX(0); -ms-transform: translateX(0); -webkit-transform: translateX(0); -o-transform: translateX(0); -moz-transform: translateX(0);
+}
+#Focus > a.back{
+	transform: translateX(-100%); -ms-transform: translateX(-100%); -webkit-transform: translateX(-100%); -o-transform: translateX(-100%); -moz-transform: translateX(-100%);
+}
+#Focus img{
+	width: 100%; height: 100%;
+	-webkit-object-fit: cover; -o-object-fit: cover; object-fit: cover;
+	-webkit-oobject-position: center; -o-object-position: center; object-position: center; 
+	display: block;
+}
+
+/*信息*/
+div#Message{
+	padding: 32px 0 30px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	-webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
+}
+div#Message > a{
+	text-align: center;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+	display: block;
+	position: relative;
+}
+div#Message > a[new]:before{
+	width: 14px; height: 14px;
+	margin-left: 24px;
+	border-radius: 50%;
+	background: #e1223a;
+	position: absolute; top: 0; left: 50%;
+	content: '';
+}
+div#Message > a img{
+	width: 66px; height: 66px;
+}
+div#Message > a p{
+	padding-top: 28px;
+	font-size: 24px; line-height: 34px;
+}
+.MesAd{
+	height: 80px;
+	border-top: 1px solid #e6e6e6;
+	background: url(../images/icon_ad_new.png) no-repeat 30px center #FFFEF7; background-size: auto 80px;
+	position: relative;
+	overflow: hidden;
+}
+.MesAd a{
+	height: 80px;
+	padding: 0 40px 0 0; margin-left: 184px;
+	background: #FFFEF7;
+	font-size: 28px; line-height: 80px;
+	overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+	display: block;
+	position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+	transform: translateY(80px); -ms-transform: translateY(80px); -webkit-transform: translateY(80px); -o-transform: translateY(80px); -moz-transform: translateY(80px);
+}
+.MesAd a.on, .MesAd a.back{
+	transition: transform 0.5s; -moz-transition: transform 0.5s; -webkit-transition: transform 0.5s; -o-transition: transform 0.5s;
+}
+.MesAd a.on{
+	transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); -o-transform: translateY(0); -moz-transform: translateY(0); z-index: 2;
+}
+.MesAd a.back{
+	transform: translateY(-80px); -ms-transform: translateY(-80px); -webkit-transform: translateY(-80px); -o-transform: translateY(-80px); -moz-transform: translateY(-80px); z-index: 1;
+}
+
+/*盈利之星*/
+#Star input[type=radio]{
+	width: 0; height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+#Star label{
+	float: right;
+	font-size: 24px; color: #999; font-weight: normal;
+}
+#Star input[type=radio]:checked + label{
+	color: #e1223a;
+}
+#Star .title span{
+	padding: 0 24px;
+	font-weight: lighter;
+}
+#Star dl{
+	height: 188px;
+	padding: 30px 90px 0 0;
+	position: relative;
+}
+#Star dl div.inner{
+	padding: 0 30px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+}
+#Star dl div.inner p.nolist{
+	width: 100%; height: 158px;
+	padding-left: 90px;
+	font-size: 24px; line-height: 158px; text-align: center; color: #999;
+	box-sizing: content-box;
+}
+#Star dd{
+	height: 158px; min-width: 170px; max-width: 190px;
+	padding-bottom: 30px;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Star dt{
+	width: 50px;
+	padding: 0 20px;
+	background: #fff;
+	position: absolute; top: 0; bottom: 0; right: 0; z-index: 1;
+	overflow: hidden;
+}
+#Star dt > a{
+	height: 158px;
+	margin-top: 30px;
+	border-radius: 4px;
+	background: url(../images/icon_right.png) no-repeat center #f3f3f3; background-size: 60px;
+	display: block;
+}
+#Star dd > a{
+	height: 100%;
+	text-align: center;
+	display: block;
+}
+#Star dd img{
+	width: 100px; height: 100px;
+	margin: 0 auto 16px;
+	border-radius: 50%;
+	display: block;
+}
+#Star dd p{
+	text-align: center;
+}
+#Star dd p.name{
+	height: 40px;
+	font-size: 28px; line-height: 40px;
+	overflow: hidden;
+}
+#Star dd p.win{
+	padding: 0 8px;
+	border-radius: 16px;
+	background: #e1223a;
+	font-size: 20px; line-height: 32px; color: #fff;
+	position: relative; top: -80px; z-index: 1;
+	display: inline-block;
+}
+#Star dd p.win:before{
+	padding-right: 2px;
+	content: '盈利';
+}
+#Star .torchbearer{
+	height: 80px; padding:0 0 0 120px;
+	border-top: 1px solid #e6e6e6;
+	background: url(../images/icon_right.png) no-repeat right center; background-size: 60px;
+	font-size: 28px; line-height: 80px;
+	display: block;
+	position: relative;
+}
+.toutiao{background: url(../images/toutiao.png) no-repeat left center; background-size: 100px;height: 80px; line-height:80px;margin: 0 0 0 30px;}
+/*赛事推荐*/
+#Match{
+	
+}
+#Match div.tab{
+	height: 74px;
+	margin: 0 -30px 0 -90px;
+}
+#Match div.tab label{
+	height: 74px;
+	font-size: 24px; line-height: 74px;
+}
+
+/*套餐*/
+#Package{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

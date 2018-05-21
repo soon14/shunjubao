@@ -41,15 +41,15 @@ $tmp_http_host = empty($_SERVER['HTTP_HOST']) ? '127.0.0.1' : $_SERVER['HTTP_HOS
 /**
  * 新闻系统地址
  */
-define('ROOT_WEBSITE', "http://www.zhiying365365.com");
+define('ROOT_WEBSITE', "http://www.shunjubao.com");
 /**
  * 新闻系统地址
  */
-define('ROOT_BBS_SITE', "http://bbs.zhiying365365.com");
+define('ROOT_BBS_SITE', "http://bbs.shunjubao.com");
 /**
  * 新闻系统地址
  */
-define('ROOT_CMS_SITE', "http://news.zhiying365365.com");
+define('ROOT_CMS_SITE', "http://news.shunjubao.com");
 
 //此项目的根目录URL
 define('ROOT_DOMAIN',"http://{$tmp_http_host}");
@@ -87,16 +87,16 @@ define('LOG_PATH',ROOT_PATH . '/_LOG');
 define('TEST_DOMAIN_MATCH', '#http://test.www.gaojie.com#i');
 
 //wap版域名正则
-define('WAP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(wap|m)\.(zhiying|zhiying365365|hsy)\.com$/i');
+define('WAP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(localm|wap|m)\.(shunjubao)\.com$/i');
 
 //微信版域名正则
-define('MP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(mp)\.(zhiying|zhiying365365|hsy)\.com$/i');
+define('MP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(mp)\.(shunjubao)\.com$/i');
 
 //安桌域名正则
-define('APP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(app)\.(zhiying|zhiying365365|hsy)\.com$/i');
+define('APP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(app)\.(shunjubao)\.com$/i');
 
 //ios域名正则
-define('IOS_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(ios)\.(zhiying|zhiying365365|hsy)\.com$/i');
+define('IOS_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(ios)\.(shunjubao)\.com$/i');
 
 //模板文件目录
 if(preg_match(WAP_DOMAIN_MATCH, ROOT_DOMAIN)) {
@@ -141,11 +141,11 @@ define('USER_HEAD_IMG_PATH', IMG_UPLOAD_PATH . '/user_head_img');
 /*---------------------------项目级别常量开始---------------------------------*/
 
 # 邮箱服务器与帐号定义
-define("SMTP_HOSTNAME", "mail.zhiying365365.com");
+define("SMTP_HOSTNAME", "mail.shunjubao.com");
 define("SMTP_SERVER", "42.120.219.42");
 define("SMTP_PORT", 25);
 define("SMTP_USERNAME", "noreply");
-define("SMTP_FROM", "noreply@zhiying365365.com");
+define("SMTP_FROM", "noreply@shunjubao.com");
 define("SMTP_FROMNAME", "智赢网");
 define("SMTP_PASSWORD", "YXqUG0vF8LxQ6");
 define("SMTP_CHARSET", "UTF-8");

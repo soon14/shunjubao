@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/pagList.css">
+<link rel="stylesheet" type="text/css" href="css/orderReport.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="js/public/common.js" type="text/javascript" ></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner">订阅报表</div>
+  <div class="tab">
+    <input type="radio" name="order_type" id="orderTab_today"
+                onchange="window.location.replace('我的订阅.html')"  >
+    <label for="orderTab_today"><span><a href="我的订阅.html">最新</a></span></label>
+    <input type="radio" name="order_type" id="orderTab_report"
+                checked  >
+    <label for="orderTab_report"><span><a href="订阅报表.html">报表</a></span></label>
+	<input type="radio" name="order_type" id="orderTab_report"
+                onchange="window.location.replace('我的订阅.html')"  >
+  </div>
+</div>
+<div class="default report">
+  <div class="title">近3天推荐概况</div>
+  <p class="total">共结束<span>0场</span>推荐&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <div class="ringBox">
+    <div class="ring">
+      <p class="before">0</p>
+      <canvas id="CanvasWin" value="0" width="240" height="240"></canvas>
+      <canvas id="CanvasDraw" value="0" width="240" height="240"></canvas>
+      <canvas id="CanvasLose" value="0" width="240" height="240"></canvas>
+    </div>
+    <ul>
+      <li>
+        <p class="win">红：0场 (0%)</p>
+      </li>
+      <li>
+        <p class="draw">走：0场 (0%)</p>
+      </li>
+      <li>
+        <p class="lose">黑：0场 (0%)</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="default matchList">
+  <div class="title">推荐专家</div>
+  <div class="matchEv">
+    <div class="info"> <a href="/merchant/detail/10182"> <img src="images/touxiang.jpg">
+      <p class="name">翅哥懂荐彩<em class="blue">足</em></p>
+      <p class="slogan"><span class="profit">近期 12红3黑</span><span class="continuous">2连红</span><span class="day">连续2天盈利</span></p>
+      <a href="/merchant/detail/10182">
+      <div class="profit">
+        <p><em number='6'></em><em number='9'></em><em number='2'></em><em number='%'></em></p>
+      </div>
+      </a> </a> </div>
+  </div>
+  <div class="matchEv">
+    <div class="info"> <a href="/merchant/detail/10159"> <img src="images/touxiang.jpg">
+      <p class="name">足球赢家<em class="blue">足</em></p>
+      <p class="slogan"><span class="profit">近期 6红1黑</span><span class="continuous">最高 5连红</span><span class="day">连续2天盈利</span></p>
+      <a href="/merchant/detail/10159">
+      <div class="profit">
+        <p><em number='6'></em><em number='2'></em><em number='0'></em><em number='%'></em></p>
+      </div>
+      </a> </a> </div>
+  </div>
+  <div class="matchEv">
+    <div class="info"> <a href="/merchant/detail/10149"> <img src="images/touxiang.jpg">
+      <p class="name">波记看盘<em class="blue">足</em></p>
+      <p class="slogan"><span class="profit">近期 6红2黑</span><span class="continuous">最高 7连红</span><span class="day">连续2天盈利</span></p>
+      <a href="/merchant/detail/10149">
+      <div class="profit">
+        <p><em number='4'></em><em number='3'></em><em number='4'></em><em number='%'></em></p>
+      </div>
+      </a> </a> </div>
+  </div>
+</div>
+<dl id="Bottom">
+  <dd id="index"><a href="首页.html"><img src="images/tab_0_normal.png">
+    <p>首页</p>
+    </a></dd>
+  <dd id="recommend"><a href="今日赛程.html"><img src="images/tab_1_normal.png">
+    <p>赛程</p>
+    </a></dd>
+  <dd id="merchant"  ><a href="专家.html"><img src="images/tab_2_normal.png">
+    <p>专家</p>
+    </a></dd>
+  <dd id="order"  ><a href="全部推荐.html"><img src="images/tab_3_normal.png">
+    <p>推荐</p>
+    </a></dd>
+  <dd id="my"  ><a href="用户中心.html"><img src="images/tab_4_normal.png">
+    <p>我的</p>
+    </a></dd>
+</dl>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="text/javascript">
+        setCurr('merchant');
+    </script>
+<script>
+<script type="text/javascript">
+        //获取屏幕的宽度
+//        var  clientWidth = document.documentElement.clientWidth;
+//        //根据设计图中的canvas画布的占比进行设置
+//        var canvasWidth = Math.floor(clientWidth*200/640);
+//        for (var i = 0; i < document.getElementsByTagName('canvas').length; i++) {
+//            document.getElementsByTagName('canvas')[i].setAttribute('width',canvasWidth+'px');
+//            document.getElementsByTagName('canvas')[i].setAttribute('height',canvasWidth+'px');
+//        }
+        var canvasWidth = 240;
+        Circle(parseInt(document.getElementById('CanvasWin').getAttribute('value')),parseInt(document.getElementById('CanvasDraw').getAttribute('value')),parseInt(document.getElementById('CanvasLose').getAttribute('value')))
+
+        //对各个圆画图
+        function Circle(Win,Draw,Lose){
+            //设定战绩
+            var All = Win + Draw + Lose;
+
+            if (All != 0) {
+                //画图Win
+                var CanvasWin = document.getElementById("CanvasWin");
+                var ctxWin = CanvasWin.getContext("2d");
+                ctxWin.lineWidth = 4;
+                ctxWin.beginPath();
+                ctxWin.arc(canvasWidth/2, canvasWidth/2, canvasWidth/2, - 0.5 * Math.PI, (2 * (Win / All) - 0.5) * Math.PI, false);
+                ctxWin.lineTo(canvasWidth/2, canvasWidth/2);
+                ctxWin.fillStyle = "#e1223a";
+                ctxWin.fill();
+                ctxWin.strokeStyle = "white";
+                ctxWin.closePath();
+                //画图Draw
+                var CanvasDraw = document.getElementById("CanvasDraw");
+                var ctxDraw = CanvasDraw.getContext("2d");
+                ctxDraw.lineWidth = 4;
+                ctxDraw.beginPath();
+                ctxDraw.arc(canvasWidth/2, canvasWidth/2, canvasWidth/2, Math.PI / 180 * (Win / All) * 360 - 0.5 * Math.PI, (2 * ((Win + Draw) / All) - 0.5) * Math.PI, false);
+                ctxDraw.lineTo(canvasWidth/2, canvasWidth/2);
+                ctxDraw.fillStyle = "#1cc075";
+                ctxDraw.fill();
+                ctxDraw.strokeStyle = "white";
+                ctxDraw.closePath();
+                //画图Lose
+                var CanvasLose = document.getElementById("CanvasLose");
+                var ctxLose = CanvasLose.getContext("2d");
+                ctxLose.lineWidth = 4;
+                ctxLose.beginPath();
+                ctxLose.arc(canvasWidth/2, canvasWidth/2, canvasWidth/2, Math.PI / 180 * ((Win + Draw) / All) * 360 - 0.5 * Math.PI, 1.5 * Math.PI, false);
+                ctxLose.lineTo(canvasWidth/2, canvasWidth/2);
+                ctxLose.fillStyle = "#555";
+                ctxLose.fill();
+                ctxLose.strokeStyle = "white";
+                ctxLose.closePath();
+                if (Draw != All && Lose != All && Win != All) {
+                    ctxDraw.stroke();
+                    ctxLose.stroke();
+                    ctxWin.stroke();
+                };
+            }
+        }
+    </script>
+<script>
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?113dde0d652952ea86d8fcbae4f60e76";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+</html>

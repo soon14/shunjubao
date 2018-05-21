@@ -1,0 +1,207 @@
+body{padding: 88px 0 99px;}
+
+#Navigation{
+	box-shadow: none;
+	border-bottom: none;
+}
+#Navigation .banner{
+	background: #e1223a;
+	color: #fff;
+}
+button.logout{
+	width: 88px; height: 88px;
+	background:none;
+	birder:none;
+	position: fixed; top: 0; right: 12px; z-index: 50;
+	font-size:0.8em;
+	 font-weight:300;
+	color:#fff;
+	display: block;
+}
+
+/*用户头像区域*/
+#Info{
+	height: 250px;
+	padding: 0 20px; margin: -88px 0 165px;
+	background: #e1223a;
+}
+#Info .default{
+ height:120px;
+	margin-bottom: 0; padding:40px 0 130px 20px;
+	position: relative; top: 106px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	-webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center;
+}
+#Info .default p{ display:block;}
+#Info img{
+	width: 124px; height: 124px;
+	border-radius: 50%;
+}
+#Info .infobox{
+	padding: 15px 0 15px 20px;
+	background: url(../images/icon_right.png) no-repeat right center; background-size: 64px;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+	display: block;
+}
+#Info .name{
+	height: 50px;
+	font-size: 36px; line-height: 50px; color: #333;
+	overflow: hidden;
+}
+#Info .slogan{
+	height: 40px;
+	padding-top: 4px;
+	font-size: 26px; line-height: 40px; color: #999;
+	overflow: hidden;
+}
+
+#Info .ohter{ height:30px; position:absolute;top:110px; width:65%;left:325px;
+}
+#Info .ohter a{ font-size:1.5em;color:#cc3333;}
+#Info .abox{
+	height: 182px;
+	position: absolute; left: 10px; right: 0; top:120px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	-webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center;
+}
+#Info .abox a{
+	padding: 6% 0 16px;
+	font-size: 2em; line-height: 44px; text-align: center;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+	display: inline-block;
+	position: relative;
+}
+#Info .abox a[new]:after{
+	width: 14px; height: 14px;
+	margin-left: 28px;
+	border-radius: 50%;
+	background: #e1223a;
+	position: absolute; top: 17%; left: 50%;
+	content: '';
+}
+#Info .abox a.wallet{
+	background: url(../images/icon_my_wallet.png) no-repeat center 33%; background-size: 32%;
+}
+#Info .abox a.recharge{
+	background: url(../images/icon_my_recharge.png) no-repeat center 33%; background-size: 32%;
+}
+#Info .abox a.coupon{
+	background: url(../images/icon_my_message.png) no-repeat center 33%; background-size: 32%;
+}
+#Info .abox a span{
+	min-width: 22px; max-width: 40%; height: 30px;
+	padding: 0 4px; margin-left: 16px;
+	border-radius: 15px;
+	background: #e1223a;
+	font-size: 20px; line-height: 30px; text-align: center; color: #fff;
+	position: absolute; top: 17%; left: 50%;
+	overflow: hidden;
+}
+
+/*列表*/
+.li{
+	height: 98px;
+	padding: 0 40px 0 64px; margin-left: 30px;
+	font-size: 32px; line-height: 98px;
+	position: relative;
+	display: block;
+}
+.li + .li{
+	border-top: 1px solid #E6E6E6;
+}
+.li span{
+	padding-right: 20px;
+	font-size: 24px; color: #999;
+	float: right;
+}
+.li button, .li a{
+	height: 98px;
+	background: #fff;
+	font-size: 28px; color: #e1223a;
+	float: right;
+}
+.li input[type=checkbox]{
+	width: 0; height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+.li label{
+	width: 80px; height: 98px;
+	margin-right: -46px;
+	background: url(../images/icon_checkbox_off.png) no-repeat center; background-size: 80px;
+	float: right;
+}
+.li input:checked + label{
+	background: url(../images/icon_checkbox_on.png) no-repeat center; background-size: 80px;
+}
+.li input:disabled + label{
+	opacity: 0.5; filter:Alpha(opacity=50);
+}
+a.li{
+	background: url(../images/icon_right.png) no-repeat right center #fff; background-size: 64px;
+}
+
+/*特殊样式*/
+.li:before{
+	width: 64px; height: 98px;
+	position: absolute; top: 0; left: 0;
+	content: '';
+}
+.message span{
+	min-width: 16px; height: 32px;
+	margin: 33px 16px 0 0; padding: 0 8px;
+	border-radius: 16px;
+	background: #e1223a;
+	font-size: 22px; line-height: 32px; text-align: center; color: #fff;
+	vertical-align: middle;
+	display: inline-block;
+}
+.message:before{
+	background: url(../images/icon_my_message.png) no-repeat left center; background-size: 40px;
+}
+.history:before{
+	background: url(../images/icon_my_history.png) no-repeat left center; background-size: 40px;
+}
+.dingyue:before{
+	background: url(../images/icon_mydingue.png) no-repeat left center; background-size: 40px;
+}
+.help:before{
+	background: url(../images/icon_myhelp.png) no-repeat left center; background-size: 40px;
+}
+.feedback:before{
+	background: url(../images/icon_my_feedback.png) no-repeat left center; background-size: 40px;
+}
+.push:before{
+	background: url(../images/icon_my_push.png) no-repeat left center; background-size: 40px;
+}
+.sms:before{
+	background: url(../images/icon_my_sms.png) no-repeat left center; background-size: 40px;
+}
+.phone:before{
+	background: url(../images/icon_my_phone.png) no-repeat left center; background-size: 40px;
+}
+.myad:before{
+	display: none;
+}
+.myad img{
+	width: 54px; height: 54px;
+	margin-top: -27px;
+	position: absolute; top: 50%; left: 0;
+}
+.myad span{
+	font-size: 24px;
+}
+
+/*退出登录*/
+button.separated{
+	width: 200px;
+	margin: 32px auto 0;
+	background: #f3f3f3;
+	display: block;
+}
+
+
+
+
+
+

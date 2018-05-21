@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>用户中心</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/user.css">
+<script type="text/javascript" src="js/public/public.js"></script>
+<script type="text/javascript" src="js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="js/public/common.js"></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner">用户中心
+    <button class="logout" onClick="logout();">退出</button>
+  </div>
+</div>
+<div id="Info">
+  <div class="default"> <img src="images/touxiang.jpg"> <a href="/my/info" class="">
+    <p class="name">&nbsp;17701086884</p>
+    <p class="slogan">&nbsp;订阅20场&nbsp;&nbsp;红16场&nbsp;&nbsp;黑2场&nbsp;&nbsp;走水2场</p>
+    </a>
+    <div class="abox"><a href="我的钱包.html" class="" >资金</a><a href="充值.html" class="" style="color:#cc3333;">充值</a><a href="消息.html" class="">消息<span>1</span></a> </div>
+  </div>
+</div>
+<div class="default"> <a class="li history" href="浏览历史.html">最近浏览</a></div>
+<div class="default"> <a class="li dingyue" href="我的订阅.html">我的订阅</a></div>
+<div class="default" style="display:none;">
+  <div class="li phone">绑定手机 <a href="/my/bind"><span>17701086884</span></a> </div>
+</div>
+<div class="default"><a class="li feedback" href="contact.html">客服中心</a></div>
+<div class="default"><a class="li help" href="帮助中心.html">帮助中心</a></div>
+<dl id="Bottom">
+  <dd id="index"><a href="首页.html"><img src="images/tab_0_normal.png">
+    <p>首页</p>
+    </a></dd>
+  <dd id="recommend"><a href="今日赛程.html"><img src="images/tab_1_normal.png">
+    <p>赛程</p>
+    </a></dd>
+  <dd id="merchant"  ><a href="专家.html"><img src="images/tab_2_normal.png">
+    <p>专家</p>
+    </a></dd>
+  <dd id="order"  ><a href="全部推荐.html"><img src="images/tab_3_normal.png">
+    <p>推荐</p>
+    </a></dd>
+  <dd id="my"  ><a href="用户中心.html"><img src="images/tab_4_normal.png">
+    <p>我的</p>
+    </a></dd>
+</dl>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="text/javascript">
+        setCurr('my');
+    </script>
+<script>
+</html>

@@ -1,0 +1,187 @@
+/*外框*/
+.packageList{
+
+}
+.packageList .packageEv{
+	margin: 0 0 0 30px; padding-top: 20px;
+	position: relative;
+	display: block;
+}
+.packageList .packageEv + .packageEv{
+	border-top: 1px solid #e6e6e6;
+}
+
+/*信息*/
+.packageEv div.info{
+	padding: 8px 0 4px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	position: relative;
+}
+.packageEv div.info div.nas{
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+.packageEv div.info p.name{
+	height: 44px;
+	padding-left: 46px;
+	font-size: 32px; line-height: 44px; font-weight: bold;
+	white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.packageEv div.info[type=football] p.name{
+	background: url(../images/tag_football.png) no-repeat left center; background-size: 36px;
+}
+.packageEv div.info[type=basketball] p.name{
+	background: url(../images/tag_basketball.png) no-repeat left center; background-size: 36px;
+}
+.packageEv div.info[type=all] p.name{
+	background: url(../images/tag_all.png) no-repeat left center; background-size: 36px;
+}
+.packageEv div.info p.slogan{
+	height: 40px;
+	padding: 6px 20px 0 0;
+	font-size: 28px; line-height: 40px; color: #999;
+	overflow: hidden;
+}
+.packageEv div.info div.profit{
+	width: 170px;
+	text-align: center;
+	position: relative; top: -15px;
+}
+.packageEv div.info div.profit:after{
+	height: 32px;
+	padding-top: 4px;
+	font-size: 24px; line-height: 32px; color: #e1223a;
+	position: absolute; left: 0; right: 0;
+	display: block;
+	content: '3天盈利';
+}
+.packageEv div.info div.profit > p{
+	height: 72px;
+	text-align: center;
+}
+.packageEv div.info div.profit em{
+	width: 24px; height: 72px;
+	display: inline-block;
+}
+.packageEv div.info div.profit em[number="%"]{
+	width: 44px;
+	background: url(../images/percent.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="0"]{
+	background: url(../images/0.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="1"]{
+	background: url(../images/1.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="2"]{
+	background: url(../images/2.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="3"]{
+	background: url(../images/3.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="4"]{
+	background: url(../images/4.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="5"]{
+	background: url(../images/5.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="6"]{
+	background: url(../images/6.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="7"]{
+	background: url(../images/7.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="8"]{
+	background: url(../images/8.png) no-repeat center; background-size: 44px;
+}
+.packageEv div.info div.profit em[number="9"]{
+	background: url(../images/9.png) no-repeat center; background-size: 44px;
+}
+
+/*专家&价格*/
+.packageEv div.talent{
+	height: 40px;
+	padding: 20px 30px 20px 0;
+	font-size: 24px; line-height: 40px; text-align: right; color: #999;
+}
+.packageEv div.talent p.cost{
+	height: 40px;
+	border-radius: 4px;
+	font-size: 28px; text-align: center; color: #e1223a;
+	float: left;
+}
+.packageEv div.talent p.cost > span{
+	padding: 0 4px;
+}
+.packageEv div.talent p.history{
+	color: #a8a8a8;
+}
+.packageEv div.talent p.history span:first-child:after{
+	padding: 0 10px;
+	font-size: 16px;
+	content: '-近-'
+}
+.packageEv div.talent p.history span.win{
+	color: #e1223a;
+}
+.packageEv div.talent p.history span.draw{
+	color: #1CC075;
+}
+.packageEv div.talent p.history span.lose{
+	color: #555;
+}
+
+/*订单状态下购买时间和购买按钮等信息*/
+.packageList div.pushTime{
+	height: 90px;
+	margin: 0 30px;
+	border-top: 1px solid #ddd;
+	font-size: 24px; line-height: 90px; color: #999;
+}
+.packageList div.pushTime > span.cost{
+	font-size: 28px; color: #e1223a; font-weight: bold;
+	float: right;
+}
+.packageList div.pushTime > span.cost:before{
+	padding-right: 10px;
+	font-size: 24px; color: #999; font-weight: normal;
+	content: '已接收';
+}
+.packageList div.pushTime > span.cost:after{
+	padding-left: 10px;
+	font-size: 24px; color: #999; font-weight: normal;
+	content: '场';
+}
+.packageList div.pushTime > span.free{
+	font-size: 28px; color: #1CC075;
+	float: right;
+}
+.packageList div.pushTime > p.nobuy{
+	font-size: 24px; line-height: 90px; color: #999;
+	display: inline-block;
+}
+.packageList div.pushTime > button.what{
+	width: 40px; height: 40px;
+	margin-top: -4px;
+	background: url(../images/icon_what.png) no-repeat left center; background-size: 40px;
+	vertical-align: middle;
+}
+.packageList div.pushTime > button.buy{
+	height: 60px;
+	padding: 0 16px; margin-top: 15px;
+	border-radius: 4px;
+	background: #e1223a;
+	font-size: 24px; color: #fff;
+	float: right;
+}
+.packageList div.pushTime > button.buy > span{
+	padding: 0 4px;
+}
+
+
+
+
+
+
+
+
+

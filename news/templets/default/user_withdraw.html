@@ -1,0 +1,60 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#submit").click(function(){
+		var money = $("#withdraw_money").val()
+		if (!$.common.Verify.isMoney(money)) {
+			alert('金额不正确');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户提现 start-->
+<div class="UserRight">
+  <h1><span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_encash.php">提现记录</a></span>用户提现</h1>
+  <div class="URcenter">
+    <div class="PasXiugai">
+      <h6><span style="color:red; position:relative;top:3px;">*</span>&nbsp;&nbsp;请准确无误的填写以下信息之后进行提交。如需要修改您的银行卡信息，请联系我们的客服。<a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.sunkf.net/codes/one/images/q_1.gif"></a>&nbsp;&nbsp;或致电010-64344882</h6>
+      <div class="pswfind"><br/>
+        <div class="">
+          <form action='' method='post'>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;提款人：
+              <{$userRealInfo.realname}> <span>您的姓名</span> </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;归属地：
+              <{$userRealInfo.bank_province}>&nbsp;&nbsp;
+              <{$userRealInfo.bank_city}> </p>
+            <p>银行名称：
+              <{$userRealInfo.bank}> <span>您的开户行</span></p>
+            <p>银行卡号：
+              <{$userRealInfo.bankcard}> <span>您的银行开户行卡号。</span></p>
+            <p style="position:relative;">提现方式：
+              <select name='payment' style='height:28px;line-height:28px;'>
+                <{foreach from=$EncashPaymentDesc item=item key=key}><option value='<{$key}>' <{if $userPaymentInfo.pay_type==$key}>selected<{/if}>><{$item.desc}>
+                </option>
+                <{/foreach}>
+              </select>
+              <{if !$userPaymentInfo}><i style="font-style:normal;"><a href='<{$smarty.const.ROOT_DOMAIN}>/account/user_payment.php'>去完善其他提现方式</a></i><{/if}> </p>
+            <p>提现金额：
+              <input type="text" class="ustext" name="money" id="withdraw_money"/>
+              <input type="hidden" name='u_id' id="u_id" value="<{$userInfo.u_id}>"/>
+              <span>您当前账户余额：<u style="color:#dc0000; text-decoration:none;"><{$userAccountInfo.cash}>元</u></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;手机号：
+              <input type="text" class="ustext" name="mobile" id="mobile" value="<{$userRealInfo.mobile}>"/></p>
+            <p class="sub" style="padding:6px 0 0 62px;">
+              <input type="submit" value="提交" id="submit"/>
+              <{if $msg_error}>&nbsp;&nbsp;&nbsp;<img src="<{$smarty.const.STATICS_BASE_URL}>/i/errortips.gif"><em>&nbsp;<{$msg_error}></em><{/if}>
+              <{if $msg_success}>
+              &nbsp;&nbsp;&nbsp;<img src="<{$smarty.const.STATICS_BASE_URL}>/i/spc1.gif"><u>&nbsp;<{$msg_success}></u><{/if}> </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display:none;"> <{include file="foot.html"}> </div>
+</body>
+</html>

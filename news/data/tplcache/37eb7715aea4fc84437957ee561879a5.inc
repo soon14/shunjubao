@@ -1,0 +1,3 @@
+<li>[field:image/]<a href="[field:typeurl/]" title="[field:fulltitle/]" >[[field:typename/]]</a>
+                <p><a href="[field:arcurl /]">[field:title /]</a></p>
+              </li>

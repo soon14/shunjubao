@@ -1,0 +1,31 @@
+<?php
+$typeArr[5] = '足球新闻';
+$typeArr[6] = '篮球推荐';
+$typeArr[4] = '足球推荐';
+$typeArr[7] = '篮球新闻';
+$typeArr[8] = '投注技巧';
+$typeArr[9] = '新闻首页';
+$typeArr[10] = '中奖喜报';
+$typeArr[11] = '智赢公告';
+$typeArr[12] = '首页';
+$typeArr[13] = '焦点广告列表';
+$typeArr[14] = '经典专题';
+$typeArr[15] = '资讯中心广告';
+$typeArr[16] = '推荐新闻';
+$typeArr[21] = '触屏版首页';
+$typeArr[34] = 'ios首页';
+$typeArr[22] = '触屏版竞彩资讯';
+$typeArr[23] = '触屏版竞彩推荐';
+$typeArr[24] = '新闻头条';
+$typeArr[25] = 'app首页';
+$typeArr[42] = '智赢网微信首页';
+$typeArr[27] = '新版首页';
+$typeArr[37] = '中超';
+$typeArr[41] = '中超新闻';
+$typeArr[40] = '中超推荐';
+$typeArr[47] = '销售公告';
+$typeArr[48] = '智赢观察';
+$typeArr[49] = '智赢实战';
+$typeArr[50] = '智赢专栏';
+$typeArr[51] = '智赢汇总';
+?>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>充值</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/charge.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="/js/public/common.js" type="text/javascript" ></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>充值</div>
+</div>
+<div id="Info">
+  <p class="name">账户：17701086884</p>
+  <p class="money">余额：0元</p>
+</div>
+<div id="Recharge">
+  <div class="inner">
+    <input type="radio" name="recharge" id="Recharge_0"  value="1">
+    <label for="Recharge_0">￥18</label>
+    <input type="radio" name="recharge" id="Recharge_1"  value="8800">
+    <label for="Recharge_1">￥38</label>
+    <input type="radio" name="recharge" id="Recharge_2"  value="18800">
+    <label for="Recharge_2">￥58</label>
+    <input type="radio" name="recharge" id="Recharge_3"  value="38800">
+    <label for="Recharge_3">￥188</label>
+    <input type="radio" name="recharge" id="Recharge_4"  value="88800">
+    <label for="Recharge_4">￥588</label>
+    <input type="radio" name="recharge" id="Recharge_5"  value="188800">
+    <label for="Recharge_5">￥1888</label>
+    <input type="text" name="recharge" id="Recharge_6"  value="388800">
+    <label for="Recharge_6">￥其他额度</label>
+  </div>
+</div>
+<div id="Pay">
+  <div class="title">支付方式</div>
+  <ul class="default">
+    <li class="wx"> 微信
+      <input type="radio" name="pay" id="Pay_ali" value="ali"  >
+      <label for="Pay_ali"></label>
+    </li>
+  </ul>
+</div>
+<p class="ask">如充值遇到问题，请<a href="/feedback">联系客服</a></p>
+<button class="pay" onClick="orderPay();">立即充值</button>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="application/javascript">
+        var type = 'recharge';
+
+        $(function () {
+            var checks = $("input[name=pay]:checked");
+            if (checks.length == 0) {
+                $("input[name=pay]")[0].checked = true;
+            }
+        });
+
+        function orderPay() {
+            //选择充值金额 开始
+            var rechargeRadio = $("input[type=radio][name=recharge]:checked");
+            if (rechargeRadio.length == 0) {
+                alert('请先选择充值金额。');
+                return;
+            }
+            var price = rechargeRadio.val();
+            //选择充值金额 结束
+
+            //选择支付方式 开始
+            var payRadio = $("input[type=radio][name=pay]:checked");
+            if (payRadio.length == 0) {
+                alert('请先选择支付方式。');
+                return;
+            }
+            var pay = payRadio.val();
+            //选择支付方式 结束
+            Alert("loading", "支付中");
+            var url = '/order/recharge?price=' + price + "&returnUrl=";
+            switch (pay) {
+                case 'wx': {
+                    location.href = url + "&pay_type=1";
+                    break;
+                }
+                case 'ali': {
+                    location.href = url + "&pay_type=3";
+                    break;
+                }
+            }
+        }
+
+        
+    </script>
+</html>

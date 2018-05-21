@@ -1,0 +1,77 @@
+body{padding: 88px 0 0;}
+
+ul.default{
+
+}
+ul.default:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul.default li{
+	width: 33.3%;
+	padding: 44px 0 40px;
+	float: left;
+	position: relative;
+}
+ul.default li img{
+	width: 88px; height: 88px;
+	margin: 0 auto;
+	display: block;
+}
+ul.default li p{
+	margin-top: 36px;
+	font-size: 28px; line-height: 40px; text-align: center;
+}
+ul.default li:before{
+	width: 1px;
+	background: #E6E6E6;
+	position: absolute; top: 0; bottom: 0; left: 0;
+	content: '';
+}
+ul.default li:nth-child(n+4):after{
+	height: 1px;
+	background: #E6E6E6;
+	position: absolute; top: 0; left: 0; right: 0;
+	content: '';
+}
+ul.default li:nth-child(3n+1):before{
+	display: none;
+}
+
+
+/*二维码*/
+div.code{
+	padding-bottom: 64px;
+}
+img.code{
+	width: 380px; height: 380px;
+	padding: 50px 0 16px; margin: 0 auto;
+	display: block;
+}
+
+p.text{
+	font-size: 32px; line-height: 40px; text-align: center;
+}
+p.copy{
+	padding-top: 8px;
+	font-size: 24px; color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

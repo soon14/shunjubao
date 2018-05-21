@@ -1,0 +1,406 @@
+body{padding: 88px 0 0;}
+
+/*专家信息*/
+#Talent{
+	height: 120px;
+	padding: 30px 0 30px 30px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	-webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center;
+}
+#Talent img{
+	width: 120px; height: 120px;
+	border-radius: 50%;
+}
+#Talent .info{
+	padding: 0 20px;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Talent .info p.name{
+	height: 44px;
+	font-size: 32px; line-height: 44px;
+	overflow: hidden;
+}
+#Talent .info p.name span{
+	height: 32px; width: 36px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 24px; line-height: 32px; text-align: center; color: #fff;
+    position: relative; top: -3px;
+    display: inline-block;
+}
+#Talent .info p.name span.red{
+	background: #e1223a;
+}
+#Talent .info p.name span.orange{
+	background: #ff8400;
+}
+#Talent .info p.name span.green{
+	background: #1CC075;
+}
+#Talent .info p.name span.blue{
+	background: #58A1F6;
+}
+#Talent .info p.slogan{
+	max-height: 64px;
+	padding-top: 6px;
+	font-size: 24px; line-height: 32px; color: #999;
+	overflow: hidden;
+}
+#Talent .info p.type{
+	height: 31px; width: 100px;
+	border-radius: 4px;
+	font-size: 21px; line-height: 31px; text-align: center; color: #fff;
+	display: inline-block;
+}
+#Talent .info p.red{
+	background: #e1223a;
+}
+#Talent .info p.orange{
+	background: #ff8400;
+}
+#Talent .info p.green{
+	background: #1CC075;
+}
+#Talent .info p.blue{
+	background: #58A1F6;
+}
+#Talent ul{
+	width: 195px;
+}
+#Talent ul > li{
+	height: 32px;
+	font-size: 22px; line-height: 32px;
+}
+#Talent ul > li + li{
+	margin-top: 10px;
+}
+#Talent ul > li.bingo{
+	/*background: url(../images/icon_bingo.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #FF8400;
+}
+#Talent ul > li.continuous{
+	/*background: url(../images/icon_continuous.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #e1223a;
+}
+#Talent ul > li.gold{
+	/*background: url(../images/icon_gold.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #1CC075;
+}
+
+/*推荐内容*/
+#Recommend{
+	padding: 30px 0 0 30px;
+}
+#Recommend p.tag{
+	height: 28px;
+	padding-bottom: 10px;
+}
+#Recommend p.tag span{
+	height: 24px;
+	padding: 0 8px; margin-right: 10px;
+	border: 2px solid; border-radius: 4px;
+    font-size: 20px; line-height: 24px;
+    vertical-align: middle;
+    position: relative; top: -2px;
+    display: inline-block;
+    float: left;
+}
+#Recommend p.tag span.lottery{
+    border-color: #e1223a;
+    color: #e1223a;
+}
+#Recommend p.tag span.good{
+	border-color: #58A1F6;
+	background: #58A1F6;
+	color: #fff;
+}
+#Recommend p.tag span.level{
+	border-color: #e1223a;
+	background: #e1223a;
+	color: #fff;
+}
+#Recommend p.title{
+	padding: 0 30px 30px 0;
+	border-bottom: 1px solid #e6e6e6;
+	font-size: 32px; line-height: 44px;
+}
+#Recommend p.title span{
+	padding: 0 4px; margin-right: 10px;
+    border: 2px solid #e1223a; border-radius: 4px;
+    font-size: 20px; line-height: 24px; color: #e1223a;
+    vertical-align: middle;
+    position: relative; top: -2px;
+    display: inline-block;
+}
+#Recommend p.title > em.good{
+	height: 44px;
+	padding-right: 20px;
+	color: #58A1F6; font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+#Recommend p.title > em.good:after{
+	width: 6px; height: 6px;
+	margin-top: -3px;
+	border-radius: 50%;
+	background: #58A1F6;
+	position: absolute; top: 50%; right: 7px;
+	content: '';
+}
+#Recommend div.match{
+	padding: 20px 30px 80px 0;
+}
+#Recommend div.match p.info{
+	height: 36px;
+	padding-left: 46px;
+	font-size: 24px; line-height: 36px; color: #999;
+}
+#Recommend div.match[type=football] p.info{
+	background: url(../images/tag_football.png) no-repeat top left; background-size: 36px;
+}
+#Recommend div.match[type=basketball] p.info{
+	background: url(../images/tag_basketball.png) no-repeat top left; background-size: 36px;
+}
+#Recommend div.match p.info em{
+	height: 36px;
+	padding: 0 10px;
+	border-radius: 18px;
+	background: #ccc;
+	color: #fff;
+	position: relative; top: -2px;
+	display: inline-block;
+}
+#Recommend div.match p.info span, #Recommend div.match p.info a{
+	float: right;
+}
+#Recommend div.match p.info a{
+	color: #e1223a;
+}
+#Recommend div.match p.info span.tag{
+	padding: 0 6px;
+    border-radius: 4px;
+    font-size: 22px; line-height: 38px; text-align: center; color: #fff;
+    position: absolute; right: 30px;
+}
+#Recommend div.match p.info span.red{
+	background: #e1223a;
+}
+#Recommend div.match p.info span.orange{
+	background: #FF9600;
+}
+#Recommend div.match dl.team{
+	padding-top: 20px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+}
+#Recommend div.match dl.team dt{
+	width: 88px;
+	margin-right: 50px; padding-top: 130px;
+}
+#Recommend div.match dl.team dt p.comity{
+	height: 64px;
+	padding: 12px 0;
+	background: #e6e6e6;
+	font-size: 24px; line-height: 32px; text-align: center; letter-spacing: 2px;
+}
+#Recommend div.match dl.team dt p.asia{
+	background: #fffcd2;
+}
+#Recommend div.match dl.team dt p.comity span{
+	color: #e1223a;
+}
+#Recommend div.match dl.team dd{
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Recommend div.match dl.team p.name{
+	max-height: 100px;
+	font-size: 36px; line-height: 50px; font-weight: bold;
+	overflow: hidden;
+}
+#Recommend div.match dl.team p.vs{
+	min-width: 50px;
+	padding: 0 30px;
+	font-size: 36px; line-height: 50px; text-align: center; color: #e1223a; font-weight: bold; letter-spacing: 2px;
+}
+#Recommend div.match dl.team p.vs span{
+	font-size: 24px; line-height: 32px; color: #999; font-weight: normal;
+	display: block;
+}
+#Recommend div.match dl.team p.vs span:before{
+	font-size: 22px;
+	content: '(半：';
+}
+#Recommend div.match dl.team p.vs span:after{
+	font-size: 22px;
+	content: ')';
+}
+#Recommend div.match .ha{
+	height: 130px;
+	-webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+}
+#Recommend div.match dt + dd .ha{
+	margin-left: -138px;
+}
+#Recommend div.match .ha p.name{
+	text-align: left;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Recommend div.match .ha p.name:first-child{
+	text-align: right;
+}
+#Recommend div.match div.checkBox{
+	height: 88px;
+	font-size: 24px; line-height: 40px; text-align: center; font-weight: normal;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	position: relative;
+}
+#Recommend div.match div.checkBox input[type=checkbox]{
+	width: 0; height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+#Recommend div.match div.checkBox label{
+	height: 100%;
+	background: #CCC;
+	display: inline-block;
+	position: relative;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Recommend div.match div.checkBox label p{
+	color: #fff;
+}
+#Recommend div.match div.checkBox label p:first-child{
+	padding-top: 4px;
+	font-size: 28px;
+}
+#Recommend div.match div.checkBox input:checked + label{
+	background: #e1223a;
+}
+#Recommend div.match div.checkBox label ~ label{
+	margin-left: 10px;
+}
+#Recommend div.match div.checkBox input[value="1"] + label:after{
+	width: 46px; height: 46px;
+	background: url(../images/icon_recommend_result.png) no-repeat center; background-size: 46px;
+	position: absolute; bottom: 0; right: 0; z-index: 8;
+	content: '';
+}
+#Recommend div.match div.checkBox label.odd{
+	min-width: 180px;
+	margin-left: 0;
+	background: #fff;
+}
+#Recommend div.match div.checkBox label.odd p{
+	color: #999;
+}
+#Recommend div.match div.checkBox label.odd ~ label{
+	margin-left: 0;
+}
+#Recommend div.match dl.hid{
+	padding-top: 160px;
+	font-size: 28px; line-height: 40px; text-align: center; color: #999;
+	position: relative;
+}
+#Recommend div.match dl.hid:before{
+	width: 64px; height: 64px;
+	margin-left: -32px;
+	border-radius: 50%;
+	background: url(../images/icon_vip_lock.png) no-repeat center #CCC; background-size: 34px;
+	position: absolute; left: 50%; top: 80px;
+	content: '';
+}
+#Recommend div.nobuy{
+	padding: 0 30px 30px 0;
+	font-size: 28px; line-height: 40px; text-align: center; color: #999;
+}
+/*#Recommend div.nobuy:after{
+	padding: 0.25rem 0 0.125rem;
+	font-size: 0.3125rem; line-height: 0.5rem; text-align: center; color: #999;
+	display: block;
+	content: '本推荐需要付费后才能查看';
+}*/
+#Recommend div.nobuy b{
+	padding: 0 8px;
+	color: #e1223a;
+}
+#Recommend div.nobuy button{
+	height: 80px; width: 100%;
+	margin-top: 20px;
+	border-radius: 6px;
+	background: #e1223a;
+	font-size: 32px; color: #fff;
+	display: block;
+}
+#Recommend div.nobuy button:disabled{
+	background: rgba(225,34,58,0.50);
+}
+#Recommend div.title{
+	margin: -40px 0 0 -30px;
+	border-bottom: none;
+	position: relative; top: 0;
+}
+#Recommend div.content{
+	padding: 0 30px 30px 0;
+	font-size: 30px; line-height: 46px;
+	position: relative;
+}
+#Recommend div.content:after{
+	width: 94px; height: 94px;
+	position: absolute; top: -94px; right: 30px; z-index: 11;
+	content: '';
+}
+#Recommend div.content[result=win]:after{
+	background: url(../images/win.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.content[result=winDraw]:after{
+	background: url(../images/windraw.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.content[result=draw]:after{
+	background: url(../images/draw.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.content[result=loseDraw]:after{
+	background: url(../images/losedraw.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.content[result=lose]:after{
+	background: url(../images/lose.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.content[result=other]:after{
+	background: url(../images/other.png) no-repeat center; background-size: 94px;
+}
+#Recommend div.time{
+	height: 72px;
+	border-top: 1px solid #ddd;
+	font-size: 24px; line-height: 72px; color: #999;
+}
+
+/*展开专家其他推荐*/
+.showOnly{
+	height: 80px;
+	margin: 0 30px;
+	border-top: 1px solid #e6e6e6;
+	background: #fff;
+	font-size: 28px; line-height: 80px; text-align: center; color: #e1223a;
+	position: relative;
+}
+.showOnly:after{
+	height: 80px;
+	padding-right: 32px;
+	background: url(../images/bg_show_rotate.png) no-repeat right center; background-size: 20px;
+	display: inline-block;
+	content: '点击收起';
+}
+div.default[only] .showOnly:after{
+	background: url(../images/bg_show.png) no-repeat right center; background-size: 20px;
+	content: '点击展开';
+}
+
+/*其他专家*/
+.matchList{
+
+}
+
+
+
+
+
+

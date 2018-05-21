@@ -1,0 +1,48 @@
+<?php
+$z[0]=Array("field","",106,125);
+$z[0][4]['name']="title";
+$z[1]=Array("global","",126,152);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",307,329);
+$z[2][4]['name']="keywords";
+$z[3]=Array("include","",1117,1151);
+$z[3][4]['file']="header.htm";
+$z[4]=Array("field","",1880,1899);
+$z[4][4]['name']="title";
+$z[5]=Array("field","",1939,1993);
+$z[5][4]['name']="pubdate";
+$z[5][4]['function']="MyDate('Y-m-d', @me)";
+$z[6]=Array("field","",2048,2068);
+$z[6][4]['name']="source";
+$z[7]=Array("field","\r\n        if(@me<>'' )@me = '\r\n        <div class=\"intro\">'.@me.'</div>\r\n        ';\r\n        ",3362,3517);
+$z[7][4]['name']="description";
+$z[7][4]['runphp']="yes";
+$z[8]=Array("field","",3579,3598);
+$z[8][4]['name']="body";
+$z[9]=Array("pagebreak","",3637,3654);
+$z[10]=Array("arclist","\r\n              <dt><a href=\"http://news.zhiying365.com[field:arcurl/]\" target=\"_blank\"><img src=\"http://news.zhiying365.com[field:litpic/]\"></a>\r\n                <p><a href=\"http://news.zhiying365.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a></p>\r\n              </dt>\r\n              ",5022,5432);
+$z[10][4]['flag']="c";
+$z[10][4]['titlelen']="60";
+$z[10][4]['type']=".image";
+$z[10][4]['row']="4";
+$z[10][4]['imgwidth']="";
+$z[10][4]['imgheight']="";
+$z[10][4]['typeid']="4,5,6,7";
+$z[11]=Array("myad","",5678,5703);
+$z[11][4]['name']="retou";
+$z[12]=Array("arclist","\r\n              <li><b>•</b><a href=\"[field:arcurl/]\" target=\"_blank\">[field:title/]</a></li>\r\n              ",5960,6130);
+$z[12][4]['row']="10";
+$z[12][4]['titlelen']="60";
+$z[12][4]['noflag']="h";
+$z[13]=Array("arclist","\r\n              <li><b>•</b><a href=\"[field:arcurl/]\" target=\"_blank\">[field:title/]</a></li>\r\n              ",6347,6515);
+$z[13][4]['flag']="c";
+$z[13][4]['titlelen']="60";
+$z[13][4]['row']="18";
+$z[14]=Array("arclist","\r\n              <li><b>•</b><a href=\"[field:arcurl/]\" target=\"_blank\">[field:title/]</a></li>\r\n              ",6745,6917);
+$z[14][4]['row']="8";
+$z[14][4]['titlelen']="50";
+$z[14][4]['orderby']="click";
+$z[15]=Array("include","",7130,7165);
+$z[15][4]['file']="footer.html";
+
+?>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>浏览历史</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/artList.css">
+<style type="text/css">
+        body{}
+        .artList{padding: 0;}
+        .artList .articleEv{padding: 20px 30px;}
+        .artList .articleEv + .articleEv{border-top: 16px solid #f3f3f3;}
+    </style>
+<script type="text/javascript" src="js/public/public.js"></script>
+<script type="text/javascript" src="js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="js/public/common.js"></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>浏览历史</div>
+</div>
+<div class="default matchList">
+  <div class="matchEv"  >
+    <div class="info"> <a href="专家详细.html"><img src="images/touxiang.jpg"> </a> <a href="推荐详情.html">
+      <p class="name">篮球投资思维</p>
+      </a> <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 4红0黑</span><span class="continuous">4连红</span></p>
+      </a> <a href="推荐详情.html">
+      <div class="profit">
+        <p><em number='2'></em><em number='9'></em><em number='9'></em><em number='%'></em></p>
+      </div>
+      </a> </div>
+    <a href="推荐详情.html">
+    <div class="content"> 第二场，也是今晚睡觉单，今晚的赛事颇有信心！ </div>
+    </a> <a href="推荐详情.html">
+    <div class="matchInfo" type="basketball">
+      <p class="team">佛罕大学VS杜兰大学 </p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">NCAA</p>
+      <p class="time">11-20 07:30</p>
+    </div>
+    <div class="pushTime"> 11-19 23:32&nbsp;发布 <span class="cost">￥28</span> </div>
+    </a> </div>
+</div>
+<div class="default matchList">
+  <div class="matchEv"  >
+    <div class="info"> <a href="专家详细.html"><img src="images/touxiang.jpg"> </a> <a href="推荐详情.html">
+      <p class="name">篮球投资思维</p>
+      </a> <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 4红0黑</span><span class="continuous">4连红</span></p>
+      </a> <a href="推荐详情.html">
+      <div class="profit">
+        <p><em number='2'></em><em number='9'></em><em number='9'></em><em number='%'></em></p>
+      </div>
+      </a> </div>
+    <a href="推荐详情.html">
+    <div class="content"> 第二场，也是今晚睡觉单，今晚的赛事颇有信心！ </div>
+    </a> <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">里斯本竞技VS奥林匹亚科 </p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">欧冠</p>
+      <p class="time">11-20 07:30</p>
+    </div>
+    <div class="pushTime"> 11-19 23:32&nbsp;发布 <span class="cost">￥28</span> </div>
+    </a> </div>
+</div>
+<div class="separated">- 别扯了，我是有底线的。 -</div>
+<dl id="Bottom">
+  <dd id="index"><a href="首页.html"><img src="images/tab_0_normal.png">
+    <p>首页</p>
+    </a></dd>
+  <dd id="recommend"><a href="今日赛程.html"><img src="images/tab_1_normal.png">
+    <p>赛程</p>
+    </a></dd>
+  <dd id="merchant"  ><a href="专家.html"><img src="images/tab_2_normal.png">
+    <p>专家</p>
+    </a></dd>
+  <dd id="order"  ><a href="全部推荐.html"><img src="images/tab_3_normal.png">
+    <p>推荐</p>
+    </a></dd>
+  <dd id="my"  ><a href="用户中心.html"><img src="images/tab_4_normal.png">
+    <p>我的</p>
+    </a></dd>
+</dl>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="text/javascript">
+        setCurr('merchant');
+    </script>
+<script>
+<script type="text/javascript">
+        function changeType (type) {
+            if (type == 'article') {
+                location.replace('/topic/history');
+            }
+        }
+
+        function cleanHistory() {
+            //content, Event, title, canText, comText
+            confirmAlert('是否确认清除数据？', "location.replace('/article/history/clean')");
+        }
+    </script>
+</html>

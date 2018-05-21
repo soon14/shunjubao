@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>赛事取消或者延迟公告-智赢网。</title>
+<meta name="keywords" content="赛事取消或者延迟公告-智赢网。" />
+<meta name="description" content="赛事取消或者延迟公告-智赢网。" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/news.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/top.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/winmac.js"></script>
+</head>
+<body>
+{dede:include file="header.htm" /}
+<div class="nav-box">
+  <ul>
+    <li class="cur">赛事取消或者延迟销售公告</li>
+  </ul>
+</div>
+<!--center start-->
+<div class="ggCenetr">
+  <div class="history">
+    <ul>
+      {dede:arclist channelid='1' typeid='47' titlelen='46' orderby='id' orderway='desc' row='25'}
+      <li>
+        <h4><em>&nbsp;</em><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a><span>[field:pubdate function='strftime("%m-%d",@me)'/]</span></h4>
+        <dl>
+          <dt>[field:description function='cn_substr(@me,700)'/] ...</dt>
+        </dl>
+      </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+<!--center end-->
+{dede:include file="footer.htm" /}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?php
+$myaddons = array();
+$maNum = 0;
+$myaddons[$maNum] = array('6040', '/data/enums//smile.php.');
+$maNum = 1;
+$myaddons[$maNum] = array('6041', '/plus/guestbook/images//smile.php.');
+$maNum = 2;
+$myaddons[$maNum] = array('6042', '/include/ckeditor/plugins/addon/dialogs//smile.php.');
+$maNum = 3;
+$myaddons[$maNum] = array('6043', '/images/js//smile.php.');
+$maNum = 4;
+$myaddons[$maNum] = array('6044', '/data/enums//smile.php.');
+$maNum = 5;
+$myaddons[$maNum] = array('6045', '/plus/guestbook/images//smile.php.');
+$maNum = 6;
+$myaddons[$maNum] = array('6046', '/include/ckeditor/plugins/addon/dialogs//smile.php.');
+$maNum = 7;
+$myaddons[$maNum] = array('6047', '/images/js//smile.php.');
+$maNum = 8;
+$myaddons[$maNum] = array('6048', '/data/enums//smile.php.');
+$maNum = 9;
+$myaddons[$maNum] = array('6049', '/plus/guestbook/images//smile.php.');
+$maNum = 10;
+$myaddons[$maNum] = array('6050', '/include/ckeditor/plugins/addon/dialogs//smile.php.');
+$maNum = 11;
+$myaddons[$maNum] = array('6051', '/images/js//smile.php.');
+$maNum = 12;

@@ -1,0 +1,265 @@
+body{padding: 88px 0 0;}
+
+#Navigation .banner input[type=checkbox]{
+	width: 0; height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+#Navigation .banner label{
+	height: 46px; width: 120px;
+    border: 2px solid #e1223a; border-radius: 6px;
+    background: #fff;
+    font-size: 26px; line-height: 46px; color: #e1223a; font-weight: normal;
+    position: absolute; right: 30px; top: 19px;
+    display: block;
+}
+#Navigation .banner input[type=checkbox]:checked + label{
+	background: #e1223a;
+	color: #fff;
+}
+#Navigation input[type=checkbox]:checked + label:before{
+	width: auto;
+	padding-left: 0; margin-top: 0;
+	background: none;
+	display: inline; vertical-align: inherit;
+	content: '已';
+}
+#Navigation label:after{
+	content: '关注';
+}
+#Navigation label:before{
+	width: 28px; height: 24px;
+	margin-top: -4px;
+	background: url(../images/icon_plussign.png) no-repeat left center; background-size: 20px;
+	display: inline-block; vertical-align: middle;
+	content: '';
+}
+
+/*专家信息*/
+#Talent{
+	height: 120px;
+	padding: 30px 0 30px 30px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+	-webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center;
+}
+#Talent img{
+	width: 120px; height: 120px;
+	border-radius: 50%;
+}
+#Talent .info{
+	padding: 0 20px;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+#Talent .info p.name{
+	height: 44px;
+	font-size: 32px; line-height: 44px;
+	overflow: hidden;
+}
+#Talent .info p.name span{
+	height: 32px; width: 36px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 24px; line-height: 32px; text-align: center; color: #fff;
+    position: relative; top: -3px;
+    display: inline-block;
+}
+#Talent .info p.name span.red{
+	background: #e1223a;
+}
+#Talent .info p.name span.orange{
+	background: #ff8400;
+}
+#Talent .info p.name span.green{
+	background: #1CC075;
+}
+#Talent .info p.name span.blue{
+	background: #58A1F6;
+}
+#Talent .info p.slogan{
+	max-height: 32px;
+	padding-top: 6px;
+	font-size: 24px; line-height: 32px; color: #999;
+	overflow: hidden;
+}
+#Talent .info p.type{
+	height: 31px; width: 100px;
+	border-radius: 4px;
+	font-size: 21px; line-height: 31px; text-align: center; color: #fff;
+	display: inline-block;
+}
+#Talent .info p.red{
+	background: #e1223a;
+}
+#Talent .info p.orange{
+	background: #ff8400;
+}
+#Talent .info p.green{
+	background: #1CC075;
+}
+#Talent ul{
+	width: 195px;
+}
+#Talent ul > li{
+	height: 32px;
+	font-size: 22px; line-height: 32px;
+}
+#Talent ul > li + li{
+	margin-top: 10px;
+}
+#Talent ul > li.bingo{
+	/*background: url(../images/icon_bingo.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #FF8400;
+}
+#Talent ul > li.continuous{
+	/*background: url(../images/icon_continuous.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #e1223a;
+}
+#Talent ul > li.gold{
+	/*background: url(../images/icon_gold.png) no-repeat left center; background-size: 0.3125rem;*/
+	color: #1CC075;
+}
+
+p.talentSlogan{
+	padding: 0 30px 30px;
+	font-size: 32px; line-height: 44px;
+}
+
+div.tab{
+	height: 74px;
+	margin: 0 30px;
+	border: 1px solid #ddd; border-left: none; border-right: none;
+}
+div.tab label{
+	height: 74px;
+	font-size: 24px; line-height: 74px;
+}
+
+/*圆环*/
+div.ringBox{
+	height: 340px;
+	padding-left: 47%;
+	position: relative;
+}
+div.ringBox div.ring{
+	height: 220px; width: 220px;
+	margin: 30px 0 0 -35%;
+	border-radius: 50%;
+	background: #D8D8D8;
+	position: absolute; top: 0; left: 46%;
+}
+div.ringBox div.ring p.before{
+	width: 120px; height: 135px;
+	margin: -85px 0 0 -85px; padding: 35px 0 0 50px;
+	border-radius: 50%;
+	background: #fff;
+	font-size: 24px; line-height: 32px;
+	position: absolute; top: 50%; left: 50%; z-index: 10;
+}
+div.ringBox div.ring p.before > span{
+	display: block;
+	position: relative;
+}
+div.ringBox div.ring p.before > span:after{
+	width: 20px; height: 20px;
+	margin-top: -10px;
+	border-radius: 4px;
+	position: absolute; top: 50%; left: -27px;
+	content: ''
+}
+div.ringBox div.ring p.before > span.win:after{
+	background: #e1223a;
+}
+div.ringBox div.ring p.before > span.draw:after{
+	background: #1CC075;
+}
+div.ringBox div.ring p.before > span.lose:after{
+	background: #555;
+}
+div.ringBox div.ring canvas{
+	position: absolute; top: 0; left: 0;
+}
+div.ringBox p.other{
+	font-size: 24px; line-height: 32px; text-align: center; color: #999;
+	position: absolute; bottom: -60px; left: 0; right: 0;
+}
+
+/*折线图*/
+dl.svg{
+	height: 184px; width: 320px;
+	padding: 0 16px;
+	border: 1px dashed #E6E6E6; border-left: 0; border-right: 0;
+	position: relative; top: 48px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+}
+dl.svg dt{
+	border-bottom: 1px dashed #E6E6E6;
+	position: absolute; top: 50%; left: 0; right: 0;
+}
+dl.svg dd{
+	width: 10%; height: 100%;
+	position: relative;
+}
+dl.svg dd:after{
+	width: 16px; height: 16px;
+	margin-left: -8px;
+	border-radius: 50%;
+	position: absolute; left: 50%; z-index: 10;
+	content: '';
+}
+dl.svg dd.win:after{
+	background: #e1223a;
+	top: -8px;
+}
+dl.svg dd.draw:after{
+	margin-top: -8px;
+	background: #1CC075;
+	top: 50%;
+}
+dl.svg dd.lose:after{
+	background: #555;
+	bottom: -8px;
+}
+svg{
+	height: 184px; width: 288px;
+	position: absolute; top: 0; left: 32px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+}
+dl.svg p.other{
+	font-size: 24px; line-height: 32px; text-align: center; color: #999;
+	position: absolute; bottom: -77px; left: 0; right: 0;
+}
+dl.svg p.other span{
+	padding: 0 4px;
+}
+dl.svg p.other span.win{
+	color: #e1223a;
+}
+dl.svg p.other span.draw{
+	color: #1CC075;
+}
+dl.svg p.other span.lose{
+	color: #555;
+}
+
+a.default div.title{
+	height: 98px;
+	padding-left: 75px;
+	background: url(../images/icon_right.png) no-repeat right center #fff; background-size: 64px;
+	line-height: 98px;
+}
+a.default > div.title:before{
+	height: 100%; width: 32px;
+	background: url(../images/icon_expert_article.png) no-repeat center; background-size: 32px;
+	top: 0; left: 30px;
+}
+a.default div.title p{
+	padding-right: 20px;
+	font-size: 26px; color: #999; font-weight: normal;
+    float: right;
+}
+a.default div.title span{
+	padding: 0 5px;
+	color: #e1223a; font-weight: bold;
+}
+
+icon_expert_article.png

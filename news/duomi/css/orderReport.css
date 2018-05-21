@@ -1,0 +1,166 @@
+body{padding: 177px 0 99px;}
+
+.default > div.title{
+	top: 177px;
+}
+
+div.report{
+
+}
+div.report p.total{
+	width: 75%;
+	padding: 36px 24px 24px; margin: 0 auto;
+	border-bottom: 1px solid #e6e6e6;
+	font-size: 28px; line-height: 40px; text-align: center; color: #333;
+}
+div.report p.total span{
+	padding: 0 8px;
+	font-size: 32px; color: #e1223a; font-weight: bold;
+}
+div.report div.ringBox{
+	height: 300px;
+	padding-left: 50%;
+	position: relative;
+}
+div.report div.ringBox div.ring{
+	height: 240px; width: 240px;
+	margin: -120px 0 0 -42%;
+	border-radius: 50%;
+	background: #f3f3f3;
+	position: absolute; top: 50%; left: 50%;
+}
+div.report div.ringBox div.ring p.before{
+	width: 200px; height: 120px;
+	margin: -100px 0 0 -100px; padding: 40px 0;
+	border-radius: 50%;
+	background: #fff;
+	font-size: 60px; line-height: 80px; text-align: center; font-weight: bold;
+	position: absolute; top: 50%; left: 50%; z-index: 10;
+	content: '';
+}
+div.report div.ringBox div.ring p.before:after{
+	font-size: 28px; line-height: 32px; color: #999; font-weight: normal;
+	content: '场';
+	display: block;
+}
+div.report div.ringBox div.ring canvas{
+	position: absolute; top: 0; left: 0;
+}
+div.report div.ringBox ul{
+	height: 144px;
+	margin-top: -72px; padding-left: 8px;
+	position: absolute; top: 50%;
+}
+div.report div.ringBox ul li{
+	height: 48px; width: 210px;
+	padding-left: 42%;
+	font-size: 28px; line-height: 48px;
+	position: relative;
+}
+div.report div.ringBox ul li:before{
+	width: 12px; height: 12px;
+	margin-top: -6px;
+	border-radius: 50%;
+	background: #e6e6e6;
+	position: absolute; top: 50%; left: 0; z-index: 8;
+	content: '';
+}
+div.report div.ringBox ul li:after{
+	width: 20%; height: 4px;
+	margin-top: -2px;
+	background: #e6e6e6;
+	position: absolute; top: 50%; left: 6px; z-index: 8;
+	content: '';
+}
+div.report div.ringBox ul li p{
+	position: relative;
+}
+div.report div.ringBox ul li p:before{
+	width: 20px; height: 20px;
+	margin-top: -10px;
+	border-radius: 4px;
+	position: absolute; top: 50%; left: -32px; z-index: 9;
+	content: '';
+}
+div.report div.ringBox ul li p.win:before{
+	background: #e1223a;
+}
+div.report div.ringBox ul li p.draw:before{
+	background: #1CC075;
+}
+div.report div.ringBox ul li p.lose:before{
+	background: #555;
+}
+
+div.report th:nth-child(1){
+	padding-left: 32px;
+	text-align: left;
+}
+div.report th:nth-child(2){
+	width: 224px;
+}
+div.report th:nth-child(3){
+	width: 160px;
+}
+div.report td{
+	height: 100px;
+	font-size: 24px; line-height: 32px;
+	position: relative;
+}
+div.report td:nth-child(1){
+	padding-left: 100px;
+	text-align: left;
+}
+div.report td img{
+	width: 56px; height: 56px;
+	margin-top: -28px;
+	border-radius: 50%;
+	position: absolute; top: 50%; left: 28px;
+}
+div.report td:nth-child(2):after{
+	padding-left: 4px;
+	content: '场';
+}
+div.report td p{
+	max-height: 64px;
+	overflow: hidden;
+}
+div.report td p span{
+	height: 28px; width: 32px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 20px; line-height: 28px; text-align: center; color: #fff;
+    position: relative; top: -2px;
+    display: inline-block;
+}
+div.report td p span.red{
+	background: #e1223a;
+}
+div.report td p span.orange{
+	background: #ff8400;
+}
+div.report td p span.green{
+	background: #1CC075;
+}
+div.report td p span.blue{
+	background: #58A1F6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

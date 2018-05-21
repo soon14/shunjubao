@@ -1,0 +1,95 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<link href="<{'shaidan.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<div id="fade" class="black_overlay"></div>
+<{include file="menu.html"}>
+<div class="tipsters">
+  <div class="NewsNav">
+    <h1><b>跟单中心</b><em>停止盲目投注...<br/>
+      <span>跟随智赢高手，让您的利润蒸蒸日上 ! </span><u>......晒单红人榜&gt;&gt;</u></em>
+      <ul>
+	  	<li><img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">
+          <p>专注2串1</p>
+        </li>
+        <li><img src="http://www.zhiying365365.com/upload/user_head_img/zy_head_img-120140529170601.jpg">
+          <p>大力水手</p>
+        </li>
+		<li><img src="http://www.zhiying365365.com/upload/user_head_img/zy_head_img-23820140625164907.jpg">
+          <p>竞彩熊超</p>
+        </li>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">
+          <p>高富帅</p>
+        </li>
+        
+        <li><img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">
+          <p>？？？</p>
+        </li>
+      </ul>
+    </h1>
+  </div>
+</div>
+<!--当前位置 end-->
+<script type="text/javascript">
+    /*通栏图片960*60 创建于 2014-12-04*/
+    var cpro_id = "u1844009";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+<!--center start-->
+<div class="shaiTag"><b></b>
+  <ul>
+    <li><b>&nbsp;</b><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=fb" <{if $sport == 'fb'}> class='active'<{/if}> >竞彩足球</a></li>
+    <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=bk" <{if $sport == 'bk'}> class='active'<{/if}> >竞彩篮球</a></li>
+    <li class="none"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=bd" <{if $sport == 'bd'}> class='active'<{/if}> >北京单场</a></li>
+    <li class="fenxiang">
+      <wb:share-button appkey="5x1kWr" addition="simple" type="button" default_text="智赢网晒单中心展现的是智赢网专家和明星会员推荐方案的页面，致力于打造竞彩中奖的福地。" ralateUid="5107700124"></wb:share-button>
+    </li>
+    <li class="gs">跟随他的推荐，不错过任何一次投注！</li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<div style="position:relative;">
+  <script>
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+</script>
+  <div class="floatweixin" id="abc">
+    <h1>智赢服务号</h1>
+    <img src="http://www.zhiying365365.com/www/statics/i/gongzhongweixin.jpg">
+    <h2><a href="javascript:void(0);" onClick="javascript:turnoff('abc')">点击关闭</a></h2>
+  </div>
+  <div class="gendanCenter">
+    <div class="sdList"> <{foreach from=$show_tickets item=item name=name key=key}>
+      <div class="sdListC">
+        <dl>
+          <dt><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>" target="_blank"><img src="<{if $show_users[$item.u_id].u_img}><{$show_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"></a>
+            <p><b><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>" target="_blank"><{$show_users[$item.u_id].u_name}></a></b></p>
+            <p class="gendan"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>" target="_blank"><{if $item.is_end}><span>查看</span><{else}>跟单<{/if}> </a></p>
+          </dt>
+          <dd>
+            <p class="show"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>" target="_blank"><{$item.sport|getPoolDesc:$item.pool}></a></p>
+            <p class="show"><b>晒单时间：</b><u><{$item.datetime}></u></p>
+            <p class="show"><b>结束时间：</b><u><{$item.endtime}></u></p>
+            <p class="show"><b>投注金额：</b><span><i>&yen;<{$item.money}></i></span></p>
+            <p class="show"><b>跟单金额：</b><span><i>&yen;<{$follow_infos[$item.id].total_money}></i></span></p>
+            <p class="show"><b>跟单人数：</b><u><{$follow_infos[$item.id].total_sum}>人</u></p>     
+            <{if $item.prize_state==1}>
+            <p><em>赢</em></p>
+            <{/if}> </dd>
+        </dl>
+      </div>
+      <{/foreach}>
+      <div class="clear"></div>
+    </div>
+    <{if $total_page>1}>
+    <div class="sharepages"> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+      <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>&page=<{$total_page}>">末页</a> </div>
+    <{/if}> </div>
+</div>
+<!--center end-->
+<!--footer start--->
+<{include file="footer.html"}>
+<!--footer end-->
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>专家</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/talList.css">
+<script type="text/javascript" src="js/public/public.js"></script>
+<script type="text/javascript" src="js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="js/public/common.js"></script>
+</head>
+<body>
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>专家</div>
+  <div class="tab">
+    <input type="radio" name="talent_type"   id="follow" onChange="changeTab('follow')" checked>
+    <label for="follow"><span>足球</span></label>
+    <input type="radio" name="talent_type"  id="football" onChange="changeTab('football')">
+    <label for="football"><span>篮球</span></label>
+    <label for="basketball"><span><a href="专家排行.html">排行</a></span></label>
+  </div>
+</div>
+<div id="Att" style="display: block;">
+  <div class="default matchList">
+    <div class="title" style="display:none;">推荐的专家</div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">竞彩熊超<em class="blue">足</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='3'></em><em number='3'></em><em number='6'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">篮彩老船长<em class="orange">篮</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='3'></em><em number='0'></em><em number='6'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">职业玩家<em class="blue">足</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='3'></em><em number='0'></em><em number='0'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">神仙妹妹<em class="blue">足</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='2'></em><em number='9'></em><em number='8'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">红红火火<em class="orange">篮</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='2'></em><em number='6'></em><em number='6'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+    <div class="matchEv"> <a href="专家详细.html">
+      <div class="info"><img src="images/touxiang.jpg">
+        <p class="name">专注二串1<em class="blue">足</em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <div class="profit">
+          <p><em number='2'></em><em number='4'></em><em number='7'></em><em number='%'></em></p>
+        </div>
+      </div>
+      </a> </div>
+  </div>
+</div>
+<dl id="Bottom">
+  <dd id="index"><a href="首页.html"><img src="images/tab_0_normal.png">
+    <p>首页</p>
+    </a></dd>
+  <dd id="recommend"><a href="今日赛程.html"><img src="images/tab_1_normal.png">
+    <p>赛程</p>
+    </a></dd>
+  <dd id="merchant"  ><a href="专家.html"><img src="images/tab_2_normal.png">
+    <p>专家</p>
+    </a></dd>
+  <dd id="order"  ><a href="全部推荐.html"><img src="images/tab_3_normal.png">
+    <p>推荐</p>
+    </a></dd>
+  <dd id="my"  ><a href="用户中心.html"><img src="images/tab_4_normal.png">
+    <p>我的</p>
+    </a></dd>
+</dl>
+<div class="separated">- 别扯了，我是有底线的。 -</div>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="text/javascript">
+        setCurr('merchant');
+    </script>
+<script>
+</html>

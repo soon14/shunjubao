@@ -1,0 +1,44 @@
+<?php
+$z[0]=Array("field","",106,125);
+$z[0][4]['name']="title";
+$z[1]=Array("global","",126,152);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",193,215);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",255,306);
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("include","",564,598);
+$z[4][4]['file']="header.htm";
+$z[5]=Array("field","",707,736);
+$z[5][4]['name']="typelink";
+$z[6]=Array("field","",754,783);
+$z[6][4]['name']="typename";
+$z[7]=Array("list","\r\n          <li><strong>&bull;</strong><a href=\"[field:arcurl/]\">[field:title/]</a></li>\r\n          ",979,1159);
+$z[7][4]['pagesize']="22";
+$z[7][4]['titlelen']="44";
+$z[7][4]['orderby']="id";
+$z[7][4]['orderway']="desc";
+$z[8]=Array("pagelist","",1237,1315);
+$z[8][4]['listitem']="info,index,end,pre,next,pageno,option";
+$z[8][4]['listsize']="5";
+$z[9]=Array("arclist","\r\n          <li><b>&bull;</b><a href=\"[field:arcurl/]\">[field:title/]</a></li>\r\n          ",1482,1689);
+$z[9][4]['channelid']="1";
+$z[9][4]['typeid']="4,5,6,7,8";
+$z[9][4]['titlelen']="40";
+$z[9][4]['orderby']="click";
+$z[9][4]['orderway']="desc";
+$z[9][4]['row']="11";
+$z[10]=Array("arclist","\r\n          <li><b>&bull;</b><a href=\"[field:arcurl/]\">[field:title/]</a></li>\r\n          ",1824,2031);
+$z[10][4]['channelid']="1";
+$z[10][4]['typeid']="4,5,6,7,8";
+$z[10][4]['titlelen']="40";
+$z[10][4]['orderby']="click";
+$z[10][4]['orderway']="desc";
+$z[10][4]['row']="11";
+$z[11]=Array("global","",2162,2188);
+$z[11][4]['name']="jd_st_host";
+$z[12]=Array("include","",2310,2344);
+$z[12][4]['file']="footer.htm";
+
+?>

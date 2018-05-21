@@ -1,0 +1,1 @@
+<p><span>●</span><a href="http://news.zhiying365.com[field:arcurl/]">[field:title function="( strlen('@me')>60 ? cn_substr('@me',40).'…' : '@me' )" /]</a></p>

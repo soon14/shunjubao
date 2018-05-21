@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<title>{dede:field.title/}_{dede:global.cfg_webname/}智赢网智赢竞彩手机版新闻资讯！</title>
+<meta name="keywords" content="智赢彩票,智赢竞彩,彩票,彩票网,体育彩票,足球彩票,手机彩票,wap彩票,即开型彩票,高频彩票,手机买彩票" />
+<meta name="description" content="智赢网手机版，智赢网触屏版竞彩资讯。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/wap_header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/wap_news.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/wap_footer.css" />
+</head>
+<body>
+<div class="top">
+  <div class="logo">
+    <h1><a href="http://www.zhiying365365.com/">智赢网</a></h1>
+  </div>
+  <div class="topCenter">
+    <ul>
+      <li><a href="http://news.zhiying365365.com/tuijian/">推荐</a></li>
+      <li><a href="http://news.zhiying365365.com/zixun/" class="active">资讯</a></li>
+      <li><a href="http://news.zhiying365365.com/touzhujiqiao/">技巧</a></li>
+    </ul>
+  </div>
+</div>
+{dede:arclist channelid='1' typeid='22' titlelen='60' orderby='id' orderway='desc' row='15'}
+<div class="zhongchainews">
+  <dl>
+    <dt><a href="[field:arcurl/]">[field:title function="( strlen('@me')>150 ? cn_substr('@me',150).'…' : '@me' )" /]</a></dt>
+    <dd>[field:description function='cn_substr(@me,350)'/] ...</dd>
+	<dd class="show"><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl/]">详情</a></dd>
+  </dl>
+</div>
+{/dede:arclist}
+<div class="page none">{dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}</div>
+</body>
+{dede:include file="wap_footer.htm"/}
+</html>

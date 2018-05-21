@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>首页</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/pagList.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="js/public/common.js" type="text/javascript" ></script>
+</head>
+<body >
+<div id="Navigation">
+  <div class="banner"><img src="images/logo.png"></div>
+</div>
+<div id="Focus" style="padding:90px 0 0 0;"> <a class="before" href="#"><img src="images/ad1.png"></a> <a class="before" href="#"><img src="images/ad2.png"></a></div>
+<div id="Star" class="default">
+  <div class="title">推荐专家
+    <input type="radio" name="Star" id="Star_7" onChange="changeStar(this)">
+    <label for="Star_7">篮球</label>
+    <span>|</span>
+    <input type="radio" name="Star" id="Star_3" onChange="changeStar(this)" checked>
+    <label for="Star_3">足球</label>
+  </div>
+  <dl class="Star_3" style="display:block">
+    <div class="inner">
+      <dd> <a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">红旗说球</p>
+        </a> </dd>
+      <dd> <a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">大球王</p>
+        </a> </dd>
+      <dd> <a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">足球赢家</p>
+        </a> </dd>
+      <dd><a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">缤缤talk</p>
+        </a> </dd>
+      <dd><a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">紅單狙擊手</p>
+        </a> </dd>
+      <dd><a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">莫罗亚盘</p>
+        </a> </dd>
+      <dd><a href="专家详细.html"> <img src="images/touxiang.jpg">
+        <p class="name">莫罗亚盘</p>
+        </a> </dd>
+      <p class="nolist">- 暂无盈利专家 -</p>
+    </div>
+  </dl>
+ <div class="toutiao"> <a class="torchbearer" href="全部推荐.html">连红20单盈利2000%是什么练成的？</a> </div></div>
+<div id="NewMatch" class="default matchList">
+  <div class="title">最新推荐</div>
+  <div class="matchEv"  >
+    <div class="info"> <a href="专家详细.html"><img src="images/touxiang.jpg">
+      <p class="name">三分球绝杀</p>
+      <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 5红4黑</span><span class="continuous">最高 4连红</span></p>
+      </a> </div>
+    <a href="/article/detail/53576">
+    <div class="content"> 公牛连续作客，本场迎来菜鸡互啄 </div>
+    </a> <a href="推荐详情.html">
+    <div class="matchInfo" type="basketball">
+      <p class="team">犹他爵士
+        VS                         芝加哥公牛 </p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">NBA</p>
+      <p class="time">11-23 10:00</p>
+    </div>
+    <div class="pushTime"> 11-22 23:09&nbsp;发布 <span class="free">免费</span> </div>
+    </a> </div>
+  <div class="matchEv"  >
+    <div class="info"> <a href="专家详细.html"><img src="images/touxiang.jpg">
+      <p class="name">最爱大小球</p>
+      <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 4红2黑</span><span class="continuous">最高 7连红</span></p>
+      </a> </div>
+    <a href="推荐详情.html">
+    <div class="content"> 睡觉单！一场野鸡小联赛，但是投注还是不错的 </div>
+    </a> <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">奥斯纳布鲁克U19
+        VS                         云达不莱梅U19 </p>
+      <p class="play">[大小球]</p>
+      <p class="league">德U19</p>
+      <p class="time">11-23 01:30</p>
+    </div>
+    <div class="pushTime"> 11-22 23:07&nbsp;发布 <span class="cost">￥28</span> </div>
+    </a> </div>
+</div>
+<dl id="Bottom">
+  <dd id="index"><a href="首页.html"><img src="images/tab_0_normal.png">
+    <p>首页</p>
+    </a></dd>
+  <dd id="recommend"><a href="今日赛程.html"><img src="images/tab_1_normal.png">
+    <p>赛程</p>
+    </a></dd>
+  <dd id="merchant"  ><a href="专家.html"><img src="images/tab_2_normal.png">
+    <p>专家</p>
+    </a></dd>
+  <dd id="order"  ><a href="全部推荐.html"><img src="images/tab_3_normal.png">
+    <p>推荐</p>
+    </a></dd>
+  <dd id="my"  ><a href="用户中心.html"><img src="images/tab_4_normal.png">
+    <p>我的</p>
+    </a></dd>
+</dl>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script type="text/javascript">
+        setCurr('index');
+    </script>
+<script>
+<script type="text/javascript">
+//        var BannerArr = [
+//            {
+//                'id': '123',
+//                'type:': 'article', //推荐
+//                'face': 'https://img.liaogou168.com/images/lg_58fc92e37fcf9.jpg',
+//                'content': '【辉常好球】芬超推荐8连红！数据可查，今日继续冲击红单！'
+//            },
+//            {
+//                'id': '123',
+//                'type': 'package', //套餐
+//                'face': 'https://img.liaogou168.com/images/lg_58dba684225d5.jpg',
+//                'content': '过绿！苏宁客场能否全身而退？'
+//            },
+//            {
+//                'id': '123',
+//                'type': 'merchant', //专家
+//                'face': 'https://img.liaogou168.com/images/lg_5948ccc81c64b.jpg',
+//                'content': '今日最后一推，挪超两没落冠军之争！'
+//            }
+//        ]
+        setBanner();
+        setCurr('index');
+
+        $(function () {//微信分享
+            customShare('深耕体育数据，汇聚体育精英。料狗，让红单更简单！', "料狗", '', '', "");
+        });
+
+        function changeStar (obj) {
+            for (var i = 0; i < document.getElementById('Star').getElementsByTagName('dl').length; i++) {
+                document.getElementById('Star').getElementsByTagName('dl')[i].style.display = 'none';
+            }
+            document.getElementById('Star').getElementsByClassName(obj.id)[0].style.display = 'block';
+        }
+
+        function changeMatch (obj, type) {
+            for (var i = 0; i < document.getElementById('Match').getElementsByClassName('matchType').length; i++) {
+                if (document.getElementById('Match').getElementsByClassName('matchType')[i].getAttribute('type') != obj.id) {
+                    document.getElementById('Match').getElementsByClassName('matchType')[i].style.display = 'none';
+                }else{
+                    document.getElementById('Match').getElementsByClassName('matchType')[i].style.display = 'block';
+                }
+            }
+            var a = document.getElementById('Match').getElementsByClassName('title')[0].getElementsByTagName('a')[0];
+
+            a.href = "/article/recommend/mix/" + type;
+        }
+    </script>
+<script type="text/javascript">
+        var Moving = 0;
+        var Run = 0;
+        var FocusArr = document.getElementById('Focus').getElementsByTagName('a'); //当前对象数组
+        var RunArr = []; //目标对象数组
+        var Length = 0, NowNum = 0;
+        FocusArr[0].className = 'before';
+        if (FocusArr.length != 1) { //如果图片不止一个时
+            if (FocusArr.length == 2) { //如果图片只有两个时，要复制一份，避免交互出现bug
+                var ABox = document.createElement('a');
+                ABox.href = FocusArr[0].href;
+                ABox.innerHTML = FocusArr[0].innerHTML;
+                var BBox = document.createElement('a');
+                BBox.href = FocusArr[1].href;
+                BBox.innerHTML = FocusArr[1].innerHTML;
+                document.getElementById('Focus').appendChild(ABox)
+                document.getElementById('Focus').appendChild(BBox);
+                RunArr = document.getElementById('Focus').getElementsByTagName('a');
+            }else{
+                RunArr = FocusArr;
+            };
+            Length = RunArr.length;
+            RunArr[RunArr.length - 1].className = 'back';
+            var Run = setInterval('Focus()',5000);
+        }
+
+        function Focus () {
+            if (Moving == 0) {
+                Moving = 1;
+                NowNum += 1;
+                document.getElementById('Focus').getElementsByClassName('before')[0].className = '';
+                document.getElementById('Focus').getElementsByClassName('back')[0].className = '';
+                RunArr[NowNum%Length].className = 'before';
+                RunArr[(NowNum - 1)%Length].className = 'back';
+
+                if (Run == 0) {
+                    Run = setInterval("Focus()",5000);
+                };
+
+                setTimeout('Moving=0;',600);
+            }
+        }
+
+        function FocusBack () {
+            if (Moving == 0) {
+                Moving = 1;
+                if (NowNum <= 1) {
+                    NowNum = NowNum - 1 + Length;
+                }else{
+                    NowNum = NowNum - 1;
+                }
+                document.getElementById('Focus').getElementsByClassName('before')[0].className = '';
+                document.getElementById('Focus').getElementsByClassName('back')[0].className = '';
+                RunArr[NowNum%Length].className = 'before';
+                RunArr[(NowNum - 1)%Length].className = 'back';
+
+                if (Run == 0) {
+                    Run = setInterval("Focus()",5000);
+                };
+
+                setTimeout('Moving=0;',600);
+            }
+        }
+
+        function Listener(){
+            var obj = document.getElementById('Focus');
+            obj.addEventListener('touchstart', function(event) {
+                // 如果这个元素的位置内只有一个手指的话
+                if (event.targetTouches.length == 1) {
+                    // event.preventDefault();// 阻止浏览器默认事件，重要
+                    var touch = event.targetTouches[0];
+                    // 把元素放在手指所在的位置
+                    StartX = touch.pageX;
+                    // obj.style.left = touch.pageX-50 + 'px';
+                    // obj.style.top = touch.pageY-50 + 'px';
+                }
+            }, false);
+
+            obj.addEventListener('touchmove', function(event) {
+                // 如果这个元素的位置内只有一个手指的话
+                if (event.targetTouches.length == 1) {
+                    event.preventDefault();// 阻止浏览器默认事件，重要
+                    var touchA = event.targetTouches[0];
+                    // 把元素放在手指所在的位置
+                    EndX = touchA.pageX;
+                    if (Moving == 0) {
+                        clearInterval(Run);
+                        Run = 0;
+                    }
+                    if (StartX - EndX > 0) {
+                        Focus();
+                    }else{
+                        FocusBack();
+                    };
+                    // obj.style.left = touch.pageX-50 + 'px';
+                    // obj.style.top = touch.pageY-50 + 'px';
+                }
+            }, false);
+
+            document.addEventListener('scroll', function (event) {
+                var Scroll = getPageScroll()[1];
+                document.getElementById('Navigation').style.opacity = Scroll / 500;
+                if (Scroll != 0) {
+                    document.getElementById('Navigation').style.visibility = 'visible';
+                }else{
+                    document.getElementById('Navigation').style.visibility = 'hidden';
+                }
+                document.getElementById('Search').getElementsByClassName('red')[0].style.opacity = Scroll / 500;
+                document.getElementById('Search').getElementsByClassName('white')[0].style.opacity = 1-(Scroll / 500);
+            }, false);
+
+        }
+        Listener();
+    </script>
+<script>
+        
+        var Num = 1;
+        var ADLength;
+        if (document.getElementsByClassName('MesAd')[0]) {
+            var MesAD = document.getElementsByClassName('MesAd')[0].getElementsByTagName('a');
+            if (MesAD.length >= 2) {
+                if (MesAD.length == 2) {
+                    var A1 = document.createElement('a');
+                    A1.href = MesAD[0].href;
+                    A1.innerHTML = MesAD[0].innerHTML;
+                    var A2 = document.createElement('a');
+                    A2.href = MesAD[1].href;
+                    A2.innerHTML = MesAD[1].innerHTML;
+                    document.getElementsByClassName('MesAd')[0].appendChild(A1)
+                    document.getElementsByClassName('MesAd')[0].appendChild(A2)
+                }
+                ADLength = MesAD.length;
+                MesAD[0].className = 'on';
+                setTimeout(function () {
+                    MesAD[MesAD.length - 1].className = 'back';
+                },1000);
+                setInterval('ADRun()',3000);
+            }
+        }
+
+        function ADRun () {
+            document.getElementsByClassName('MesAd')[0].getElementsByClassName('back')[0].className = '';
+            document.getElementsByClassName('MesAd')[0].getElementsByTagName('a')[Num].className = 'on';
+            document.getElementsByClassName('MesAd')[0].getElementsByTagName('a')[(Num + ADLength - 1) % ADLength].className = 'back';
+
+            Num = (Num + 1) % ADLength;
+        }
+    </script>
+</html>

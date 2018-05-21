@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}智赢网智赢竞彩-官方公告。</title>
+<meta name="keywords" content="智赢公告，智赢竞彩，智赢足彩，智赢足彩/}" />
+<meta name="description" content="智赢网、智赢竞彩网官方公告信息。" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/news.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=appkey" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/top.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/winmac.js"></script>
+</head>
+<body>
+{dede:include file="header.htm" /}
+<!--news nav start-->
+<div class="NewsNav">
+  <h1><span>■</span><a href="">资讯中心</a><b><a href="{dede:field name='typelink'/}" target='_blank'>{dede:field name='typename'/}</a></b><em><a href="http://news.zhiying365365.com/footballtj/" target="_blank">足球推荐</a><a href="http://news.zhiying365365.com/footballxw/" target="_blank">足球新闻</a><a href="http://news.zhiying365365.com/NBAtj/" target="_blank">篮彩推荐</a><a href="http://news.zhiying365365.com/NBAxw/" target="_blank">篮彩新闻</a></em></h1>
+</div>
+<!--news nav end-->
+<!--center start-->
+<div class="cnetr">
+  <div class="newscenter">
+    <div class="Newsleft">
+      <div class="newsList">
+        <ol>
+          {dede:list pagesize='22' titlelen='60' orderby="id" orderway="desc"}
+          <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><strong>&bull;</strong><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+          {/dede:list}
+        </ol>
+        <div class="clear"></div>
+        <div class="page">{dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}</div>
+      </div>
+    </div>
+    <div class="Newsright">
+      <h3><b>本类热点</b></h3>
+      <div class="Newslist" id="Newslist">
+        <ul>
+          {dede:arclist channelid='1' typeid='8' titlelen='50' orderby='click' orderway='desc' row='11'}
+          <li><b>&bull;</b><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <h3><b>热点排行</b></h3>
+      <div class="Newslist" id="Newslist">
+        <ul>
+          {dede:arclist channelid='1' typeid='4,5,6,7,8' titlelen='50' orderby='click' orderway='desc' row='11'}
+          <li><b>&bull;</b><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="newsad1">
+      <div class=""><a href="http://www.zhiying365365.com/football/hhad_list.php" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/13-140225164454292.jpg" /></a></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--center end-->
+{dede:include file="footer.html" /}
+</body>
+</html>

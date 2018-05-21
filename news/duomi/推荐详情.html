@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>推荐详情</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/recommend.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="/js/public/common.js" type="text/javascript" ></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>推荐详情</div>
+</div>
+<a href="专家详细.html" id="Talent" class="default"><img src="images/touxiang.jpg">
+<div class="info">
+  <p class="name">篮彩老船长<span class="blue">足</span></p>
+  <p class="slogan">专治各种不红--陈博士宗旨！潜心研究欧洲赔率指数多年，擅长结合欧亚盘口分析，各大联赛命中率长期稳定！</p>
+</div>
+<ul>
+  <li class="bingo">近期 13红8黑</li>
+  <li class="continuous">最高6连红</li>
+  <li class="gold">3天盈利294%
+</ul>
+</a>
+<div id="Recommend" class="default">
+  <div class="match" type="basketball">
+    <dl class="team">
+      <dd> <a class="ha"  >
+        <p class="name">多特蒙德</p>
+        <p class="vs">VS</p>
+        <p class="name"> 托特纳姆热刺</p>
+        </a>
+        <div class="checkBox">
+          <input id="Quiz_Win" type="checkbox" name="bingo" disabled
+                                    value="1"                                     checked  >
+          <label for="Quiz_Win">
+          <p>主胜</p>
+          <p>（1.5）</p>
+          </label>
+          <input id="Quiz_Draw" type="checkbox" name="bingo" disabled>
+          <!--购买后，在相应的input上增加checked-->
+          <label for="Quiz_Draw" class="odd">
+          <p>平局</p>
+          <p>3.5</p>
+          </label>
+          <input id="Quiz_Lose" type="checkbox" name="bingo" disabled
+                                                                       >
+          <label for="Quiz_Lose">
+          <p>客胜</p>
+          <p>（2.3）</p>
+          </label>
+        </div>
+      </dd>
+    </dl>
+  </div>
+</div>
+<div id="Recommend" class="default">
+  <div class="match" >
+    <!--未购买的显示这个start-->
+    <div style="display:;">
+      <dl class="hid">
+        比赛信息已被隐藏
+      </dl>
+      <div class="nobuy"> 本推荐内容共<b>75</b>字
+        <button onClick="confirmOrder()" >立即查看 &nbsp;（￥38）</button>
+      </div>
+    </div>
+    <!--未购买的显示这个end-->
+    <!---免费查看显示这个start-->
+    <div class="default" style="border:none; padding:30px 0 0 0;display:;">
+      <div class="title">推荐理由</div>
+      <div class="content">
+        <!--已购买的显示这个，比赛结果出来后，增加result-->
+        洛杉矶湖人上场在主场113-122不敌太阳，库兹马30+10创新高，但无奈仍然惜败对手，洛佩兹19分10篮板3助攻3封盖，兰德尔13分4篮板，波普13分4篮板4助攻，鲍尔6分6篮板6助攻5抢断1封盖。数据是相当漂亮，但防守端目前不如理想。面对着这个他们在本赛季已经击败过两次的对手，他们今天在主场却未能打出声势。他们自开场4-0领先后便逐渐陷入被动，自此再未能反超比分。湖人全队总计出现多达19次失误，其中有多次是出现在了转换进攻的衔接上，输波再正常不过,上场差多少！ </div>
+    </div>
+    <!---免费查看显示这个end-->
+    <div class="time">11-19 23:20 发布</div>
+  </div>
+</div>
+<div class="default matchList" only id="other_art">
+  <div class="title">该专家当日还有2场推荐</div>
+  <div class="matchEv"  > <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">广州恒大VS上海上港 </p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">中超</p>
+      <p class="time">11-22 10:00</p>
+    </div>
+    <div class="pushTime">11-21 23:59&nbsp;发布 <span class="free">免费</span> </div>
+    </a> </div>
+  <div class="matchEv"  > <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">惠灵顿凤凰VS墨尔本城 </p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">澳甲</p>
+      <p class="time">11-22 01:30</p>
+    </div>
+    <div class="pushTime">11-21 23:59&nbsp;发布 <span class="free" style="color:#cc3333;">付费</span> </div>
+    </a> </div>
+  <div class="showOnly" onClick="if(document.getElementById('other_art').getAttribute('only')==null) {document.getElementById('other_art').setAttribute('only','')}else{document.getElementById('other_art').removeAttribute('only')};"></div>
+</div>
+<!--当日其他热门推荐start--->
+<div class="default matchList">
+  <div class="title">当日其他热门推荐</div>
+  <div class="matchEv" >
+    <div class="info"> <a href="专家详细.html"> <img src="images/touxiang.jpg"> </a> <a href="推荐详情.html">
+      <p class="name">娜娜篮球Win</p>
+      </a> <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 9红3黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+      </a> <a href="推荐详情.html">
+      <div class="profit">
+        <p><em number='3'></em><em number='9'></em><em number='5'></em><em number='%'></em></p>
+      </div>
+      </a> </div>
+    <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">惠灵顿凤凰VS墨尔本城</p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">澳甲</p>
+      <p class="time">11-20 10:30</p>
+    </div>
+    <div class="pushTime"> 11-20 10:00&nbsp;发布</div>
+    </a> </div>
+  <div class="matchEv" >
+    <div class="info"> <a href="专家详细.html"> <img src="images/touxiang.jpg"> </a> <a href="推荐详情.html">
+      <p class="name">娜娜篮球Win</p>
+      </a> <a href="推荐详情.html">
+      <p class="slogan"><span class="profit">近期 9红3黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+      </a> <a href="推荐详情.html">
+      <div class="profit">
+        <p><em number='3'></em><em number='9'></em><em number='5'></em><em number='%'></em></p>
+      </div>
+      </a> </div>
+    <a href="推荐详情.html">
+    <div class="matchInfo" type="football">
+      <p class="team">惠灵顿凤凰VS墨尔本城</p>
+      <p class="play">[亚盘让分]</p>
+      <p class="league">澳甲</p>
+      <p class="time">11-20 10:30</p>
+    </div>
+    <div class="pushTime"> 11-20 10:00&nbsp;发布</div>
+    </a> </div>
+</div>
+<!--当日其他热门推荐end--->
+<div class="separated">- 以上内容仅代表发布者个人意见，仅供浏览及参考 -</div>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script>
+            function confirmOrder() {
+                                $.ajax({
+                    "url": "/article/getMatchTime/52888",
+                    "dataType": "json",
+                    "success": function (json) {
+                        if (json) {
+                            var msg = json.msg;
+                            var code = json.code;
+                            if (code == 200) {
+                                //msg = msg == "" ? "" : msg + "<br/>";
+                                location.href = "/pay/unified/article-52888";
+                                //confirmAlert(msg + '确认购买本推荐？', "location.replace('/order/article/52888');");
+                            } else if (code == 201){
+                                confirmAlert(msg, "", "", "确认");
+                            }
+                        }
+                    },
+                    "error": function () {
+                        confirmAlert('确认购买本推荐？', "location.replace('/order/article/52888');");
+                    }
+                });
+                            }
+        </script>
+<script type="text/javascript">
+        $(function () {
+            customShare("夜场嗨起来！巴甲小王子！", '陈博士足彩' , 'https://shop.liaogou168.com/article/detail/52888', 'https://img.liaogou168.com/images/lg_599682a30b047.jpg/100px'
+                    , "");//分享
+            checkShowAd();
+        });
+
+        function closeAd() {//记录关闭时间
+            $("#ad").hide();
+            localStorage.setItem('delADTime', (new Date()).getTime());
+        }
+        
+        function checkShowAd() {//判断是否需要显示ad
+            var time = localStorage.getItem('delADTime');
+            if (time) {//有关闭时间则检查是否到时间显示。
+                var minute = parseFloat($("#ad").attr("minute"));
+                var now = (new Date()).getTime();
+                if (now - time >=  minute * 60 * 1000) {
+                    $("#ad").show();
+                } else {
+                    $("#ad").remove();
+                }
+            } else {
+                $("#ad").show();
+            }
+        }
+    </script>
+<script>
+        
+        window.onpageshow = function () {
+            var hasSuccess = /[?|&]state=success/.test(location.href);
+            if (hasSuccess) {
+                Alert('success', '支付成功');
+                location.replace('/article/detail/52888');
+            }
+            if (location.href.indexOf('?tip=success') != -1) {
+                Alert('success', '关注成功');
+                location.replace('/article/detail/52888');
+            }
+        }
+//        --}}
+                    </script>
+</html>

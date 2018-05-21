@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>赛事推荐</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/matList.css">
+<link rel="stylesheet" type="text/css" href="css/recommend.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="/js/public/common.js" type="text/javascript" ></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>专家推荐</div>
+</div>
+<div id="Recommend" class="default">
+  <div class="match" type="basketball">
+    <dl class="team">
+      <dd> <a class="ha"  >
+        <p class="name">多特蒙德</p>
+        <p class="vs">VS</p>
+        <p class="name"> 托特纳姆热刺</p>
+        </a>
+        <div class="checkBox">
+          <input id="Quiz_Win" type="checkbox" name="bingo" disabled
+                                    value="1"                                     checked  >
+          <label for="Quiz_Win">
+          <p>主胜</p>
+          <p>（1.5）</p>
+          </label>
+          <input id="Quiz_Draw" type="checkbox" name="bingo" disabled>
+          <!--购买后，在相应的input上增加checked-->
+          <label for="Quiz_Draw" class="odd">
+          <p>平局</p>
+          <p>3.5</p>
+          </label>
+          <input id="Quiz_Lose" type="checkbox" name="bingo" disabled
+                                                                       >
+          <label for="Quiz_Lose">
+          <p>客胜</p>
+          <p>（2.3）</p>
+          </label>
+        </div>
+      </dd>
+    </dl>
+  </div>
+</div>
+<div class="default matchList" style="display:;">
+  <div class="title">该场赛事有2个专家进行了推荐</div>
+</div>
+<div class="default matchList" style="display:none;">
+  <div class="dade"><p>当前未有专家推荐<br/>加入我们成为推荐大咖，让您的利润蒸蒸日上！<br/><span>请联系微信：xxxxx</span></p></div>
+</div>
+<div id="Att" style="display: block;">
+  <div class="default matchList">
+    <div class="title" style="display:none;">推荐的专家</div>
+    <div class="matchEv">
+      <div class="info"> <img src="images/touxiang.jpg">
+        <p class="name">篮彩老船长<em><strong>免费阅读</strong></em></p>
+        <p class="slogan"><span class="profit">近期 7红2黑</span><span class="continuous">2连红</span><span class="day">连续3天盈利</span></p>
+        <a href="推荐详情.html">
+        <div class="profit">
+          <p><em number='4'></em><em number='3'></em><em number='6'></em><em number='%'></em></p>
+        </div>
+        </a></div>
+    </div>
+    <div class="matchEv">
+      <div class="info"> <a href="专家详细.html"><img src="images/touxiang.jpg"></a>
+        <p class="name">伟哥看球<em><b>付费阅读</b></em></p>
+        <p class="slogan"><span class="profit">近期 5红2黑</span><span class="continuous">最高 6连红</span><span class="day">连续2天盈利</span></p>
+        <a href="推荐详情.html">
+        <div class="profit">
+          <p><em number='4'></em><em number='0'></em><em number='9'></em><em number='%'></em></p>
+        </div>
+        </a></div>
+    </div>
+  </div>
+</div>
+<div class="separated">- 别扯了，我是有底线的。 -</div>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script>
+            function confirmOrder() {
+                                $.ajax({
+                    "url": "/article/getMatchTime/52921",
+                    "dataType": "json",
+                    "success": function (json) {
+                        if (json) {
+                            var msg = json.msg;
+                            var code = json.code;
+                            if (code == 200) {
+                                //msg = msg == "" ? "" : msg + "<br/>";
+                                location.href = "/pay/unified/article-52921";
+                                //confirmAlert(msg + '确认购买本推荐？', "location.replace('/order/article/52921');");
+                            } else if (code == 201){
+                                confirmAlert(msg, "", "", "确认");
+                            }
+                        }
+                    },
+                    "error": function () {
+                        confirmAlert('确认购买本推荐？', "location.replace('/order/article/52921');");
+                    }
+                });
+                            }
+        </script>
+<script type="text/javascript">
+        $(function () {
+            customShare("勇士果然是庄派来的！不要紧，这场杀回来！信心指数❤❤❤❤❤", '篮球投资思维' , 'https://shop.liaogou168.com/article/detail/52921', 'https://img.liaogou168.com/images/lg_59df34bc01fe9.jpg/100px'
+                    , "");//分享
+            checkShowAd();
+        });
+
+        function closeAd() {//记录关闭时间
+            $("#ad").hide();
+            localStorage.setItem('delADTime', (new Date()).getTime());
+        }
+        
+        function checkShowAd() {//判断是否需要显示ad
+            var time = localStorage.getItem('delADTime');
+            if (time) {//有关闭时间则检查是否到时间显示。
+                var minute = parseFloat($("#ad").attr("minute"));
+                var now = (new Date()).getTime();
+                if (now - time >=  minute * 60 * 1000) {
+                    $("#ad").show();
+                } else {
+                    $("#ad").remove();
+                }
+            } else {
+                $("#ad").show();
+            }
+        }
+    </script>
+<script>
+        
+        window.onpageshow = function () {
+            var hasSuccess = /[?|&]state=success/.test(location.href);
+            if (hasSuccess) {
+                Alert('success', '支付成功');
+                location.replace('/article/detail/52921');
+            }
+            if (location.href.indexOf('?tip=success') != -1) {
+                Alert('success', '关注成功');
+                location.replace('/article/detail/52921');
+            }
+        }
+//        --}}
+                    </script>
+</html>

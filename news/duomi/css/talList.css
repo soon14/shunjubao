@@ -1,0 +1,154 @@
+body{padding: 177px 0 99px;}
+
+#Navigation a.search{
+	width: 88px; height: 88px;
+	background: url(../images/icon_search.png) no-repeat center; background-size: 80px;
+	position: absolute; right: 12px; top: 0;
+	display: block;
+}
+
+/*关注*/
+#Att .nolist{
+	padding: 325px 0 70px;
+	background: url(../images/bg_vip_nolist.png) no-repeat center 70px; background-size: 240px;
+	font-size: 28px; line-height: 40px; color: #999; text-align: center;
+}
+
+/*榜单*/
+#RankFoot, #RankBas{
+
+}
+.default div.radio{
+	height: 70px;
+	display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+}
+.default input[type=radio]{
+	width: 0; height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+.default label{
+	height: 70px;
+	font-size: 24px; line-height: 70px; text-align: center; color: #999;
+	display: block;
+	position: relative;
+	-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+}
+.default label ~ label:before{
+	width: 1px;
+	background: #e6e6e6;
+	position: absolute; top: 20px; bottom: 20px; left: 0;
+	content: '';
+}
+.default input[type=radio]:checked + label{
+	color: #e1223a;
+}
+.default th{
+	height: 70px;
+}
+.default th:nth-child(1){
+	width: 84px;
+	font-size: 20px;
+}
+.default th:nth-child(2){
+	padding-left: 45px;
+	text-align: left;
+}
+.default th:nth-child(3){
+	width: 160px;
+}
+.default th:nth-child(4){
+	width: 140px;
+}
+.default td{
+	height: 128px;
+	position: relative;
+}
+.default td:nth-child(1){
+	width: 30px;
+	border-top: none;
+}
+.default tr:first-child td:nth-child(1){
+	border-top: 1px solid #e6e6e6;
+}
+.default td:nth-child(2){
+	width: 54px;
+}
+.default td:nth-child(3){
+	padding-left: 75px;
+	font-size: 28px; text-align: left;
+}
+.default td:nth-child(5){
+	color: #e1223a;
+}
+.default td img{
+	width: 60px; height: 60px;
+	margin-top: -30px;
+	border-radius: 50%;
+	position: absolute; top: 50%; left: 0;
+}
+.default td p{
+	max-height: 72px;
+	overflow: hidden;
+}
+.default td:nth-child(2) p{
+	width: 34px; height: 34px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: #E6E6E6;
+	font-size: 20px; line-height: 34px;
+	float: left;
+}
+.default td:last-child{
+	color: #e1223a;
+}
+.default tbody tr:nth-child(1) td:nth-child(2):before,
+.default tbody tr:nth-child(2) td:nth-child(2):before,
+.default tbody tr:nth-child(3) td:nth-child(2):before{
+	position: absolute; top: 0; bottom: 0; left: -4px; right: 0;
+	content: '';
+}
+.default tbody tr:nth-child(1) td:nth-child(2):before{
+	background: url(../images/icon_first.png) no-repeat left #fff; background-size: 40px;
+}
+.default tbody tr:nth-child(2) td:nth-child(2):before{
+	background: url(../images/icon_second.png) no-repeat left #fff; background-size: 40px;
+}
+.default tbody tr:nth-child(3) td:nth-child(2):before{
+	background: url(../images/icon_third.png) no-repeat left #fff; background-size: 40px;
+}
+
+/*展开专家其他推荐*/
+.showOnly{
+	height: 80px;
+	border-top: 1px solid #e6e6e6;
+	background: #fff;
+	font-size: 28px; line-height: 80px; text-align: center; color: #e1223a;
+	position: relative;
+}
+.showOnly:after{
+	height: 80px;
+	padding-right: 34px;
+	background: url(../images/bg_show_rotate.png) no-repeat right center; background-size: 24px;
+	display: inline-block;
+	content: '点击收起';
+}
+div.default[only] .showOnly:after{
+	background: url(../images/bg_show.png) no-repeat right center; background-size: 24px;
+	content: '点击展开';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

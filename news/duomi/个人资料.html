@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>个人资料</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta charset="utf-8"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/myinfo.css">
+<script src="js/public/public.js" type="text/javascript" ></script>
+<script src="js/jquery1.11.1.min.js" type="text/javascript" ></script>
+<script src="/js/public/common.js" type="text/javascript" ></script>
+</head>
+<body  >
+<div id="Navigation">
+  <div class="banner"><a href="/" class="home"></a>个人资料</div>
+</div>
+<form action="" method="post" class="default" onSubmit="return verifyForm(this);">
+  <input name="_token" value="qQLXN2m2hVH31GmNhuDPF80hNmjEJNqs0RxI5REg" type="hidden" />
+  <input name="gender" type="hidden" value=""/>
+  <div class="face"> <img src="images/touxiang.jpg">
+    <input id="head" class="pushFace" name="head" value="">
+    <!--这个input不显示，只为form posh的时候传头像链点-->
+    <button id="userImg"></button>
+  </div>
+  <ul>
+    <li class="name">
+      <input name="nickname" type="text" value="17701086884">
+    </li>
+    <li class="sex">
+      <input type="checkbox" name="sex" id="SexCheckbox" >
+      <label for="SexCheckbox"> <span class="male">男</span>/<span class="female">女</span> </label>
+    </li>
+    <li class="mail">
+      <input name="email" type="email" value="">
+    </li>
+  </ul>
+  <div class="btn">
+    <button type="submit">保存</button>
+  </div>
+</form>
+</body>
+<script type="text/javascript">
+    function setCurr(id) {
+        var dd = document.getElementById(id);
+        if (dd) {
+            var a = dd.firstElementChild;
+            var img = a.firstElementChild;
+
+            dd.className = "on";
+            //dd.removeAttribute("new");
+            a.setAttribute("href", "");
+            img.setAttribute("src", img.getAttribute("src").replace('normal', 'seleted'));
+        }
+    }
+</script>
+<script src="/js/jquery1.11.1.min.js"></script>
+<script src="https://shop.liaogou168.com/js/plupload/plupload.full.min.js?time=20170512"></script>
+<script type="text/javascript">
+        //实例化一个plupload上传对象
+        var uploader = new plupload.Uploader({
+            browse_button: 'userImg', //触发文件选择对话框的按钮，为那个元素id
+            url: '/auth/info/upload', //服务器端的上传页面地址
+            headers: {
+                'X-CSRF-TOKEN': "qQLXN2m2hVH31GmNhuDPF80hNmjEJNqs0RxI5REg"
+            },
+            filters: {
+                /*mime_types: [ //只允许上传图片和zip文件
+                 {title: "Image files", extensions: "jpg,jpeg,gif,png"}
+                 ],*/
+                max_file_size: '2048kb', //最大只能上传400kb的文件
+                //prevent_duplicates: true //不允许选取重复文件
+            },
+            multi_selection: false//只能选择一个文件
+        });
+
+        //在实例对象上调用init()方法进行初始化
+        uploader.init();
+
+        //绑定各种事件，并在事件监听函数中做你想做的事
+        uploader.bind('FilesAdded', function (uploader, files) {
+            uploader.start();
+            showLoading();
+        });
+
+        uploader.bind('FileUploaded', function (uploader, file, info) {
+            var json = $.parseJSON(info.response);
+            if (json.code == 0) {
+                $("#head").val(json.url);
+                $("#head_img").attr("src", json.url);
+                closeLoading();
+            } else {
+                closeLoading();
+                showError(json.msg);
+            }
+            uploader.refresh();
+        });
+
+        uploader.bind('Error', function (up, err) {
+//            $.each(err, function (n, v) {
+//                alert(n + " : " + v);
+//            });
+            if (err.code == -600 || (err.code == -200 && err.status == 413) ) {
+                showError("上传图片不能大于2M");
+            } else if (err.code < 0) {
+                closeLoading();
+                showError("上传文件失败。");
+                uploader.stop();
+                uploader.refresh();
+            }
+        });
+
+        function verifyForm(form) {
+            if ($.trim(form.nickname.value) == '') {
+                showError('昵称不能为空');
+                return false;
+            }
+            var checked = form.sex.checked;
+            form.gender.value = checked ? 2 : 1;
+            return true;
+        }
+
+        var success = "";
+        var error = ""
+        $(function () {
+            if (success != '') {
+                showSuccess(success);
+                setTimeout(function () {
+                    location.href = '/my';
+                }, 1500);
+            }
+            if (error != '') {
+                showError(error);
+            }
+        });
+    </script>
+</html>

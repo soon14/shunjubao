@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}智赢网智赢竞彩-足球推荐。</title>
+<meta name="keywords" content="智赢网，足球推荐，竞猜推荐，竞彩推荐，智赢足球推荐，竞彩足球，竞猜足球，足球竞猜，大力水手，大力水手新闻，" />
+<meta name="description" content="智赢网资讯频道足球推荐为彩民提供足球资讯、足球新闻、世界杯等其他相关足球的最新资讯及竞彩足球推荐。" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/news.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/top.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/winmac.js"></script>
+</head>
+<body>
+{dede:include file="header.htm" /}
+<!--news nav start-->
+<div class="NewsNav">
+  <h1><span>“</span><a href="http://news.zhiying365365.com/footballtj/">足球推荐</a><em><a href="http://news.zhiying365365.com/footballtj/" target="_blank" class="active">足球推荐</a><a href="http://news.zhiying365365.com/footballxw/" target="_blank">足球新闻</a><a href="http://news.zhiying365365.com/NBAtj/" target="_blank">篮球推荐</a><a href="http://news.zhiying365365.com/NBAxw/" target="_blank">篮球新闻</a></em></h1>
+</div>
+<!--news nav end-->
+<!--center start-->
+<div class="center">
+  <div class="newscenter">
+    <div class="Nxcenter" id="Nxcenter">
+      <div class="libiaolist"> {dede:arclist channelid='1' typeid='4' titlelen='50' orderby='id' orderway='desc' row='20'}
+        <dl>
+          <dt><a href="[field:arcurl/]" target="_blank">[field:title function="( strlen('@me')>100 ? cn_substr('@me',80).'…' : '@me' )" /]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span></dt>
+          <dd>[field:description function='cn_substr(@me,700)'/] ...</dd>
+        </dl>
+        {/dede:arclist}
+        <div class="clear"></div>
+        <div class="page">{dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}</div>
+      </div>
+    </div>
+    <div class="Nright">
+      <div>
+        <!-- 今日热投 start-->
+        <div class="ReTou">
+          <h2><b>今日热投</b></h2>
+          {dede:myad name='retou'/}
+          <div class="clear"></div>
+        </div>
+        <!--今日热投 start-->
+      </div>
+      <div class="newCenterfbxw" id="newCenterfbxw">
+        <h3><b>相关推荐</b></h3>
+        <div class="NewslisRight">
+          <ul>
+            {dede:arclist flag='c' titlelen=60 row=12}
+            <li><b>•</b><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--center end-->
+<!--footer start-->
+{dede:include file="footer.html" /}
+<!--footer end-->
+</body>
+</html>
