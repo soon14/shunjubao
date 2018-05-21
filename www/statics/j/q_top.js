@@ -13,9 +13,9 @@ for(var i=0;i<arrCookie.length;i++){
 }
 var welcome_str = "&nbsp;";
 	if (u_name != '') {
-		welcome_str += "<a href=\"http://m.zhiying365365.com/passport/login.php\"></a><a href=\"http://m.zhiying365365.com/account/user_center.php\"></a>&nbsp;&nbsp;&nbsp;<a href=\"http://www.zhiying365365.com/\">返回主页</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.com/passport/login.php\"></a><a href=\"http://www.shunjubao.com/account/user_center.php\"></a>&nbsp;&nbsp;&nbsp;<a href=\"http://www.shunjubao.com/\">返回主页</a></h1>";
 	} else {
-		welcome_str += "<a href=\"http://m.zhiying365365.com/passport/login.php\">登录</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.com/passport/login.php\">登录</a></h1>";
 }
 document.writeln(
 "<div class=\"top\">"+

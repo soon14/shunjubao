@@ -14,12 +14,12 @@
 "  </div>"+
 "  <div class=\"FootPic\">"+
 "    <ul>"+
-"      <li><a href=\"http://www.pinpaibao.com.cn/intro/index/\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic2.jpg\"></a></li>"+
-"      <li><a href=\"http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic1.jpg\"></a></li>"+
-"      <li><a href=\"http://www.315online.com.cn/\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic3.jpg\"></a></li>"+
-"      <li><a href=\"http://www.mps.gov.cn/n16/index.html?_v=1438535553945\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic4.jpg\"></a></li>"+
-"      <li><a href=\"http://www.itrust.org.cn/\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic5.jpg\"></a></li>"+
-"      <li><a href=\"http://www.bj.cyberpolice.cn/index.jsp\" target=\"_blank\"><img src=\"http://www.zhiying365365.com/www/statics/i/FootPic6.jpg\"></a></li>"+
+"      <li><a href=\"http://www.pinpaibao.com.cn/intro/index/\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic2.jpg\"></a></li>"+
+"      <li><a href=\"http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic1.jpg\"></a></li>"+
+"      <li><a href=\"http://www.315online.com.cn/\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic3.jpg\"></a></li>"+
+"      <li><a href=\"http://www.mps.gov.cn/n16/index.html?_v=1438535553945\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic4.jpg\"></a></li>"+
+"      <li><a href=\"http://www.itrust.org.cn/\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic5.jpg\"></a></li>"+
+"      <li><a href=\"http://www.bj.cyberpolice.cn/index.jsp\" target=\"_blank\"><img src=\"http://www.shunjubao.com/www/statics/i/FootPic6.jpg\"></a></li>"+
 "    </ul>"+
 "  </div>"+
 "  <div class=\"FooterOhter\">"+

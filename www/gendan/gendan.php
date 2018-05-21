@@ -1,19 +1,19 @@
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>·½°¸ÏêÇé-¡¾ÖÇÓ®Íø¡¿²ÊÆ±Ó®¼ÒÊ×Ñ¡_ÖÐ¹ú¾º²ÊÍø_×ã²Ê_Àº²Ê_µ¥³¡_¸£²Ê_Ìå²Ê_ÈËÆø×îÍúµÄ²ÊÆ±ÍøÕ¾</title>
-<meta name="keywords" content="¾º²Ê,ÖÐ¹ú¾º²ÊÍø,×ã²Ê,ÖÐ¹ú×ã²ÊÍø,Àº²Ê,µ¥³¡,¸£²Ê,Ìå²Ê,×ãÇò²ÊÆ±,ÀºÇò²ÊÆ±" />
-<meta name="description" content="ÖÇÓ®ÍøÊÇ²ÊÆ±Ó®¼ÒµÄ¾Û¼¯µØ£¬¿Ú±®×îºÃµÄ²ÊÆ±×öµ¥ÍøÕ¾£¬¾º²Ê¡¢µ¥³¡²ÊÆ±¡¢ÀºÇò²ÊÆ±¡¢×ãÇò²ÊÆ±ÈËÆø³¬Íú£¬¿ÉÒÔÍ¨¹ýÍøÕ¾ºÍÊÖ»ú¿Í»§¶ËÊ¹ÓÃ¡£Ìá¹©¸£Àû²ÊÆ±ºÍÌåÓý²ÊÆ±µÄ¿ª½±¡¢×ßÊÆÍ¼±í¡¢ËõË®¹ýÂË¡¢½±½ðÆÀ²â¡¢±È·ÖÖ±²¥µÈ×ÊÑ¶·þÎñ¡£" />
-<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
-<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
-<link href="http://www.zhiying365365.com/www/statics/c/user.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
-<script language="javascript" src="http://www.zhiying365365.com/www/statics/j/common.js"></script>
-<link rel="shortcut icon" href="http://www.zhiying365365.com/www/statics/i/zhiying.icon" type="image/x-icon" />
+<title>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ó®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±Ó®ï¿½ï¿½ï¿½ï¿½Ñ¡_ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ±ï¿½ï¿½Õ¾</title>
+<meta name="keywords" content="ï¿½ï¿½ï¿½ï¿½,ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½,ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Æ±,ï¿½ï¿½ï¿½ï¿½ï¿½Æ±" />
+<meta name="description" content="ï¿½ï¿½Ó®ï¿½ï¿½ï¿½Ç²ï¿½Æ±Ó®ï¿½ÒµÄ¾Û¼ï¿½ï¿½Ø£ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ÃµÄ²ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡¢ï¿½È·ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½" />
+<link href="http://www.shunjubao.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.com/www/statics/c/user.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.shunjubao.com/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.shunjubao.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script language="javascript" src="http://www.shunjubao.com/www/statics/j/common.js"></script>
+<link rel="shortcut icon" href="http://www.shunjubao.com/www/statics/i/zhiying.icon" type="image/x-icon" />
 <?php
 require_once "../include/init.php";
 $id=$_REQUEST["id"];
-// ÑéÖ¤·½°¸ÊÇ·ñÏÔÊ¾
+// ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ê¾
 $sql="select * from user_ticket_all where id=$id and combination_type=0";	
 $query=mysql_query($sql,$db_r);
 if($d=mysql_fetch_array($query)){
@@ -25,56 +25,56 @@ if($d=mysql_fetch_array($query)){
 		$uname=iconv("utf-8","gbk",$d1["u_nick"]?$d1["u_nick"]:$d1["u_name"]);
 	}
 }
-/* ·½°¸Î´¹«¿ª
+/* ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½
 if($combination_type==0){
 	exit;	
 }
 */
 ?>
 </head>
-<link href="http://www.zhiying365365.com/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.com/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
 <body>
-<!--Ò³ÃæÍ·²¿ start-->
-<script src="http://www.zhiying365365.com/zy/www/statics/j/top.js" type="text/javascript"></script>
-<script src="http://www.zhiying365365.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
+<!--Ò³ï¿½ï¿½Í·ï¿½ï¿½ start-->
+<script src="http://www.shunjubao.com/zy/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
 <!--center start-->
 <div class="center">
-  <!--È·ÈÏÍ¶×¢center start-->
+  <!--È·ï¿½ï¿½Í¶×¢center start-->
   <div class="BitCenter">
     <div class="ConfirmationTz">
-      <!--Í¶×¢È·ÈÏ¹ý¹Ø·½Ê½ start-->
+      <!--Í¶×¢È·ï¿½Ï¹ï¿½ï¿½Ø·ï¿½Ê½ start-->
     <div class="querenguoguan">
     <div class="TouXiang">
-    <dl><dt><img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg" /> <a href="http://www.zhiying365365.com/account/user_center.php"><?php echo $uname?></a> </dt>
-        <dd><p>·½°¸ÀàÐÍ£º<i><?php echo $SPORT[$d["sport"]]."-".$POOL[$d["pool"]]?></i></p>
-            <p>ÀÛ¼ÆÖÐ½±£º<strong>&yen;</strong></p></dd>
-        <dd><p>·½°¸½ð¶î£º<i>&yen;<?php echo $d["money"]?></i></p>
-            <p>±¶Êý£º<strong><?php echo $d["multiple"]?></strong></p></dd>
-        <dd><p>¹ý¹Ø·½Ê½£º<em><?php echo $d["select"]?></em></p>
-            <p>·½°¸½±½ð£º<strong>&yen;</strong></p></dd>
-        <dd><p>ÈÏ¹ºÊ±¼ä£º<i><?php echo $d["datetime"]?></i></p></dd>
+    <dl><dt><img src="http://www.shunjubao.com/www/statics/i/touxiang.jpg" /> <a href="http://www.shunjubao.com/account/user_center.php"><?php echo $uname?></a> </dt>
+        <dd><p>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½<i><?php echo $SPORT[$d["sport"]]."-".$POOL[$d["pool"]]?></i></p>
+            <p>ï¿½Û¼ï¿½ï¿½Ð½ï¿½ï¿½ï¿½<strong>&yen;</strong></p></dd>
+        <dd><p>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£º<i>&yen;<?php echo $d["money"]?></i></p>
+            <p>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<strong><?php echo $d["multiple"]?></strong></p></dd>
+        <dd><p>ï¿½ï¿½ï¿½Ø·ï¿½Ê½ï¿½ï¿½<em><?php echo $d["select"]?></em></p>
+            <p>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<strong>&yen;</strong></p></dd>
+        <dd><p>ï¿½Ï¹ï¿½Ê±ï¿½ä£º<i><?php echo $d["datetime"]?></i></p></dd>
     </dl>
     <div class="clear"></div>
     </div>
     <div class="clear"></div>
-    <h1 style="position:relative; margin:20px 0;"><b>¡ö</b>·½°¸ÄÚÈÝ
+    <h1 style="position:relative; margin:20px 0;"><b>ï¿½ï¿½</b>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     <div class="Fshare">
-    <div class="gdTips"><span>*</span>¸Ã·½°¸ÏêÏ¸ÄÚÈÝÐèÒªÉ¹µ¥½áÊø²ÅÄÜ²é¿´¡£</div>
+    <div class="gdTips"><span>*</span>ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü²é¿´ï¿½ï¿½</div>
     <div class="share"></div>
     <div class="clear"></div>
     </div>
     </h1>
-<!--·½°¸ÄÚÈÝ start-->
+<!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ start-->
 <table class="hacker" border="0" cellpadding="0" cellspacing="0">
 <tbody id="detail_tr">
 <tr>
-<th>ÐòºÅ</th>
-<th>³¡´Î</th>
-<th>ÈüÊÂ</th>
-<th>Ö÷¶ÓVS¿Í¶Ó</th>
-<th>ÎÒµÄÑ¡Ôñ</th>
-<th>²Ê¹û</th>
-<th>±È·Ö</th>
+<th>ï¿½ï¿½ï¿½</th>
+<th>ï¿½ï¿½ï¿½ï¿½</th>
+<th>ï¿½ï¿½ï¿½ï¿½</th>
+<th>ï¿½ï¿½ï¿½ï¿½VSï¿½Í¶ï¿½</th>
+<th>ï¿½Òµï¿½Ñ¡ï¿½ï¿½</th>
+<th>ï¿½Ê¹ï¿½</th>
+<th>ï¿½È·ï¿½</th>
 <th style="border-right:1px solid #6f6f6f;">×´Ì¬</th>
 </tr>
 <?php
@@ -124,13 +124,13 @@ if($d=mysql_fetch_array($query)){
 <?php } }?>
           </tbody>
         </table>
-        <!--·½°¸ÄÚÈÝ end-->
-        <!-- ¸úµ¥start-->
+        <!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ end-->
+        <!-- ï¿½ï¿½ï¿½ï¿½start-->
         <div class="gandanCenter">
           <dl>
-            <dt>¸úµ¥½ð¶î£º<span>&yen;2Ôª</span></dt>
-            <!--<dt>Ìá³É±ÈÀý£º<b>5%</b></dt>-->
-            <dt class="first">¸úµ¥±¶Êý£º</dt>
+            <dt>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£º<span>&yen;2Ôª</span></dt>
+            <!--<dt>ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½<b>5%</b></dt>-->
+            <dt class="first">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</dt>
             <dt class="first">
               <ul>
                 <li><a href="javascript:void(0);" id="subBtn">-</a></li>
@@ -140,43 +140,43 @@ if($d=mysql_fetch_array($query)){
                 <li><a href="javascript:void(0);" id="addBtn">+</a></li>
               </ul>
             </dt>
-            <dt class="first">×î¸ß999999±¶</dt>
+            <dt class="first">ï¿½ï¿½ï¿½999999ï¿½ï¿½</dt>
             <dd>
-              <input type="submit" value="¸úµ¥" class="gdsub">
+              <input type="submit" value="ï¿½ï¿½ï¿½ï¿½" class="gdsub">
             </dd>
           </dl>
           <div class="clear"></div>
         </div>
-        <!-- ¸úµ¥end-->
+        <!-- ï¿½ï¿½ï¿½ï¿½end-->
       </div>
     </div>
-    <!--Í¶×¢È·ÈÏ¹ý¹Ø·½Ê½ end-->
+    <!--Í¶×¢È·ï¿½Ï¹ï¿½ï¿½Ø·ï¿½Ê½ end-->
   </div>
 </div>
-<!--È·ÈÏÍ¶×¢center end-->
+<!--È·ï¿½ï¿½Í¶×¢center end-->
 <!--center end-->
 <!--footer start-->
 <div class="footer">
-  <div id="gotop"><a href="javascript:void(0)">·µ»Ø¶¥²¿</a></div>
+  <div id="gotop"><a href="javascript:void(0)">ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½</a></div>
   <div id="Rightsubnav">
     <ul>
-      <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=2733292184&site=qq&menu=yes" target="_blank">ÔÚÏß¿Í·þ</a></li>
-      <li class="help"><a href="http://www.zhiying365365.com/help" target="_blank">°ïÖúÖÐÐÄ</a></li>
+      <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=2733292184&site=qq&menu=yes" target="_blank">ï¿½ï¿½ï¿½ß¿Í·ï¿½</a></li>
+      <li class="help"><a href="http://www.shunjubao.com/help" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a></li>
     </ul>
   </div>
-  <div class="footerNav"> <a href="http://www.zhiying365365.com/passport/reg.php" target="_blank">ÓÃ»§×¢²á</a><span>|</span> <a href="http://www.zhiying365365.com/about/index.html" target="_blank">¹ØÓÚÎÒÃÇ</a><span>|</span> <a href="http://www.zhiying365365.com/about/baozhang.html" target="_blank">°²È«±£ÕÏ</a><span>|</span> <a href="http://www.zhiying365365.com/about/contactus.html" target="_blank">ÁªÏµ·½Ê½</a><span>|</span> <a href="http://www.zhiying365365.com/about/job.html" target="_blank">ÈË²ÅÕÐÆ¸</a><span>|</span> <a href="http://www.zhiying365365.com/about/bd.html" target="_blank">ÉÌÎñºÏ×÷</a><span>|</span> <a href="http://www.zhiying365365.com/about/Sitemap.html" target="_blank">Õ¾µãµØÍ¼</a><span>|</span> <a href="http://www.zhiying365365.com/about/lawfirm.html" target="_blank">·¨ÂÉÉùÃ÷</a><span>|</span> <a href="http://www.zhiying365365.com/about/xieyi.html" target="_blank">ÍøÕ¾Ð­Òé</a> </div>
-  <div class="footdaodu">ÈÈµãµ¼¶Á£º <a href="http://www.zhiying365365.com/zixun/" target="_blank">×ÊÑ¶ÖÐÐÄ</a><span>|</span> <a href="#" target="_blank">ÖÇÓ®2´®1</a><span>|</span> <a href="http://www.zhiying365365.com/news/footballtj/" target="_blank">¾º²Ê×ãÇò</a><span>|</span> <a href="http://www.zhiying365365.com/news/NBAxw/" target="_blank">¾º²ÊÀºÇò</a><span>|</span> <a href="http://www.zhiying365365.com/news/footballtj/" target="_blank">×ãÇòÍÆ¼ö</a><span>|</span> <a href="http://www.zhiying365365.com/news/NBAtj/" target="_blank">ÀºÇòÍÆ¼ö</a><span>|</span> <a href="http://www.zhiying365365.comnews/touzhujiqiao/" target="_blank">Í¶×¢¼¼ÇÉ</a></div>
+  <div class="footerNav"> <a href="http://www.shunjubao.com/passport/reg.php" target="_blank">ï¿½Ã»ï¿½×¢ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/about/index.html" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/about/baozhang.html" target="_blank">ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/about/contactus.html" target="_blank">ï¿½ï¿½Ïµï¿½ï¿½Ê½</a><span>|</span> <a href="http://www.shunjubao.com/about/job.html" target="_blank">ï¿½Ë²ï¿½ï¿½ï¿½Æ¸</a><span>|</span> <a href="http://www.shunjubao.com/about/bd.html" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/about/Sitemap.html" target="_blank">Õ¾ï¿½ï¿½ï¿½Í¼</a><span>|</span> <a href="http://www.shunjubao.com/about/lawfirm.html" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/about/xieyi.html" target="_blank">ï¿½ï¿½Õ¾Ð­ï¿½ï¿½</a> </div>
+  <div class="footdaodu">ï¿½Èµãµ¼ï¿½ï¿½ï¿½ï¿½ <a href="http://www.shunjubao.com/zixun/" target="_blank">ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="#" target="_blank">ï¿½ï¿½Ó®2ï¿½ï¿½1</a><span>|</span> <a href="http://www.shunjubao.com/news/footballtj/" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/news/NBAxw/" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/news/footballtj/" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½</a><span>|</span> <a href="http://www.shunjubao.com/news/NBAtj/" target="_blank">ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½</a><span>|</span> <a href="http://www.shunjubao.comnews/touzhujiqiao/" target="_blank">Í¶×¢ï¿½ï¿½ï¿½ï¿½</a></div>
   <div class="FootPic">
     <ul>
-      <li><a href=""><img src="http://www.zhiying365365.com/www/statics/i/FootPic2.jpg"/></a></li>
-      <li><a href=""><img src="http://www.zhiying365365.com/www/statics/i/FootPic3.jpg"/></a></li>
-      <li><a href=""><img src="http://www.zhiying365365.com/www/statics/i/FootPic4.jpg"/></a></li>
-      <li><a href=""><img src="http://www.zhiying365365.com/www/statics/i/FootPic5.jpg"/></a></li>
-      <li><a href=""><img src="http://www.zhiying365365.com/www/statics/i/FootPic6.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic2.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic3.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic4.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic5.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic6.jpg"/></a></li>
     </ul>
   </div>
-  <div class="FooterOhter"> 2014&nbsp;&nbsp;&copy;&nbsp;Copyright&nbsp;&nbsp;&nbsp;&nbsp;ÖÇÓ®Íø&nbsp;&nbsp;&nbsp;
-    All rights reserved¡£±¸°¸ºÅ£º¾©ICP±¸14016851-1ºÅ&nbsp;²ÊÆ±ÓÐ·çÏÕ£¬Í¶×¢Ðè½÷É÷  ²»ÏòÎ´Âú18ÖÜËêµÄÇàÉÙÄê³öÊÛ²ÊÆ±&nbsp;&nbsp;&nbsp;&nbsp; <span class="none">
+  <div class="FooterOhter"> 2014&nbsp;&nbsp;&copy;&nbsp;Copyright&nbsp;&nbsp;&nbsp;&nbsp;ï¿½ï¿½Ó®ï¿½ï¿½&nbsp;&nbsp;&nbsp;
+    All rights reservedï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ICPï¿½ï¿½14016851-1ï¿½ï¿½&nbsp;ï¿½ï¿½Æ±ï¿½Ð·ï¿½ï¿½Õ£ï¿½Í¶×¢ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½18ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û²ï¿½Æ±&nbsp;&nbsp;&nbsp;&nbsp; <span class="none">
     <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https:\/\/" : " http:\/\/");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000441119'%3E%3C\/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com\/z_stat.php%3Fid%3D1000441119%26show%3Dpic' type='text\/javascript'%3E%3C\/script%3E"));</script>
     </span> </div>
 </div>

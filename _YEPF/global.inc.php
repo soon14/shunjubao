@@ -17,7 +17,7 @@ if(PHP_VERSION < '5.0.0')
 //默认将显示错误关闭
 ini_set('display_errors', false);
 //默认将读外部文件的自动转义关闭
-set_magic_quotes_runtime(0);
+//set_magic_quotes_runtime(0);
 
 //定义开始时间常量
 define("YEPF_BEGIN_TIME",microtime());

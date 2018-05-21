@@ -21,12 +21,12 @@ var welcome_str = "&nbsp;";
 			var u_img_str ='<img src="'+u_img+'">';
 			
 		}else{
-			var u_img_str ='<img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">';
+			var u_img_str ='<img src="http://www.shunjubao.com/www/statics/i/touxiang.jpg">';
 		}
 		
-		welcome_str += "<a href=\"http://m.zhiying365365.com/account/user_center.php\">" + u_img_str +"<b>" + u_name + "</b></a><span>|</span><a href=\"http://m.zhiying365365.com/account/user_charge.php\">充值</a><span>|</span><a href=\"http://m.zhiying365365.com/passport/logout.php\">退出</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.com/account/user_center.php\">" + u_img_str +"<b>" + u_name + "</b></a><span>|</span><a href=\"http://www.shunjubao.com/account/user_charge.php\">充值</a><span>|</span><a href=\"http://www.shunjubao.com/passport/logout.php\">退出</a></h1>";
 	} else {
-		welcome_str += "<a href=\"http://m.zhiying365365.com/passport/login.php\">登录</a><span>|</span><a href=\"http://m.zhiying365365.com/passport/reg.php\">注册</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.com/passport/login.php\">登录</a><span>|</span><a href=\"http://www.shunjubao.com/passport/reg.php\">注册</a></h1>";
 }
 document.writeln(
 "<div class=\"top\">"+

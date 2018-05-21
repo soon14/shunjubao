@@ -1,10 +1,10 @@
 <?php
-$cfg_basehost = 'http://www.zhiying365365.com';
+$cfg_basehost = 'http://www.shunjubao.com';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'WWlgSpYgIOocCwcUQUWChieKdDMPFr7A';
 $cfg_indexurl = '/index';
 $cfg_backup_dir = 'backupdata';
-$cfg_indexname = 'http://www.zhiying365365.com';
+$cfg_indexname = 'http://www.shunjubao.com';
 $cfg_webname = '';
 $cfg_adminemail = 'admin@zykj.com';
 $cfg_html_editor = 'ckeditor';
@@ -150,6 +150,6 @@ $cfg_memcache_enable = 'N';
 $cfg_memcache_mc_defa = 'memcache://127.0.0.1:11211/default127';
 $cfg_memcache_mc_oth = '';
 $jd_cfg_docroot = '/usr/share/nginx/www/news';
-$jd_st_host = 'http://www.zhiying365365.com';
-$jd_php_host = 'http://www.zhiying365365.com';
+$jd_st_host = 'http://www.shunjubao.com';
+$jd_php_host = 'http://www.shunjubao.com';
 ?>

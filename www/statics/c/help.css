@@ -1,17 +1,17 @@
 ﻿.Nabout{ width:100%;height:auto;background:#f9f9f9;overflow:hidden;}
 .about_con{ width:1000px;height:auto;overflow:hidden;margin:0 auto;}
 .about_con .about_left{ width:280px;height:auto;overflow:hidden;float:left;}
-.about_nav{ width:100%;height:auto;min-height:940px;background:#fff url(http://www.zhiying365365.com/www/statics/i/about02.png) no-repeat right bottom;overflow:hidden; margin:0 0 30px 0;}
-.about_nav h2{ width:120px;height:60px;background:url(http://www.zhiying365365.com/www/statics/i/about01.png) no-repeat left center;position:relative;}
+.about_nav{ width:100%;height:auto;min-height:940px;background:#fff url(http://www.shunjubao.com/www/statics/i/about02.png) no-repeat right bottom;overflow:hidden; margin:0 0 30px 0;}
+.about_nav h2{ width:120px;height:60px;background:url(http://www.shunjubao.com/www/statics/i/about01.png) no-repeat left center;position:relative;}
 .about_nav h2 b{ position:absolute;top:10px;width:82px;height:35px;line-height:25px;text-align:center;color:#fff;font-size:12px;font-family:'宋体';display:inline-table;display:inline-block;zoom:1;*display:inline;background:#C32326;left:19px;}
 ul.about_nav_list{padding-left:55px;overflow:hidden;}
-ul.about_nav_list li{ width:100%;height:auto;line-height:48px;background:url(http://www.zhiying365365.com/www/statics/i/about_bg1.png) no-repeat 1px 0;}
+ul.about_nav_list li{ width:100%;height:auto;line-height:48px;background:url(http://www.shunjubao.com/www/statics/i/about_bg1.png) no-repeat 1px 0;}
 ul.about_nav_list li a{ font-size:14px;font-weight:normal;color:#666;line-height:48px;padding-left:0; display:block;}
-ul.about_nav_list li.first{ background:url(http://www.zhiying365365.com/www/statics/i/about_bg2.png) no-repeat 1px 22px;}
-ul.about_nav_list li a.cur{ background:url(http://www.zhiying365365.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;}
-ul.about_nav_list li a:hover{ background:url(http://www.zhiying365365.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;text-decoration:none;}
-ul.about_nav_list li a.active{ background:url(http://www.zhiying365365.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;text-decoration:none;}
-.about_con .about_right{ width:640px;height:auto;overflow:hidden;min-height:920px;background:#fff url(http://www.zhiying365365.com/www/statics/i/about03.png) no-repeat  right 0;float:right;padding:10px 30px; margin:30px  auto;}
+ul.about_nav_list li.first{ background:url(http://www.shunjubao.com/www/statics/i/about_bg2.png) no-repeat 1px 22px;}
+ul.about_nav_list li a.cur{ background:url(http://www.shunjubao.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;}
+ul.about_nav_list li a:hover{ background:url(http://www.shunjubao.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;text-decoration:none;}
+ul.about_nav_list li a.active{ background:url(http://www.shunjubao.com/www/statics/i/cir01.png) no-repeat 0 22px;font-weight:bold;text-decoration:none;}
+.about_con .about_right{ width:640px;height:auto;overflow:hidden;min-height:920px;background:#fff url(http://www.shunjubao.com/www/statics/i/about03.png) no-repeat  right 0;float:right;padding:10px 30px; margin:30px  auto;}
 .about_con .about_right h2{ font-size:16px;font-weight:bold;line-height:40px;border-bottom:1px dashed #ccc;color:#df0616;}
 .about_con .about_right .text{ width:100%;height:auto; border-bottom:1px dashed #ddd;padding:10px 0;}
 .about_right .text p{ font-size:14px;line-height:24px;}
@@ -58,7 +58,7 @@ table.stripese  tr:hover{}
 .aCenter h1{ font-size:16px; font-weight:900; padding:30px 0;border-bottom:1px solid #ddd; margin:0 0 50px 0;}
 .aboutfooter { padding:10px 0 0 0; line-height:34px;color:#666;}
 /*手机版帮助中心*/
-.wap_help{ width:95%;margin:0 auto;text-align:left;background:#fff url(http://www.zhiying365365.com/www/statics/i/about01.png) left top no-repeat;position:relative;}
+.wap_help{ width:95%;margin:0 auto;text-align:left;background:#fff url(http://www.shunjubao.com/www/statics/i/about01.png) left top no-repeat;position:relative;}
 .wap_help h2{position:absolute;top:10px;left:23px;width:80px;height:30px;line-height:30px;background:#C32326;font-size:12px;font-weight:300;text-align:center;color:#fff;}
 .wap_help h3{position:absolute;top:10px;right:10px;}
 .wap_help h3 a{color:#000;}

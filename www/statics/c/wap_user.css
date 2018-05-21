@@ -576,10 +576,10 @@ table{text-align:center;border-collapse:collapse;background:#fff;margin:0 auto;o
 .newpartner dl{text-align:center;padding:30px 0 0 0;width:100%;}
 .newpartner dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:32px;height:32px;margin:0 10px;}
 .newpartner dl dt a{width:32px;height:32px;line-height:32px;text-indent:-5000px;display:block;}
-.newpartner dl dt.alipay{width:32px;height:32px;background:url(http://www.zhiying365365.com/www/statics/i/alipaywapicon.png) no-repeat;}
-.newpartner dl dt.qq{width:32px;height:32px;background:url(http://www.zhiying365365.com/www/statics/i/qqwapicon.png) no-repeat;}
-.newpartner dl dt.weibo{width:32px;height:32px;background:url(http://www.zhiying365365.com/www/statics/i/weibowapicon.png) no-repeat;}
-.newpartner dl dt.weixin{width:32px;height:32px;background:url(http://www.zhiying365365.com/www/statics/i/weixinwapicon.png) no-repeat;}
+.newpartner dl dt.alipay{width:32px;height:32px;background:url(http://www.shunjubao.com/www/statics/i/alipaywapicon.png) no-repeat;}
+.newpartner dl dt.qq{width:32px;height:32px;background:url(http://www.shunjubao.com/www/statics/i/qqwapicon.png) no-repeat;}
+.newpartner dl dt.weibo{width:32px;height:32px;background:url(http://www.shunjubao.com/www/statics/i/weibowapicon.png) no-repeat;}
+.newpartner dl dt.weixin{width:32px;height:32px;background:url(http://www.shunjubao.com/www/statics/i/weixinwapicon.png) no-repeat;}
 .wapTAB{height:50px;line-height:50px;border-bottom:2px solid #ddd;width:98%;margin:0 auto;text-align:center;}
 .wapTAB dl{height:50px;line-height:50px;}
 .wapTAB dl dt{float:left;margin:0 15px 0 0;position:relative;}
