@@ -55,7 +55,7 @@ exit("请先打开测试");
 		$token = getToken($params);
 		$params["token"]=$token;
 		$url = http_build_query($params);
-		echo $url = 'http://news.shunjubao.com/api/touzhu_ticket.php?'.$url;
+		echo $url = 'http://www.zhiying365365.com/api/touzhu_ticket.php?'.$url;
 		
 		$json = file_get_contents($url);
 		$result = json_decode($json, true);

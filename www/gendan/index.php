@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>ï¿½ï¿½ï¿½ï¿½Ó®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±Ó®ï¿½ï¿½ï¿½ï¿½Ñ¡_ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ±ï¿½ï¿½Õ¾</title>
-<meta name="keywords" content="ï¿½ï¿½ï¿½ï¿½,ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½,ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Æ±,ï¿½ï¿½ï¿½ï¿½ï¿½Æ±" />
-<meta name="description" content="ï¿½ï¿½Ó®ï¿½ï¿½ï¿½Ç²ï¿½Æ±Ó®ï¿½ÒµÄ¾Û¼ï¿½ï¿½Ø£ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ÃµÄ²ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡¢ï¿½È·ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½" />
-<link href="http://news.shunjubao.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<title>¡¾ÖÇÓ®Íø¡¿²ÊÆ±Ó®¼ÒÊ×Ñ¡_ÖÐ¹ú¾º²ÊÍø_×ã²Ê_Àº²Ê_µ¥³¡_¸£²Ê_Ìå²Ê_ÈËÆø×îÍúµÄ²ÊÆ±ÍøÕ¾</title>
+<meta name="keywords" content="¾º²Ê,ÖÐ¹ú¾º²ÊÍø,×ã²Ê,ÖÐ¹ú×ã²ÊÍø,Àº²Ê,µ¥³¡,¸£²Ê,Ìå²Ê,×ãÇò²ÊÆ±,ÀºÇò²ÊÆ±" />
+<meta name="description" content="ÖÇÓ®ÍøÊÇ²ÊÆ±Ó®¼ÒµÄ¾Û¼¯µØ£¬¿Ú±®×îºÃµÄ²ÊÆ±×öµ¥ÍøÕ¾£¬¾º²Ê¡¢µ¥³¡²ÊÆ±¡¢ÀºÇò²ÊÆ±¡¢×ãÇò²ÊÆ±ÈËÆø³¬Íú£¬¿ÉÒÔÍ¨¹ýÍøÕ¾ºÍÊÖ»ú¿Í»§¶ËÊ¹ÓÃ¡£Ìá¹©¸£Àû²ÊÆ±ºÍÌåÓý²ÊÆ±µÄ¿ª½±¡¢×ßÊÆÍ¼±í¡¢ËõË®¹ýÂË¡¢½±½ðÆÀ²â¡¢±È·ÖÖ±²¥µÈ×ÊÑ¶·þÎñ¡£" />
+<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="css/shaidan.css">
-<link type="text/css" rel="stylesheet" href="http://news.shunjubao.com/zy/www/statics/c/footer.css">
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/zy/www/statics/c/footer.css">
 <?php
 require_once "../include/init.php";
 $s=$_REQUEST["s"]?$_REQUEST["s"]:"fb";
@@ -20,28 +20,28 @@ $page_info=page_all($page,$count_sql);
 ?>
 </head>
 <body>
-<!--Ò³ï¿½ï¿½Í·ï¿½ï¿½ start-->
-<script src="http://news.shunjubao.com/zy/www/statics/j/top.js" type="text/javascript"></script>
-<script src="http://news.shunjubao.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
-<!--Ò³ï¿½ï¿½Í·ï¿½ï¿½ end-->
-<!--ï¿½ï¿½Ç°Î»ï¿½ï¿½ start-->
+<!--Ò³ÃæÍ·²¿ start-->
+<script src="http://www.zhiying365365.com/zy/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
+<!--Ò³ÃæÍ·²¿ end-->
+<!--µ±Ç°Î»ÖÃ start-->
 <div class="Cailocation">
     <div class="location_center">
-        <h1><b>ï¿½ï¿½Ó®ï¿½ï¿½</b><img src="http://news.shunjubao.com/www/statics/i/showRight.png"><strong>É¹ï¿½ï¿½</strong></h1>
+        <h1><b>ÖÇÓ®Íø</b><img src="http://www.zhiying365365.com/www/statics/i/showRight.png"><strong>É¹µ¥</strong></h1>
     </div>
 </div>
-<!--ï¿½ï¿½Ç°Î»ï¿½ï¿½ end-->
+<!--µ±Ç°Î»ÖÃ end-->
 <!--center start-->
 <div class="tjCenter">
   <div class="shaiTag">
     <ul>
-      <li><a href="index.php?s=fb" <?php if($s=="fb"){ echo "class='active'"; }?>>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a></li>
-      <li><a href="index.php?s=bk" <?php if($s=="bk"){ echo "class='active'"; }?>>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a></li>
+      <li><a href="index.php?s=fb" <?php if($s=="fb"){ echo "class='active'"; }?>>¾º²Ê×ãÇò</a></li>
+      <li><a href="index.php?s=bk" <?php if($s=="bk"){ echo "class='active'"; }?>>¾º²ÊÀºÇò</a></li>
     </ul>
     <div class="share">
     <!-- 
     <strong class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more"></a><a title="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶Î¢ï¿½ï¿½" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="ï¿½ï¿½ï¿½ï¿½QQï¿½Õ¼ï¿½" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" href="#" class="bds_douban" data-cmd="douban"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a><a title="·ÖÏíµ½ÐÂÀËÎ¢²©" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="·ÖÏíµ½ÌÚÑ¶Î¢²©" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="·ÖÏíµ½Î¢ÐÅ" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="·ÖÏíµ½QQ¿Õ¼ä" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="·ÖÏíµ½¶¹°êÍø" href="#" class="bds_douban" data-cmd="douban"></a>
     </strong>
     -->
     </div>
@@ -49,13 +49,13 @@ $page_info=page_all($page,$count_sql);
   </div>
   <div class="center">
     <div class="tjBody">
-      <h1><b>ï¿½ï¿½</b>É¹ï¿½ï¿½ï¿½Ð±ï¿½</h1>
+      <h1><b>¨ƒ</b>É¹µ¥ÁÐ±í</h1>
     <table class="hacker" border="0" cellpadding="0" cellspacing="0">
-    <tr><th>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th><th>É¹ï¿½ï¿½Ê±ï¿½ï¿½</th>
-        <th>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½</th><th>ï¿½æ·¨</th>
-        <th>ï¿½ï¿½×¢</th><th>ï¿½ï¿½ï¿½ï¿½</th><th>Í¶×¢ï¿½ï¿½</th>
-        <th>ï¿½ï¿½ï¿½ï¿½ï¿½Ü½ï¿½ï¿½</th>
-        <th style="border-right:1px solid #6f6f6f;">ï¿½ï¿½ï¿½ï¿½</th></tr>
+    <tr><th>·¢ÆðÈË</th><th>É¹µ¥Ê±¼ä</th>
+        <th>½áÊøÊ±¼ä</th><th>Íæ·¨</th>
+        <th>µ¥×¢</th><th>±¶Êý</th><th>Í¶×¢¶î</th>
+        <th>¸úµ¥×Ü½ð¶î</th>
+        <th style="border-right:1px solid #6f6f6f;">²Ù×÷</th></tr>
 	<?php
 	$sql="select * from user_ticket_all $sql_str $order limit $page_info[2],$page_info[3]";	
 	$query=mysql_query($sql,$db_r);
@@ -82,7 +82,7 @@ $page_info=page_all($page,$count_sql);
     <td><?php echo $d["multiple"]?></td>
     <td><div class="clo1">&yen;<?php echo $d["money"]?></div></td>
     <td><div class="clo2">&yen;<?php echo $money?></div></td>
-    <td><div class="gendan"><a href="gendan.php?id=<?php echo $d["id"]?>" target="_blank">ï¿½ï¿½ï¿½ï¿½</a></div></td>
+    <td><div class="gendan"><a href="gendan.php?id=<?php echo $d["id"]?>" target="_blank">¸úµ¥</a></div></td>
     </tr>
 	<?php } ?></table>
     <div class="sharepages"><?php echo page_list($page_info[1],$search_page,$page,10,$search); ?></div>
@@ -93,7 +93,7 @@ $page_info=page_all($page,$count_sql);
 <!--Help start-->
 <!--Help end-->
 <!--footer start-->
-<script src="http://news.shunjubao.com/www/statics/j/footer.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/footer.js" type="text/javascript"></script>
 <!--footer end-->
 </body>
 </html>

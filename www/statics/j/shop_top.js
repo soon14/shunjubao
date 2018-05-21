@@ -13,9 +13,9 @@
 	var welcome_str = "";
 	if (u_name != '') {
 		welcome_str += "<a href=\"http://shop.zhiying365365.com/person/\">"+u_name+"</a></li>";
-		welcome_str +=",欢迎登录智赢商城<a href=\"http://shop.zhiying365365.com\" target=\"_top\" class=\"h\">个人中心</a> <a href=\"http://news.shunjubao.com/passport/logout.php\">退出</a>";
+		welcome_str +=",欢迎登录智赢商城<a href=\"http://shop.zhiying365365.com\" target=\"_top\" class=\"h\">个人中心</a> <a href=\"http://www.zhiying365365.com/passport/logout.php\">退出</a>";
 	} else {
-		welcome_str += "<a href=\"http://news.shunjubao.com/passport/login.php\" target=\"_top\" class=\"h\">亲，请登录</a> <a href=\"http://news.shunjubao.com/shop/home/register.html\" target=\"_top\">免费注册</a>";
+		welcome_str += "<a href=\"http://www.zhiying365365.com/passport/login.php\" target=\"_top\" class=\"h\">亲，请登录</a> <a href=\"http://www.zhiying365365.com/shop/home/register.html\" target=\"_top\">免费注册</a>";
 	}
 	$("#topMessage").append(welcome_str);
 });

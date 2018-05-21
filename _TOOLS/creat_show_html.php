@@ -6,14 +6,14 @@
 include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 
 
-$url = "http://news.shunjubao.com/ticket/show.php";
+$url = "http://www.zhiying365365.com/ticket/show.php";
 $content=file_get_contents($url);
 if($content){
 	$fs=fopen("/home/wwwroot/www.zhiying365.com/www/ticket/show.html",'w');
 	fwrite($fs,$content);
 }
 
-$url = "http://news.shunjubao.com/ticket/show.php?sport=bk";
+$url = "http://www.zhiying365365.com/ticket/show.php?sport=bk";
 $content=file_get_contents($url);
 if($content){
 	$fs=fopen("/home/wwwroot/www.zhiying365.com/www/ticket/bkshow.html",'w');

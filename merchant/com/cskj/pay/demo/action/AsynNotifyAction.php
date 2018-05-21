@@ -49,7 +49,7 @@ if($resultCode=="0"){//支付成功
 	$keyw = "zy3658786787676";
 	$dtime = time();
 	$sign = md5($outTradeNo.$keyw.$dtime);
-	$turl='http://news.shunjubao.com/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$amount.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$outChannelNo;
+	$turl='http://www.zhiying365365.com/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$amount.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$outChannelNo;
 	log_result("AsynNotifyAction_url.txt",$turl);
 	$result = file_get_contents($turl);
 	 echo 'success';
