@@ -57,7 +57,7 @@ echo $param["body"];
 
 		$jsonStr=json_encode($param,JSON_UNESCAPED_UNICODE);
 		echo $jsonStr;
-		$serverPayUrl="http://www.zhiying365365.com/merchant/com/cskj/pay/demo/action/CallBack.php";
+		$serverPayUrl="http://news.shunjubao.com/merchant/com/cskj/pay/demo/action/CallBack.php";
 
 		$httputil = new HttpUtils();
 		list ( $return_code, $return_content )  = $httputil->http_post_data($serverPayUrl, $jsonStr);

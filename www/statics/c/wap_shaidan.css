@@ -56,7 +56,7 @@ table{text-align:center;border-collapse:collapse;background:#fff;margin:0 auto;o
 .shaidanlibiao table td p{ position:relative;}
 .shaidanlibiao table td p span{color:#777;}
 .shaidanlibiao table td p span a{border:1px solid #dc0000; padding:3px 7px; font-size:14px; font-weight:300;color:#dc0000;}
-.shaidanlibiao table td p em{width:52px;height:52px;background:url(http://www.zhiying365365.com/www/statics/i/ying.gif) no-repeat;line-height:52px;text-align:center;text-indent:-5000px;display:inline-table;display:inline-block;zoom:1;*display:inline; position:absolute;right:15px;bottom:90px;}
+.shaidanlibiao table td p em{width:52px;height:52px;background:url(http://news.shunjubao.com/www/statics/i/ying.gif) no-repeat;line-height:52px;text-align:center;text-indent:-5000px;display:inline-table;display:inline-block;zoom:1;*display:inline; position:absolute;right:15px;bottom:90px;}
 .shaidanlibiao table td p strong img{ width:30px; height:30px; line-height:30px; overflow:hidden; border-radius:30px; overflow:hidden;}
 .shaidanlibiao table td p b{ padding:0 0 0 10px; position:relative;top:-10px;}
 .shaidanlibiao table td p b a{ font-size:14px; font-weight:900;color:#000;}
@@ -87,7 +87,7 @@ table{text-align:center;border-collapse:collapse;background:#fff;margin:0 auto;o
 .tipsters{height:68px;margin:0 auto;background:#F0F1EA;border-bottom:1px solid #eee;}
 .NewsNav{padding:10px 0 0 5px;line-height:30px;position:relative;margin:0 auto;}
 .NewsNav h1{font-size:12px;font-weight:300;text-align:left;height:30px;position:relative;}
-.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://www.zhiying365365.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:30px;line-height:30px;display:block;float:left;text-align:center;}
+.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://news.shunjubao.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:30px;line-height:30px;display:block;float:left;text-align:center;}
 .NewsNav h1 em{font-size:14px;font-weight:300;color:#555;font-family:'微软雅黑';padding:0 0 0 5px;}
 .NewsNav h1 em span{font-size:14px;font-weight:300;color:#555;font-family:'微软雅黑';position:relative;top:-8px;left:5px;}
 .NewsNav h1 em u{font-size:14px;font-weight:300;color:#555;font-family:'微软雅黑';position:relative;left:10px;text-decoration:none;font-size:14px;}

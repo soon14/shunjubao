@@ -34,8 +34,8 @@
 .sdList dl dt p{ height:40px;line-height:40px;}
 .sdList dl dt p.zan{display:inline-table;display:inline-block;zoom:1;*display:inline;}
 .sdList dl dt p.zan em{ font-style:normal;}
-.sdList dl dt p.zan em a{background:url(http://www.zhiying365365.com/www/statics/i/zan_hover.gif) no-repeat left center;width:15px;height:20px;text-align:center;text-indent:-5000px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-indent:-50000px;}
-.sdList dl dt p.zan em a:hover{background:url(http://www.zhiying365365.com/www/statics/i/zan.gif) no-repeat left center;}
+.sdList dl dt p.zan em a{background:url(http://news.shunjubao.com/www/statics/i/zan_hover.gif) no-repeat left center;width:15px;height:20px;text-align:center;text-indent:-5000px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-indent:-50000px;}
+.sdList dl dt p.zan em a:hover{background:url(http://news.shunjubao.com/www/statics/i/zan.gif) no-repeat left center;}
 .sdList dl dt p.zan a{font-weight:300;}
 .sdList dl dt p.zan u{ text-decoration:none;}
 .sdList dl dt p.gendan{height:30px;line-height:30px;margin:20px 0 0 0;}
@@ -48,7 +48,7 @@
 .sdList dl dt p a{font-weight:900;color:#333;font-family:'';}
 .sdList dl dt p a:hover{color:#000;font-family:'';}
 .sdList dl dt p em{ font-style:normal;padding:0 5px 0 0;}
-.sdList dl dd{float:left;padding:10px 0 0 6px;background:url(http://www.zhiying365365.com/www/statics/i/category_lbg.png) no-repeat 5px 2px;height:185px;position:relative;width:212px;}
+.sdList dl dd{float:left;padding:10px 0 0 6px;background:url(http://news.shunjubao.com/www/statics/i/category_lbg.png) no-repeat 5px 2px;height:185px;position:relative;width:212px;}
 .sdList dl dd p{}
 .sdList dl dd p.show{ padding:0 0 0 20px;}
 .sdList dl dd p.show strong{ padding:0 0 0 5px;}
@@ -66,7 +66,7 @@
 .sdList dl dd p.time{height:26px;line-height:26px;padding:0 0 0 7px;}
 .sdList dl dd p.time b{ width:60px;height:26px;line-height:26px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:right;background:url(../i/ctime.gif) no-repeat left center;padding:0 0 0 18px;}
 .sdList dl dd p.time span{width:100px;height:26px;line-height:26px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
-.sdList dl dd p em{position:absolute;right:3px;top:98px;width:52px;height:52px;background:url(http://www.zhiying365365.com/www/statics/i/ying.gif) no-repeat;line-height:52px;text-align:center;text-indent:-5000px;display:;}
+.sdList dl dd p em{position:absolute;right:3px;top:98px;width:52px;height:52px;background:url(http://news.shunjubao.com/www/statics/i/ying.gif) no-repeat;line-height:52px;text-align:center;text-indent:-5000px;display:;}
 .sharepages{clear:both;text-align:center;padding:0;height:30px;line-height:30px;width:960px;margin:0 auto;}
 .sharepages a{border:1px solid #ccc;padding:5px 10px;color:#000;font-size:14px;margin:0 3px;border-radius:1px;}
 .sharepages a:hover{border:1px solid #dc0000;background:#f9f9f9;}

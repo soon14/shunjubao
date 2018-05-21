@@ -26,7 +26,7 @@ div,form,ul,ol,li,span,p,dl,dt,dd{margin:0;padding:0;border:0;}
 </head>
 <body>
 <div class="newshaidan">
-  <h2><b>最新晒单</b><span><a href="http://www.zhiying365365.com/ticket/show.php" target="_blank">更多</a></span></h2>
+  <h2><b>最新晒单</b><span><a href="http://news.shunjubao.com/ticket/show.php" target="_blank">更多</a></span></h2>
   <{foreach from=$show_tickets item=item key=key}>
   <dl>
     <dt> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>" target="_blank"><{if $show_users_info[$item.u_id].u_img}> <img src="<{$show_users_info[$item.u_id].u_img}>"> <{else}> <img src="<{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg"><{/if}></a></dt>

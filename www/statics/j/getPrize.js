@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$.post('http://www.zhiying365365.com/prize/getPrize.php', {
+	$.post('http://news.shunjubao.com/prize/getPrize.php', {
 		type : 1,
 		limit : 40
 	}, function(data) {

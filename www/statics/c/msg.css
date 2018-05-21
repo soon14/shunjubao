@@ -28,7 +28,7 @@ opacity:0.8;/*FF*/ background:#000;z-index:99;}
 .msgc{height:125px;background:#E60237;color:#fff;}
 .msgcenter{width:1000px;margin:0 auto;text-align:left;position:relative;height:118px;overflow:hidden;}
 .msgcenter h1{padding:0;position:absolute;left:0;top:45px;display:none;} 
-.msgcenter h1 a{width:86px;height:31px;line-height:31px;background:url(http://www.zhiying365365.com/www/statics/i/11logo.jpg) no-repeat;display:block;text-indent:-5000px;}
+.msgcenter h1 a{width:86px;height:31px;line-height:31px;background:url(http://news.shunjubao.com/www/statics/i/11logo.jpg) no-repeat;display:block;text-indent:-5000px;}
 .msgcenter h2 em{ font-style:normal;font-family:'宋体';}
 .msgcenter h2{text-align:center;font-size:24px;font-weight:300;font-family:'微软雅黑';height:40px;line-height:40px;padding:15px 0 0 0;text-align:left;}
 .msgcenter h2 span{font-size:60px;position:relative;top:8px;font-weight:300;}
@@ -145,7 +145,7 @@ this.clientHeight)/2);/*IE5 IE5.5*/background:#000;opacity:0.9;filter:alpha(opac
 .tipsters{height:120px;margin:0 auto;border-bottom:1px solid #ccc;}
 .NewsNav{padding:10px 0 0 0;position:relative;width:1000px;margin:0 auto;}
 .NewsNav h1{width:1000px;margin:0 auto;text-align:left;height:50px;position:relative;padding:10px 0 0 0;}
-.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://www.zhiying365365.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:50px;line-height:50px;display:block;float:left;text-align:center;display:none;}
+.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://news.shunjubao.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:50px;line-height:50px;display:block;float:left;text-align:center;display:none;}
 .NewsNav h1 em{font-size:22px;font-weight:300;color:#000;font-family:'微软雅黑';padding:0 0 0 20px;line-height:40px;}
 .NewsNav h1 em span{font-size:22px;font-weight:300;color:#000;font-family:'宋体';}
 .NewsNav h1 em span i{ font-style:normal;font-size:12px;font-weight:300;}

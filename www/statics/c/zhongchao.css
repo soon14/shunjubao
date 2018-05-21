@@ -2,7 +2,7 @@ body{ font-size:12px;}
 .xuanxiang{margin:0 5px;height:48px;text-align:center;border:1px solid #E2E2E2;font-size:14px;color:#000;width:80px;height:80px;line-height:60px;-moz-border-radius:80px;-webkit-border-radius:80px;border-radius:80px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
 .xuanxiang p{ position:absolute;top:40px;width:80px;height:24px;line-height:24px;text-align:center;color:#666;}
 .xuanxiang.cc{border:1px solid #dc0000;}
-.vs{background:url(http://www.zhiying365365.com/www/statics/i/zhongchaovs.png) no-repeat top center;width:77px;height:85px;position:relative;}
+.vs{background:url(http://news.shunjubao.com/www/statics/i/zhongchaovs.png) no-repeat top center;width:77px;height:85px;position:relative;}
 .vs p{ position:absolute;top:50px;width:77px;height:24px;line-height:24px;text-align:center;font-size:14px;}
 .vs p span{color:green;}
 .vs p b{color:#dc0000;font-size:12px;font-weight:300;}

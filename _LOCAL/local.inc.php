@@ -49,7 +49,7 @@ define('ROOT_BBS_SITE', "http://bbs.shunjubao.com");
 /**
  * 新闻系统地址
  */
-define('ROOT_CMS_SITE', "http://news.shunjubao.com");
+define('ROOT_CMS_SITE', "http://news.shunjubao.com/");
 
 //此项目的根目录URL
 define('ROOT_DOMAIN',"http://{$tmp_http_host}");

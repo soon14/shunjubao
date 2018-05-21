@@ -21,7 +21,7 @@ if (Runtime::isLogin()==false) {
 		$daletou = new Daletou();
 		$result = $daletou->daletousave($data);
 		if($result=='-1'){
-			redirect('http://www.zhiying365365.com/account/user_charge.php');// 跳转充值页面
+			redirect('http://news.shunjubao.com/account/user_charge.php');// 跳转充值页面
 		}elseif($result=='1'){
 			echo "<script type='text/javascript'>alert('投注成功');window.location.href='/daletou/index.php'</script>";
 			die;

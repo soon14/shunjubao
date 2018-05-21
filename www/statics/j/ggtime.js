@@ -1,5 +1,5 @@
 (function ($) {
-  if (!!window.ActiveXObject && !window.XMLHttpRequest && (location.href=='http://www.zhiying365365.com' || location.href=='http://www.zhiying365365.com/')) return;
+  if (!!window.ActiveXObject && !window.XMLHttpRequest && (location.href=='http://www.zhiying365365.com' || location.href=='http://news.shunjubao.com/')) return;
   $(function () {
     nav();
     bnrSilder();

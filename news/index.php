@@ -27,7 +27,7 @@ if(isset($_GET['upcache']) || !file_exists('index.html'))
         $pv->SaveToHtml(dirname(__FILE__).'/index.html');
         include(dirname(__FILE__).'/index.html');
         exit();
-    } else { 
+    } else {
         $pv->Display();
         exit();
     }
