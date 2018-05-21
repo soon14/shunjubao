@@ -1,0 +1,26 @@
+body{ font-size:12px;}
+.xuanxiang{margin:0 5px;height:48px;text-align:center;border:1px solid #E2E2E2;font-size:14px;color:#000;width:80px;height:80px;line-height:60px;-moz-border-radius:80px;-webkit-border-radius:80px;border-radius:80px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
+.xuanxiang p{ position:absolute;top:40px;width:80px;height:24px;line-height:24px;text-align:center;color:#666;}
+.xuanxiang.cc{border:1px solid #dc0000;}
+.vs{background:url(http://www.zhiying365365.com/www/statics/i/zhongchaovs.png) no-repeat top center;width:77px;height:85px;position:relative;}
+.vs p{ position:absolute;top:50px;width:77px;height:24px;line-height:24px;text-align:center;font-size:14px;}
+.vs p span{color:green;}
+.vs p b{color:#dc0000;font-size:12px;font-weight:300;}
+.saidui{padding:10px 0;border-bottom:none;}
+.touzhu{ padding:20px 0;}
+.touzhu a{font-size:14px;font-family:'微软雅黑';font-weight:300;display:inline-table;display:inline-block;zoom:1;*display:inline;color:#dc0000;}
+.jiaoju{color:#dc0000;font-size:30px;font-weight:300;line-height:34px;padding:10px 0;font-family:'微软雅黑';}
+.jiaoju span{font-size:30px;font-weight:300;font-family:'宋体'; position:relative;top:-3px;}
+.cccc{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:left;padding:15px 10px;}
+.cccc p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:300px;height:24px;line-height:24px;text-align:left;}
+.cccc p a{ font-size:14px;color:#888;}
+.cccc p a:hover{color:#dc0000;text-decoration:underline;}
+.cccc p span{ font-size:12px;font-weight:300;padding:0 3px 0 0;position:relative;top:-2px;color:#999;display:none;}
+.tab{}
+.tab ul{ float:left;}
+.tab ul li{float:left;width:140px;height:40px;line-height:40px;}
+.tab ul li.active{background:#BC1E1F;color:#fff;}
+.qita{text-align:left;padding:20px 10px;color:#444;}
+.qita p{ line-height:22px;color:#666;}
+.news{ padding:30px 0 0 0;line-height:24px;font-size:14px;color:#333;}
+.footer{ background:#ddd;height:40px;line-height:40px;text-align:center;font-size:12px;}

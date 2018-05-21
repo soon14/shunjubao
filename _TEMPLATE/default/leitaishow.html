@@ -1,0 +1,117 @@
+<!doctype html>
+<head>
+<title>晒单擂台挑战赛-智赢网</title>
+<meta name="keywords" content="晒单擂台挑战赛" />
+<meta name="description" content="晒单擂台挑战赛" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/header.css" />
+<link href="<{'shaidan.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/leitai.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/top.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/xMarquee.js" ></script>
+<body>
+<div class="header">
+  <div class="headerCnetr">
+    <div class="logo">
+      <h1><a href="http://www.zhiying365365.com/"><strong class="none">智赢网</strong><em class="none" style="display:none;">365</em><b class="" style="top:-0;left:100px;">擂台挑战赛</b></a></h1>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="http://www.zhiying365365.com/news/leitaisai.html">参擂大神</a></li>
+        <li><a href="leitaiguize.html">活动规则</a></li>
+        <li><a href="leitaijiangli.html">奖励规则</a></li>
+        <li><a href="leitaizhanji.html">战绩排行</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--center start-->
+<div style=" width:1000px; margin:15px auto auto auto;"> <img src="http://www.zhiying365365.com/www/statics/i/mz1.jpg" width="1000"></div>
+<div class="shaiTag">
+  <div style="position:relative; width:1000px; margin:0 auto;">
+    <ul>
+      <li style="position:relative;left:-10px;"><a href="http://www.zhiying365365.com/news/leitaishow.php" style="color:#dc0000;" class="active">晒单打擂</a><img src="http://www.zhiying365365.com/www/statics/i/hot.gif" style="position:relative;top:-16px;left:-35px;"></li>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=fb" >竞彩足球</a></li>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=bk" >竞彩篮球</a></li>
+      <li style=" width:150px; font-size:12px; font-weight:300;color:#dc0000;">上期擂台获奖用户：</li>
+    </ul>
+    <div style="position:absolute;left:570px; top:0;">
+      <div class="guandong"  style=" width:400px;">
+        <div id="x1" class="xMarquee" style="width:400px;">
+          <ol>
+            <li>第一期获奖用户：</li>
+            <li>竞足积分第一名"chengcheng"<span>获得奖金500元</span></li>
+            <li>竞足连红第一名"竞彩熊超"<span>获得奖金800元</span></li>
+            <li>竞篮积分第一名"贝斯特"<span>获得奖金500元</span></li>
+            <li>竞足连红第一名"贝斯特"<span>获得奖金800元</span></li>
+            <li>第二期获奖用户：</li>
+            <li>竞足"47625"足球连红攻擂新擂主<span>获得奖金1000元</span></li>
+            <li>竞足"47625"足球积分擂主<span>获得奖金500元</span></li>
+            <li>竞篮篮球"山西899"积分擂主<span>获得奖金500元</span></li>
+            <li>攻擂新擂主无</li>
+            <li>第三期获奖用户：</li>
+            <li>竞足"专注2串1"足球连红擂主<span>获得奖金800元</span></li>
+            <li>竞足"47625"足球积分擂主<span>获得奖金500元</span></li>
+            <li>竞篮篮球"山西899"积分擂主<span>获得奖金500元</span></li>
+            <li>竞篮连红无</li>
+            <li>第四期获奖用户：</li>
+            <li>竞足连红擂主无</li>
+            <li>竞足积分擂主无</span></li>
+            <li>竞篮连红"贝斯特"<span>获得奖金800元</span></li>
+            <li>竞篮篮球"山西899"积分擂主<span>获得奖金500元</span></li>
+          </ol>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <script>
+$(function(){
+$("#x1").xMarquee();
+$("#x2").xMarquee({temp:2,backMarquee:'backMarquee'});
+})
+
+function backMarquee(id,con){
+$("#backMarquee").html(id+"::::::::::::::::::::"+con);
+}
+</script>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="gendanCenter">
+  <div class="sdList"> <{foreach from=$show_tickets item=item name=name key=key}>
+    <div class="sdListC">
+      <dl>
+        <dt><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><img src="<{if $show_users[$item.u_id].u_img}><{$show_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"></a>
+          <p><b><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{$show_users[$item.u_id].u_name}></a></b></p>
+          <p class="gendan"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{if $item.is_end}><span>查看</span><{else}>跟单<{/if}> </a></p>
+        </dt>
+        <dd>
+          <p class="show"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{$item.sport|getPoolDesc:$item.pool}></a></p>
+          <p class="show"><b>投注时间：</b><u><{$item.datetime}></u></p>
+          <p class="show"><b>结束时间：</b><u><{$item.endtime}></u></p>
+          <p class="show"><b>投注金额：</b><span><i>&yen;<{$item.money}></i></span></p>
+          <p class="show"><b>跟单金额：</b><span><i>&yen;<{$follow_infos[$item.id].total_money}></i></span></p>
+          <p class="show"><b>跟单人数：</b><u><{$follow_infos[$item.id].total_sum}>人</u></p>
+          <{if $item.prize_state==1}>
+          <p><em>赢</em></p>
+          <{/if}> </dd>
+      </dl>
+    </div>
+    <{/foreach}>
+    <div class="clear"></div>
+  </div>
+  <{if $total_page>1}>
+  <div class="sharepages"> <a href="<{$smarty.const.ROOT_DOMAIN}>/news/leitaishow.php">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+    <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/news/leitaishow.php?sport=<{$sport}>&page=<{$total_page}>">末页</a> </div>
+  <{/if}> </div>
+</div>
+<!--center end-->
+<!--footer start--->
+<{include file="footer.html"}>
+<!--footer end-->
+</body>
+</html>

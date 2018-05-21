@@ -1,0 +1,63 @@
+<{include file="header.html"}>
+<{include file="header.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<!--center start-->
+<script>
+TMJF(function($){
+	$("#pwd").submit(function(){
+		var old_pwd = $("#old_pwd").val();
+		var new_pwd = $("#new_pwd").val();
+		var re_pwd = $("#re_pwd").val();
+		
+		if (new_pwd != re_pwd) {
+			$("#re_error").show();
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户中心修改密码 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1><em>密码修改<b></b><i></i></em></h1>
+    <div class="usTips">
+      <p><b>温馨提示：</b>您的个人信息将被严格保密。</p>
+    </div>
+    <form method="post" action="" id="pwd">
+      <div class="wap_loginC">
+        <p>初始密码</p>
+        <p>
+          <input type="password" class="inputc1" name="old_pwd" id="old_pwd"/>
+        </p>
+        <p>新的密码：</p>
+        <input type="password" class="inputc1" name="new_pwd" id="new_pwd"/>
+        </p>
+        <p>重新输入：</p>
+        <p>
+          <input type="password" class="inputc1" name="re_pwd" id="re_pwd"/>
+        </p>
+        <p>
+          <input type="submit" value=" 确认修改" class="loginsub" />
+          <span class="none">
+          <input type="reset" value="重&nbsp;&nbsp;&nbsp;置" style="background:#cfcfcf;" />
+          </span> </p>
+        <{if $msg_error}>
+        <p class="error"><{$msg_error}></p>
+        <{/if}>
+        <{if $msg_success}>
+        <p class="right"><{$msg_success}></p>
+        <{/if}>
+		<p class="error none" id="re_error">请输入相同的更改密码。</p>
+        <div class="clear"></div>
+      </div>
+    </form>
+  </div>
+</div>
+<!--用户中心修改密码 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

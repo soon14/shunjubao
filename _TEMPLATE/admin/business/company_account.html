@@ -1,0 +1,84 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+root_domain = '<{$smarty.const.ROOT_DOMAIN}>';
+TMJF(function ($) {
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+	});
+	$("#end_time").focus(function(){
+		showCalendar('end_time', 'y-mm-dd');
+	});
+	$("#sub_export").click(function(){
+		this.form.action = root_domain + '/admin/business/company_account_export.php';
+	});
+	$("#sub").click(function(){
+		this.form.action = root_domain + '/admin/business/company_account.php';
+	});
+});
+</script>
+<{include file="../admin/nav.html"}>
+<div>
+  <h2> <b>●</b>查询出票公司对帐信息</h2>
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><form method="post">
+          <table width="35%" border="0" cellpadding="0" cellspacing="1">
+            <tr>
+              <td>开始时间</td>
+              <td><input id="start_time" name="start_time" value="<{$start_time}>"/></td>
+            </tr>
+            <tr>
+              <td>结束时间</td>
+              <td><input id="end_time" name="end_time" value="<{$end_time}>"/></td>
+            </tr>
+            <tr>
+              <td>是否排除运营投注</td>
+              <td>是
+                <input name="exclude_virtual" value="1" type="radio" checked>
+                否
+                <input name="exclude_virtual" value="0" type="radio"></td>
+            </tr>
+            <tr>
+              <td>出票公司</td>
+              <td><select id='company_id' name="company_id">
+                  <{foreach from=$companys item=item key=key}> <option value="<{$key}>" <{if $company_id==$key}>selected<{/if}>><{$item.desc}>
+                  </option>
+                  <{/foreach}>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><input id="sub" type="submit" value="提交" name="submit"/></td>
+              <td><input id="sub_export" type="submit" value="导出" name="submit"/></td>
+            </tr>
+          </table>
+        </form></td>
+    </tr>
+  </table>
+  <{if $print_array}>
+  <h3><{$companys.company_id.desc}></h3>
+  <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td>\</td>
+      <{foreach from=$print_array item=item key=key}>
+      <td><{$key}></td>
+      <{/foreach}></tr>
+    <tr>
+      <td>金额</td>
+      <{foreach from=$print_array item=item key=key}>
+      <td><{$item.money}></td>
+      <{/foreach}></tr>
+    <tr>
+      <td>数量</td>
+      <{foreach from=$print_array item=item key=key}>
+      <td><{$item.amount}></td>
+      <{/foreach}></tr>
+  </table>
+  <{/if}> </div>
+</body>
+</html>

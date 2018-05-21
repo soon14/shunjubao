@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="js/datepicker/WdatePicker.js"></script>
+</head>
+
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform" method="Post" action="">
+  <table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+    <tr bgcolor="#F7F7F7">
+      <td colspan="13"><div align="left"><strong>设置帐号对应出票地区</strong></div></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td><div align="right"><strong>帐号信息：</strong> </div>
+        </td>
+      <td><strong>u_id:</strong><!--{$value.u_id}-->,<strong>姓名:</strong><!--{$value.realname}-->,<strong>手机号:</strong><!--{$value.mobile}-->,<strong>注册时间:</strong><!--{$value.u_jointime}--></td>
+    </tr> 
+    <tr bgcolor="#FFFFFF">
+      <td><div align="right"><strong>设置对应地区：</strong></div></td>
+      <td><!--{$manul_ticket}--></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td><div align="right"><strong>备注：</strong></div></td>
+      <td>
+        <textarea name="description" id="description" cols="45" rows="5"><!--{$description}--></textarea></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="14%"></td>
+      <td width="86%"><label>
+          <input type="submit" name="Submit" value="提交" />
+          <input type="button" name="Submit2" onclick="history.go(-1);" value="返回" />
+          <input name="action" type="hidden" id="action" value="add_save" />
+          <input name="u_id" type="hidden" id="u_id" value="<!--{$value.u_id}-->" />
+        </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

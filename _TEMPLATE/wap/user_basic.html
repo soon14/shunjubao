@@ -1,0 +1,51 @@
+<{include file="header.html"}>
+<script>
+TMJF(function($){
+	$("#birth_date").focus(function(){
+	    if (!$("#birth_date").val()) {
+	    showCalendar('birth_date', 'y-mm-dd');
+	    }
+	});	
+});
+</script>
+</head>
+<body>
+<{include file="top.html"}>
+<!--用户中心基本信息-->
+<div class="center">
+  <form action="<{$smarty.const.ROOT_DOMAIN}>/account/user_basic.php" method="post">
+    <div class="biaodan" style="padding:18px 0 0 0;"> <{if $msg_error}>
+      <div class="tips"><{$msg_error}></div>
+      <{/if}>
+      <{if $msg_success}>
+      <div  class="tips"><{$msg_success}></div>
+      <{/if}>
+      <dl>
+        <dt>用户名：<{$userInfo.u_name}></dt>
+      </dl>
+      <dl>
+        <dd>
+          <input type='text' value="<{$userInfo.u_nick}>" placeholder="昵称" name="u_nick">
+        </dd>
+      </dl>
+      <dl>
+        <dd>
+          <input type='text'  value="<{$userRealInfo.mobile}>" placeholder="手机号" name="mobile">
+        </dd>
+      </dl>
+      <dl>
+        <dd>
+          <input type='text' value="<{$userInfo.u_address}>" placeholder="居住地" name="u_address">
+        </dd>
+      </dl>
+      <div class="tijiao">
+        <input type="submit" value="保&nbsp;&nbsp;&nbsp;存"/>
+      </div>
+    </div>
+  </form>
+</div>
+<!--用户中心基本信息 end-->
+<div class="clear"></div>
+<{include file="../wap/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<{include file="header.html"}>
+<link href="<{'wap_login.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script language="javascript" src="<{'float.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'reg.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<div class="center">
+  <div class="logincenter">
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/passport/reg.php?refer=<{$refer}>" name='frm_reg' id='frm_reg'>
+      <div class="regC">
+        <p><b>用户名：</b>
+          <input name="u_name" type="text" size="25" class="inputc1" id='u_name'/>
+        </p>
+        <p class="tip"><font class="<{if $msg.u_name}><{else}>none<{/if}>" id='tips1'> <{if $msg.u_name}><span id='u_name_err'><{$msg.u_name}></span><{else}><u class="none" id='tips1'></u><{/if}> </font></p>
+        <p><b>登录密码：</b>
+          <input name="u_pwd" type="password" size="25" class="inputc1" id="u_pwd"/>
+        </p>
+        <p class="tip"><font class="<{if $msg.newpas}><{else}>none<{/if}>" id='tips2'> <{if $msg.newpas}><span class=""><{$msg.newpas}></span><{else}><u class="">请输入密码</u><{/if}> </font></p>
+        <p><b>确认密码：</b>
+          <input name="repas" type="password" size="25" class="inputc1" id="repas"/>
+        </p>
+        <p class="tip"><font class="<{if $msg.repas}><{else}>none<{/if}>" id='tips3'> <{if $msg.repas}><span class=""><{$msg.repas}></span><{else}><u class="none">&nbsp;&nbsp;</u><{/if}> </font></p>
+        <p><b>手机号：</b>
+        	<input name="mobile" type="text" size="25" class="inputc1" id="mobile"/>
+        	<font class="<{if $msg.mobile}><{else}>none<{/if}>" id='tips4'> <{if $msg.mobile}><span class=""><{$msg.mobile}></span><{else}><u class="none">&nbsp;&nbsp;</u><{/if}> </font> </p>
+        <{*
+        <p><b>验证码：</b>
+          <input type="text" name="" size="15" class="inputc1" style="width:125px;">
+          <strong><img src="<{$smarty.const.STATICS_BASE_URL}>/i/yzm.gif"></strong><i>看不清？<a href="">换一张</a></i></p>
+        *}>
+        <p><b>&nbsp;</b>
+          <input name="submit" type="submit" value="注&nbsp;册" class="loginsub" />
+        </p>
+      </div>
+      <div class="clear"></div>
+    </form>
+  </div>
+</div>
+<!--center end-->
+<{include file="../ios/footer.html"}>
+<!--footer end-->
+</body>
+</html>

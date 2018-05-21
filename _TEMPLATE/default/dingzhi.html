@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<title>定制跟单-智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
+<meta name="keywords" content="竞彩晒单,竞彩跟单,晒单跟单,智赢网跟单,智赢网竞猜跟单,足彩跟单,篮彩跟单,彩票跟单,竞彩熊超,专注2串1,竞彩投注,智赢网晒单中心,智赢网跟单中心,跟单大力水手,智赢网竞彩熊超。 " />
+<meta name="description" content="定制跟单，智赢定制跟单,专家和明星会员推荐方案的跟单方案，不错失任何一红单，致力于打造竞彩中奖的福地。" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.zhiying365365.com/www/statics/c/dingzhi.css" type="text/css" rel="stylesheet" />
+<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/navigator.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/float.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/winmac.js"></script>
+<script language="javascript" src="http://www.zhiying365365.com/www/statics/j/common.js"></script>
+</head>
+<body>
+<div id="fade" class="black_overlay"></div>
+<{include file="top.html"}>
+<{include file="menu.html"}>
+<div class="tipsters" style="height:118px;">
+  <div class="sdanTop">
+    <div class="sdannav">
+      <h1 style="font-family:'微软雅黑'; font-weight:300;">跟单定制<span style=" font-style:normal;">,</span>不错失任何一红单...<br/><br/>
+        专家和明星会员推荐<span  style=" font-style:normal;">,</span>打造竞彩中奖的福地！</h1>
+    </div>
+  </div>
+</div>
+<div class="shaiTag" style="position:relative; top:-14px;">
+  <ul style="position:relative;left:-10px;">
+    <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/dingzhi.php" class='active'>跟单定制</a></li>
+    <li class="gs"></li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<div style="text-align:left; width:1000px; margin:0 auto; line-height:26px;">
+  <p style="color:#dc0000; padding:15px 0 0 0; font-weight:900;">特别说明：</p>
+  <p>A、目前不能针对非晒单用户进行跟单定制，即您跟单定制的都是有晒单权限用户；</p>
+  <p>B、一旦定制，晒单人晒单后，您将自动进行跟单，并扣除账户余额；</p>
+  <p>C、余额不足，所定制的自动跟单，将无法正常投注，自动跟单失败，后进行的充值，也不能在进行自动跟单，下一自动跟单账户余额足够进行扣款时，自动跟单状态成功；</p>
+  <p>D、定制跟单必须进行过实名认证，未实名认证将无法投注及定制自动跟单；</p>
+  <p>E、可对多人进行定制；</p>
+  <p>F、如需”退订“，请到“用户中心”-“定制管理””-我的定制“进行操作！。</p>
+</div>
+<!--center start-->
+<div style="position:relative;">
+  <script>
+function turnoff(obj){document.getElementById(obj).style.display="none";}
+</script>
+  <!--弹出定制 start-->
+  <div id="light2" class="white_content" >
+    <div class="MSCenter" style="height:200px;">
+      <h1>定制提醒<span><a href="javascript:void(0)" onClick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+      <div id="showtips" style="text-align:center; line-height:30px; font-size:20px;"></div>
+    </div>
+  </div>
+  <div id="light1" class="white_content" >
+    <form   method="post" >
+      <div class="MSCenter">
+        <h1>定制跟单<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+        <div class="sdanopenwindows">
+          <h4>您当前定制的跟单人是：<strong id="u_name">大力水手</strong></h4>
+          <dl>
+            <dt>订制周期：</dt>
+            <dd>
+              <input type="radio" name="cycle" checked value="1">
+              一个星期</dd>
+            <dd>
+              <input type="radio" name="cycle" value="2">
+              两个星期</dd>
+            <dd>
+              <input type="radio" name="cycle" value="3">
+              一个月</dd>
+          </dl>
+          <dl>
+            <dt>定制倍数：</dt>
+            <dd>
+              <input type="radio" name="multiple" checked value="1">
+              1倍</dd>
+            <dd>
+              <input type="radio" name="multiple" value="20">
+              20倍</dd>
+            <dd>
+              <input type="radio" name="multiple" value="30">
+              30倍</dd>
+            <dd>
+              <input type="radio" name="multiple" value="50">
+              50倍</dd>
+            <dd>
+              <input type="radio" name="multiple" value="100">
+              100倍</dd>
+          </dl>
+          <dl>
+            <dd class="text"> 输入其他倍数&nbsp;&nbsp;
+              <input type="text" name="other_multiple" id="other_multiple" value="" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+              &nbsp;&nbsp;
+              倍</dd>
+            <dd>
+          </dl>
+          <dl class="tips">
+            <dd><span>*</span><strong>温馨提示：</strong>一旦定制，晒单人晒单后，您将自动进行跟单，并扣除账户余额。如需退订，请到“用户中心”-“我的定制”进行操作！</dd>
+          </dl>
+          <dl>
+            <dd class="sub">
+              <input id="u_id" name="u_id" type="hidden" value="">
+              <input type="button" name="submit" value="提交"  onClick="return save_dingzhi()" id="submit">
+            </dd>
+          </dl>
+        </div>
+        <h2>跟单定制，不错失任何一红单，专家和明星会员推荐，打造竞彩中奖的福地！</h2>
+      </div>
+    </form>
+  </div>
+  <!--弹出定制 end-->
+  <div class="gendanCenter">
+    <div class="shaidantable"><br/>
+      <table width="970" border="0" cellspacing="0" cellpadding="0" id="list">
+        <tr>
+          <th align="left"><span>用户名</span></th>
+          <th>注册时间</th>
+          <th>战绩</th>
+          <th>胜率(周)</th>
+          <th align="right" style="padding:0 30px 0 0;">操作</th>
+        </tr>
+        <{foreach from=$results item=item name=name key=key}>
+        <tr>
+          <td class="first"><b><img src="<{if $item.u_img}><{$item.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"><span><{$item.u_name}></span></b><{if $item.s_recomond==2}><em>推荐</em><{/if}></td>
+          <td><u><{$item.u_jointime}></u></td>
+          <td>红单<{$item.show_prize_state1|string_format:"%d"}></td>
+          <td><{$item.s_shenglv}>%</td>
+          <td align="right"><strong><a href="javascript:void(0)" onClick="dingzhi('<{$item.show_uid}>','<{$item.show_name}>')">我要定制</a></strong></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </div>
+  </div>
+  <{if $total_page>1}>
+  <div class="sharepages"> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/dingzhi.php">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+    <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/dingzhi.php?page=<{$total_page}>">末页</a> </div>
+  <{/if}> </div>
+<script>
+
+function dingzhi(u_id,u_name){
+	$("#u_id").val(u_id);
+	$("#u_name").html(u_name);
+	document.getElementById('light1').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+}
+
+function save_dingzhi(){
+
+var u_id=$("#u_id").val();
+var cycle= $('input[name="cycle"]:checked').val();
+var multiple= $('input[name="multiple"]:checked').val();
+
+var other_multiple=$("#other_multiple").val();//倍数
+
+if(parseInt(other_multiple)>0){
+var	multiple = other_multiple;
+}
+
+
+if(cycle==""){
+  $("#showtips").html('定制周期出错');
+	document.getElementById('light1').style.display='none';
+	document.getElementById('light2').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+	return false;
+}
+
+if(u_id==""){
+	$("#showtips").html('定制ID出错');
+	document.getElementById('light1').style.display='none';
+	document.getElementById('light2').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+
+	return false;
+}
+	
+	$.ajax({
+	type:'POST', //URL方式为POST
+	url:'ajax_post_dingzhi.php', //这里是指向登录验证的頁面
+	data:'follow_id='+u_id+'&cycle='+cycle+'&multiple='+multiple, //把要验证的参数传过去 
+	dataType: 'json', //数据类型为JSON格式的验证 
+	success: function(data) {
+		if(data.status == "success"){
+		
+			$("#showtips").html('恭喜您已成功定制，查看<a href="http://www.zhiying365365.com/account/user_center.php?p=dingzhi" >我的定制</a');
+			document.getElementById('light1').style.display='none';
+			document.getElementById('light2').style.display='block';
+			document.getElementById ('fade').style.display='block';	
+			
+			return false;		
+		}else{
+			$("#showtips").html(data.mess);
+			document.getElementById('light1').style.display='none';
+			document.getElementById('light2').style.display='block';
+			document.getElementById ('fade').style.display='block';	
+	
+			return false;	
+		}
+	}
+});	
+	
+}
+
+</script><!--center end-->
+<!--footer start--->
+<{include file="footer.html"}>
+<!--footer end-->
+</body>
+</html>

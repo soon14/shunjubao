@@ -1,0 +1,49 @@
+<{include file="header.html"}>
+<script type="text/javascript" src="<{'login.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<div class="top">
+  <h3>登录智赢网</h3>
+  <div class="logo none">
+    <h1 ><a href="/">智赢网</a><em>登录</em></h1>
+  </div>
+</div>
+<div class="center">
+  <div class="biaodan">
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/passport/login.php?from=<{$from}>" name='frm_login' id='frm_login'>
+      <div class="tips"> <{if $msg.pwd}><span class="none"><{$msg.pwd}></span><{else}><u class="none">密码正确</u><{/if}>
+        <{if $msg.loginerror}> <span><{$msg.loginerror}></span> <{/if}> </div>
+      <dl>
+        <dt>您的用户名</dt>
+        <dd>
+          <input name="u_name" type="text" size="25" id="u_name"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>请输入密码</dt>
+        <dd>
+          <input name="u_pwd" type="password" size="25" id="u_pwd"/>
+        </dd>
+      </dl>
+      <div class="link"><b>&nbsp;</b><a href="<{$smarty.const.ROOT_DOMAIN}>/passport/forgot.php" style="font-size:14px;color:#999;">忘记密码？</a></div>
+      <div class="tijiao">
+        <input name="submit" type="submit" value="登&nbsp;录" />
+      </div>
+      <input type="hidden" name="from" value="<{$from}>" />
+    </form>
+    <div class="partner">
+      <h2>使用合作网站登录</h2>
+      <ul>
+        <li class="alipay"><a href="<{$connect_urls[1]}>">支付宝登录</a></li>
+        <li class="qq"><a href="<{$connect_urls[2]}>">QQ登录</a></li>
+        <li class="weixin"><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc1b1ad8efd2af8eb&redirect_uri=http%3A%2F%2Fwww.zhiying365365.com%2Fconnect%2Fweixin_connect.php&response_type=code&scope=snsapi_login&state=79ec3e6d6a0a3b4168f79dc88ce57525#wechat_redirect">微信登录</a></li>
+        <li class="weibo"><a href="<{$connect_urls[4]}>">新浪微博登录</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--center end-->
+<{include file="../app/footer.html"}>
+<!--footer end-->
+</body>
+</html>

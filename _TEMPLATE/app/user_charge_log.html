@@ -1,0 +1,66 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'wap_user.css'|getStaticsUrl}>" />
+</head>
+<body>
+<{include file="top.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+    });
+	
+	$("#end_time").focus(function(){
+        showCalendar('end_time', 'y-mm-dd');
+    });	
+	$("table tr:nth-child(odd)").css("background-color","#f1f1f1");
+});
+</script>
+<!--用户中心账户明细 start-->
+<div class="ustitle">
+  <h1><em>个人账户明细<b></b><i></i></em></h1>
+</div>
+<div class="Paymingxi">
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="0" style="width:100%; overflow:hidden;">
+      <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_account_log.php">账户明细</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_gift_log.php">彩金明细</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge_log.php" class="active">充值记录</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket_log.php">奖金派送</a></div></td>
+    </table>
+    <div style="padding:18px 0 0 0;">
+      <div class="boldtxt">
+        <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+          <tr>
+            <th>交易类型</th>
+            <th>时间</th>
+            <th>订单号</th>
+            <th>收入</th>
+          </tr>
+          <{assign var=trade_amount_in value=0}>
+          <{assign var=trade_money_in value=0}>
+          <{foreach from=$userChargeInfos item=userChargeInfo name=log}>
+          <{assign var=trade_amount_in value=$trade_amount_in+1}>
+          <{assign var=trade_money_in value=$userChargeInfo.money+$trade_money_in}>
+          <tr>
+            <td><{$bankrollChangeType[$userChargeInfo.log_type].desc}></td>
+            <td><p><{$userChargeInfo.create_time}></p></td>
+            <td><{$userChargeInfo.pay_order_id}></td>
+            <td><{$userChargeInfo.money}></strong></td>
+          </tr>
+          <{/foreach}>
+        </table>
+        <{if !$userChargeInfos}>
+        <div class="tips">暂时没有您的信息! </div>
+        <{/if}>
+        <{if $previousUrl || $nextUrl}>
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> </div>
+        <{/if}>
+        <{/if}> </div>
+    </div>
+  </div>
+</div>
+<!--用户中心账户明细 end-->
+<{include file="../app/footer.html"}>
+</body>
+</html>

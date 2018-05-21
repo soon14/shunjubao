@@ -1,0 +1,63 @@
+<!DOCTYPE html><head>
+<title>我的定制-定制管理-用户中心-智赢网</title>
+<meta name="keywords" content="智赢竞彩,智赢网,智赢跟单定制管理" />
+<meta name="description" content="我的定制，定制管理，智赢定制跟单不错失任何一红单。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/user.css" >
+<!--用户中心我的定制 start-->
+
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>定制管理-我的定制</h1>
+  </div>
+  <div class="msg" style="text-align:left;">
+    <div class="tabuser">
+      <ul>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_dingzhi.php" class="active">我的定制</a></li>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_dingzhied.php">定制我的</a></li>
+      </ul>
+    </div>
+    <div style="padding:20px 0 0 0;">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="stripese">
+        <tr>
+          <th>已定制</th>
+          <th align="center">开始时间</th>
+          <th align="center">截止时间</th>
+          <th align="center">定制周期</th>
+          <th align="center">定制倍数</th>
+          <th align="center">当前状态</th>
+          <!--<th align="center">操作时间</th>-->
+          <th align="center">操作</th>
+        </tr>
+        <{foreach from=$dingzhi_array item=item name=item}>
+        <tr>
+          <td><{$item.u_name}></td>
+          <td align="center" style="color:#999;"><{$item.start_time}></td>
+          <td align="center" style="color:#999;"><{$item.end_time}></td>
+          <td align="center"><{$item.cycle_show}></td>
+          <td align="center"><{$item.multiple}></td>
+          <td align="center"><{$item.status_show}></td>
+          <!--<td align="center"><{$item.create_time}></td>-->
+          <td align="center"><div class="caozuo"> <a href="user_ticket.php?dingzhi_order=1&follow_id=<{$item.follow_id}>">查看订单</a> <{if $item.enable==1}>
+              <{if $item.status==1}> <a href="?id=<{$item.id}>&status=2" > 退订 </a> <{else}> <a href="?id=<{$item.id}>&status=1" > 续订 </a> <{/if}>
+              <{/if}> </div></td>
+        </tr>
+        <{/foreach}>
+        
+        <{if !$dingzhi_array}>
+        <tr>
+          <td colspan="8" class="show" style="border-bottom:none; background:#FFFFCC;">暂时没有定制的信息!</td>
+        </tr>
+        <{/if}>
+      </table>
+    </div>
+  </div>
+  <{if $previousUrl || $nextUrl}>
+  <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+    <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> </div>
+  <{/if}>
+  <{/if}> </div>
+<!--用户中心我的定制 end-->
+</body></html>

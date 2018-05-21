@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>下单</title>
+<style>
+p {
+	border-bottom: #CCC 2px solid;
+}
+input {
+	width: 380px;
+	color: #00F
+}
+</style>
+</head>
+<body>
+<div style="width:1300px; text-align:center; margin:0 auto; margin-top:50px; border:#666 1px solid;">
+  <div style="width:1300px; text-align:left; padding-left:5px;" > <strong>商户号申请开通</strong>
+    <form action="rhpay.php" method="post" class="input">
+    <input name="action" type="hidden" value="order_add" />
+      <p>1接口类型:
+  
+        <label for="select"></label>
+        <select name="trxType" size="1" id="select">
+      	  <option value="Alipay_SCANCODE">支付宝扫码</option>
+          <option value="Alipay_PASSIVE">支付宝服务窗</option>
+          <option value="Alipay_PASSIVE">Alipay_PASSIVE</option> 
+          <option value="WX_SCANCODE">微信扫码</option>
+          <option value="WX_SCANCODE_JSAPI">微信公众号</option>
+          <option value="WX_PASSIVE">微信付款码交易</option>
+          <option value="QQPAY_SCANCODE">QQ 扫 码支付</option>
+          <option value="QQPAY_SCANCODE_JSAPI">QQ 公众号</option>
+          <option value="QQPAY_ WX_PASSIVE">QQ 付款码交易</option>          
+        </select>
+        *</p>
+      <p>2商户编号:
+        <input name="merchantNo" id="merchantNo" type="text" value="B100001906"  />
+        *B1000001</p>
+      <p>3商户订单号:
+        <input name="orderNum" id="orderNum" type="text"  value="" />
+        *R_12345</p>
+      <p>4金额:
+        <input name="amount" id="amount" type="text" value="1" />
+        *100.00</p>
+      <p>5订单描述:
+        <input name="goodsName" id="goodsName" type="text"  value="智赢商品"/>
+        *一条裤子</p>
+      <p>6订单失效时  间:
+        <input name="timeOut" id="timeOut" type="text" value="20170715144335" />
+        20160906231010</p>
+      <p>7页面回调地  址:
+        <input name="callbackUrl" id="callbackUrl" type="text"  value="http://www.zhiying365.com/rhpay/callback.php"/>http://www.zhiying365.com/rhpay/callback.php</p>
+      <p>8服务器回调  地址:
+        <input name="serverCallbackUrl" id="serverCallbackUrl" type="text" value="http://www.zhiying365.com/rhpay/serverCallback.php" />
+        http://</p>
+      <p>9用户支付 IP:
+        <input name="orderIp" id="orderIp" type="text" value="1.1.1.1" />
+         *1.1.1.1</p>
+      <p>10收款行联行号:
+        <input name="toibkn" id="toibkn" type="text" value="310651000048" />
+      </p>
+      <p>11入账卡号:
+        <input name="cardNo" id="cardNo" type="text"  value="6217921851778004"/>3des 加密后，使用 base64，utf8  编码做加密。</p>
+      <p>12入帐卡对应  身份证号:
+        <input name="idCardNo" id="idCardNo" type="text"  value="420104197805052010"/>
+        3des 加密后，使用 base64，utf8  编码做加密。</p>
+      <p>13入帐卡对应  姓名:
+        <input name="payerName" id="payerName" type="text" value="梁澋铖" />
+        3des 加密后，使用 base64，utf8  编码做加密。</p>
+      <p>14T0/T1:
+        <input name="encrypt" id="encrypt" type="text" value="T0" />
+        *T0/T1 标识，  若此项为  T0，对应的  10,11,12,13  必填</p>
+      <p>15授权码:
+        <input name="authCode" id="authCode" type="text" value="" />
+      付款码交易时必填</p>
+      <p>16openId:
+        <input name="openId" id="openId" type="text"  value="" />
+      入网渠道商的渠道，必填</p>
+ 
+      <p>
+        <input name="" type="submit"  value="提交"/>
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

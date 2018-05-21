@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>投注列表 </title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style></head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="16">
+	
+	<div align="left"><strong><span style="color:#FF0000"><span class="STYLE1">投注列表</span></span></strong>  <strong >ID</strong>:
+          <input name="id" id="id" value="<!--{$id}-->" size="8"/> ，<strong >帐号</strong>:
+          <input name="u_name" id="u_name" value="<!--{$u_name}-->" size="8"/>  
+          ,<strong>下单时间</strong>:
+          <input name="s_date" type="text" class="Wdate" id="s_date"  onFocus="var e_date=$dp.$('e_date');WdatePicker({onpicked:function(){e_date.focus();},maxDate:'#F{$dp.$D(\'e_date\')}'})" value="<!--{$s_date}-->" size="10"/>
+          至
+          <input name="e_date" type="text" value="<!--{$e_date}-->" class="Wdate" id="e_date" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'s_date\')}'})" size="10"/>
+          ,
+          <strong >投注倍数>=</strong><input name="multiple" id="multiple" value="<!--{$multiple}-->" size="8"/>  
+          ,
+           <strong >投注金额</strong><input name="money" id="money" value="<!--{$money}-->" size="8"/>至<input name="money2" id="money2" value="<!--{$money2}-->" size="8"/>    
+          ,
+          <strong >中奖金额>=</strong><input name="prize_money" id="prize_money" value="<!--{$prize_money}-->" size="8"/>  
+          <br />
+
+          <input type="checkbox" name="combination_type" id="combination_type" value="1" <!--{if $combination_type==1}--> checked="checked" <!--{/if}--> /><strong>晒单</strong>,  
+          <input type="checkbox" name="prize" id="prize" value="1" <!--{if $prize==1}--> checked="checked" <!--{/if}--> /><strong>中奖</strong>,
+          <input type="checkbox" name="pay_rate" id="pay_rate" value="1" <!--{if $pay_rate==1}--> checked="checked" <!--{/if}--> /> <strong>已设置分成</strong>，
+           <input type="checkbox" name="print_state" id="print_state" value="1" <!--{if $print_state==1}--> checked="checked" <!--{/if}--> /><strong>已出票</strong>
+      	，<strong >赛事系统ID</strong>:
+          <input name="combination" id="combination" value="<!--{$combination}-->" size="15"/>  
+          ,	
+          <input name="spage" type="hidden" id="spage" value="1" />
+          <input type="submit" name="Submit" value=" 搜 索 " /></div>	</td>
+  </tr>
+ 
+  <tr bgcolor="#F7F7F7">
+  	<td bgcolor="#F7F7F7"><div align="center">id</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">帐号</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">串关</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">下单时间</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">倍数</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">投注金额</div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">是否中奖</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">中奖金额</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">跟注截止时间</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">是否跟单</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">是否设置擂台</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">出票</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">是否晒单</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">显示范围</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">提成比例</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+  	<td ><div align="center"><a target="_blank" href="http://www.zhiying365365.com/account/tlcket.php?userTicketId=<!--{$datalist[a].id}-->"><!--{$datalist[a].id}--></a></div></td>
+  	<td ><div align="center"><!--{$datalist[a].u_name}--></div></td>
+  	<td ><div align="center"><!--{$datalist[a].user_select}--></div></td>
+  	<td ><div align="center"><!--{$datalist[a].datetime}--></div></td>
+  	<td ><div align="center"><!--{$datalist[a].multiple}--></div></td>
+  	<td ><div align="center"><!--{$datalist[a].money}--></div></td>
+  	<td ><div align="center"><!--{$datalist[a].prize_state_show}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].prize}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].endtime}--></div></td>
+    <td><div align="center"><!--{$datalist[a].partent_id}--></div></td>
+    <td><div  style="color:#F00" id="leitai_tips<!--{$datalist[a].id}-->">
+      <div align="center"><!--{$datalist[a].leitai_show}-->
+      </div>
+    </div></td>
+    <td><div align="center"><!--{$datalist[a].print_state}--></div></td>
+    <td><div align="center"><div  style="color:#F00" id="combination_type_tips<!--{$datalist[a].id}-->"><!--{$datalist[a].combination_type_show}--></div></div></td>
+    <td><div align="center"><!--{$datalist[a].show_range2}--></div></td>
+    <td><div align="center"><!--{$datalist[a].pay_rate2}--></div></td>
+    <td><div align="center">
+   <span style=" <!--{if $datalist[a].leitai==0}-->display:<!--{else}-->display:none<!--{/if}-->" id="a1_<!--{$datalist[a].id}-->" >[<a  href="javascript:void(0);" onclick="update_leitai('<!--{$datalist[a].id}-->','1');" > 设为擂台 </a>]</span>
+   <span id="a0_<!--{$datalist[a].id}-->" style=" <!--{if $datalist[a].leitai==1}-->display:<!--{else}-->display:none<!--{/if}-->" > [<a  id="a0_<!--{$datalist[a].id}-->" href="javascript:void(0);" onclick="update_leitai('<!--{$datalist[a].id}-->','0');" > 取消擂台 </a>]</span>
+      </div>
+      
+    </td>
+    </tr>
+  <!--{/section}-->    
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center" style="color:#F00"><!--{$all.money}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"  style="color:#F00"><!--{$all.prize}-->(<!--{$all.prize-$all.money}-->)</div></td>
+    <td ><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+    <td colspan="16"><div align="center">每页<font color="#FF0000"> 
+      <!--{ $pageSize }-->
+      </font>条 共<font color="#FF0000">
+        <!--{ $page }--> 
+        </font>页  共<font color="#FF0000">
+          <!--{ $totalRecord }--> 
+          </font>条记录
+      <!--{ $multi }-->
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="height:30px;">
+    <td colspan="16"><div align="center"></div></td>
+  </tr>
+</table>
+
+</form>
+
+<script>
+
+	function update_leitai(id,type){
+	
+	if(id==''){
+		return;
+	}
+	
+	$.ajax({
+			type:'POST', //URL方式为POST
+			url:'ajax_update_leitai.php', //这里是指向登录验证的頁面
+			data:'tid='+id+'&action=leitai&type='+type, //把要验证的参数传过去 
+			dataType: 'json', //数据类型为JSON格式的验证 
+			success: function(data) {
+				
+				if (data.status == "success") {
+					
+					if(type==1){
+						$("#a1_"+id).hide();
+						$("#a0_"+id).show();
+						$("#leitai_tips"+id).html('成功设置擂台');
+						$("#combination_type_tips"+id).html('同时设置为晒单');
+						
+						
+					}else{
+						$("#leitai_tips"+id).html('成功取消擂台');
+						$("#combination_type_tips"+id).html('同时取消晒单');
+						$("#a1_"+id).show();
+						$("#a0_"+id).hide();
+						
+						
+					}
+					
+				
+					
+					return true;
+					//alert('修改成功');
+				}else{
+					
+					$("#leitai_tips"+id).html('设置出错');
+					$("#combination_type_tips"+id).html('设置出错');
+					return true;
+					//$("#orderbytip"+id).html('出错');
+					
+					//$("#phone").focus();
+					return true;
+				}
+			}
+		});
+		
+	}
+</script>
+
+
+
+</body>
+</html>

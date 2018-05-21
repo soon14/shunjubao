@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>圈子用户</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style></head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="10">
+	
+	<div align="left"><strong><span style="color:#FF0000"><span class="STYLE1">圈子用户</span></span></strong> <strong style="color:#FF0000">会员帐号</strong>:
+          <input name="keywords" id="keywords" value="<!--{$keywords}-->" size="8"/>,<strong  style="color:#FF0000">板块:</strong> 
+          <!--{$quan}--> ,<strong>是否管理员：</strong><input name="isman" id="isman" type="checkbox" value="1" <!--{if $mancheck==1}-->  checked="checked" <!--{/if}-->/> <input type="submit" name="Submit" value=" 搜 索 " />,<a href="quan_member.php">取消查询条件</a></div>	</td>
+  </tr>
+ 
+  <tr bgcolor="#F7F7F7">
+  	<td width="83"><div align="center"><STRONG>系统ID</STRONG></div></td>
+    <td width="295" bgcolor="#F7F7F7"><div align="center">模块</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">u_id</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">姓名</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">昵称</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">登录次数</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">进入时间</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">最后时间</div></td>
+    <td width="172" bgcolor="#F7F7F7"><div align="center">是否管理员</div></td>
+    <td width="172" bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+  	<td width="83"><div align="center"><!--{$datalist[a].id}--></div></td>
+    <td><div align="center"><!--{$datalist[a].qid}--></div></td>
+    <td width="118"><div align="center"><!--{$datalist[a].u_id}--></div></td>
+    <td width="118"><div align="center"><!--{$datalist[a].u_name}--></div></td>
+    <td width="118"><div align="center"><!--{$datalist[a].u_nick}--></div></td>
+    <td width="118"><div align="center"><!--{$datalist[a].loginnums}--></div></td>
+    <td width="183"><div align="center"><!--{$datalist[a].firsttime}--></div></td>
+    <td width="139"><div align="center">
+      <!--{$datalist[a].lasttime}-->
+    </div></td>
+    <td><div align="center"><!--{$datalist[a].isman_show}--></div></td>
+    <td><div align="center">
+    
+        <!--{if $datalist[a].isman==1}-->
+        [<a href="<!--{$datalist[a].filename}-->?action=update&id=<!--{$datalist[a].id}-->&isman=0" > 取消 </a>]</div>
+        <!--{else}-->
+        [<a href="<!--{$datalist[a].filename}-->?action=update&id=<!--{$datalist[a].id}-->&isman=1" > 设为管理员 </a>]</div>
+        <!--{/if}-->
+
+    
+    </td>
+    </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+    <td colspan="10"><div align="center">每页<font color="#FF0000"> 
+      <!--{ $pageSize }-->
+      </font>条 共<font color="#FF0000">
+        <!--{ $page }--> 
+        </font>页  共<font color="#FF0000">
+          <!--{ $totalRecord }--> 
+          </font>条记录
+      <!--{ $multi }-->
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="height:30px;">
+    <td colspan="10"><div align="center"></div></td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>

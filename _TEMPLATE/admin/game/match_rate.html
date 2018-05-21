@@ -1,0 +1,80 @@
+<{include file="../admin/header.html"}> 
+<script type="text/javascript">
+
+TMJF(function ($) {
+
+});
+</script> 
+<{include file="../admin/nav.html"}>
+<div class="UserRight">
+  <!--<form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li> 彩种：
+          <select name="sport">
+            <option value="fb">===竞猜足球===</option>
+            <option value="bk">===竞猜篮球===</option>
+          </select>
+          <input type="submit" value="查询即时赔率对比">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>-->
+</div>
+<h1>足球投注百分比(当前服务器时间:<{$cur_time}>)</h1>
+<table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+
+  <tr>
+    <td colspan="6">&nbsp;</td>
+    <td colspan="6"><div align="center">胜平负票数</div></td>
+    <td colspan="6"><div align="center">让胜平负票数</div></td>
+  </tr>
+  <tr>
+    <td>赛事ID</td>
+    <td>赛事场次</td>
+    <td>赛事日期</td>
+    <td>联赛</td>
+    <td>主队VS客队</td>
+    <td>开赛时间</td>
+    <td colspan="2"><div align="center">胜</div></td>
+    <td colspan="2"><div align="center">平</div></td>
+    <td colspan="2"><div align="center">负</div></td>
+    <td colspan="2"><div align="center">让胜</div></td>
+    <td colspan="2"><div align="center">让平</div></td>
+    <td colspan="2"><div align="center">让负</div></td>
+  </tr>
+  <tbody>
+  <{foreach from=$return item=item key=key name=match}>
+  
+   <tr <{if $smarty.foreach.match.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>> 
+   <td class="show"><{$item.matchId}></td>
+    <td class="show"><{$item.num}></td>
+    <td class="show"><{$item.b_date}></td>
+    <td class="show"><{$item.l_cn}></td>
+    <td class="show"><{$item.h_cn}>&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;<{$item.a_cn}></td>
+    <td class="show"><{$item.date}> <{$item.time}></td>
+    <td class="show"><{$item.had_nums_h}></td>
+    <td class="show"><{$item.had_nums_h_rate}></td>
+    <td class="show"><{$item.had_nums_d}></td>
+    <td class="show"><{$item.had_nums_d_rate}></td>
+    <td class="show"><{$item.had_nums_a}></td>
+    <td class="show"><{$item.had_nums_a_rate}></td>
+    <td class="show"><{$item.hhad_nums_h}></td>
+    <td class="show"><{$item.hhad_nums_h_rate}></td>
+    <td class="show"><{$item.hhad_nums_d}></td>
+    <td class="show"><{$item.hhad_nums_d_rate}></td>
+    <td class="show"><{$item.hhad_nums_a}></td>
+    <td class="show"><{$item.hhad_nums_a_rate}></td>
+  </tr>
+
+  <{/foreach}>
+    </tbody>
+        <tbody>
+    <tr>
+    <td colspan="18" class="show">本次执行时间：<{$nm}>秒</td>
+  </tr>
+      </tbody>
+
+</table>
+</body></html>

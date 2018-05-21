@@ -1,0 +1,90 @@
+<{include file="header.html"}>
+<link href="<{'wap_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+</head><body>
+<!--页面头部 start-->
+<{include file="top.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	function getQueryString(name) {
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) return unescape(r[2]); return null;
+	}
+	//条转到相应的用户管理页面
+	var p_name = 'ticket';
+	if (getQueryString('p')) {
+		p_name = getQueryString('p');
+	}
+	var iframe_src = '<{$smarty.const.ROOT_DOMAIN}>/account/user_' + p_name + '.php';
+	$("#right_iframe").attr('src', iframe_src);
+});
+</script>
+<!--页面头部 end-->
+<!--center start-->
+<div class="center">
+  <table width="100%" border="0" style="height:40px; line-height:40px; font-size:12px;">
+    <tr>
+      <td>积分<{$userAccount.score}></td>
+      <td>彩金<{$userAccount.gift}></td>
+      <td>余额<{$userAccount.cash}></td>
+    </tr>
+  </table>
+  <!--tips end-->
+  <div class="userpage">
+    <table  border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="active"><b>个人信息</b></td>
+        <td class="active"><b>我的账户</b></td>
+        <td class="active"><b>相关管理</b></td>
+        <td class="active"><b>其他</b></td>
+      </tr>
+      <tr>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_basic.php">基本<br/>
+          信息</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_realinfo.php">实名<br/>
+          认证</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket.php">投注<br/>
+          记录</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php">充值<br/>
+          中心</a></td>
+      </tr>
+      <tr>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_modify_pwd.php">修改<br/>
+          密码</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_bank.php">绑定<br/>
+          银行</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_virtual_ticket.php">积分<br/>
+          记录</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_site_from.php" class="active">我要<br/>
+          推广</a></td>
+      </tr>
+      <tr>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_pms.php">站内<br/>
+          消息</a></td>
+        <td><a href="http://zhiying365365.com/account.html">账户<br/>
+          明细</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_score_tran.php">积分<br/>
+          兑换</a></td>
+        <!--<td></td>-->
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_payment.php">绑支<br/>
+          付宝</a></td>
+      </tr>
+      <tr>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_encash.php">提现<br/>
+          记录</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_tipsed.php">打赏<br/>
+          信息</a></td>
+        </td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_dingzhi.php">定制<br/>
+          管理</a></td>
+        <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_withdraw.php">我要<br/>
+          提现</a></td>
+      </tr>
+    </table>
+  </div>
+  <!--tips start-->
+  <{if !$userRealInfo.realname}>
+  <div class="UserTips" ><b class="none">您的账户有风险！</b>您尚未进行实名认证。<a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_realinfo.php" target="rightFrame">立即认证</a> </div>
+  <{/if}> </div>
+<!--center end-->
+<{include file="../wap/footer.html"}> 

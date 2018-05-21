@@ -1,0 +1,354 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$(".start_time").focus(function(){
+		showCalendar($(this).attr('itemId')+'start_time', 'y-mm-dd');
+	});
+	$(".end_time").focus(function(){
+		showCalendar($(this).attr('itemId')+'end_time', 'y-mm-dd');
+	});
+	$(".del").click(function(){
+		if(!confirm('确定删除这条记录吗？')) return false;
+		return true;
+	});
+	//获取日期与时间
+	var myDate = new Date();
+	$("#create_time").text(myDate.toLocaleString());
+	
+	$("form").submit(function(){
+		var msg = '';
+		$(".limit_money").each(function(){
+			var limit_money = $(this).val();
+			if(isNaN(limit_money)) {
+				msg = '限制金额必须为整数';
+				$(this).focus();
+			}
+		});
+		//判断金额是否正确
+		if(msg != '') {
+			alert(msg);
+			return false;	
+		}
+		return true;
+	});
+});
+</script>
+
+<div>
+  <h2>
+  <b>●</b><{$adminOperateTypeDesc[$type].desc}></h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+        <{*受限制的投注*}>
+        <{if $type == 1}>
+          <td>序号</td>
+          <td>玩法</td>
+          <td>串关</td>
+          <td>说明</td>
+          <td>开始时间</td>
+          <td>结束时间</td>
+          <td>操作</td>
+        <{elseif $type == 2}>
+        <{*虚拟投注人*}>
+          <td>序号</td>
+          <td>用户名</td>
+          <td>添加时间</td>
+          <td>操作</td>
+		<{elseif $type == 4}>
+        <{*投注开关*}>
+          <td>序号</td>
+          <td>功能</td>
+          <td>提示信息</td>
+          <td>添加时间</td>
+          <td>操作</td>
+        <{elseif $type == 5}>
+        <{*首页单关投注*}>
+          <td>序号</td>
+          <td>玩法</td>
+          <td>星期</td>
+          <td>场次</td>
+          <td>添加时间</td>
+          <td>操作</td>
+        <{/if}>
+        </tr>
+        <{*串关受限*}>
+        <{if $type == 1}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">
+        <select name='limit_pool'>
+        <{foreach from=$sportAndPoolDesc item=item1 key=key1}>
+        <option  value="<{$key1}>" <{if $key1==$item.limit_pool}> selected<{/if}> ><{$item1.desc}></option>
+        <{/foreach}>
+        </select>
+        </td>
+        <td class="show"><input type='text' name='limit' value="<{$item.limit}>"></td>
+        <td class="show"><textarea name='limit_msg'><{$item.limit_msg}></textarea></td>
+        <td class="show"><input type='text' name='start_time' value="<{$item.start_time}>" class="start_time" itemId="<{$item.id}>" id="<{$item.id}>start_time"></td>
+        <td class="show"><input type='text' name='end_time' value="<{$item.end_time}>" class="end_time" itemId="<{$item.id}>" id="<{$item.id}>end_time"></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">
+        <select name='limit_pool' >
+        <{foreach from=$sportAndPoolDesc item=item1 key=key1}>
+        <option value="<{$key1}>"><{$item1.desc}></option>
+        <{/foreach}>
+        </select>
+        </td>
+        <td class="show"><input type='text' name='limit' value=""></td>
+        <td class="show"><textarea name='limit_msg'></textarea></td>
+        <td class="show"><input type='text' name='start_time' value="" class="start_time" itemId="<{$lastid}>" id="<{$lastid}>start_time"></td>
+        <td class="show"><input type='text' name='end_time' value="" class="end_time" itemId="<{$lastid}>" id="<{$lastid}>end_time"></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        </tr>
+         <{elseif $type == 2}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show"><input type='text' name='u_name' value="<{$item.u_name}>"></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="删除" class="del"> </td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show"><input type='text' name='u_name' value=""></td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        </tr>
+        <{elseif $type == 3}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show"><input type='text' name='u_name' value="<{$item.u_name}>"></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="删除" class="del"> | <{if $item.leitai == 0}> <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=leitai&leitai=1">设为擂台</a><{else}>   <a style="color:#F00"  href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=leitai&leitai=0">取消擂台</a><{/if}></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show"><input type='text' name='u_name' value=""></td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        </tr>
+        <{elseif $type == 4}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">所有竞彩投注暂停</td>
+        <td class="show"><textarea  name="msg"><{$item.msg}></textarea></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <{if !$results}>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">所有竞彩投注暂停</td>
+        <td class="show"><textarea  name="msg"></textarea></td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        <{/if}>
+        </tr>
+        <tr>
+        <{elseif $type == 5}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">
+        <select name='pool'>
+        <option value="had" <{if $item.pool=='had'}>selected<{/if}>>竞彩-胜平负</option>
+        <option value="SPF" <{if $item.pool=='SPF'}>selected<{/if}>>北单-胜平负</option>
+        </select></td>
+        <td>
+       <select name="week">
+       <option value="1" <{if $item.week==1}>selected<{/if}>>星期一</option>
+       <option value="2" <{if $item.week==2}>selected<{/if}>>星期二</option>
+       <option value="3" <{if $item.week==3}>selected<{/if}>>星期三</option>
+       <option value="4" <{if $item.week==4}>selected<{/if}>>星期四</option>
+       <option value="5" <{if $item.week==5}>selected<{/if}>>星期五</option>
+       <option value="6" <{if $item.week==6}>selected<{/if}>>星期六</option>
+       <option value="7" <{if $item.week==7}>selected<{/if}>>星期日</option>
+       </select>
+       </td>
+       <td><input name="num" id="num" type="text" value="<{$item.num}>"/></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{/foreach}>
+        <{if !$results}>
+        <tr>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">
+        <select name='pool' >
+        <option value="had">竞彩-胜平负</option>
+        <option value="SPF">北单-胜平负</option>
+        </select>
+        </td>
+        <td>
+       <select name="week" id="week">
+       <option value="1">星期一</option>
+       <option value="2">星期二</option>
+       <option value="3">星期三</option>
+       <option value="4">星期四</option>
+       <option value="5">星期五</option>
+       <option value="6">星期六</option>
+       <option value="7">星期日</option>
+       </select>
+       </td>
+       <td><input name="num" id="num" type="text"/></td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </tr>
+        <{/if}>
+        <{elseif $type == 6}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">所有北单投注暂停</td>
+        <td class="show"><textarea  name="msg"><{$item.msg}></textarea></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <{if !$results}>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">所有北单投注暂停</td>
+        <td class="show"><textarea  name="msg"></textarea></td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        <{/if}>
+        <{elseif $type == 7}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">竞彩订单转为人工投注--添加成功</td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <{if !$results}>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">竞彩订单转为人工投注</td>
+        <td class="show">成功添加后所有竞彩的订单均转为人工投注</td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        <{/if}>
+        <{elseif $type == 8}>
+        <{foreach from=$results item=item name=name}>
+        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+        <td class="show">北单订单转为人工投注--添加成功</td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+        </form>
+        </tr>
+        <{assign var=lastid value=$item.id}>
+        <{/foreach}>
+        <tr>
+        <{if !$results}>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+        <{assign var=lastid value=$lastid+1}>
+        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+        <td class="show">北单订单转为人工投注</td>
+        <td class="show">成功添加后所有北单的订单均转为人工投注</td>
+        <td class="show"><span id='create_time'></span></td>
+        <td class="show"><input type='submit' value="添加"></td>
+        </form>
+        <{/if}>
+        </tr>
+        
+	        <{elseif $type == 9}>
+	        <tr><td>ID</td><td>限额</td><td>提示信息</td><td>类型</td><td>创建时间</td><td>操作人</td><td>操作</td></tr>
+		        <{foreach from=$results item=item name=name}>
+			        <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+			        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=edit">
+			        <td class="show"><input type='hidden' name='id' value="<{$item.id}>"><{$item.id}></td>
+			        <td class="show"><input type='text' class="limit_money" name='limit_money' value="<{$item.limit_money}>"></td>
+			        <td class="show"><textarea  name="msg"><{$item.msg}></textarea></td>
+			        <td class="show"><{$adminOperateTypeDesc[$type].desc}>--添加成功</td>
+			        <td class="show"><{$item.create_time}></td>
+			        <td class="show"><{$item.operate_uname}></td>
+			        <td class="show"><input type='submit' value="修改">&nbsp;&nbsp;|&nbsp;&nbsp;<a class="del" href="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=del">删除</a></td>
+			        </form>
+			        </tr>
+			        <{assign var=lastid value=$item.id}>
+		        <{/foreach}>
+		        
+	        <tr>
+	        <{if !$results}>
+		        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/admin_operate_view.php?type=<{$type}>&&status=<{$status}>&&id=<{$item.id}>&&operate=add">
+		        <{assign var=lastid value=$lastid+1}>
+		        <td class="show"><input type='hidden' name='type' value="<{$type}>"><{$lastid}></td>
+		        <td class="show"><input type='text' class="limit_money" name='limit_money' value="50"></td>
+		        <td class="show"><textarea  name="msg">本时段投注限额，必须大于50元!</textarea></td>
+		        <td class="show"><{$adminOperateTypeDesc[$type].desc}></td>
+		        <td class="show"><span id='create_time'></span></td>
+		        <td class="show"><{$operate_uname}></td>
+		        <td class="show"><input type='submit' value="添加"></td>
+		        </form>
+	        <{/if}>
+	        </tr>
+	        
+        <{/if}>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

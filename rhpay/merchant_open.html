@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商户号申请开通</title>
+<style>
+p {
+	border-bottom: #CCC 2px solid;
+}
+input {
+	width: 380px;
+	color: #00F
+}
+</style>
+</head>
+<body>
+<div style="width:1300px; text-align:center; margin:0 auto; margin-top:50px; border:#666 1px solid;">
+  <div style="width:1300px; text-align:left; padding-left:5px;" > <strong>商户号申请开通</strong>
+    <form action="rhpay.php" method="post" class="input">
+    <input name="action" type="hidden" value="merchant_open" />
+      <p>1渠道名称:
+        <input name="channelName" id="channelName" type="text"  value="河南天无局商贸有限公司" />
+        *由我司运营人员或业务人员提供</p>
+      <p>2渠道编码:
+        <input name="channelNo" id="channelNo" type="text" value="8934538851"  />
+        *由我司运营人员或业务人员提供</p>
+      <p>3签购单显示名称:
+        <input name="merchantName" id="merchantName" type="text"  value="天无局商贸" />
+        *</p>
+      <p>4商户名称:
+        <input name="merchantBillName" id="merchantBillName" type="text" value="天无局商贸" />
+        *</p>
+      <p>5安装归属省:
+        <input name="installProvince" id="installProvince" type="text"  value="河南"/>
+        *</p>
+      <p>6安装归属市:
+        <input name="installCity" id="installCity" type="text" value="郑州" />
+        *</p>
+      <p>7安装归属区:
+        <input name="installCounty" id="installCounty" type="text"  value="郑州"/>
+        *</p>
+      <p>8经营地址:
+        <input name="operateAddress" id="operateAddress" type="text" value="郑州市金水区丰庆路36好院5号楼动2单元3层302号" />
+        *</p>
+      <p>9商户类型:
+        <input name="merchantType" id="merchantType" type="text" value="PERSON" />
+        * ENTERPRISE-企业商户 INSTITUTION-事业单位商户 INDIVIDUALBISS-个体工商户 PERSON-个人商户</p>
+      <p>10营业执照号码:
+        <input name="businessLicense" id="businessLicense" type="text" value="91410105MA40XBWQ0K" />
+        * 非个人商户时必填，使用自动关注公众号功能必传</p>
+      <p>11法人代表姓名:
+        <input name="legalPersonName" id="legalPersonName" type="text"  value="梁澋铖"/>
+        *</p>
+      <p>12法人代表身份证号:
+        <input name="legalPersonID" id="legalPersonID" type="text"  value="420104197805052010"/>
+        *</p>
+      <p>13商户联系人姓名:
+        <input name="merchantPersonName" id="merchantPersonName" type="text" value="韦卓成" />
+        *</p>
+      <p>14商户联系人电话:
+        <input name="merchantPersonPhone" id="merchantPersonPhone" type="text" value="17701086884" />
+        *</p>
+      <p>15商户联系人邮箱:
+        <input name="merchantPersonEmail" id="merchantPersonEmail" type="text" value="123995532@qq.com" />
+      </p>
+      <p>16微信经营类目:
+        <input name="wxType" id="wxType" type="text"  value="203" />
+      </p>
+      <p>17微信商户手 T1 续费:
+        <input name="wxT1Fee" id="wxT1Fee" type="text"  value="0.55" />
+      </p>
+      <p>18微信商户手 T0 续费:
+        <input name="wxT0Fee" id="wxT0Fee" type="text" value="0.55" />
+      </p>
+      <p>19支付宝经营类目:
+        <input name="alipayType" id="alipayType" type="text"   value="2016062900190193"/>
+      </p>
+      <p>20支付宝商户手 T1 续费:
+        <input name="alipayT1Fee" id="alipayT1Fee" type="text" value="0.55" />
+      </p>
+      <p>21支付宝商户手 T0 续费:
+        <input name="alipayT0Fee" id="alipayT0Fee" type="text"  value="0.55"/>
+      </p>
+      <p>22结算账户性质:
+        <input name="bankType" id="bankType" type="text" value="TOPRIVATE" />
+        对公-TOPUBLIC对私-TOPRIVATE</p>
+      <p>23开户名称:
+        <input name="accountName" id="accountName" type="text" value="梁澋铖" />
+      </p>
+      <p>24开户账号:
+        <input name="accountNo" id="accountNo" type="text"  value="6217921851778004"/>
+      </p>
+      <p>25联行号:
+        <input name="bankCode" id="bankCode" type="text" value="310651000048" />
+      </p>
+      <p>26结算人信用卡:
+        <input name="creditCardNo" id="creditCardNo" type="text" />
+        个人商户填写验证通过则提高 日限额(3DES 加密)</p>
+      <p>27备注:
+        <input name="remarks" id="remarks" type="text" />
+        该域原样返回</p>
+      <p>28备用:
+        <input name="expand1" id="expand1" type="text" />
+        备用 1</p>
+      <p>29备用:
+        <input name="expand2" id="expand2" type="text" />
+        备用 2</p>
+      <p>30关联 appid:
+        <input name="appId" id="appId" type="text" />
+        使用自动关注公众号功能必传， 报备过的 appId</p>
+      <p>31签名:
+        <input name="sign" id="sign" type="text" />
+        *MD5 全文签名</p>
+      <p>
+        <input name="" type="submit"  value="提交"/>
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

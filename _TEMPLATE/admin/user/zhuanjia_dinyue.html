@@ -1,0 +1,62 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<!--投注记录 start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li> 订阅人:
+          <input type="text" name="u_name" id="u_name" value="<{$u_name}>">
+          , 专家:
+          <input type="text" name="e_name" id="e_name" value="<{$e_name}>">
+        </li>
+        <li>
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <h2> <b>●</b>专家推广方案管理列表</h2>
+    <div>
+      <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+        <tbody>
+          <tr>
+            <td>系统ID</td>
+            <td>专家</td>
+            <td>订阅类型</td>
+            <td> 金额</td>
+            <td>订阅时间</td>
+            <td>订阅人</td>
+          </tr>
+        <{section name=a loop=$datalist}>
+        <tr>
+          <td><{$datalist[a].sysid}></td>
+          <td><{$datalist[a].e_name}></td>
+          <td><{$datalist[a].booktype_status}></td>
+          <td> <{$datalist[a].booking_money}></td>
+          <td><{$datalist[a].addtime}></td>
+          <td><{$datalist[a].u_name}></td>
+        </tr>
+        <{/section}>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="5"><div align="center">每页<font color="#FF0000"> <{ $pageSize }> </font>条 共<font color="#FF0000"> <{ $page }> </font>页  共<font color="#FF0000"> <{ $totalRecord }> </font>条记录 
+              <{ $multi }> 
+              &nbsp; &nbsp; &nbsp; &nbsp; <strong>订阅总人数：<span style="color:#F00"><{$my_nums}></span></strong> , <strong>订阅总金额:<span style="color:#F00"><{$my_money}></span></strong></div></td>
+        </tr>
+        </tbody>
+        
+      </table>
+    </div>
+    <br/>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

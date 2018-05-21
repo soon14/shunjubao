@@ -1,0 +1,78 @@
+<{include file="header.html"}> 
+<{include file="top.html"}>
+<link href="<{'confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<{include file="menu.html"}>
+<div class="center">
+  <!--确认投注center start-->
+  <div class="BitCenter">
+    <div class="ConfirmationTz">
+      <!--投注确认过关方式 start-->
+      <div class="querenguoguan">
+        <div class="TouXiang">
+          <dl>
+            <dt><img src="<{if $userInfo.u_img}><{$userInfo.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>" /><{$userInfo.u_name}></dt>
+            <dd class="first">
+              <p id="ticket_prize"><span>积分奖金：</span><strong><{$userTicketInfo.prize}></strong></p>
+              <p style="position:relative;top:-3px;">方案类型：积分投注</p>
+            </dd>
+            <dd>
+              <p>方案积分：<i><{$userTicketInfo.money}></i></p>
+              <p>方案倍数：<i><{$userTicketInfo.multiple}></i>&nbsp;倍</p>
+            </dd>
+            <dd>
+              <p>过关方式：单关</p>
+              <p>认购时间：<i><{$userTicketInfo.create_time}></i></p>
+            </dd>
+			<dd>
+            <p>&nbsp;</p>
+            <p>分享：
+              <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style" style=" position:relative;top:-25px;left:40px;"><a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_weixin"></a> <a class="jiathis_button_renren"></a> <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> <a class="jiathis_counter_style"></a></div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+            </p>
+          </dd>
+          </dl>
+          <div class="clear"></div>
+        </div>
+       
+        <!--方案内容 start-->
+        <table class="hacker" border="0" cellpadding="0" cellspacing="0" id="hacker">
+          <tbody id="detail_tr">
+            <tr>
+              <th>序号</th>
+              <th>场次</th>
+              <th>主队</th>
+              <th>客队</th>
+              <th>我的选择</th>
+              <th>彩果</th>
+              <th style="border-right:1px solid #6f6f6f;">状态</th>
+            </tr>
+          </tbody>
+          <{foreach from=$matchInfos item=matchInfo name=matchInfo}>
+          <tr>
+            <td><{$smarty.foreach.matchInfo.iteration}></td>
+            <td><{$matchInfo.num}></td>
+            <td><div class=""><{if $s == 'bk'}><{$matchInfo.guest_team}><{else}><{$matchInfo.host_team}><{/if}></div></td>
+            <td><div class=""><{if $s == 'bk'}><{$matchInfo.host_team}><{else}><{$matchInfo.guest_team}><{/if}></div></td>
+            <td><{$matchInfo.key_str}></td>
+            <td><{$resultDesc[$matchInfo.lottery_result].desc}></td>
+            <td><{if $userTicketInfo.prize>0}>
+              <div class="zhuangTai"><strong><span>奖</span></strong></div>
+              <{/if}>
+              <{if $userTicketInfo.status==2}>
+              <div class="zhuangTai"><b class="">未中奖</b></div>
+              <{/if}> </td>
+          </tr>
+          <{/foreach}>
+        </table>
+        <!--方案内容 end-->
+      </div>
+    </div>
+    <!--投注确认过关方式 end-->
+  </div>
+</div>
+<{include file="foot.html"}>
+</body>
+</html>

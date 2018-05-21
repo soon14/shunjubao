@@ -1,0 +1,177 @@
+<{include file="../default/header.html"}>
+<link href="<{'user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<!--页面top start-->
+<{include file="../default/top.html"}>
+<!--页面top end-->
+<{*
+<div class="head_tips">
+  <h1><b><a href="">智赢网</a></b><strong style="left:90px;">System Tips</strong></h1>
+</div>
+*}>
+<{include file="../default/menu.html"}>
+<!--center start-->
+<div class="Tipcenter"> 
+  <{if $type == 'success'}>
+  <!--投注成功 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><span>&nbsp;</span>恭喜您!投注成功o(∩_∩)o</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/account/user_center.php">用户中心</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--投注成功 end-->
+  <{elseif $type == 'fail'}>
+  <!--投注失败 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注没有成功o_O???</p>
+      <p><em>原因：</em><{$msg}></p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--投注失败 end-->
+  <{elseif $type == 'sport'}>
+  <!--体育类型错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注彩种错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--体育类型错误 end-->
+  <{elseif $type == 'multiple'}>
+  <!--体育类型错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--体育类型错误 end-->
+  <{elseif $type == 'money'}>
+  <!--投注金额错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注金额错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--投注金额错误 end-->
+  <{elseif $type == 'pool'}>
+  <!--投注玩法错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注玩法错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--投注玩法错误 end-->
+  <{elseif $type == 'other'}>
+  <!--投注其他错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <!--投注其他错误 end-->
+  <{elseif $type == 'cash'}>
+  <!--余额不足 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的账户余额不足&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php" class="active">立即充值</a><span></span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_center.php">进入用户中心</a></p>
+    </div>
+  </div>
+  <!--余额不足 end-->
+  <{elseif $type == 'start'}>
+  <!--比赛已开赛 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span> <a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已开赛 end-->
+  <{elseif $type == 'end'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'login'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您还没有登录&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span> <a href="<{$smarty.const.ROOT_DOMAIN}>/passport/login.php?from=<{$from}>">去登录</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'start_time'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'end_time'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/www/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'idcard'}>
+  <!--投注其他错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/account/user_center.php?p=realinfo">去认证</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></p>
+    </div>
+  </div>
+  <{/if}>
+  <div class="Tips">智赢网是彩票赢家的聚集地，口碑最好的彩票做单网站</div>
+</div>
+<!--center end-->
+<!--footer start-->
+<{include file="../default/footer.html"}>
+<!--footer end-->
+</body>
+</html>

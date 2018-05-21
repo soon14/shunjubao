@@ -1,0 +1,42 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<style>
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;}
+.tipsimg{ padding:30px 0 0 0; text-align:left;}
+.tipsimg p{ height:30px; line-height:30px;}
+</style>
+<body>
+<!--用户中心上传头像 start-->
+<div class="center">
+  <div class="UserTips">上传头像</div>
+  <div>
+    <div style="text-align:center;padding:0 0 50px 0; width:90%; margin:0 auto;"> <{if $img_error}>
+      
+      <div style="color:red; padding:20px 0;"><{$img_error}> </div>
+      <{/if}>
+	  <div class="tipsimg">
+	  <p>1）支持JPG、GIF、PNG的图片上传；</p>
+      <p>2）上传的头像文件大小不能超过40KB；</p>
+      <p>3）不超过300*300像素的大小。</p></div>
+      <form action="" method="post" enctype="multipart/form-data">
+        <p>
+          <input type='text' name='textfield' style="width:100%; height:30px; line-height:30px;border:1px solid #ddd; display:none;" id='textfield' />
+        </p>
+        <p>
+          <input type='button' style="display:none;"value='浏览...'/>
+        </p>
+        <p style="padding:50px 0 60px 0; text-align:left;">
+          <input type="file" name="fileField" style=""id="fileField" size="28" onChange="document.getElementById('textfield').value=this.value" />
+        </p>
+        <p>
+          <input type="submit" name="submit" style="width:100%; height:38px; line-height:38px;border-radius:5px; text-align:center;border:none; cursor:pointer; background:#dc0000;color:#fff; font-size:14px;"  value="上传" />
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<!--用户中心上传头像 end-->
+<{include file="../wap/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿.tipsters{height:132px;margin:0 auto;background:#fff;height:70px;}
+.NewsNav{padding:10px 0 0 5px;line-height:20px;position:relative;margin:0 auto;line-height:26px;}
+.NewsNav h1{font-size:16px;font-weight:300;text-align:left;line-height:24px;position:relative;}
+.NewsNav h1 em{font-size:16px;font-weight:300;color:#555;font-family:'微软雅黑';padding:0 0 0 25px;}
+.touzhutips{line-height:22px;padding:5px;background:#FFFFCC;color:#555;text-align: center;font-size:12px;}
+.touzhutips b{font-weight:900;colo:#656565;}
+.touzhutips em{border:1px solid red;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;font-style:normal;width:15px;height:15px;line-height:15px;text-align:center;background:red;color:#fff;margin:0 4px 0 0;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;position:relative;top:-1px;display:none;}
+table.stripe{border:1px solid #e7e7e7;border-bottom:none;font-size:12px;}
+table.stripe table{width:100%;}
+table.stripe  tr td{text-align:center;background:#fff;vertical-align:middle;padding:0;margin:0;}/* 默认背景被白色 */
+table.stripe  tr.alt td {background:#F2F2F2;border-bottom:1px solid #CFCFCF;border-top:1px solid #CFCFCF;padding:0;margin:0;}/* 默认隔行背景颜色 */
+table.stripe  tr.over td {background:#FFE3C1;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr.time td {background:#fff;overflow:hidden;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr:hover{}
+.Saishi{width:66px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;position:relative;overflow:hidden;line-height:20px;height:120px;padding:10px 0 0 0;}
+.Saishi h1{font-size:12px;font-weight:900;background:url(../i/Righrxian.gif) no-repeat right center;height:55px;line-height:55px;width:65px;}
+.Saishi dl{padding:5px 0 0 0;}
+.Saishi dl dt b{width:65px;height:22px;line-height:22px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.Saishi dl dt.hidden{padding:5px 0 0 0;}
+.Saishi dl dt a{color:#dc0000;}
+.Saishi dl dt a em{font-style:normal;}
+.Saishi dl dd{-moz-border-radius:35px;-webkit-border-radius:35px;border-radius:35px;width:64px;height:64px;line-height:20px;position:relative;margin:10px auto;border:1px solid #e2e2e2;background:#fff;}
+.Saishi dl dd u{position:absolute;top:-10px;height:10px;line-height:10px;width:1px;background:#e2e2e2;left:32px;}
+.Saishi dl dd i{position:absolute;bottom:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.Saishi dl dd span{color:#666;}
+.Saishi dl dd strong{font-weight:900;}
+.Saishi dl dd span a{color:#666;}
+.Saishi dl dd em{font-style:normal;display:block;}
+.Saishi dl dd p{ font-size:10px;}
+.lcdxf{display:block;width:95%;margin:0 auto;text-align:left;vertical-align:top;}
+.lcdxf ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:95%;}
+.lcdxf ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.lcdxf ul li em{ font-style:normal;width:25px;height:25px;line-height:25px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;left:10px;font-size:12px;font-weight:300;-moz-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-align:center;}
+.lcdxf dl{padding:5px 0 0 0 ;clear:both;width:100%;}
+.lcdxf dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:42%;margin:0 auto;height:40px;text-align:center;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p.Rangfen{display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;height:30px;line-height:30px; vertical-align:top;color:#dc0000; width:10%;}
+.lcdxf dl dt p b{font-size:12px;font-weight:300;float:left;padding:0 0 0 5px;}
+.lcdxf dl dt p span{ float:right;padding:0 5px 0 0;}
+.lcdxf dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:30px;line-height:30px;color:#000;background:#fff;color:#000;width:98%;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.lcdxf dl dt p a.active{background:#E02321;color:#fff;}
+.jfc{border-top:1px solid #e7e7e7;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;width:100%;padding:0 0 30px 0;}
+.jfc h1{}
+.Tbeishu{width:300px;margin:0 auto;overflow:hidden;padding:25px 0 15px 0;}
+.Tbeishu ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:150px;margin:0 auto;height:30px;line-height:30px;overflow:hidden;position:relative;overflow:hidden;}
+.Tbeishu ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;height:30px;line-height:30px;overflow:hidden;position:relative;}
+.Tbeishu ul li.jian{ position:absolute;left:2px;top:0;}
+.Tbeishu ul li.jian a{border:1px solid #ccc;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:900;overflow:hidden;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#f9f9f9;}
+.Tbeishu ul li.jia{ position:absolute;top:0;right:2px;}
+.Tbeishu ul li.jia a{border:1px solid #ccc;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:900;overflow:hidden;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#f9f9f9;}
+.Tbeishu ul li.text{ position:absolute;left:40px;top:0;border:1px solid #ccc;width:65px;height:24px;line-height:24px;padding:2px;text-align:center;}
+.Tbeishu ul li.text input{border:none;background:none;width:60px;height:24px;line-height:24px;text-align:center;}
+.Tbeishu ul li.jf b{ font-size:12px;font-weight:300;padding:0 5px;color:red;}
+.touzhuSub{height:38px;line-height:38px;overflow:hidden;text-align:center;width:142px;padding:0;margin:0 auto;background:#B70408;border:none;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;vertical-align:middle;}
+.touzhuSub input{display:block;height:38px;line-height:38px;text-align:center;width:142px;border:none;background:none;cursor:pointer;font-size:18px;font-weight:900;font-family:'微软雅黑';color:#fff;letter-spacing:2px;}
+.Tbeishu ul li a:hover{ background:#6f6f6f;color:#fff;}

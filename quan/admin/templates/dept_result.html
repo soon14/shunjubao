@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+</head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="16"><div  style="float:left; padding-left:10px;"><strong style="color:#FF0000">网络部门业绩指标列表</strong> <strong>关键字</strong>：
+              <input name="keywords" id="keywords" value="<!--{$keywords}-->"/>
+         		<input type="submit" name="Submit" value="搜索" />
+		 		<input name="action" type="hidden" id="action" value="search" />
+   	 </div>
+  	<div style="float:right; padding-right:10px;"><a href="dept_result.php?action=add" target="if_content_t"><strong>录入网络业绩指标</strong></a></div></td>
+  </tr>
+  <tr bgcolor="#F7F7F7">
+  	<td width="39"><div align="center">ID</div></td>
+    <td width="89" bgcolor="#F7F7F7"><div align="center">日期</div></td>
+    <td width="83" bgcolor="#F7F7F7"><div align="center">咨询量</div></td>
+    <td width="83" bgcolor="#F7F7F7"><div align="center">预约量</div></td>
+    <td width="83" bgcolor="#F7F7F7"><div align="center">预约率</div></td>
+    <td width="58" bgcolor="#F7F7F7"><div align="center">回访率</div></td>
+    <td width="94"><div align="center">新客来院量</div></td>
+    <td width="91" bgcolor="#F7F7F7"><div align="center">新客来院率</div></td>
+    <td width="89"><div align="center">新客成交量</div></td>
+    <td width="89" bgcolor="#F7F7F7"><div align="center">新客成交率</div></td>
+    <td width="89" bgcolor="#F7F7F7"><div align="center">新客业绩</div></td>
+    <td width="100" bgcolor="#F7F7F7"><div align="center">新客人均消费</div></td>
+    <td width="78" bgcolor="#F7F7F7"><div align="center">操作人</div></td>
+    <td  width="154" bgcolor="#F7F7F7"><div align="center">操作时间</div></td>
+    <td colspan="2" bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+  	<td width="39"><div align="center"><!--{$datalist[a].sysid}--></div></td>
+    <td><div align="center"><!--{$datalist[a].tyear}-->年<!--{$datalist[a].tmonth}-->月
+      </div></td>
+    <td ><div align="center"><!--{$datalist[a].zixun}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].yuyue}--></div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].yuyuelv}--></div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].huifanlv}--></div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].laiyuan}-->
+    </div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].laiyuanlv}--></div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].cjliang}--></div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].lycjlv}-->
+    </div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].yezhi}-->
+      万</div></td>
+    <td ><div align="center">
+      <!--{$datalist[a].renjun}-->
+      元</div></td>
+    <td >
+      <div align="center">
+        <!--{$datalist[a].addid}-->
+      </div></td>
+    <td >
+      <div align="center">
+        <!--{$datalist[a].addtime|date_format:"%Y-%m-%d %H:%M:%S"}-->
+      </div></td>
+    <td width="57" ><div align="center">[<a href="dept_result.php?action=edit&sysid=<!--{$datalist[a].sysid}-->"> 修改 </a>]</div></td>
+    <td width="110" ><div align="center">[<a href="dept_result.php?action=delete&sysid=<!--{$datalist[a].sysid}-->" onclick="javascript:return confirm('您确认要删除吗？一旦删除将不可恢复');"> 删除 </a>]</div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+    <td colspan="2"><div align="center">每天指标</div></td>
+    <td ><div align="center"><!--{$datalist[a].day_zixun}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_yuyue}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_laiyuan}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_cjliang}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_yezhi}-->万</div></td>
+    <td ><div align="center"></div></td>
+    <td colspan="4" >&nbsp;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+    <td colspan="2"><div align="center"><strong>完成情况</strong></div></td>
+    <td ><div align="center"><!--{$datalist[a].over_iquire}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].over_booking}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].over_yuyuelv}-->%</div></td>
+    <td ><div align="center">100%</div></td>
+    <td ><div align="center"><!--{$datalist[a].over_tohospital}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].over_ylaiyuanlv}-->%</div></td>
+    <td ><div align="center"><!--{$datalist[a].over_ydealnum}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].over_yxinkechenjiao}-->%</div></td>
+    <td ><div align="center"><!--{$datalist[a].over_ydealmoney}-->万</div></td>
+    <td ><div align="center"><!--{$datalist[a].over_yrenjun}--></div></td>
+    <td colspan="4" >&nbsp;</td>
+    </tr>
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+    <td colspan="2"><div align="center">每天完成情况</div></td>
+    <td ><div align="center"><!--{$datalist[a].day_over_iquire}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_over_booking}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_over_tohospital}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_over_ydealnum}--></div></td>
+    <td ><div align="center"></div></td>
+    <td ><div align="center"><!--{$datalist[a].day_over_yezhi}-->万</div></td>
+    <td ><div align="center">元</div></td>
+    <td colspan="4" >&nbsp;</td>
+  </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+    <td colspan="16"><div align="center">每页<font color="#FF0000"> <!--{ $pageSize }--></font>条 共<font color="#FF0000"><!--{ $page }--> </font>页  共<font color="#FF0000"><!--{ $totalRecord }--> </font>条记录<!--{ $multi }--></div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="16"><div align="center"></div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

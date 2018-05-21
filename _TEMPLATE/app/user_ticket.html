@@ -1,0 +1,184 @@
+<{include file="header.html"}>
+</head>
+<body>
+<{include file="top.html"}>
+<div class="ustitle">
+  <h1><em>投注记录<b></b><i></i></em></h1>
+</div>
+<script type="text/javascript">
+TMJF(function($) {
+	//(window.parent.document).find("#main").load(function(){
+		//var main = $(window.parent.document).find("#main");
+		//var thisheight = $(document).height()+30;
+		//main.height(thisheight);
+	//});
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td>'+ k +'</td>';
+                    		html += '<td>'+ ticketInfo[i].num +'</td>';
+                    		html += '<td>'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td>'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td>'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td>'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td>'+ option_html +'</td>';
+                    		html += '<td>'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	});
+	$(".add_show_ticket").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+	$(".show_ticket_cancel").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket_cancel'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+});
+</script>
+<!--投注记录 start-->
+<div class="usTips">
+  <p><strong>总中奖额度<{if $totalPrize}><{$totalPrize}><{else}>0.00<{/if}>元</strong></p>
+</div>
+<div>
+  <form method="post">
+    <div class="timechaxun">
+      <ul>
+        <li>
+          <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+          &nbsp;- </li>
+        <li>
+          <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+        </li>
+        <li>
+          <input type="submit" name="" class="TMchaxun" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <div class="boldtxt">
+      <table width="99%" border="0"  cellpadding="0" cellspacing="0">
+        <tr>
+          <th>方案类型</th>
+          <th>总金额</th>
+          <!--<th>倍数</th>-->
+          <th>状态</th>
+          <th>奖金</th>
+          <th>&nbsp;详情&nbsp;</th>
+          <{if $can_show_ticket}>
+          <th align="center" >&nbsp;操作&nbsp;</th>
+          <{/if}> </tr>
+        <{assign var=trade_money_in value=0}>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <{assign var=trade_money_in value=$userTicket.money+$trade_money_in}>
+        <tr>
+          <td style="position:relative;"><{if $userTicket.partent_id}>
+            <div class="gendan">跟</div>
+            <{/if}>
+            <div class="stype"><{$userTicket.sport|getPoolDesc:$userTicket.pool}></div></td>
+          <td><{$userTicket.money}></td>
+          <!--<td><{$userTicket.multiple}></td>-->
+          <td><{if $userTicket.print_state == 1}>
+            已出票
+            <{*$userTicketPrintStateDesc[$userTicket.print_state].desc*}> 
+            <{elseif $userTicket.print_state == 3}>
+            未出票
+            <{elseif $userTicket.print_state == 8}>
+            失败退款
+            <{else}>
+            出票中
+            <{/if}></td>
+          <td><div class="jiesuancaozuo"> <{if $userTicket.prize_state == 1}> <b style="color:#fff;">奖</b><{$userTicket.prize}>
+              <{else}> <strong class=""> <{if $userTicket.prize_state}>
+              <{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}>
+              <{else}>
+              未开奖
+              <{/if}> </strong> <{/if}> </div></td>
+          <td class="show_details1"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/ticket.php?userTicketId=<{$userTicket.id}>" userTicketId="<{$userTicket.id}>">详情</a></td>
+          <{if $can_show_ticket}>
+          <{if $userTicket.combination_type==1}>
+          <td align="center"><div class="yishai"><a href="javascript::void(0);" style="color:#666"  class="show_ticket_cancel1" userTicketId="<{$userTicket.id}>">已晒</a></div></td>
+          <{else}>
+          <td align="center"><div class="caozuo" style=" padding:9px 0 0 0;"><a href="javascript::void(0);" class="add_show_ticket" userTicketId="<{$userTicket.id}>"><img src="http://www.zhiying365365.com/www/statics/i/shai.gif"></a></div></td>
+          <{/if}>
+          
+          <{/if}> </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <div> <{if $previousUrl || $nextUrl}>
+      <div class="pages" style="border-bottom:none;"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> <{/if}> </div>
+      <{/if}> </div>
+    <div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录智赢网站进行查询！</div>
+  </div>
+</div>
+<!--投注记录 end-->
+<{include file="../app/footer.html"}>
+</body>
+</html>

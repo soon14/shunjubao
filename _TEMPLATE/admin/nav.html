@@ -1,0 +1,19 @@
+
+
+</head><body>
+
+<{if $navs}>
+<table class="nav">
+    <tr>
+        <td>当前位置
+        <{foreach from=$navs item=nav}>
+            &nbsp;>>&nbsp;
+            <{if $nav.href}>
+                <a href="<{$nav.href}>" <{if $nav.target}> target="<{$nav.target}>"<{/if}> ><{$nav.title}></a>
+            <{else}>
+                <{$nav.title}>
+            <{/if}>
+        <{/foreach}>
+    </tr>
+</table>
+<{/if}>

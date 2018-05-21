@@ -1,0 +1,126 @@
+<{include file="../admin/header.html"}>
+<style>
+.gdtype{text-align:left;position:relative;padding:0 0 0 5px;}
+.gdtype span{ font-size:12px;color:#dc0000;background:url(<{$smarty.const.STATICS_BASE_URL}>/i/gBj.gif) no-repeat;width:17px;height:19px;line-height:19px;color:#fff;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.gdtype strong{background:url(<{$smarty.const.STATICS_BASE_URL}>/i/shai.gif) no-repeat;position:absolute;right:10px;top:3px;width:17px;height:19px;line-height:19px;text-indent:-5000px;cursor:pointer;}
+</style>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$(".shurunum").keyup(function() {
+       var num = Number($(this).val());
+		if(isNaN(num)) {
+			$(this).val('');
+		}
+	});
+});
+var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+function del(id){
+	if (!confirm("确定删除此记录吗？")) {
+		return false;
+	}else{
+		window.location.href=root_domain + '/admin/order/daletou_set_num.php?action=del&d_id='+id;
+	}
+}
+function checkparam(){
+	var qishu = $("#qishu").val();
+}
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+<form method="POST" onsubmit="return checkparam();">
+<input type="hidden" value="add" name="action" id="action" />
+<div class="timechaxun" style="">
+  <ul>
+  <li>大乐透开奖结果<br /><br />
+	   第<input type="text" name="qishu" id="qishu" class="shurunum" style="width:100px" value="">期&nbsp;&nbsp;&nbsp;&nbsp;
+  	   <font color="red">前区开奖号码</font>：
+      <input type="text" name="qianqu[]" class="shurunum" id="qianqu1" style="width:60px" value="">
+      <input type="text" name="qianqu[]" class="shurunum" id="qianqu2" style="width:60px" value="">
+      <input type="text" name="qianqu[]" class="shurunum" id="qianqu3" style="width:60px" value="">
+      <input type="text" name="qianqu[]" class="shurunum" id="qianqu4" style="width:60px" value="">
+      <input type="text" name="qianqu[]" class="shurunum" id="qianqu5" style="width:60px" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+      <font color="blue">后区开奖号码 </font>：
+      <input type="text"  style="width:60px;" class="shurunum" name="houqu[]" id="houqu1" value="">
+      <input type="text"  style="width:60px;" class="shurunum" name="houqu[]" id="houqu2" value="">
+      <br /><br />
+      <font color="red">奖金： </font><br /><br />
+               一等奖：<input type="text"  style="width:100px;" name="j1" id="j1" value="">
+	       二等奖：<input type="text"  style="width:100px;" name="j2" id="j2" value="">
+	      三等奖： <input type="text"  style="width:100px;" name="j3" id="j3" value="">
+	       四等奖：<input type="text"  style="width:100px;" name="j4" id="j4" value="">
+	       五等奖：<input type="text"  style="width:100px;" name="j5" id="j5" value="">
+	      六等奖： <input type="text"  style="width:100px;" name="j6" id="j6" value="">是否当前期数：
+	    <input type="radio"  name="now[]" checked="checked" value="1">是
+	    <input type="radio"  name="now[]" value="0">否 
+        <input type="submit" name="" value="添加">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+<br/>
+<div>
+<!-- <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>期数</td>
+		<td>前区</td>
+		<td>后区</td>
+		<td>奖池</td>
+	</tr>
+	<tr>
+		<td>期数</td>
+		<td>前区</td>
+		<td>后区</td>
+		<td>奖池</td>
+	</tr>
+</table> -->
+  <h2>
+  <b>●</b>大乐透开奖记录</h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+       	<tr>
+			<td>期数</td>
+			<td>前区</td>
+			<td>后区</td>
+			<td>奖池</td>
+			<td>操作</td>
+		</tr>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <tr>
+			<td><{$userTicket.qishu}></td>
+			<td><{$userTicket.qianqu}></td>
+			<td><{$userTicket.houqu}></td>
+			<td>
+			     一等奖：<{$userTicket.j1}><br />
+			       二等奖：<{$userTicket.j2}><br />
+			      三等奖： <{$userTicket.j3}><br />
+			       四等奖：<{$userTicket.j4}><br />
+			       五等奖：<{$userTicket.j5}><br />
+			      六等奖： <{$userTicket.j6}><br />
+	      </td>
+			<td><a href="javascript:void(0);" onclick="del('<{$userTicket.d_id}>')">删除</a></td>
+		</tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+    <{if $previousUrl || $nextUrl}>
+		<div class="pageC">
+		<div class="pages">
+		<{if $previousUrl}>
+		<a href="<{$previousUrl}>">上页</a>
+		<{/if}>
+		<{if $nextUrl}>
+		<a href="<{$nextUrl}>">下页</a>
+		<{/if}>
+		</div>
+		</div>
+	<{/if}>
+  </div>
+</div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

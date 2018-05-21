@@ -1,0 +1,85 @@
+<{include file="../admin/header.html"}>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	    //if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	    //}
+	});
+		
+});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+<form method="post">
+<div class="timechaxun" style="height:45px;">
+  <ul>
+  <li>
+      用户名：
+      <input type="text" name="u_name" id="u_name" value="<{$u_name}>">|
+    开始时间：
+      <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+    结束时间：
+      <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+      <input type="submit" name="" value="查询">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+<div>
+<table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+	<tr><td>账户余额</td><td>彩金</td><td>返点</td><td>冻结资金</td><td>积分</td><td>电话</td></tr>
+	<tr><td>&yen;<{$userAccountInfo.cash}></td><td><{$userAccountInfo.gift}></td><td><{$userAccountInfo.rebate}></td>
+	<td><{$userAccountInfo.frozen_cash}></td><td><{$userAccountInfo.score}></td><td><{$userRealInfo.mobile}></td></tr>
+</table>
+  <h2>
+  <b>●</b>用户余额记录</h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr>
+                <th>序号</th>
+                <th>收入</th>
+                <th>支出</th>
+                <th>余额</th>
+                <th>交易类型</th>
+                <th>交易时间</th>
+            </tr>
+                  <{assign var=gift value=0}>
+              <{foreach from=$userAccountLogInfos item=item name=name key=key}>
+              <tr <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+              	<td class="show"><{$item.log_id}></td>
+                <td class="show"><{if $bankrollChangeType[$item.log_type].direction == 1}><{$item.money}>元<{/if}></td>
+                <td class="show"><{if $bankrollChangeType[$item.log_type].direction == 2}><{$item.money}>元<{/if}></td>
+                <{if $bankrollChangeType[$item.log_type].direction == 1}>
+                <{assign var=gift value=$item.old_gift+$item.gift}>
+                <{else if $bankrollChangeType[$item.log_type].direction == 2}>
+                <{assign var=gift value=$item.old_gift-$item.gift}>
+                <{/if}>
+                <td class="show"><{$item.old_money}></td>
+                <td class="show"><{$bankrollChangeType[$item.log_type].desc}></td>
+                <td class="show"><{$item.create_time}></td>
+              </tr>
+              <{/foreach}>
+              </tbody>
+              
+            </table>
+          </div>
+          <{if $previousUrl || $nextUrl}>
+          <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+            <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> </div>
+          <{/if}>
+          <{/if}>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

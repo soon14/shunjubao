@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>总进球-足彩【智赢网】彩票赢家首选_中国竞彩网_足彩_篮彩_单场_福彩_体彩_人气最旺的彩票网站</title>
+<meta name="keywords" content="智赢网,智赢精彩网,竞彩,足彩,竞彩网,足彩胜平负,足彩让球胜平负,足彩混合过关,足彩总进球,足彩半全场,足彩比分,中国竞彩网,中国足彩网,体彩,足球彩票,竞猜足球,足球竞猜,智赢网,智赢2串1,竞彩2串1,竞猜专家,专家推荐,足彩专家,王忠仓,赢球团,大力水手" />
+<meta name="description" content="中国竞彩网智赢网竞彩足球、足彩胜平负、足彩让球胜平负、足彩混合过关、足彩总进球、足彩半全场、足彩比分投注。" />
+<link type="text/css" rel="stylesheet" href="/zy/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="/zy/www/statics/c/touzhu.css" />
+<link type="text/css" rel="stylesheet" href="/zy/www/statics/c/footer.css" />
+<script language="javascript" type="text/javascript" src="/zy/www/statics/j/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/zy/www/statics/j/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="/zy/www/statics/j/MFloat.js"></script>
+<script type="text/javascript">
+
+    var curPool = "ttg";
+
+    var curPos = { gameCode: "fb", gameType: "竞彩足球", poolName: "总进球" };
+
+    var urlStr = "http://202.85.221.248/www/interface/matchlist.php?s=fb&p=,ttg&f=getDataBack";
+
+    
+
+    function getDataBack(data) {
+
+        var matchNameAry = [];
+
+        var tmpAry = data.datas;
+
+        var filterHtm = "";
+
+        var htmStr = "<tr><td colspan='6' style='padding:0; margin:0;'>";
+
+        for (var i = 0; i < tmpAry.length; i++) {
+
+            var obj = tmpAry[i];
+
+            htmStr += "<div><tr class='time'><td id='tdwin'><div class='DQtime'><b>" + obj.num + " 2014-02-26 [11:30 -- 次日 11:30]</b><span><a href='javascript:void(0)' class='foldBtn'>隐藏</a></span><strong><a href='javascript:void(0);' class='showHide'>&nbsp;显示已隐藏比赛<b>[<label class='hideNum'>0</label>]</b>场</a></strong></div></td></tr>";
+
+            htmStr += "<tr d='" + i + "'><td><table cellpadding='0' cellspacing='1' id='TabWin'>";
+
+            var listObj = obj.matchs[0];
+
+            var count = 0;
+
+            for (var key in listObj) {
+
+                count++;
+
+                var matchObj = listObj[key];
+
+                var isFind = -1;
+
+                for (var j = 0; j < matchNameAry.length; j++) {
+
+                    if (matchNameAry[j].name == matchObj.l_cn) {
+
+                        isFind = j;
+
+                        matchNameAry[j].len++;
+
+                        break;
+
+                    }
+
+                }
+
+                if (isFind < 0) {
+
+                    isFind = matchNameAry.length;
+
+                    matchNameAry.push({ name: matchObj.l_cn, len: 1 });
+
+                }
+
+
+
+                htmStr += "<tr m='" + isFind + "' id='" + key + "'" + ((count % 2 == 0) ? " class='alt'" : "") + ">" +
+
+                "  <td class='d1'><a class='hideMatch' href='javascript:void(0);'>" + matchObj.num + "</a></td>" +
+
+               "<td style='width:66px;padding:0;'><div class='ssName' style='background:" + matchObj.l_color + "; color:#fff;'>" + matchObj.l_cn + "</div></td>" +
+
+                "  <td class='d3'>" + matchObj.date + "&nbsp;&nbsp;" + matchObj.time + "</td>" +
+
+                "  <td class='d11' style='width:205px;'><b>" + matchObj.h_cn + "</b><u>VS</u><strong>" + matchObj.a_cn + "</strong></div></td>" +
+
+                "  <td width='76'><div class='ouyaxi'><a href='javascript:void(0);'>欧</a><a href='javascript:void(0);'>亚</a><a href='javascript:void(0);'>析</a></div></td>" +
+
+                "  <td width='370'><div class='OddsList_T OddsTd'>" +
+
+                "      <ul>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s0 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s1 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s2 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s3 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s4 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s5 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s6 + "</a></li>" +
+
+                "        <li><a href='javascript:void(0);'>" + matchObj.ttg.s7 + "</a></li>" +
+
+                "      </ul>" +
+
+                "      <div class='clear'></div>" +
+
+                "    </div></td>" +
+				"  <td width='53'><div class='bifen none'>2:1</div></td>" +
+				"  <td width='53'><div class='bifen none'>2</div></td>" +
+
+                "</tr>";
+
+            }
+
+            htmStr += "</table></td></tr>";
+
+            htmStr += "</div>";
+
+            filterHtm += "<em><input type='checkbox' checked />" + obj.num + "[" + count + "]</em>";
+
+        }
+
+        htmStr += "</td></tr>";
+
+        $("#dataList").html(htmStr);
+
+
+
+        //filterPan
+
+        $("#fDate").html(filterHtm);
+
+        filterHtm = "";
+
+        for (var i = 0; i < matchNameAry.length; i++) {
+
+            filterHtm += "<em><input type='checkbox' checked />" + matchNameAry[i].name + "[" + matchNameAry[i].len + "]</em>";
+
+        }
+
+        $("#fMatches").html(filterHtm);
+
+    }
+
+</script>
+<script src="js/publicFunc_memcache.js" type="text/javascript"></script>
+</head>
+<body>
+<!--top start-->
+<script src="/zy/www/statics/j/top.js" type="text/javascript"></script>
+<!--top end-->
+<!--nav start-->
+<script src="/zy/www/statics/j/menu.js" type="text/javascript"></script>
+<!--nav end-->
+<!--caipiao location start-->
+<script src="/zy/www/statics/j/cailocation.js" type="text/javascript"></script>
+<!--caipiao location start-->
+<!--center start-->
+<div class="center">
+  <!--投注center start-->
+  <div class="BitCenter">
+    <script src="js/filter.js" type="text/javascript"></script>
+    <div>
+      <div class="Kjnav">
+        <div class="NavZJq">
+          <dl class="one">
+            <dt>序号</dt>
+          </dl>
+          <dl class="two">
+            <dt>赛事</dt>
+          </dl>
+          <dl class="three">
+            <dt>截止时间</dt>
+          </dl>
+          <dl class="four">
+            <dt><b>主队</b>&nbsp;&nbsp;VS&nbsp;&nbsp;<b>客队</b></dt>
+          </dl>
+          <dl class="five">
+            <dt>分析</dt>
+          </dl>
+          <dl class="six">
+            <dt>
+              <div class="WanFa">
+                <h4>投&nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;区（奖金指数）</h4>
+                <ul class="show2">
+                  <li>0球</li>
+                  <li>1球</li>
+                  <li>2球</li>
+                  <li>3球</li>
+                  <li>4球</li>
+                  <li>5球</li>
+                  <li>6球</li>
+                  <li>7+球</li>
+                </ul>
+              </div>
+            </dt>
+          </dl>
+          <dl class="seven">
+            <dt>比分</dt>
+          </dl>
+          <dl class="eight">
+            <dt>赛果</dt>
+          </dl>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <table id="dataList" width="100%" border="0" class="stripe" cellpadding="0" cellspacing="1">
+      </table>
+      <!--确认投注 strat-->
+      <script src="js/betbox.js" type="text/javascript"></script>
+      <!--确认投注 end-->
+    </div>
+  </div>
+  <!--投注center end-->
+</div>
+<!--center end-->
+<!--Help start-->
+<script src="/zy/www/statics/j/help.js" type="text/javascript"></script>
+<!--Help end-->
+<!--footer start-->
+<script src="/zy/www/statics/j/footer.js" type="text/javascript"></script>
+<!--footer end-->
+</body>
+</html>

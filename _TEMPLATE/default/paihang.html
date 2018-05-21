@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title><{$TEMPLATE.title}>-智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
+<meta name="keywords" content="<{$TEMPLATE.keywords}>" />
+<meta name="description" content="<{$TEMPLATE.description}>" />
+<link href="<{'header.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'msg.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'footer.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/ico" href="http://www.zhiying365365.com/www/statics/i/favicon.ico">
+<script type="text/javascript" src="<{'jquery-1.9.1.min.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<{include file="top.html"}>
+<{include file="menu.html"}>
+<script type="text/javascript">
+$(function(){
+	$("#list tr:odd").addClass('listtd');
+});
+</script>
+<style>
+#toubang{ height:100px; width:980px; margin:0 auto 30px auto; text-align:left;border:1px solid #ccc; padding:10px; background:#f9f9f9; display:none;}
+#toubang dl{ float:left; width:80px; text-align:center; padding:0 10px;}
+#toubang dl dt{}
+#toubang dl dt img{ width:45px; height:45px; line-height:45px;padding:3px;border-radius:45px;}
+#toubang dl dd{ margin:0 10px;padding:0 0 5px 0;}
+toubang dl dd p{ line-height:24px; height:24px;}
+</style>
+<body>
+<!--center start-->
+<div class="Center">
+  <div style="padding:20px 0 0 0;">
+    <div id="toubang"> <{foreach from=$topranks item=item key=key}>
+      <dl>
+        <dt><img src="<{if $users[$item.u_id].u_img}><{$users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"></dt>
+        <dd>
+
+          <p style="color:#777;"><{$item.prize}></p>
+        </dd>
+      </dl>
+      <{/foreach}> </div>
+    <div class="phangC">
+      <div class="phangCtab">
+        <ul>
+          <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/paihang.php?type=1" <{if $type==1}>class="active"<{/if}>>周排行</a></li>
+          <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/paihang.php?type=2" <{if $type==2}>class="active"<{/if}>>月排行</a></li>
+          <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/paihang.php?type=6" <{if $type==6}>class="active"<{/if}>>跟单排行</a></li>
+          <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/paihang.php?type=5" <{if $type==5}>class="active"<{/if}>>总排行</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="paihanglist">
+      <dl>
+        <dd class="first"><span style="position:relative;left:-15px;">排名</span></dd>
+        <dd class="three">姓名</dd>
+        <dd class="four">升降<a class="tooltips" href="#tooltips"><img src="http://www.zhiying365365.com/www/statics/i/question.png"><span>用户排名的升降规则为开奖之后，依照用户的中奖情况而做出的升降。</span></a></dd>
+        <dd class="eight">注册日期</dd>
+        <dd class="five">积分<a class="tooltips" href="#tooltips"><img src="http://www.zhiying365365.com/www/statics/i/question.png"><span>各位会员，积分是智赢网回馈用户的一种方式，积分可用于虚拟投注中超或CBA，并可以兑换彩金！</span></a></dd>
+        <dd class="six" style="text-align:right;">累积中奖</dd>
+      </dl>
+      <div class="clear"></div>
+      <table width="1000" border="0" cellspacing="0" cellpadding="0" id="list">
+        <{foreach from=$paihangtopranks item=item key=key}>
+        <tr>
+          <td><div class="paiming"><b><{$item.rank}></b></div></td>
+          <td><div class="phname"><img src="<{if $users[$item.u_id].u_img}><{$users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"><b><{$users[$item.u_id].u_name}></b><{if $item.up_down >0 }><span>&uarr;</span><{/if}><{if $item.up_down <0}><em>&darr;</em><{/if}></div></td>
+          <td style="color:#777;"><{$users[$item.u_id].u_jointime}></td>
+          <td><div class="jifen"><{$userAccountInfos[$item.u_id].score}></div></td>
+          <td style="text-align:right"><{*$all_prize_info[$item.u_id].prize*}><{$item.prize}>元</td>
+          <{*该用户的中奖总排行*}>
+          <td><div class="dengji"><img src=""></div></td>
+        </tr>
+        <{/foreach}> 
+        <{foreach from=$ranks item=item key=key}>
+        <tr>
+          <td><div class="paiming"><strong><{$item.rank}></strong></div></td>
+          <td><div class="phname"><img src="<{if $users[$item.u_id].u_img}><{$users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"><b><{$users[$item.u_id].u_name}></b><{if $item.up_down >0 }><span>&uarr;</span><{/if}><{if $item.up_down <0}><em>&darr;</em><{/if}></div></td>
+          <td><{$users[$item.u_id].u_jointime}></td>
+          <td><div class="jifen"><{$userAccountInfos[$item.u_id].score}></div></td>
+          <td width="150" style="text-align:right"><div class="jiangjin"><{*$all_prize_info[$item.u_id].prize*}><{$item.prize}>元</div></td>
+          <{*该用户的中奖总排行*}>
+          <td><div class="dengji"><img src=""></div></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <div class="sharepages">
+      <div align="center"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> <{/if}> </div>
+    </div>
+  </div>
+</div>
+<{include file="foot.html"}>
+</body>
+</html>

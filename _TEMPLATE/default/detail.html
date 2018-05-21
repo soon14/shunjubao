@@ -1,0 +1,178 @@
+<{include file="header.html"}>
+<link href="<{'confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<{include file="top.html"}>
+<{include file="menu.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$(".mx").click(function(){
+		$(".chai").hide();
+		var typeId = $(this).attr('typeId');
+		var obj = $("#"+typeId);
+		if (obj.css('display') == 'none') {
+			obj.show();
+		}
+	});
+});
+</script>
+<!--center start-->
+<div class="center">
+  <div class="BitCenter">
+    <div class="ConfirmationTz">
+      <div class="querenguoguan">
+        <h3><b>|</b><strong>投注详情</strong>
+          <p>过关方式：<span><{foreach from=$return.select item=item key=key}><{$item}>;<{/foreach}></span><span>倍数：<{$return.multiple}>倍</span><span>方案总金额：</span><em><{$return.money}>元</em></p>
+        </h3>
+        <div id="touzhuchack">
+          <table class="hackermx" border="0" cellpadding="0" cellspacing="0" style="width:958px;">
+            <tr>
+              <th>赛事编号</th>
+              <th>对阵</th>
+              <th>您的选项</th>
+              <th>最小赔率</th>
+              <th style="border-right:1px solid #545454;">最大赔率</th>
+            </tr>
+            <{foreach from=$return.matchInfo item=item key=key}>
+            <tr>
+              <td><{$item.num}></td>
+              <td><{if $return.sport == 'bk'}>
+                <div class="XinagQingL"><em><{$item.a_cn}></em><span>VS</span><em><{$item.h_cn}></em></div>
+                <{else}>
+                <div class="XinagQingL"><em><{$item.h_cn}></em><span>VS</span><em><{$item.a_cn}></em></div>
+                <{/if}></td>
+              <td class="x5"><p><{foreach from=$item.options item=item1 key=key1}><{$item1}><{/foreach}></p></td>
+              <td><{$return.spInfo[$key].min_sp}></td>
+              <td style="border-right:none;"><{$return.spInfo[$key].max_sp}></td>
+            </tr>
+            <{/foreach}>
+          </table>
+        </div>
+      </div>
+      <!--投注确认过关方式 start-->
+      <div class="querenguoguan">
+        <h3><b>|</b><strong>方案明细</strong></h3>
+        <div id="touzhuchack">
+          <table class="hackermx" border="0" cellpadding="0" cellspacing="0" style="width:958px;">
+            <tr>
+              <th width="80">命中场数</th>
+              <th><div class="zJbox" id="zJbox" style="height:26px; line-height:26px;">
+                  <p><{foreach from=$return.select item=item key=key}><strong><{$item}></strong><{/foreach}></p>
+                </div></th>
+              <th width="80">倍数</th>
+              <th width="350" style="border-right:1px solid #6f6f6f;"><div class="zjjbox">
+                  <ul class="show">
+                    <li>最小</li>
+                    <li><u style="padding:0 50px; text-decoration:none;">奖金范围</u></li>
+                    <li>最大</li>
+                  </ul>
+                </div></th>
+            </tr>
+            <{foreach from=$return.detail item=item key=key}>
+            <tr>
+              <td valign="middle"><{$key}></td>
+              <td valign="middle"><div class="zCji">
+                  <p><{foreach from=$return.select item=item1 key=key1}><strong><{$item[$item1].hit_num}></strong><{/foreach}></p>
+                </div></td>
+              <td valign="middle"><{$return.multiple}></td>
+              <td valign="middle" style="border-right:none;"><div class="zCjilist">
+                  <ul>
+                    <li class="first"><strong><{$item.min_money}></strong></li>
+                    <li><a href="javascript:void(0);" class="mx" typeId="min_<{$key}>">明细</a></li>
+                    <li class="show"><strong><{$item.max_money}></strong></li>
+                    <li><a href="javascript:void(0);"class="mx" typeId="max_<{$key}>">明细</a></li>
+                  </ul>
+                </div></td>
+            </tr>
+            <{/foreach}>
+          </table>
+          <div class="chai_detail"> <{*最小情况*}>
+            <{foreach from=$return.detail item=item key=key}>
+            <table class="hacker chai none" id="min_<{$key}>" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <th class="">过关方式</th>
+                <th class="">中奖注数</th>
+                <th class="">中奖明细(最小)</th>
+                <th class="" style="border-right:1px solid #545454;">奖金</th>
+              </tr>
+              <{assign var=zhushu value=0}>
+              <{assign var=total_sum value=0}>
+              <{foreach from=$return.select item=item1 key=key1}>
+              <{assign var=col_sum value=0}><{*每行的总和*}>
+              <{if $item[$item1].hit_num >0}>
+              <tr>
+                <td class="cwhite"><span style="color:#0B7A01; font-size:14px;"><{$item1}></span></td>
+                <{assign var=zhushu value=$zhushu+$item[$item1].hit_num}>
+                <td class="cwhite"><{$item[$item1].hit_num}>注</td>
+                <td class="cwhite"><div class="jjMingxi"> <{foreach from=$item[$item1].prize_detail_min item=item2 key=key2}>
+                    <{assign var=zhu_money value=$return.multiple*2}><{*每注的总和*}>
+                    <{if $return.sport=='bd'}><{assign var=zhu_money value=$zhu_money*0.65}><{/if}>
+                    <p> <{foreach from=$item2 item=item3 key=key3}>
+                      <{assign var=zhu_money value=$zhu_money*$item3}>
+                      <{$item3}>x
+                      <{/foreach}>
+                      2x<{$return.multiple}>倍<{if $return.sport=='bd'}>x65%<{/if}>=<b><{$zhu_money|convertToMoney}></b> <{assign var=col_sum value=$col_sum+$zhu_money}> </p>
+                    <{/foreach}> </div></td>
+                <{assign var=total_sum value=$total_sum+$col_sum}>
+                <td class="cwhite" style="border-right:none;"><div class="jjMingxi"><strong><{$item[$item1].prize_detail_min_money}>元</strong></div></td>
+              </tr>
+              <{/if}>
+              <{/foreach}>
+              <tr>
+                <td  colspan="4" class="cwhite" align="right"; style="padding:0 50px 0 0;border-right:1px solid #fff;">合计&nbsp;<span><{$zhushu}>注</span><strong style="font-size:12px;color:#dc0000;font-weight:300;">&nbsp;<{$item.min_money}>元</strong></td>
+              </tr>
+            </table>
+            <{/foreach}>
+            
+            <{*最大情况*}>
+            <{foreach from=$return.detail item=item key=key}>
+            <table class="hacker chai none" id="max_<{$key}>" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <th class="">过关方式</th>
+                <th class="">中奖注数</th>
+                <th class="">中奖明细(最大)</th>
+                <th class="" style="border-right:1px solid #545454;">奖金</th>
+              </tr>
+              <{assign var=zhushu value=0}>
+              <{assign var=total_sum value=0}>
+              <{foreach from=$return.select item=item1 key=key1}>
+              <{assign var=col_sum value=0}><{*每行的总和*}>
+              <{if $item[$item1].hit_num >0}>
+              <tr>
+                <td class="cwhite"><span style="color:#0B7A01; font-size:14px;"><{$item1}></span></td>
+                <{assign var=zhushu value=$zhushu+$item[$item1].hit_num}>
+                <td class="cwhite"><{$item[$item1].hit_num}>注</td>
+                <td class="cwhite"><div class="jjMingxi"> <{foreach from=$item[$item1].prize_detail_max item=item2 key=key2}>
+                    <{assign var=zhu_money value=$return.multiple*2}><{*每注的总和*}>
+                    <{if $return.sport=='bd'}><{assign var=zhu_money value=$zhu_money*0.65}><{/if}>
+                    <p> <{foreach from=$item2 item=item3 key=key3}>
+                      <{assign var=zhu_money value=$zhu_money*$item3}>
+                      <{$item3}>x
+                      <{/foreach}>
+                      2x<{$return.multiple}>倍<{if $return.sport=='bd'}>x65%<{/if}>=<b>&nbsp;<{$zhu_money|convertToMoney}></b> <{assign var=col_sum value=$col_sum+$zhu_money}> </p>
+                    <{/foreach}> </div></td>
+                <{assign var=total_sum value=$total_sum+$col_sum}>
+                <td class="cwhite" style="border-right:none;"><div class="jjMingxi"><strong>&nbsp;<{$item[$item1].prize_detail_max_money}>元</strong></div></td>
+              </tr>
+              <{/if}>
+              <{/foreach}>
+              <tr>
+                <td  colspan="4" class="cwhite" align="right"; style="padding:0 50px 0 0;border-right:1px solid #fff;">合计<{$zhushu}>注<strong style="font-size:12px;color:#dc0000;font-weight:300;">&nbsp;<{$item.max_money}>元</strong></td>
+              </tr>
+            </table>
+            <{/foreach}> </div>
+          <div class="zhu"><span>注：</span>
+            <p> <{if $return.sport == 'bd'}>
+              奖金评测的为北单即时奖金指数，最终实际奖金按照北单官方给定的指数计算，仅供参考。
+              <{else}>
+              奖金评测的为即时竞彩奖金指数，仅供参考；最终实际奖金请按照出票后票样中的指数计算。<br/>
+              该奖金评测计算中已包含单一玩法的奖金，仅供参考。
+              <{/if}> </p>
+          </div>
+        </div>
+      </div>
+      <!--投注确认过关方式 end-->
+    </div>
+  </div>
+  <!--确认投注center end-->
+</div>
+<{include file="foot.html"}> 

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>定制用户</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style></head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="16">
+<div align="left">
+       <strong><span style="color:#FF0000"><span class="STYLE1">已定制用户列表</span></span>,<span style="color:red">被</span>定制用户帐号</strong>:
+         <input name="follow_name" id="follow_name" value="<!--{$follow_name}-->" size="8"/>,
+    <strong>定制用户帐号</strong>:
+         <input name="u_name" id="u_name" value="<!--{$u_name}-->" size="8"/>
+          ，定制日期 <input name="s_date" type="text" class="Wdate" id="s_date"  onFocus="var e_date=$dp.$('e_date');WdatePicker({onpicked:function(){e_date.focus();},maxDate:'#F{$dp.$D(\'e_date\')}'})" value="<!--{$s_date}-->" size="10"/>
+          至
+          <input name="e_date" type="text" value="<!--{$e_date}-->" class="Wdate" id="e_date" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'s_date\')}'})" size="10"/>
+         ，状态
+          <select name="status" id="status">
+			<option value="0">请选择</option>
+         	 <option value="1" <!--{if $status==1}-->  selected="selected" <!--{/if}-->>成功</option>
+              <option value="2" <!--{if $status==2}-->  selected="selected" <!--{/if}-->>失败</option>
+          </select>
+          <input name="spage" type="hidden" id="spage" value="1" />
+      <input type="submit" name="Submit" value=" 搜 索 " /></div>	</td>
+  </tr>
+ 
+  <tr bgcolor="#F7F7F7">
+  	<td width="72"><div align="center"><STRONG>系统ID</STRONG></div></td>
+    <td bgcolor="#F7F7F7"><div align="center">被定制用户</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制用户</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制周期</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制倍数</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">返点数</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">开始时间</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">截止时间</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">添加时间</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">当前状态</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">成功跟注</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">跟注金额</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">中奖金额</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">跟注失败</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">错失金额</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+  	<td width="72"><div align="center"><!--{$datalist[a].id}--></div></td>
+    <td><div align="center"><!--{$datalist[a].follow_id|show_post_member}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].u_name}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].cycle_show}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].multiple}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].rebate}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].start_time}--></div></td>
+    <td><div align="center"><!--{$datalist[a].end_time}--></div></td>
+    <td><div align="center"><!--{$datalist[a].create_time}--></div></td>
+    <td><div align="center"><!--{$datalist[a].status_show}--></div></td>
+    <td><div align="center"><!--{$datalist[a].suc_nums}--></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"><!--{$datalist[a].ticket_prize}--></div></td>
+    <td><div align="center"><!--{$datalist[a].miss_nums}--></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"> 
+    <!--{if $datalist[a].enable==1}-->
+    
+    <!--{if $datalist[a].status==1}-->
+      [<a href="<!--{$datalist[a].filename}-->?action=update&id=<!--{$datalist[a].id}-->&status=2}-->" >点击退订</a>]
+      <!--{else}-->
+      [<a href="<!--{$datalist[a].filename}-->?action=update&id=<!--{$datalist[a].id}-->&status=1}-->" >点击续订</a>]
+      <!--{/if}-->
+      <!--{/if}--> 
+     </div>
+    </td>
+    </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+    <td colspan="16"><div align="center">每页<font color="#FF0000"> 
+      <!--{ $pageSize }-->
+      </font>条 共<font color="#FF0000">
+        <!--{ $page }--> 
+        </font>页  共<font color="#FF0000">
+          <!--{ $totalRecord }--> 
+          </font>条记录
+      <!--{ $multi }-->
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="height:30px;">
+    <td colspan="16"><div align="center"></div></td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>

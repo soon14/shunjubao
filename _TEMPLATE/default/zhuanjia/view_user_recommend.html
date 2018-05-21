@@ -1,0 +1,37 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<!--订阅我的 start-->
+<div class="UserRight" style="font-size:12px;">
+  <h3>订阅我的<span><a href="<{$smarty.const.ROOT_DOMAIN}>/zhuanjia/user_recommend.php?action=add" target="rightFrame" >增加方案</a></span></h3>
+  <div class="URcenter" style="border:none;" >
+    <div class="tabpading">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="4" style="font-size:12px;">
+        <tr>
+          <th>订阅时间</th>
+          <th> 金额</th>
+          <th>订阅类型</th>
+          <th>订阅人</th>
+        </tr>
+        <{section name=a loop=$datalist}>
+        <tr>
+          <td class="show" style="font-size:12px;"><{$datalist[a].addtime}></td>
+          <td class="show" style="font-size:12px;"><{$datalist[a].booking_money}>元</td>
+          <td class="show" style="font-size:12px;"><{$datalist[a].booktype_status}></td>
+          <td class="show" style="font-size:12px;"><{$datalist[a].u_name}></td>
+        </tr>
+        <{/section}>
+        <tr>
+          <td colspan="4" class="show" align="center" style="font-size:12px;">订阅总金额：<{$booking_money}>元 </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="sharepages">
+    <div align="center"><{ $multi }></div>
+  </div>
+</div>
+<!--订阅我的 end-->
+</body>
+</html>

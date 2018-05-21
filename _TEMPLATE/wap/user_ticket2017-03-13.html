@@ -1,0 +1,368 @@
+<div id="fade" class="black_overlay"></div>
+<{include file="header.html"}>
+<style>
+.black_overlay{display:none;background-color:#999;width:100%;height:100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+
+
+.black_overla{display:none;background-color:#999;width:100%;height:100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+
+.white_content{display:none;left:0%;/*FF IE7*/
+top:0;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/}
+
+
+.white_conten{display:none;left:0%;/*FF IE7*/
+top:0;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/background:#000;opacity:0.9;filter:alpha(opacity=90);height:100%;}
+.white_conten h1{ height:50px;line-height:50px;}
+.white_conten h1 a{}
+.white_conten h1 a:hover{}
+.white_conten dl{display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:middle;text-align:center;}
+.white_conten dl dt img {}
+.white_conten dl dd{color:#fff;margin:0 auto;text-align:left;padding:20px 0 0 0;font-size:14px;}
+.white_conten dl dd span{color:#666;font-size:12px;float:right;}
+.MSCenter{border:2px solid #888;width:94%;height:100%;margin:0 auto;text-align:left;background:#fff;padding:10px;position:relative;margin:0 auto auto auto; text-align:left;}
+.MSCenter h1{font-size:18px;font-weight:900;font-family:'微软雅黑';border-bottom:1px solid #ccc;height:40px;line-height:40px;position:relative; padding:0 0 10px 0; margin:0 5px;}
+.MSCenter h1 a{padding:0 0 0 10px;position:absolute;right:10px;top:0;color:#565656;font-size:14px;color:#dc0000;}
+.MSCenter h2{font-size:12px;font-weight:300;font-family:'';height:24px;line-height:24px;text-align:center;background:#ccc;position:absolute;left:0;bottom:0;display:block;width:100%;color:#999;}
+.sdanopenwindows{}
+.sdanopenwindows h4{ height:40px; line-height:40px; font-weight:300; font-size:12px; padding:20px 0 0 28px;}
+.sdanopenwindows h4 strong{ font-size:14px; font-weight:900;color:#dc0000;}
+.sdanopenwindows ul li.sub{padding:15px 0 0 45px;}
+.sdanopenwindows ul li.sub input{border:none;background:#CE050B;color:#fff;width:234px;height:38px;line-height:38px;text-align:center;font-size:16px;font-weight:900;cursor:pointer;font-family:'微软雅黑';display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.sdanopenwindows dl{ padding:10px 5px;}
+.sdanopenwindows dl.tips{ padding:5px 10px;color:#777; clear:both; text-align:left;}
+.sdanopenwindows dl.tips span{ font-size:14px; font-weight:900;color:red; position:relative;top:3px;}
+.sdanopenwindows dl dt{ font-size:16px; height:50px; line-height:50px; font-weight:900;}
+.sdanopenwindows dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline; font-size:14px; font-size:12px;}
+.sdanopenwindows dl dd.text{ padding:15px 0 5px 0;}
+.sdanopenwindows dl dd.text input{ width:150px; height:26px; line-height:26px; text-align:center;}
+.sdanopenwindows dl dd input{ position:relative;top:1px;}
+.sdanopenwindows dl dd.sub{ margin:55px 0 150px 0;background:#CE050B; width:100%; height:38px; line-height:38px;display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.sdanopenwindows dl dd.sub input{border:none; background:none;color:#fff;height:36px;line-height:36px;text-align:center;font-weight:900;cursor:pointer;font-family:'微软雅黑';display:inline-table;display:inline-block;zoom:1;*display:inline; width:100%; font-size:18px; letter-spacing:3px;}
+</style>
+</head><body>
+<{include file="top.html"}>
+<div class="ustitle">
+  <h1><em>投注记录<b></b><i></i></em></h1>
+</div>
+<script type="text/javascript">
+TMJF(function($) {
+	//(window.parent.document).find("#main").load(function(){
+		//var main = $(window.parent.document).find("#main");
+		//var thisheight = $(document).height()+30;
+		//main.height(thisheight);
+	//});
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td>'+ k +'</td>';
+                    		html += '<td>'+ ticketInfo[i].num +'</td>';
+                    		html += '<td>'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td>'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td>'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td>'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td>'+ option_html +'</td>';
+                    		html += '<td>'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	});
+	$(".add_show_ticket").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+	
+	$(".add_show_ticket2").click(function(){
+		$("#add_show_ticket2").val($(this).attr('userTicketId'));
+		$("#light1").show();
+		$("#fade").show();
+		return ;
+	});
+	$(".show_ticket_cancel").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket_cancel'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+});
+
+function mysd(){
+	var userTicketId = $("#add_show_ticket2").val();
+
+	var show_range = $('input[name="show_range"]:checked').val();//显示人群
+	var pay_rate = $('input[name="pay_rate"]:checked').val();//分成比例
+	
+	
+		$.post(Domain + '/operate.php'
+                , {id: userTicketId,show_range: show_range,pay_rate: pay_rate,
+					operate:'show_ticket'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+						$("#light1").hide();
+						$("#fade").hide();
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );	
+	
+}
+
+</script>
+<!--投注记录 start-->
+<div class="usTips">
+  <p><strong>总中奖额度<{if $totalPrize}><{$totalPrize}><{else}>0.00<{/if}>元</strong></p>
+</div>
+<div>
+  <form method="post">
+    <div class="timechaxun">
+      <ul>
+        <li>
+          <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+          &nbsp;- </li>
+        <li>
+          <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+        </li>
+        <li>
+          <input type="submit" name="" class="TMchaxun" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <div class="boldtxt">
+      <table width="99%" border="0"  cellpadding="0" cellspacing="0">
+        <tr>
+          <th>方案类型</th>
+          <th>总金额</th>
+          <!--<th>倍数</th>-->
+          <th>状态</th>
+          <th>奖金</th>
+          <th>&nbsp;详情&nbsp;</th>
+          <{if $can_show_ticket}>
+          <th align="center" >&nbsp;操作&nbsp;</th>
+          <{/if}> </tr>
+        <{assign var=trade_money_in value=0}>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <{assign var=trade_money_in value=$userTicket.money+$trade_money_in}>
+        <tr>
+          <td style="position:relative;"><{if $userTicket.partent_id}>
+            <div class="gendan">跟</div>
+            <{/if}>
+            <div class="stype"><{$userTicket.sport|getPoolDesc:$userTicket.pool}></div></td>
+          <td><{$userTicket.money}></td>
+          <!--<td><{$userTicket.multiple}></td>-->
+          <td><{if $userTicket.print_state == 1}>
+            已出票
+            <{*$userTicketPrintStateDesc[$userTicket.print_state].desc*}> 
+            <{elseif $userTicket.print_state == 3}>
+            未出票
+            <{elseif $userTicket.print_state == 8}>
+            失败退款
+            <{else}>
+            出票中
+            <{/if}></td>
+          <td><div class="jiesuancaozuo"> <{if $userTicket.prize_state == 1}> <b style="color:#fff;">奖</b><{$userTicket.prize}>
+              <{else}> <strong class=""> <{if $userTicket.prize_state}>
+              <{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}>
+              <{else}>
+              未开奖
+              <{/if}> </strong> <{/if}> </div></td>
+          <td class="show_details1"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/ticket.php?userTicketId=<{$userTicket.id}>" userTicketId="<{$userTicket.id}>">详情</a></td>
+          <{if $can_show_ticket}>
+          <{if $userTicket.combination_type==1}>
+          <td align="center"><div class="yishai"><a href="javascript::void(0);" style="color:#333" class="show_ticket_cancel1" userTicketId="<{$userTicket.id}>">已晒</a></div></td>
+          <{else}>
+          <td align="center"><div class="caozuo">
+          <{if $userTicket.partent_id==0}>
+            <a href="javascript::void(0);" class="add_show_ticket2" userTicketId="<{$userTicket.id}>"><img src="http://www.zhiying365365.com/www/statics/i/shai.gif"></a>  <{/if}>
+          <{if $userTicket.u_id==3084 || $userTicket.u_id==1 || $userTicket.u_id==15510 || $userTicket.u_id==457}> <{else}><!-- <a href="javascript::void(0);" class="add_show_ticket" userTicketId="<{$userTicket.id}>"><img src="http://www.zhiying365365.com/www/statics/i/shai.gif"></a>--> <{/if}> </div></td>
+          <{/if}>
+          
+          <{/if}> </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <div> <{if $previousUrl || $nextUrl}>
+      <div class="pages" style="border-bottom:none;"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> <{/if}> </div>
+      <{/if}> </div>
+    <div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录智赢网站进行查询！</div>
+  </div>
+</div>
+<div id="light1" class="white_content">
+  <div class="MSCenter">
+    <h1>晒单设置<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+    <div class="sdanopenwindows">
+      <dl>
+        <dt>权限设置：</dt>
+        <dd>
+          <input type="radio" name="show_range" value="1" checked>
+          所有人可见</dd>
+        <dd>
+          <input type="radio" name="show_range" value="2">
+          跟单人可见</dd>
+        <dd>
+        <input type="radio" name="show_range" value="3">
+        方案截止后可见
+        </dd>  
+      </dl>
+      <dl>
+        <dt>提成比例：</dt>
+        <dd>
+          <input type="radio" name="pay_rate" value="0" checked>
+          无</dd>
+        <dd>
+          <input type="radio" name="pay_rate" value="1">
+          1%</dd>
+        <dd>
+          <input type="radio" name="pay_rate" value="2">
+          2%</dd>
+        <dd>
+          <input type="radio" name="pay_rate" value="3">
+          3%</dd>
+        <dd>
+          <input type="radio" name="pay_rate" value="4">
+          4%</dd>
+        <dd>
+          <input type="radio" name="pay_rate" value="5">
+          5%</dd>
+      </dl>
+	  
+      <dl class="tips">
+        <dd><span>*</span><strong>温馨提示：</strong>提成比例指用户进行跟单后，方案中奖，需要扣除对应的比例给到晒单人。中奖奖金（指的是中奖额度-投注本金）！</dd>
+      </dl>
+      <dl>
+        <dd class="sub">
+          <input id="add_show_ticket2" type="hidden" value="">
+          <input type="button" name="sd" value="提交" id="sd"  onClick="return mysd()">
+        </dd>
+      </dl>
+    </div>
+    <h2>智赢晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
+  </div>
+</div>
+<!--投注记录 end-->
+<{include file="../wap/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	    //if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	    //}
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(root_domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td class="show">'+ k +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].num +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].spool +'</td>';
+                    		
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		
+                    		var red = option['red'];//中奖
+                    		var black = option['black'];//未中奖
+                    		var empty = option['empty'];//无赛果
+                    		
+                    		if (red) {
+                    			for(var key in red) {
+                        				option_html += '&nbsp;<font color="red">'+red[key] +'</font>&nbsp;';
+                        		}
+                    		}
+                    		if (black) {
+                    			for(var key in black) {
+                        				option_html += '&nbsp;' + black[key] + '&nbsp;';
+                        		}
+                    		}
+                    		if (empty) {
+                    			for(var key in empty) {
+                        				option_html += '&nbsp;' + empty[key] + '&nbsp;';
+                        		}
+                    		}
+                    		
+                    		html += '<td class="show">'+ option_html +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	})
+});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+<{*
+<form method="post">
+<div class="timechaxun" style="height:45px;">
+  <ul>
+  <li>用户名
+      <input type="text" name="user_name" id="user_name" value="<{$user_name}>">
+    </li>
+    <li>玩法：
+      <select name='pool' id='pool' >
+       <option value="all" selected>全部玩法</option>
+      <{foreach from=$sportAndPoolDesc item=item key=key}>
+      <option value="<{$key}>" <{if $pool==$key}> selected <{/if}> ><{$item.desc}></option>
+      <{/foreach}>
+      </select>
+    出票状态：
+       <select name='print_state' id='print_state' >
+      <option value="all" selected>全部状态</option>
+      <{foreach from=$userTicketPrintStateDesc item=item key=key}>
+      <{if $key}>
+      <option value="<{$key}>" <{if $print_state==$key}> selected <{/if}> ><{$item.desc}></option>
+      <{else}>
+      <option value="<{$key}>" <{if !$print_state}> selected <{/if}> ><{$item.desc}></option>
+      <{/if}>
+      <{/foreach}>
+      </select>
+   中奖状态：
+       <select name='prize_state' id='prize_state' >
+      <option value="all" <{if $prize_state=='all'}> selected <{/if}> >全部状态</option>
+       <{foreach from=$userTicketPrizeStateDesc item=item key=key}>
+       <{if $key}>
+       <option value="<{$key}>" <{if $prize_state==$key}>selected<{/if}> ><{$item.desc}></option>
+       <{else}>
+       <option value="<{$key}>" <{if !$prize_state}> selected <{/if}> ><{$item.desc}></option>
+      <{/if}>
+      <{/foreach}>
+      </select>
+    开始时间：
+      <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+    结束时间：
+      <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+   
+      <input type="submit" name="" value="查询">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+*}>
+<div>
+  <h2>
+  <b>●</b>订单信息-用户：<{$userInfo.u_name}>(uid:<{$userInfo.u_id}>)</h2>
+  <table class="" width="20%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="overflow:hidden;">
+      <tbody>
+        <tr>
+        	<{foreach from=$total item=item key=key}><td><{$key}></td><{/foreach}>
+        </tr>
+        <tr>
+        	<{foreach from=$total item=item key=key}><td><{$item}></td><{/foreach}>
+        </tr>
+        </tbody>
+  </table>
+        
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td>序号</td>
+          <td>订单号</td>
+          <td>彩种</td>
+          <td>串关方式</td>
+          <td>总金额</td>
+          <td>倍数</td>
+          <td>出票状态</td>
+          <td>出票方</td>
+          <td>中奖信息</td>
+          <td>认购时间</td>
+          <td>备注(票号或出错信息)</td>
+          <{*<td>方案详情</td>*}>
+        </tr>
+        <{foreach from=$orderTickets item=userTicket name=ticket}>
+        <tr <{if $smarty.foreach.ticket.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <td class="show"><{$smarty.foreach.ticket.iteration}></td>
+        <td class="show"><{if $userTicket.return_id}><{$userTicket.return_id}><{else}><{$userTicket.ticket_id}>(<{$userTicket.id}>)<{/if}></td>
+          <td class="show"><{$userTicket.sport|getPoolDesc:$userTicket.pool}></td>
+          <td class="show"><{$userTicket.select}></td>
+          <td class="show">￥<{$userTicket.money}>元</td>
+          <td class="show"><{$userTicket.multiple}></td>
+          <td class="show">
+          <{$userTicketPrintStateDesc[$userTicket.print_state].desc}>
+          </td>
+          <td class="show">
+          <{$ticketCompanyDesc[$userTicket.company_id].desc}>
+          </td>
+          <td class="show">
+	          <div class="jiesuancaozuo">
+		          <{if $userTicket.prize_state == 1}>
+		          	<b>中奖</b>&nbsp;￥<{$userTicket.prize}>元&nbsp;
+		          <{else}>
+		          		<strong class=""><{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}></strong>
+		          <{/if}>
+	          </div>
+          </td>
+          <td class="show"><{$userTicket.datetime}></td>
+          <td><{$userTicket.return_str}></td>
+          <{*<td class="show"><{$userTicket.combination}><a href="javascript:void(0);" class="show_details" userTicketId="<{$userTicket.id}>">情</a></td>*}>
+        </tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+    <{if $previousUrl || $nextUrl}>
+		<div class="pageC">
+		<div class="pages">
+		<{if $previousUrl}>
+		<a href="<{$previousUrl}>">上页</a>
+		<{/if}>
+		<{if $nextUrl}>
+		<a href="<{$nextUrl}>">下页</a>
+		<{/if}>
+		</div>
+		</div>
+	<{/if}>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

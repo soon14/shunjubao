@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<title><{$TEMPLATE.title}></title>
+<meta name="keywords" content="<{$TEMPLATE.keywords}>" />
+<meta name="description" content="<{$TEMPLATE.description}>" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="<{'header.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'footer.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3430318831" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="<{'navigator.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery-1.9.1.min.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'float.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'winmac.js'|getStaticsUrl}>"></script>
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "<{$smarty.const.STATICS_BASE_URL}>/i"
+    	, domain: "<{$smarty.const.ROOT_DOMAIN}>"
+};
+</script>
+<script language="javascript" src="<{'common.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'pms.js'|getStaticsUrl}>"></script>
+<link rel="shortcut icon" href="<{$smarty.const.STATICS_BASE_URL}>/i/zy.icon" type="image/x-icon" />
+</head>
+<{include file="top.html"}>
+<link href="<{'confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script language="javascript">
+window.onload=function showtable(){
+var tablename=document.getElementById("hacker");
+var li=tablename.getElementsByTagName("tr");
+for (var i=0;i<=li.length;i++){
+if (i%2==0){
+li[i].style.backgroundColor="#f1f1f1";
+}else li[i].style.backgroundColor="#fff";
+}
+}
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var org_details_html = $("#detail_tr").html();
+		var html = '';
+		<{if $endtime_forbin!=1}>
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: <{$userTicketInfo.id}>
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td valign="middle" class="x1">'+ k +'</td>';
+                    		html += '<td valign="middle" class="x2">'+ ticketInfo[i].show_num +'</td>';
+                    		html += '<td valign="middle" class="x3">'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td valign="middle" class="x4"><div class="XinagQingL"><b>';
+                    		if (ticketInfo[i].sport == 'bk') {
+                    			html += ticketInfo[i].a_cn +'</b><span>VS</span><b>'+ ticketInfo[i].h_cn;
+                    		} else {
+                    			html += ticketInfo[i].h_cn +'</b><span>VS</span><b>'+ ticketInfo[i].a_cn;
+                    		}                   		
+                    		html += '</b></div></td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+							var prize_html = '<div class="zhuangTai"><b class="">未开奖</b></div>';
+                    		
+                    		var isPrize = false;//是否有中奖
+                			var isNotPirze = true;//是否全不中
+                			
+                    		var red = option['red'];//中奖
+                    		var black = option['black'];//未中奖
+                    		var empty = option['empty'];//无赛果
+                    		
+                    		if (red) {
+                    			isPrize = true;
+                    			isNotPirze = false;
+                    			for(var key in red) {
+                        				option_html += '&nbsp;<em style="font-style:normal;color:#dc0000;">'+red[key] +'</em>&nbsp;';
+                        		}
+                    		}
+                    		if (black) {
+                    			for(var key in black) {
+                        				option_html += '&nbsp;' + black[key] + '&nbsp;';
+                        		}
+                    		}
+                    		if (empty) {
+                    			isNotPirze = false;
+                    			for(var key in empty) {
+                        				option_html += '&nbsp;' + empty[key] + '&nbsp;';
+                        		}
+                    		}
+                    		
+                    		if (isPrize) {
+                    			prize_html = '<div class="zhuangTai"><strong><span>奖</span></strong></div>';
+                    		}
+                    		if (isNotPirze) {
+                    			prize_html = '<div class="zhuangTai"><b class="">未中奖</b></div>';
+                    		}
+                    		if (ticketInfo[i].matchstate == 3) {
+                    			prize_html = '<div class="zhuangTai"><b class="">取消</b></div>';
+                    		}
+                    		if (ticketInfo[i].matchstate == 2) {
+                    			prize_html = '<div class="zhuangTai"><b class="">推迟</b></div>';
+                    		}
+                    		html += '<td valign="middle" class="x5"><div>'+ option_html +'</div></td>';
+                    		
+                    		if (ticketInfo[i].matchstate == 3 || ticketInfo[i].matchstate == 2) {
+                    			html += '<td valign="middle" class="x6"><div class="wAnfa"><b><span></span>'+ ticketInfo[i].results +'</b></div></td>';
+                    		} else {
+                    			html += '<td valign="middle" class="x6"><div class="wAnfa"><b><u><span></span>'+ ticketInfo[i].results +'</u></b></div></td>';
+                    		}
+                    		
+                    		if (ticketInfo[i].pool != 'SF') {
+                    			//胜负玩法不显示比分
+                    			html += '<td valign="middle" class="x7">'+ticketInfo[i].score+'</td>';
+                    		}
+                    		
+                    		html += '<td valign="middle" class="x8" style="border-right:none;">'+ prize_html +'</td>';
+                    		html += '</tr>'
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    } 
+                }
+
+
+                , 'json'
+            );
+		<{else}>
+		
+			html += '<tr>';
+			html += '<td  valign="middle"  colspan="7"  >方案在投注截止后可看!</td>';
+			html += '</tr>'
+			$("#detail_tr").html(org_details_html + html);	
+		<{/if}>	
+		//理论最高奖金
+		var prize_state = '<{$userTicketInfo.prize_state}>';
+		if(prize_state==0) {
+			$.post(Domain + '/ticket/detail.php'
+	                , {userTicketId: <{$userTicketInfo.id}>,
+	                type:'json'
+	                  }
+	                , function(data) {
+	                	if(data.ok) {
+	                		for(var key in data.msg.detail) {
+	                			var first_html = '<span>理论奖金：</span><strong>&yen;'+data.msg.detail[key].max_money+'</strong>';
+		                		$("#ticket_prize").html(first_html);
+		                		//break;
+	                		}
+	                	}
+	                }
+	                    , 'json'
+	        );
+		}
+		
+	});
+	
+TMJF(function($){
+	$("#addBtn").click(function(){
+		var multiple = Number($("#multiple").val());
+		multiple += 1;
+		$("#multiple").val(multiple);
+		calMoney();
+	});
+	$("#subBtn").click(function(){
+		var multiple = Number($("#multiple").val());
+		multiple -= 1;
+		$("#multiple").val(multiple);
+		calMoney();
+	});
+	$("#multiple").keyup(function(){
+		calMoney();
+	});
+	$("#submit").click(function(){
+		calMoney();
+		if ($("#multiple").val() == '') {
+			alert('请输入倍数');
+			return false;
+		}
+	});
+	$("#submit2").click(function(){
+		alert('方案已截止');
+		return false;
+	});
+});
+
+var moneyMin = Number(<{$userTicketInfo.moneyMin}>);
+function calMoney(){
+	var span_obj = $(".gandanCenter").find('span').eq(0);
+	var multiple = $("#multiple").val();
+	
+	if (multiple > 100000) multiple = 100000;
+	//if (multiple <= 0) multiple = 1;
+	
+	
+	$("#multiple").val(multiple);
+	
+	var money = moneyMin * Number(multiple);
+	span_obj.html('&yen;'+money+'元');
+	$("#money").val(money);
+}
+</script>
+<body>
+<{include file="menu.html"}>
+<div class="center">
+  <!--确认投注center start-->
+  <div class="ConfirmationTz">
+    <!--投注确认过关方式 start-->
+    <div>
+      <div class="TouXiang">
+        <dl>
+          <dt><img src="<{if $follow_ticket_user.u_img}><{$follow_ticket_user.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>" /><{$userInfo.u_name}></dt>
+         <dd class="first">
+            <p>累计中奖：<strong class="f300"><{$totalPrize}></strong></p>
+            <p id="ticket_prize"><span>方案奖金：</span><strong><{$userTicketInfo.prize}></strong></p>
+          </dd>
+          <dd>
+            <p>方案类型：<i><{$userTicketInfo.sport|getPoolDesc:$userTicketInfo.pool}></i></p>
+            <p>认购时间：<i><{$userTicketInfo.datetime}></i></p>
+          </dd>
+          <dd>
+            <p>方案金额：<strong class="f300"><{$userTicketInfo.money}></strong></p>
+            <p>方案倍数：<i><{$userTicketInfo.multiple}></i>&nbsp;倍</p>
+          </dd>
+          <dd>
+            <p>过关方式：<em><{$userTicketInfo.user_select}></em></p>
+            <p><{if $endtime_forbin!=1}><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/detail.php?userTicketId=<{$userTicketInfo.id}>" target="_blank">奖金明细</a><{/if}></p>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+      </div>
+      <!--方案内容 start-->
+      <table class="hacker" border="0" cellpadding="0" cellspacing="0" id="hacker">
+        <tbody id="detail_tr">
+          <tr>
+            <th>序号</th>
+            <th>场次</th>
+            <th>赛事</th>
+            <th><{if $userTicketInfo.sport == 'bk'}>客队VS主队<{else}>主队VS客队<{/if}></th>
+            <th>我的选择</th>
+            <th>彩果</th>
+            <{if $userTicketInfo.pool != 'sf'}>
+            <th>比分</th>
+            <{/if}>
+            <th style="border-right:1px solid #6f6f6f;">状态</th>
+          </tr>
+        </tbody>
+      </table>
+      <!--方案内容 end-->
+      <{if $follow_infos}>
+      <div class="gName">
+        <h2><b></b>已经有<span><{$follow_info.total_sum}>人</span>跟单</h2>
+        <{foreach from=$follow_infos item=item key=key}>
+        <dl>
+          <dt><img src="<{if $all_users[$item.u_id].u_img}><{$all_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"></dt>
+          <dd><em><{$all_users[$item.u_id].u_name}></em><strong>金额：<{$item.money}>元</strong></dd>
+        </dl>
+        <{/foreach}>
+        <div class="clear"></div>
+      </div>
+      <{/if}>
+      <!--跟单用户 end-->
+    </div>
+  </div>
+  <!--投注确认过关方式 end-->
+</div>
+<{include file="foot.html"}>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商户产品开通</title>
+<style>
+p {
+	border-bottom: #CCC 2px solid;
+}
+input {
+	width: 380px;
+	color: #00F
+}
+</style>
+</head>
+<body>
+<div style="width:1300px; text-align:center; margin:0 auto; margin-top:50px; border:#666 1px solid;">
+  <div style="width:1300px; text-align:left; padding-left:5px;" > <strong>商户产品开通</strong>
+    <form action="rhpay_demo.php" method="post" class="input">
+    <input name="action" type="hidden" value="product_open" />
+      <p>1产品类型:
+        <input name="productType" id="productType" type="text"  value="KUAI" />
+        </p>
+      <p>2商户编号:
+        <input name="merchantNo" id="merchantNo" type="text" value="B100198839"  />
+       </p>
+      <p>3t0Fee:
+        <input name="t0Fee" id="t0Fee" type="text"  value="0.5" />
+        *</p>
+      <p>4t1Fee:
+        <input name="t1Fee" id="t1Fee" type="text" value="0.5" />
+        *</p>
+   
+      <p>&nbsp;</p>
+      <p>
+        <input name="" type="submit"  value="提交"/>
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<{include file="../admin/header.html"}>
+
+<table>
+    <tr>
+        <td><h1><font color="red">操作失败</font></h1></td>
+    </tr>
+    <tr>
+        <td>原因：<{$msg}></td>
+    </tr>
+    <tr>
+        <td>
+        你可以：&nbsp;&nbsp;<a href="javascript:history.go(-1);"><<返回上一页</a>
+        <{foreach from=$redirect_navs item=nav }>
+        &nbsp;&nbsp;<a href="<{$nav.href}>" <{if $nav.target}> target="<{$nav.target}>"<{/if}> ><{$nav.title}></a>
+        <{/foreach}>
+        </td>
+    </tr>
+</table>

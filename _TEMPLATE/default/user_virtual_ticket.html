@@ -1,0 +1,87 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'navigator.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery-1.9.1.min.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'winmac.js'|getStaticsUrl}>"></script>
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "<{$smarty.const.STATICS_BASE_URL}>/i"
+    	, domain: "<{$smarty.const.ROOT_DOMAIN}>"
+};
+</script>
+</head><body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+});
+</script>
+<!--投注记录 start-->
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>投注管理-积分投注记录</h1>
+    <div>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="stripese" style="background:none;">
+        <tr>
+          <td colspan="7" style="padding:30px 0 20px 0;border-bottom:none; background:#fff;">开始时间：
+            <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+            &nbsp;结束时间：
+            <input type="text" name="end_time” id="end_time" value="<{$end_time}>">
+            &nbsp;
+            <input class="sub"  style="width:188px;" name="" type="submit" value="查询"></td>
+          </form>
+        </tr>
+        <tbody>
+          <tr>
+            <th>方案类型</th>
+            <th align="center">投注积分</th>
+            <th align="center">倍数</th>
+            <th align="center">彩票标识</th>
+            <th align="center">状态</th>
+            <th align="center">认购时间</th>
+            <th align="right">方案详情</th>
+          </tr>
+        <{foreach from=$userTicketInfo item=item name=ticket}>
+        <tr>
+          <td>积分投注</td>
+          <td align="center"><{$item.money}>积分</td>
+          <td align="center"><{$item.multiple}></td>
+          <td align="center"><{$statusDesc[$item.status].desc}></td>
+          <td align="center"><div class="jiesuancaozuo"> <{if $item.prize>0}>
+              中奖<{$item.prize}>积分
+              <{/if}>
+              <{if $item.status==2}> <span style="color:#000;">未中奖</span> <{/if}> </div></td>
+          <td align="center"><{$item.create_time}></td>
+          <td align="right"><div class="caozuo"> <a target="_blank" href="<{$smarty.const.ROOT_DOMAIN}>/account/virtual_ticket.php?userTicketId=<{$item.id}>">方案详情</a> </div></td>
+        </tr>
+        <{/foreach}>
+        </tbody>
+        
+      </table>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pageC">
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+      </div>
+      <{/if}> </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

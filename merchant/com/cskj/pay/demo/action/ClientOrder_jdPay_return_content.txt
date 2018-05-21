@@ -1,0 +1,57 @@
+执行日期：2017-10-14-16：09：20
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：09：35
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：10：11
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：10：36
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：12：33
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：12：49
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：13：21
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：19：15
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：19：27
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：34：51
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：35：01
+{"returnCode":"1","returnMsg":"参数无效(tradeType)"}
+
+执行日期：2017-10-14-16：35：24
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：35：35
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：36：53
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：40：40
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：41：37
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：41：42
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：43：45
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+
+执行日期：2017-10-14-16：48：23
+{"returnCode":"0","resultCode":"1","errCode":"noauth","errCodeDes":"支付类型（jdPay）对应的通道 京东支付通道2 已关闭"}
+

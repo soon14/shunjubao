@@ -1,0 +1,23 @@
+﻿.wapcenter{text-align:left;}
+#webnews{clear:both;height:34px;line-height:34px;text-align:left;}
+#quotation {text-align:center;height:34px;line-height:34px;background:#7A0609;overflow:hidden;font-size:12px;font-weight:300;}
+#quotation ul li p{color:#fff;}
+#quotation ul li p span{color:#fff;}
+#quotation ul li p a{color:#fff;}
+.appC{width:%;text-align:left;margin:0 auto auto auto;}
+.appC table tr td{ background:#eeeee0;}
+.appClist{width:100%;height:100px;display:block;margin:0 auto;text-align:center;}
+.appClist h1{ font-size:20px;font-weight:300;font-family:'时尚中黑简体';text-align:center;height:100px;line-height:100px;color:#fff;}
+.appClist h1 a{ display:block;font-size:20px;font-weight:300;font-family:'时尚中黑简体';text-align:center;height:100px;line-height:100px;color:#000;color:#fff;}
+.appClist h2{ font-size:20px;font-weight:300;font-family:'时尚中黑简体';text-align:center;height:100px;line-height:100px;color:#000;color:#fff;}
+.appClist h2 a{ display:block;font-size:20px;font-weight:300;font-family:'时尚中黑简体';text-align:center;height:100px;line-height:100px;color:#000;}
+.appcaidan{line-height:26px;text-align:left;}
+.appcaidan table tr td{border-bottom:1px solid #ddd;padding:0 0 0 10px;}
+.appcaidan img{width:53px;height:53px;margin:8px 0 0 0;}
+.appcaidan b{font-size:16px;font-weight:900;}
+.appcaidan a{font-size:16px;font-weight:900;color:#000;}
+.appcaidan p{color:#666;font-size:12px;font-weight:300;width:60px;height:24px;line-height:24px;overflow:hidden;text-align:center;position:relative;top:-8px;left:-5px;}
+.appcaidan p a{color:#333;font-size:14px;font-weight:900;}
+.appcaidanNav{ padding:8px 0 0 10px;text-align:left;float:right;}
+.appcaidanNav a{font-size:12px;font-weight:300;padding:0 10px;line-height:26px;height:26px;width:80px;display:block;float:left;}
+.appcaidanNav a:hover{}

@@ -1,0 +1,26 @@
+<{include file="header.html"}>
+<body>
+<{include file="top.html"}>
+<div class="content-bg">
+    <div class="content">
+        <div class="formblank">
+            <span class="blank30"></span>
+
+            <div class="paynote">
+                <div class="suc-txt2"><{$title}></div> 
+                <div class="suc-num2"><{$msg}><br />
+                    您可以：<a href="<{$smarty.const.ROOT_DOMAIN}>">返回首页>></a><br />
+                <{foreach from=$redirect_navs item=redirect_nav name=redirect_navs}>
+                　　　　<a href="<{$redirect_nav.href}>" <{if $redirect_nav.target}>target="<{$redirect_nav.target}>"<{/if}> ><{$redirect_nav.title}>>></a>
+                    <{if !$smarty.foreach.redirect_navs.last}><br /><{/if}>
+                <{/foreach}>
+                </div>
+                <div class="suc-service2"></div>
+                <span class="blank50"></span>
+            </div>
+            <span class="blank50" style="height:200px;"></span>
+        </div>
+    </div>
+</div>
+
+<{include file="bottom.html"}>

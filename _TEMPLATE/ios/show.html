@@ -1,0 +1,46 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<link type="text/css" rel="stylesheet" href="<{'wap_shaidan.css'|getStaticsUrl}>" />
+<body>
+<!--center start-->
+<div class="tipsters">
+  <div class="NewsNav">
+    <h1><b>跟单中心</b><em>停止盲目投注...<br/>
+      <span>跟随智赢高手，让您的利润蒸蒸日上 ! </span></em></h1>
+  </div>
+</div>
+<div class="gendanCenter">
+  <div>
+    <div style="border:1px solid #eee;">
+      <table class="" width="100%"  border="0" cellspacing="0" cellpadding="0" style="width:100%; overflow:hidden;">
+        <tr>
+          <td><div class="sdType"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=fb" <{if $sport == 'fb'}> class='active'<{/if}> >竞彩足球</a></div></td>
+          <td><div class="sdType"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=bk" <{if $sport == 'bk'}> class='active'<{/if}> >竞彩篮球</a></div></td>
+          <td><div class="sdType"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=bd" <{if $sport == 'bd'}> class='active'<{/if}> >北京单场</a></div></td>
+        </tr>
+      </table>
+    </div>
+    <{foreach from=$show_tickets item=item name=name key=key}>
+    <div class="btsdList">
+      <h1><img src="<{if $show_users[$item.u_id].u_img}><{$show_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"><b><{$show_users[$item.u_id].u_name}></b><strong><{$item.sport|getPoolDesc:$item.pool}></strong><span><{$item.datetime}></span></h1>
+      <dl>
+        <dt class="over"><em>结束时间：</em>&nbsp;<span><{$item.endtime}></span></dt>
+        <dt><em>倍数：</em>&nbsp;<b><{$item.multiple}>倍</b></dt>
+        <dt><em>投注额：</em>&nbsp;<strong><{$item.money}>元</strong></dt>
+        <dt><em>跟单总金额：</em>&nbsp;<strong><{$follow_infos[$item.id].total_money}>元</strong></dt>
+        <dt><em>跟单总人数：</em>&nbsp;<i style="color:#777;"><{$follow_infos[$item.id].total_sum}>人</i></dt>
+        <dd><{if $item.prize_state==1}><span>赢</span><{/if}><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$item.id}>"> <{if $item.is_end}><b>查看详细</b><{else}>我要跟单<{/if}></a></dd>
+      </dl>
+    </div>
+    <{/foreach}>
+    <{if $total_page>1}>
+    <div class="sharepages"> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+      <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>&page=<{$total_page}>">末页</a> </div>
+    <{/if}> </div>
+</div>
+<!--center end-->
+<!--footer start-->
+<{include file="../ios/footer.html"}>
+<!--footer end-->
+</body>
+</html>

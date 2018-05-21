@@ -1,0 +1,58 @@
+<{include file="header.html"}>
+<script>
+function resetpass(){	
+	var u_pwd1 = $("#u_pwd1").val();
+	if(u_pwd1 == ''){
+		$("#tips").html('请先输入新密码！');
+		return false;
+	}	
+	var u_pwd2 = $("#u_pwd2").val();
+	if(u_pwd2 == ''){
+		$("#tips").html('请先输入新密码！');
+		return false;
+	}
+
+	if(u_pwd1 != u_pwd2) {
+		$("#tips").html('两次密码不一致！');
+		return false;
+	}
+	$("#f").submit();
+}
+</script>
+</head>
+<body>
+<div class="top">
+  <h3>重置密码-智赢网</h3>
+  <div class="logo none">
+    <h1 ><a href="/">智赢网</a><em>重置密码</em></h1>
+  </div>
+</div>
+<div class="center">
+  <div class="biaodan">
+    <form method="post" action=""  name='f' id='f' >
+      <input type="hidden" value="<{$mobile}>" name="mobile"/>
+      <input type="hidden" value="<{$code}>" name="code"/>
+      <div class="tips" id="tips"><{if $msg}><{$msg}><{/if}></div>
+      <dl>
+        <dt>输入新密码</dt>
+        <dd>
+          <input name="u_pwd1" type="password" size="25" id="u_pwd1"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>请再次输入</dt>
+        <dd>
+          <input name="u_pwd2" type="password" size="25" id="u_pwd2"/>
+        </dd>
+      </dl>
+      <div class="tijiao">
+        <input name="button" type="button" value="提&nbsp;&nbsp;&nbsp;&nbsp;交" onClick=" return resetpass()" />
+      </div>
+    </form>
+  </div>
+</div>
+<!--center end-->
+<{include file="../wap/footer.html"}>
+<!--footer end-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<{include file="../admin/header.html"}>
+<style type='text/css'>
+body {
+    margin-left: 3px;
+    margin-top: 0px;
+    margin-right: 3px;
+    margin-bottom: 0px;
+	 font-size:12px;
+	 font-weight:300;
+}
+.import {
+    margin-top:100px;
+    margin-left:150px;
+    width:auto;
+	border:0 0 0 0;
+}
+.import td{
+	width: 100px;
+}
+</style>
+<script type="text/javascript">
+TMJF(function($){	
+	$("#sub").click(function(){
+		passChecked = true;	
+		var emails = $("#emails").val();
+        if (emails == '') {
+        	alert('邮箱不能为空');
+            return false;
+        }
+	});
+});
+</script>
+<{include file="../admin/nav.html"}>
+<body>
+<h1>批量导入订阅邮箱</h1>
+<br/>
+<form action="<{$smarty.const.ROOT_DOMAIN}>/admin/cms/subscribe_email.php" method="post" enctype="multipart/form-data">
+  <table width="100%" border="0" cellpadding="0" cellspacing="6" class=''>
+    <tr>
+      <td width="100">输入邮箱
+        <input type="hidden" name="code" value="<{$code}>" /></td>
+      <td align="left"><textarea name="emails"  cols="100" rows="20" id="emails"></textarea></td>
+    </tr>
+    <tr>
+      <td  width="100">订阅类型</td>
+      <td align="left"><select name="type">
+          <{foreach from=$cmsTypeDesc item=cmsTypeDesc }>
+          <option  value="<{$cmsTypeDesc.type}>" />
+          <{$cmsTypeDesc.desc}> <{/foreach}>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td  width="100">推荐期数(新)：</td>
+      <td align="left"><input type="radio" name="batch" id="newbatch" value="<{$newbatch}>" checked>
+        <font><{$newbatch}>&nbsp;&nbsp;|&nbsp;&nbsp;<{$new_sunday}>~<{$new_saturday}></font></td>
+    </tr>
+    <tr>
+      <td  width="100">往期(旧):</td>
+      <td align="left"><input type="radio" name="batch" id="oldbatch" value="<{$oldbatch}>" >
+        <font><{$oldbatch}>&nbsp;&nbsp;|&nbsp;&nbsp;<{$old_sunday}>~<{$old_saturday}></font></td>
+    </tr>
+    <tr>
+	  <td  width="100"></td>
+      <td align="left"><input id="sub" type="submit" name="submit" class="upbtn" value="上传" /></td>
+    </tr>
+  </table>
+</form>
+<{include file="../admin/bottom.html"}>

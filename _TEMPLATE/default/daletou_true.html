@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>【大乐透】少花钱中大奖_大乐透投注_超级大乐透预测_体彩大乐透中奖规则_体育彩票大乐透-智赢网智赢彩票！</title>
+<meta name="keywords" content="大乐透,体彩大乐透,超级大乐透,大乐透投注,超级大乐透预测,体彩大乐透中奖规则,体育彩票大乐透" />
+<meta name="description" content="智赢网智赢彩票免费提供大乐透缩水过滤，帮您少花钱中大奖，免费提供体彩大乐透预测专家、大乐透中奖规则，同时还提供大乐透投注、方案保存、缩水过滤、奖金评测、杀号定胆，方便彩民在线购买超级大乐透" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/ico" href="http://www.zhiying365365.com/www/statics/i/favicon.ico">
+<script src="http://www.zhiying365365.com/www/statics/j/jquery.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/float.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/winmac.js" type="text/javascript"></script>
+<!---->
+<link href="http://www.zhiying365365.com/www/statics/c/daletou.css" rel="stylesheet" type="text/css" />
+<link href="http://www.zhiying365365.com/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<!---->
+<div class="header">
+  <div class="headerCnetr">
+    <div class="logo">
+      <h1 style=" width:106px;"><a href="/"><img src="http://www.zhiying365365.com/www/statics/i/logo.jpg"></a></h1>
+    </div>
+    <div class="nav" style="position:relative;left:-144px; z-index:1;">
+      <ul style="padding:0 0 0 40px;color:#fff;">
+        <li style="padding:0 50px 0 15px;">大乐透</li>
+        <li><a href="http://www.zhiying365365.com/football/hhad_list.php">竞彩足球</a></li>
+        <li><a href="http://www.zhiying365365.com/basketball/hdc_list.php">竞彩篮球</a></li>
+        <li><a href="http://www.zhiying365365.com/ticket/show.php">晒单中心</a></li>
+      </ul>
+      <ol style="left:797px;width:300px;">
+        <li>每周一、三、六20：30开奖。</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!---->
+<!--center start-->
+<div class="center">
+  <!--确认投注center start-->
+  <div class="BitCenter">
+    <!--提示文字信息  start-->
+    <div class="touzhutips"><em>!</em>重要提示：
+      提示内容待定！！！</div>
+    <!--提示文字信息  end-->
+    <div class="ConfirmationTz">
+      <!--投注确认账户信息 start-->
+      <div class="touzhuxuanxiang">
+        <ul>
+          <li>超级大乐透</li>
+          <li>预售期<strong><{$LotteryNo}></strong>期</li>
+          <li>投注方式：普通投注</li>
+          <li>倍数：<strong style="font-size:14px;"><{$MultiNum}></strong>倍</li>
+          <li>购买<b style="font-size:14px; font-weight:900;">&nbsp; <{$TotalMoney}> &nbsp;</b>元</li>
+          <li>账户余额：<b><{$userAccount.cash}></b>元</li>
+          <li class="pay"><a href="http://www.zhiying365365.com/account/user_charge.php">充值</a></li>
+        </ul>
+      </div>
+      <!--投注确认账户信息 end-->
+      <!--超级大乐透 start-->
+      <div class="">
+        <div id="touzhuchack">
+          <table class="hacker" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <th>投注功能</th>
+              <th>投注内容(前区)</th>
+              <th>投注内容（后区）</th>
+              <th>注数</th>
+              <th style="border-right:1px solid #6f6f6f;">投注方案</th>
+            </tr>
+             <{foreach from=$data_shu item=item key=key}>
+	            <tr>
+	              <td><{$item.named}></td>
+	              <td>
+		              <div class="kaijiang_ball" style="float:none; width:auto; padding:8px 0;">
+		              	<{foreach from=$item.qianqu item=itemli}>
+		              	<span class="redball"><{$itemli}></span>
+		              	 <{/foreach}>
+		              </div>
+	              </td>
+	              <td>
+	              	<div class="kaijiang_ball" style="float:none; width:auto; padding:8px 0;">
+	              		
+	              		<{foreach from=$item.houqu item=itemli}>
+		              	<span class="blueball"><{$itemli}></span>
+		              	 <{/foreach}>
+	              	</div>
+	              </td>
+	              <td><{$item.wc}></td>
+	              <td style="border-right:none;"><div class="kaijiang_ball" style="float:none; width:auto; padding:8px 0;">
+	              		<{foreach from=$item.qianqu item=itemli}>
+		              	<span class="redball"><{$itemli}></span>
+		              	 <{/foreach}>
+	              		<{foreach from=$item.houqu item=itemli}>
+		              	<span class="blueball"><{$itemli}></span>
+		              	 <{/foreach}></div></td>
+	            </tr>
+            <{/foreach}>
+          </table>
+        </div>
+      </div>
+      <!--超级大乐透 end-->
+      <!--投注确认提交 start-->
+      <div>
+      	<form id="myform" name="myform" method="POST" action="<{$smarty.const.ROOT_DOMAIN}>/daletou/daletou.php">
+	      <input type="hidden" id="LotteryType"	name="LotteryType"	value="<{$LotteryType}>"/>
+	      <input type="hidden" id="u_id"	name="u_id"	value="<{$u_id}>"/>
+	      <input type="hidden" id="LotteryNo"	name="LotteryNo"	value="<{$LotteryNo}>"/>
+	      <input type="hidden" id="MultiNum"	name="MultiNum"		value="<{$MultiNum}>"/>
+	      <input type="hidden" id="WagerCount"	name="WagerCount"	value="<{$WagerCount}>"/>
+	      <input type="hidden" id="ConsignType"	name="ConsignType"	value="<{$ConsignType}>"/>
+	      <input type="hidden" id="SingleMulti"	name="SingleMulti"	value="<{$SingleMulti}>"/>
+	      <input type="hidden" id="SubmitType"	name="SubmitType"	value="<{$SubmitType}>"/>
+	      <input type="hidden" id="SaveProject"	name="SaveProject"	value="<{$SaveProject}>"/>
+	      <input type="hidden" id="MultiProject"	name="MultiProject"	value="<{$MultiProject}>"/>
+	      <input type="hidden" id="WagerStore"	name="WagerStore"	value="<{$WagerStore}>"/>
+	      <input type="hidden" id="WagerType"	name="WagerType"	value="<{$WagerType}>"/>
+	      <input type="hidden" id="UpProjectID"	name="UpProjectID"	value="<{$UpProjectID}>"/>
+	      <input type="hidden" id="manner" name="manner" value="<{$manner}>"/>
+	    
+        <div class="confiRma">
+          <p class="check">
+            <input type="checkbox" checked>
+            同意<a href="http://www.zhiying365365.com/about/xieyi.html" target="_blank">《智赢网代购协议》</a>，并已确认投注详情。</p>
+          <p>
+            <input type="submit" id="form_submit" class="confiRmaSub" value="确认购买" />
+          </p>
+        </div>
+        </form>
+      </div>
+      <!--投注确认提交 end-->
+    </div>
+  </div>
+  <!--确认投注center end-->
+</div>
+<!--center end-->
+<script src="http://www.zhiying365365.com/www/statics/j/footer.js" type="text/javascript"></script>
+</body>
+</html>

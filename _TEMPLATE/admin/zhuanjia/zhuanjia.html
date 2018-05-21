@@ -1,0 +1,81 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<style>
+.timechaxun{ margin:10px 0;}
+.timechaxun ul{ float:left;list-style:none;}
+.timechaxun ul li{float:left;list-style:none; padding:0 10px 0 0; margin:0;}
+.URcenter{ position:relative;top:-20px;}
+.URcenter h2{ padding:0p; margin:0; height:40px; line-height:40px; font-size:20px; font-weight:300; font-family:'微软雅黑';}
+.URcenter h2 b{ font-size:12px; font-weight:300;}
+</style>
+<!-- start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li>用户名或手机号
+          <input type="text" name="u_name" id="u_name" value="<{$u_name}>">
+        </li>
+        <li>
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <h2> <b>●</b>专家申请列表</h2>
+    <div>
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <td>系统ID</td>
+            <td>申请帐号</td>
+            <td>手机号</td>
+            <td> QQ号</td>
+            <td>擅长赛事</td>
+			<td>周金额</td>
+            <td>月金额</td>
+            <td>自我介绍</td>
+            <td>申请时间</td>
+            <td>推荐</td>
+            <td>审核通过</td>
+            <td>当前排序</td>
+            <td>排序</td>
+          </tr>
+        <{section name=a loop=$datalist}>
+        <tr>
+          <td><{$datalist[a].sysid}></td>
+          <td><{$datalist[a].u_name}></td>
+          <td><{$datalist[a].mobile}></td>
+          <td> <{$datalist[a].sqqq}></td>
+          <td  title="<{$datalist[a].sqsc}>"><{$datalist[a].show_sqsc}>...</td>
+		  <td><{$datalist[a].week_money}></td>
+          <td><{$datalist[a].month_money}></td>
+          <td title="<{$datalist[a].ddesc}>"><{$datalist[a].show_desc}>...</td>
+          <td><{$datalist[a].addtime}></td>
+          <td><strong  <{ if $datalist[a].iscommon==1}>style="color:#F00" <{/if}>><{$datalist[a].iscommon_status}></strong> <{ if $datalist[a].iscommon!=1}> <a href="zhuanjia.php?action=iscommon&iscommon=1&sysid=<{$datalist[a].sysid}>">点击推荐</a> <{/if}> <{ if $datalist[a].iscommon==1}> <a href="zhuanjia.php?action=iscommon&iscommon=2&sysid=<{$datalist[a].sysid}>">取消推荐</a> <{/if}></td>
+          <td><{$datalist[a].ifuse_status}><{ if $datalist[a].ifuse==0}> <a href="zhuanjia.php?action=sh&ifuse=1&sysid=<{$datalist[a].sysid}>">通过</a> <a href="zhuanjia.php?action=sh&ifuse=2&sysid=<{$datalist[a].sysid}>">拒绝</a><{/if}> <{ if $datalist[a].ifuse==1}> <a href="zhuanjia.php?action=sh&ifuse=2&sysid=<{$datalist[a].sysid}>">拒绝</a><{/if}> <{ if $datalist[a].ifuse==2}> <a href="zhuanjia.php?action=sh&ifuse=1&sysid=<{$datalist[a].sysid}>">通过</a> <{/if}></td>
+          <td><{$datalist[a].orderby}></td>
+          <td><a href="zhuanjia.php?action=order&add=1&sysid=<{$datalist[a].sysid}>">前+1</a>&nbsp;&nbsp;<a href="zhuanjia.php?action=order&desc=1&sysid=<{$datalist[a].sysid}>">后-1</a>&nbsp;&nbsp; <a href="zhuanjia.php?action=order&first=1&sysid=<{$datalist[a].sysid}>">首位</a> </td>
+        </tr>
+        <{/section}>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="10"><div align="center">每页<font color="#FF0000"> <{ $pageSize }> </font>条 共<font color="#FF0000"> <{ $page }> </font>页  共<font color="#FF0000"> <{ $totalRecord }> </font>条记录 
+              <{ $multi }> </div></td>
+        </tr>
+        </tbody>
+        
+      </table>
+    </div>
+    <br/>
+  </div>
+</div>
+<!-- end-->
+</body>
+</html>

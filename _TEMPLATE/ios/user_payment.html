@@ -1,0 +1,58 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#submit").submit(function(){
+		if ($("#pay_type").val() == '') {
+			alert('支付类型不能为空');
+			return false;
+		}
+		if ($("#pay_account").val() == '') {
+			alert('帐号信息不能为空');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户支付宝及财付通信息 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1><em>快捷提款账号<b></b><i></i></em></h1>
+    <div class="wap_loginC">
+      <form action="" method="post">
+        <div class="kuaiti">
+          <p>支付类型</p>
+          <p>
+            <select name="pay_type" style="height:28px; line-height:28px;">
+              <option value='' selected>===请选择===</option>
+              <{foreach from=$payTypeDesc item=item key=key}> <option value="<{$key}>" <{if $userPaymentInfo.pay_type==$key}>selected<{/if}> ><{$item.desc}>
+              </option>
+              <{/foreach}>
+            </select>
+            <b style="font-size:12px; padding:0 0 0 5px;color:#dc0000;">选择提现支付类型</b> </p>
+          <p>支付帐号</p>
+          <p>
+            <input type='text' class="ustext" value="<{$userPaymentInfo.pay_account}>" style="width:230px;" name="pay_account"/>
+          </p>
+          <p class="sub">
+            <input type="submit" class="loginsub" value="保&nbsp;&nbsp;&nbsp;存" />
+          </p>
+          <{if $msg_error}>
+          <p class="error"><{$msg_error}></p>
+          <{/if}>
+          <{if $msg_success}>
+          <p class="right"><{$msg_success}></p>
+          <{/if}> </div>
+      </form>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!--用户支付宝及财付通信息 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

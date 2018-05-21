@@ -1,0 +1,165 @@
+<{include file="../admin/header.html"}>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	    //if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	    //}
+	});
+		
+});
+</script>
+<script type="text/javascript">
+      /* 当鼠标在表格上移动时，离开的那一行背景恢复 */
+      $(document).ready(function(){ 
+            $(".admintable tr td").mouseout(function(){
+                var bgc = $(this).parent().attr("bg");
+                $(this).parent().find("td").css("background-color",bgc);
+            });
+      })
+      
+      $(document).ready(function(){ 
+            var color="#DCF2FC"
+            $(".admintable tr:odd td").css("background-color",color);  //改变偶数行背景色
+            /* 把背景色保存到属性中 */
+            $(".admintable tr:odd").attr("bg",color);
+            $(".admintable tr:even").attr("bg","#fff");
+      })
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li>
+        充值状态：
+          <select name='charge_type' id='charge_type' >
+            <option value="all" selected>充值方式</option>
+            <{foreach from=$chargeTypeDesc item=item key=key}> <option value="<{$key}>" <{if $charge_type==$key}> selected <{/if}> ><{$item.desc}>
+            </option>
+            <{/foreach}>
+          </select>
+          |
+        
+        充值状态：
+          <select name='charge_status' id='charge_status' >
+            <option value="all" selected>全部状态</option>
+            <{foreach from=$chargeStatusDesc item=item key=key}> <option value="<{$key}>" <{if $charge_status==$key}> selected <{/if}> ><{$item.desc}>
+            </option>
+            <{/foreach}>
+          </select>
+          |
+          用户名：
+          <input type="text" name="u_name" id="u_name" style="width:120px;" value="<{$u_name}>">
+          |
+          开始日期：
+          <input type="text" name="start_time" id="start_time"  style="width:80px" value="<{$start_time}>" >
+           <input type="text" name="start_time2" id="start_time2"  style="width:80px"  value="<{$start_time2}>">
+          
+          结束日期：
+          <input type="text" name="end_time" id="end_time"  style="width:80px"  value="<{$end_time}>">
+          <input type="text" name="end_time2" id="end_time2"  style="width:80px"  value="<{$end_time2}>">
+          |第三方商户号：
+          <input type="text" name="return_message" style="width:80px;"  id="return_message" value="<{$return_message}>">
+          |手动充值操作人：
+          <input type="text" name="o_uname" style="width:80px;" id="o_uname" value="<{$o_uname}>">
+          |到帐方式：
+           <select name='manu_income' id='manu_income' >
+            <option value="" selected>全部方式</option>
+           <{foreach from=$getCHARGEmanuincomeDesc item=item key=key}> <option value="<{$key}>" <{if $manu_income==$key}> selected <{/if}> ><{$item.desc}>
+            </option>
+            <{/foreach}>
+          </select>
+
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <div class="admintable">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>序号</th>
+            <th>真实姓名</th>
+            <th>金额</th>
+            <th>充值状态</th>
+            <th>支付方</th>
+            <th>支付来源</th>
+            <th>交易时间</th>
+            <th>银行信息</th>
+            <th>账户信息</th>
+            <th>当前账户</th>
+            <th>平台订单号</th>
+            <th>订单流水号</th>
+            <th>第三方商户号</th>
+            <th>到帐方式</th>
+            <th>手动充值操作人</th>
+            
+          </tr>
+        <{assign var=trade_money value=0}>
+        <{foreach from=$chargeInfos item=chargeInfo name=ticket}>
+        <tr>
+          <td class="show"><{$chargeInfo.charge_id}></td>
+          <td class="show"><{$userRealInfos[$chargeInfo.u_id].realname}></td>
+          <td class="show"><{$chargeInfo.money}>元</td>
+          <{assign var=trade_money value=$trade_money+$chargeInfo.money}>
+          <td class="show"><{if $chargeInfo.charge_status == 2}> <span style="color:red;"><{$chargeStatusDesc[$chargeInfo.charge_status].desc}></span> <{else}>
+            <{$chargeStatusDesc[$chargeInfo.charge_status].desc}>
+            <{/if}> </td>
+          <td><{$chargeTypeDesc[$chargeInfo.charge_type].desc}></td>
+          <td><{if $chargeInfo.charge_source==1}>主站<{/if}>
+            <{if $chargeInfo.charge_source==10}>wap<{/if}>
+            <{if $chargeInfo.charge_source==11}>app<{/if}>
+            <{if $chargeInfo.charge_source==12}>ios<{/if}></td>
+          <td title="接口通知时间:<{$chargeInfo.return_time}>"><{$chargeInfo.create_time}></td>
+          <td class="show"> 银行卡号：<{$userRealInfos[$chargeInfo.u_id].bankcard}><br/>
+            开户行：<{$userRealInfos[$chargeInfo.u_id].bank}><br/>
+            省市：<{$userRealInfos[$chargeInfo.u_id].bank_province}>-<{$userRealInfos[$chargeInfo.u_id].bank_city}><br/>
+            支行：<{$userRealInfos[$chargeInfo.u_id].bank_branch}><br/>
+          </td>
+          <td class="show"> 用户名：<{$userInfos[$chargeInfo.u_id].u_name}><br/>
+            手机号：<{$userRealInfos[$chargeInfo.u_id].mobile}><br/>
+          </td>
+          <td class="show"> 可用余额：<{$userAccountInfos[$chargeInfo.u_id].cash}><br/>
+            彩金账户：<{$userAccountInfos[$chargeInfo.u_id].gift}><br/>
+            返点账户：<{$userAccountInfos[$chargeInfo.u_id].rebate}><br/>
+            冻结资金：<{$userAccountInfos[$chargeInfo.u_id].frozen_cash}><br/>
+          </td>
+          <td><{$chargeInfo.pay_order_id}></td>
+          <td><{$chargeInfo.return_code}></td>
+          <td><{$chargeInfo.return_message}></td>
+          <td><{$getCHARGEmanuincomeDesc[$chargeInfo.manu_income].desc}><br><{$chargeInfo.manu_desc}>
+	</td>
+          <td><{$chargeInfo.o_uname}></td>
+          
+        </tr>
+        <{/foreach}>
+        <tr>
+          <td colspan="15" align="left"> 当前页总计:<{$trade_money}>元,本次查询总金额：<{$total_money}></td>
+        </tr>
+        </tbody>
+        
+      </table>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pageC">
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+      </div>
+    <{/if}> </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

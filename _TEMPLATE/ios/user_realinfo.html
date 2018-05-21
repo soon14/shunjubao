@@ -1,0 +1,73 @@
+<{include file="header.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#submit").submit(function(){
+		if ($("#realname").val() == '') {
+			alert('真实姓名不能为空');
+			return false;
+		}
+		if ($("#idcard").val() == '') {
+			alert('身份证号不能为空');
+			return false;
+		}
+		if ($("#reidcard").val() != $("#idcard").val()) {
+			alert('两次身份证号不一致');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--实名认证 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1><em>实名认证<b></b><i></i></em></h1>
+    <div class="usTips">
+      <p><b>温馨提示：</b>您的个人信息将被严格保密。</p>
+    </div>
+    <div class="wap_loginC">
+      <form method="post" id="submit">
+        <div class=""> <{if $userRealInfo.realname}>
+          <p class="other">真实姓名： <strong><{$userRealInfo.realname}></strong></p>
+          <{else}>
+          <p>真实姓名</p>
+          <p>
+            <input type="text" class="inputc1" name="realname" id="realname"/>
+          </p>
+          <{/if}>    
+          <{if $userRealInfo.idcard}>
+          <p style="padding:18px 0;" class="other"> 身份证号：<b><{$userRealInfo.idcard}></b> <{else}>
+          <p>身份证号</p>
+          <p>
+            <input type="text" class="inputc1" name="idcard"  id="idcard"/>
+          </p>
+          </p>
+          <{/if}> 
+          <{if !$userRealInfo.idcard}>
+          <p>再次确认</p>
+          <p>
+            <input type="text" class="inputc1" name="reidcard" id="reidcard"/>
+            <span>请再输入一次您的身份证号码。</span></p>
+          <p class="sub">
+            <input type="submit" class="loginsub" value="提&nbsp;&nbsp;&nbsp;交" />
+          </p>
+          <{/if}>
+          <{if $msg_error}>
+          <p class="error"><{$msg_error}></p>
+          <{/if}>
+          <{if $msg_success}>
+          <p class="right"><{$msg_success}></p>
+          <{/if}> </div>
+      </form>
+	  <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!--实名认证 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<{include file="../admin/header.html"}>
+<style>
+.gdtype {
+	text-align:left;
+	position:relative;
+	padding:0 0 0 5px;
+}
+.gdtype span {
+	font-size:12px;
+	color:#dc0000;
+	background:url(<{$smarty.const.STATICS_BASE_URL}>/i/gBj.gif) no-repeat;
+	width:17px;
+	height:19px;
+	line-height:19px;
+	color:#fff;
+	text-align:center;
+	display:inline-table;
+	display:inline-block;
+	zoom:1;
+*display:inline;
+}
+.gdtype strong {
+	background:url(<{$smarty.const.STATICS_BASE_URL}>/i/shai.gif) no-repeat;
+	position:absolute;
+	right:10px;
+	top:3px;
+	width:17px;
+	height:19px;
+	line-height:19px;
+	text-indent:-5000px;
+	cursor:pointer;
+}
+</style>
+<body>
+ 
+<!--投注记录 start-->
+<div class="UserRight">
+  <div>
+    <h2> <b>●</b>投注对应返积分数</h2>
+    <div>
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <td width="27%">用户Id</td>
+            <td width="32%">用户名</td>
+            <td width="32%">上月投注总金额</td>
+            <td width="41%">返积分</td>
+          </tr>
+        <{section name=a loop=$orderTickets}>
+        
+          <tr>
+            <td class="show"><{$orderTickets[a].u_id}>  </td>
+            <td class="show"><{$orderTickets[a].u_name}> </td>
+          <td class="show"><{$orderTickets[a].money}>元</td>
+          <td class="show"><{$orderTickets[a].point}></td>
+        </tr>
+        <{/section}>
+        <tr>
+            <td class="show"> </td>
+            <td class="show">共:<{$j}>条记录</td>
+          <td class="show"><{$t_money}>元</td>
+          <td class="show"><{$t_point}></td>
+        
+        
+      </table>
+    </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

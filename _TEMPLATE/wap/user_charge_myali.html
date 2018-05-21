@@ -1,0 +1,57 @@
+<{include file="header.html"}>
+<script language="javascript" src="<{'payment.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+});
+</script>
+<!--center start-->
+<div class="paytop">
+  <h1>智赢用户充值中心</h1>
+</div>
+<div class="center">
+  <div class="pay">
+    <div class="paytips"><b><{$userInfo.u_name}></b>&nbsp;当前账户余额:<b><{$userAccount.cash}>元</b></div>
+    <!---->
+    <form action='' method="post" id="gotocash">
+      <div class="paycenter">
+        <dl>
+          <dt>充值金额：</dt>
+          <dd>
+            <ul>
+              <li class="paypal"><a href="" class="charge_cash" payment="50">50元</a></li>
+              <li class="paypal"><a href="" class="charge_cash" payment="100">100元</a></li>
+              <li class="paypal"><a href="" class="charge_cash" payment="500">500元</a></li>
+              <li class="mpay">
+                <input type="text" name="" value="其他金额" id="inputc1"/>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl class="show">
+		 <dt style="width:100%;"><b>选择银行：</b><span>（网上充值0手续费，资金即刻到账。）</span></dt>
+          <dd>
+            <ol>
+            	<li class="paypal"><a href="" class="pay_bank" pay_bank="ALIPAY">支付宝</a></li>
+              <!--  <li class="weixin"><a href="" class="pay_bank" pay_bank="rhwx" >微信充值</a></li>-->
+                
+    
+            </ol>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="payNext">
+          <p><a href="" id="payment" target="_blank">下一步
+            <input id="u_id" type="hidden" value="<{$userAccount.u_id}>"/>
+            </a></p>
+        </div>
+      </div>
+    </form>
+    <!---->
+  </div>
+</div>
+<div class="yiwen">如您有问题，请联系智赢网客服。</div>
+<!--center end-->
+<{include file="../wap/footer.html"}> 

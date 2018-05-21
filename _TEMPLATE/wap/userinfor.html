@@ -1,0 +1,9 @@
+<div class="Userlocation">
+  <dl>
+    <dt><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_head_img.php" target="rightFrame"> <img src="<{if $userInfo.u_img}><{$userInfo.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>" /></a></dt>
+    <dd class="first"><strong><{$userInfo.u_name}></strong></dd>
+    <dd><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php">充值</a></dd>
+    <dd><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_withdraw.php" class="hover">提现</a></dd>
+  </dl>
+</div>
+

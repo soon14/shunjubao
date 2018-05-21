@@ -1,0 +1,70 @@
+<{include file="header.html"}>
+<body>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<style>
+.userinfor{padding:15px 0 0 28px;}
+.userinfor em{ font-style:normal;color:#666;font-size:12px;font-weight:300;}
+.userinfor em u{ text-decoration:underline;color:red;position:relative;top:2px;padding:0 5px 0 0;}
+.userinfor p{width:570px;height:26px;line-height:26px;font-size:12px;color:#555;padding:8px 0;}
+.userinfor p.pic{ background:url(../i/Userman.jpg) no-repeat 75px 15px;}
+.userinfor p b{font-size:14px;font-weight:900;}
+.ustext{border:1px solid #ccc;padding:4px 4px;width:218px;height:22px;line-height:22px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.userinfor p u{text-decoration:none;}
+.userinfor p.sub{padding:0 0 0 100px; position:relative;top:45px;}
+.userinfor p.sub input{border:none;cursor:pointer;background:#2984D3;color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:230px;height:32px;line-height:32px;text-align:center;font-size:14px;font-weight:300;table-layout:auto;display:inline-table;overflow:hidden;}
+.userinfor p a{text-decoration:none;color:#2E4998;font-size:14px;}
+.userinfor p a:hover{text-decoration:underline;}
+.userinfor p span{float:left;width:100px;text-align:right;color:#000;}
+.userinfor p strong{float:right;}
+.userinfor textarea{width:300px; height:50px; padding:5px; line-height:24px; font-size:12px;border:1px solid #ccc;}
+</style>
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<!--center start-->
+<div class="UserRight" style=" height:300px;"> <{if $error_tips}>
+  <div style=" margin-top:50px;"> <{$error_tips}> </div>
+  <{ else}>
+  <h1 style="height:40px; line-height:40px;">推荐方案<span style="color:red; font-size:12px; font-weight:300; font-family:'宋体';">(请详细的填写以下信息)</span></h1>
+  <div class="URcenter">
+    <div class="userinfor">
+      <form action="user_recommend.php" method="post">
+        <p><span>方案名称：</span><b>
+          <input type='text' class="ustext" value="<{$value.pname}>" name="pname" id="pname" >
+          </b></p>
+        <p><span>日期：</span><b>
+          <input type='text' class="ustext" value="<{$value.pubdate}>" name="pubdate" id="pubdate"   onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+          </b></p>
+        <p><span>订阅截止时间：</span><b>
+          <input type='text' class="ustext" name="out_time" id="out_time" value="<{$value.out_time}>"   onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+          </b></p>
+        <p><span>赛事：</span>
+          <input id="macth" type='text' class="ustext" value="<{$value.macth}>" name="macth">
+        </p>
+        <p><span>主队 VS 客队：</span><u class="">
+          <input type='text' class="ustext"  value="<{$value.duiwu}>" name="duiwu" id="duiwu">
+          </u>如：西汉姆联<u>VS</u>赫尔城</p>
+        <p><span>推荐：</span>
+          <input type='text' class="ustext" value="<{$value.recommond}>" name="recommond" id="recommond">
+          如：西汉姆联 +0</p>
+        <p><span>单场金额：</span>
+          <input type='text' class="ustext" value="<{$value.pmoney}>" name="pmoney" id="pmoney">
+          订阅的额度</p>
+        <p><span>方案介绍：</span>
+          <textarea name="pcontent" cols="60" id="pcontent"><{$value.pcontent}></textarea>
+          (500字以内)....</p>
+        <p class="sub">
+          <input type="submit" value="保&nbsp;&nbsp;&nbsp;存" />
+          <input name="id" type="hidden" id="id" value="<{$value.sysid}>">
+          <input name="action" type="hidden" id="action" value="update">
+          <br>
+          &nbsp;&nbsp; </p>
+      </form>
+    </div>
+  </div>
+  <{/if}> </div>
+
+</body>
+</html>

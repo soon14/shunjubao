@@ -1,0 +1,285 @@
+﻿.center{background:#f9f9f9;}
+.pagebody{ width:1000px;margin:0 auto;text-align:left;min-height:1150px;background:#fff url(http://www.zhiying365365.com/www/statics/i/about01.png) no-repeat left top;}
+.renzhengtips{ height:50px;line-height:50px;text-align:center;font-size:14px;background:#FFFF99;}
+.renzhengtips a{ font-size:14px;color:#dc0000;}
+.userleft{ width:130px;min-height:1150px;float:left;border-right:1px solid #eee;}
+.userleft dl{ padding:0 0 0 0;width:130px;margin:0 auto;text-align:center;}
+.userleft dl dt{ padding:10px 0 0 0;}
+.userleft dl dt b{ font-size:14px;font-weight:900;height:40px;line-height:40px;display:inline-table;display:inline-block;zoom:1;*display:inline;height:30px;line-height:30px;}
+.userleft dl dd{}
+.userleft dl dd p{ height:30px;line-height:30px;}
+.userleft dl dd p a{font-size:14px;color:#999;}
+.userleft dl dd p span{margin:0 0 0 5px;color:#dc0000; font-size:14px; position:relative;top:-2px;}
+.userleft dl dd p span i{ font-style:normal;top:1px; padding:0 2px;position:relative;}
+.userleft dl dd p em{display:inline-table;display:inline-block;zoom:1;*display:inline; width:23px;}
+.userleft dl dd p a:hover{color:#dc0000;text-decoration:underline;}
+.userleft dl dd a:hover{}
+.userleft h1{ font-size:12px;font-weight:300;font-family:'';width:70px;height:30px;line-height:30px;background:#C32326;color:#fff;margin:10px 0 20px 24px;padding:0 0 0 10px;}
+.userright{ width:809px;float:right;padding:0 30px;text-align:left;}
+.userinfor{ border-bottom:1px solid #eee;width:809px;margin:0 auto;height:70px;padding:35px 0 0 0;}
+.userinfor dl{ height:40px;line-height:40px;}
+.userinfor dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.userinfor dl dt img{ width:60px;height:60px;border:1px solid #ccc;border-radius:60px;position:relative;top:-10px;}
+.userinfor dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:top;}
+.userinfor dl dd b{ font-size:14px;font-weight:900;padding:0 0 0 10px;}
+.userinfor dl dd p{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 8px;font-size:14px;}
+.userinfor dl dd p a{ height:28px;line-height:28px;width:88px;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#BC1E1F;text-align:center;color:#fff;border-radius:5px; font-weight:900;}
+.rightcenetr{  margin:0 auto;text-align:left;padding:20px 0 0 ;}
+.rightcenetr h1{ font-size:16px;font-family:'微软雅黑';}
+.rightcenetr h1 span{ padding:0 8px 0 0;}
+.rightcenetr h2{ font-size:12px;font-weight:300;padding:40px 0 0 10px;color:#666;}
+.rightcenetr h2 em{ width:20px;height:20px;line-height:20px;text-align:center;background:#dc0000;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;border-radius:20px;font-style:normal;margin:0 8px 0 0;}
+.userbiaodan{ padding:50px 0 0 0;text-align:left;}
+.userbiaodan dl{ height:60px;font-size:14px;}
+.userbiaodan dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:120px;text-align:right;margin:0 10px 0 0;}
+.userbiaodan dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.userbiaodan dl dd input{ width:290px;height:32px;line-height:32px;border:1px solid #ccc;}
+.userbiaodan dl dd .sub{ background:#BC1E1F;border:none;height:40px;line-height:40px;font-size:14px;color:#fff;font-weight:900;cursor:pointer;}
+.imgtips{ padding:50px 0 0 0;color:#999;}
+.uptxt{width:300px;height:28px;line-height:28px;border:1px solid #ccc;}
+.upbtn{background-color:#FFF;border:1px solid #CDCDCD;height:32px;width:120px;cursor:pointer;}
+.upfile{position:absolute;top:0;right:80px;height:24px;filter:alpha(opacity:0);opacity:0;width:260px }
+.msg{ padding:50px 0 0 0;text-align:left;}
+.tabl{}
+.tabuser ul{display:inline-table;display:inline-block;zoom:1;*display:inline;height:40px;line-height:40px;border-bottom:1px solid #ddd;width:100%;}
+.tabuser ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 0 0 4px;}
+.tabuser ul li a{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 12px;color:#000;font-size:14px;}
+.tabuser ul li a.active{border:1px solid #ddd;border-bottom:1px solid #fff;position:relative;top:-1px;font-weight:300; }
+.tabuser ul li.active{border:1px solid #ddd;border-bottom:1px solid #fff;position:relative;top:-2px;font-weight:300;font-family:'';}
+.pages{padding:16px 0 0 0;text-align:center;}
+.pages a{display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 5px;height:20px;line-height:20px;padding:2px 15px;border:1px solid #ccc;color:#888;text-align:center;}
+.pages a:hover{color:#dc0000;border:1px solid #dc0000;}
+.pages a.active{color:#dc0000;border:1px solid #dc0000;}
+.userTable{ padding:20px 0 0 0;}
+table.stripese{border-top:none;overflow:hidden;border-bottom:none;font-size:12px;overflow:hidden;width:100%;}
+table.stripese  tr th{ font-weight:300;background:#E9E9E9;height:36px;line-height:36px;padding:0 5px;}
+table.stripese  tr td{min-height:40px;line-height:40px;border:none;border-bottom:1px solid #eee;padding:0 5px;}/* 默认背景被白色 */
+table.stripese  tr td b{color:#dc000;}
+table.stripese  tr td.show{ height:5px;}
+table.stripese  tr td input{ border:1px solid #ccc;width:200px;height:24px;line-height:24px;}
+table.stripese  tr td .sub{height:28px;line-height:28px;background:#6f6f6f;color:#fff;font-size:14px;font-weight:900;border-radius:3px;border:none;position:relative;top:1px;left:1px;width:193px;cursor:pointer;}
+.caozuo{}
+.yishai{ padding:0 5px 0 0;}
+.yishai a{color:#999;}
+.caozuo a{display:inline-table;display:inline-block;zoom:1;*display:inline;height:20px;line-height:20px;padding:0 10px;border:1px solid #ddd;color:#888;text-align:center;}
+.caozuo a:hover{border:1px solid #dc0000;color:#dc0000;}
+.tuiguang{ padding:40px 0;}
+.tuiguang a{border-radius:20px;margin:0 0 0 10px;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 25px;height:30px;line-height:30px;background:#dc0000;color:#fff;font-size:14px;text-align:center;}
+.gdtype{text-align:left;position:relative;padding:0 0 0 5px;}
+.gdtype span{font-size:12px;color:#dc0000;background:url(../i/gBj.gif) no-repeat;width:17px;height:19px;line-height:19px;color:#fff;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.gdtype strong{background:url(../i/shai.gif) no-repeat;position:absolute;right:10px;top:3px;width:17px;height:19px;line-height:19px;text-indent:-5000px;cursor:pointer;}
+.jiesuancaozuo{color:#dc0000;height:23px;line-height:23px;}
+.jiesuancaozuo b{text-align:center;color:#dc0000;font-size:12px;font-weight:300;font-family:'';}
+.jiesuancaozuo b span{}
+.jiesuancaozuo strong{font-size:12px;font-weight:300;color:#000;}
+.userfooter{ height:40px;line-height:26px;background:#f9f9f9;}
+/*登录注册*/
+.loginC{ width:1000px;margin:0 auto;text-align:left;padding:30px 0;}
+.loginCleft{ width:560px;float:left;padding:30px 0;border-right:1px solid #ccc;}
+.loginCleft dl{ height:76px;line-height:76px;font-size:14px;}
+.loginCleft dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:right;}
+.loginCleft dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:top;padding:0 0 0 10px;}
+.loginCleft dl dd img{ width:113px;height:32px;position:relative;top:12px;left:5px;}
+.loginCleft dl dd span{display:inline-table;display:inline-block;zoom:1;*display:inline;color:red;padding:0 0 0 30px;background-image:url(../i/msg_bg.png);background-repeat:no-repeat;background-position:10px 30px;}
+.loginCleft dl dd em{display:inline-table;display:inline-block;zoom:1;*display:inline;color:#777;font-style:normal;padding:0 0 0 30px;background-image:url(../i/msg_bg.png);background-repeat:no-repeat;background-position:25% 12.8%;}
+.loginCleft dl dd u{ text-decoration:none;display:inline-table;display:inline-block;zoom:1;*display:inline;color:#777;font-style:normal;padding:0 0 0 30px;background-image:url(../i/msg_bg.png);background-repeat:no-repeat;background-position:25% 12.8%;}
+.loginCleft dl dd input{ width:250px;height:28px;line-height:28px;padding:2px;border:1px solid #ccc;border-radius:1px;}
+.loginCleft dl dd.tijiao{ }
+.loginCleft dl dd.tijiao input{ background:#CE050B;width:256px;height:34px;line-height:30px;border:none;cursor:pointer;font-size:14px;color:#fff;border-radius:3px;font-size:14px; font-weight:900;}
+.code{ width:100px;background:#999;color:#fff;position:relative;left:-5px;text-align:center; cursor:pointer;}
+.loginCleft dl dd a{color:#999;font-size:14px;}
+.loginCleft dl dd a:hover{ text-decoration:none;color:#000;}
+.lianhelogin{ padding:10px 0 0 73px;}
+.lianhelogin h2{ font-size:14px;font-weight:300;}
+.lianheloginul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.lianhelogin ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:20px 20px 0 0;}
+.lianhelogin ul li img{ margin:0 5px 0 0;position:relative;top:6px;}
+.lianhelogin ul li a{color:#000;}
+.loginRight{width:350px;float:right;padding:35px 0 0 50px;min-height:400px;}
+.loginRight h1{ font-size:20px;height:70px;line-height:70px;font-family:'微软雅黑'; font-weight:900;}
+.loginRight p{ height:34px;line-height:34px;font-size:14px;color:#777;}
+.loginCleft .error{display:inline-table;display:inline-block;zoom:1;*display:inline;color:red; margin:0 0 0 70px; font-size:14px;background:url(../i/errortips.gif) no-repeat left center; padding:0 0 0 20px;}
+/*pay*/
+.payname{clear:both; text-align:left; width:1000px; margin:0 auto;}
+.payname ul{ padding:15px 0 0 0;}
+.payname ul li{line-height:22px;}
+.payname ul li b{color:#dc0000;font-size:20px;font-weight:900;}
+.payname ul li strong{color:#444;font-size:12px;font-weight:300;}
+.pay{border-top:1px solid #ccc;width:1000px;margin:18px auto;background:#fff;}
+.paytips{margin:0 auto;padding:10px;}
+.paycenter{padding:30px 0;overflow:hidden;}
+.paycenter dl{width:1000px;padding:20px 0;}
+.paycenter dl.show{ padding:40px 0;}
+.paycenter dl dt{float:left;width:118px;text-align:right;line-height:30px;font-size:14px;}
+.paycenter dl dd{float:left;width:860px;text-align:left;line-height:30px;}
+.paycenter dl dd ul{}
+.paycenter dl dd ul li{float:left;}
+.paycenter dl dd ul li a{text-decoration:none;border:1px solid #C3C4C4;background:#f5f5f5;padding:9px 25px;margin:0 8px 0 0;font-size:14px;position:relative;top:3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;}
+.paycenter dl dd ul li a:hover{text-decoration:none;border:1px solid #E53C3F;background:#fff;color:#000;}
+.paycenter dl dd ul li a.active{text-decoration:none;border:1px solid #E53C3F;background:url(../i/T1_pgo.gif) no-repeat right bottom;color:#000;}
+.paycenter dl dd ol{}
+.paycenter dl dd ol li{float:left;}
+.paycenter dl dd ol li a{display:block;float:left;overflow:hidden;}
+.paycenter dl dd ol li.paypal{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) no-repeat;}
+.paycenter dl dd ol li.paypal a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.paypal a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.paypal a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.tenpay{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 922px;}
+.paycenter dl dd ol li.tenpay a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.tenpay a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.tenpay a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.jianshe{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1189px;}
+.paycenter dl dd ol li.jianshe a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.jianshe a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.jianshe a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.zhaoshang{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 5px 1055px;}
+.paycenter dl dd ol li.zhaoshang a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.zhaoshang a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.zhaoshang a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.nongye{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1099px;}
+.paycenter dl dd ol li.nongye a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.nongye a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.nongye a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.gongshang{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 4px 1145px;}
+.paycenter dl dd ol li.gongshang a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.gongshang a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.gongshang a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.zhongguo{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 4px 1010px;}
+.paycenter dl dd ol li.zhongguo a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.zhongguo a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.zhongguo a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.jiaotong{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 968px;}
+.paycenter dl dd ol li.jiaotong a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.jiaotong a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.jiaotong a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.zhongxin{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1846px;}
+.paycenter dl dd ol li.zhongxin a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.zhongxin a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.zhongxin a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.youzheng{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 2110px;}
+.paycenter dl dd ol li.youzheng a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.youzheng a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.youzheng a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.guangfa{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 2068px;}
+.paycenter dl dd ol li.guangfa a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.guangfa a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.guangfa a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.guangda{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 2022px;}
+.paycenter dl dd ol li.guangda a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+
+.paycenter dl dd ol li.shenfa{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/shenfa.png) no-repeat 11px 5px;}
+.paycenter dl dd ol li.shenfa a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.shenfa a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.shenfa a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+.paycenter dl dd ol li.huaxia{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/huaxia.png) no-repeat 11px 0;}
+.paycenter dl dd ol li.huaxia a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.huaxia a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.huaxia a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+
+.paycenter dl dd ol li.guangda a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.guangda a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.pingan{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1935px;}
+.paycenter dl dd ol li.pingan a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.pingan a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.pingan a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.xingye{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1890px;}
+.paycenter dl dd ol li.xingye a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.xingye a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.xingye a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.minsheng{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1758px;}
+.paycenter dl dd ol li.minsheng a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.minsheng a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.minsheng a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.pufa{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1802px;}
+.paycenter dl dd ol li.pufa a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.pufa a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.pufa a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.shanghai{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1668px;}
+.paycenter dl dd ol li.shanghai a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.shanghai a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.shanghai a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.dongya{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1272px;}
+.paycenter dl dd ol li.dongya a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.dongya a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.dongya a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.hangzhou{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1624px;}
+.paycenter dl dd ol li.hangzhou a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.hangzhou a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.hangzhou a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.beijing{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 4px 1580px;}
+.paycenter dl dd ol li.beijing a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.beijing a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.beijing a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.beijingnongshang{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1538px;}
+.paycenter dl dd ol li.beijingnongshang a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.beijingnongshang a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.beijingnongshang a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.wenzhou{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1448px;}
+.paycenter dl dd ol li.wenzhou a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.wenzhou a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.wenzhou a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.chengdou{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1405px;}
+.paycenter dl dd ol li.chengdou a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.chengdou a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.chengdou a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.nanjing{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1316px;}
+.paycenter dl dd ol li.nanjing a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.nanjing a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.nanjing a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+.paycenter dl dd ol li.ningbo{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/bank_ico.png) 0 1360px;}
+.paycenter dl dd ol li.ningbo a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.ningbo a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.ningbo a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+
+
+
+
+.paycenter dl dd ol li.weixin{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/weixinpay.png) no-repeat 12px 0;}
+.paycenter dl dd ol li.weixin a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.weixin a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.weixin a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+
+.paycenter dl dd ol li.yeepay{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/yeepay.png) no-repeat 5px -2px;}
+.paycenter dl dd ol li.yeepay a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.yeepay a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.yeepay a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+.paycenter dl dd ol li.onlinepayment{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/onlinepayment.png) no-repeat;}
+.paycenter dl dd ol li.onlinepayment a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.onlinepayment a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.onlinepayment a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+.paycenter dl dd ol li.jingdong{text-decoration:none;width:161px;height:39px;margin:0 8px 12px 0;font-size:14px;background:url(../i/jdbuy.png) no-repeat 1px -4px;}
+.paycenter dl dd ol li.jingdong a{text-decoration:none;border:1px solid #C3C4C4;width:161px;height:39px;margin:0 8px 0 0;font-size:14px;position:relative;top:-3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#000;display:block;text-indent:-5000px;}
+.paycenter dl dd ol li.jingdong a:hover{text-decoration:none;border:1px solid #E53C3F;color:#000;}
+.paycenter dl dd ol li.jingdong a.active{text-decoration:none;border:1px solid #E53C3F;color:#000;background:url(../i/T1_pgo.gif) no-repeat right bottom;}
+
+
+.payNext{text-align:left;padding:30px 117px;}
+.payNext p{}
+.payNext p a{color:#fff;font-size:14px;font-family:'微软雅黑';background:#FE852C;padding:8px 60px;border:1px solid #bbb;}
+.payNext p a:hover{background:#e10c08;padding:8px 60px;}
+/*系统提示*/
+.head_tips{width:100%;margin:0 auto;text-align:left;border-bottom:2px solid #eeeee0;background:#CE050B;}
+.head_tips h1{font-size:20px;font-weight:300;padding:0;margin:0;height:50px;line-height:50px;position:relative;font-family:'微软雅黑';letter-spacing:3px;color:#fff;width:1000px;margin:0 auto;}
+.head_tips h1 strong{position:absolute;top:-5px;left:180px;font-size:14px;font-weight:300;letter-spacing:0;color:#f1f1f1;font-family:'微软雅黑';}
+.head_tips h1 b{position:absolute;padding:0 2px;}
+.head_tips h1 b a{text-decoration:none;color:#fff;border:none;font-size:22px;font-family:'微软雅黑';font-weight:300;}
+.head_tips h1 b a:hover{text-decoration:none;color:#fff;}
+.Tipcenter{padding:15px 0;border:1px solid #ccc;width:1000px;margin:18px auto;-moz-box-shadow:3px 3px rgba(0,0,0,0.1);-webkit-box-shadow:3px 3px rgba(0,0,0,0.1);box-shadow:3px 3px rgba(0,0,0,0.1);}
+.Tips{width:800px;margin:0 auto;text-align:center;border-top:1px dashed #ccc;height:40px;line-height:40px;color:#888;}
+.systemtips{ padding:80px 0 0 0;}
+.systemtips p{ font-size:18px;font-family:'微软雅黑';line-height:32px;height:32px;}
+.systemtips p span{background:url(../i/raster.jpg) no-repeat 0 -96px;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.systemtips p em{background:url(../i/raster.jpg) no-repeat 61% 90%;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-style:normal;}
+.ohter{ height:100px;}
+.ohter p{height:30px;line-height:30px;padding:20px 0 0 0;}
+.ohter p span{background:url(../i/showRight.png) no-repeat left bottom;width:16px;height:14px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.ohter p em{ font-style:normal;position:relative;top:-2px;}
+.ohter p a{text-decoration:none;color:#000;font-size:12px;padding:0 15px 0 5px;position:relative;top:-3px;}
+.ohter p a:hover{text-decoration:none;color:#dc0000;}
+.ohter p a.active{text-decoration:none;color:#dc0000;}

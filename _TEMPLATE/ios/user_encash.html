@@ -1,0 +1,59 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" />
+<link type="text/css" rel="stylesheet" href="<{'wap_user.css'|getStaticsUrl}>" />
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+    });
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+	$("#end_time").focus(function(){
+        //if (!$("#end_time").val()) {
+        showCalendar('end_time', 'y-mm-dd');
+        //}
+    });	
+});
+</script>
+<!--提现记录 start-->
+<div class="ustitle">
+  <h1><em>提现记录<b></b><i></i></em></h1>
+</div>
+<div class="usTips">
+  <p><b>冻结资金：</b><strong><{$userAccountInfo.frozen_cash}>元</strong></p>
+</div>
+<div>
+  <div class="boldtxt">
+    <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+      <tr>
+        <th>提现时间</th>
+        <th>提现额度</th>
+        <th>状态</th>
+      </tr>
+      <{foreach from=$userEncashInfos item=userEncashInfo name=log}>
+      <tr>
+        <td height="30"><{$userEncashInfo.create_time}></td>
+        <td><{$userEncashInfo.money}>元</td>
+        <td><{$EncashStatusDesc[$userEncashInfo.encash_status].desc}></td>
+      </tr>
+      <{/foreach}>
+    </table>
+  </div>
+  <div class="clear"></div>
+  <div style="padding:10px 0;"> <{if $previousUrl || $nextUrl}>
+    <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+      <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> </div>
+    <{/if}>
+    <{/if}> </div>
+</div>
+<!--提现记录 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

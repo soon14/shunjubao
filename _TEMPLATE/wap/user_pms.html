@@ -1,0 +1,80 @@
+<{include file="header.html"}>
+</head>
+<body>
+<{include file="top.html"}>
+<script type="text/javascript" src="<{'navigator.js'|getStaticsUrl}>"></script>
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var TMJF = jQuery.noConflict(true);
+</script>
+<script type="text/javascript">
+TMJF(function($) {
+	
+	$(".operate").click(function(){
+		var type = $(this).attr('type');
+		$.post(Domain + '/pms/operate.php'
+                , {pmsId: $(this).attr('pmsId'),
+				type : type
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    	return;
+                    }
+                }
+                , 'json'
+            );
+	});	
+	
+});
+</script>
+<!--用户中心消息 start-->
+<div class="center">
+  <div class="Paymingxi">
+    <div class="wapTAB">
+      <dl>
+        <dt><strong><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_pms.php?status=1">未读消息<span>(<{$unRecieviSum}>)</span></a></strong></dt>
+        <dt><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_pms.php?status=2">已读消息</a></dt>
+      </dl>
+    </div>
+    <div>
+      <div class="msginfor">
+        <table width="99%" border="0" cellpadding="0" cellspacing="0">
+          <{foreach from=$userPMSInfos item=item key=key name=pms}>
+          <tr>
+            <td><div class="msgC">
+                <dl class="<{if $smarty.foreach.pms.iteration % 2==0}>gehang<{else}>first<{/if}>">
+                  <dd><b>[&nbsp;<{$item.subject}>&nbsp;]</b></dd>
+                  <dd><{$item.body}></dd>
+                  <dd><span><{$item.create_time}></span><em><{if $item.status == 1}><a class="operate" href="javascript:void(0)" type="PmsToReceive" pmsId=<{$item.id}> >已读</a> <{elseif $item.status == 2}><a class="operate" href="javascript:void(0)" type="PmsToDelete" pmsId=<{$item.id}> >删除</a><{/if}></em></dd>
+                </dl>
+              </div></td>
+          </tr>
+          <{/foreach}>
+        </table>
+      </div>
+      <div>
+        <div class="msgpages">
+          <ul>
+            <{if $previousUrl || $nextUrl}>
+            <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_pms.php?status=<{$status}>">首页</a></li>
+            <{/if}>
+            <{if $previousUrl}>
+            <li><a href="<{$previousUrl}>">上一页</a></li>
+            <{/if}>
+            <{if $nextUrl}>
+            <li><a href="<{$nextUrl}>">下一页</a></li>
+            <{/if}>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--用户中心消息 end-->
+<{include file="../wap/footer.html"}>
+</body>
+</html>

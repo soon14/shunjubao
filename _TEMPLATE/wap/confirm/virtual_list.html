@@ -1,0 +1,280 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<script type="text/javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+</script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.post(Domain + '/prize/getPrize.php', {
+			type : 1,
+			limit : 40,
+		}, function(data) {
+			var jishi_html = '';
+			if(data.ok) {
+				var data_msg = data.msg;
+				jishi_html += "<ul>";
+				for(var key in data_msg) {
+					jishi_html += "<li>"+data_msg[key].u_name+"<span>"+data_msg[key].prize+"元</span></li>";
+				}
+				jishi_html += "</ul>"
+			}
+			$("#scrollDiv_keleyi_com").html(jishi_html);
+		}, 'json'
+		);
+		
+	$("#subBtn").click(function(){
+		var Multiple = Number($("#Multiple").val());
+		Multiple = Multiple - 1;
+		$("#Multiple").val(Multiple);
+		cal();
+	});
+	$("#addBtn").click(function(){
+		var Multiple = Number($("#Multiple").val());
+		Multiple = Multiple + 1;
+		$("#Multiple").val(Multiple);
+		cal();
+	});
+	
+	$("#Multiple").change(function(){
+		cal();
+	});
+	$("#Multiple").keyup(function(){
+		cal();
+	});
+	$(".o").click(function() {
+		var active = $(this).hasClass("active");
+		if(active) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+		cal();
+	});
+	 
+	$(".hideMatch").click(function(){
+		var tr = $(this).closest('tr');
+		tr.addClass('none');
+	});
+	
+	$("#submit1").click(function(){
+		
+		var Multiple = $("#Multiple").val();
+		var money = $("#money").val();
+		var combination = $("#combination").val();
+		if(money==''||money==0) return false;
+		if(Multiple==''||Multiple==0) return false;
+		if(combination=='') return false;
+		
+		return true;
+	});
+});
+//投注1|h#1&a#1,2|a#2
+function getCombination() {
+	var combination = '';
+	$(".match").each(function(){
+		if(!$(this).hasClass('none')) {
+			var a = $(this).find('.o');
+			var odds = '';
+			var matchId = $(this).attr('matchId');
+			a.each(function(){
+				if($(this).hasClass('active')) {
+					var odd = $(this).text();
+					if($(this).hasClass('oddh')) {
+						odd = 'h#' + odd;
+					}
+					if($(this).hasClass('odda')) {
+						odd = 'a#' + odd;
+					}
+					odds += odd + '&';
+				}
+			});
+			if(odds !=''){
+				odds = odds.substr(0, odds.length - 1);
+				combination += matchId + '|' + odds + ',';
+			}
+		}
+	});
+	if(combination !='') combination = combination.substr(0, combination.length - 1);
+	return combination;
+}
+//计算投注积分
+function cal() {
+	var Multiple = Number($("#Multiple").val());
+	
+	if(isNaN(Multiple)) {
+		Multiple = 1;
+	}
+	
+	if(Multiple>=100001) {
+		alert('最大允许投注100000倍');
+		Multiple=100000;
+	}
+	
+	if(Multiple==0) Multiple=1;
+	
+	$("#Multiple").val(Multiple);
+	
+	var select = 0;
+	$(".o").each(function(){
+		if($(this).hasClass("active")) select++;
+	});
+	
+	var money = select*Multiple*2;
+	$("#betMoney").text(money);
+	$("#money").val(money);
+	$("#combination").val(getCombination());
+}
+</script>
+<body>
+<style>
+.tipsters{height:68px;margin:0 auto;background:#fff; font-size:12px;}
+.NewsNav{padding:10px 0 0 5px;line-height:20px;position:relative;margin:0 auto;}
+.NewsNav h1{font-size:12px;font-weight:300;text-align:left; line-height:24px;position:relative;}
+.NewsNav h1 em{font-size:16px;font-weight:300;color:#555;font-family:'微软雅黑';padding:0 0 0 5px;font-style:normal;}
+.touzhutips{line-height:22px;padding:5px;background:#FFFFCC;color:#555;text-align: center;}
+.touzhutips b{font-weight:900;colo:#656565;}
+.touzhutips em{border:1px solid red;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;font-style:normal;width:15px;height:15px;line-height:15px;text-align:center;background:red;color:#fff;margin:0 4px 0 0;display:inline-table;display:inline-block;zoom:1;*display:inline; font-size:12px;}
+table.stripe{border:1px solid #e2e2e2;border-bottom:none;font-size:12px;}
+table.stripe table{width:100%;}
+table.stripe  tr td{text-align:center;background:#fff;vertical-align:middle;padding:0;margin:0;}/* 默认背景被白色 */
+table.stripe  tr.alt td {background:#F2F2F2;border-bottom:1px solid #CFCFCF;border-top:1px solid #CFCFCF;padding:0;margin:0;}/* 默认隔行背景颜色 */
+table.stripe  tr.over td {background:#fff;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr.time td {background:#FFE3C1;overflow:hidden;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr:hover{}
+.Saishi{width:66px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;position:relative;overflow:hidden;line-height:20px;height:130px;}
+.Saishi h1{font-size:12px;font-weight:900;background:url(../i/Righrxian.gif) no-repeat right center;height:55px;line-height:55px;width:65px;}
+.Saishi dl{padding:5px 0 0 0;}
+.Saishi dl dt b{width:65px;height:22px;line-height:22px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.Saishi dl dt.hidden{padding:5px 0 0 0;}
+.Saishi dl dt a{color:#dc0000;}
+.Saishi dl dt a em{font-style:normal;}
+.Saishi dl dd{-moz-border-radius:35px;-webkit-border-radius:35px;border-radius:35px;width:64px;height:64px;line-height:20px;position:relative;margin:10px auto;border:1px solid #e2e2e2;background:#fff;}
+.Saishi dl dd u{position:absolute;top:-10px;height:10px;line-height:10px;width:1px;background:#e2e2e2;left:32px;}
+.Saishi dl dd i{position:absolute;bottom:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.Saishi dl dd span{color:#666;}
+.Saishi dl dd strong{font-weight:900;}
+.Saishi dl dd span a{color:#666;}
+.Saishi dl dd em{font-style:normal;display:block;}
+.Saishi dl dd p{}
+.lcdxf{display:block;width:94%;margin:0 auto;text-align:left;}
+.lcdxf ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:94%;}
+.lcdxf ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.lcdxf ul li em{ font-style:normal;width:25px;height:25px;line-height:25px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;left:10px;font-size:12px;font-weight:300;-moz-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-align:center;}
+.lcdxf dl{padding:5px 0 0 0 ;clear:both;width:100%;}
+.lcdxf dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:44%;margin:0 auto;height:40px;text-align:center;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p.Rangfen{width:20px;color:#dc0000;height:40px;line-height:40px;}
+.lcdxf dl dt p.Rangfen em{font-style:normal;color:#dc0000;}
+.lcdxf dl dt p b{font-size:12px;font-weight:300;padding:0 4px 0 0;}
+.lcdxf dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:30px;line-height:30px;color:#000;background:#fff;color:#000;width:92%;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.lcdxf dl dt p a.active{background:#E02321;color:#fff;}
+.jfc{border-top:1px solid #e2e2e2;display:inline-table;display:inline-block;zoom:1;*display:inline; text-align:center; font-size:12px; width:100%; padding:0 0 30px 0;}
+.jfc h1{}
+.Tbeishu{display:inline-table;display:inline-block;zoom:1;*display:inline;width:300px;margin:0 auto;overflow:hidden; padding:25px 0 15px 0;}
+.Tbeishu ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:300px;margin:0 auto;height:30px;line-height:30px;overflow:hidden; position:relative;}
+.Tbeishu ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;height:30px;line-height:30px;overflow:hidden;}
+.Tbeishu ul li a{border:1px solid #ccc;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:900;overflow:hidden;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#f9f9f9;}
+.Tbeishu ul li.text{border:1px solid #ddd; position:relative;top:0; height:28px; line-height:28px; width:60}
+.Tbeishu ul li.text input{border:none;width:56px; height:26px;line-height:26px;text-align:center;}
+.Tbeishu ul li.jf b{ font-size:12px; font-weight:300; padding:0 5px;color:red;}
+.touzhuSub{height:38px;line-height:38px;overflow:hidden;text-align:center;width:138px;padding:0;margin:0 auto;background:#B70408;border:none;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;vertical-align:middle;}
+.touzhuSub input{display:block;height:38px;line-height:38px;text-align:center;width:138px;border:none;background:none;cursor:pointer;font-size:18px;font-weight:900;font-family:'微软雅黑';color:#fff;letter-spacing:2px;}
+</style>
+<!--智赢页面头部 end-->
+<div class="touzhutips"><em>!</em>积分投注换彩金，<span style="position:relative;top:3px;color:red;">*</span>所有赛事只能投注单场，不能串关!</div>
+<!---->
+<div class="tipsters">
+  <div class="NewsNav">
+    <h1><em>2015中国足球超级联赛...支持人中国人自己的联赛！</em></h1>
+  </div>
+</div>
+<!---->
+<!--center start-->
+<div class="">
+  <div class="BitCenter">
+    <div>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0" class="stripe" id="dataList">
+        <tr>
+          <td><table cellspacing="0" cellpadding="0">
+              <tbody>
+              <{foreach from=$vb_lists item=item key=key}>
+              <tr matchId="<{$item.id}>">
+                <td><div></div></td>
+                <td style="width:65px;"><div class="Saishi">
+                    <dl>
+                      <dt><b class="name ssName" style="background:#<{if $item.sport=='fb'}>4D94FC<{else}>FF6600<{/if}>; color:#fff;">中国足球超级联赛</b></dt>
+                      <dd>
+                        <p><u></u><i></i><strong style="font-weight:300;"><{$item.num}></strong></p>
+                        <p><span style="font-size:10px;"><{$item.start_time|truncate:10:""}></span><em>截止</em></p>
+                      </dd>
+                      <dl>
+                      </dl>
+                    </dl>
+                  </div></td>
+                <td><div class="lcdxf">
+                    <ul>
+                      <li><b>
+                        <hn><{$item.host_team}></hn>
+                        </b></li>
+                      <li><span>VS</span></li>
+                      <li><strong>
+                        <gn><{$item.guest_team}></gn>
+                        </strong></li>
+                      <li></li>
+                    </ul>
+                    <dl>
+                      <dt>
+                        <p><a class="o oddh" href="javascript:void(0);"><b>上盘</b><{$item.h}></a></p>
+                        <p><a class="o odda" href="javascript:void(0);"><b>下盘</b><{$item.a}></a></p>
+                        <p class="Rangfen">
+                          <label pool="hilo" class="line"><{$item.remark}></label>
+                        </p>
+                      </dt>
+                    </dl>
+                  </div></td>
+              </tr>
+              <{/foreach}>
+              </tbody>
+              
+            </table></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/confirm_vb.php" method="post" id="form1">
+  <div class="betbox">
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td><div class="Tbeishu">
+                <ul>
+                  <li class="show">投注倍数：</li>
+                  <li><a class="" href="javascript:void(0);" id="subBtn">-</a></li>
+                  <li class="text">
+                    <input type="text" value="1" maxlength="7" autocomplete="off" id="Multiple" name="multiple">
+                  </li>
+                  <li><a class="" href="javascript:void(0);" id="addBtn">+</a></li>
+                  <li class="jf">投注<b id="betMoney">0</b>积分</li>
+                </ul>
+              </div>
+              <div class="jftouzhutips"><span>*</span>所有赛事只能投注单场，不能串关，足球篮球更不能混合投注</div></td>
+            <td><div class="BetCheckT">
+                <div class="touzhuSub">
+                  <input type="hidden" name="money" id="money" value="0"/>
+                  <input type="hidden" name="combination" id="combination" value=""/>
+                  <input type="submit" id="submit1" value="立即投注">
+                </div>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
+<!--center end-->
+<{include file="../wap/footer.html"}>
+</body>
+</html>

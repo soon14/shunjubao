@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<title>智赢网智赢竞彩智赢彩票触屏版！</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+<meta name="keywords" content="智赢竞彩,竞彩足球,手机买竞彩,手机投注竞彩,手机玩球,手机买足彩,手机彩票,手机竞彩,wap竞彩,wap竞彩投注,智赢手机版,智赢触屏版买彩。" />
+<meta name="description" content="智赢网,智赢彩票触屏手机版版为您提供竞彩足球,竞彩篮球,北京单场等其他彩票的投注，及提供精准的比赛分析！" />
+<link href="http://m.zhiying365365.com/www/statics/c/wap_header.css" type="text/css" rel="stylesheet" />
+<link href="http://m.zhiying365365.com/www/statics/c/wap_footer.css" type="text/css" rel="stylesheet" />
+<link href="http://m.zhiying365365.com/www/statics/c/wap_user.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="http://m.zhiying365365.com/www/statics/c/calendar.css" >
+<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/calendar.js" ></script>
+<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/calendar-zh.js" ></script>
+<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/calendar-setup.js"></script>
+<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script language="javascript">
+var Domain = 'http://m.zhiying365365.com';
+var ZY_CDN = 'http://m.zhiying365365.com/www/statics';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "http://m.zhiying365365.com/www/statics/i"
+    	, domain: "http://m.zhiying365365.com"
+};
+</script>
+<script language="javascript" src="http://m.zhiying365365.com/www/statics/j/common.js"></script>      	</head>
+<body>
+<script type="text/javascript">
+var TMJF = jQuery.noConflict();
+TMJF(function($) {
+	var u_name = '';
+	var cash = 0.00;
+	var u_img ='';
+	var arrCookie = document.cookie.split(/;\s*/); 
+	//遍历cookie数组，处理每个cookie对 
+	for(var i=0;i<arrCookie.length;i++){
+		var arr = arrCookie[i].split("=");
+		//找到名称为userId的cookie，并返回它的值
+		if("u_name" == arr[0]){
+			u_name = decodeURIComponent(arr[1]); 
+		}
+		if("cash" == arr[0]){
+			cash = arr[1];
+		}
+		if("u_img" == arr[0]){
+		u_img = decodeURIComponent(arr[1]); 
+	}
+	}
+	var welcome_str = "&nbsp;";
+	if (u_name != '') {
+		if (u_img != '') {
+		
+			var u_img_str ='<img src="'+u_img+'">';
+			
+		}else{
+			var u_img_str ='<img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">';
+		}
+		welcome_str += "<a href=\"http://m.zhiying365365.com/account/user_center.php\">" + u_img_str +"<b>" + u_name + "</b></a><span>|</span><a href=\"http://m.zhiying365365.com/account/user_charge.php\">充值</a><span>|</span><a href=\"http://m.zhiying365365.com/passport/logout.php\">退出</a></h1>";
+	} else {
+		welcome_str += "<a href=\"http://m.zhiying365365.com/passport/login.php\">登录</a><span>|</span><a href=\"http://m.zhiying365365.com/passport/reg.php\">注册</a></h1>";
+	}
+	$(".topCenter").find("h1").eq(0).html(welcome_str);
+	
+});
+var $ = jQuery.noConflict(true);
+</script>
+
+<div class="top">
+  <div class="logo"><h1><a href="http://m.zhiying365365.com/">智赢网</a></h1></div>
+  <div class="topCenter">
+    <h1></h1>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+    });
+	
+	$("#end_time").focus(function(){
+        showCalendar('end_time', 'y-mm-dd');
+    });	
+	$("table tr:nth-child(odd)").css("background-color","#fff");
+});
+</script>
+<!--用户中心账户明细 start-->
+<div class="wapxtags" style="width:99%; margin:15px auto;">
+  <ul>
+    <li class="active"><a href="http://m.zhiying365365.com/account/user_ticket.php">账户明细</a></li>
+  </ul>
+  <div class="clear"></div>
+</div>
+
+<div class="Paymingxi">
+  <div>
+    <table class="" width="100%" bordercolor="#fff" border="0" cellspacing="0" cellpadding="0" style="width:100%; overflow:hidden;">
+      <td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_account_log.php">明细</a></div></td>
+        <td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_gift_log.php">彩金</a></div></td>
+        <td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_charge_log.php" class="active">充值</a></div></td>
+        <td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_ticket_log.php">奖金</a></div></td>
+		<td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_ticket_log.php">提成</a></div></td>
+		<td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_ticket_log.php">我的打赏</a></div></td>
+		<td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_ticket_log.php">打赏我的</a></div></td>
+		<td><div class="zhanghutab"><a href="http://m.zhiying365365.com/account/user_ticket_log.php">推广</a></div></td>
+    </table>
+    <div style="padding:18px 0 0 0;">
+      <div class="boldtxt">
+        <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+          <tr>
+            <th>交易类型</th>
+            <th>时间</th>
+            <th>订单号</th>
+            <th>收入</th>
+          </tr>
+                                      </table>
+                <div class="tips">暂时没有您的信息! </div>
+                 </div>
+    </div>
+  </div>
+</div>
+<!--用户中心账户明细 end-->
+<div class="footer" style="height:auto; line-height:26px;padding:14px 0; background:#f4f4f4;"><p style=" height:32px;width:48%;padding:0 5px; line-height:30px;border:1px solid #e2e2e2; border-radius:5px; margin:0 auto;">客服热线：010-64344882</p><p style="padding:5px 0 0 0;">京ICP备14016851-1号&nbsp;京ICP证150586号</p><p>2014-2017&copy;智赢彩票&nbsp;京公安网备11011402000202</p></div></body>
+</html>

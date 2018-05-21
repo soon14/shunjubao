@@ -1,0 +1,95 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "<{$smarty.const.STATICS_BASE_URL}>/i"
+    	, domain: "<{$smarty.const.ROOT_DOMAIN}>"
+};
+</script>
+<script src="<{'china_area.js'|getStaticsUrl}>"></script>
+<script src="<{'step.js'|getStaticsUrl}>"></script>
+</head><body>
+<!--用户中心绑定银行卡 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1><em>绑定银行卡<b></b><i></i></em></h1>
+    <{if $userRealInfo.realname}>
+    <div class="usTips">
+      <p>请如实的填写以下信息。</p>
+    </div>
+    <div class="wap_loginC" >
+      <div class="">
+        <form method="post">
+		  <{if $msg_error}>
+          <p class="error"><{$msg_error}></p>
+          <{/if}>
+          <{if $msg_success}>
+          <p class="error"><{$msg_success}></p>
+          <{/if}>
+          <p class="other">真实姓名： <strong><{$userRealInfo.realname}></strong></p>
+          <p class="other">归&nbsp;&nbsp;属&nbsp;&nbsp;地：
+            <{if $userRealInfo.bank_province && $userRealInfo.bank_city}>
+            <{$userRealInfo.bank_province}>&nbsp;&nbsp;&nbsp;&nbsp;
+            <{$userRealInfo.bank_city}>
+            <{else}>
+            <select name="f[province]" class="select1" id="pselect1">
+              <option value="" selected>请选择</option>
+            </select>
+            <select name="f[city]" class="select2" id="pselect2">
+              <option value="" selected>请选择</option>
+            </select>
+            <{/if}>
+            </p>
+          <{if $userRealInfo.bank}>
+          <p class="other">开&nbsp;&nbsp;户&nbsp;&nbsp;行：<b>&nbsp;<{$userRealInfo.bank}></b><{else}>
+          <p class="other">开&nbsp;&nbsp;户&nbsp;&nbsp;行：</p>
+          <p>
+            <input type="text" class="inputc1" name="bank" id="bank"/>
+          </p>
+          </p>
+          <{/if}>
+          <{if $userRealInfo.bank_branch}>
+          <p class="other">支行名称：<b><{$userRealInfo.bank_branch}></b> <{else}>
+          <p class="other">支行名称：</p>
+          <p>
+            <input type="text" class="inputc1" name="bank_branch" id="bank_branch"/>
+          </p>
+          </p>
+          <{/if}>
+          <{if $userRealInfo.bankcard}>
+          <p class="other">银行卡号：<b><{$userRealInfo.bankcard}></b><br/><br/><br/><{else}>
+          <p class="other">银行卡号：</p>
+          <p>
+            <input type="text" class="inputc1" name="bankcard" id="bankcard"/>
+          </p>
+          </p>
+          <{/if}> 
+          <{if !$userRealInfo.bankcard}>
+          <p class="other">再次确认：</p>
+          <p class="other">
+            <input type="text" class="inputc1" name="rebankcard" id="rebankcard"/>
+            <span class="none">请再一次输入输入您的银行卡卡号。</span></p>
+          <p class="sub">
+            <input type="submit" class="loginsub" value="提&nbsp;&nbsp;&nbsp;交" />
+          </p>
+          <{/if}>
+        </form>
+		<div class="clear"></div>
+      </div>
+    </div>
+    <{else}>
+    <div class="usTips">
+      <p><b>温馨提示：</b>您未实名认证，认证才可绑定银行卡。</p>
+    </div>
+    <div class="shiming"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_realinfo.php">进行实名认证</a> <{/if}> </div>
+  </div>
+</div>
+<!--用户中心绑定银行卡 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

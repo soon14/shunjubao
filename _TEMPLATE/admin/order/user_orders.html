@@ -1,0 +1,299 @@
+<{include file="../admin/header.html"}>
+<style>
+.gdtype{text-align:left;position:relative;padding:0 0 0 5px;}
+.gdtype span{ font-size:12px;color:#dc0000;background:url(<{$smarty.const.STATICS_BASE_URL}>/i/gBj.gif) no-repeat;width:17px;height:19px;line-height:19px;color:#fff;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.gdtype strong{background:url(<{$smarty.const.STATICS_BASE_URL}>/i/shai.gif) no-repeat;position:absolute;right:10px;top:3px;width:17px;height:19px;line-height:19px;text-indent:-5000px;cursor:pointer;}
+</style>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_date").focus(function(){
+		//if (!$("#start_date").val()) {
+		showCalendar('start_date', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_date").focus(function(){
+	    //if (!$("#end_date").val()) {
+	    showCalendar('end_date', 'y-mm-dd');
+	    //}
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(root_domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td class="show">'+ k +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].num +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td class="show">'+ option_html +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	});
+	var refund_money_ing = false;
+	$(".refund_money").click(function(){
+		if (!confirm("本单的本金将全部退还到用户的账户，确定为:  "+$(this).attr('u_name')+"   执行"+$(this).text()+"操作吗？")) return false; 
+		if (refund_money_ing) return false;
+		$.post(root_domain + '/admin/admin_operate.php'
+                , {userTicketId: $(this).attr('userTicketId'),
+					type:'refund_money'
+                  }
+                , function(data) {
+                	refund_money_ing = true;
+                	alert(data.msg);
+                	if (data.ok) {
+                		window.location.reload(true);
+                	}
+                }
+                , 'json'
+            );
+		refund_money_ing = false;
+	});
+	var manu_prize_ing = false;
+	$(".manu_prize").click(function(){
+		if (!confirm("确定为:  "+$(this).attr('u_name')+"   执行"+$(this).text()+"操作吗？")) return false; 
+		if (manu_prize_ing) return false;
+		$.post(root_domain + '/admin/admin_operate.php'
+                , {userTicketId: $(this).attr('userTicketId'),
+					type:'manu_prize'
+                  }
+                , function(data) {
+                	manu_prize_ing = true;
+                	alert(data.msg);
+                	if (data.ok) {
+                		window.location.reload(true);
+                	}
+                }
+                , 'json'
+            );
+		manu_prize_ing = false;
+	});
+	var compayn_to_zhiying_img = false;
+	$(".company_to_zhiying").click(function(){
+		if (!confirm("确定为:  "+$(this).attr('u_name')+"   的订单(ID：" + $(this).attr('userTicketId') + ")执行"+$(this).text()+"操作吗？")) return false; 
+		if (compayn_to_zhiying_img) return false;
+		$.post(root_domain + '/admin/admin_operate.php'
+                , {userTicketId: $(this).attr('userTicketId'),
+					type:'company_to_zhiying'
+                  }
+                , function(data) {
+                	compayn_to_zhiying_img = true;
+                	alert(data.msg);
+                	if (data.ok) {
+                		window.location.reload(true);
+                	}
+                }
+                , 'json'
+            );
+		compayn_to_zhiying_img = false;
+	});
+});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+<form method="post">
+<div class="timechaxun" style="">
+  <ul>
+  <li>用户名
+      <input type="text" name="user_name" id="user_name" value="<{$user_name}>">
+    |出票订单号
+      <input type="text" name="return_id" id="return_id" value="<{$return_id}>">
+    |玩法：
+      <select name='pool' id='pool' >
+       <option value="all" selected>全部玩法</option>
+       <option value="all_fb" <{if $pool==all_fb}> selected <{/if}> >竞彩足球全部玩法</option>
+       <option value="all_bk" <{if $pool==all_bk}> selected <{/if}> >竞彩篮球全部玩法</option>
+       <option value="all_bd" <{if $pool==all_bd}> selected <{/if}> >北京单场全部玩法</option>
+      <{foreach from=$sportAndPoolDesc item=item key=key}>
+      <option value="<{$key}>" <{if $pool==$key}> selected <{/if}> ><{$item.desc}></option>
+      <{/foreach}>
+      </select>
+      |串关数：
+      <select name='select' id='select' >
+       <option value="all" selected>全部串关</option>
+       <option value="1x1" <{if $select=='1x1'}> selected <{/if}> >单关</option>
+       <option value="2x1" <{if $select=='2x1'}> selected <{/if}> >两场2x1</option>
+       <option value="3x1" <{if $select=='3x1'}> selected <{/if}> >三场3x1</option> 
+       <option value="4x1" <{if $select=='4x1'}> selected <{/if}> >四场4x1</option> 
+      </select>
+    出票状态：
+       <select name='print_state' id='print_state' >
+      <option value="all" selected>全部状态</option>
+      <{foreach from=$userTicketPrintStateDesc item=item key=key}>
+      <{if $key}>
+      <option value="<{$key}>" <{if $print_state==$key}> selected <{/if}> ><{$item.desc}></option>
+      <{else}>
+      <option value="<{$key}>" <{if !$print_state}> selected <{/if}> ><{$item.desc}></option>
+      <{/if}>
+      <{/foreach}>
+      </select>
+      <br/>
+   中奖状态：
+       <select name='prize_state' id='prize_state' >
+      <option value="all" <{if $prize_state=='all'}> selected <{/if}> >全部状态</option>
+       <{foreach from=$userTicketPrizeStateDesc item=item key=key}>
+       <{if $key}>
+       <option value="<{$key}>" <{if $prize_state==$key}>selected<{/if}> ><{$item.desc}></option>
+       <{else}>
+       <option value="<{$key}>" <{if !$prize_state}> selected <{/if}> ><{$item.desc}></option>
+      <{/if}>
+      <{/foreach}>
+      </select>
+      出票方：<select name='company_id' id='company_id'>
+      <option value="all" <{if $company_id=='all'}> selected <{/if}> >全部状态</option>
+      <{foreach from=$getTicketCompany item=item key=key}>
+      <option value='<{$key}>' <{if $company_id==$key}>selected<{/if}>><{$item.desc}></option>
+      <{/foreach}>
+      </select>|
+      来源：<select name='source' id='source'>
+      <option value="all" <{if $source=='all'}> selected <{/if}> >全部状态</option>
+      <option value='1' <{if $source==1}>selected<{/if}>>主站</option>
+      <option value='10' <{if $source==10}>selected<{/if}>>wap</option>
+      <option value='11' <{if $source==11}>selected<{/if}>>安卓</option>
+      <option value='12' <{if $source==12}>selected<{/if}>>ios</option>
+      </select>
+      ，最小中奖金额 ：
+      <input type="text" name="start_money" id="start_money" style="width:60px" value="<{$start_money}>">  
+      ，最小投注金额 ：
+      <input type="text" name="money" id="money" style="width:60px" value="<{$money}>">  
+      <br/>
+    开始日期：
+      <input type="text" name="start_date" id="start_date" value="<{$start_date}>">
+    开始时间：
+      <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+    结束日期：
+      <input type="text" name="end_date" id="end_date" value="<{$end_date}>">
+   结束时间：
+      <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+      
+      <input type="submit" name="" value="查询">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+<br/>
+<div>
+<table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+	<tr><{foreach from=$total item=item key=key}><td><{$key}></td><{/foreach}></tr>
+	<tr><{foreach from=$total item=item key=key}><td><{if $key != '订单数'}>&yen;<{$item}>元<{else}><{$item}><{/if}></td><{/foreach}></tr>
+</table>
+  <h2>
+  <b>●</b>订单信息</h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td>序号</td>
+          <td>彩种</td>
+          <td>用户名</td>
+          <td>串关方式</td>
+          <td>总金额</td>
+          <td>倍数</td>
+          <td>出票状态</td>
+          <td>中奖信息</td>
+          <td>出票方</td>
+          <td>认购时间</td>
+          <td>操作</td>
+          <{*<td>方案详情</td>*}>
+        </tr>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <tr <{if $smarty.foreach.ticket.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        <td class="show"><a href="<{$smarty.const.ROOT_DOMAIN}>/admin/order/orders.php?userTicketId=<{$userTicket.id}>" target="_blank" title="查看系统订单"><{$userTicket.id}></a></td>
+          <td class="show"><div class="gdtype">
+        <{if $userTicket.partent_id}><span class="">&nbsp;跟&nbsp;</span><{/if}>
+        <{if $userTicket.source ==10}><span class="">&nbsp;手机&nbsp;</span><{/if}>
+        <{$userTicket.sport|getPoolDesc:$userTicket.pool}>
+		</div></td>
+          <td class="show">
+          <{$all_users[$userTicket.u_id].u_name}>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/order/user_orders.php?print_state=all&&user_name=<{$all_users[$userTicket.u_id].u_name}>" class="show_details"  target="_blank" >投注记录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/user/reg_log.php?u_name=<{$all_users[$userTicket.u_id].u_name}>"  target="_blank" >账户信息</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/user/gift_log.php?log_type=all&u_name=<{$all_users[$userTicket.u_id].u_name}>" class="show_details"  target="_blank">彩金信息</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/user/account_log.php?u_name=<{$all_users[$userTicket.u_id].u_name}>" class="show_details"  target="_blank">余额信息</a>
+          </td>
+          <td class="show"><{$userTicket.user_select}></td>
+          <td class="show">￥<{$userTicket.money}>元</td>
+          <td class="show"><{$userTicket.multiple}></td>
+          <td class="show">
+          <{$userTicketPrintStateDesc[$userTicket.print_state].desc}>
+          |<a href="<{$smarty.const.ROOT_DOMAIN}>/admin/order/orders.php?userTicketId=<{$userTicket.id}>" target="_blank">详情</a>
+          |<a href="<{$smarty.const.ROOT_DOMAIN}>/account/ticket.php?userTicketId=<{$userTicket.id}>" target="_blank">方案页面</a>
+          </td>
+          <td class="show">
+	          <div class="jiesuancaozuo">
+		          <{if $userTicket.prize_state == 1}>
+		          	<b>中奖</b>&nbsp;￥<{$userTicket.prize}>元&nbsp;
+		          <{else}>
+		          		<strong class=""><{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}></strong>
+		          <{/if}>
+	          </div>
+          </td>
+          <td class="show"><{$getTicketCompany[$userTicket.company_id].desc}></td>
+          <td class="show"><{$userTicket.datetime}></td>
+          <td class="show">
+          <{*已出票、已退款、虚拟投注无操作*}>
+          <{if $userTicket.print_state != 8 && $userTicket.print_state != 9999}>
+          <a href="javascript::void(0);" target="_blank" class="refund_money" userTicketId="<{$userTicket.id}>" u_name="<{$all_users[$userTicket.u_id].u_name}>">退票</a>
+          <{/if}>
+          <{if $userTicket.manu_prize==1}>&nbsp;&nbsp;|
+          <a href="javascript::void(0);" target="_blank" class="manu_prize" userTicketId="<{$userTicket.id}>" u_name="<{$all_users[$userTicket.u_id].u_name}>">手动算奖</a>
+          <{/if}>
+          <{if $userTicket.print_state!=1}>
+          &nbsp;&nbsp;|
+          <a href="javascript::void(0);" target="_blank" class="company_to_zhiying" userTicketId="<{$userTicket.id}>" u_name="<{$all_users[$userTicket.u_id].u_name}>">智赢出票</a>
+          <{/if}>
+          </td>
+          <{*<td class="show"><{$userTicket.combination}><a href="javascript:void(0);" class="show_details" userTicketId="<{$userTicket.id}>">情</a></td>*}>
+        </tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+    <{if $previousUrl || $nextUrl}>
+		<div class="pageC">
+		<div class="pages">
+		<{if $previousUrl}>
+		<a href="<{$previousUrl}>">上页</a>
+		<{/if}>
+		<{if $nextUrl}>
+		<a href="<{$nextUrl}>">下页</a>
+		<{/if}>
+		</div>
+		</div>
+	<{/if}>
+  </div>
+</div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

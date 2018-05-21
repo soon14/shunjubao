@@ -1,0 +1,56 @@
+<{include file="header.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#submit").click(function(){
+		var money = $("#withdraw_money").val()
+		if (!$.common.Verify.isMoney(money)) {
+			alert('金额不正确');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户提现 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1 style="font-size:12px;font-weight:300;color:#dc0000;"><em>当前账户额度：<span><u style="text-decoration:none;font-weight:900;"><{$userAccountInfo.cash}>元</u></span><b></b><i></i></em></h1>
+    <div class="wap_loginC" style="width:250px;position:relative;left:10px;">
+      <div class="kuaiti">
+        <form action='' method='post'>
+          <p class="pad">提款姓名：<strong><{$userRealInfo.realname}></strong><span>您的姓名</span>&nbsp;归属地：<{$userRealInfo.bank_province}><{$userRealInfo.bank_city}></p>
+          <p class="pad"><{$userRealInfo.bank}>：<{$userRealInfo.bankcard}>&nbsp;(银行卡号)</p>
+          <p class="other">提现方式：
+            <select name='payment' style='height:30px;line-height:30px;width:70px;'>
+              <{foreach from=$EncashPaymentDesc item=item key=key}><option value='<{$key}>' <{if $userPaymentInfo.pay_type==$key}>selected<{/if}>><{$item.desc}>
+              </option>
+              <{/foreach}>
+            </select>
+            <{if !$userPaymentInfo}><{/if}><a href='<{$smarty.const.ROOT_DOMAIN}>/account/user_payment.php'>完善其他提现方式</a></p>
+          <p class="other" style="padding:10px 0;">提现金额：
+            <input type="text" class="ustext" name="money" id="withdraw_money" style="width:150px; height:22px; line-height:22px; "/>
+            <input type="hidden" name='u_id' id="u_id" value="<{$userInfo.u_id}>"/>
+          </p>
+          <p class="other" style="padding:5px 0;">手机号码：
+              <input type="text" class="ustext" name="mobile" id="mobile" value="<{$userRealInfo.mobile}>" style="width:150px; height:22px; line-height:22px; "/></p>
+          <p class="sub">
+            <input type="submit" value="提&nbsp;&nbsp;&nbsp;交" class="loginsub" id="submit"/>
+          </p>
+          <{if $msg_error}>
+          <p class="error"><{$msg_error}></p>
+          <{/if}>
+          <{if $msg_success}>
+          <p class="error"><{$msg_success}></p>
+          <{/if}>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<{include file="../ios/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<{include file="header.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+});
+</script>
+</head>
+<body>
+<{include file="top.html"}>
+<div class="ustitle">
+  <h1><em>积分投注记录<b></b><i></i></em></h1>
+</div>
+<!--投注记录 start-->
+<div class="boldtxt" style="margin:10px 0 0 0;">
+  <table class="hacker" border="1" cellpadding="0" cellspacing="0" width="100%"style="text-align:center;">
+    <tbody>
+      <tr>
+        <!--<th>认购时间</th>-->
+        <th>投注积分</th>
+        <th>积分详情</th>
+        <th>方案详情</th>
+      </tr>
+    <{foreach from=$userTicketInfo item=item name=ticket}>
+    <tr>
+      <!--<td ><{$item.create_time}></td>-->
+      <td style="padding:2px 0;"><{$item.money}></td>
+      <td><div class="jiesuancaozuo"> <{if $item.prize>0}>
+          中奖<{$item.prize}>积分
+          <{/if}>
+          <{if $item.status==2}> <span style="color:#000;">未中奖</span> <{/if}> </div></td>
+      <td><a href="<{$smarty.const.ROOT_DOMAIN}>/account/virtual_ticket.php?userTicketId=<{$item.id}>" style='color:#444;'>查看详情</a></td>
+    </tr>
+    <{/foreach}>
+    </tbody>
+    
+  </table>
+  <{if $previousUrl || $nextUrl}>
+  <div class="pages" style="border-bottom:none;"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+    <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> <{/if}> </div>
+  <{/if}></div>
+<!--投注记录 end-->
+<{include file="../app/footer.html"}>
+</body>
+</html>

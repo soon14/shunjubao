@@ -1,0 +1,34 @@
+<{include file="header.html"}>
+<body>
+<!--页面头部 start-->
+<{include file="top.html"}>
+<{include file="toplogo.html"}>
+<{include file="nav.html"}>
+<script src="<{'timecount.js'|getStaticsUrl}>"></script>
+<div class="head">
+  <h1><b>智赢网</b><strong style="left:90px;">System Tips</strong></h1>
+</div>
+</div>
+<!--center start-->
+<div class="cnetr">
+  <div class="pay">
+    <!---->
+    <div class="paycenter">
+      <div class="systemtips">
+        <p><{$tips}></p>
+      </div>
+      <div class="suc-num2"><br />
+        <div id="timecount">
+          <script language="javascript">    
+                      auto_jump("<{$url}>", "<{$secs}>");
+                     </script>
+        </div>
+        您也可以点击此处：<a href="<{$url}>">直接跳转>></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="<{$smarty.const.ROOT_DOMAIN}>">返回首页>></a><br />
+      </div>
+    </div>
+    <!---->
+    <div class="bottips">智赢网是彩票赢家的聚集地，口碑最好的彩票做单网站</div>
+  </div>
+</div>
+<!--center end-->
+<{include file="bottom.html"}>

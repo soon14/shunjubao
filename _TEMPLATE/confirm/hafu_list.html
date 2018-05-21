@@ -1,0 +1,402 @@
+<{include file="../confirm/header.html"}>
+<script type="text/javascript">
+
+    var curPool = "hafu";
+
+    var curPos = { gameCode: "fb", gameType: "竞彩足球", poolName: "半全场", dataPool: "hafu" };
+
+    var hafuAry = ["33", "31", "30", "13", "11", "10", "03", "01", "00"];
+
+
+    function getDataBack(data) {
+    					
+    				if (Number(data.total) == 0) {
+    		            alert("没有数据！");
+    		            return;
+    		        }
+
+        var matchNameAry = [];
+
+        var tmpAry = data.datas;
+
+        var filterHtm = "";
+
+        var htmStr = "<tr><td colspan='8' style='padding:0; margin:0;'>";
+
+        for (var i = 0; i < tmpAry.length; i++) {
+
+            var obj = tmpAry[i];
+
+            htmStr += "<div><tr class='time'><td id='tdwin'><div class='DQtime'><b>" + obj.num + "&nbsp;" + obj.day + "&nbsp;[11:30 -- 次日 11:30]</b><span><a href='javascript:void(0)' class='foldBtn'>隐藏</a></span><strong><a href='javascript:void(0);' class='showHide'>&nbsp;显示已隐藏比赛<b>[<label class='hideNum'>0</label>]</b>场</a></strong></div></td></tr>";
+
+            htmStr += "<tr d='" + i + "'><td><table cellpadding='0' cellspacing='1' id='TabWin'>";
+
+            var listObj = obj.matchs[0];
+
+            var count = 0;
+
+            for (var key in listObj) {
+
+                count++;
+
+                var matchObj = listObj[key];
+
+                var isFind = -1;
+
+                for (var j = 0; j < matchNameAry.length; j++) {
+
+                    if (matchNameAry[j].name == matchObj.l_cn) {
+
+                        isFind = j;
+
+                        matchNameAry[j].len++;
+
+                        break;
+
+                    }
+
+                }
+
+                if (isFind < 0) {
+
+                    isFind = matchNameAry.length;
+
+                    matchNameAry.push({ name: matchObj.l_cn, len: 1 });
+
+                }
+
+
+
+                htmStr += "<tr m='" + isFind + "' id='" + key + "'" + ((count % 2 == 0) ? " class='alt'" : "") + ">" +
+
+                "  <td width='38' class='d1'><a class='hideMatch' href='javascript:void(0);'>" + matchObj.num + "</a></td>" +
+
+               "<td width='65'><div class='ssName' style='background:" + matchObj.l_color + "; color:#fff;'>" + matchObj.l_cn + "</div></td>" +
+
+                "  <td width='48'><div class='Btime'>" + matchObj.time + "</div></td>" +
+
+                "  <td class='d6'><div class='duiName'><b><hn>" + matchObj.h_cn + "</hn></b><u>VS</u><strong><gn>" + matchObj.a_cn + "</gn></strong></div></td>" +
+
+                "  <td class='d2'><div class='ouyaxi none'><a href='javascript:void(0);'>欧</a><a href='javascript:void(0);'>亚</a><a href='javascript:void(0);'>析</a></div></td>" +
+
+                "  <td><div class='OddsList_B OddsTd'>"+
+
+                "      <ul>"+
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.hh + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.hd + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.ha + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.dh + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.dd + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.da + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.ah + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.ad + "</a></li>" +
+
+                "        <li><a class='o' href='javascript:void(0);'>" + matchObj.hafu.aa + "</a></li>" +
+
+                "      </ul>"+
+
+                "      <div class='clear'></div>"+
+
+                "    </div></td>"+
+
+                "  <td><div class='Kuaitou'>"+
+
+                "      <ul>"+
+
+                "        <li>"+
+
+                "          <select name=''>"+
+
+                "            <option value=''>半场</option>"+
+
+                "            <option value='310'>310</option>"+
+
+                "            <option value='31'>31</option>"+
+
+                "            <option value='30'>30</option>"+
+
+                "            <option value='10'>10</option>"+
+
+                "            <option value='3'>3</option>"+
+
+                "            <option value='1'>1</option>"+
+
+                "            <option value='0'>0</option>"+
+
+                "          </select>"+
+
+                "        </li>"+
+
+                "        <li>"+
+
+                "          <select name=''>"+
+
+                "            <option value=''>全场</option>"+
+
+                "            <option value='310'>310</option>"+
+
+                "            <option value='31'>31</option>"+
+
+                "            <option value='30'>30</option>"+
+
+                "            <option value='10'>10</option>"+
+
+                "            <option value='3'>3</option>"+
+
+                "            <option value='1'>1</option>"+
+
+                "            <option value='0'>0</option>"+
+
+                "          </select>"+
+
+                "        </li>"+
+
+                "      </ul>"+
+
+                "    </div></td>" +
+
+                "</tr>";
+
+            }
+
+            htmStr += "</table></td></tr>";
+
+            htmStr += "</div>";
+
+            filterHtm += "<em><input type='checkbox' checked />" + obj.num + "[" + count + "]</em>";
+
+        }
+
+        htmStr += "</td></tr>";
+
+        $("#dataList").html(htmStr);
+
+        $("#tip").html("");
+
+        //filterPan
+
+        $("#fDate").html(filterHtm);
+
+        filterHtm = "";
+
+        for (var i = 0; i < matchNameAry.length; i++) {
+
+            filterHtm += "<em><input type='checkbox' checked />" + matchNameAry[i].name + "[" + matchNameAry[i].len + "]</em>";
+
+        }
+
+        $("#fMatches").html(filterHtm);
+
+
+
+        //
+
+        $("#dataList .Kuaitou select").change(function() {
+
+            var tmpAry = [];
+
+            var isNull = false;
+
+            $(this).closest(".Kuaitou").find("select").each(function() {
+
+                if ($(this).val() == "" || $(this).val() == "半场" || $(this).val() == "全场") {
+
+                    isNull = true;
+
+                } else {
+
+                    tmpAry.push($(this).val());
+
+                }
+
+            });
+
+            var trObj = $(this).closest("tr");
+
+            var tmpKey = trObj.attr("id");
+
+            trObj.find(".active").removeClass("active");
+
+            if (isNull) {
+
+                $(this).closest("tr").find(".active").removeClass("active");
+
+                if (selAry[tmpKey] != undefined) {
+
+                    delete (selAry[tmpKey]);
+
+                }
+
+            } else {
+
+                if (selAry[tmpKey] == undefined) {
+
+                    selAry[tmpKey] = {};
+
+                    selAry[tmpKey].pool = curPool;
+
+                    selAry[tmpKey].odds = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+                    selAry[tmpKey].num = trObj.closest("table").closest("tr").prev().find(".DQtime").find("b").text().substr(0, 2) + trObj.find(".hideMatch").text();
+
+                    selAry[tmpKey].hostTeam = trObj.find("hn").text();
+
+                    selAry[tmpKey].guestTeam = trObj.find("gn").text();
+
+
+
+                    //判断场数
+
+                    if (!checkSelCount()) {
+
+                        $(this).removeClass("active");
+
+                        return;
+
+                    }
+
+                    
+
+                } else {
+
+                    selAry[tmpKey].odds = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+                }
+
+                for (var m = 0; m < 9; m++) {
+
+                    if (tmpAry[0].indexOf(hafuAry[m].charAt(0)) != -1 && tmpAry[1].indexOf(hafuAry[m].charAt(1)) != -1) {
+
+                        var oddsItem = trObj.find(".OddsTd a").eq(m);
+
+                        oddsItem.addClass("active");
+
+                        selAry[tmpKey].odds[m + poolOptionIndex[curPool]] = Number(oddsItem.text());
+
+                    }
+
+                }
+
+            }
+
+            fillSelPan();
+
+            fillOptionsPan();
+
+            calculate();
+
+        });
+
+    }
+
+</script>
+<script src="<{'publicFunc.js'|getStaticsUrl}>" type="text/javascript"></script>
+</head>
+<body>
+<!--top start-->
+<{include file="../default/top.html"}>
+<!--top end-->
+<!--nav start-->
+<{include file="../default/menu.html"}>
+<!--nav end-->
+<!--caipiao location start-->
+<{include file="../confirm/cailocation.html"}>
+<!--caipiao location start-->
+<!--center start-->
+<div class="center">
+  <!--投注center start-->
+  <div class="BitCenter">
+       <div class="touzhuNav">
+		<ul>
+			<li><a href="<{$smarty.const.ROOT_DOMAIN}>/football/hhad_list.php">胜平负</a><em></em></li>
+			<li><a href="<{$smarty.const.ROOT_DOMAIN}>/football/fb_crosspool.php">混合过关</a></li>
+			<li><a href="<{$smarty.const.ROOT_DOMAIN}>/football/ttg_list.php">总进球</a></li>
+			<li><a href="<{$smarty.const.ROOT_DOMAIN}>/football/hafu_list.php" class="active">半全场</a></li>
+			<li><a href="<{$smarty.const.ROOT_DOMAIN}>/football/crs_list.php">比分</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+    <script src="<{'filter.js'|getStaticsUrl}>" type="text/javascript"></script>
+    <div>
+      <div class="Kjnav">
+        <div class="NavZBqc">
+          <dl class="one">
+            <dt>序号</dt>
+          </dl>
+          <dl class="two">
+            <dt>赛事</dt>
+          </dl>
+          <dl class="three">
+            <dt>截止时间</dt>
+          </dl>
+          <dl class="four">
+            <dt><b>主队</b>&nbsp;&nbsp;VS&nbsp;&nbsp;<b>客队</b></dt>
+          </dl>
+          <dl class="five">
+            <dt>分析</dt>
+          </dl>
+          <dl class="six">
+            <dt>
+              <div class="WanFa">
+                <h3>
+                  <ul class="bibiY">
+                    <li>主-主</li>
+                    <li>主-平</li>
+                    <li>主-客</li>
+                    <li>平-主</li>
+                    <li>平-平</li>
+                    <li>平-客</li>
+                    <li>客-主</li>
+                    <li>客-平</li>
+                    <li>客-客</li>
+                  </ul>
+                  <div class="clear"></div>
+                </h3>
+                <ul class="bibi">
+                  <li>3-3</li>
+                  <li>3-1</li>
+                  <li>3-0</li>
+                  <li>1-3</li>
+                  <li>1-1</li>
+                  <li>1-0</li>
+                  <li>0-3</li>
+                  <li>0-1</li>
+                  <li>0-0</li>
+                  <div class="clear"></div>
+                </ul>
+              </div>
+            </dt>
+          </dl>
+          <dl class="seven">
+            <dt>快捷投注</dt>
+          </dl>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <table id="dataList" width="100%" border="0" class="stripe" cellpadding="0" cellspacing="1">
+      </table>
+    </div>
+  </div>
+  <!--投注center end-->
+</div>
+<!--center end-->
+<!--确认投注 strat-->
+<script src="<{'betbox.js'|getStaticsUrl}>" type="text/javascript"></script>
+<{include file="../confirm/betbox.html"}>
+<!--确认投注 end-->
+<!--Help start-->
+<{include file="../default/help.html"}>
+<!--Help end-->
+<!--footer start-->
+<{include file="../default/footer.html"}>
+<!--footer end-->
+</body>
+</html>

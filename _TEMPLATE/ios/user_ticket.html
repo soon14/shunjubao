@@ -1,0 +1,152 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" />
+<link type="text/css" rel="stylesheet" href="<{'wap_user.css'|getStaticsUrl}>" />
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<div class="ustitle">
+  <h1><em>投注记录<b></b><i></i></em></h1>
+</div>
+<script type="text/javascript">
+TMJF(function($) {
+	//(window.parent.document).find("#main").load(function(){
+		//var main = $(window.parent.document).find("#main");
+		//var thisheight = $(document).height()+30;
+		//main.height(thisheight);
+	//});
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	$("table tr:nth-child(odd)").css("background-color","#f9f9f9");
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td class="show">'+ k +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].num +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td class="show">'+ option_html +'</td>';
+                    		html += '<td class="show">'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	})
+});
+</script>
+<!--投注记录 start-->
+<div class="usTips">
+  <p><b>总中奖额度：</b><strong><{if $totalPrize}><{$totalPrize}><{else}>0.00<{/if}>元</strong></p>
+</div>
+<div>
+  <form method="post">
+    <div class="timechaxun">
+      <ul>
+        <li>
+          <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+          &nbsp;- </li>
+        <li>
+          <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+        </li>
+        <li>
+          <input type="submit" name="" class="TMchaxun" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <div class="boldtxt">
+      <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+        <tr>
+          <th>方案类型</th>
+          <th>总金额</th>
+          <!--<th>倍数</th>-->
+          <th>标志</th>
+          <th>奖金</th>
+          <th  style="padding:0 5px 0 0;">详情</th>
+        </tr>
+        <{assign var=trade_money_in value=0}>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <{assign var=trade_money_in value=$userTicket.money+$trade_money_in}>
+        <tr>
+          <td><div class="fanantype">
+              <ul>
+                <{if $userTicket.partent_id}>
+                <li class="show">跟</li>
+                <{/if}>
+                <li class="stype"><{$userTicket.sport|getPoolDesc:$userTicket.pool}></li>
+              </ul>
+              <div class="clear"></div>
+            </div></td>
+          <td><{$userTicket.money}></td>
+          <!--<td><{$userTicket.multiple}></td>-->
+          <td><{if $userTicket.print_state == 1}>
+            已出票
+            <{*$userTicketPrintStateDesc[$userTicket.print_state].desc*}> 
+            <{elseif $userTicket.print_state == 3}>
+            未出票
+            <{elseif $userTicket.print_state == 8}>
+            失败已退款
+            <{else}>
+            出票中
+            <{/if}></td>
+          <td><div class="jiesuancaozuo"> <{if $userTicket.prize_state == 1}> <b style="color:#fff;">奖</b>&nbsp;&yen;<{$userTicket.prize}>元&nbsp;
+              <{else}> <strong class=""> <{if $userTicket.prize_state}>
+              <{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}>
+              <{else}>
+              未开奖
+              <{/if}> </strong> <{/if}> </div></td>
+          <td  style="padding:0 5px 0 0;"><span class="show_details1"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/ticket.php?userTicketId=<{$userTicket.id}>" userTicketId="<{$userTicket.id}>">详情</a></span></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <div> <{if $previousUrl || $nextUrl}>
+      <div class="pages" style="border-bottom:none;"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> <{/if}> </div>
+      <{/if}> </div>
+    <div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录智赢网站进行查询！</div>
+  </div>
+</div>
+<!--投注记录 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<{include file="../admin/header.html"}>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#select_all_pool").click(function(){
+		$(".pool").each(function(){
+			$(this).attr('checked','checked');
+		});
+	});
+	//没选择单关时不允许提交
+	$("#danguan").submit(function(){
+		var can_submit = false;
+		$(".pool").each(function(){
+			if($(this).attr('checked')) can_submit = true;
+		});
+		if (!can_submit) {
+			alert('请至少选择一个玩法');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<div>
+  <h2> <b>●</b>赛事信息修改</h2>
+  <{if $matchInfo}>
+  <div>
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/game/edit_game.php">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>序号</th>
+            <th>场次</th>
+            <th><{if $sport=='bk'}>客VS主<{else}>主VS客<{/if}></th>
+            <th>状态</th>
+            <th>比赛日期</th>
+            <th>比赛时间</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <input name="sport"  type="hidden" value="<{$sport}>"/>
+            <input name="operate"  type="hidden" value="edit"/>
+            <input name="id"  type="hidden" value="<{$matchInfo.id}>"/>
+            <input name="index_show"  type="hidden" value="1"/>
+            <td class="show"><{$matchInfo.id}></td>
+            <td class="show"><{$matchInfo.num}></td>
+            <td><{if $sport=='bk'}><{$matchInfo.a_cn}>VS<{$matchInfo.h_cn}><{else}><{$matchInfo.h_cn}>VS<{$matchInfo.a_cn}><{/if}></td>
+            <td class="show"><select name="status">
+                <{foreach from=$statusDesc item=item key=key}> <option value="<{$key}>" <{if $matchInfo.status==$key}> selected<{/if}> ><{$item.desc}>
+                </option>
+                <{/foreach}>
+              </select>
+            </td>
+            <td class="show"><input name="date"  type="text" value="<{$matchInfo.date}>"/></td>
+            <td class="show"><input name="time"  type="text" value="<{$matchInfo.time}>"/></td>
+            <td class="show"><input type='submit' value="修改"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <br/>
+    <h2><b>●</b>单关修改</h2>
+    <form method="post" action="" id='danguan'>
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>玩法</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <input name="sport"  type="hidden" value="<{$sport}>"/>
+            <input name="operate"  type="hidden" value="add_danguan"/>
+            <input name="matchid"  type="hidden" value="<{$matchInfo.id}>"/>
+            <td class="show"><a href="javascript::void(0)" id="select_all_pool">全选</a>&nbsp;&nbsp;|
+              <{if $sport=='fb'}>
+              胜平负<input class='pool' type="checkbox" name='pool[]' value='had' <{if $danguanInfo.had}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              让球胜平负<input class='pool' type="checkbox" name='pool[]' value='hhad' <{if $danguanInfo.hhad}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              比分<input class='pool' type="checkbox" name='pool[]' value='crs' <{if $danguanInfo.crs}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              总进球<input class='pool' type="checkbox" name='pool[]' value='ttg' <{if $danguanInfo.ttg}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              半全场<input class='pool' type="checkbox" name='pool[]' value='hafu' <{if $danguanInfo.hafu}>checked<{/if}>>&nbsp;&nbsp;
+              <{else}>
+              胜负<input class='pool' type="checkbox" name='pool[]' value='mnl' <{if $danguanInfo.mnl}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              让分胜负<input class='pool' type="checkbox" name='pool[]' value='hdc' <{if $danguanInfo.hdc}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              胜分差<input class='pool' type="checkbox" name='pool[]' value='wnm' <{if $danguanInfo.wnm}>checked<{/if}>>&nbsp;&nbsp;|&nbsp;&nbsp;
+              大小分<input class='pool' type="checkbox" name='pool[]' value='hilo' <{if $danguanInfo.hilo}>checked<{/if}>>&nbsp;&nbsp;
+              <{/if}> </td>
+            <td class="show"><input type='submit' value="修改"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <{else}>
+    <form action="<{$smarty.const.ROOT_DOMAIN}>/admin/game/edit_game.php" method="post">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>彩种</th>
+            <th>星期</th>
+            <th>场次</th>
+            <th>赛事系统ID(管理员使用)</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td><input name="operate"  type="hidden" value="show"/>
+              <select name="sport" id="sport">
+                <option value="fb">竞彩足球</option>
+                <option value="bk">竞彩篮球</option>
+              </select>
+            </td>
+            <td><select name="week" id="week">
+                <option value="1">星期一</option>
+                <option value="2">星期二</option>
+                <option value="3">星期三</option>
+                <option value="4">星期四</option>
+                <option value="5">星期五</option>
+                <option value="6">星期六</option>
+                <option value="7">星期日</option>
+              </select>
+            </td>
+            <td><input name="num" id="num" type="text"/></td>
+            <td><input name="id" id="id" type="text"/></td>
+            <td><input type="submit" value="查询"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <{/if}> </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

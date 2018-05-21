@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<title>智赢网触屏版</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+</head>
+<body>
+<style>
+/* 首页 */
+#webnews{clear:both;height:35px;line-height:35px;padding-right:8px;padding-left:8px;text-align:left;}
+#smenu{padding:16px 0px 0px 0;margin:0px;}
+#smenu li{display:inline-block;font-size:14px;padding:0 15px 10px 0;text-align:center;}
+#smenu li a{color:#666;font-size:13px;font-weight:bold;}
+.sm1,.sm2,.sm3,.sm4,.sm5,.sm6,.sm7,.sm8,.sm9,.sm10,.sm11,.sm12,.sm13,.sm14,.sm15,.sm16 {-webkit-border-top-left-radius:8px;
+	-webkit-border-top-right-radius:8px;
+	-webkit-border-bottom-left-radius:8px;
+	-webkit-border-bottom-right-radius:8px;
+	-moz-border-radius-topleft:4px;
+	-moz-border-radius-topright:4px;
+	-moz-border-radius-bottomleft:4px;
+	-moz-border-radius-bottomright:4px;
+	-webkit-box-shadow:2px 1px 2px #B3C4CA;
+	-moz-box-shadow:2px 1px 2px #ccc;
+	height:62px;
+	width:62px;
+	display:block;
+	text-align:center;
+	margin-bottom:8px;
+	}
+.sm1 {background:#DCF63A;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFC4),to(#DCF63A));background:-moz-linear-gradient(top,#FFFFC4,#DCF63A);background:-o-linear-gradient(top, #FFFFC4, #DCF63A);border-radius:10px;}
+.sm2 {background:#ECC73F;background:-webkit-gradient(linear,0 0,0 100%,from(#FCF3DC),to(#ECC73F));background:-moz-linear-gradient(top,#FCF3DC,#ECC73F);background:-o-linear-gradient(top, #FCF3DC, #ECC73F);border-radius:10px;}
+.sm3 {background:#FFFF99;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#FFFF99));background:-moz-linear-gradient(top,#FFFFFF,#FFFF99);background:-o-linear-gradient(top, #FFFFFF, #FFFF99);border-radius:10px;}
+.sm4 {background:#FCE891;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#FCE891));background:-moz-linear-gradient(top,#FFFFFF,#FCE891);background:-o-linear-gradient(top, #FFFFFF, #FCE891);border-radius:10px;}
+.sm5 {background:#D0EB7A;background:-webkit-gradient(linear,0 0,0 100%,from(#F5FFCA),to(#D0EB7A));background:-moz-linear-gradient(top,#F5FFCA,#D0EB7A);background:-o-linear-gradient(top, #F5FFCA, #D0EB7A);border-radius:10px;}
+.sm6 {background:#F2DB0D;background:-webkit-gradient(linear,0 0,0 100%,from(#EFFE98),to(#F2DB0D));background:-moz-linear-gradient(top,#EFFE98,#F2DB0D);background:-o-linear-gradient(top, #EFFE98, #F2DB0D);border-radius:10px;}
+.sm7 {background:#DFF07D;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#DFF07D));background:-moz-linear-gradient(top,#FFFFFF,#DFF07D);background:-o-linear-gradient(top, #FFFFFF, #DFF07D);border-radius:10px;}
+.sm8 {background:#D5DFE5;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#D5DFE5));background:-moz-linear-gradient(top,#FFFFFF,#D5DFE5);background:-o-linear-gradient(top, #FFFFFF, #D5DFE5);border-radius:10px;}
+.sm9 {background:#FFE3D1;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#FFE3D1));background:-moz-linear-gradient(top,#FFFFFF,#FFE3D1);background:-o-linear-gradient(top, #FFFFFF, #FFE3D1);border-radius:10px;}
+.sm10 {background:#FFE000;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFA4),to(#FFE000));background:-moz-linear-gradient(top,#FFFFA4,#FFE000);background:-o-linear-gradient(top, #FFFFA4, #FFE000);border-radius:10px;}
+.sm11 {background:#C2E3F5;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#C2E3F5));background:-moz-linear-gradient(top,#FFFFFF,#C2E3F5);background:-o-linear-gradient(top, #FFFFFF, #C2E3F5);border-radius:10px;}
+.sm12 {background:#F9EBDD;background:-webkit-gradient(linear,0 0,0 100%,from(#FDFBFC),to(#F9EBDD));background:-moz-linear-gradient(top,#FDFBFC,#F9EBDD);background:-o-linear-gradient(top, #FDFBFC, #F9EBDD);border-radius:10px;}
+.sm13 {background:#FFE000;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFA4),to(#FFE000));background:-moz-linear-gradient(top,#FFFFA4,#FFE000);background:-o-linear-gradient(top, #FFFFA4, #FFE000);border-radius:10px;}
+.sm14 {background:#C2E3F5;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#C2E3F5));background:-moz-linear-gradient(top,#FFFFFF,#C2E3F5);background:-o-linear-gradient(top, #FFFFFF, #C2E3F5);border-radius:10px;}
+.sm15 {background:#F5F9DD;background:-webkit-gradient(linear,0 0,0 100%,from(#FFFFFF),to(#F5F9DD));background:-moz-linear-gradient(top,#FFFFFF,#F5F9DD);background:-o-linear-gradient(top, #FFFFFF, #F5F9DD);border-radius:10px;}
+.sm16 {background:#F9EBDD;background:-webkit-gradient(linear,0 0,0 100%,from(#FDFBFC),to(#F9EBDD));background:-moz-linear-gradient(top,#FDFBFC,#F9EBDD);background:-o-linear-gradient(top, #FDFBFC, #F9EBDD);border-radius:10px;}
+#down_menu {clear:both;margin:0;height:40px;line-height:40px; background:url(http://www.zhiying365365.com/www/statics/i/thBj.jpg) repeat-x left bottom;}
+#down_menu ul{}
+#down_menu li{display:inline-table;display:inline-block;zoom:1;*display:inline; position:relative;padding:0 3px 0 0;}
+#down_menu li u{color:#d2d2d2; text-decoration:none;}
+
+#down_menu li em{position:absolute;top:3px;right:7px; background:url(http://www.zhiying365365.com/www/statics/i/HomeHot.gif) no-repeat; width:9px; height:14px;}
+#down_menu li a{padding:12px 14px;font-size:14px; font-weight:900;color:#555;}
+#down_menu li a.active{background:#fff;color:#555;}
+#down_menu li span{color:#d2d2d2; position:relative;top:-2px;}
+#quotation{height:35px;overflow:hidden;}
+#quotation li{line-height:35px;}
+#quotation li p{font-size:12px;}
+#quotation li span{color:#dc0000; padding:0 5px 0 0;}
+.wapcenter{text-align:left;}
+.newLisT{}
+.newLisT h1{height:35px; line-height:35px; font-size:14px; font-weight:900; padding:0 10px; font-family:'';background:url(http://www.zhiying365365.com/www/statics/i/thBj.jpg) repeat-x;}
+.newLisT tr td{height:32px; line-height:32px; padding:0 8px;}
+.newLisT tr td a{width:100%;display:block;height:30px; line-height:30px;color:#555; margin:0 5px 0 0;background:url(http://www.zhiying365365.com/www/statics/i/weand_mx_hover.png) no-repeat right center;}
+.newLisT p{height:30px; line-height:30px;color:#555; padding:0 8px;border-bottom:1px solid #f1f1f1;}
+.newLisT p a{display:block;height:30px; line-height:30px;color:#555; margin:0 5px 0 0;background:url(http://www.zhiying365365.com/www/statics/i/weand_mx_hover.png) no-repeat right center;}
+</style>
+<{include file="header.html"}>
+<{include file="top.html"}>
+<div class="wapcenter">
+  <div id="webnews">
+    <div id="quotation">
+      <ul>
+        <li>
+          <p><span>[喜报]</span>老牛开宝马开门红喜中1460元</p>
+        </li>
+        <li>
+          <p><span>[喜报]</span>大力水手小回归中奖820元，期待给力。</p>
+        </li>
+        <li>
+          <p><span>[喜报]</span>570014622混合投注二串一中奖6474元</p>
+        </li>
+        <li>
+          <p><span>[喜报]</span>＂rene＂何许人？昨晚三单中出4591元！</p>
+        </li>
+        <li>
+          <p><span>[喜报]</span>yu517275664喜中1069元</p>
+        </li>
+        <li>
+          <p><span>[喜报]</span>570014622混合投注二串一中奖6474元</p>
+        </li>
+        <li>
+          <p><span>[公告]</span>世界杯竞彩游戏和足彩时间安排通知</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="down_menu">
+    <ul>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php" class="active">晒单跟单</a><em></em></li>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket.php">中奖查询</a><span>|</span></li>
+      <li><a href="#">竞彩资讯</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div id="smenu">
+    <ul>
+      <li id="liDownloadLnk"></li>
+      <li><a href="#"><span class="sm5"><img src="<{$smarty.const.STATICS_BASE_URL}>/i/s12.gif" style="margin-top:10px"></span>竞彩足球</a></li>
+      <li><a href="#"><span class="sm1"><img src="<{$smarty.const.STATICS_BASE_URL}>/i/s4.gif" style="margin-top:10px"></span>竞彩篮球</a></li>
+      <li><a href="#"><span class="sm3"><img src="<{$smarty.const.STATICS_BASE_URL}>/i/s2.gif" style="margin-top:10px"></span>北京单场</a></li>
+    </ul>
+  </div>
+  <div class="newLisT">
+    <h1>竞彩推荐</h1>
+    <p><a href="">周二001胜平负:德国九十分钟不败可期</a></p>
+    <p><a href="">周三001:荷兰反击高效 常规时间可不败</a></p>
+    <p><a href="">周二001胜平负:德国九十分钟不败可期</a></p>
+    <p><a href="">周三001:荷兰反击高效 常规时间可不败</a></p>
+    <p><a href="">周二001胜平负:德国九十分钟不败可期</a></p>
+    <p><a href="">周三001:荷兰反击高效 常规时间可不败</a></p>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){var scrtime;
+	$("#quotation").hover(function(){clearInterval(scrtime);
+	
+	},function(){scrtime = setInterval(function(){var $ul = $("#quotation ul");
+		var liHeight = $ul.find("li:last").height();
+		$ul.animate({marginTop :liHeight + 35 + "px"},300,function(){$ul.find("li:last").prependTo($ul)
+		$ul.find("li:first").hide();
+		$ul.css({marginTop:0});
+		$ul.find("li:first").fadeIn(300);
+		});
+	},3000);
+	
+	}).trigger("mouseleave");
+});
+$("table tr:nth-child(odd)").css("background-color","#eeeee0");
+</script>
+<!--footer start-->
+<{include file="footer.html"}>
+<!--footer end-->
+</body>
+</html>

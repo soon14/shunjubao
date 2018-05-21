@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>智赢大乐透出票页面</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.7.1.js"></script>
+<link href="http://www.zhiying365365.com/www/statics/c/daletou.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+      /* 当鼠标在表格上移动时，离开的那一行背景恢复 */
+      $(document).ready(function(){ 
+            $(".admintable tr td").mouseout(function(){
+                var bgc = $(this).parent().attr("bg");
+                $(this).parent().find("td").css("background-color",bgc);
+            });
+            $("#select_all").click(function(){  
+  			  if(this.checked){  
+  			   $("input[name='itemdid']").each(function(){this.checked=true;});
+  			  }else{  
+  			   $("input[name='itemdid']").each(function(){this.checked=false;});  
+  			   
+  			  }  
+  		  });
+      })
+      
+      $(document).ready(function(){ 
+            var color="#f1f1f1"
+            $(".admintable tr:odd td").css("background-color",color);  //改变偶数行背景色
+            /* 把背景色保存到属性中 */
+            $(".admintable tr:odd").attr("bg",color);
+            $(".admintable tr:even").attr("bg","#fff");
+            
+            
+      })
+      function chupiao(){
+    	  var chk_value =[];
+    	  $('input[name="itemdid"]:checked').each(function(){ 
+    		  chk_value.push($(this).val()); 
+    		  });   
+    	  if(chk_value==''){
+    		  alert('请选择记录');
+    		  return false;
+    	  }
+    	  $("#listid").val(chk_value);
+    	  if(window.confirm('您确定要出票吗？')){
+        	  $('#myform').submit();
+           }else{
+              //alert("取消");
+              return false;
+          }
+      }
+      
+      function tuipiao(id){
+    	  if(window.confirm('您确定要退票吗？')){
+    		  var url="<{$smarty.const.ROOT_DOMAIN}>/daletou/chupiao.php?type=tuipiao";
+        	  $.ajax({
+        		  type:'post',
+        		  url:url,
+        		  data:{id:id},
+        		  dataType:'html',
+        		  success:function(data){
+        			  alert(data);
+        			  return false;
+        			  if(data==1){
+        				  alert('退票成功');
+        				  window.location.href="<{$smarty.const.ROOT_DOMAIN}>/daletou/chupiao.php";
+        			  }else if(data=='-1'){
+        				  alert('不能退票');
+        			  }else if(data=='-2'){
+        				  alert('已退票');
+        			  }
+        		  }
+        		  
+        	  });
+              return true;
+           }else{
+              //alert("取消");
+              return false;
+          }
+    	  
+      }
+      </script>
+<style type="text/css">
+<!--
+body{font:12px arial;background:#fff}
+body,p,form,ul{margin:0;padding:0}
+table{text-align:center;border-bottom-width:0;border-collapse:collapse; font-size:12px;}
+table tr th{font-size:12px; font-weight:300;}
+.big-table {text-align:center;border-width:0px 0px 0px 1px;border-color:#666;border-style:solid;}
+.td-head th {background-color:#eeeeee;padding:3px;font-size:14px;font-weight: bold;border-width:1px 1px 1px 0px;border-color:#666;border-style:solid;}
+.td-body td {padding:3px;border-width:0px 1px 1px 0px;border-color:black;border-style:solid; font-size:12px;}
+.nav {margin:4px 0 8px 0}
+.td-no-border td {border-width:0px;}
+/* 定义图片的长和宽 */
+.img24 {width:40px; height:42px;}
+
+.blackwindow{
+background:#000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+opacity:0.7;
+position:absolute;
+width:100%;
+top:0;
+left:0;
+z-index:2000;
+}
+
+.paywindow{
+position:absolute;
+top:270px;
+width:466px;
+height:287px;
+background:#fff;
+border:12px solid #97B600;
+z-index:3000;
+left:50%;
+margin-left:-233px;
+}
+
+.paywindow b{
+width:55px;
+height:55px;
+display:block;
+background:url(../i/note.jpg) 63px 0 no-repeat;
+float:left;
+padding-left:63px;
+margin-top:23px;
+}
+
+.paytxt{
+float:left;
+margin-top:28px;
+margin-left:10px;
+width:300px;
+}
+
+.pay-note{
+color:#666;
+line-height:25px;
+padding-left:5px;
+}
+
+.paytxt .cwbtn{
+float:left;
+margin-right:10px;
+}
+
+.paytxt .cwotherbtn{
+padding-right:0px;
+font-weight:bold;
+}
+.cartclose{
+float:right;
+cursor:pointer;
+}
+-->
+.URcenter h2{ font-size:16px; font-family:'微软雅黑';}
+</style>
+<style>
+.gdtype{text-align:left;position:relative;padding:0 0 0 5px;}
+.gdtype span{ font-size:12px;color:#dc0000;background:url(http://www.zhiying365365.com/www/statics/i/gBj.gif) no-repeat;width:17px;height:19px;line-height:19px;color:#fff;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.gdtype strong{background:url(http://www.zhiying365365.com/www/statics/i/shai.gif) no-repeat;position:absolute;right:10px;top:3px;width:17px;height:19px;line-height:19px;text-indent:-5000px;cursor:pointer;}
+</style>
+<body>
+<!--投注记录 start-->
+<style>
+.chupiao{ height:40px; width:100%;}
+.chupiao h2{height:30px; line-height:30px; background:#66CCFF;olor:#000; font-size:14px; font-weight:300; font-family:'微软雅黑'; padding:0; margin:0;}
+.chupiao dl{ display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.chupiao dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.chupiao dl dt dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+</style>
+<div>
+  <form id="myform" name="myform" method="POST" action="<{$smarty.const.ROOT_DOMAIN}>/daletou/chupiao.php" >
+    <div class="chupiao">
+      <h2>【大乐透】出票页面订单信息总数：(<span style="color:red;">5</span>)说明：请在截止10分钟之前完成出票！</h2>
+    </div>
+ 
+  <div>
+    <ul>
+      <li> 出票人：
+        <input type='radio' checked="checked" name='ticket_person' class='manul_ticket' value='8162'/>
+        唐山&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type='radio' name='ticket_person' class='manul_ticket' value='8163'/>
+        秦皇岛&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type='radio' name='ticket_person' class='manul_ticket' value='8634'/>
+        苏州出票&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type='radio' name='ticket_person' class='manul_ticket' value='8635'/>
+        安徽出票&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type='radio' name='ticket_person' class='manul_ticket' value='8636'/>
+        河北保定
+        <input type="hidden" id="listid" name="listid" value=''/>
+        <input type="button" id="batch_manul_ticket" onclick="chupiao();" value='批量出票'/>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <br/>
+   </form>
+  <div>
+    <div class="tabpading">
+      <table id='ticket_table' class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="overflow:hidden;">
+        <tbody>
+          <tr>
+            <td>序号</td>
+            <td>ID
+              <input type="checkbox" id='select_all'></td>
+            <td>预售期</td>
+            <td>投注方式</td>
+            <td>投注功能</td>
+            <td>倍数</td>
+            <td>投注金额</td>
+            <td>投注内容</td>
+            <td>认购时间</td>
+            <td>操作</td>
+          </tr>
+         <{foreach from=$userTicketInfo item=item key=key name=ticket}>
+	          <tr >
+	            <td><{$key+1}></td>
+	            <td><input type='checkbox' name="itemdid" value='<{$item.l_id}>' class='batch_manul_ticket'>
+	              </td>
+	            <td><{$item.qishu}></td>
+	            <td><{if $item.title eq '2'}>
+				  定胆投注
+				  <{else /}>
+				  普通投注
+				  <{/if}></td>
+	            <td> <{if $item.titlename eq 'Single'}>
+				  单式
+				  <{elseif $item.titlename eq 'Random'}>
+				  机选 
+				  <{elseif $item.titlename eq 'Ran2dom'}>
+				  定胆
+				  <{/if}></td>
+	            <td><{$item.beishu}></td>
+	            <td>&yen;<{$item.price}></td>
+	            <td><div class="kaijiang_ball" style="float:none; width:auto; padding:8px 0;">
+	            	<{foreach from=$item.qianqu_arr item=liq name=ticket2}>
+					<span class="redball"><{$liq}></span>
+					<{/foreach}>
+	            	
+	            	<{foreach from=$item.houqu_arr item=lih name=ticketh}>
+					<span class="blueball"><{$lih}></span>
+					<{/foreach}>
+					
+					</div></td>
+	            <td><{$item.buytime}></td>
+	            <td><a href="javascript:void(0);" onclick="tuipiao('<{$item.l_id}>')" class="refund_money">退票</a> </td>
+	          </tr>
+            <{/foreach}>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

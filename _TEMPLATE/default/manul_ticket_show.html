@@ -1,0 +1,264 @@
+<{include file="../admin/header.html"}>
+<style>
+.gdtype{text-align:left;position:relative;padding:0 0 0 5px;}
+.gdtype span{ font-size:12px;color:#dc0000;background:url(<{$smarty.const.STATICS_BASE_URL}>/i/gBj.gif) no-repeat;width:17px;height:19px;line-height:19px;color:#fff;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.gdtype strong{background:url(<{$smarty.const.STATICS_BASE_URL}>/i/shai.gif) no-repeat;position:absolute;right:10px;top:3px;width:17px;height:19px;line-height:19px;text-indent:-5000px;cursor:pointer;}
+</style>
+<body>
+<script type="text/javascript">
+function reload() {
+	window.location.href = '<{$smarty.const.ROOT_DOMAIN}>/ticket/manul_ticket_show.php';
+	//window.location.reload(true);
+}
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var reload_second = '<{$reload_second}>';
+TMJF(function($) {
+	
+	var ticket_num = '<{$ticket_num}>';
+	if(ticket_num==0) {
+		setTimeout(reload,reload_second*1000);
+	}
+
+	var refund_money_ing = false;
+	$(".refund_money").click(function(){
+		if (refund_money_ing) return false;
+		if (!confirm("本单的本金将全部退还到用户的账户，确定为: ID "+$(this).attr('userTicketId')+"   执行"+$(this).text()+"操作吗？")) return false; 
+		refund_money_ing = true;
+		$.post(Domain + '/admin/admin_operate.php'
+                , {userTicketId: $(this).attr('userTicketId'),
+					type:'refund_money'
+                  }
+                , function(data) {
+                	alert(data.msg);
+                	if (data.ok) {
+                		reload();
+                	}
+                	refund_money_ing = false;
+                }
+                , 'json'
+            );
+	});
+	var batch_manul_ticket_ing = false;
+	$("#batch_manul_ticket").click(function(){
+		if (batch_manul_ticket_ing) return false;
+		if(!ticket_person_checked()) {
+			alert('没有选择出票人');
+			return false;
+		}
+		
+		var ids = '';
+		$(".batch_manul_ticket").each(function(){
+			if ($(this).attr('checked')) ids += $(this).val()+',';
+		});
+		
+		if(!confirm('ID:'+ids+'确定全部出票吗？')) return false;
+		batch_manul_ticket_ing = true;
+		$.post(Domain + '/admin/admin_operate.php'
+                , {ids: ids,
+					type: 'batch_manul_ticket',
+					operate_uid: $('input:radio[name="ticket_person"]:checked').attr('operate_uid'),
+					operate_uname: $('input:radio[name="ticket_person"]:checked').attr('operate_uname')
+                  }
+                , function(data) {
+                	alert(data.msg);
+                	if (data.ok) {
+                		//隐藏某行
+                		//window.location.reload(true);
+                		remove_tr();
+                	}
+                	batch_manul_ticket_ing = false;
+                }
+                , 'json'
+            );
+	});
+		$(".detail_tr").each(function(){
+			var id = $(this).attr('ticketId');
+			var detail_tr = this;
+			var org_details_html = $(detail_tr).html();
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: id
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td valign="middle" class="x1">'+ k +'</td>';
+                    		html += '<td valign="middle" class="x2">'+ ticketInfo[i].show_num +'</td>';
+                    		html += '<td valign="middle" class="x3">'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td valign="middle" class="x4"><div class="XinagQingL"><b>';
+                    		if (ticketInfo[i].sport == 'bk') {
+                    			html += ticketInfo[i].a_cn +'</b><span>VS</span><b>'+ ticketInfo[i].h_cn;
+                    		} else {
+                    			html += ticketInfo[i].h_cn +'</b><span>VS</span><b>'+ ticketInfo[i].a_cn;
+                    		}                   		
+                    		html += '</b></div></td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+							var prize_html = '<div class="zhuangTai"><b class="">未开奖</b></div>';
+                    		
+                    		var isPrize = false;//是否有中奖
+                			var isNotPirze = true;//是否全不中
+                			
+                    		var red = option['red'];//中奖
+                    		var black = option['black'];//未中奖
+                    		var empty = option['empty'];//无赛果
+                    		
+                    		if (red) {
+                    			isPrize = true;
+                    			isNotPirze = false;
+                    			for(var key in red) {
+                        				option_html += '&nbsp;<em style="font-style:normal;color:#dc0000;">'+red[key] +'</em>&nbsp;';
+                        		}
+                    		}
+                    		if (black) {
+                    			for(var key in black) {
+                        				option_html += '&nbsp;' + black[key] + '&nbsp;';
+                        		}
+                    		}
+                    		if (empty) {
+                    			isNotPirze = false;
+                    			for(var key in empty) {
+                        				option_html += '&nbsp;' + empty[key] + '&nbsp;';
+                        		}
+                    		}
+                    		html += '<td valign="middle" class="x5"><div>'+ option_html +'</div></td>';
+                    		
+                    		html += '</tr>'
+                        }
+                    	$(detail_tr).html(org_details_html + html);
+                    } 
+                }
+
+                , 'json'
+            );
+		});
+		//出票人选项是否已经选中
+		function ticket_person_checked() {
+			return $('input:radio[name="ticket_person"]:checked').val() != null;
+		}
+		//隐藏制定的行
+		function remove_tr() {
+			$(".batch_manul_ticket").each(function(){
+				if ($(this).attr('checked')) $(this).closest('tr').remove();
+			});
+			//所有行都删除时提示是否需要刷新页面
+			if ($("#ticket_table tr").length==1) {
+				if(confirm('所有订单都已处理完毕，是否需要刷新？')) reload();
+			}
+		}
+	});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+<form method="post">
+<div class="timechaxun" style="">
+  <ul>
+  <li>串关数：
+      <select name='select' id='select' >
+       <option value="all" selected>全部玩法</option>
+       <option value="1x1" <{if $select=='1x1'}>selected<{/if}>>单关</option>
+       <option value="2x1" <{if $select=='2x1'}>selected<{/if}>>两场比赛的2x1</option>
+       <option value="other" <{if $select=='other'}>selected<{/if}>>其他</option>
+      </select>
+    </li>
+    <li>
+    每页显示数量(只支持整数)<input name='limit' id='limit' value='<{$limit}>' style='width:50px;'>
+    <input type="submit" name="" value="查询">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+<br/>
+<div class="timechaxun" style="">
+  <ul>
+  <li>出票人：
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6780" operate_uname="安徽赵凯" value='安徽赵凯'/>安徽赵凯
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6781" operate_uname="安徽老杨" value='安徽老杨'/>安徽老杨
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6782" operate_uname="福州大砖" value='福州大砖'/>福州大砖
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6783" operate_uname="福州晓飞" value='福州晓飞'/>福州晓飞
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6784" operate_uname="唐山荆豪" value='唐山荆豪'/>唐山荆豪
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="8162" operate_uname="唐山" value='唐山'/>唐山
+  <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="8163" operate_uname="秦皇岛" value='秦皇岛'/>秦皇岛
+  <input type="button" id="batch_manul_ticket" value='批量出票'/></li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<br/>
+<div class="URcenter" style="border:none;">
+  <h2>
+  <b>●</b>订单信息(总数：<{$ticket_num}>)&nbsp;&nbsp;|&nbsp;&nbsp;说明：每<{$reload_second}>秒钟自动刷新页面，直到出现订单为止</h2>
+  <div class="tabpading">
+    <table id='ticket_table' class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="overflow:hidden;">
+      <tbody>
+        <tr>
+          <td>序号</td>
+          <td>ID</td>
+          <td>彩种</td>
+          <td>赛事信息</td>
+          <td>串关方式</td>
+          <td>总金额</td>
+          <td>倍数</td>
+          <{*<td>出票状态</td>*}>
+          <td>出票方</td>
+          <td>认购时间</td>
+          <td>操作</td>
+        </tr>
+        <{assign var=num value=0}>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket key=key}>
+        <{assign var=num value=$num+1}>
+        <tr <{if $smarty.foreach.ticket.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+        
+        <td class="show"><{$num}></td>
+        <td class="show">
+		<input type='checkbox' value='<{$userTicket.id}>' class='batch_manul_ticket'><{$userTicket.id}></td>
+          <td class="show"><{$userTicket.sport|getPoolDesc:$userTicket.pool}></td>
+          <td class="show">
+          <table width="100%" >
+          <tbody class="detail_tr" ticketId='<{$userTicket.id}>'>
+            <tr>
+              <th>序号</th>
+              <th>场次</th>
+              <th>赛事</th>
+              <th><{if $userTicket.sport == 'bk'}>客队VS主队<{else}>主队VS客队<{/if}></th>
+              <th>我的选择</th>
+            </tr>
+          </tbody>
+        </table>
+          </td>
+          <td class="show"><{$userTicket.user_select}></td>
+          <td class="show">￥<{$userTicket.money}>元</td>
+          <td class="show"><{$userTicket.multiple}></td>
+          <{*<td class="show">
+          <{$userTicketPrintStateDesc[$userTicket.print_state].desc}>
+          </td>*}>
+          <td class="show"><{$getTicketCompany[$userTicket.company_id].desc}></td>
+          <td class="show"><{$userTicket.datetime}></td>
+          <td>
+		  <a href="javascript:void(0);" target="_blank" class="refund_money" userTicketId="<{$userTicket.id}>">退票</a>
+		  </td>
+        </tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+    <{if $previousUrl || $nextUrl}>
+		<div class="pageC">
+		<div class="pages">
+		<{if $previousUrl}>
+		<a href="<{$previousUrl}>">上页</a>
+		<{/if}>
+		<{if $nextUrl}>
+		<a href="<{$nextUrl}>">下页</a>
+		<{/if}>
+		</div>
+		</div>
+	<{/if}>
+  </div>
+</div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

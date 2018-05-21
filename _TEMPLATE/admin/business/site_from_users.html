@@ -1,0 +1,94 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$(".start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+	});
+	$(".end_time").focus(function(){
+		showCalendar('end_time', 'y-mm-dd');
+	});
+});
+</script>
+<div>
+  <h2> <b>●</b>网站代理人信息</h2>
+  <div class="UserRight">
+    <form method="post">
+      <div class="timechaxun" style="height:45px;">
+        <ul>
+          <li> 用户名：
+            <input type="text" name="create_uname" id="create_uname" value="<{$create_uname}>">
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            开始时间：
+            <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+            结束时间：
+            <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <select name='order' id='order'>
+              <option value="total_registers desc" <{if $order=='total_registers desc'}>selected<{/if}>>注册人数倒序
+              </option>
+              <option value="total_registers asc" <{if $order=='total_registers asc'}>selected<{/if}>>注册人数正序
+              </option>
+              <option value="total_idcards desc" <{if $order=='total_idcards desc'}>selected<{/if}>>认证人数倒序
+              </option>
+              <option value="total_idcards asc" <{if $order=='total_idcards asc'}>selected<{/if}>>认证人数正序
+              </option>
+              <option value="total_money desc" <{if $order=='total_money desc'}>selected<{/if}>>投注总量倒序
+              </option>
+              <option value="total_money asc" <{if $order=='total_money asc'}>selected<{/if}>>投注总量正序
+              </option>
+            </select>
+            <input type="submit" name="" value="查询">
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </form>
+  </div>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <th>序号</th>
+          <th>外站链接</th>
+          <th>注册人数</th>
+          <th>认证人数</th>
+          <th>投注总金额</th>
+          <th>创建时间</th>
+          <th>创建人</th>
+          <th>操作</th>
+        </tr>
+      <{foreach from=$results item=item name=name}>
+      <tr 
+      <{if $smarty.foreach.name.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>>
+      <form method="post" action="">
+        <td class="show"><input type='hidden' name='id' value="<{$item.id}>">
+          <input type='hidden' name='operate' value="modify">
+          <{$item.id}></td>
+        <td class="show"><{$item.link}></td>
+        <td class="show"><{$item.total_registers}></td>
+        <td class="show"><{$item.total_idcards}></td>
+        <td class="show"><{$item.total_money}></td>
+        <td class="show"><{$item.create_time}></td>
+        <td class="show"><{$item.create_uname}></td>
+        <td class="show"><a href="<{$smarty.const.ROOT_DOMAIN}>/admin/business/site_from_detail.php?source_key=<{$item.source_key}>">详情</a></td>
+      </form>
+      </tr>
+      
+      <{/foreach}>
+      </tbody>
+      
+    </table>
+    <{if $previousUrl || $nextUrl}>
+    <div class="pageC">
+      <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+    </div>
+    <{/if}> </div>
+</div>
+</body>
+</html>

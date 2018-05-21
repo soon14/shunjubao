@@ -1,0 +1,102 @@
+<{include file="header.html"}>
+</head>
+<body>
+<{include file="top.html"}>
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "<{$smarty.const.STATICS_BASE_URL}>/i"
+    	, domain: "<{$smarty.const.ROOT_DOMAIN}>"
+};
+</script>
+<script src="<{'china_area.js'|getStaticsUrl}>"></script>
+<script src="<{'step.js'|getStaticsUrl}>"></script>
+<div class="ustitle">
+  <h1><em>绑定银行卡<b></b><i></i></em></h1>
+</div>
+<!--用户中心绑定银行卡 start-->
+<div class="center"> <{if $userRealInfo.realname}>
+  <div class="biaodan">
+    <form method="post">
+      <{if $msg_error}>
+      <div class="tips"><{$msg_error}></div>
+      <{/if}>
+      <{if $msg_success}>
+      <div class="tips"><{$msg_success}></div>
+      <{/if}>
+      <dl>
+        <dt>真实姓名：<{$userRealInfo.realname}>
+      </dl>
+      </dl>
+      <dl>
+        <dt>&nbsp;&nbsp;&nbsp;&nbsp;归属地：
+          <{if $userRealInfo.bank_province && $userRealInfo.bank_city}>
+          <{$userRealInfo.bank_province}>&nbsp;&nbsp;&nbsp;&nbsp;
+          <{$userRealInfo.bank_city}>
+          <{else}>
+          <select name="f[province]" id="pselect1">
+            <option value="" selected>请选择</option>
+          </select>
+          <select name="f[city]" id="pselect2">
+            <option value="" selected>请选择</option>
+          </select>
+          <{/if}> </dt>
+      </dl>
+      <dl>
+        <{if $userRealInfo.bank}>
+        <dt>&nbsp;&nbsp;&nbsp;&nbsp;开户行：<{$userRealInfo.bank}></dt>
+        <{else}>
+        <dt>开户行</dt>
+        <dd>
+          <input type="text" name="bank" id="bank"/>
+        </dd>
+        <{/if}>
+      </dl>
+      <dl>
+        <{if $userRealInfo.bank_branch}>
+        <dt>支行名称：<{$userRealInfo.bank_branch}></dt>
+        <{else}>
+        <dt>支行名称</dt>
+        <dd>
+          <input type="text" name="bank_branch" id="bank_branch"/>
+        </dd>
+        <{/if}>
+      </dl>
+      <dl>
+        <{if $userRealInfo.bankcard}>
+        <dt>银行卡号：<{$userRealInfo.bankcard}></dt>
+        <{else}>
+        <dt>银行卡号</dt>
+        <dd>
+          <input type="text" name="bankcard" id="bankcard"/>
+        </dd>
+        <{/if}>
+      </dl>
+      <dl>
+        <{if !$userRealInfo.bankcard}>
+        <dt>再次确认</dt>
+        <dd>
+          <input type="text"name="rebankcard" id="rebankcard"/>
+        </dd>
+      </dl>
+      <div class="sub">
+        <input type="submit" value="提&nbsp;&nbsp;&nbsp;交" />
+      </div>
+      <{/if}>
+    </form>
+  </div>
+  <{else}>
+  <div class="tipss">
+    <p><b>温馨提示：</b></p>
+    <p>1)&nbsp;在实名认证之前请您核实您填写的身份信息是否正确，如果不正确将会导致您认证不通过；</p>
+    <p>2)&nbsp;智赢网暂时只支持身份证的实名认证，不支持其它证件的认证；</p>
+    <p>3)&nbsp;真实姓名是您提款时的重要依据，填写后不可更改。</p>
+  </div>
+  <div class="smlink"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_realinfo.php">进行实名认证</a> <{/if}> </div>
+</div>
+<!--用户中心绑定银行卡 end-->
+<{include file="../app/footer.html"}>
+</body>
+</html>

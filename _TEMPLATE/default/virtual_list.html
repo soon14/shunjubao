@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><{$TEMPLATE.title}>-为家乡的球队加油，CBA\中超-积分投注，竞猜CBA\中超来智赢!!</title>
+<meta name="keywords" content="<{$TEMPLATE.keywords}>" />
+<meta name="description" content="<{$TEMPLATE.description}>" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="<{'header.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'footer.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'touzhu.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<{'navigator.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery-1.9.1.min.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'float.js'|getStaticsUrl}>"></script>
+<script type="text/javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+</script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.post(Domain + '/prize/getPrize.php', {
+			type : 1,
+			limit : 40,
+		}, function(data) {
+			var jishi_html = '';
+			if(data.ok) {
+				var data_msg = data.msg;
+				jishi_html += "<ul>";
+				for(var key in data_msg) {
+					jishi_html += "<li>"+data_msg[key].u_name+"<span>"+data_msg[key].prize+"元</span></li>";
+				}
+				jishi_html += "</ul>"
+			}
+			$("#scrollDiv_keleyi_com").html(jishi_html);
+		}, 'json'
+		);
+		
+	$("#subBtn").click(function(){
+		var Multiple = Number($("#Multiple").val());
+		Multiple = Multiple - 1;
+		$("#Multiple").val(Multiple);
+		cal();
+	});
+	$("#addBtn").click(function(){
+		var Multiple = Number($("#Multiple").val());
+		Multiple = Multiple + 1;
+		$("#Multiple").val(Multiple);
+		cal();
+	});
+	
+	$("#Multiple").change(function(){
+		cal();
+	});
+	$("#Multiple").keyup(function(){
+		cal();
+	});
+	$(".o").click(function() {
+		var active = $(this).hasClass("active");
+		if(active) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+		cal();
+	});
+	 
+	$(".hideMatch").click(function(){
+		var tr = $(this).closest('tr');
+		tr.addClass('none');
+	});
+	
+	$("#submit1").click(function(){
+		
+		var Multiple = $("#Multiple").val();
+		var money = $("#money").val();
+		var combination = $("#combination").val();
+		if(money==''||money==0) return false;
+		if(Multiple==''||Multiple==0) return false;
+		if(combination=='') return false;
+		
+		return true;
+	});
+});
+//投注1|h#1&a#1,2|a#2
+function getCombination() {
+	var combination = '';
+	$(".match").each(function(){
+		if(!$(this).hasClass('none')) {
+			var a = $(this).find('.o');
+			var odds = '';
+			var matchId = $(this).attr('matchId');
+			a.each(function(){
+				if($(this).hasClass('active')) {
+					var odd = $(this).attr('odd');
+					if($(this).hasClass('oddh')) {
+						odd = 'h#' + odd;
+					}
+					if($(this).hasClass('odda')) {
+						odd = 'a#' + odd;
+					}
+					odds += odd + '&';
+				}
+			});
+			if(odds !=''){
+				odds = odds.substr(0, odds.length - 1);
+				combination += matchId + '|' + odds + ',';
+			}
+		}
+	});
+	if(combination !='') combination = combination.substr(0, combination.length - 1);
+	return combination;
+}
+//计算投注积分
+function cal() {
+	var Multiple = Number($("#Multiple").val());
+	
+	if(isNaN(Multiple)) {
+		Multiple = 1;
+	}
+	
+	if(Multiple>=100001) {
+		alert('最大允许投注100000倍');
+		Multiple=100000;
+	}
+	
+	if(Multiple==0) Multiple=1;
+	
+	$("#Multiple").val(Multiple);
+	
+	var select = 0;
+	$(".o").each(function(){
+		if($(this).hasClass("active")) select++;
+	});
+	
+	var money = select*Multiple*2;
+	$("#betMoney").text(money);
+	$("#money").val(money);
+	$("#combination").val(getCombination());
+}
+</script>
+<body>
+<{include file="top.html"}>
+<div class="2015top" style="height:60px; background:#BC1E1F;">
+  <div style="width:1000px; margin:0 auto; position:relative; height:120px; text-align:left;">
+    <div><a href="http://www.zhiying365365.com/"><img src="http://www.zhiying365365.com/www/statics/i/logo.jpg"></a></div>
+    <div class="daiyu">
+      <h1>积分投注，专为中国CBA、中超球迷提供！</h1>
+    </div>
+  </div>
+</div>
+<div class="tipsters">
+  <div class="NewsNav">
+    <h1><em> <span>支持中国人自己的联赛！<br/>
+      积分竞猜CBA/中超赢取彩金...</span></em> </h1>
+  </div>
+</div>
+<!--智赢页面头部 end-->
+<!--当前位置 start-->
+<div class="jflocation">
+  <div class="jflc_center">
+    <ul>
+      <li><a href="http://www.zhiying365365.com/ticket/virtual_list.php" class="active">积分投注</a></li>
+      <li><a href="http://zhiying365365.com/Activities/zhongchao/tzgz.html">投注规则</a></li>
+      <li><a href="http://zhiying365365.com/Activities/zhongchao/jfgz.html">积分规则</a></li>
+    </ul>
+    <div class="zhongjiang"><b>最新中奖用户：</b>
+      <div id="scrollDiv_keleyi_com" class="scrollDiv"> </div>
+      <script type="text/javascript">
+		function AutoScroll(obj){
+		$(obj).find("ul:first").animate({
+		marginTop:"-25px"
+		},500,function(){
+		$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+		});
+		}
+		$(document).ready(function(){
+		setInterval('AutoScroll("#scrollDiv_keleyi_com")',3000);
+		});
+		</script>
+    </div>
+  </div>
+</div>
+<!--当前位置 end-->
+<!--center start-->
+<div class="center">
+  <div class="BitCenter">
+    <div>
+      <div class="Kjnav3">
+        <div class="jf_Nav">
+          <dl class="one">
+            <dt>序号</dt>
+          </dl>
+          <dl class="three">
+            <dt>赛事</dt>
+          </dl>
+          <dl class="four">
+            <dt>截止时间</dt>
+          </dl>
+          <dl class="five">
+            <dt><b>对阵</b></dt>
+          </dl>
+          <dl class="six">
+            <dt>主队</dt>
+          </dl>
+          <dl class="seven">
+            <dt>盘口</dt>
+          </dl>
+          <dl class="eight">
+            <dt>客队</dt>
+          </dl>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="1" class="stripe" id='datalist'>
+          <{foreach from=$vb_lists item=item key=key}>
+          <tr class="match" matchId="<{$item.id}>">
+            <td class="dc1"><a href="javascript:void(0);" class="hideMatch"><{$item.num}></a></td>
+            <td class="dc3" style="background:#<{if $item.sport=='fb'}>4D94FC<{else}>FF6600<{/if}>; color:#fff;"><{$sportDesc[$item.sport].desc}></td>
+            <td class="dc4"><{$item.start_time}></td>
+            <td class="dc5" style="width:220px;"><div class="duiNamE"><b><{$item.host_team}></b><u>VS</u><em><{$item.guest_team}></em></div></td>
+            <td class="dc6"><div class="jftouzhu"><b><a class="o oddh" href="javascript:void(0);" odd="<{$item.h}>"><{$item.h}></a></b></div></td>
+            <td class="dc7"><div class="zcsfqb"><{$item.remark}></div></td>
+            <td class="dc6"><div class="jftouzhu"><b><a class="o odda" href="javascript:void(0);" odd="<{$item.a}>"><{$item.a}></a></b></div></td>
+          </tr>
+          <{/foreach}>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/confirm_vb.php" method="post" id="form1">
+  <div class="betbox">
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td><div class="Tbeishu">
+                <ul>
+                  <li class="show">投注倍数：</li>
+                  <li><a class="" href="javascript:void(0);" id="subBtn">-</a></li>
+                  <li class="text">
+                    <input type="text" value="1" maxlength="7" autocomplete="off" id="Multiple" name="multiple">
+                  </li>
+                  <li><a class="" href="javascript:void(0);" id="addBtn">+</a></li>
+                  <li class="jf">投注<b id="betMoney">0</b>积分</li>
+                </ul>
+              </div>
+              <div class="jftouzhutips"><span>*</span>所有赛事只能投注单场，不能串关，足球篮球更不能混合投注</div></td>
+            <td><div class="BetCheckT">
+                <div class="touzhuSub">
+                  <input type="hidden" name="money" id="money" value="0"/>
+                  <input type="hidden" name="combination" id="combination" value=""/>
+                  <input type="submit" id="submit1" value="立即投注">
+                </div>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
+<!--center end-->
+<div><{include file="footer.html"}></div>
+</body>
+</html>

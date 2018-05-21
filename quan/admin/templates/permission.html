@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript>
+function unselectall()
+{
+    if(document.myform.chkAll.checked){
+	document.myform.chkAll.checked = document.myform.chkAll.checked&0;
+    } 	
+}
+
+function CheckAll(form)
+  {
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled==false)
+       e.checked = form.chkAll.checked;
+    }
+  }
+function ConfirmDel(url){
+	if(confirm("此操作不可恢复,真的要删除吗?")){   
+		location.href=url;
+		return true;
+	}else{
+		return false;
+	}
+}
+</SCRIPT>
+</head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform" method="Post" action="">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td width="65"><div align="center"><STRONG>选中</STRONG></div></td>
+    <td bgcolor="#F7F7F7"><div align="center"><strong>权限ID</strong></div></td>
+    <td bgcolor="#F7F7F7"><div align="center"><strong>权限名称</strong></div></td>
+    <td bgcolor="#F7F7F7"><div align="center"><strong>添加人</strong></div></td>
+    <td bgcolor="#F7F7F7"><div align="center"><STRONG>添加时间</STRONG></div></td>
+    <td bgcolor="#F7F7F7"><div align="center"><STRONG>备注</STRONG></div></td>
+    <td colspan="2" bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$permission}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+  	<td width="65"><div align="center">
+     <input name='goodsID[]' type='checkbox' onclick="unselectall()" id="goodsID" value="<!--{$permission[a].sysid}-->" />
+   </div></td>
+    <td><div align="center"><!--{$permission[a].mr_id}--></div></td>
+    <td><div align="center"><!--{$permission[a].mr_name}--></div></td>
+    <td><div align="center"><!--{$permission[a].mr_addid}--></div></td>
+    <td><div align="center"><!--{$permission[a].mr_addtime}--></div></td>
+    <td><div align="center"><!--{$permission[a].mr_desc}--></div></td>
+    <td width="103"><div align="center">[<a href="permission.php?action=edit&id=<!--{$permission[a].sysid}-->"> 修改 </a>]</div></td>
+    <td width="117"><div align="center">[<a href="permission.php?action=delete&id=<!--{$permission[a].sysid}-->" onclick="javascript:return confirm('您确认要删除吗？一旦删除将不可恢复');"> 删除 </a>]</div></td>
+  </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+  <td width="40"><div align="center">
+      <input name="chkAll" type="checkbox" id="chkAll" onclick=CheckAll(this.form) value="checkbox">
+    </div></td>
+    <td colspan="7">全选</td
+    ></tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="8"><div align="center">每页<font color="#FF0000"> <!--{ $pageSize }--></font>条 共<font color="#FF0000"><!--{ $page }--> </font>页  共<font color="#FF0000"><!--{ $totalRecord }--> </font>条记录<!--{ $multi }--></div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="8"><div align="center"><a href="permission.php?action=add">添加新权限</a> </div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

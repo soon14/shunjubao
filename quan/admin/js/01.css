@@ -1,0 +1,89 @@
+﻿
+
+BODY {
+	 background-color: #ffffff;margin-top: 0px; margin-left: 0px;margin-right: 0px; margin-bottom: 0px;SCROLLBAR-FACE-COLOR: #ededed; SCROLLBAR-HIGHLIGHT-COLOR: #fafafa; SCROLLBAR-SHADOW-COLOR: #bdbdbd; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #939393; SCROLLBAR-TRACK-COLOR: #f4f4f4; SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+}
+
+td {
+	font-size: 9pt;
+	LINE-HEIGHT: 150%;
+		}
+A:link {
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+
+}
+A:visited {
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #ff0000;
+	TEXT-DECORATION: underline;
+}
+A:active {
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+
+
+
+
+.A1:link {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+
+}
+.A1:visited {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+}
+.A1:hover {
+	COLOR: #FFFF00;
+	TEXT-DECORATION: none;
+}
+.A1:active {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+}
+
+
+
+.input {
+	font-size: 9pt;
+	border: 1px solid #000000;
+	font-family: Arial;
+}
+
+.input {
+	font-size: 9pt;
+	border: 1px solid #000000;
+	}
+
+.input1 {
+	font-size: 9pt;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	}
+.input3 {
+	font-size: 9pt;
+	border: 1px solid #DEDFDE;
+	}
+.input4 {
+	font-size: 9pt;
+	border: 1px solid #DEDFDE;
+	background-color: #ffffff;
+	}	
+	
+	
+.table {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-left-color: #000000;
+}
+.color_1 {
+	color: #FF00FF;
+}

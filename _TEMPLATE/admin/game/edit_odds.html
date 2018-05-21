@@ -1,0 +1,111 @@
+<{include file="../admin/header.html"}>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+});
+</script>
+<div>
+  <h2> <b>●</b>SP值修改</h2>
+  <{if $pool && $matchInfo}>
+  <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td>玩法</td>
+        <td><{if $sport=='bk'}>客VS主<{else}>主VS客<{/if}></td>
+        <td>比赛日期</td>
+      </tr>
+      <tr>
+        <td><{$sportAndPoolDesc[$pool].desc}></td>
+        <td><{if $sport=='bk'}><{$matchInfo.a_cn}>VS<{$matchInfo.h_cn}><{else}><{$matchInfo.h_cn}>VS<{$matchInfo.a_cn}><{/if}></td>
+        <td><{$matchInfo.date}>&nbsp;&nbsp;<{$matchInfo.time}></td>
+      </tr>
+    </tbody>
+  </table>
+  <{/if}>
+  <div> <{if $odd}>
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/game/edit_odds.php">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr> <{foreach from=$odd item=item key=key}>
+            <{if $key=='id'}>
+            <th>序号</th>
+            <{elseif $key=='m_num'}>
+            <th>场次</th>
+            <{elseif $key=='s_code'}>
+            <th>彩种</th>
+            <{elseif $key=='m_id'}>
+            <th>赛事ID</th>
+            <{elseif $key=='goalline'}>
+            <th>让球</th>
+            <{elseif $key=='date'}>
+            <th>最后更新日期</th>
+            <{elseif $key=='time'}>
+            <th>最后更新时间</th>
+            <{elseif $key=='p_id'}>
+            <th>p_id</th>
+            <{else}>
+            <th class="show"><{$pool|getChineseByPoolCode:$key}></th>
+            <{/if}>
+            <{/foreach}> </tr>
+          <tr>
+            <input name="sport"  type="hidden" value="<{$sport}>"/>
+            <input name="pool"  type="hidden" value="<{$pool}>"/>
+            <input name="operate"  type="hidden" value="edit"/>
+            <input name="id"  type="hidden" value="<{$odd.id}>"/>
+            <{foreach from=$odd item=item key=key}>
+            <{if $key=='id' || $key=='m_num' || $key=='s_code'|| $key=='p_id'|| $key=='m_id'|| $key=='goalline'|| $key=='date'|| $key=='time' }>
+            <td class="show"><{if $item=='FB'}>竞足<{elseif $item=='BK'}>竞篮<{else}><{$item}><{/if}></td>
+            <{else}>
+            <td class="show"><input name='<{$key}>' value='<{$item}>'/></td>
+            <{/if}>
+            <{/foreach}>
+            <td class="show"><input type='submit' value="修改"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <{else}>
+    <form action="<{$smarty.const.ROOT_DOMAIN}>/admin/game/edit_odds.php" method="post">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>彩种</th>
+            <th>玩法</th>
+            <th>星期</th>
+            <th>场次</th>
+			<th>操作</th>
+          </tr>
+          <tr>
+            <td><input name="operate"  type="hidden" value="show"/>
+              <select name="sport" id="sport">
+                <option value="fb">竞彩足球</option>
+                <option value="bk">竞彩篮球</option>
+              </select>
+            </td>
+            <td><select name="pool">
+                <{foreach from=$sportAndPoolDesc item=item key=key}>
+                <option value="<{$key}>"><{$item.desc}></option>
+                <{/foreach}>
+              </select>
+            </td>
+            <td><select name="week" id="week">
+                <option value="1">星期一</option>
+                <option value="2">星期二</option>
+                <option value="3">星期三</option>
+                <option value="4">星期四</option>
+                <option value="5">星期五</option>
+                <option value="6">星期六</option>
+                <option value="7">星期日</option>
+              </select>
+            </td>
+            <td><input name="num" id="num" type="text"/></td>
+			<td><input type="submit" value="查询"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <{/if}> </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

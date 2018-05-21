@@ -1,0 +1,211 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<link type="text/css" rel="stylesheet" href="<{'msg.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'blocksit.min.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'xMarquee.js'|getStaticsUrl}>" ></script>
+<script>
+$(document).ready(function() {//vendor script
+	$('#header')
+	.css({'top':-50 })
+	.delay(1000)
+	.animate({'top': 0}, 800);
+	
+	$('#footer')
+	.css({'bottom':-15 })
+	.delay(1000)
+	.animate({'bottom': 0}, 800);
+	
+	//blocksit define
+	$(window).load( function() {$('#container').BlocksIt({
+			numOfCol: 5,
+			offsetX: 8,
+			offsetY: 8
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth < 660) {
+			conWidth = 440;
+			col = 2
+		} else if(winWidth < 880) {
+			conWidth = 660;
+			col = 3
+		} else if(winWidth < 1100) {
+			conWidth = 880;
+			col = 4;
+		} else {conWidth = 1100;
+			col = 5;
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({numOfCol: col,
+				offsetX: 8,
+				offsetY: 8
+			});
+		}
+	});
+	var arrCookie = document.cookie.split(/;\s*/); 
+	var userMessageTitle = '';
+	var userMessageMessage = '';
+	var u_name = '';
+	//遍历cookie数组，处理每个cookie对 
+	for(var i=0;i<arrCookie.length;i++){
+		var arr = arrCookie[i].split("=");
+		//找到名称为userId的cookie，并返回它的值
+		if("userMessageTitle" == arr[0]){
+			userMessageTitle = decodeURIComponent(arr[1]); 
+		}
+		if("userMessageMessage" == arr[0]){
+			userMessageMessage = decodeURIComponent(arr[1]); 
+		}
+		if("u_name" == arr[0]){
+			u_name = decodeURIComponent(arr[1]); 
+		}
+	}
+	
+	$("#title").val(userMessageTitle);
+	$("#message").val(userMessageMessage);
+	
+	$("#submit").click(function(){
+		var title = $("#title").val();
+		var message = $("#message").val();
+		var img = $("#fileField").val();
+		var img_num = '<{$img_num}>';
+		var root_domain = '<{$smarty.const.ROOT_DOMAIN}>';
+		
+		if(u_name == '') {
+			if(confirm('您未登录，是否去登录')) {
+				document.cookie="userMessageTitle="+title;
+				document.cookie="userMessageMessage="+message;
+				window.location = root_domain + '/passport/login.php?from='+root_domain+'/message/show.php';
+			}
+			return false;
+		}
+		if(title.length>24) {
+			alert('标题过长！请输入12字内的标题');
+			return false;
+		}
+		if(message == '' || title == '') {
+			alert('标题或内容不能为空！');
+			return false;
+		}
+//		if(img == '') {
+//			alert('请上传图片！');
+//			return false;
+//		}
+//		if(img_num==10) {
+//			alert('今天已经上传10张了，不可以再传喽！');
+//			return false;
+//		}
+		alert('添加成功!客服妹子审核中...');
+		return true;
+		$.post(
+				root_domain+'/message/add.php',
+				{title: title,message:message},
+				function(data){
+					alert(data.msg);
+					if(data.ok) {
+						document.cookie="userMessageTitle= ";
+						document.cookie="userMessageMessage= ";
+						window.location.reload(true);
+					}
+				},
+				'json'
+		);
+		return false;
+	});
+});
+</script>
+</head><style>
+.msgnav{color:#fff; position:relative;left:-80px;}
+.msgnav span{ position:absolute;right:-80px;}
+.msgnav span a{display:inline-table;display:inline-block;zoom:1;*display:inline; padding:0 30px; background:#FFCC33;color:#fff; border-radius:10px; height:30px; line-height:30px; font-size:14px;}
+.msgnav span a:hover{}
+</style>
+<body>
+<div id="fade" class="black_overlay"></div>
+<div id="fade2" class="black_overla"></div>
+<div class="header">
+  <div class="headerCnetr">
+    <div class="logo">
+      <h1><a href="http://www.zhiying365365.com/"><strong class="none">智赢网</strong><em class="none" style="display:none;">365</em><b class="none">以智慧赢取人生</b></a></h1>
+    </div>
+    <div class="msgnav">智赢留言墙<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='block';document.getElementById ('fade').style.display='block'">提交留言</a></span></div>
+  </div>
+</div>
+<div class="zjmdbox">
+  <div class="zjmd">
+    <div class="guandong">
+      <div class="gdleft" style="width:600px;"><span style="display:none;"><em>&bull;&bull;&bull;</em></span>智赢的发展离不开你们，你的意见与建议对我们很重要！好的建议将会得到奖励喔~</div>
+      <div class="gdright">
+        <div id="x1" class="xMarquee">
+          <ol>
+            <li></li>
+          </ol>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+<div id="container"> <{foreach from=$messages item=item key=key}>
+  <div class="grid"><strong><{$item.title}></strong>
+    <p class="show"><{$item.message}></p>
+    <div class="meta">by&nbsp;<b><{$item.u_name}></b><span><{$item.create_time|truncate:10:"":true}></span></div>
+  </div>
+  <{/foreach}> </div>
+<!-- Content end-->
+<!-- Footer -->
+<!--弹出订阅 start-->
+<form enctype="multipart/form-data" method="post" action="<{$smarty.const.ROOT_DOMAIN}>/message/add.php">
+  <div id="light1" class="white_content">
+    <div class="MSCenter">
+      <h1>留言<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+      <div class="msbiaodan">
+        <ul style="padding:30px 0 0 0;">
+          <li>标题：
+            <input type="text" class="text" name="title" id="title">
+            <em><i>*</i>请输入12字内的标题</em></li>
+          <li class="none"> 照片：
+            <input type="text" class="uptxt" id="textfield" name="textfield">
+            <input type="button" value="浏览..." class="upbtn">
+            <input type="file" style="top:140px;"onchange="document.getElementById('textfield').value=this.value" size="28" id="fileField" class="upfile" name="fileFieldsss">
+            <{*
+            <input type="submit" value="上传" class="upbtn" name="submit">
+            *}> <em><i>*</i>请上传900KB内的GIF、JPG、PNG，每次只能上传一张，传完之后可以在继续上传。</em> </li>
+          <li style="padding:15px 0 0 0;"><span>内容：</span>
+            <textarea name="message" rows="" cols="" style="width:400px;" id="message"></textarea>
+          </li>
+          <li class="sub">
+            <input type="submit" name="submit" value="提交" id="submit">
+          </li>
+        </ul>
+      </div>
+      <h2>你的意见与建议对我们很重要!</h2>
+    </div>
+  </div>
+</form>
+<!--弹出订阅 end-->
+<script>
+$(function(){
+$("#x1").xMarquee();
+$("#x2").xMarquee({temp:2,backMarquee:'backMarquee'});
+})
+
+function backMarquee(id,con){
+$("#backMarquee").html(id+"::::::::::::::::::::"+con);
+}
+</script>
+<!--footer start-->
+<div style="font-size:12px;">
+  <script type="text/javascript" src="<{'footer.js'|getStaticsUrl}>" ></script>
+</div>
+<!--footer end-->
+</body>

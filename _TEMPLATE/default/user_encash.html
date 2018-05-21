@@ -1,0 +1,76 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<script language="javascript">
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+</script>
+<script type="text/javascript">
+$(function() {
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+    });
+	
+	$("#end_time").focus(function(){
+        showCalendar('end_time', 'y-mm-dd');
+    });	
+});
+</script>
+<body>
+<!--提现记录 start-->
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>账户明细-提现记录</h1>
+	<div style="padding:50px 0 0 0;">
+    <div class="tabuser">
+      <ul>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_account_log.php">账户明细</a></li>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_gift_log.php">彩金明细</a></li>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge_log.php">充值记录</a></li>
+		<li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_encash.php" class="active">提现记录</a></li>
+        <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket_log.php">奖金派送</a></li>
+		<li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_follow_prize.php">提成明细</a></li>
+		<li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_tips.php">我的打赏</a></li>
+		<li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_tipsed.php">打赏我的</a></li>
+		<li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_site_from.php">我的推广</a></li>
+      </ul>
+    </div>
+	</div>
+    <div style="padding:20px 0 0 0;">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="stripese">
+        <form method="post">
+          <tr>
+            <td colspan="3" class="show" style="padding:30px 0 20px 0;border-bottom:none;">开始时间：
+              <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+              &nbsp;结束时间：
+              <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+              &nbsp;
+              <input type="submit" class="sub" value="查询" name="submit">
+        </form>
+        <tr>
+          <td>时间</td>
+          <td>提现额度</td>
+          <td align="right">状态</td>
+        </tr>
+        <{foreach from=$userEncashInfos item=userEncashInfo name=log}>
+        <tr>
+          <td  style="color:#999;"><{$userEncashInfo.create_time}></td>
+          <td><{$userEncashInfo.money}>元</td>
+          <td align="right"><{$EncashStatusDesc[$userEncashInfo.encash_status].desc}></td>
+        </tr>
+        <{/foreach}>
+      </table>
+      <div class="clear"></div>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pageC">
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+      </div>
+      <{/if}> </div>
+  </div>
+</div>
+<!--提现记录 end-->
+</body>
+</html>

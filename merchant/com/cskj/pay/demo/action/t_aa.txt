@@ -1,0 +1,6 @@
+执行日期：2017-09-13-18：36：07
+接收所有t_aa数据:{"returnCode":"0","resultCode":"0","sign":"30D562CAC7913F190C2FD163DD535F99","status":"02","channel":"jdPayDebitCredit","body":"智赢在线安全支付","outTradeNo":"wy170910090525693168","amount":500.00,"currency":"CNY","transTime":"20170910090527","subject":"智赢在线安全支付","payChannelType":"jd"}
+
+执行日期：2017-09-13-18：36：39
+接收所有t_aa数据:500
+

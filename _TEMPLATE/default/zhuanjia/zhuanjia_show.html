@@ -1,0 +1,156 @@
+<{include file="header.html"}>
+<{include file="../default/top.html"}>
+<{include file="../default/menu.html"}>
+<link type="text/css" rel="stylesheet" href="<{'zj.css'|getStaticsUrl}>" >
+<script type="text/javascript">
+$(function(){
+
+$("#hacker tr:odd").addClass('listtd');});</script>
+<script type="text/javascript">
+
+// 收缩展开效果
+
+$(document).ready(function(){
+
+	$("div.text").hide();//默认隐藏div，或者在样式表中添加.text{display:none}，推荐使用后者
+
+	$(".box h1").click(function(){
+
+		$(this).next(".text").slideToggle("slow");
+
+	})
+
+});
+
+</script>
+<body>
+<!--专家中心center-->
+<div class="center">
+  <div class="zjshow">
+    <div class="zjtop">
+      <div class="showTop">
+        <div style="width:1000px; margin:auto;">
+          <h1><{$value.u_nick}><span><em>*</em>包周的专家一周至少推荐场次不低于7场；包月的专家一月至少推荐场次不低于30场。</span></h1>
+          <form action="booking_action.php" method="post">
+            <dl>
+              <dt><img src="<{$value.u_img}>"></dt>
+              <dd>
+                <h2><{$value.u_nick}>：<{$value.ddesc}></h2>
+                <!--   <p>
+
+              <input type="radio" name='' id="">
+
+              单场推荐</p>-->
+                <p>
+                  <input type="radio"  name='booktype' value="2" checked="checked">
+                  订阅一周(<{$value.week_money}>元/周)</p>
+                <p>
+                  <input type="radio"  name='booktype' value="3" >
+                  订阅一个月<{$value.month_money}>元/月)</p>
+                <ul>
+                  <li>
+                    <input type="submit"  value="确认订阅" class="dingyuesub" name='' id="">
+                    <input name="action"  id="action" type="hidden" value="add_action">
+                    <input name="bookid"  id="bookid" type="hidden" value="<{$value.eid}>">
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </form>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+    	function showmy(id){
+
+			
+
+			for(var i=1; i<4;i++){
+
+				$("#show"+i).removeClass("active");	
+
+				$("#showc"+i).hide();	
+
+			}
+
+			$("#show"+id).addClass("active");	
+
+			$("#showc"+id).show();		
+
+		}
+
+    
+
+    </script>
+    <div class="showCur">
+      <div class="zjtab">
+        <ul>
+          <li><a href="javascript:void()" onClick="showmy('1')" class="active" id="show1">最新推荐</a></li>
+          <li><a href="javascript:void()"  onClick="showmy('2')" id="show2">推荐新闻</a></li>
+          <li><a href="javascript:void()" onClick="showmy('3')" id="show3">服务说明</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="zjinfor">
+        <div class="" id="showc1">
+          <div class="hacker" style="width:960px;">
+            <table border="0" cellpadding="0" cellspacing="0" id="hacker">
+              <tr>
+                <th>日期</th>
+                <th>赛事</th>
+                <th>主队&nbsp;VS&nbsp;客队</th>
+                <th>推荐</th>
+                <th>彩果</th>
+              </tr>
+              <{section name=b loop=$datalist2}>
+              <tr>
+                <td><{$datalist2[b].pubdate}></td>
+                <td><{$datalist2[b].macth}></td>
+                <td><{$datalist2[b].duiwu}></td>
+                <td><{$datalist2[b].recommond}></td>
+                <td><{$datalist2[b].islottey_status}></td>
+              </tr>
+              <{/section}>
+            </table>
+          </div>
+        </div>
+        <div class="news" id="showc2" style="display:none">
+          <div class="box"> <{ if $dinyue_not==1 }>
+            
+            <{ if $dinyue_out==1 }>
+            <h1>你订阅的内容已过期，请先订阅。 <{else}> 你还没订阅，如果查看，请先订阅。</h1>
+            <{/if}>
+            
+            <{ else }>
+            
+            
+            
+            
+            <{section name=b loop=$datalist2}>
+            <h1><{$datalist2[b].pname}><span><{$datalist2[b].pubdate}></span></h1>
+            <div class="text"> <{if $datalist2[b].ishow!=2}>
+              <{$datalist2[b].pcontent}>
+              <{ else }>
+              请先订阅
+              <{/if}> </div>
+            <{/section}>
+            
+            
+            
+            <{/if}> </div>
+        </div>
+        <div class="service" id="showc3" style="display:none">智赢网保证每位分析师一周至少推荐场次不低于7场；包月的专家一月至少推荐场次不低于30场。 无论出于任何原因，如果您收到的推荐没有达到我们承诺的数目，那么，您的订阅将会免费延长，直到您收到补还的推荐为止。</div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<!--专家中心end-->
+<!--智赢页面底部 start-->
+<{include file="foot.html"}>
+<!--智赢页面底部 end-->
+</body>
+</html>

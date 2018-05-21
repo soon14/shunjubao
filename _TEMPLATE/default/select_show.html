@@ -1,0 +1,82 @@
+<{include file="header.html"}>
+<link href="<{'other.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<body>
+<{include file="top.html"}>
+<{include file="menu.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	
+});
+</script>
+<!--当前位置 start-->
+<div class="Cailocation">
+  <div class="location_center">
+    <h1><b>2串1高手榜</b><img src="<{$smarty.const.STATICS_BASE_URL}>/i/chuanHot.gif"></h1>
+  </div>
+</div>
+<!--当前位置 end-->
+<!--2串1 start-->
+<div class="center">
+  <div class="ChuanCenTer">
+    <!---->
+    <div class="Chuanl">
+      <div class="Chuanlcur">
+        <div id="tags1">
+          <ul>
+            <li <{if $sport=='fb'}>class="selectTag1"<{/if}> ><a href="<{$smarty.const.ROOT_DOMAIN}>/activity/select_show.php?sport=fb">足球2串1</a>
+            </li>
+            <li <{if $sport=='bk'}>class="selectTag1"<{/if}> ><a href="<{$smarty.const.ROOT_DOMAIN}>/activity/select_show.php?sport=bk">篮球2串1</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="tagContent1 selectTag" id=""> <{foreach from=$results item=item key=key}>
+            <div class="Tbox">
+              <dl>
+                <dt><img src="<{if $users[$item.u_id].u_img}><{$users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"/></dt>
+                <dt class="name"><b><{$users[$item.u_id].u_name}></b></dt>
+                <dd>
+                  <div class="duiname"><b><{if $sport == 'bk'}>
+                    <{$matchInfos[$item.match1.id].a_cn}> </b><span>VS</span><b> <{$matchInfos[$item.match1.id].h_cn}> </b><i>＋</i><b> <{$matchInfos[$item.match2.id].a_cn}></b><span>VS</span><b> <{$matchInfos[$item.match2.id].h_cn}>
+                    <{else}>
+                    <{$matchInfos[$item.match1.id].h_cn}> </b><span>VS</span><b> <{$matchInfos[$item.match1.id].a_cn}> </b><i>＋</i><b> <{$matchInfos[$item.match2.id].h_cn}></b><span>VS</span><b> <{$matchInfos[$item.match2.id].a_cn}>
+                    <{/if}> </b>
+                    <p><strong><{foreach from=$item.match1.option item=item1}><span><i><{$item1}></i></span><{/foreach}></strong><em><{foreach from=$item.match2.option item=item2}><span><i><{$item2}></i></span><{/foreach}></em></p>
+                    <u>方案金额：<em>¥<{$item.money}>元</em></u></div>
+                </dd>
+              </dl>
+            </div>
+            <{/foreach}>
+            <{if $total_page>1}>
+            <div class="page"> <a href="<{$smarty.const.ROOT_DOMAIN}>/activity/select_show.php?sport=<{$sport}>">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+              <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/activity/select_show.php?sport=<{$sport}>&page=<{$total_page}>">末页</a> </div>
+            <{/if}> </div>
+        </div>
+      </div>
+    </div>
+    <div class="Chuanpaihang">
+      <div class="ypaihang">
+        <h1>赢利率排行</h1>
+        <dl>
+          <dt class="first">用户名</dt>
+          <dt>投注总额</dt>
+          <dt>中奖总额</dt>
+          <dt>赢利</dt>
+        </dl>
+        <{foreach from=$selectRank item=item key=key name=name}>
+        <{assign var=num value=$smarty.foreach.name.iteration}> <dl <{if $num % 2==0 }> class="active" <{/if}> >
+        <dd class="first"> <{if $num<=3}> <span><{$num}></span><{else}><em><{$num}></em><{/if}>&nbsp;<u><{$item.u_name}></u></dd>
+        <dd><strong><{$item.money}>元</strong></dd>
+        <dd><b><{$item.prize}>元</b></dd>
+        <dd><{$item.rate}>%</dd>
+        </dl>
+        <{/foreach}>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+<!--2串1 end-->
+<{include file="foot.html"}> 

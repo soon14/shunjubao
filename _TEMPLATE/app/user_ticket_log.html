@@ -1,0 +1,103 @@
+<{include file="header.html"}>
+</head>
+<body>
+<{include file="top.html"}>
+<link type="text/css" rel="stylesheet" href="<{'wap_user.css'|getStaticsUrl}>" />
+<script type="text/javascript">
+TMJF(function($) {
+	
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+    });
+	$("table tr:nth-child(odd)").css("background-color","#f1f1f1");
+	$("#end_time").focus(function(){
+        showCalendar('end_time', 'y-mm-dd');
+    });	
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td>'+ k +'</td>';
+                    		html += '<td>'+ ticketInfo[i].num +'</td>';
+                    		html += '<td>'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td>'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td>'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td>'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td>'+ option_html +'</td>';
+                    		html += '<td>'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	})
+});
+</script>
+<div class="ustitle">
+  <h1><em>个人账户明细<b></b><i></i></em></h1>
+</div>
+<div class="Paymingxi">
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="0" style="width:100%; overflow:hidden;">
+      <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_account_log.php">账户明细</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_gift_log.php">彩金明细</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge_log.php">充值记录</a></div></td>
+        <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket_log.php" class="active">奖金派送</a></div></td>
+    </table>
+    <div style="padding:18px 0 0 0;">
+      <div class="boldtxt">
+        <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+          <tr>
+            <th>玩法</th>
+            <th>交易时间</th>
+            <th>收入</th>
+          </tr>
+          <{assign var=trade_amount_in value=0}>
+          <{assign var=trade_money_in value=0}>
+          <{foreach from=$userTicketInfos item=userTicketInfo name=log}>
+          <{assign var=trade_amount_in value=$trade_amount_in+1}>
+          <{assign var=trade_money_in value=$userTicketInfo.prize+$trade_money_in}>
+          <tr>
+            <td><{$userTicketInfo.sport|getPoolDesc:$userTicketInfo.pool}></td>
+            <td><p><{$userTicketInfo.datetime}></p></td>
+            <td><{$userTicketInfo.prize}>元</td>
+          </tr>
+          <{/foreach}>
+        </table>
+        <{if !$userTicketInfos}>
+        <div class="tips">暂时没有您的信息! </div>
+        <{/if}>
+        <{if $previousUrl || $nextUrl}>
+        <div class="pages"><{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> </div>
+        <{/if}>
+        <{/if}> </div>
+    </div>
+  </div>
+</div>
+<!--用户中心账户明细 end-->
+<{include file="../app/footer.html"}>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<!--专家的订阅 start-->
+<div class="UserRight" style=" padding:18px 0 0 0;">
+  <h3>我的订阅（周-月)<span><a href="http://www.zhiying365365.com/zhuanjia/" target="_blank">专家中心</a></span></h3>
+  <div class="URcenter">
+    <div class="tabpading">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="4" >
+        <tr>
+          <th>ID</th>
+          <th>订阅类型</th>
+          <th>专家</th>
+          <th>订阅金额</th>
+          <th>开始时间</th>
+          <th>结束时间</th>
+          <th>赛事</th>
+          <th>主队 VS 客队</th>
+          <th>推荐</th>
+        </tr>
+        <{section name=a loop=$datalist}>
+        <dt>
+          <tr>
+            <td class="show"><{$datalist[a].bookid}></td>
+            <td class="show"><{$datalist[a].booktype_status}></td>
+            <td class="show"><{$datalist[a].e_nick}></td>
+            <td class="show"><{$datalist[a].booking_money}></td>
+            <td class="show"><{$datalist[a].addtime}></td>
+            <td class="show"><{$datalist[a].end_time}></td>
+            <td class="show"><{$datalist[a].macth}></td>
+            <td class="show"><{$datalist[a].duiwu}></td>
+            <td class="show"><{$datalist[a].recommond}></td>
+          </tr>
+          <{/section}>
+      </table>
+      <div class="dytips"><{$error_tips}></div>
+      <div class="clear"></div>
+      <div class="sharepages">
+        <div align="center"><{ $multi }></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--专家的订阅 end-->
+</body>
+</html>

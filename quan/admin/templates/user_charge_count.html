@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+</head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="7">
+	
+
+    	<div align="left"><strong><span style="color:#FF0000">充值报表</span></strong>
+        <strong>充值时间</strong>:
+          <input name="s_date" type="text" class="Wdate" id="s_date"  onFocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<!--{$s_date}-->" size="18"/>
+          至
+          <input name="e_date" type="text" value="<!--{$e_date}-->" class="Wdate" id="e_date" onFocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd HH:mm:ss'})" size="18"/>
+    	  <input name="action" type="hidden" id="action" value="default" />
+           <input type="submit" name="Submit" value=" 搜 索 " />
+        </div>
+
+	
+	</td>
+  </tr>
+ 
+  <tr bgcolor="#F7F7F7">
+  	<td  bgcolor="#F7F7F7"><div align="center"><strong>类型</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>来源</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>充值成功条数</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>充值失败条数</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>成功率</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>成功金额</strong></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center"><strong>失败金额</strong></div></td>
+  	</tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+  	<td><div align="center"><!--{$datalist[a].charge_type}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].charge_source}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].nums}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].nums2}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].rate}-->%</div></td>
+  	<td><div align="center"><!--{$datalist[a].totalmoney}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].totalmoney2}--></div></td>
+  	</tr>
+      <!--{/section}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+    <td colspan="2"><div align="center"><strong>总数</strong></div>      <div align="center"></div></td>
+    <td><div align="center"><strong style="color:red">
+      <!--{$all.nums}-->
+    </strong></div></td>
+    <td><div align="center"><strong style="color:red">
+      <!--{$all.nums2}-->
+    </strong></div></td>
+    <td><div align="center"><strong style="color:red">
+      <!--{$all.rate}-->%
+    </strong></div></td>
+    <td><div align="center"><strong style="color:red">
+      <!--{$all.totalmoney}-->
+    </strong></div></td>
+    <td><div align="center"><strong style="color:red">
+      <!--{$all.totalmoney2}-->
+    </strong></div></td>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+    <td colspan="7"><div align="center"><!--{ $multi }-->
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="height:30px;">
+    <td colspan="7">
+    
+    <div align="center"> 
+  
+    天无局支付宝收入：<strong><!--{$value01.nums}--> </strong>笔,<strong ><!--{$value01.totalmoney|string_format:"%.2f"}-->元</strong><br /> 
+    
+    智赢支付宝指定帐号：<strong><!--{$value02.nums}--> </strong>笔,<strong ><!--{$value02.totalmoney|string_format:"%.2f"}-->元</strong><br /> 
+    
+ 	智赢支付宝非指定帐号：<strong  ><!--{$value03.nums}--> </strong>笔,<strong ><!--{$value03.totalmoney|string_format:"%.2f"}-->元</strong><br /> 
+    
+    智赢支付宝在线网银：<strong ><!--{$value04.nums}--> </strong>笔,<strong ><!--{$value04.totalmoney|string_format:"%.2f"}-->元</strong><br /> 
+    
+    智赢支付宝总入帐：<strong   style="color:red"><!--{$value01.nums+$value02.nums+$value03.nums+$value04.nums}--> </strong>笔,<strong  style="color:red"><!--{$value01.totalmoney+$value02.totalmoney+$value03.totalmoney+$value04.totalmoney}--></strong>元<br /> 
+    
+    人工后台充值：<strong><!--{$log_type_nums}--> </strong>笔,<strong ><!--{$log_type_totalmoney|string_format:"%.2f"}-->元</strong><br /> 
+		</div></td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>

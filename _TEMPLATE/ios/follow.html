@@ -1,0 +1,246 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<link href="<{'wap_confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	$(document).ready(function(){
+		var org_details_html = $("#detail_tr").html();
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: <{$userTicketInfo.id}>
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td valign="middle"><div class="DhiddEn"><b style="text-align:right;">';
+                    		if (ticketInfo[i].sport == 'bk') {
+                    			html += ticketInfo[i].a_cn +'</b><span>vs</span><b style="left:65px;text-align:left;">'+ ticketInfo[i].h_cn;
+                    		} else {
+                    			html += ticketInfo[i].h_cn +'</b><span>vs</span><b style="left:65px;text-align:left;">'+ ticketInfo[i].a_cn;
+                    		}
+                    		
+                    		html += '</b></div></td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+							var prize_html = '<div class="zhuangTai"><b class="">未开奖</b></div>';
+                    		
+                    		var isPrize = false;//是否有中奖
+                			var isNotPirze = true;//是否全不中
+                			
+                    		var red = option['red'];//中奖
+                    		var black = option['black'];//未中奖
+                    		var empty = option['empty'];//无赛果
+                    		
+                    		if (red) {
+                    			isPrize = true;
+                    			isNotPirze = false;
+                    			for(var key in red) {
+                        				option_html += '&nbsp;<font color="#dc0000">'+red[key] +'</font>&nbsp;';
+                        		}
+                    		}
+                    		if (black) {
+                    			for(var key in black) {
+                        				option_html += '&nbsp;' + black[key] + '&nbsp;';
+                        		}
+                    		}
+                    		if (empty) {
+                    			isNotPirze = false;
+                    			for(var key in empty) {
+                        				option_html += '&nbsp;' + empty[key] + '&nbsp;';
+                        		}
+                    		}
+                    		
+                    		if (isPrize) {
+                    			prize_html = '<div class="zhuangTai"><strong><span>奖</span></strong></div>';
+                    		}
+                    		if (isNotPirze) {
+                    			prize_html = '<div class="zhuangTai"><b class="">未中奖</b></div>';
+                    		}
+                    		
+                    		html += '<td valign="middle"><div style="width:155px;line-height:20px;margin:0 auto;word-wrap: break-word;word-break: normal;word-break:break-all;">'+ option_html +'</div></td>';
+                    		html += '<td valign="middle">'+ prize_html +'</td>';
+                    		html += '</tr>'
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    } 
+                }
+                , 'json'
+            );
+		//理论最高奖金
+		var prize_state = '<{$userTicketInfo.prize_state}>';
+		var first_html = '过关<span><{$userTicketInfo.user_select}></span>金额<em><{$userTicketInfo.money}></em>元&nbsp;&nbsp;&nbsp;理论奖金<em>';
+		if(prize_state==0) {
+			$.post(Domain + '/ticket/detail.php'
+	                , {userTicketId: <{$userTicketInfo.id}>,
+	                type:'json'
+	                  }
+	                , function(data) {
+	                	if(data.ok) {
+	                		for(var key in data.msg.detail) {
+		                		var first_html_1 = first_html + data.msg.detail[key].max_money + '</em>元';
+		                		$("#ticket_prize").html(first_html_1);
+// 		                		break;
+	                		}
+	                	}
+	                }
+	                    , 'json'
+	        );
+		}
+	});
+	
+TMJF(function($){
+	$("#addBtn").click(function(){
+		var multiple = Number($("#multiple").val());
+		multiple += 1;
+		$("#multiple").val(multiple);
+		calMoney();
+	});
+	$("#subBtn").click(function(){
+		var multiple = Number($("#multiple").val());
+		multiple -= 1;
+		$("#multiple").val(multiple);
+		calMoney();
+	});
+	$("#multiple").keyup(function(){
+		calMoney();
+	});
+	var is_confirm = false;
+	$("#submit").click(function(){
+		//防止重复提交
+		if (is_confirm) {
+			return false;
+		}
+		calMoney();
+		if ($("#multiple").val() == '') {
+			alert('请输入倍数');
+			return false;
+		}
+		is_confirm = true;
+		return true;
+	});
+	$("#submit2").click(function(){
+		alert('方案已截止');
+		return false;
+	});
+});
+
+var moneyMin = Number(<{$userTicketInfo.moneyMin}>);
+function calMoney(){
+	var span_obj = $(".gandanCenter").find('span').eq(0);
+	var multiple = $("#multiple").val();
+	
+	if (multiple > 100000) multiple = 100000;
+	//if (multiple <= 0) multiple = 1;
+	
+	
+	$("#multiple").val(multiple);
+	
+	var money = moneyMin * Number(multiple);
+	span_obj.html('&yen;'+money+'元');
+	$("#money").val(money);
+}
+
+</script>
+<body>
+<div class="center">
+  <!--投注确认过关方式 start-->
+  <div>
+    <div class="touzhuxinxi">
+      <ol>
+        <li><img src="<{if $follow_ticket_user.u_img}><{$follow_ticket_user.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>" /></li>
+        <li><b><{$follow_ticket_user.u_name}></b></li>
+        <li class="show"><{$userTicketInfo.sport|getPoolDesc:$userTicketInfo.pool}></li>
+      </ol>
+      <div class="clear"></div>
+    </div>
+    <div class="touzhuxi">
+      <ul>
+        <li id="ticket_prize">过关<span><{$userTicketInfo.user_select}></span>金额<em><{$userTicketInfo.money}></em>元&nbsp;&nbsp;&nbsp;奖金<em><{$userTicketInfo.prize}></em>元</li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <!--方案内容 start-->
+    <div class="FangAn">
+      <table border="1" width="100%" cellspacing="0" cellpadding="0" id="hacker">
+        <tbody id="detail_tr">
+          <tr>
+            <th><{if $userTicketInfo.sport == 'bk'}>客队VS主队<{else}>主队VS客队<{/if}></th>
+            <th>我的选择</th>
+            <th>状态</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--方案内容 end-->
+    <!--方案内容 start-->
+    <!--方案内容 end-->
+    <!-- 跟单start-->
+    <{if $userTicketInfo.sport == bd}>
+    <form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/combination_submit_bd.php">
+    <{else}>
+    <form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/combination_submit.php">
+      <{/if}>
+      <input type="hidden" name="sport" value="<{$userTicketInfo.sport}>">
+      <input type="hidden" name="select" value="<{$userTicketInfo.select}>">
+      <input type="hidden" name="user_select" value="<{$userTicketInfo.user_select}>">
+      <input type="hidden" name="combination" value="<{$userTicketInfo.combination}>">
+      <input type="hidden" name="pool" value="<{$userTicketInfo.pool}>">
+      <input type="hidden" name="partent_id" value="<{$userTicketInfo.id}>">
+      <input type="hidden" name="from" value="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow.php?userTicketId=<{$userTicketInfo.id}>">
+      <div class="gandanCenter">
+        <dl>
+          <dd>
+            <ul>
+              <li><span>&yen;<{$userTicketInfo.moneyMin}>元</span>
+                <input id="money" type="hidden" name="money" value="<{$userTicketInfo.moneyMin}>">
+              </li>
+              <li><a href="javascript:void(0);" id="subBtn">-</a></li>
+              <li class="cc">
+                <input type="text" value="1"  id="multiple" name="multiple" >
+              </li>
+              <li><a href="javascript:void(0);" id="addBtn">+</a></b></li>
+              <li><{if $is_end}>
+                <input type="button" value="已截止" class="gdsub" id="submit2" style="background:#545454; font-weight:300;" disabled="disabled">
+                <{else}>
+                <input type="submit" value="跟单" class="gdsub" id="submit">
+                <{/if}></li>
+            </ul>
+            <div class="clear"></div>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+      </div>
+    </form>
+    <!-- 跟单end-->
+    <!--跟单用户 start-->
+    <{if $follow_infos}>
+    <div class="gName">
+      <h2><b></b>已有<span>(<{$follow_info.total_sum}>)</span>人跟单</h2>
+    </div>
+    <div class="gendanyonghu">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <{foreach from=$follow_infos item=item key=key}>
+        <tr>
+          <td><div class="yhpic">
+              <ul>
+                <li><img src="<{if $all_users[$item.u_id].u_img}><{$all_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>">
+                <li>
+                <li><span><{$all_users[$item.u_id].u_name}></span></li>
+              </ul>
+            </div></td>
+          <td>倍数：<b><{$item.multiple}></b></td>
+          <td>金额：<strong><{$item.money}>元</strong></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <{/if}>
+    <!--跟单用户 end-->
+  </div>
+  <!--投注确认过关方式 end-->
+</div>
+<{include file="../ios/footer.html"}>
+</body>
+</html>

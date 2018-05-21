@@ -1,0 +1,79 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<script>
+TMJF(function($){
+	$("#pwd").submit(function(){
+		var old_pwd = $("#old_pwd").val();
+		var new_pwd = $("#new_pwd").val();
+		var re_pwd = $("#re_pwd").val();
+		
+		if (new_pwd != re_pwd) {
+			$("#re_error").show();
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户中心修改密码 start-->
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>个人信息-修改密码</h1>
+  </div>
+  <div style="text-align:left;padding:40px 0 0 0;">
+  <div class="tabuser">
+    <ul>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_basic.php">基本信息</a></li>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_head_img.php">上传头像</a></li>
+      <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_modify_pwd.php" class="active">修改密码</a></li>
+    </ul>
+  </div>
+  </div>
+  <form method="post" action="" id="pwd">
+    <div class="userbiaodan">
+      <dl>
+        <dt>初始密码：</dt>
+        <dd>
+          <input type="password" class="ustext" name="old_pwd" id="old_pwd"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>新的密码：</dt>
+        <dd>
+          <input type="password" class="ustext" name="new_pwd" id="new_pwd"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>重新输入：</dt>
+        <dd>
+          <input type="password" class="ustext" name="re_pwd" id="re_pwd"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd> <strong class="none" id="re_error">55~您输入的有误，跟第一次不一样。</strong> </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <input type="submit" class="sub" value=" 确认修改" />
+        </dd>
+      </dl>
+      <{if $msg_error}>
+      <dl>
+        <dt></dt>
+        <dd> <font color="red"><{$msg_error}></font> </dd>
+      </dl>
+      <{/if}>
+      <{if $msg_success}>
+      <dl>
+        <dt></dt>
+        <dd> <font color="green"><{$msg_success}></font> </dd>
+      </dl>
+      <{/if}> </div>
+  </form>
+</div>
+<!--用户中心修改密码 end-->
+</body>
+</html>

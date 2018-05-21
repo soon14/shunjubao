@@ -1,0 +1,87 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#submit").click(function(){
+		var money = $("#withdraw_money").val()
+		if (!$.common.Verify.isMoney(money)) {
+			alert('金额不正确');
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<!--用户提现 start-->
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>我的账户-提现<span style="font-size:12px; font-weight:300; padding:0 0 0 14px; font-family:'宋体'; position:relative;top:-1px;">您当前账户余额：<u style="color:#dc0000; text-decoration:none;"><{$userAccountInfo.cash}>元</u></span></h1>
+    <h2 style="padding:10px; margin:25px auto auto auto;border:1px solid #e9e9e9; background:#f9f9f9;"><b style="font-weight:900; display:none;">温馨提示：</b>
+      <p>1、选择提现到支付宝资金瞬间到账！</p>
+      <p>2、如银行卡及支付宝账户信息变动，请联系我们的在线客服或致电010-64344882。</p>
+      <p>3、<span style="color:#dc0000;">投注额度达到每次充值额度的50%方可提现</span>(举例说明：充值100，投注50后中奖100，可提中奖奖金部分及充值余额的50%即100+50=150元)!!!</p>
+    </h2>
+  </div>
+  <form action='' method='post'>
+    <div class="userbiaodan">
+      <dl>
+        <dt>提款人：</dt>
+        <dd><{$userRealInfo.realname}>&nbsp;&nbsp;<{$userRealInfo.bank_province}>&nbsp;&nbsp;<{$userRealInfo.bank_city}></dd>
+      </dl>
+      <dl>
+        <dt>开户行：</dt>
+        <dd><{$userRealInfo.bank_branch}></dd>
+      </dl>
+      <dl>
+        <dt>银行卡号：</dt>
+        <dd> <{$userRealInfo.bankcard}> </dd>
+      </dl>
+      <dl>
+        <dt>提现方式：</dt>
+        <dd>
+          <select name='payment' style='height:28px;line-height:28px;'>
+            <{foreach from=$EncashPaymentDesc item=item key=key}><option value='<{$key}>' <{if $userPaymentInfo.pay_type==$key}>selected<{/if}>><{$item.desc}>
+            </option>
+            <{/foreach}>
+          </select>
+          <{if !$userPaymentInfo}><a href='<{$smarty.const.ROOT_DOMAIN}>/account/user_payment.php'>去完善其他提现方式</a><{/if}> </dd>
+      </dl>
+      <dl>
+        <dt>提现金额：</dt>
+        <dd>
+          <input type="text" name="money" id="withdraw_money"/>
+          <input type="hidden" name='u_id' id="u_id" value="<{$userInfo.u_id}>"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>手机号：</dt>
+        <dd>
+          <input type="text" name="mobile" id="mobile" value="<{$userRealInfo.mobile}>"/>
+        </dd>
+      </dl>
+       
+        
+      <dl>
+        <dt></dt>
+        <dd>
+          <input type="submit" class="sub" value="提交" id="submit" />
+        </dd>
+      </dl>
+      <{if $msg_error}>
+      <dl>
+        <dt></dt>
+        <dd> <{$msg_error}> </dd>
+      </dl>
+      <{/if}>
+      <{if $msg_success}>
+      <dl>
+        <dt></dt>
+        <dd> <{$msg_success}> </dd>
+      </dl>
+      <{/if}> </div>
+  </form>
+</div>
+<!--用户提现 end-->
+</body>
+</html>

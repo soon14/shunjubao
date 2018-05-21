@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>智赢商城</title>
+<link href="amzy/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+<link href="amzy/assets/css/admin.css" rel="stylesheet" type="text/css" />
+<link href="basic/css/demo.css" rel="stylesheet" type="text/css" />
+<link href="css/hmstyle.css" rel="stylesheet" type="text/css" />
+<script src="amzy/assets/js/jquery.min.js"></script>
+<script src="amzy/assets/js/amazeui.min.js"></script>
+</head>
+<body>
+<div class="hmtop">
+  <!--顶部导航条 -->
+  <div class="am-container header">
+    <ul class="message-l">
+      <div class="topMessage">
+        <div class="menu-hd"> <a href="http://www.zhiying365.com/shop/home/login.html" target="_top" class="h">亲，请登录</a> <a href="http://www.zhiying365.com/shop/home/register.html" target="_top">免费注册</a> </div>
+      </div>
+    </ul>
+    <ul class="message-r">
+      <div class="topMessage home">
+        <div class="menu-hd"><a href="http://www.zhiying365.com/shop/" target="_top" class="h">商城首页</a></div>
+      </div>
+      <div class="topMessage my-shangcheng">
+        <div class="menu-hd MyShangcheng"><a href="http://www.zhiying365.com/shop/person/" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+      </div>
+      <div class="topMessage mini-cart">
+        <div class="menu-hd"><a id="mc-menu-hd" href="http://www.zhiying365.com/shop/home/shopcart.html" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+      </div>
+      <div class="topMessage favorite">
+      <div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
+    </ul>
+  </div>
+  <!--悬浮搜索框-->
+  <div class="nav white">
+    <div class="logo"><img src="images/logo.png" /></div>
+    <div class="logoBig">
+      <li><img src="images/logobig.png" /></li>
+    </div>
+    <div class="search-bar pr"> <a name="index_none_header_sysc" href="#"></a>
+      <form>
+        <input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
+        <input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+      </form>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="banner">
+  <!--轮播 -->
+  <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+    <ul class="am-slides">
+      <li class="banner1"><img src="http://www.zhiying365.com/www/statics/i/58ee019aN5da3a1b8.jpg" /></li>
+      <li class="banner2"><img src="http://www.zhiying365.com/www/statics/i/58f71773Nba85ae2d.jpg!q90.jpg" /></li>
+      <li class="banner3"><img src="http://www.zhiying365.com/www/statics/i/58eb1e93Nb197ee81.jpg!q90.jpg" /></li>
+      <li class="banner4"><img src="http://www.zhiying365.com/www/statics/i/58f6af35N457efb56.jpg!q90.jpg" /></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="shopNav">
+  <div class="slideall">
+    <div class="long-title" style="background:#FF3300;"><span class="all-goods">全部分类</span></div>
+    <div class="nav-cont">
+      <ul>
+        <li class="index"><a href="#">首页</a></li>
+        <li class="qc"><a href="#">服饰</a></li>
+        <li class="qc"><a href="#">体育装备</a></li>
+        <li class="qc"><a href="#">电子产品</a></li>
+        <li class="qc last"><a href="#">手机</a></li>
+        <li class="qc last"><a href="#">招商加盟</a></li>
+      </ul>
+    </div>
+    <!--侧边导航 -->
+    <div id="nav" class="navfull">
+      <div class="area clearfix">
+        <div class="category-content" id="guide_2">
+          <div class="category">
+            <ul class="category-list" id="js_climit_li">
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">服饰</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">体育装备</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">电子产品</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">手机</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">家居</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">皮具箱包</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">跑步鞋</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">男鞋</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+              <li class="appliance js_toggle relative first">
+                <div class="category-info">
+                  <h3 class="category-name b-category-name"><a class="ml-22" title="运动装">户外</a></h3>
+                  <em>&gt;</em></div>
+                <div class="menu-item menu-in top">
+                  <div class="area-in">
+                    <div class="area-bg">
+                      <div class="menu-srot">
+                        <div class="sort-side">
+                          <dl class="dl-sort">
+                          </dl>
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                        <div class="brand-side">
+                          <dl class="dl-sort">
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <b class="arrow"></b> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--轮播 -->
+    <script type="text/javascript">
+							(function() {
+								$('.am-slider').flexslider();
+							});
+							$(document).ready(function() {
+								$("li").hover(function() {
+									$(".category-content .category-list li.first .menu-in").css("display", "none");
+									$(".category-content .category-list li.first").removeClass("hover");
+									$(this).addClass("hover");
+									$(this).children("div.menu-in").css("display", "block")
+								}, function() {
+									$(this).removeClass("hover")
+									$(this).children("div.menu-in").css("display", "none")
+								});
+							})
+						</script>
+    <!--走马灯 -->
+    <div class="marqueen"> <span class="marqueen-title">商城头条</span>
+      <div class="demo">
+        <ul>
+          <li class="title-first"><a target="_blank" href="#"> <img src="http://i.okaybuy.cn/static/06f7b7c084fa1b6fed2771ee7d3f2a63.jpg"><span>[特惠]</span>商城爆品1分秒 </a></li>
+          <li class="title-first"><a target="_blank" href="#"> <span>[公告]</span>商城与广州市签署战略合作协议
+            <p>XXXXXXXXXXXXXXXXXX</p>
+            </a></li>
+          <li><a target="_blank" href="#"><span>[特惠]</span>洋河年末大促，低至两件五折</a></li>
+        </ul>
+        <div class="advTip"><img src="https://img12.360buyimg.com/cms/s390x130_jfs/t4660/51/2109418503/13424/958cc14f/58eb1758Nd0019f55.jpg!q90"><br/>
+          <br/>
+          <img src="https://img10.360buyimg.com/cms/s400x170_jfs/t5302/117/32865584/76061/62a8ea3a/58f74dc7N2ecba435.jpg!q90.webp"><br/>
+          <br/>
+          <img src="https://img13.360buyimg.com/cms/s400x170_jfs/t4762/314/1452403198/111723/2294d10c/58f09ab0Nd880eaac.jpg!q90.webp"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+  </div>
+  <script type="text/javascript">
+					if ($(window).width() < 640) {
+						function autoScroll(obj) {
+							$(obj).find("ul").animate({
+								marginTop: "-39px"
+							}, 500, function() {
+								$(this).css({
+									marginTop: "0px"
+								}).find("li:first").appendTo(this);
+							})
+						}
+						$(function() {
+							setInterval('autoScroll(".demo")', 3000);
+						})
+					}
+				</script>
+</div>
+<style>
+.title{color:#000;}
+</style>
+<div class="shopMainbg" style="color:#000;">
+  <div class="shopMain" id="shopmain">
+    <!--热门活动 -->
+    <div class="am-container activity ">
+      <div class="shopTitle ">
+        <h4><a href="http://www.zhiying365.com/shop/list.html">活动</a></h4>
+        <h3>每期活动 优惠享不停 </h3>
+        <span class="more "> <a href="# ">全部活动<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      <div class="am-g am-g-fixed ">
+        <div class="am-u-sm-3 ">
+          <div class="icon-sale one "></div>
+          <h4>秒杀</h4>
+          <div class="activityMain "><a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/activity1.jpg"></a></div>
+          <div class="info ">
+            <h3>活动标题</h3>
+          </div>
+        </div>
+        <div class="am-u-sm-3 ">
+          <div class="icon-sale two "></div>
+          <h4>特惠</h4>
+          <div class="activityMain "><a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/activity2.jpg"></a> </div>
+          <div class="info ">
+            <h3>活动标题</h3>
+          </div>
+        </div>
+        <div class="am-u-sm-3 ">
+          <div class="icon-sale three "></div>
+          <h4>团购</h4>
+          <div class="activityMain "><a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/activity3.jpg"></a></div>
+          <div class="info ">
+            <h3>活动标题</h3>
+          </div>
+        </div>
+        <div class="am-u-sm-3 last ">
+          <div class="icon-sale "></div>
+          <h4>超值</h4>
+          <div class="activityMain "><a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/activity4.jpg"></a></div>
+          <div class="info ">
+            <h3>活动标题</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear "></div>
+    <!----->
+    <div id="f1">
+      <div class="am-container ">
+        <div class="shopTitle ">
+          <h4><a href="http://www.zhiying365.com/shop/list.html">球鞋</a></h4>
+          <h3>每一双球鞋都有一个故事</h3>
+          <div class="today-brands "></div>
+          <span class="more "> <a href="http://www.zhiying365.com/shop/list.html ">更多<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      </div>
+      <div class="am-g am-g-fixed floodFour">
+        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+          <div class="word"> <a class="outer" href="#"><span class="inner"><b class="text">高帮</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">运动</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">跑步</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">休闲</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">典雅</b></span></a> </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 开抢啦！ </div>
+            <div class="sub-title ">最便宜的价格</div>
+          </div>
+          <img src="images/2222.jpg" /> </a>
+          <div class="triangle-topright"></div>
+        </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐磨运动休闲板鞋</div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/0a230fe3e027a42504ed3eccd30387c9.jpg" /></a> </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 雪之恋和风大福 </div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4b108f2cfa108bbe033457547016e17a.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three big">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克经典板鞋</div>
+            <div class="sub-title ">500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.kw.okbuycdn.com/nbn/s270_270/static/ee0f5817c9c99ef5e23fe958e2e61a98.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">气垫休闲运动跑步板鞋</div>
+            <div class="sub-title "> ¥600 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/d7bee1fb89bae0a446051c6927696bef.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克休闲运动鞋</div>
+            <div class="sub-title "> ¥455</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/f9b3fa755aea23389c466a0bf4449cdc.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克跑步鞋</div>
+            <div class="sub-title "> ¥500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4db4734fe3879985e58f758a7aa68101.jpg" /></a> </div>
+      </div>
+      <div class="clear "></div>
+    </div>
+    <div id="f2">
+      <div class="am-container ">
+        <div class="shopTitle ">
+          <h4><a href="http://www.zhiying365.com/shop/list.html">运动服</a></h4>
+          <h3>每一双球鞋都有一个故事</h3>
+          <div class="today-brands "></div>
+          <span class="more "> <a href="http://www.zhiying365.com/shop/list.html ">更多<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      </div>
+      <div class="am-g am-g-fixed floodFour">
+        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+          <div class="word"> <a class="outer" href="#"><span class="inner"><b class="text">高帮</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">运动</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">跑步</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 开抢啦！ </div>
+            <div class="sub-title ">最便宜的价格</div>
+          </div>
+          <img src="images/1111.jpg" /> </a>
+          <div class="triangle-topright"></div>
+        </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐磨运动休闲板鞋</div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/3333.jpg" /></a> </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 雪之恋和风大福 </div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="images/4444.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three big">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克经典板鞋</div>
+            <div class="sub-title ">500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.kw.okbuycdn.com/nbn/s270_270/static/ee0f5817c9c99ef5e23fe958e2e61a98.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">气垫休闲运动跑步板鞋</div>
+            <div class="sub-title "> ¥600 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/d7bee1fb89bae0a446051c6927696bef.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克休闲运动鞋</div>
+            <div class="sub-title "> ¥455</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/f9b3fa755aea23389c466a0bf4449cdc.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克跑步鞋</div>
+            <div class="sub-title "> ¥500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4db4734fe3879985e58f758a7aa68101.jpg" /></a> </div>
+      </div>
+      <div class="clear "></div>
+    </div>
+    <div id="f3">
+      <div class="am-container ">
+        <div class="shopTitle ">
+          <h4><a href="http://www.zhiying365.com/shop/list.html">球鞋</a></h4>
+          <h3>每一双球鞋都有一个故事</h3>
+          <div class="today-brands "></div>
+          <span class="more "> <a href="http://www.zhiying365.com/shop/list.html ">更多<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      </div>
+      <div class="am-g am-g-fixed floodFour">
+        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+          <div class="word"> <a class="outer" href="#"><span class="inner"><b class="text">高帮</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">运动</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">跑步</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 开抢啦！ </div>
+            <div class="sub-title ">最便宜的价格</div>
+          </div>
+          <img src="https://gw.alicdn.com/tfscom/TB20_cLkXXXXXcOXXXXXXXXXXXX-889120098.jpg" /> </a>
+          <div class="triangle-topright"></div>
+        </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐磨运动休闲板鞋</div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/0a230fe3e027a42504ed3eccd30387c9.jpg" /></a> </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 雪之恋和风大福 </div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4b108f2cfa108bbe033457547016e17a.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three big">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克经典板鞋</div>
+            <div class="sub-title ">500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.kw.okbuycdn.com/nbn/s270_270/static/ee0f5817c9c99ef5e23fe958e2e61a98.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">气垫休闲运动跑步板鞋</div>
+            <div class="sub-title "> ¥600 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/d7bee1fb89bae0a446051c6927696bef.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克休闲运动鞋</div>
+            <div class="sub-title "> ¥455</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/f9b3fa755aea23389c466a0bf4449cdc.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克跑步鞋</div>
+            <div class="sub-title "> ¥500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4db4734fe3879985e58f758a7aa68101.jpg" /></a> </div>
+      </div>
+      <div class="clear "></div>
+    </div>
+    <div id="f4">
+      <div class="am-container ">
+        <div class="shopTitle ">
+          <h4><a href="http://www.zhiying365.com/shop/list.html">球鞋</a></h4>
+          <h3>每一双球鞋都有一个故事</h3>
+          <div class="today-brands "></div>
+          <span class="more "> <a href="http://www.zhiying365.com/shop/list.html ">更多<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      </div>
+      <div class="am-g am-g-fixed floodFour">
+        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+          <div class="word"> <a class="outer" href="#"><span class="inner"><b class="text">高帮</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">运动</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">跑步</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 开抢啦！ </div>
+            <div class="sub-title ">最便宜的价格</div>
+          </div>
+          <img src="https://gw.alicdn.com/tfscom/TB2qvH9X6zB11BjSspaXXcJ0VXa_!!0-dgshop.jpg" /> </a>
+          <div class="triangle-topright"></div>
+        </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐磨运动休闲板鞋</div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/0a230fe3e027a42504ed3eccd30387c9.jpg" /></a> </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 雪之恋和风大福 </div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4b108f2cfa108bbe033457547016e17a.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three big">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克经典板鞋</div>
+            <div class="sub-title ">500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.kw.okbuycdn.com/nbn/s270_270/static/ee0f5817c9c99ef5e23fe958e2e61a98.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">气垫休闲运动跑步板鞋</div>
+            <div class="sub-title "> ¥600 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/d7bee1fb89bae0a446051c6927696bef.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克休闲运动鞋</div>
+            <div class="sub-title "> ¥455</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/f9b3fa755aea23389c466a0bf4449cdc.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克跑步鞋</div>
+            <div class="sub-title "> ¥500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4db4734fe3879985e58f758a7aa68101.jpg" /></a> </div>
+      </div>
+      <div class="clear "></div>
+    </div>
+    <div id="f5">
+      <div class="am-container ">
+        <div class="shopTitle ">
+          <h4><a href="http://www.zhiying365.com/shop/list.html">球鞋</a></h4>
+          <h3>每一双球鞋都有一个故事</h3>
+          <div class="today-brands "></div>
+          <span class="more "> <a href="http://www.zhiying365.com/shop/list.html ">更多<i class="am-icon-angle-right" style="padding-left:10px ;" ></i></a> </span> </div>
+      </div>
+      <div class="am-g am-g-fixed floodFour">
+        <div class="am-u-sm-5 am-u-md-4 text-one list ">
+          <div class="word"> <a class="outer" href="#"><span class="inner"><b class="text">高帮</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">运动</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">跑步</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a> </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 开抢啦！ </div>
+            <div class="sub-title ">最便宜的价格</div>
+          </div>
+          <img src="https://gw.alicdn.com/tfscom/TB2qvH9X6zB11BjSspaXXcJ0VXa_!!0-dgshop.jpg" /> </a>
+          <div class="triangle-topright"></div>
+        </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐磨运动休闲板鞋</div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/0a230fe3e027a42504ed3eccd30387c9.jpg" /></a> </div>
+        <div class="am-u-sm-7 am-u-md-4 text-two">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;"> 雪之恋和风大福 </div>
+            <div class="sub-title "> ¥13.8 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4b108f2cfa108bbe033457547016e17a.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three big">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克经典板鞋</div>
+            <div class="sub-title ">500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.kw.okbuycdn.com/nbn/s270_270/static/ee0f5817c9c99ef5e23fe958e2e61a98.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three sug">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">气垫休闲运动跑步板鞋</div>
+            <div class="sub-title "> ¥600 </div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/d7bee1fb89bae0a446051c6927696bef.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克休闲运动鞋</div>
+            <div class="sub-title "> ¥455</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/f9b3fa755aea23389c466a0bf4449cdc.jpg" /></a> </div>
+        <div class="am-u-sm-3 am-u-md-2 text-three last big ">
+          <div class="outer-con ">
+            <div class="title" style="color:#000;">耐克跑步鞋</div>
+            <div class="sub-title "> ¥500</div>
+          </div>
+          <a href="http://zhiying365.com/shop/home/introduction.html"><img src="http://0.image.lx.okbuycdn.com/nbn/s270_270/static/4db4734fe3879985e58f758a7aa68101.jpg" /></a> </div>
+      </div>
+      <div class="clear "></div>
+    </div>
+  </div>
+</div>
+<div class="footer" >
+  <div class="footer-hd">
+    <p> <a href="#">智赢商城</a> <b>|</b> <a href="#">关于我们</a> <b>|</b> <a href="#">联系我们</a> <b>|</b> <a href="#">帮助中心</a> </p>
+  </div>
+  <div class="footer-bd">
+    <p><a href="#">合作伙伴</a> <a href="#">招商加盟</a> <a href="#">网站地图</a> <em>智赢商城© 2017 shop.zhiying365.com 版权所有。京ICP备14016851-1号&nbsp;&nbsp;京ICP证150586号&nbsp;&nbsp;京公安网备11011402000202</em> </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--引导-->
+<div class="navCir">
+  <li class="active"><a href="http://www.zhiying365.com/shop/"><i class="am-icon-home "></i>首页</a></li>
+  <li><a href="http://www.zhiying365.com/shop/home/sort.html"><i class="am-icon-list"></i>分类</a></li>
+  <li><a href="http://www.zhiying365.com/shop/home/shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
+  <li><a href="http://www.zhiying365.com/shop/person/"><i class="am-icon-user"></i>我的</a></li>
+</div>
+</body>
+</html>

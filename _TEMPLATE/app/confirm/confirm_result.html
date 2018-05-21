@@ -1,0 +1,181 @@
+<{include file="../app/confirm/header.html"}>
+<style>
+/*系统提示*/
+.Tipcenter{padding:20px 0 0 0;background:#fff;}
+.Tips{text-align:center;border-top:1px dashed #fff;height:24px;line-height:18px;color:#000;font-size:12px; background:url(http://www.zhiying365365.com/www/statics/i/wbg.gif) repeat-x;}
+.systemtips{padding:20px 0 0 0;width:320px; margin:0 auto; text-align:cenetr;}
+.systemtips p{font-size:12px;font-family:'';line-height:32px;height:32px;}
+.systemtips p span{background:url(http://www.zhiying365365.com/www/statics/i/raster.jpg) no-repeat 0 -96px;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.systemtips p em{background:url(http://www.zhiying365365.com/www/statics/i/raster.jpg) no-repeat 61% 90%;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-style:normal;}
+.ohter{height:100px;}
+.ohter p{height:30px;line-height:30px;padding:28px 0 0 10px;}
+.ohter p span{background:url(http://www.zhiying365365.com/www/statics/i/showRight.png) no-repeat left bottom;width:16px;height:14px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.ohter p em{ font-style:normal;position:relative;top:-2px; font-size:12px;}
+.ohter p a{text-decoration:none;color:#000;font-size:12px;padding:0 10px 0 5px;position:relative;top:-3px;}
+.ohter p a:hover{text-decoration:none;color:#dc0000;}
+.ohter p a.active{text-decoration:none;color:#dc0000;}
+</style>
+<body>
+<!--center start-->
+<div class="Tipcenter"> <{if $type == 'success'}>
+  <!--投注成功 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><span>&nbsp;</span>恭喜您!投注成功o(∩_∩)o</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a><span></span><a href="http://app.zhiying365365.com/account/user_center.php">用户中心</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--投注成功 end-->
+  <{elseif $type == 'fail'}>
+  <!--投注失败 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注没有成功。</p>
+      <p><em>原因：</em><{$msg}></p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--投注失败 end-->
+  <{elseif $type == 'sport'}>
+  <!--体育类型错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注彩种错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--体育类型错误 end-->
+  <{elseif $type == 'multiple'}>
+  <!--体育类型错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--体育类型错误 end-->
+  <{elseif $type == 'money'}>
+  <!--投注金额错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注金额错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--投注金额错误 end-->
+  <{elseif $type == 'pool'}>
+  <!--投注玩法错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的投注玩法错误&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--投注玩法错误 end-->
+  <{elseif $type == 'other'}>
+  <!--投注其他错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$from}>">继续投注</a></p>
+    </div>
+  </div>
+  <!--投注其他错误 end-->
+  <{elseif $type == 'cash'}>
+  <!--余额不足 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您的账户余额不足&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php" class="active">立即充值</a><span></span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_center.php">进入用户中心</a></p>
+    </div>
+  </div>
+  <!--余额不足 end-->
+  <{elseif $type == 'start'}>
+  <!--比赛已开赛 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span> <a href="<{$smarty.const.ROOT_WEBSITE}>/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已开赛 end-->
+  <{elseif $type == 'end'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'login'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em>您还没有登录&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span> <a href="<{$smarty.const.ROOT_DOMAIN}>/passport/login.php?from=<{$from}>">去登录</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'start_time'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'end_time'}>
+  <!--比赛已截止 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="<{$smarty.const.ROOT_WEBSITE}>/football/hafu_list.html">投注竞彩足球</a>| <a href="<{$smarty.const.ROOT_WEBSITE}>/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://app.zhiying365365.com/">返回首页</a></p>
+    </div>
+  </div>
+  <!--比赛已截止 end-->
+  <{elseif $type == 'idcard'}>
+  <!--投注其他错误 start-->
+  <div class="">
+    <div class="systemtips">
+      <p><em>&nbsp;</em><{$msg}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div class="ohter">
+      <p><span></span><a href="http://app.zhiying365365.com/account/user_center.php?p=realinfo">去认证</a></p>
+    </div>
+  </div>
+  <{/if}> </div>
+<!--center end-->
+
+<!--footer start-->
+<{include file="../app/footer.html"}>
+<!--footer end-->
+</body>
+</html>

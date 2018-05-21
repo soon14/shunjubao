@@ -1,0 +1,543 @@
+﻿html{overflow-x:hidden;}
+/*new wap*/
+.touzhusubNav{clear:both;text-align:left;background:url(../i/thBj.jpg) repeat-x left bottom;}
+.touzhusubNav h1{height:36px;line-height:36px;font-size:14px;font-weight:900;padding:0 5px 0 5px;}
+.touzhusubNav h1 em{font-style:normal;text-align:left;font-size:12px;}
+.touzhusubNav h1 em a{font-size:12px;margin:0 2px;position:relative;padding:3px;color:#000;}
+.touzhusubNav h1 em a span{position:absolute;top:-10px;right:3px;width:9px;height:14px;background:url(../i/HomeHot.gif) no-repeat;}
+.touzhusubNav h1 em a.active{background:#BC1E1F;color:#fff;padding:6px 8px;overflow:hidden;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.pageTopTips{padding:5px 0;text-align:left;}
+.pageTopTips h2{font-size:12px;font-weight:300;color:#676767;padding:0 0 0 5px;}
+.pageTopTips h2 span{color:#dc0000;}
+.pageTopTips h2 em{font-style:normal;color:#006600;}
+.bottomTips{padding:5px 0;text-align:center;background:#FFFF99;display:none;}
+.bottomTips h2{font-size:12px;font-weight:300;color:#676767;padding:0 0 0 5px;}
+.bottomTips h2 span{color:#dc0000;}
+.bottomTips h2 em{font-style:normal;color:#006600;}
+/*确认投注*/
+.betbox{border-top:1px solid #ccc;bottom:0;left:0;margin:0 auto;text-align:center;background:#fff;width:100%;color:#000;font-size:12px;}
+.betbox h1{height:24px;line-height:24px;background:#6f6f6f;color:#fff;font-size:14px;font-weight:300;}
+.betbox h1 span{color:#dc0000;}
+.shedan{text-align:center;position:relative;z-index:999999999999999999;}
+.BetsD{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;float:left;padding:0 0 0 5px;}
+.BetsD b{font-size:12px;font-weight:300;}
+.BetsD a{color:#fff;}
+.BetsD strong{padding:0 0 0 10px;font-size:12px;font-weight:300;}
+.BetsD strong a{color:#fff;}
+.BetCheckC{text-align:center;margin:0 auto;}
+.BetCheckC dl{padding:0; margin:0;}
+.BetCheckC dl dt{padding:0; margin:0;}
+.BetCheckC dl dd{padding:0; margin:0;}
+.BetCheckC dl dt ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:305px;margin:0 auto;text-align:center;}
+.BetCheckC dl dt ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;line-height:24px;overflow:hidden;}
+.BetCheckT{text-align:center;padding:5px 0 10px 0;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.FloatC{display:none;}
+.danX{clear:both;border-top:1px solid #ccc;}
+.danX ul{border:none;padding:5px 0 10px 13px;position:relative;}
+.danX ul:hover{background:none;}
+.danX ul li{float:left;width:auto;padding:0 5px 0 0;border:none;}
+.danX ul li.hidden{position:absolute;left:455px;width:30px;color:#0C6CB8;}
+.danX ul li.hidden a{text-decoration:none;color:#0C6CB8;}
+.danX ul li.hidden a:hover{text-decoration:underline;}
+.ChuanMore{padding:0;height:60px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:300px;margin:0 auto;background:#f9f9f9;}
+.ggcheck{padding:6px 0 0 0;}
+.ggcheck input{position:relative;top:2px;}
+.ggcheck b{font-size:14px;font-weight:900;font-family:'微软雅黑';}
+.ggcheck em{padding:0 13px;font-style:normal;}
+.cMore{text-align:left;}
+#cMore{text-align:center;}
+#cMore p a{colo:red;}
+#optionMorePan{display:inline-table;display:inline-block;zoom:1;*display:inline;display:block;margin:0 auto;padding:7px 0 0 0;}
+#optionMorePan a{border:1px solid #e2e2e2;margin:2px 1px;clear:both;color:#333;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;overflow:hidden;height:26px;line-height:26px;overflow:hidden;width:13%;overflow:hidden;}
+#optionMorePan a:hover{border:1px solid #E10C08;background:url(../i/T1_pgo.gif) no-repeat right bottom;color:#333;font-weight:300;}
+.Tbeishu{display:inline-table;display:inline-block;zoom:1;*display:inline; padding:0 0 10px 0;}
+.Tbeishu ol{display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 auto;height:30px;line-height:30px;}
+.Tbeishu ol li{display:inline-table;display:inline-block;zoom:1;*display:inline;height:30px;line-height:30px;}
+.Tbeishu ol li.t1{}
+.Tbeishu ol li.t2{}
+.Tbeishu ol li.t2 a{border:1px solid #ccc;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:900;overflow:hidden;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#f5f5f5;}
+.Tbeishu ol li.t2 a:hover{background:#6f6f6f;color:#fff;}
+.Tbeishu ol li.t3{width:60px;height:28px;line-height:28px;margin:auto;text-align:center; overflow:hidden;background:#f9f9f9;border:1px solid #ccc;}
+.Tbeishu ol li.t3 input{border:none; background:none;width:50px; height:26px;line-height:26px;text-align:center;}
+.Tbeishu ol li.t4{}
+.Tbeishu ol li.t4 a{border:1px solid #ccc;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;font-weight:900;overflow:hidden;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;background:#f5f5f5;}
+.Tbeishu ol li.t4 a:hover{background:#6f6f6f;color:#fff;}
+.Tbeishu ol li.t5{}
+.Tbeishu ol li b{color:#dc0000;font-weight:300;}
+.Tbeishu ol li span{color:#dc0000;}
+.minusbtn{width:20px;height:20px;line-height:10px;text-align:center;padding:2px 10px;border:1px solid #ccc;background:#f9f9f9;font-size:14px;font-weight:900;color:#000;}
+.plusbtn{width:20px;height:20px;line-height:10px;text-align:center;padding:2px 10px;border:1px solid #ccc;background:#f9f9f9;font-size:14px;font-weight:900;color:#000;}
+.touzhuSub{height:38px;line-height:38px;overflow:hidden;text-align:center;width:138px;padding:0;margin:0 auto;background:#B70408;border:none;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;vertical-align:middle;}
+.touzhuSub input{display:block;height:38px;line-height:38px;text-align:center;width:138px;border:none;background:none;cursor:pointer;font-size:18px;font-weight:900;font-family:'微软雅黑';color:#fff;letter-spacing:2px;}
+.font_red{color:red;overflow:hidden;}
+.saishiC{font-size:12px;text-align:center;padding:0 0 0 3px;}
+.saishiC p{width:65px;line-height:26px;height:26px;overflow:hidden;color:#888;display:block;}
+.saishiC p.link{height:24px;line-height:24px;background:url(../i/ctime.gif) no-repeat 0 4px;padding:0 0 0 15px;color:#454545;text-align:left;width:50px;}
+.saishiC p.zk{text-align:left;padding:0 0 0 4px;width:61px;}
+.saishiC p.zk a{height:20px;line-height:20px;color:#dc0000;}
+.saishiC p.zk a em{font-style:normal;position:relative;top:-2px;}
+.saishiC p.hidden{text-align:left;padding:0 0 0 4px;width:61px;}
+.saishiC p.hidden a{height:20px;line-height:20px;color:#0B6DB8;}
+.saishiC p.hidden a em{font-style:normal;position:relative;top:-2px;}
+.saishiC p.name{font-size:12px;font-weight:300;background:#006CB0;color:#fff;}
+.saishiC p span{color:#454545;padding:3px 0 0 0;background:none;}
+.saishiC p span a{color:#454545;}
+/**/
+
+.hdxfsaidui{text-align:left;font-size:12px;display:block;padding:0 0 5px 10px;}
+.hdxfsaidui dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:right;font-size:12px;font-weight:900;}
+.hdxfsaidui dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 0 0 30px;}
+.hdxfsaidui dl dd p{width:100%;height:30px;}
+.hdxfsaidui dl dd p span{display:inline-table;display:inline-block;zoom:1;*display:inline;color:#dc0000;}
+.hdxfsaidui dl dd p u{display:inline-table;display:inline-block;zoom:1;*display:inline;color:#dc0000;text-decoration:none;}
+.hdxfsaidui dl dd p strong{font-size:12px;font-weight:300;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 2px;line-height:30px;line-height:30px;position:relative;}
+.hdxfsaidui dl dd p strong em{font-style:normal;position:absolute;left:10px;font-weight:bold;height:30px;line-height:30px;}
+.hdxfsaidui dl dd p strong a{color:#000;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:58px;height:30px;line-height:30px;text-align:right;font-weight:300;padding:0 5px 0 0;}
+.hdxfsaidui dl dd p strong a i{position:absolute;right:10px;font-style:normal;font-weight:300;}
+.hdxfsaidui dl dd p strong a:hover{background:#6f6f6f;color:#fff;}
+.hdxfsaidui dl dd p strong a.active{background:#E02321;color:#fff;}
+.hdxfsaidui em{font-size:12px;font-weight:300;}
+.hdxfsaidui span a{color:#dc0000;}
+.hsfcsaidui{text-align:left;font-size:12px;display:block;padding:0 0 5px 10px;}
+.hsfcsaidui dl{clear:both;padding:3px 2px 3px 0;}
+.hsfcsaidui dl dt{width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:14px;font-weight:bold;position:relative;top:13px;}
+.hsfcsaidui dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hsfcsaidui dl dd p b{float:left;height:40px;line-height:40px;display:block;width:30px;}
+.hsfcsaidui dl dd p strong{display:inline-table;display:inline-block;zoom:1;*display:inline;width:38px;height:40px;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:relative;}
+.hsfcsaidui dl dd p strong em{position:absolute;left:0;bottom:5px;font-size:12px;font-style:normal;font-weight:900;width:38px;text-align:center;height:10px;line-height:10px;}
+.hsfcsaidui dl dd p strong a{color:#000;text-align:center;display:block;width:38px;height:40px;line-height:24px;font-size:12px;font-weight:300;overflow:hidden;background:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;display:block;}
+.hsfcsaidui dl dd p strong a:hover{background:#6f6f6f;color:#fff;}
+.hsfcsaidui dl dd p strong a.active{background:#E02321;color:#fff;}
+.hsfcsaidui dl dd p strong a b{line-height:20px;font-weight:900;display:block;}
+
+/**/
+.huenhCenter{}
+.huenhCenter h1{border-bottom:1px dotted #ccc;height:30px;line-height:30px;font-size:14px;font-weight:900;background:url(../i/showRight.png) no-repeat left center;padding:0 0 0 22px;}
+.huenhCenter h1 span{float:right;padding:0 0 0 0;}
+.huenhCenter h1 span a{color:#0B6DB8;}
+.bfzhankai{}
+.bfzhankai a{color:#0B6DB8;}
+table.stripe{border:1px solid #ccc;border-bottom:none;font-size:12px;}
+table.stripe table{width:100%;}
+table.stripe  tr td{text-align:center;background:#fff;vertical-align:middle;padding:0;margin:0;}/* 默认背景被白色 */
+table.stripe  tr.alt td {background:#F2F2F2;border-bottom:1px solid #CFCFCF;border-top:1px solid #CFCFCF;padding:0;margin:0;}/* 默认隔行背景颜色 */
+table.stripe  tr.over td {background:#FFE3C1;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr.time td {background:#fff;overflow:hidden;padding:0;margin:0;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr:hover{}
+/****************/
+.DQtime{text-align:left;height:30px;line-height:30px;overflow:hidden;font-size:12px;border-bottom:1px solid #fff;padding:0 0 0 2px;background:#FFFFCC;}
+.DQtime b{font-size:12px;font-weight:300;padding:0 0 0 5px;color:#000;}
+.DQtime strong{text-align:right;float:right;padding:0 5px 0 0;}
+.DQtime strong a{text-decoration:none;color:#000;}
+.DQtime strong input{position:relative;top:3px;}
+.DQtime strong a:hover{text-decoration:none;}
+.DQtime span{padding:0 0 0 5px;}
+.DQtime span a{text-decoration:none;color:#0B6DB8;}
+.DQtime span a:hover{text-decoration:none;}
+.DQtime em{font-style:normal;color:#333;}
+.DQtime em a{font-style:normal;color:#333;}
+.hideNum{color:red;}
+.bisaiC{padding:0;margin:0;display:inline-table;display:inline-block;zoom:1;*display:inline;width:100%;}
+/*wap赛事*/
+.Saishi{width:66px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;position:relative;overflow:hidden;line-height:20px;height:150px;}
+.Saishi h1{font-size:12px;font-weight:900;height:55px;line-height:55px;width:65px;}
+.Saishi dl{padding:5px 0 0 0;}
+.Saishi dl dt b{width:65px;height:22px;line-height:22px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.Saishi dl dt.hidden{padding:5px 0 0 0;}
+.Saishi dl dt a{color:#dc0000;}
+.Saishi dl dt a em{font-style:normal;}
+.Saishi dl dd{-moz-border-radius:35px;-webkit-border-radius:35px;border-radius:35px;width:64px;height:64px;line-height:20px;position:relative;margin:10px auto;border:1px solid #e2e2e2;background:#fff;}
+.Saishi dl dd u{position:absolute;top:-10px;height:10px;line-height:10px;width:1px;background:#e2e2e2;left:32px;}
+.Saishi dl dd i{position:absolute;bottom:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.Saishi dl dd span{color:#666;}
+.Saishi dl dd strong{font-weight:900;}
+.Saishi dl dd span a{color:#666;}
+.Saishi dl dd em{font-style:normal;display:block;}
+.Saishi dl dd p{}
+/*wap比分赛事*/
+.Baishi{height:55px;}
+.Baishi dl{float:left;padding:4px 0 0 0;}
+.Baishi dl dt{float:left;padding:0 3px;}
+.Baishi dl dt b{font-size:12px;font-weight:900;width:58px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;height:24px;line-height:24px;padding:0 3px;margin:10px 0 0 0;}
+.Baishi dl dt strong{-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;width:25px;height:25px;line-height:25px;border:1px solid #e2e2e2;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;float:left;margin:10px 0 0 0;}
+.Baishi dl dt strong u{text-decoration:none;font-weight:300;}
+.Baishi dl dt strong u a{color:#565656;}
+.Baishi dl dt strong i{font-style:normal;font-weight:300;}
+.Baishi dl dd{float:left;}
+.Baishi dl dd h1{font-size:12px;font-weight:300;line-height:46px;}
+.Baishi dl dd h1 b{font-size:12px;font-weight:bold;width:60px;height:46px;line-height:46px;overflow:hidden;display:block;float:left;}
+.Baishi dl dd h1 strong{font-size:12px;font-weight:bold;width:50px;height:46px;line-height:46px;overflow:hidden;display:block;float:left;}
+.Baishi dl dd h1 span{font-size:12px;font-weight:bold;width:15px;height:46px;line-height:46px;overflow:hidden;display:block;float:left;}
+.Baishi dl dd h1 a{float:right;padding:0 3px 0 0;}
+/*wap让球、让球胜平负*/
+.bisaidui{width:97%;margin:0 auto;position:relative;overflow:hidden;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bisaidui ul{text-align:left;float:left;width:97%;padding:0 0 0 10px;margin:0;position:relative;}
+.bisaidui ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline; }
+.bisaidui ul li span{padding:0;margin:0;}
+.bisaidui ul li.hidden{float:right;padding:0 0 0 5px;}
+.bisaidui ul li.wf{font-size:12px; font-weight:300;color:#dc0000; padding:0 0 0 15px; position:relative;top:-2px;}
+.bisaidui ul li.dg{position:absolute;right:5px;top:-3px;}
+.bisaidui ul li.dg span{width:24px;height:24px;line-height:24px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;-moz-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-align:center;}
+.bisaidui dl{padding:0 ;margin:0 0 5px 0;clear:both;width:100%;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline; text-align:left;}
+.bisaidui dl dt{padding:5px 0 0 0;margin:0;}
+.bisaidui dl dt p{width:30.5%;margin:0 auto;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;overflow:hidden;}
+.bisaidui dl dt p.cc{width:18px;}
+.bisaidui dl dt p b{border:1px solid #0b7a01;color:#0b7a01;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;}
+.bisaidui dl dt p i{font-style:normal;border:1px solid #ddd;color:#000;-moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;width:16px;height:16px;line-height:16px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;}
+.bisaidui dl dt p a span{float:left;padding:0 0 0 4px;}
+.bisaidui dl dt p a strong{float:right;padding:0 3px 0 0;font-weight:300;}
+.bisaidui dl dt p em{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;text-indent:-5000px;}
+.bisaidui dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px; height:32px;color:#000;background:#fff;width:89.5%;padding:0;margin:0;overflow:hidden;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline; vertical-align:middle;}
+.bisaidui dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.bisaidui dl dt p a.active{background:#E02321;color:#fff;}
+.bisaidui h5 a {height:30px;line-height:30px;}
+/*wap足球比分*/
+.zqbifen{display:block;width:99%;margin:0 auto;text-align:left;overflow:hidden;}
+.zqbifen ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:98%;overflow:hidden; padding:0 0 0 5px; position:relative;}
+.zqbifen ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zqbifen ul li.dg{position:absolute;right:5px;top:0;}
+.zqbifen ul li.dg span{width:24px;height:24px;line-height:24px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;-moz-border-radius:24px;-moz-border-radius:24px;border-radius:24px;text-align:center;}
+.zqbifen ul li a{color:#444;}
+
+/*wap总进球*/
+.zjqdui{display:block;width:99%;margin:0 auto;text-align:left;overflow:hidden;}
+.zjqdui ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:99%;overflow:hidden; position:relative;}
+.zjqdui ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zjqdui ul li.dg{position:absolute;top:-1px;right:5px;}
+.zjqdui ul li.dg span{width:24px;height:24px;line-height:24px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;-moz-border-radius:24px;-moz-border-radius:24px;border-radius:24px;text-align:center;}
+.zjqdui dl{padding:0;clear:both;width:100%;}
+.zjqdui dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:33.3%;margin:0 auto;height:38px;text-align:center;overflow:hidden;padding:0;margin:0;}
+.zjqdui dl dt p a span{font-size:12px;font-weight:300;padding:0 0 0 5px;float:left;}
+.zjqdui dl dt p a b{font-size:12px;font-weight:300;padding:0 5px 0 0;float:right;}
+.zjqdui dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;color:#000;width:90%;overflow:hidden;padding:0;margin:0;}
+.zjqdui dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.zjqdui dl dt p a.active{background:#E02321;color:#fff;}
+/*wap竞彩篮球胜分差*/
+.jljqdui{display:block;width:95%;margin:0 auto;text-align:left;}
+.jljqdui ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline; padding:0 0 0 5px;width:100%; position:relative;}
+.jljqdui ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jljqdui ul li.wf{font-size:12px; font-weight:300;color:#dc0000; padding:0 0 0 5px;}
+.jljqdui ul li.dg{position:absolute;right:5px; top:-4px;}
+.jljqdui ul li.dg span{display:inline-table;display:inline-block;zoom:1;*display:inline; width:25px;height:25px;line-height:25px;border:1px solid red;-moz-border-radius:25px;-webkit-border-radius:25px;border-radius:25px; font-size:12px; text-align:center; font-weight:300;color:#dc0000;}
+.jljqdui ul li b{font-size:14px;font-weight:900;height:30px;line-height:30px;}
+.jljqdui ul li span{font-size:14px;font-weight:300;height:30px;line-height:30px;}
+.jljqdui ul li strong{font-size:14px;font-weight:900;height:30px;line-height:30px;}
+.jljqdui dl{padding:0;clear:both;width:100%;}
+.jljqdui dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:50%;margin:0 auto;height:40px;text-align:center;vertical-align:middle;}
+.jljqdui dl dt p.Rangfen{width:30px;height:40px;line-height:34px;vertical-align:middle;position:relative;text-align:right;}
+.jljqdui dl dt p.Rangfen span{color:#dc0000;}
+.jljqdui dl dt p.Rangfen em{font-style:normal;color:green;}
+.jljqdui dl dt p b{font-size:12px;font-weight:300;padding:0 5px 0 0;float:right;}
+.jljqdui dl dt p span{padding:0 0 0 5px;float:left;}
+.jljqdui dl dt p strong{font-weight:300;}
+.jljqdui dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;color:#000;width:94%;padding:0;margin:0;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jljqdui dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.jljqdui dl dt p a.active{background:#E02321;color:#fff;}
+/*wap竞彩篮球混合*/
+.hhglanc{display:block;width:95%;margin:0 auto;text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hhglanc ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hhglanc ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hhglanc ul li b{font-size:14px;font-weight:900;height:30px;line-height:30px;}
+.hhglanc ul li span{font-size:14px;font-weight:300;height:30px;line-height:30px;}
+.hhglanc ul li strong{font-size:14px;font-weight:900;height:30px;line-height:30px;}
+.hhglanc dl{padding:5px 0 0 0 ;clear:both;width:100%;padding:0;margin:0;overflow:hidden;}
+.hhglanc dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:42%;margin:0 auto;text-align:center;overflow:hidden;height:40px;line-height:40px;overflow:hidden;}
+.hhglanc dl dt p.rQ{color:#000;width:15.8%;text-align:left;}
+.hhglanc dl dt p.rQ b{color:#444;font-weight:300;float:left;position:relative;top:-4px;}
+.hhglanc dl dt p b{font-size:12px;font-weight:300;padding:0 3px 0 0;float:right;}
+.hhglanc dl dt p span{font-size:12px;font-weight:300;padding:0 0 0 5px;float:left;}
+.hhglanc dl dt p strong{font-size:12px;font-weight:300;padding:0 0 0 5px;float:left;}
+.hhglanc dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;width:93%;padding:0;margin:0;overflow:hidden;}
+.hhglanc dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.hhglanc dl dt p a.active{background:#E02321;color:#fff;}
+
+/*wap竞彩篮球胜分差*/
+.shengfc{display:block;width:96%;margin:0 auto;text-align:left;}
+.shengfc ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:100%;padding:0; position:relative;}
+.shengfc ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.shengfc ul li em{font-style:normal;width:25px;height:25px;line-height:25px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;position:absolute;top:10px;right:5px;font-size:12px;font-weight:300;-moz-border-radius:25px;-moz-border-radius:25px;border-radius:25px;text-align:center;}
+.shengfc dl{padding:0 0 5px 0;clear:both;width:100%;}
+.shengfc dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:50%;margin:0 auto;height:40px;text-align:center;overflow:hidden;position:relative;}
+.shengfc dl dt p strong{font-size:12px;font-weight:900;position:absolute;left:5px;}
+.shengfc dl dt p b{font-size:12px;font-weight:300;position:absolute;right:5px;}
+.shengfc dl dt p strong{font-size:12px;font-weight:300;}
+.shengfc dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;color:#000;width:90%;overflow:hidden;position:relative;text-align:right;padding:0 5px 0 0;margin:0;overflow:hidden;}
+.shengfc dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.shengfc dl dt p a.active{background:#E02321;color:#fff;}
+/*wap竞彩篮球大小分*/
+.lcdxf{display:block;width:95%;margin:0 auto;text-align:left;}
+.lcdxf ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:100%; position:relative;}
+.lcdxf ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.lcdxf ul li em{font-style:normal;width:25px;height:25px;line-height:25px;border:1px solid #dc0000;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;position:absolute;top:10px;right:5px;font-size:12px;font-weight:300;-moz-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-align:center;}
+.lcdxf ul li i{font-style:normal;color:#dc0000;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-1px;left:5px;font-size:12px;font-weight:300;}
+.lcdxf dl{padding:5px 0 0 0 ;clear:both;width:100%;}
+.lcdxf dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:100%;margin:0 auto;height:40px;text-align:center;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p.Rangfen{width:45px;color:#dc0000;height:40px;line-height:40px;}
+.lcdxf dl dt p.Rangfen em{font-style:normal;color:#dc0000;}
+.lcdxf dl dt p span{color:#dc0000;}
+.lcdxf dl dt p em{font-style:normal;}
+.lcdxf dl dt p b{font-size:12px;font-weight:300;padding:0 4px 0 0;}
+.lcdxf dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:30px;line-height:30px;color:#000;background:#fff;color:#000;width:99%;padding:0;margin:0;overflow:hidden;}
+.lcdxf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.lcdxf dl dt p a b{float:left;padding:0 0 0 10px;}
+.lcdxf dl dt p a strong{float:right;padding:0 10px 0 0; font-weight:300;}
+.lcdxf dl dt p a.active{background:#E02321;color:#fff;}
+/*足球比分*/
+.zcbf{text-align:right;padding:0 10px 0 0;}
+.zcbf h1{font-size:14px;font-weight:900;color:#000;position:relative;}
+.zcbf h1 b{font-size:14px;font-weight:900;}
+.zcbf h1 span{font-size:14px;font-weight:900;}
+.zcbf h1 strong{font-size:16px;font-weight:900;}
+.zcbf h1 em{font-size:12px;font-weight:300;font-style:normal;}
+.zcbf h1 em span{width:24px;height:24px;line-height:24px;display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-align:center;position:absolute;right:68px;top:40px;font-style:normal;font-size:12px;font-weight:300;border:1px solid #dc0000;color:#dc0000;}
+.zcbf ul{padding:15px 0 0 0;line-height:28px;}
+.zcbf ul li{}
+.fbbifen{display:block;width:100%;text-align:left;overflow:hidden;}
+.fbbifen h1{font-size:12px;font-weight:600;border-bottom:1px solid red;}
+.fbbifen ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:98.5%;vertical-align:top;}
+.fbbifen ul li{font-size:14px;font-weight:900;display:inline-table;display:inline-block;zoom:1;*display:inline;width:40%;text-align:center;}
+.fbbifen ul li.vs{width:20%;}
+.fbbifen ul li.vs span{position:relative;top:10px;}
+.fbbifen ul li.vs span a{position:relative;top:10px;}
+.fbbifen ul li.hidden{float:right;padding:0 0 0 5px;}
+.fbbifen ul li a em{font-style:normal;}
+.fbbifen h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;}
+.fbbifen dl{padding:10px 0;clear:both;width:100%;}
+.fbbifen dl dt{padding:0;margin:0;}
+.fbbifen dl dt p{width:33%;margin:0 auto;text-align:center;float:left;overflow:hidden;height:42px;line-height:16px;overflow:hidden;padding:0;margin:0;}
+.fbbifen dl dt p span{float:left;height:34px;line-height:36px;position:relative;left:5px;}
+.fbbifen dl dt p b{font-size:10px;font-weight:300;}
+.fbbifen dl dt p a{border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;color:#000;background:#fff;width:87%;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;line-height:12px;text-align:right;padding:0 5px 0 0;height:34px;overflow:hidden;overflow:hidden;margin:0;}
+.fbbifen dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.fbbifen dl dt p a.active{background:#E02321;color:#fff;}
+/*wap足球混合*/
+.fbhhCenter{clear:both;text-align:left;}
+.hbifen{width:100%;text-align:left;margin:0 auto;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;overflow:hidden;}
+.hbifen h1{font-size:12px;font-weight:600;}
+.hbifen h1 a{padding:0 0 0 4px;}
+.hbifen h1 a em{font-style:normal;}
+.hbifen h4{width:97%; font-size:16px; font-weight:300; padding:10px 0;}
+.hbifen ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hbifen ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.hbifen ul li.hidden{float:right;padding:0 0 0 5px;}
+.hbifen ul li a em{font-style:normal;}
+.hbifen ul li strong{}
+.hbifen ul li span{}
+.hbifen h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;height:30px;line-height:30px;}
+.hbifen h1 b{float:left;}
+.hbifen dl{padding:5px 0 0 0;clear:both;width:100%;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
+.hbifen dl dt{}
+.hbifen dl dd{padding:0;width:65px;display:block;padding:0 5px 0 0;float:left;}
+.hbifen dl dd p{text-align:center;}
+.hbifen dl dd p b{font-size:12px;font-weight:300;width:65px;height:26px;line-height:22px;display:block;overflow:hidden;text-align:center;overflow:hidden}
+.hbifen dl dd p strong{-moz-border-radius:35px;-webkit-border-radius:35px;border-radius:35px;width:65px;height:65px;line-height:20px;position:relative;margin:10px auto;border:1px solid #e2e2e2;background:#fff;display:block;text-align:center;position:relative;top:5px;}
+.hbifen dl dd p span a{color:#565656;position:relative;top:0;}
+.hbifen dl dd strong u{position:absolute;top:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.hbifen dl dd strong i{position:absolute;bottom:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.hbifen dl dd p strong span{font-size:12px;font-weight:300;display:block;}
+.hbifen dl dd p strong em{font-size:12px;font-weight:300;font-style:normal;display:block;}
+.hbifen dl dd p a{padding:5px 0 0 0;color:#dc0000;position:relative;top:5px;}
+.hbifen dl dd p a em{font-style:normal;}
+.hbifen dl dd h3{height:110px;line-height:110px;width:50px;text-align:left;padding:0 0 0 10px;background:url(../i/Righrxian.gif) no-repeat right center;font-size:12px;font-weight:900;}
+.hbifen dl dd h2{height:78px;line-height:78px;width:50px;text-align:left;padding:0 0 0 10px;background:url(../i/Righrxian.gif) no-repeat right center;font-size:12px;font-weight:900;}
+.hbifen dl dt.tab{height:40px;line-height:40px;padding:0;margin:0;overflow:hidden;}
+.hbifen dl dt.tab p{font-size:14px;}
+.hbifen dl dt.tab p a{border:none;background:none;color:#dc0000;}
+.hbifen dl dt.tab p a:hover{border:none;background:none;color:#dc0000;}
+.hbifen dl dt.tab p a.active{}
+
+.hbifen dl dt.tab2{height:40px;line-height:40px;margin:20px 0 0 0;padding:0;overflow:hidden;}
+.hbifen dl dt.tab2 p{font-size:14px;}
+.hbifen dl dt.tab2 p a{border:none;background:none;color:#dc0000;}
+.hbifen dl dt.tab2 p a:hover{border:none;background:none;color:#dc0000;}
+.hbifen dl dt.tab2 p a.active{}
+.hbifen dl dt p{width:33%;margin:0 auto;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;height:40px;}
+.hbifen dl dt p.show{height:40px;}
+.hbifen dl dt p a b{font-size:12px;font-weight:300;padding:0 5px 0 0;float:right;}
+.hbifen dl dt p a span{font-weight:300;padding:0 0 0 5px;float:left;}
+.hbifen dl dt p em{}
+.hbifen dl dt p i{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;text-decoration:none;text-indent:-5000px;}
+.hbifen dl dt p u{border:1px solid #0b7a01;color:#0b7a01;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;text-decoration:none;}
+.hbifen dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;width:93%;padding:0;margin:0;overflow:hidden;}
+.hbifen dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.hbifen dl dt p a.active{background:#E02321;color:#fff;}
+/**/
+.bottomBet{height:36px;line-height:36px;background:#6f6f6f;color:#fff;z-index:99999999;}
+.bottomBet h2{display:inline-table;display:inline-block;zoom:1;*display:inline;background:none;font-size:12px;font-weight:300;text-align:left;}
+.bottomBet h2 em{padding:0 0 0 5px;font-style:normal;}
+.bottomBet h2 em a{color:#fff;padding:0 0 0 6px;}
+.bottomBet p{display:inline-table;display:inline-block;zoom:1;*display:inline;float:right;width:118px;background:#B70408;display:block;height:36px;line-height:36px;}
+.bottomBet p a{color:#fff;font-size:14px;font-weight:900;display:block;}
+.black_overlay{display:none;position:absolute;bottom:0;left:0%;width:100%;}
+.white_content{display:none;position:absolute;bottom:0;left:0%;width:100%;z-index:1002;background:#fff;line-height:22px;color:#000;font-size:12px;padding:0 0 10px 0;}
+.white_content h4{height:32px;line-height:32px;background:#6f6f6f;font-size:12px;font-weight:300;color:#fff;text-align:left;padding:0 0 0 5px;}
+.white_content h4 i{width:15px;height:15px;line-height:15px;background:#fff;color:#000;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 3px;font-style:normal;}
+.white_content h4 span{position:absolute;right:10px;font-size:12px;}
+.white_content h4 span a{color:#fff;}
+.white_content h5{position:absolute;right:0;padding:0 10px 0 0;}
+.white_content table{width:100%;text-align:center;border-bottom-width:0;border-collapse:collapse;padding:0;margin:0;}
+.white_content table tr td{padding:0;margin:0;font-size:12px;}
+#options{padding:15px 0 0 0;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center; height:22px; line-height:22px; overflow:hidden;}
+#options dl{padding:0; margin:0;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+#options dl dt{padding:0; margin:0;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+#options input{border:1px solid #ccc; position:relative;top:2px;}
+.betMoney{padding:5px 0;}
+.betMoney b{font-size:12px; font-weight:300; padding:0 5px;color:#dc0000;}
+.betMoney span{color:#dc0000;padding:0 5px;}
+/*北京单场*/
+/*wap赛事*/
+.bdSaishi{width:65px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;position:relative;}
+.bdSaishi h1{font-size:12px;font-weight:900;background:url(../i/Righrxian.gif) no-repeat right center;height:55px;line-height:55px;width:65px;}
+.bdSaishi dl{padding:5px 0 0 0;}
+.bdSaishi dl dt b{width:65px;height:22px;line-height:22px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.bdSaishi dl dt.hidden{padding:5px 0 0 0;}
+.bdSaishi dl dt a{color:#dc0000;}
+.bdSaishi dl dt a em{font-style:normal;}
+.bdSaishi dl dd{-moz-border-radius:35px;-webkit-border-radius:35px;border-radius:35px;width:65px;height:65px;line-height:20px;position:relative;margin:10px auto;border:1px solid #e2e2e2;background:#fff;}
+.bdSaishi dl dd u{position:absolute;top:-10px;height:10px;line-height:10px;width:1px;background:#e2e2e2;left:32px;}
+.bdSaishi dl dd i{position:absolute;bottom:-10px;height:10px;line-height:10px;width:1px;background:#E2E2E2;left:32px;}
+.bdSaishi dl dd span{color:#666;}
+.bdSaishi dl dd strong{font-weight:900;}
+.bdSaishi dl dd span a{color:#666;}
+.bdSaishi dl dd em{font-style:normal;display:block;}
+/*北单胜负过关*/
+.beidansf{display:block;width:95%;text-align:left;margin:0 auto;position:relative;}
+.beidansf ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansf ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansf ul li span{padding:0 3px;}
+.beidansf ul li b{font-size:12px;font-weight:300;position:relative;left:10px;top:-1px;}
+.beidansf h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;}
+.beidansf dl{padding:0 0 15px 0 ;clear:both;width:100%;}
+.beidansf dl dt p{width:41.7%;margin:0 auto;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;height:44px;line-height:48px; overflow:hidden;}
+.beidansf dl dt p span{overflow:hidden;text-decoration:none;width:20px;height:20px;line-height:20px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;}
+.beidansf dl dt p strong{position:relative;right:3px;font-size:12px;font-weight:300;}
+.beidansf dl dt p b{border:1px solid #0b7a01;color:#0b7a01;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;}
+.beidansf dl dt p em{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;text-indent:-5000px;}
+.beidansf dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;width:98.5%;padding:0;margin:0;}
+.beidansf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidansf dl dt p a.active{background:#E02321;color:#fff;}
+.beidansf h5 a {height:30px;line-height:30px;}
+/*北单胜平负*/
+.beidanspf{display:block;width:95%;text-align:left;margin:0 auto;position:relative;}
+.beidanspf ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidanspf ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidanspf ul li span{padding:0 3px;}
+.beidanspf ul li b{font-size:12px;font-weight:300;position:relative;left:10px;top:-1px;}
+.beidanspf h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;}
+.beidanspf dl{padding:0 0 15px 0 ;clear:both;width:100%;}
+.beidanspf dl dt p{width:30.2%;margin:0 auto;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;height:40px;overflow:hidden;}
+.beidanspf dl dt p span{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;vertical-align:middle;}
+.beidanspf dl dt p.fenzhi{width:15px;}
+.beidanspf dl dt p span{-moz-border-radius:15px;-webkit-border-radius:15pxborder-radius:15px;width:20px;height:20px;line-height:20px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:middle;}
+.beidanspf dl dt p strong{position:relative;right:3px;font-size:12px;font-weight:300;}
+.beidanspf dl dt p b{border:1px solid #0b7a01;color:#0b7a01;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;}
+.beidanspf dl dt p em{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:10px;font-weight:300;text-indent:-5000px;}
+.beidanspf dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;width:93%;padding:0;margin:0;overflow:hidden;}
+.beidanspf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidanspf dl dt p a.active{background:#E02321;color:#fff;}
+.beidanspf h5{}
+.beidanspf h5 a {height:30px;line-height:30px;}
+/*北单总进球*/
+.beidanjqs{display:block;width:95%;margin:0 auto;text-align:left;}
+.beidanjqs ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:90%;}
+.beidanjqs ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidanjqs dl{padding:0 ;clear:both;width:100%;}
+.beidanjqs dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:33.3%;margin:0 auto;height:44px;text-align:center;padding:0;margin:0;overflow:hidden;}
+.beidanjqs dl dt p strong{position:relative;right:3px;font-size:12px;font-weight:300;}
+.beidanjqs dl dt p b{font-size:12px;font-weight:300;padding:0 4px 0 0;}
+.beidanjqs dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;color:#454545;width:90%;padding:0;margin:0;overflow:hidden;}
+.beidanjqs dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidanjqs dl dt p a.active{background:#E02321;color:#fff;}
+/*北单半全场*/
+.beidanbqc{display:block;width:95%;margin:0 auto;text-align:left;}
+.beidanbqc ul{text-align:left;display:inline-table;display:inline-block;zoom:1;*display:inline;width:90%;}
+.beidanbqc ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidanbqc ul li b{}
+.beidanbqc ul li strong{}
+.beidanbqc ul li span{}
+.beidanbqc dl{padding:0 0 15px 0 ;clear:both;width:100%;}
+.beidanbqc dl dt{}
+.beidanbqc dl dt p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:33.3%;margin:0 auto;height:44px;text-align:center;padding:0;margin:0;overflow:hidden;}
+.beidanbqc dl dt p strong{position:relative;top:-1px;right:3px;font-size:12px;font-weight:300;}
+.beidanbqc dl dt p b{font-size:12px;font-weight:300;padding:0 4px 0 0;}
+.beidanbqc dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;color:#454545;width:90%;padding:0;margin:0;overflow:hidden;}
+.beidanbqc dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidanbqc dl dt p a.active{background:#E02321;color:#fff;}
+/*北京单场比分*/
+.beidants{height:121px;}
+.beidants dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;float:left;}
+.beidants dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidants ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:100%;position:relative;}
+.beidants ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidants ul li.sd{float:left;width:70px;}
+.beidants ul li.hidden{position:absolute;right:5px;padding:8px 0 0 0;width:300px;text-align:right; overflow:hidden;}
+.beidants ul li.hidden p{line-height:30px;height:30px; }
+.beidants ul li.hidden p a{position:relative;right:5px;}
+.beidants ul li.hidden h1{font-size:14px;font-weight:900;padding:5px 5px 10px 0;}
+.beidants ul li.hidden h1 b{font-size:14px;font-weight:900;}
+.beidants ul li.hidden h1 strong{font-size:14px;font-weight:900;}
+.beidants ul li.hidden h1 u{text-decoration:none;}
+
+
+.beidanbf{display:block;width:100%;text-align:left;padding:10px 0 0 0;clear:both;}
+.beidanbf h1{font-size:12px;font-weight:600;}
+.beidanbf ul{display:inline-table;display:inline-block;zoom:1;*display:inline;width:98.5%;vertical-align:top;}
+.beidanbf ul li{font-size:14px;font-weight:900;display:inline-table;display:inline-block;zoom:1;*display:inline;width:40%;text-align:center;}
+.beidanbf ul li.vs{width:20%;}
+.beidanbf ul li.vs span{position:relative;top:10px;}
+.beidanbf ul li.vs span a{position:relative;top:10px;}
+.beidanbf ul li.hidden{float:right;padding:0 0 0 5px;}
+.beidanbf ul li a em{font-style:normal;}
+.beidanbf ul li b{}
+.beidanbf ul li strong{}
+.beidanbf ul li span{}
+.beidanbf h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;}
+.beidanbf dl{padding:0 0 5px 0;margin:0;clear:both;width:99.5%;position:relative;left:3px;}
+.beidanbf dl dt{padding:0;margin:0;}
+.beidanbf dl dt p{width:33%;margin:0 auto;text-align:center;float:left;overflow:hidden;height:44px;line-height:20px;padding:0;margin:0;overflow:hidden;}
+.beidanbf dl dt p b{float:left;height:34px;line-height:34px;position:relative;left:10px;font-weight:300;}
+.beidanbf dl dt p a{border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;color:#000;background:#fff;width:85%;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;line-height:12px;text-align:right;padding:0 5px 0 0;height:34px;overflow:hidden;}
+.beidanbf dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidanbf dl dt p a.active{background:#E02321;color:#fff;}
+
+/*北单上下单双*/
+.beidansxds{display:block;width:95%;text-align:left;margin:0 auto;position:relative;}
+.beidansxds ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansxds ul li{font-size:14px;font-weight:900;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansxds ul li span{padding:0 3px;}
+.beidansxds ul li b{font-size:12px;font-weight:300;position:relative;left:10px;top:-1px;}
+.beidansxds h1{font-size:14px;font-weight:900;padding:0 0 5px 0;height:30px;line-height:30px;overflow:hidden;margin:0 auto;text-align:left;}
+.beidansxds dl{padding:0 0 15px 0 ;clear:both;width:100%;}
+.beidansxds dl dt{}
+.beidansxds dl dt p{width:50%;margin:0 auto;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;height:40px;padding:0;margin:0;overflow:hidden;}
+.beidansxds dl dt p strong{position:relative;top:-1px;right:3px;font-size:12px;font-weight:300;}
+.beidansxds dl dt p b{border:1px solid #0b7a01;color:#0b7a01;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 3px 0 0;font-size:10px;font-weight:300;}
+.beidansxds dl dt p em{width:15px;height:15px;line-height:15px;text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 3px 0 0;font-size:10px;font-weight:300;text-indent:-5000px;}
+.beidansxds dl dt p a{display:block;border-top:1px solid #e2e2e2;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:32px;line-height:32px;color:#000;background:#fff;width:90%;padding:0;margin:0;overflow:hidden;}
+.beidansxds dl dt p a:hover{background:#6f6f6f;color:#fff;}
+.beidansxds dl dt p a.active{background:#E02321;color:#fff;}
+.beidansxds h5{}
+.beidansxds h5 a {height:30px;line-height:30px;}
+
+.qitawanfa{border:1px solid #eee;}
+.qtkongbai{width:65px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:left;float:left;}
+.qtkongbai dl{}
+.qtkongbai dl dt{line-height:30px;width:65px;height:30px;text-align:center;}
+.qtkongbai dl dt.active{background:#dc0000;color:#fff;}
+.hhbifen{}
+.hhbifen dl{}
+.hhbifen dl dt{}
+.wanfaType{vertical-align:top; position:relative;}
+.wanfaType p{width:65px; position:absolute;top:12px;}
+.wanfaType p a{color:#dc0000;}
+.wanfaType p a:hover{}
+.wanfaType ul{}
+.wanfaType ul li{font-size:14px; font-weight:900;}
+.wanfaType ul li.bifen{height:500px; vertical-align:middle;}
+.wanfaType ul li.bifen b{padding:258px 0 0 0; display:block;}
+.wanfaType ul li.bqc{height:130px;}
+.wanfaType ul li.bqc b{padding:52px 0 0 0; display:block;}
+.wanfaType ul li.zjq{height:130px;}
+.wanfaType ul li.zjq b{padding:48px 0 0 0; display:block;}
+.dgsaishi{border:1px solid red; height:40px; padding:5px 0 0 0;overflow:hidden; width:auto; display:block;}
+.bdgsaishi{border:1px solid red; height:40px; padding:5px 0 0 0;overflow:hidden; width:auto; display:block;}

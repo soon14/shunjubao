@@ -1,0 +1,86 @@
+<{include file="header.html"}>
+<link href="<{'wap_confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+TMJF(function($){
+var is_confirm = false;
+	$("#form_submit").click(function(){
+		//防止重复提交
+		if (is_confirm) {
+			return false;
+		}
+		is_confirm = true;
+		return true;
+	});
+});
+</script>
+<div class="clear"></div>
+<form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/combination_submit<{if $s == 'bd'}>_bd<{/if}>.php" target="_self" name="form1" method="post">
+  <input type="hidden" name="sport" value="<{$s}>">
+  <input type="hidden" name="select" value="<{$select}>">
+  <input type="hidden" name="user_select" value="<{$user_select}>">
+  <input type="hidden" name="multiple" value="<{$multiple}>">
+  <input type="hidden" name="money" value="<{$money}>">
+  <input type="hidden" name="combination" value="<{$c}>">
+  <input type="hidden" name="pool" value="<{$p}>">
+  <input type="hidden" name="from" value="<{$from}>">
+  <!--center start-->
+  <div class="center">
+    <!--提示文字信息  start-->
+    <div class="touzhutips"><em>!</em> <{if $s != 'bd'}>
+      奖金可能在出票时变化，实际数值以票样信息为准。
+      <{else}>
+      北单奖金SP值以北京体彩中心官方开奖为准!
+      <{/if}> </div>
+    <!--提示文字信息  end-->
+    <div>
+      <div class="clear"></div>
+      <div style="padding:0 0 10px 0;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="1">
+          <tbody id="detail_tr">
+            <tr> <{if $s == 'bk'}>
+              <th>客队</th>
+              <th>主队</th>
+              <{else}>
+              <th>主队</th>
+              <th>客队</th>
+              <{/if}>
+              <th style="border-right:1px solid #6f6f6f;">我的选择</th>
+            </tr>
+          <{foreach from=$matchInfos item=matchInfo name=matchInfo}>
+          <tr>
+            <td style="height:38px; line-height:38px;"><div class=""><{if $s == 'bk'}><{$matchInfo.a_cn}><{else}><{$matchInfo.h_cn}><{/if}></div></td>
+            <td style="height:38px; line-height:38px;"><div class=""><{if $s == 'bk'}><{$matchInfo.h_cn}><{else}><{$matchInfo.a_cn}><{/if}></div></td>
+            <td style="border-right:none;height:38px; line-height:38px;"><{$matchInfo.key_str}></td>
+          </tr>
+          <{/foreach}>
+          </tbody>
+          
+        </table>
+      </div>
+      <div class="waptouzhu">
+        <ul>
+          <li>投注金额：<b><{$money}>元</b></li>
+          <li>过关方式：<b><{if $user_select == '1x1'}>单关<{else}><{$user_select}><{/if}></b></li>
+          <li><span>(错误的串关将无法出票，请确认。)</span></li>
+        </ul>
+      </div>
+      <!--投注确认提交 start-->
+      <div>
+        <div class="confiRma">
+          <p class="check none">
+            <input type="checkbox" checked>
+            同意<a href="<{$smarty.const.ROOT_DOMAIN}>/about/xieyi.html" target="_blank">《智赢网代购协议》</a>，并已确认投注详情。</p>
+          <p>
+            <input type="submit" id="form_submit" class="confiRmaSub" value="确认购买" />
+          </p>
+        </div>
+      </div>
+      <!--投注确认提交 end-->
+    </div>
+  </div>
+</form>
+<!--center end-->
+<!--footer start-->
+<{include file="../app/footer.html"}>
+<!--footer end-->
+</body></html>

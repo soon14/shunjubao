@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/getPrize.js"></script>
+<style>
+body{background:transparent url(http://www.zhiying365365.com/www/statics/i/appbj.png);font-size:12px;font-weight:300;font-family:Arial,"宋体",Helvetica, sans-serif;line-height:150%;margin:0;padding:0;color:#fff;text-align:center;}
+#jishi{height:50px;line-height:50px;overflow:hidden;width:320px;text-align:left;overflow:hidden; margin:0 auto;}
+#jishi dl{height:50px;line-height:50px;overflow:hidden;width:320px;font-size:14px;}
+#jishi dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;height:50px;line-height:50px;width:70px;font-size:14px;font-weight:900;}
+#jishi dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;height:50px;line-height:50px;width:220px;font-size:14px;font-weight:900;}
+#jishi dl dd b{font-size:14px;font-weight:900; padding:0 10px 0 0;}
+#jishi dl dd span{color:#fff;}
+</style>
+</head>
+<body>
+<div>
+  <script>
+				function scroll_news(){
+				$(function(){
+				$('#jishi dd').eq(0).fadeOut('slow',function(){
+				$(this).clone().appendTo($(this).parent()).fadeIn('slow');$(this).remove();});});}
+				setInterval('scroll_news()',1200);</script>
+  <div id="jishi"></div>
+</div>
+</body>
+</html>

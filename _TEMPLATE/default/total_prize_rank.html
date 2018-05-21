@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<title>中奖排行-智赢网-彩票赢家首选人气最旺的网站！</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="<{'footer.css'|getStaticsUrl}>"/>
+<style>
+.paihangC{border:1px solid #e1e1e1;margin:0 auto;width:242px;height:378px;}
+.paihangC h1{ font-size:14px;font-weight:900;height:32px;line-height:32px;border-bottom:1px solid #e1e1e1;padding:0 10px;background:#f9f9f9;position:relative;}
+.paihangC h1 b{display:inline-table;display:inline-block;zoom:1;*display:inline;height:33px;line-height:33px;width:120px;background:#fff;position:absolute;left:0;text-align:center;border-right:1px solid #e1e1e1;font-size:14px;font-weight:900;font-family:'';}
+.paihangC h1 span{ position:absolute;right:10px;}
+.paihangC h1 span a{text-decoration:none;color:#dc0000;}
+.paihangC h1 span a:hover{text-decoration:underline;color:#999;}
+.paihang{position:relative;padding:8px 0 5px 0;}
+.paihang h3{position:absolute;bottom:5px;background:#fff;height:2px;width:242px;overflow:hidden;line-height:1%;text-indent:-5000px;}
+.paihang ul{float:left;padding:15px 10px 10px 10px;display:none;}
+.paihang ul li{float:left;height:26px;line-height:26px;width:95px;text-align:center;overflow:hidden;}
+.paihang ul li.first{text-align:left;width:30px;}
+.paihang ol{float:left;padding:0 10px;}
+.paihang ol li{float:left;height:32px;line-height:32px;width:95px;text-align:center;overflow:hidden;border-bottom:1px solid #e9e9e9;}
+.paihang ol li.name{text-align:left;}
+.paihang ol li.first{text-align:left;width:30px;}
+.paihang ol li.first b{width:20px;height:20px;line-height:20px;background:#BC1E1F;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;vertical-align:middle;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;position:relative;top:-1px;}
+.paihang ol li.first strong{width:20px;height:20px;line-height:20px;background:#6f6f6f;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;vertical-align:middle;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;position:relative;top:-1px;}
+</style>
+</head>
+<body>
+<div class="paihangC">
+  <h1><b>中奖排行</b><span><a href="http://www.zhiying365365.com/ticket/paihang.php" target="_blank">总排行</a></span></h1>
+  <div class="paihang">
+    <ul>
+      <li class="first">排名</li>
+      <li>用户名</li>
+      <li>累积中奖</li>
+    </ul>
+    <div class="clear"></div>
+    <{foreach from=$rank item=item key=key}>
+    <ol>
+      <{if $key<=3}>
+      <li class="first"><b><{$key}></b></li>
+      <{else}>
+      <li class="first"><strong><{$key}></strong></li>
+      <{/if}>
+      <li class="name"><{$item.u_name}></li>
+      <li><span><{$item.prize}>元</span></li>
+    </ol>
+    <{/foreach}>
+    <div class="clear"></div>
+    <h3>&nbsp;</h3>
+  </div>
+</div>
+</body>
+</html>

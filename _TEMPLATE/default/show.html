@@ -1,0 +1,196 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<link href="<{'shaidan.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="<{'newshaidan.css'|getStaticsUrl}>" >
+<body>
+<div id="fade" class="black_overlay"></div>
+<{include file="menu.html"}>
+<div class="tipsters">
+  <div class="NewsNav">
+    <dl>
+      <dt>
+        <h1><em>智赢网智赢晒单、跟单中心！停止盲目投注...</em></h1>
+        <h2><em>跟随智赢高手<span>，</span>让您的利润蒸蒸日上 ! </em></h2>
+      </dt>
+      <dd>
+        <ol>
+          <li><img src="http://www.zhiying365365.com/www/statics/i/tuijianw.jpg"></li>
+          <li>
+            <p><strong>智赢团队推荐号</strong></p>
+            <p>zhiyingwangtuandui</p>
+            <p>第一手资讯及推荐！</p>
+          </li>
+          <li><img src="http://www.zhiying365365.com/www/statics/i/dalishuishou.jpg"></li>
+          <li>
+            <p><strong>大力水手订阅号</strong></p>
+            <p>wanbocai</p>
+            <p>每日精选赛事推荐！</p>
+          </li>
+        </ol>
+      </dd>
+    </dl>
+  </div>
+</div>
+<div style=" width:1000px; margin:0 auto 15px auto;"><a href="https://mp.weixin.qq.com/s/PzoAsxEnJeGNDy_uZL4j1w" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/18.png" width="1000"></a></div>
+<!--center start-->
+<div class="shaiTag" style="position:relative;">
+  <ul>
+    <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.html"   <{if $sport == 'fb' || $sport == ''}> class='active' <{/if}>>竞彩足球</a></li>
+    <li><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/bkshow.html" <{if $sport == 'bk'}> class='active'<{/if}> >竞彩篮球</a></li>
+    <li style="position:relative;left:-25px;"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/dingzhi.php" style="color:#dc0000;">跟单定制</a></li>
+    <li class="gs"><a href="http://www.zhiying365365.com/help/dingzhi.html">如何定制?</a><a href="http://www.zhiying365365.com/help/shaidan.html">晒单问题?</a></li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<div style="position:relative;">
+  <script>
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+</script>
+  <div class="gendanCenter">
+    <div class="sdList"> <{foreach from=$show_tickets item=item name=name key=key}>
+      <div class="sdListC">
+        <dl>
+          <dt><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><img src="<{if $show_users[$item.u_id].u_img}><{$show_users[$item.u_id].u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>"></a>
+            <p><b><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{$show_users[$item.u_id].u_name}></a></b></p>
+            <p class="gendan"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{if $item.is_end}><span>查看</span><{else}>跟单<{/if}> </a></p>
+          </dt>
+          <dd>
+            <p class="show"><a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/follow/<{$item.id}>.html" target="_blank"><{$item.sport|getPoolDesc:$item.pool}></a><strong><{if $item.prize_state==1}> <a  href="javascript::void(0);"  href="javascript:void();" onClick="show_tips('<{$item.id}>','<{$show_users[$item.u_id].u_id}>','<{$show_users[$item.u_id].u_nick}>','<{$item.prize}>')" >打赏</a><{/if}></strong></p>
+            <p class="show"><b>晒单时间：</b><u><{$item.datetime}></u></p>
+            <p class="show"><b>结束时间：</b><u><{$item.endtime}></u></p>
+            <p class="show"><b>投注金额：</b><span><i>&yen;<{$item.money}></i></span></p>
+            <p class="show"><b>跟单金额：</b><span><i>&yen;<{$follow_infos[$item.id].total_money}></i></span></p>
+            <p class="show"><b>跟单人数：</b><u><{$follow_infos[$item.id].total_sum}>人</u></p>
+            <{if $item.pay_rate>0}>
+            <p class="show"><b>提成比例：</b><u><{$item.pay_rate}>%</u></p>
+            <{/if}>
+            <{if $item.prize_state==1}>
+            <p><em>赢</em></p>
+            <{/if}> </dd>
+        </dl>
+      </div>
+      <{/foreach}>
+      <div class="clear"></div>
+    </div>
+    <{if $total_page>1}>
+    <div class="sharepages"> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>">首页</a> <{if $previousUrl}> <a href="<{$previousUrl}>" class="active">上一页</a> <{/if}>
+      <{if $nextUrl}> <a href="<{$nextUrl}>" class="active">下一页</a> <{/if}> <a href="<{$smarty.const.ROOT_DOMAIN}>/ticket/show.php?sport=<{$sport}>&page=<{$total_page}>">末页</a> </div>
+    <{/if}> </div>
+</div>
+<!--center end-->
+<!--footer start--->
+<{include file="footer.html"}>
+<!--footer end-->
+
+<div id="light2" class="white_content" style="top:17%;">
+  <div class="MSCenter">
+    <h1>打赏<span><a href="javascript:void(0)" onClick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+    <div class="sdanopenwindows">
+      <dl class="tips">
+        <dd>此晒单中了<strong id="prize" style="color:#dc0000;">0</strong>元,我要给<strong id="partent_u_nick" style="color:#dc0000;">0</strong>打赏。</dd>
+      </dl>
+      <dl>
+        <dt>打赏金额</dt>
+        <dd style="position:relative;left:-5px;">
+          <input type="radio" name="tips_money" checked value="1">
+          1元</dd>
+        <dd>
+          <input type="radio" name="tips_money" value="2">
+          2元</dd>
+        <dd>
+          <input type="radio" name="tips_money" value="5">
+          5元</dd>
+        <dd>
+          <input type="radio" name="tips_money" value="10">
+          10元</dd>
+        <dd>
+          <input type="radio" name="tips_money" value="50">
+          50元</dd>
+        <dd>
+          <input type="radio" name="tips_money" value="100">
+          100元</dd>
+      </dl>
+      <dl>
+        <dt>其它金额</dt>
+        <dd class="text" style=" position:relative;top:-10px;">
+          <input type="text" name="other_tips_money" id="other_tips_money" style="width:230px;border:1px solid #ddd;" value="" onKeyUp="clearNoNum(this)">
+          &nbsp;&nbsp;
+          元</dd>
+        <dd>
+      </dl>     
+      <dl class="tips" style="padding:0 0 0 30px;">
+        <dd><span>*</span>&nbsp;&nbsp;温馨提示：提交后，打赏额度直接从您账户余额扣除。</dd>
+      </dl>
+	  <dl>
+        <dd class="sub">
+          <input id="add_tips_userTicketId" type="hidden" value="">
+          <input id="tips_to" type="hidden" value="">
+          <input type="button" name="sd" value="提交" id="sd"  onClick="return mytips()">
+        </dd>
+      </dl>
+    </div>
+    <h2>红单打赏-感谢晒单人，小小意思下。</h2>
+  </div>
+</div>
+<script>
+
+function show_tips(userTicketId,partent_u_id,partent_u_nick,prize){
+	
+	$("#other_tips_money").val('');
+	$("#add_tips_userTicketId").val(userTicketId);
+	$("#tips_to").val(partent_u_id);
+	
+	$("#partent_u_nick").html(partent_u_nick);
+	$("#prize").html(prize);
+
+	$("#light2").show();
+	$("#fade").show();
+		
+}
+
+
+function mytips(){
+	var userTicketId = $("#add_tips_userTicketId").val();
+	var tips_to = $("#tips_to").val();
+	var other_tips_money = $("#other_tips_money").val();
+	if(other_tips_money>0){
+		var tips_money = other_tips_money;//其它打赏金额
+	}else{
+		var tips_money = $('input[name="tips_money"]:checked').val();//打赏金额
+	}
+	
+
+	$.post(Domain + '/operate.php'
+                , {id: userTicketId,tips_to:tips_to,tips_money:tips_money,
+					operate:'addtips'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('打赏成功，谢谢你的打赏！');
+                    	window.location.reload(true);
+                    } else {
+						$("#light2").hide();
+						$("#fade").hide();
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );	
+	
+}
+function clearNoNum(obj){  
+  obj.value = obj.value.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符   
+  obj.value = obj.value.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的   
+  obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");  
+  obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');//只能输入两个小数   
+  if(obj.value.indexOf(".")< 0 && obj.value !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额  
+   obj.value= parseFloat(obj.value);  
+  }  
+} 
+</script>
+
+
+</body>
+</html>

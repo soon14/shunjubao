@@ -1,0 +1,101 @@
+<{include file="../default/header.html"}>
+<body>
+<link href="<{'confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<!--页面头部 start-->
+<{include file="../default/top.html"}>
+<{include file="../default/menu.html"}>
+<!--页面头部 end-->
+<!--当前位置 start-->
+<{include file="cailocation.html"}>
+<!--当前位置 end-->
+
+<form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/combination_submit.php" target="_self" name="form1" method="post">
+  <input type="hidden" name="sport" value="<{$s}>">
+  <input type="hidden" name="select" value="<{$select}>">
+  <input type="hidden" name="user_select" value="<{$user_select}>">
+  <input type="hidden" name="multiple" value="<{$multiple}>">
+  <input type="hidden" name="money" value="<{$money}>">
+  <input type="hidden" name="combination" value="<{$c}>">
+  <input type="hidden" name="pool" value="<{$p}>">
+  <input type="hidden" name="from" value="<{$from}>">
+  <!--center start-->
+  <div class="cnetr">
+    <!--确认投注center start-->
+    <div class="BitCenter">
+      <!--提示文字信息  start-->
+      <div class="touzhutips"><em>!</em>重要提示：您投注时的竞彩奖金指数有可能在出票时发生变化，实际数值以票样信息为准。 请仔细查看以下<b>"投注信息"</b>校对本方案是否与您的投注相符，一旦提交，将按照本方案交易，无法更改！ </div>
+      <!--提示文字信息  end-->
+      <div class="ConfirmationTz">
+        <!--投注确认账户信息 start-->
+        <div class="">
+          <h1><b>■</b>投注信息 【<{$chinese_pool}>】</h1>
+          <div class="Confirmauser">
+            <ul>
+			  <li style="display:none;"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php">奖金优化</a></li>
+              <li><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge.php">充值</a></li>
+              <li>账户余额：<em>&yen;&nbsp;<{$user_cash}></em>元</li>
+              <li>总金额：<b>&yen;&nbsp;<{$money}></b>元</li>
+              <li>方案倍数：<strong><{$multiple}></strong>倍</li>
+              <li>过关方式：<strong><{if $user_select == '1x1'}>单关<{else}><{$user_select}><{/if}></strong></li>
+            </ul>
+          </div>
+        </div>
+        <!--投注确认账户信息 end-->
+        <!--投注竞彩足彩总进球\过关比分\单关比分\半全场确认 start-->
+        <div class="">
+          <div id="touzhuchack">
+            <table class="hacker" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <th>序号</th>
+                <th>场次</th>
+                <{if $s == 'bk'}>
+                <th>客队</th>
+                <th>VS</th>
+                <th>主队</th>
+                <{else}>
+                <th>主队</th>
+                <th>VS</th>
+                <th>客队</th>
+                <{/if}>
+                <th>玩法</th>
+                <th>您的选项</th>
+              </tr>
+              <{foreach from=$matchInfos item=matchInfo name=matchInfo}>    
+              <tr>
+                <td><{$smarty.foreach.matchInfo.iteration}></td>
+                <td><{$matchInfo.num}></td>
+                <td><div class="Checktded"><{if $s == 'bk'}><{$matchInfo.a_cn}><{else}><{$matchInfo.h_cn}><{/if}></div></td>
+                <td>VS</td>
+                <td><div class="Checktded"><{if $s == 'bk'}><{$matchInfo.h_cn}><{else}><{$matchInfo.a_cn}><{/if}></div></td>
+                <td><{$matchInfo.chinese_pool}></td>
+                <td><{$matchInfo.key_str}></td>
+              </tr>
+              <{/foreach}>  
+            </table>
+          </div>
+        </div>
+        <!--投注竞彩足彩总进球\过关比分\单关比分\半全场确认 end-->
+        <!--投注确认提交 start-->
+        <div>
+          <div class="confiRma">
+            <p class="check">
+              <input type="checkbox" checked>
+              同意<a href="<{$smarty.const.ROOT_DOMAIN}>/about/xieyi.html" target="_blank">《智赢网代购协议》</a>，并已确认投注详情。</p>
+            <p>
+              <input type="submit" id="form_submit" class="confiRmaSub" value="确认购买" />
+            </p>
+          </div>
+        </div>
+        <!--投注确认提交 end-->
+      </div>
+    </div>
+    <!--确认投注center end-->
+  </div>
+</form>
+<!--center end-->
+<!--Help start-->
+<{include file="../default/help.html"}>
+<{include file="../default/footer.html"}>
+<!--footer end-->
+</body>
+</html>

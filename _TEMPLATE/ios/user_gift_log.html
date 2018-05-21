@@ -1,0 +1,81 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" />
+<link type="text/css" rel="stylesheet" href="<{'wap_user.css'|getStaticsUrl}>" />
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+</head><body>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+    });
+	
+	$("#end_time").focus(function(){
+        showCalendar('end_time', 'y-mm-dd');
+    });	
+	$("table tr:nth-child(odd)").css("background-color","#f1f1f1");
+});
+</script>
+<div class="ustitle">
+  <h1><em>个人账户明细<b></b><i></i></em></h1>
+</div>
+<div class="Paymingxi">
+<div>
+  <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="0" style="width:100%; overflow:hidden;">
+    <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_account_log.php">账户明细</a></div></td>
+      <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_gift_log.php" class="active">彩金明细</a></div></td>
+      <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_charge_log.php">充值记录</a></div></td>
+      <td><div class="selectTag"><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_ticket_log.php">奖金派送</a></div></td>
+  </table>
+  <div style="padding:18px 0 0 0;">
+    <div class="boldtxt">
+      <table width="100%" border="1"  cellpadding="0" cellspacing="0">
+        <tr>
+          <th>交易类型</th>
+          <th>时间</th>
+          <th>收入</th>
+          <th>支出</th>
+          <th>余额</th>
+        </tr>
+        <{assign var=trade_amount_out value=0}>
+        <{assign var=trade_amount_in value=0}>
+        <{assign var=trade_money_out value=0}>
+        <{assign var=trade_money_in value=0}>
+        <{assign var=gift value=0}>
+        <{foreach from=$userGiftLogInfos item=userGiftLogInfo name=log}>
+        <{if $bankrollChangeType[$userGiftLogInfo.log_type].direction == 1}>
+        <{assign var=gift value=$userGiftLogInfo.old_gift+$userGiftLogInfo.gift}>
+        <{assign var=trade_amount_in value=$trade_amount_in+1}>
+        <{assign var=trade_money_in value=$trade_money_in+$userGiftLogInfo.gift}>
+        <{else if $bankrollChangeType[$userGiftLogInfo.log_type].direction == 2}>
+        <{assign var=gift value=$userGiftLogInfo.old_gift-$userGiftLogInfo.gift}>
+        <{assign var=trade_money_out value=$trade_money_out+$userGiftLogInfo.gift}>
+        <{assign var=trade_amount_out value=$trade_amount_out+1}>
+        <{/if}>
+        <tr>
+          <td><{$bankrollChangeType[$userGiftLogInfo.log_type].desc}></td>
+          <td><p><{$userGiftLogInfo.create_time}></p></td>
+          <td><{if $bankrollChangeType[$userGiftLogInfo.log_type].direction == 1}><{$userGiftLogInfo.gift}>元<{/if}></td>
+          <td><{if $bankrollChangeType[$userGiftLogInfo.log_type].direction == 2}><{$userGiftLogInfo.gift}>元<{/if}></td>
+          <td><{$gift}>元</td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </div>
+    <div> <{if !$userGiftLogInfos}>
+      <div class="tips">暂时没有您的信息! </div>
+      <{/if}>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上一页</a> <{/if}>
+        <{if $nextUrl}> <a href="<{$nextUrl}>">下一页</a> </div>
+      <{/if}>
+      <{/if}> </div>
+  </div>
+</div>
+<!--用户中心账户明细 end-->
+<{include file="../ios/footer.html"}>
+</body>
+</html>

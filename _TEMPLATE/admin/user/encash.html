@@ -1,0 +1,168 @@
+<{include file="../admin/header.html"}>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+      /* 当鼠标在表格上移动时，离开的那一行背景恢复 */
+      $(document).ready(function(){ 
+            $(".admintable tr td").mouseout(function(){
+                var bgc = $(this).parent().attr("bg");
+                $(this).parent().find("td").css("background-color",bgc);
+            });
+      })
+      
+      $(document).ready(function(){ 
+            var color="#DCF2FC"
+            $(".admintable tr:odd td").css("background-color",color);  //改变偶数行背景色
+            /* 把背景色保存到属性中 */
+            $(".admintable tr:odd").attr("bg",color);
+            $(".admintable tr:even").attr("bg","#fff");
+      })
+</script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_date").focus(function(){
+		//if (!$("#start_time").val()) {
+			showCalendar('start_date', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_date").focus(function(){
+	    //if (!$("#end_time").val()) {
+	  showCalendar('end_date', 'y-mm-dd');
+	    //}
+	});
+	
+	var is_confirming = false;
+	$(".confirm").click(function(){
+		if (is_confirming) return false;
+		if (!confirm('执行这个操作('+ $(this).html() + ')?申请人：' + $(this).attr('userName'))) {
+			return false;
+		}
+		var pms_msg = '';
+		if($(this).attr('operate') == 'cancel') {
+			var pms_msg = prompt("为这个用户发送站内信","您的提现申请已经被撤销，理由是:");			 
+		}
+		$.post(root_domain + '/admin/user/encash.php'
+                , {operate: $(this).attr('operate'),
+			userEncashId :$(this).attr('userEncashId'),
+			pms_msg:pms_msg
+                  }
+                , function(data) {
+                	is_confirming = true;
+                	alert(data.msg);
+                    if (data.ok) {
+                    	window.location.reload(true) 
+                    }
+                }
+                , 'json'
+            );
+	})
+	
+});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li> 用户名：
+          <input type="text" name="u_name" id="u_name" value="<{$u_name}>">
+          提款状态：
+          <select name='encash_status' id='encash_status' >
+            <option value="all" selected>全部状态</option>
+            <{foreach from=$encashStatusDesc item=item key=key}> <option value="<{$key}>" <{if $encash_status==$key}> selected <{/if}> ><{$item.desc}>
+            </option>
+            <{/foreach}>
+          </select><br>
+
+          开始日期：
+      <input type="text" name="start_date" id="start_date"  value="<{$start_date}>">
+    开始时间：
+      <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+    结束日期：
+      <input type="text" name="end_date" id="end_date" value="<{$end_date}>">
+   结束时间：
+      <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <div class="admintable">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>手机号</th>
+            <th>金额</th>
+            <th>状态</th>
+            <th>银行信息</th>
+            <th>用户信息</th>
+            <th>支付方式</th>
+            <th>提现方式</th>
+            <th>账户信息</th>
+            <th>申请时间</th>
+            <th>操作
+              </td>
+          </tr>
+        <{assign var=trade_money value=0}>
+        <{foreach from=$encashInfos item=encashInfo name=ticket}>
+        <tr>
+          <td><{$encashInfo.encash_id}></td>
+          <td><{$encashInfo.realname}></td>
+          <td><{if $encashInfo.mobile}>
+            <{$encashInfo.mobile}>
+            <{else}>
+            <{$userRealInfos[$encashInfo.u_id].mobile}>
+            <{/if}> </td>
+          <td <{if $encashInfo.payment==2}>style="color:#F00"<{/if}>><{$encashInfo.money}>元</td>
+          <{assign var=trade_money value=$trade_money+$encashInfo.money}>
+          <td width="100"><{if $encashInfo.encash_status == 1}> <span style="color:red;"><{$encashStatusDesc[$encashInfo.encash_status].desc}></span> <{elseif $encashInfo.encash_status == 6}>
+            <{$encashInfo.process_message}>
+            <{else}>
+            <{$encashStatusDesc[$encashInfo.encash_status].desc}>
+            <{/if}> </td>
+          <td width="120"> 卡号： <span <{if $encashInfo.payment==2}>style="color:#F00"<{/if}>> <{$encashInfo.bankcard}></span><br/>
+          开户行：<{$encashInfo.bank}><br/>
+            省市：<{$encashInfo.bank_province}>-<{$encashInfo.bank_city}><br/>
+            支行：<{$encashInfo.bank_branch}><br/>
+          </td>
+          <td style="width:40px;"> 用户名：<br/>
+           <span <{if $encashInfo.payment==2}>style="color:#F00"<{/if}>> <{$userInfos[$encashInfo.u_id].u_name}></span><br/>
+            手机号：<br/>
+            <{$userRealInfos[$encashInfo.u_id].mobile}><br/>
+          </td>
+          <{assign var=userPaymentInfo value=$userPaymentInfos[$encashInfo.u_id]}>
+          <{if $userPaymentInfo}>
+          <td width="40"><{$payTypeDesc[$userPaymentInfo.pay_type].desc}><br/>
+            帐号：<br/>
+            <{$userPaymentInfo.pay_account}></td>
+          <{else}>
+          <td width="40">暂无</td>
+          <{/if}>
+          <td><{$EncashPaymentDesc[$encashInfo.payment].desc}></td>
+          <td> 可用余额：<{$userAccountInfos[$encashInfo.u_id].cash}><br/>
+            彩金账户：<{$userAccountInfos[$encashInfo.u_id].gift}><br/>
+            返点账户：<{$userAccountInfos[$encashInfo.u_id].rebate}><br/>
+            冻结资金：<{$userAccountInfos[$encashInfo.u_id].frozen_cash}><br/>
+          </td>
+          <td><{$encashInfo.create_time}></td>
+          <td><{if $encashInfo.encash_status == 2}> <a href="javascript:void(0);" class="confirm" userEncashId="<{$encashInfo.encash_id}>" operate="encash" userName="<{$encashInfo.realname}>">确认提现</a> <{elseif $encashInfo.encash_status == 1}> <a href="javascript:void(0);" class="confirm" userEncashId="<{$encashInfo.encash_id}>" operate="verify" userName="<{$encashInfo.realname}>">确认审核</a>| <a href="javascript:void(0);" class="confirm" userEncashId="<{$encashInfo.encash_id}>" operate="cancel" userName="<{$encashInfo.realname}>">撤销提现</a> <{/if}> </td>
+        </tr>
+        <{/foreach}>
+        <tr>
+          <td colspan="12" align="left">总计：<{$trade_money}>元</td>
+        </tr>
+        </tbody>
+        
+      </table>
+    </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

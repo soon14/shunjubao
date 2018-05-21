@@ -1,0 +1,2 @@
+2017-10-11 16:53:05 <xml><return_code><![CDATA[FAIL]]></return_code><return_msg><![CDATA[FAIL]]></return_msg><version><![CDATA[2.0.0]]></version></xml>
+2017-10-11 17:10:58 <xml><return_code><![CDATA[SUCCESS]]></return_code><return_msg><![CDATA[OK]]></return_msg><version><![CDATA[2.0.0]]></version></xml>

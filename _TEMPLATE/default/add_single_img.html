@@ -1,0 +1,274 @@
+<style type="text/css">
+<!--
+.ke-icon-addSingleImg {
+      background-image: url("<{$smarty.const.STATICS_BASE_URL}>/j/skins/default/default.gif");
+      background-position: 0 -496px;
+      height: 16px;
+      width: 16px;
+}
+-->
+</style>
+<script type="text/javascript" src="<{'kindeditor.js'|getStaticsUrl}>"></script>
+<script type="text/javascript">
+var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+</script>
+<script type="text/javascript">
+(function ($) {
+	var tmp_root_domain = root_domain;// 初始化root_domain
+	var getsImgs = function (id) {
+		var iImgs = 0;
+        var imgs = [];
+        var img;
+        var re = /<img.*?src="([^"]+)"[^>]*>/g;
+        while (img = re.exec(KE.html(id))) {
+            iImgs++;
+            imgs.push(img[1]);
+        }
+        return imgs;
+	}
+	KE.lang['addSingleImg'] = '添加单张图片';
+	KE.plugin['addSingleImg'] = {
+	    getSelectedNode : function(id) {
+	        var g = KE.g[id];
+	        var startNode = g.keRange.startNode;
+	        var endNode = g.keRange.endNode;
+	        if (!KE.browser.WEBKIT && !g.keSel.isControl) return;
+	        if (startNode.nodeType != 1) return;
+	        if (startNode.tagName.toLowerCase() != 'img') return;
+	        if (startNode != endNode) return;
+	        if (!startNode.className.match(/^ke-\w+/i)) return startNode;
+	    },
+	    init : function(id) {
+	        var self = this;
+	        var g = KE.g[id];
+	        g.contextmenuItems.push({
+	            text : KE.lang['editImage'],
+	            click : function(id, menu) {
+	                KE.util.select(id);
+	                menu.hide();
+	                self.click(id);
+	            },
+	            cond : function(id) {
+	                return self.getSelectedNode(id);
+	            },
+	            options : {
+	                width : '150px',
+	                iconHtml : '<span class="ke-common-icon ke-common-icon-url ke-icon-image"></span>'
+	            }
+	        });
+	        g.contextmenuItems.push({
+	            text : KE.lang['deleteImage'],
+	            click : function(id, menu) {
+	                KE.util.select(id);
+	                menu.hide();
+	                var img = self.getSelectedNode(id);
+	                img.parentNode.removeChild(img);
+	                KE.util.execOnchangeHandler(id);
+	            },
+	            cond : function(id) {
+	                return self.getSelectedNode(id);
+	            },
+	            options : {
+	                width : '150px'
+	            }
+	        });
+	        g.contextmenuItems.push('-');
+	    },
+	    click : function(id) {
+	        KE.util.selection(id);
+	        this.dialog = new KE.dialog({
+	            id : id,
+	            cmd : 'addSingleImg',
+	            file : 'image/image.html',
+	            width : 400,
+	            height : 220,
+	            loadingMode : true,
+	            title : KE.lang['image'],
+	            yesButton : KE.lang['yes'],
+	            noButton : KE.lang['no']
+	        });
+	        this.dialog.show();
+	    },
+	    check : function(id) {
+	        var dialogDoc = KE.util.getIframeDoc(this.dialog.iframe);
+	        var type = KE.$('type', dialogDoc).value;
+	        var width = KE.$('imgWidth', dialogDoc).value;
+	        var height = KE.$('imgHeight', dialogDoc).value;
+	        var title = KE.$('imgTitle', dialogDoc).value;
+	        var urlBox;
+	        if (type == 2) {
+	            urlBox = KE.$('imgFile', dialogDoc);
+	        } else {
+	            urlBox = KE.$('url', dialogDoc);
+	        }
+	        if (!urlBox.value.match(/\.(jpg|jpeg|gif|bmp|png)(\s|\?|$)/i)) {
+	            alert(KE.lang['invalidImg']);
+	            urlBox.focus();
+	            return false;
+	        }
+	        if (!width.match(/^\d*$/)) {
+	            alert(KE.lang['invalidWidth']);
+	            KE.$('imgWidth', dialogDoc).focus();
+	            return false;
+	        }
+	        if (!height.match(/^\d*$/)) {
+	            alert(KE.lang['invalidHeight']);
+	            KE.$('imgHeight', dialogDoc).focus();
+	            return false;
+	        }
+	        return true;
+	    },
+	    exec : function(id) {
+	        var self = this;
+	        var dialogDoc = KE.util.getIframeDoc(this.dialog.iframe);
+	        var type = KE.$('type', dialogDoc).value;
+	        var width = KE.$('imgWidth', dialogDoc).value;
+	        var height = KE.$('imgHeight', dialogDoc).value;
+	        var title = KE.$('imgTitle', dialogDoc).value;
+	        var alignElements = dialogDoc.getElementsByName('align');
+	        var align = '';
+	        for (var i = 0, len = alignElements.length; i < len; i++) {
+	            if (alignElements[i].checked) {
+	                align = alignElements[i].value;
+	                break;
+	            }
+	        }
+	        if (!this.check(id)) return false;
+	        if (type == 2) {
+	            KE.$('editorId', dialogDoc).value = id;
+	            var uploadIframe = KE.$('uploadIframe', dialogDoc);
+	            KE.util.showLoadingPage(id);
+	            var onloadFunc = function() {
+	                KE.event.remove(uploadIframe, 'load', onloadFunc);
+	                KE.util.hideLoadingPage(id);
+	                var uploadDoc = KE.util.getIframeDoc(uploadIframe);
+	                var data = '';
+	                try {
+	                    data = KE.util.parseJson(uploadDoc.body.innerHTML);
+	                } catch(e) {
+	                    alert(KE.lang.invalidJson);
+	                }
+	                if (typeof data === 'object' && 'error' in data) {
+	                    if (data.error === 0) {
+	                        //var url = KE.format.getUrl(data.url, 'absolute');
+	                        var url = data.url;// add by gxg
+	                        self.insert(id, url, title, width, height, 0, align);
+	                    } else {
+	                        alert(data.message);
+	                        return false;
+	                    }
+	                }
+	            };
+	            KE.event.add(uploadIframe, 'load', onloadFunc);
+	            dialogDoc.uploadForm.submit();
+	            return;
+	        } else {
+	            var url = KE.$('url', dialogDoc).value;
+	            this.insert(id, url, title, width, height, 0, align);
+	        }
+	    },
+	    insert : function (id, url, title, width, height, border, align) {
+	    	var oldHtml = KE.html(id);
+	    	this._insert(id, url, title, width, height, border, align);
+	    	var imgs = getsImgs(id);
+	    	if (imgs.length > 1) {
+                alert('已经有一张图片，不允许再添加')
+                KE.html(id, oldHtml);
+                return false;
+            }
+	    },
+	    _insert : function(id, url, title, width, height, border, align) {
+	        // 插入
+	        var html = this._generateHtml(id, url, title, width, height, border, align);
+	        KE.util.insertHtml(id, html);
+	        this.dialog.hide();
+	        KE.util.focus(id);
+	    },
+	    _generateHtml : function(id, url, title, width, height, border, align) {
+            // 插入
+            var html = '<img src="' + url + '" kesrc="' + url + '" ';
+            if (width > 0) html += 'width="' + width + '" ';
+            if (height > 0) html += 'height="' + height + '" ';
+            if (title) html += 'title="' + title + '" ';
+            if (align) html += 'align="' + align + '" ';
+            html += 'alt="' + title + '" ';
+            html += 'border="' + border + '" />';
+            return html;
+        }
+	};
+	
+	$.plugins = {};
+	$.plugins.singleImg = {
+		add : function (id) {
+			var _params = '';
+			var needWater = false;
+			if (typeof(id) == "object") {
+				var _oid = id;
+				id = _oid.id;
+				if (typeof(_oid.params) == 'object') {
+					_params = $.param(_oid.params);					
+					if (_params.length > 0) {
+						_params = "?" + _params;
+					}
+					if(_oid.params.needWater)
+                    {
+						needWater = _oid.params.needWater;
+                    }
+				}				
+			}
+			var _this = this;
+			
+			// 目前有个bug：删除编辑框里的图片时，关联的表单不会同步，用这个数据结构解决。
+			if (typeof(prevs) == "undefined") {
+				var prevs = {};
+			}
+			
+	        KE.show({
+	            id : id
+	            , items : ['addSingleImg', 'fullscreen']
+	            , width : '300px'
+	            , height : '100px'
+	            , skinType : 'oxygen'
+	            , imageUploadJson : tmp_root_domain + '/kindeditor/upload_json.php'+_params
+	            , fileManagerJson : tmp_root_domain + '/kindeditor/file_manager_json.php'
+	            , allowFileManager : true
+	            , syncType : ""
+	            , afterChange : function(id) {
+	            	_this.sync(id);
+	            	if (typeof(prevs[id]) == "undefined") {
+	            		prevs[id] = $("#"+id).val();
+	            	} else {// 不是第一次初始化的改变，说明图片被用户删除了，同步下关联的表单值
+	            		if (!_this.get(id)) {
+	            			$("#"+id).val("");
+	            		}
+	            	}
+	            }
+	            , afterCreate : function(id) {
+	            	// 如果有图片，则初始化
+	            	var img = $("#"+id).val();
+	            	if (!img) {
+	            		return false;
+	            	}
+	            	var html = KE.plugin['addSingleImg']._generateHtml(id, img);
+	            	KE.html(id, html);
+	            }
+	            , urlType : 'domain' // 改变站内本地URL，domain为带域名的绝对路径。
+	            , needWater : needWater  //此处通过传值进行判断，2000X2000会默认选中添加水印
+	        });
+	    }
+	    , get : function (id) {
+	    	var imgs = getsImgs(id);
+	    	if (imgs.length >= 1) {
+	    		return imgs[0];
+	    	}
+	    	return false;
+	    }
+	    , sync : function (id) {
+	    	var img = this.get(id);
+	    	if (img) {
+	    		$("#"+id).val(img);
+	    	}
+	    }
+	};
+}) (TMJF);
+</script>

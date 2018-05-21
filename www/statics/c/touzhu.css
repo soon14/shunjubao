@@ -1,0 +1,1020 @@
+html{overflow-x:hidden;}
+.BitCenter{width:1000px;margin:0 auto;text-align:left;font-size:12px;position:relative;top:-10px;}
+.touzhuNav{position:absolute;top:0;width:500px;height:39px;line-height:39px;right:0;text-align:right;z-index:999999;}
+.touzhuNav ul{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;position:relative;top:-5px;}
+.touzhuNav ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 8px;margin:0;height:45px;line-height:45px;}
+.touzhuNav ul li b{ font-size:18px;font-weight:300;color:#dc0000;font-family:'微软雅黑';padding:0 0 0 5px;position:relative;top:3px;}
+.touzhuNav ul li em{position:absolute;top:-2px;right:0;width:9px;height:14px;background:url(../i/HomeHot.gif) no-repeat;}
+.touzhuNav ul li a{font-weight:300;font-family:'';font-size:12px;display:inline-table;display:inline-block;zoom:1;*display:inline;color:#000;height:45px;line-height:40px;}
+.touzhuNav ul li a:hover{color:#dc0000;text-decoration:none;}
+.touzhuNav ul li a.active{color:#dc0000;}
+.clearSel{}
+.clearSel a{border:none;background:none;width:50px;}
+/*当前位置*/
+.submeun{height:38px;line-height:38px;border-bottom:1px solid #ddd;clear:both;padding:10px 0;}
+.submeun ul{ height:32px;line-height:32px;width:1000px;margin:0 auto;text-align:left;}
+.submeun ul li{float:left;padding:0 3px;}
+.submeun ul li a{width:130px;height:32px;line-height:32px;text-align:center;display:block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;color:#000;background:#eee;}
+.submeun ul li a:hover{background:#B70408;color:#fff;}
+.submeun ul li a.active{background:#B70408;color:#fff;}
+.Cailocation{height:38px;line-height:38px;border-bottom:1px solid #ccc;clear:both;padding:8px 0;width:1000px;margin:0 auto;}
+.location_center{width:1000px;margin:0 auto;text-align:left;position:relative;z-index:99999;padding:5px 0 0 0;}
+.location_center h1{font-size:16px;font-weight:300;font-family:'宋体';color:#454545;}
+.location_center h1 b{position:relative;top:-1px;font-size:12px;font-weight:300;display:none;}
+.location_center h1 strong{position:relative;top:-1px;font-size:12px;font-weight:300;}
+.location_center h1 span{font-size:16px;color:#555;padding:0 20px;position:relative;top:-2px;}
+.location_center h1 img{padding:0 5px;position:relative;top:2px;}
+.location_center a{text-decoration:none;font-size:14px;float:left;color:#000;position:relative;padding:0 15px;left:7px;}
+.location_center a em{position:absolute;top:-1px;right:6px;width:9px;height:14px;background:url(../i/HomeHot.gif) no-repeat;}
+.location_center a.active{color:#444;border:1px solid #ccc;border-bottom:1px solid #fff;position:relative;top:2px;font-weight:900;border-top-left-radius:1px;border-top-right-radius:1px;}
+.location_center a:hover{text-decoration:none;color:#c10c08;}
+#scrollDiv{width:240px;height:36px;line-height:36px;overflow:hidden}
+#scrollDiv b{width:95px;float:left;display:block;}
+#scrollDiv strong{width:80px;float:left;display:block;color:#555;font-size:12px;font-weight:300;overflow:hidden;}
+#scrollDiv li{height:28px;}
+#scrollDiv li span{color:red;float:right;}
+.noneDade{border:1px solid #dc0000;padding:10px 0;font-size:14px;}
+.dgsaishi{display:inline-table;display:inline-block;zoom:1;*display:inline;height:34px;line-height:34px;border:1px solid red;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+
+/**/
+.jflocation{height:38px;line-height:38px;clear:both;background:#FFDA14;margin:0 0 30px 0;}
+.jflc_center{width:1000px;margin:0 auto;text-align:left;position:relative;z-index:99999;position:relative;}
+.jflc_center ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jflc_center ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 10px 0 0;}
+.jflc_center ul li a{height:38px;line-height:38px;color:#444;font-size:14px;padding:0 10px;}
+.jflc_center ul li a.active{ background:#fff;color:#000;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jflc_center ul li a:hover{color:#dc0000;}
+.zhongjiang{ position:absolute;top:0;right:0;width:200px;}
+.zhongjiang b{ position:absolute;left:0;}
+.scrollDiv{height:38px;line-height:38px;overflow:hidden;position:absolute;left:88px;top:0;}
+.scrollDiv li{height:38px;width:100px;}
+.noneDade{font-size:12px;}
+
+/**/
+table.stripe{border-top:none;overflow:hidden;border:1px solid #ccc;border-top:none;margin:auto auto 30px auto;font-size:12px;overflow:hidden;width:100%;}
+table.stripe  tr td{line-height:28px;text-align:center;background:#fff;vertical-align:middle;}/* 默认背景被白色 */
+table.stripe  tr.alt td {background:#F2F2F2;border-bottom:1px solid #CFCFCF;border-top:1px solid #CFCFCF;}/* 默认隔行背景颜色 */
+table.stripe  tr.over td {background:#FFE3C1;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr.time td {background:#fff;overflow:hidden;}/* 鼠标经过时候背景颜色 */
+table.stripe  tr:hover{}
+#n{margin:10px auto;width:920px;font-size:14px;line-height:30px;}
+/*比赛筛选*/
+.DQtime{text-align:left;background:#FFF2CD;height:30px;line-height:30px;overflow:hidden;position:relative;}
+.DQtime b{font-size:12px;font-weight:300;padding:0 0 0 10px;color:#000;}
+.DQtime strong{position:absolute;right:10px;}
+.DQtime strong a{text-decoration:none;color:#000;}
+.DQtime strong input{position:relative;top:3px;}
+.DQtime strong a:hover{text-decoration:none;}
+.DQtime span{padding:0 0 0 18px;}
+.DQtime span a{text-decoration:none;color:#0B6DB8;}
+.DQtime span a:hover{text-decoration:underline;}
+.background1{background:#4D94FC;color:#fff;height:100%;}
+.background2{background:#EC26DB;color:#fff;}
+.background3{background:#00AD31;color:#fff;}
+.background4{background:#4D94FC;color:#fff;}
+.background5{background:#4D94FC;color:#fff;}
+.background6{background:#4D94FC;color:#fff;}
+.DangQian{border-bottom:1px solid #E0E0E0;margin:20px auto 20px auto;height:40px;position:relative;z-index:9999;}
+.DangQian u{position:absolute;top:40px;width:300px;height:7px;background:url(../i/bg_bd.png) no-repeat left bottom;}
+.DangQian ul{padding:0 0 0 8px;}
+.DangQian ul li{position:relative;top:3px;display:block;cursor:pointer;color:#444;height:34px;line-height:34px;font-size:14px;font-weight:900;float:left;margin:0 10px 0 0;text-align:center;z-index:9999;}
+.DangQian ul li.one{border:none;top:0;}
+.DangQian ul li.two{text-align:left;}
+.DangQian ul li.two b{position:relative;left:-6px;font-size:12px;font-weight:300;font-family:'';}
+.DangQian ul li.two i{color:#fff;font-size:12px;font-weight:300;}
+.DangQian ul li.show{background:url(../i/ctime.gif) no-repeat 0 9px;width:130px;}
+.DangQian ul li.hidden{width:20px;height:20px;background:#fff;position:absolute;left:220px;top:10px;z-index:9999999;}
+.DangQian ul li.wangqi{width:100px;font-size:12px;font-weight:300;color:#777;padding:0;margin:0;position:absolute;left:238px;}
+.DangQian ul li#tip{font-size:12px;font-weight:300;position:absolute;left:388px;cursor:auto;}
+.DangQian ul li span{position:absolute;top:35px;left:-9px;width:484px;height:auto;border:1px solid #ddd;z-index:999;background:#fff;text-align:left;font-size:12px;font-weight:300;padding:10px;z-index:99999999;display:none;}
+.DangQian ul li span b{font-size:12px;font-weight:900;display:block;padding:0;margin:0 0 5px 0;border:none;background:none;color:#000;border-bottom:1px dotted #999;font-family:'微软雅黑';}
+.DangQian ul li span em{font-size:12px;font-family:'宋体';width:100px;height:24px;line-height:24px;padding:0;margin:0;font-style:normal;display:block;float:left;overflow:hidden;}
+.DangQian ul li span i{font-style:normal;width:400px;height:24px;line-height:24px;clear:both;display:block;}
+.DangQian ul li span input{position:relative;top:2px;}
+.DangQian ul li span a{text-decoration:none;color:#e10c08;padding:0 5px;clear:both;height:24px;line-height:24px;}
+.DangQian ul li span a:hover{text-decoration:underline;}
+.DangQian ul li span strong{width:10px;height:5px;line-height:5px;overflow:hidden;position:absolute;top:-5px;left:43px;display:block;background:url(../i/globalheader_top.gif) no-repeat center;border-bottom:1px solid #fff;}
+.Nss{position:absolute;top:-2px;left:8px;width:181px;height:2px;line-height:2px;background:#fff;overflow:hidden;}
+.DangQian ul li  select{border:;}
+.DangQian ul li u{text-decoration:none;font-size:12px;font-weight:300;color:#E12323;padding:0 0 0 5px;}
+.DangQian h2{padding:10px;margin:0;font-size:12px;font-weight:900;clear:both;}
+.DangQian dl{ height:40px;line-height:40px;}
+.DangQian dl dt{ float:left;padding:10px 0 0 0;}
+.DangQian dl dt select{ width:65px;line-height:30px;}
+.DangQian dl dd{ float:left;padding:0 3px;}
+.DangQian dl dd.right{ position:relative;top:-2px;}
+.DangQian dl dd span{color:#E02321;padding:0 1px;position:relative;top:1px;font-size:14px;}
+.DangQian dl dd a{color:#000;padding:6px;}
+.DangQian dl dd a:hover{background:#e2e2e2;color:#000;}
+.DangQian dl dd a.active{background:#E02321;color:#fff;}
+/*比赛赛对*/
+.duiName{height:22px;line-height:22px;position:relative}
+.duiName span{position:absolute;top:-3px;left:0;width:30px;height:30px;background:url(../i/single.gif) no-repeat left center;display:block;text-indent:-5000px;}
+.duiName ul{}
+.duiName ul li{float:left;width:70px;height:20px;line-height:20px;text-align:center;overflow:hidden;font-size:12px;}
+.duiName ul li.left{text-align:right;}
+.duiName ul li.show{text-align:left;}
+.duiName ul li.vs{width:20px;}
+.duiName b{width:82px;text-align:right;float:left;font-size:12px;font-weight:300;height:22px;line-height:22px;overflow:hidden;padding:0;color:#000; padding:0 0 0 5px;}
+.duiName u{text-decoration:none;float:left;width:20px;text-align:center;margin:0 5px;padding:0 3px;font-size:14px;color:#000;}
+.duiName strong{width:70px;text-align:left;float:left;font-size:12px;font-weight:300;height:22px;line-height:22px;overflow:hidden;padding:0 5px 0 0;color:#000;}
+.duiNamE{height:22px;line-height:22px;position:relative}
+.duiNamE span{position:absolute;top:-3px;left:0;width:30px;height:30px;background:url(../i/single.gif) no-repeat left center;display:block;}
+.duiNamE ul{}
+.duiNamE ul li{float:left;width:70px;height:25px;line-height:20px;text-align:center;overflow:hidden;font-size:14px;}
+.duiNamE ul li.left{text-align:right;}
+.duiNamE ul li.show{text-align:left;}
+.duiNamE ul li.vs{width:15px;}
+.duiNamE b{width:82px;text-align:right;float:left;font-size:12px;font-weight:300;height:24px;line-height:24px;overflow:hidden;padding:0 0 0 15px;}
+.duiNamE u{text-decoration:none;float:left;width:20px;text-align:center;margin:0 5px;padding:0 3px;font-size:14px;color:#000;}
+.duiNamE strong{width:73px;text-align:left;float:left;font-size:12px;font-weight:300;height:24px;line-height:24px;overflow:hidden;}
+.duiNamE em{width:83px;text-align:left;float:left;font-size:12px;font-weight:300;height:24px;line-height:24px;overflow:hidden;font-style:normal;}
+.ouyaxi a{text-decoration:none;padding:0 3px;color:#444;}
+.ouyaxi a:hover{text-decoration:underline;color:red;}
+/**/
+.LduiName{height:30px;line-height:30px;overflow:hidden;width:188px;overflow:hidden;position:relative;padding:0 0 0 20px;}
+.LduiName span{position:absolute;top:0;left:0;width:30px;height:30px;background:url(../i/single.gif) no-repeat left center;display:block;text-indent:-5000px;}
+.LduiName ul{}
+.LduiName ul li{float:left;width:70px;height:25px;line-height:20px;text-align:center;overflow:hidden;font-size:12px;color:red;}
+.LduiName ul li.left{text-align:right;}
+.LduiName ul li.show{text-align:left;}
+.LduiName ul li.vs{width:20px;}
+.LduiName b{width:70px;text-align:right;float:left;font-size:12px;font-weight:300;height:22px;line-height:22px;overflow:hidden;}
+.LduiName u{text-decoration:none;float:left;width:20px;text-align:center;margin:0 5px;padding:0 3px;font-size:12px;color:#000;}
+.LduiName strong{width:70px;text-align:left;float:left;font-size:12px;font-weight:300;height:22px;line-height:22px;overflow:hidden;padding:0 5px 0 0;}
+/*竞彩篮球大小分nav*/
+.Navdx{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.Navdx dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.Navdx dl.one{width:39px;text-align:center;height:48px;line-height:48px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.Navdx dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.Navdx dl.three{width:136px;text-align:center;height:48px;line-height:48px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.Navdx dl.four{width:210px;text-align:center;height:48px;display:inline;float:left;line-height:26px;}
+.Navdx dl.four dt{line-height:48px;line-height:48px;}
+.Navdx dl.four dt b{font-size:12px;font-weight:300;}
+.Navdx dl.five{width:470px;text-align:center;height:48px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;line-height:26px;}
+.Navdx dl.five dt{height:26px;line-height:26px;font-size:12px;font-weight:900;width:480px;overflow:hidden;text-align:center;font-family:'';}
+.Navdx dl.five dd{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.Navdx dl.five dd b{height:20px;line-height:20px;width:200px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.Navdx dl.six{width:68px;border-right:none;height:48px;line-height:48px;}
+.Navdx dl.six dt b{position:relative;top:-12px;}
+.Navdx dl.six dt.show{background:url(../i/wenhao.jpg) no-repeat 28px 24px;position:relative;}
+.Navdx dl.six dt.show em{position:absolute;top:40px;left:-122px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.dxfOddsTd{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;width:470px;}
+.dxfOddsTd ul{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.dxfOddsTd ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;height:28px;line-height:28px;width:200px;}
+.dxfOddsTd ul li a{text-decoration:none;color:#000;width:190px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:block;position:relative;}
+.dxfOddsTd ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:190px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.dxfOddsTd ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:190px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.dxfOddsTd ul li a b{position:absolute;left:40px;font-size:12px;font-weight:300;}
+.dxfOddsTd ul li a strong{position:absolute;right:40px;font-size:12px;font-weight:300;}
+/*竞彩篮球胜分差*/
+.Navsfc{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;overflow:hidden;}
+.Navsfc dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.Navsfc dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navsfc dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navsfc dl.three{width:127px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navsfc dl.four{width:100px;text-align:center;height:48px;display:inline;float:left;line-height:22px;}
+.Navsfc dl.five{width:73px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.Navsfc dl.six{width:582px;text-align:center;height:48px;line-height:48px;display:inline;float:left;overflow:hidden;border-right:none;}
+.Navsfc dl.six dt{height:26px;line-height:26px;font-size:12px;font-weight:900;width:587px;overflow:hidden;font-family:'';}
+.Navsfc dl.six dd{position:relative;top:-14px;left:-5px;}
+.Navsfc dl.six dd b{height:20px;line-height:20px;width:88px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:14px;font-weight:300;}
+.sfctouzhu{height:64px;margin:0 auto;text-align:center;}
+.sfctouzhu dl{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.sfctouzhu dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;padding:3px 0 0 0;}
+.sfctouzhu dl dd b{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;width:85px;height:26px;line-height:26px;}
+.sfctouzhu dl dd b a{text-decoration:none;color:#000;width:80px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.sfctouzhu dl dd b a:hover{text-decoration:none;text-decoration:none;color:#fff;width:80px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.sfctouzhu dl dd b a.active{text-decoration:none;text-decoration:none;color:#fff;width:80px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+/*竞彩篮球胜分差*/
+.NavHggs{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavHggs dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavHggs dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHggs dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHggs dl.three{width:167px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHggs dl.four{width:236px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavHggs dl.four b{font-size:12px;font-weight:300;}
+.NavHggs dl.five{width:67px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavHggs dl.six{width:200px;text-align:center;height:48px;display:inline;float:left;}
+.NavHggs dl.six dt{width:215px;font-size:12px;font-weight:900;height:26px;line-height:26px;font-family:'';}
+.NavHggs dl.six dd{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.NavHggs dl.six dd b{height:20px;line-height:20px;width:75px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.NavHggs dl.seven{width:278px;text-align:center;height:48px;display:inline;float:left;border-right:none;}
+.NavHggs dl.seven dt{width:282px;font-size:12px;font-weight:900;height:26px;line-height:26px;font-family:'';}
+.NavHggs dl.seven dt.show{background:url(../i/wenhao.jpg) no-repeat 68px 5px;position:relative;}
+.NavHggs dl.seven dt.show em{position:absolute;top:25px;left:40px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.NavHggs dl.seven dd{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.NavHggs dl.seven dd b{height:20px;line-height:20px;width:80px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.NavHggs dl.eight{width:170px;text-align:center;display:inline;float:left;}
+.NavHggs dl.nine{text-align:center;width:80px;height:48px;display:inline;float:left;border-right:none;}
+.LqOddsList{text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;width:200px;}
+#LqOddsList{text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;width:282px;}
+.LqOddsList ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.LqOddsList ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:80px;height:26px;line-height:26px;vertical-align:middle;}
+.LqOddsList ul li a{text-decoration:none;color:#000;width:75px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;}
+.LqOddsList ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:75px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.LqOddsList ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:75px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.LqOddsList ul li b{font-size:12px;font-weight:300;color:#dc0000;}
+/*竞彩篮球单关胜分差nav*/
+.NavDsfc{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavDsfc dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavDsfc dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavDsfc dl.two{width:64px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavDsfc dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavDsfc dl.four{width:73px;text-align:center;height:48px;display:inline;float:left;line-height:22px;}
+.NavDsfc dl.five{width:73px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavDsfc dl.six{width:327px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavDsfc dl.seven{width:96px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavDsfc dl.eight{text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+/*竞彩篮球单关胜分差nav*/
+.Navdgsfc{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.Navdgsfc dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.Navdgsfc dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navdgsfc dl.two{width:64px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navdgsfc dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navdgsfc dl.four{width:73px;text-align:center;height:48px;display:inline;float:left;line-height:22px;}
+.Navdgsfc dl.five{width:73px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.Navdgsfc dl.six{width:327px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navdgsfc dl.seven{width:96px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.Navdgsfc dl.eight{text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+/*竞彩篮球让分胜负、胜负nav*/
+.NavSf{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavSf dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavSf dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavSf dl.two{width:64px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavSf dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavSf dl.four{width:348px;text-align:center;height:48px;display:inline;float:left;line-height:22px;}
+.NavSf dl.five{width:348px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavSf dl.six{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+/*竞彩篮球混合过关*/
+.NavHgg{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavHgg dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavHgg dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHgg dl.two{width:65px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHgg dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavHgg dl.four{width:167px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavHgg dl.four b{font-size:12px;font-weight:300;}
+.NavHgg dl.five{width:67px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavHgg dl.six{width:123px;text-align:center;height:48px;display:inline;float:left;}
+.NavHgg dl.six dt{height:26px;line-height:26px;font-size:12px;font-weight:900;font-family:'';}
+.NavHgg dl.six dd{height:20px;line-height:20px;}
+.NavHgg dl.six dd b{height:20px;line-height:20px;width:60px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.NavHgg dl.seven{width:200px;text-align:center;height:48px;display:inline;float:left;font-family:'';}
+.NavHgg dl.seven dt{height:26px;line-height:26px;font-size:12px;font-weight:900;}
+.NavHgg dl.seven dt.rfsf{background:url(../i/wenhao.jpg) no-repeat 26px 6px;position:relative;}
+.NavHgg dl.seven dt.rfsf em{position:absolute;top:25px;left:2px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.NavHgg dl.seven dd{height:20px;line-height:20px;}
+.NavHgg dl.seven dd b{height:20px;line-height:20px;width:60px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.NavHgg dl.eight{width:200px;text-align:center;display:inline;float:left;}
+.NavHgg dl.eight dt{height:26px;line-height:26px;font-size:12px;font-weight:900;font-family:'';}
+.NavHgg dl.eight dt.dxf{background:url(../i/wenhao.jpg) no-repeat 35px 6px;position:relative;}
+.NavHgg dl.eight dt.dxf em{position:absolute;top:25px;left:2px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.NavHgg dl.eight dd{height:20px;line-height:20px;}
+.NavHgg dl.eight dd b{height:20px;line-height:20px;width:60px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:12px;font-weight:300;}
+.NavHgg dl.nine{text-align:center;width:66px;height:43px;display:inline;float:left;border-right:none;padding:5px 0 0 0;}
+.bkcross{}
+.bkcross ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bkcross ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:55px;height:26px;line-height:26px;vertical-align:middle;}
+.bkcross ul li a{text-decoration:none;color:#000;width:50px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;}
+.bkcross ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:50px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.bkcross ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:50px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.bkcross ul li b{font-size:12px;font-weight:300;color:#dc0000;}
+.bkcross ul li strong{font-size:12px;font-weight:300;color:green;}
+.bkcrosspool{display:inline-table;display:inline-block;zoom:1;*display:inline;width:99.8%;border:1px solid #e2e2e2;height:108px;padding:10px 0;}
+.bkcrosspool dl{text-align:left;display:block;position:relative;left:10px;}
+.bkcrosspool dl dt{ float:left;width:103px;height:30px;line-height:30px;text-align:center;padding:0;margin:0;}
+.bkcrosspool dl dt b{color:#000;}
+.bkcrosspool dl dt.show{width:319px;text-align:right;border:none;}
+.bkcrosspool dl dt.show a{border:none;background:none;padding:0 27px 0 0;}
+.bkcrosspool dl dt.show a:hover{color:#dc0000;}
+.bkcrosspool dl dt b{font-size:12px;font-weight:300;color:#000;}
+.bkcrosspool dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;width:100px;height:40px;line-height:40px;text-align:center;}
+.bkcrosspool dl dd a{text-decoration:none;color:#000;width:90px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;}
+.bkcrosspool dl dd a:hover{text-decoration:none;text-decoration:none;color:#fff;width:90px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.bkcrosspool dl dd a.active{text-decoration:none;text-decoration:none;color:#fff;width:90px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.bkcrosspool dl dd.show{width:300px;text-align:right;}
+.bkcrosspool dl dd.show a{border:none;background:none;}
+.bkcrosspool dl dd.show a:hover{color:#dc0000;}
+.bkcrosspool dl dd strong{color:#000;background:url(../i/Icon1.jpg) no-repeat right center;padding:0 10px 0 0;position:relative;top:-3px;}
+/*竞彩足球半全场*/
+.NavZBqc{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavZBqc dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavZBqc dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBqc dl.two{width:65px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBqc dl.three{width:62px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBqc dl.four{width:206px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZBqc dl.four b{font-size:12px;font-weight:300;}
+.NavZBqc dl.five{width:67px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZBqc dl.six{width:503px;text-align:center;height:48px;display:inline;float:left;overflow:hidden;}
+.NavZBqc dl.six dt{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZBqc dl.six dt b{display:inline-table;display:inline-block;zoom:1;*display:inline;height:22px;line-height:26px;text-align:center;font-family:'';font-size:12px;font-weight:900;width:55px;overflow:hidden;position:relative;left:-2px;}
+.NavZBqc dl.six dd b{display:inline-table;display:inline-block;zoom:1;*display:inline;height:16px;line-height:16px;text-align:center;font-family:'';font-size:12px;font-weight:300;width:55px;letter-spacing:3px;font-size:14px;font-weight:300;}
+.NavZBqc dl.seven{text-align:center;height:47px;display:inline;float:left;border-right:none;line-height:48px;width:113px;}
+.ZBqcOddsList{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.ZBqcOddsList ul{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;}
+.ZBqcOddsList ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:53px;height:26px;line-height:26px;}
+.ZBqcOddsList ul li a{text-decoration:none;color:#000;width:52px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.ZBqcOddsList ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:52px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.ZBqcOddsList ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:52px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.Kuaitou ul{float:left;padding:0 0 0 3px}
+.Kuaitou ul li{float:left;}
+.Kuaitou ul li select{float:left;width:55px;}
+.Ttime{width:58px;height:22px;line-height:22px;}
+/*竞彩足球单关比分*/
+.NavZBf{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavZBf dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavZBf dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBf dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBf dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZBf dl.four{width:206px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZBf dl.five{width:556px;text-align:center;height:48px;display:inline;float:left;border:none;}
+.NavZBf dl.five dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:556px;text-align:center;}
+.NavZBf dl.five dt b{display:inline-table;display:inline-block;zoom:1;*display:inline;height:26px;line-height:26px;text-align:center;font-family:'';font-size:14px;font-weight:900;}
+.NavZBf dl.five dd{display:inline-table;display:inline-block;zoom:1;*display:inline;width:556px;text-align:center;}
+.NavZBf dl.five dd b{display:inline-table;display:inline-block;zoom:1;*display:inline;height:20px;line-height:20px;text-align:center;font-family:'';font-size:14px;font-weight:300;letter-spacing:3px;}
+.NavZBf dl.six{width:63px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border:none;}
+.jcbifen{height:150px;overflow:hidden;display:block;margin:auto auto 5px auto;padding:5px 0 0 0;width:985px overflow:hidden;}
+.jcbifenC p{float:left;width:70px;height:48px;line-height:20px;margin:0 1px 0 0;}
+.jcbifenC p a{text-decoration:none;color:#555;width:60px;height:40px;line-height:20px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:block;overflow:hidden;margin:3px;color:#000;}
+.jcbifenC p a:hover{text-decoration:none;color:#fff;width:62px;height:40px;line-height:20px;border-top:1px solid #6F6F6F;border-left:1px solid #6F6F6F;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;display:block;overflow:hidden;}
+.jcbifenC p a.active{text-decoration:none;color:#fff;width:62px;height:40px;line-height:20px;border-top:1px solid #dc0000;border-left:1px solid #dc0000;border-right:1px solid #dc0000;border-bottom:1px solid #dc0000;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#e02312;display:block;overflow:hidden;}
+.jcbifenC p a b{font-size:12px;font-weight:900;}
+.jcbifenC p a strong{font-size:12px;font-weight:300;color:#000;}
+.jcbifenC p.qx a{width:30px;height:40px;line-height:40px;border:none;color:#0B6DB8;}
+.jcbifenC p.qx a:hover{width:30px;height:40px;line-height:40px;border:none;background:none;color:#dc0000;}
+.jcbifenC p.qx a.active{color:#0B6DB8;background:none;}
+.jcbifenC p a b{letter-spacing:2px;font-size:12px;font-weight:300;}
+.jctsbifen{text-align:left;height:36px;line-height:36px;overflow:hidden;}
+.jctsbifen dl{display:inline-table;display:inline-block;zoom:1;*display:inline;height:36px;line-height:36px;overflow:hidden;overflow:hidden;}
+.jctsbifen dl dt{float:left;text-align:center;border-right:1px solid #fff;height:36px;line-height:36px;overflow:hidden;}
+.jctsbifen dl dt.b1{width:42px;}
+.jctsbifen dl dt.b1 a{background:url(../i/jianshao.jpg) no-repeat left center;padding:0 0 0 15px;}
+.jctsbifen dl dt.b1 a:hover{background:url(../i/jianshao_hover.jpg) no-repeat left center;padding:0 0 0 15px;}
+.jctsbifen dl dt.b2{width:126px;}
+.jctsbifen dl dt.b6{}
+.jctsbifen dl dt.b6 b{font-size:12px;font-weight:300;color:#fff;width:66px;height:36px;line-height:36px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.jctsbifen dl dt.b5 b{font-size:12px;font-weight:300;}
+.jctsbifen dl dt.b3{width:259px;}
+.jctsbifen dl dt.b3 b{font-size:12px;font-weight:300;}
+.jctsbifen dl dt.b3 strong{font-size:12px;font-weight:300;}
+.jctsbifen dl dt.b3 u{padding:0 5px;text-decoration:none;}
+.jctsbifen dl dt.b4{width:490px;border:none;}
+.jctsbifen dl dt.b4 a{position:relative;left:5px;}
+/*竞彩足球混合过关*/
+.NavZHg{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavZHg dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavZHg dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZHg dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZHg dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZHg dl.four{width:206px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZHg dl.four b{font-size:12px;font-weight:300;}
+.NavZHg dl.five{width:67px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZHg dl.six{width:220px;text-align:center;height:48px;display:inline;float:left;}
+.NavZHg dl.six dt{height:26px;line-height:26px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:220px;font-size:12px;font-weight:900;font-family:'';}
+.NavZHg dl.six dt b{font-size:12px;font-weight:900;}
+.NavZHg dl.six dd{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZHg dl.six dd b{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:70px;font-size:12px;font-weight:300;}
+.NavZHg dl.seven{width:260px;text-align:center;height:48px;display:inline;float:left;}
+.NavZHg dl.seven dt{height:26px;line-height:26px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:260px;font-size:12px;font-weight:900;font-family:'';}
+.NavZHg dl.seven dt.show{background:url(../i/wenhao.jpg) no-repeat 73px 5px;position:relative;}
+.NavZHg dl.seven dt.show b{font-size:13px;font-weight:900;}
+.NavZHg dl.seven dt.show em{position:absolute;top:25px;left:50px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.NavZHg dl.seven dd{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZHg dl.seven dd b{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:70px;font-size:12px;font-weight:300;}
+.NavZHg dl.seven dd strong{height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;width:40px;font-size:12px;font-weight:300;}
+.NavZHg dl.eight{width:70px;text-align:center;display:inline;float:left;border-right:none;line-height:48px;}
+.jchOddList{text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jchOddList ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jchOddList ul.first{}
+.jchOddList ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:70px;height:26px;line-height:26px;vertical-align:middle;}
+.jchOddList ul li.line{width:30px;padding:0 0 0 5px;color:#dc0000;}
+.jchOddList ul li a{text-decoration:none;color:#000;width:65px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;}
+.jchOddList ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:65px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.jchOddList ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:65px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.fbcrosspool{height:390px;padding:3px 0 0 0;overflow:hidden;}
+.fbcrosspool dl{width:100%;text-align:left;padding:0;margin:0;}
+.fbcrosspool dl.zjq{width:100%;text-align:left;overflow:hidden;padding:10px 0 0 0;}
+.fbcrosspool dl.zjq dt{background:#f9f9f9;}
+.fbcrosspool dl.zjq dt b{color:#000;font-family:'微软雅黑';font-size:14px;font-weight:300;padding:0 0 0 10px;}
+.fbcrosspool dl.zjq dt span{padding:0 0 0 5px;font-size:12px;color:#999;}
+.fbcrosspool dl.zjq dd{display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;padding:10px 0 10px 10px;}
+.fbcrosspool dl.zjq dd p a b{foont-size:12px;font-weight:300;width:57px;height:20px;line-height:20px;text-align:center;}
+.fbcrosspool dl.zjq dd p{width:71px;height:40px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
+.fbcrosspool dl.zjq dd p a{text-decoration:none;color:#000;width:60px;height:40px;line-height:20px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;text-align:center;}
+.fbcrosspool dl.zjq dd p a:hover{text-decoration:none;text-decoration:none;color:#fff;width:57px;height:40px;line-height:20px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.fbcrosspool dl.zjq dd p a.active{text-decoration:none;text-decoration:none;color:#fff;width:57px;height:40px;line-height:20px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.fbcrosspool dl.bf{width:100%;text-align:left;padding:5px 0 0 0;overflow:hidden;height:190px;}
+.fbcrosspool dl.bf dt{ background:#f9f9f9;}
+.fbcrosspool dl.bf dt b{color:#000;font-family:'微软雅黑';font-size:14px;font-weight:300;padding:0 0 0 10px;}
+.fbcrosspool dl.bf dt span{ padding:0 0 0 5px;font-size:12px;color:#999;}
+.fbcrosspool dl.bf dd{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:10px 0 10px 5px;}
+.fbcrosspool dl.bf dd p.cloes{position:absolute;right:0;height:40px;line-height:40px;}
+.fbcrosspool dl.bf dd p.cloes a{border:none;background:none;color:#0B6DB8;}
+.fbcrosspool dl.bf dd p.cloes a:hover{border:none;background:none;color:#0B6DB8;}
+.fbcrosspool dl.bf dd p a b{font-size:12px;font-weight:300;width:57px;height:20px;line-height:20px;text-align:center;letter-spacing:3px;}
+.fbcrosspool dl.bf dd p{width:71px;height:50px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
+.fbcrosspool dl.bf dd p a{text-decoration:none;color:#000;width:60px;height:40px;line-height:20px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;text-align:center;}
+.fbcrosspool dl.bf dd p a:hover{text-decoration:none;text-decoration:none;color:#fff;width:58px;height:40px;line-height:20px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.fbcrosspool dl.bf dd p a.active{text-decoration:none;text-decoration:none;color:#fff;width:58px;height:40px;line-height:20px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.fbcrosspool dl.bqc{width:100%;text-align:left;overflow:hidden;margin:3px auto auto auto;padding:2px 0 0 0;}
+.fbcrosspool dl.bqc dt{background:#f9f9f9;}
+.fbcrosspool dl.bqc dt b{color:#000;font-family:'微软雅黑';font-size:14px;font-weight:300;padding:0 0 0 10px;}
+.fbcrosspool dl.bqc dt span{padding:0 0 0 5px;font-size:12px;color:#999;}
+.fbcrosspool dl.bqc dd{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:10px 0 0 10px;}
+.fbcrosspool dl.bqc dd p a b{font-size:12px;font-weight:300;width:57px;height:20px;line-height:20px;text-align:center;}
+.fbcrosspool dl.bqc dd p{width:71px;height:40px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;}
+.fbcrosspool dl.bqc dd p a{text-decoration:none;color:#000;width:60px;height:40px;line-height:20px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;text-align:center;}
+.fbcrosspool dl.bqc dd p a:hover{text-decoration:none;text-decoration:none;color:#fff;width:57px;height:40px;line-height:20px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.fbcrosspool dl.bqc dd p a.active{text-decoration:none;text-decoration:none;color:#fff;width:57px;height:40px;line-height:20px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+.fbcrosspool dl.bqc dd p.qk{position:absolute;right:-328px;}
+.fbcrosspool dl.bqc dd p.qk a{border:none;background:none;color:#0B6DB8;}
+/*竞彩足球胜平负、让球胜平负*/
+.NavZpf{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavZpf dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavZpf dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZpf dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZpf dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZpf dl.four{width:206px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZpf dl.four b{font-size:12px;font-weight:300;}
+.NavZpf dl.five{width:67px;text-align:center;height:48px;float:left;line-height:48px;}
+.NavZpf dl.six{width:247px;text-align:center;height:48px;float:left;}
+.NavZpf dl.six dt{display:inline-table;display:inline-block;zoom:1;*display:inline;height:26px;line-height:26px;text-align:center;width:247px;font-family:'';font-size:12px;font-weight:900;}
+.NavZpf dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZpf dl.six dd b{width:80px;height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.NavZpf dl.seven{width:305px;text-align:center;height:48px;float:left;border-right:none;}
+.NavZpf dl.seven dt{display:inline-table;display:inline-block;zoom:1;*display:inline;height:26px;line-height:26px;text-align:center;width:277px;font-family:'';font-size:12px;font-weight:900;}
+.NavZpf dl.seven dt.show{background:url(../i/wenhao.jpg) no-repeat 80px 5px;position:relative;}
+.NavZpf dl.seven dt.show em{position:absolute;top:25px;left:50px;display:none;z-index:999;color:#000;font-style:normal;text-align:left;width:195px;}
+.NavZpf dl.seven dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZpf dl.seven dd b{width:80px;height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.NavZpf dl.seven dd strong{width:30px;height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;font-weight:300;}
+.OddsList{text-align:center;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.OddsList ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.OddsList ul.first{}
+.OddsList ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:78px;height:26px;line-height:26px;vertical-align:middle;}
+.OddsList ul li.line{width:30px;padding:0 0 0 5px;color:#dc0000;}
+.OddsList ul li a{text-decoration:none;color:#000;width:68px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;top:-2px;}
+.OddsList ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:68px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.OddsList ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:68px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+/*竞彩足球总进球*/
+.NavZJq{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.NavZJq dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.NavZJq dl.one{width:40px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZJq dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZJq dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.NavZJq dl.four{width:205px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZJq dl.four b{font-size:12px;font-weight:300;}
+.NavZJq dl.five{width:76px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZJq dl.six{width:553px;text-align:center;height:48px;display:inline;float:left;border-right:none;}
+.NavZJq dl.six dt{display:inline-table;display:inline-block;zoom:1;*display:inline;height:26px;line-height:26px;text-align:center;width:247px;font-family:'';font-size:12px;font-weight:900;}
+.NavZJq dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.NavZJq dl.six dd b{width:67px;height:20px;line-height:20px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:relative;left:-2px;font-size:12px;font-weight:300;}
+.NavZJq dl.seven{width:53px;text-align:center;height:48px;display:inline;float:left;line-height:48px;}
+.NavZJq dl.eight{width:55px;text-align:center;display:inline;float:left;border-right:none;line-height:48px;}
+.zjqOddsList{text-align:center;width:545px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zjqOddsList ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zjqOddsList ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;height:26px;line-height:26px;width:65px;}
+.zjqOddsList ul li a{text-decoration:none;color:#000;width:60px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zjqOddsList ul li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:60px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;}
+.zjqOddsList ul li a.active{text-decoration:none;text-decoration:none;color:#fff;width:60px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;}
+/*确认投注*/
+.betbox{border-top:1px solid #aaa;bottom:0;left:0;margin:0 auto;text-align:center;height:85px;background:#fff;width:100%;color:#000;padding:7px 0 7px 0;position:relative;}
+.betbox table{width:1000px;margin:0 auto;text-align:left;padding:0;}
+.BetsD{width:70px;position:relative;top:-10px;}
+.BetsD em{ position:absolute;top:30px;}
+.BetCheck{width:25px;display:none;}
+.BetCheckC{width:770px;padding:0 0 0 5px;position:relative;border-left:1px dotted #ccc;}
+.BetCheckC dl{height:70px;}
+.BetCheckC dl dt{}
+.BetCheckC dl dd{}
+.BetCheckC dl dt ul{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 0 7px 0;}
+.BetCheckC dl dt ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+#options{}
+#options span{color:#000;}
+#options input{position:relative;top:2px;left:-2px;}
+.BetCheckT{width:140px;overflow:hidden;text-align:right;}
+.BetCheckT input{background:#B70408;border:none;cursor:pointer;font-size:18px;font-weight:900;font-family:'微软雅黑';color:#fff;letter-spacing:2px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;text-align:center;margin:0;width:140px;heighr:40px;line-height:40px;cursor:pointer;}
+.BetCheckT input:hover{background:#ec0000;}
+.shedan{text-align:left;z-index:999999999999999999;}
+.shedan strong{color:#000;font-size:16px;font-weight:300;}
+.shedan strong a{font-size:12px;font-weight:300;color:#000;font-family:'';display:inline-table;display:inline-block;zoom:1;*display:inline;height:80px;line-height:90px;}
+.shedan strong a:hover{}
+.shedan strong span{color:#dc0000;padding:0 5px;font-size:24px;font-weight:900;position:relative;top:4px;}
+.shedan p{width:500px;height:300px;background:#fff;text-align:left;position:absolute;bottom:35px;left:-19px;z-index:999999999;border:1px solid #aaa;-moz-box-shadow:0 0 2px #aaa;-webkit-box-shadow:0 0 5px#aaa;box-shadow:0 0 2px #aaa;}
+.Flaotbox{background:#fff;text-align:left;position:absolute;bottom:75px;left:-3px;z-index:99;color:#000;margin:0 auto;text-align:left;display:none;border:1px solid #ccc;}
+.flaotboxtop{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:left;cursor:pointer;display:block;min-width:400px;padding:0 10px;}
+.flaotboxtop ul{text-align:left;cursor:pointer;display:block;min-width:400px;margin:0 10px;height:36px;line-height:36px;font-weight:900;}
+.flaotboxtop ul li{float:left;height:36px;line-height:36px;text-align:left;}
+.flaotboxtop ul li.cc{width:190px;text-align:center;}
+.flaotboxtop ul li.bianhao{ padding:0 10px 0 0;}
+.flaotboxtop ul li b{display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 5px;color:#fff;background:#dc0000;height:20px;line-height:20px;padding:0 8px;}
+.flaotboxtop ul li.zhu{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:left;overflow:hidden;margin:0 5px;}
+.flaotboxtop ul li.ke{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:left;overflow:hidden;margin:0 5px;}
+.flaotboxtop ul li.clearSel{ position:relative;right:0;float:right;}
+.flaotboxtop ul li.clearSel a{color:#dc0000; font-weight:900;}
+.FloatC{overflow:hidden;position:relative;}
+.FloatC em{background:url(../i/bg_bd.png) no-repeat left bottom;display:inline-table;display:inline-block;zoom:1;*display:inline;position:absolute;left:0;bottom:-5px;}
+.FloatC ul{text-align:left;cursor:pointer;display:block;min-width:400px;margin:0 10px;border-top:1px solid #ccc;height:36px;line-height:36px;}
+.FloatC ul:hover{ background:#FFFFCC;}
+.FloatC ul li{ float:left;height:36px;line-height:36px;text-align:left;}
+.FloatC ul li.cc{width:190px;text-align:center;overflow:hidden;}
+.FloatC ul li.bianhao{ }
+.FloatC ul li b{margin:0 2px;color:#fff;background:#dc0000;height:20px;line-height:20px;padding:0 5px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.FloatC ul li.zhu{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:left;overflow:hidden; margin:0 5px;}
+.FloatC ul li.ke{display:inline-table;display:inline-block;zoom:1;*display:inline;width:60px;text-align:left;overflow:hidden;margin:0 5px;}
+.FloatC ul li.Clear{ position:relative;right:0;float:right;}
+.danX{clear:both;border-top:1px solid #ccc;}
+.danX ul{border:none;padding:5px 0 10px 13px;position:relative;}
+.danX ul:hover{background:none;}
+.danX ul li{float:left;width:auto;padding:0 5px 0 0;border:none;}
+.danX ul li.hidden{position:absolute;left:455px;width:30px;color:#0C6CB8;}
+.danX ul li.hidden a{text-decoration:none;color:#0C6CB8;}
+.danX ul li.hidden a:hover{text-decoration:underline;}
+.ChuanMore{padding:0;width:450px;height:60px;text-align:left;}
+.ggcheck{float:left;padding:6px 0 0 0;}
+.ggcheck input{position:relative;top:2px;}
+.ggcheck b{font-size:12px;font-weight:900;font-family:'';}
+.ggcheck em{padding:0 13px;font-style:normal;}
+.cMore{position:relative;text-align:left;}
+.cMore a{text-decoration:none;color:#0F71B8;height:30px;line-height:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.cMore a:hover{text-decoration:none;color:red;font-weight:900;}
+.cMore p{width:330px;height:auto;border:1px solid #999;background:#fff;position:absolute;bottom:25px;left:0;padding:5px 0 10px 15px;overflow:hidden;display:none;-moz-box-shadow:3px 3px rgba(0,0,0,0.1);-webkit-box-shadow:3px 3px rgba(0,0,0,0.1);box-shadow:3px 3px rgba(0,0,0,0.1);background:#fff;z-index:99999999999999;}
+.cMore p strong{width:67px;height:2px;line-height:2px;background:red;position:absolute;bottom:-2px;left:100px;}
+.cMore p h1{font-size:12px;font-weight:300;height:24px;line-height:24px;overflow:hidden;}
+.cMore p b{font-size:16px;font-weight:900;width:315px;display:block;height:28px;line-height:28px;border-bottom:1px solid #ccc;padding:0;color:#000;font-family:'微软雅黑';position:relative;margin:auto auto 15px auto;left:-10px;padding:5px 0 10px 0;}
+.cMore p b u{text-decoration:none;position:absolute;right:-14px;}
+.cMore p b u a{text-decoration:none;color:#0F71B8;height:26px;line-height:26px;border:none;background:none;font-size:12px;font-weight:300;}
+.cMore p b u a:hover{text-decoration:none;color:#0F71B8;height:26px;line-height:26px;border:none;background:none;}
+.cMore p a{border:1px solid #ccc;margin:0 5px 5px 0;clear:both;color:#333;display:inline;display:inline-table;width:46px;height:24px;line-height:24px;text-align:center;}
+.cMore p a:hover{border:1px solid #E10C08;background:url(../i/T1_pgo.gif) no-repeat right bottom;color:#333;font-weight:300;}
+.cMore p a.active{border:1px solid #E10C08;height:30px;line-height:30px;background:url(../i/T1_pgo.gif) no-repeat right bottom;color:#333;}
+.Tbeishu{clear:both;position:relative;width:593px;font-size:12px;}
+.Tbeishu ol{float:left;}
+.Tbeishu ol li{float:left;padding:0 5px 0 0;}
+.Tbeishu ol li.show{float:left;padding:5px 5px 0 0;}
+.Tbeishu ol li.first{float:left;padding:7px 10px 0 5px;}
+.Tbeishu ol li.first em{ font-style:normal;position:relative;top:-1px;}
+.Tbeishu ol li.first b{ position:relative;top:-1px;}
+.Tbeishu ol li.first u{position:relative;top:-2px;text-decoration:none;}
+.Tbeishu ol li.yh{}
+.Tbeishu ol li.yh a{border:none;width:80px;background:none;font-size:12px;font-weight:300;}
+.Tbeishu ol li.yh a:hover{border:none;width:80px;background:none;}
+.Tbeishu ol li.lx{ padding:5px 0 0 0;}
+.Tbeishu ol li.lx em{ font-style:normal;}
+.Tbeishu ol li#mx{cursor:pointer;color:#000;padding:5px 0 0 10px;}
+.Tbeishu ol li#mx:hover{color:#000;}
+.Tbeishu ol li.clearSel{}
+.Tbeishu ol li.clearSel a{border:none;width:50px;height:28px;line-height:28px;font-size:12px;font-weight:300;background:none;color:#000;}
+.Tbeishu ol li.clearSel a:hover{ background:none;color:#000;}
+.Tbeishu ol li.text input{width:60px;height:26px;line-height:26px;text-align:center;border:1px solid #aaa;}
+.Tbeishu ol li a{border:1px solid #aaa;display:block;text-align:center;height:28px;line-height:28px;width:28px;font-size:14px;font-weight:900;background:#f1f1f1;color:#555;}
+.Tbeishu ol li a:hover{background:#696969;color:#fff;}
+.Tbeishu ol li b{font-size:14px;font-weight:300;color:#dc0000;}
+.Tbeishu ol li span{font-size:14px;font-weight:300;color:#dc0000;}
+.Tbeishu ol li em{font-style:normal;font-size:14px;font-weight:300;color:#dc0000;}
+.Tbeishu ol li.mx strong{position:absolute;bottom:20px;left:-368px;border:1px solid #bbb;width:680px;padding:10px;z-index:99;background:#fff;-moz-box-shadow:0 0 2px #aaa;-webkit-box-shadow:0 0 5px#aaa;box-shadow:0 0 2px #aaa;display:none;}
+.Tbeishu ol li.mx strong h1{font-size:16px;font-weight:900;font-family:'微软雅黑';border-bottom:1px solid #aaa;position:relative;padding:0 0 10px 0;margin:0 0 10px 0;}
+.Tbeishu ol li.mx strong h1 i{position:absolute;right:0;font-style:normal;text-decoration:none;font-size:12px;font-weight:900;}
+.Tbeishu ol li.mx strong h1 i a{text-decoration:none;font-size:12px;font-weight:300;color:#dc0000;}
+.Tbeishu ol li.mx strong h1 i a:hover{text-decoration:none;}
+.Tbeishu ol li.mx strong p{height:26px;line-height:26px;font-size:12px;font-weight:300;color:#000;border-bottom:1px dashed #aaa;}
+.Tbeishu ol li.mx em{font-size:12px;font-weight:300;color:#000;font-style:normal;}
+.Tbeishu ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.Tbeishu ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px 0 0;height:30px;line-height:30px;}
+.Tbeishu ul li.jf b{font-size:26px;color:#dc0000;font-weight:300;padding:0 5px;position:relative;top:4px;}
+.Tbeishu ul li.text input{width:50px;height:28px;line-height:28px;text-align:center;border:1px solid #bbb;}
+.Tbeishu ul li a{border:1px solid #aaa;display:block;text-align:center;height:30px;line-height:30px;width:30px;font-size:14px;font-weight:900;background:#f1f1f1;color:#555;}
+.jftouzhutips{font-size:12px;padding:14px 0 0 0;color:#565656;}
+.jftouzhutips span{color:#dc0000;position:relative;top:3px;padding:0 5px 0 0;}
+.minusbtn{width:20px;height:20px;line-height:10px;text-align:center;padding:2px 10px;border:1px solid #ccc;background:#f9f9f9;font-size:14px;font-weight:900;color:#000;}
+.plusbtn{width:20px;height:20px;line-height:10px;text-align:center;padding:2px 10px;border:1px solid #ccc;background:#f9f9f9;font-size:14px;font-weight:900;color:#000;}
+.font_red{color:red;overflow:hidden;}
+.boldtxt{font-size:14px;font-weight:300;text-align:center;}
+/*投注页面快捷导样式*/
+.Kjnav{width:1000px;background:#fff;margin:0;zoom:1;height:auto;z-index:9999999;font-family:'';}
+.Kjnav_scroll{position:fixed;width:100%;margin:0;left:0;top:0;z-index:9999999;}
+.Kjnav:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.Kjnav2{width:1000px;background:#fff;margin:20px auto 0;border:solid 1px #ccc;zoom:1;color:#D74452;height:130px;}
+.Kjnav_scroll2{position:fixed;width:100%;margin:0;left:0;bottom:0;}
+.Kjnav:after2{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.Kjnav u{text-decoration:none;}
+/* css三角形 */
+.arrow,.arrow s {position:relative;display:block;font-size:0;line-height:0;width:0;height:0;border-color:transparent;border-style:dashed;border-width:5px;}
+.arrowR,.arrowR s{border-left-color:#ccc;border-left-style:solid;}
+.arrowR s{border-left-color:#fff;position:absolute;left:-7px;top:-5px;}
+.arrowR:hover{border-left-color:#f60;}
+.arrowL,.arrowL s{border-right-color:#ccc;border-right-style:solid;}
+.arrowL s{border-right-color:#fff;position:absolute;right:-7px;top:-5px;}
+.arrowL:hover{border-right-color:#f60;}
+.arrowT,.arrowT s{border-bottom-color:#ccc;border-bottom-style:solid;}
+.arrowT s{border-bottom-color:#fff;position:absolute;left:-5px;top:-3px;}
+.arrowT:hover{border-bottom-color:#f60;}
+.arrowB,.arrowB s{border-top-color:#ccc;border-top-style:solid;}
+.arrowB s{border-top-color:#fff;position:absolute;left:-5px;bottom:-3px;}
+.arrowB:hover{border-top-color:#f60;}
+/* css圆形 */
+.circle{line-height:100%;overflow:hidden;font-family:Tahoma,Helvetica;font-size:18px;color:#ccc;}
+.circle:hover{color:#f60;}
+/* 提示盒子 */
+.tipBox{}
+.tipBox .hd{height:5px;position:relative;font-size:12px;font-weight:300;}
+.tipBox .hd .arrow{position:absolute;top:-5px;left:28px;}
+.tipBox .hd .arrow s{top:-4px;}
+.tipBox .bd{border:1px solid #ccc;padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;font-size:12px;font-weight:300;line-height:22px;}
+.tipBoxA .arrow s{border-bottom-color:#fff;}
+.tipBoxA .bd{background:#fff;font-size:12px;font-weight:300;}
+/*th td宽度*/
+.d1{width:38px;height:36px;line-height:36px;overflow:hidden;text-align:left;}
+.d1 a{background:url(../i/jianshao.jpg) no-repeat left center;padding:0 0 0 15px;}
+.d1 a:hover{background:url(../i/jianshao_hover.jpg) no-repeat left center;padding:0 0 0 15px;}
+.d2{width:67px;text-align:center;}
+.d3{width:126px;}
+.d4{width:93px;}
+.d5{width:461px;}
+.d6{width:206px;}
+.d7{width:166px;}
+.d8{width:170px;}
+.d9{width:100px;}
+.d10{width:100px;position:relative;}
+.d10 span{position:absolute;top:0;left:0;width:30px;height:30px;background:url(../i/single.gif) no-repeat left center;display:block;text-indent:-50000px;}
+.d10 b{font-size:12px;font-weight:300;font-family:'';height:30px;line-height:30px;overflow:hidden;display:inline-table;display:inline;display:block;padding:0 0 0 15px;}
+.d10 b a{font-size:12px;text-decoration:underline;}
+.d10 b a:hover{text-decoration:none;}
+.d12{width:67px;overflow:hidden;height:36px;line-height:36px;}
+.d13{width:73px;}
+.d13 b{font-size:12px;font-weight:300;font-family:'';height:30px;line-height:30px;overflow:hidden;display:inline-table;display:inline;display:block;letter-spacing:3px;}
+.d11{width:200px;}
+.ssName{width:66px;height:36px;line-height:36px;overflow:hidden;display:block;padding:0;margin:0;}
+.tbwidth{border:none;width:993px;}
+.tdnone{padding:0;margin:0;border:none;height:height:26px;line-height:26px;overflow:hidden;background:red;}
+select{margin: 0;padding: 0;outline:none;border:1px solid #fff;width:100px;overflow:hidden;} 
+.TabWin{border:none;width:996px;padding:0;margin:0;overflow:hidden;}
+#TabWin{border:none;width:996px;padding:0;margin:0;overflow:hidden;}
+.tdwin{padding:0;margin:0;}
+#tdwin{padding:0;margin:0;}
+/*投注明细*/
+.black_overlay{display:none;background-color: #555;width: 100%;height: 100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:       e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+
+
+.white_content{display:none;left:0%;/*FF IE7*/
+top:6%;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:       e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/}
+
+
+
+
+/* 详细 */
+#selDetailDiv{border:1px solid #ccc;width:800px;padding:0 0 30px 0;margin:0 auto;background:#fff;padding:10px 10px 30px 10px;height:500px;overflow-x:hidden;overflow-y:auto;vertical-align:middle;text-align:left;}
+#selDetailDiv h1{font-size:18px;font-weight:900;font-family:'微软雅黑';border-bottom:1px solid #ccc;position:relative;padding:0 0 10px 30px;margin:0 0 10px 0;background:url(../i/jsj.jpg) no-repeat 1px 2px;}
+#selDetailDiv h1 i{position:absolute;right:0;font-style:normal;text-decoration:none;font-size:12px;font-weight:900;}
+#selDetailDiv h1 i a{text-decoration:none;font-size:12px;font-weight:300;color:#dc0000;font-size:14px;}
+#selDetailDiv h1 i a:hover{text-decoration:none;}
+#selDetailDiv p{font-size:12px;font-weight:300;color:#000;}
+.overlay{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;border:1px solid #FFFF66;padding:2px 5px 4px 5px;background:#FFFF99;}
+.overlay span{color:red;padding:0 5px 0 0;position:relative;top:4px;}
+.Mingxibiao{padding:10px 0;}
+.Mingxibiao h2{font-size:16px;font-weight:900;font-family:'微软雅黑';background:url(../i/sign_add.png) no-repeat left center;padding:0 0 0 25px;height:24px;line-height:24px;}
+.Mingxibiao em{font-style:normal;font-size:12px;font-weight:300;padding:0 0 0 50px;}
+.Mingxibiao em span{font-size:12px;color:#dc0000;padding:0 10px;}
+.Mingxibiao em b{font-size:14px;font-weight:300;color:#22A641;padding:0 10px;}
+.XinagQingL{width:200px;margin:0 auto;text-align:center;}
+.XinagQingL b{width:80px;height:28px;line-height:28px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;background:#fff;margin:0 auto;table-layout:auto;display:block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline-block;zoom:1;*display:inline;vertical-align:top;margin:3px 0;font-size:12px;font-weight:300;overflow:hidden;}
+.XinagQingL span{padding:0 5px;line-height:36px;}
+.XinagQingL strong{width:80px;height:28px;line-height:28px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;background:#fff;margin:0 auto;table-layout:auto;display:block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:inline-block;zoom:1;*display:inline;vertical-align:top;margin:3px 0;font-size:12px;font-weight:300;overflow:hidden;}
+.Dname{width:230px;height:22px;line-height:22px;position:relative;margin:0 auto;}
+.Dname b{width:100px;height:22px;line-height:22px;display:inline-table;display:inline-block;zoom:1;*display:inline;overflow:hidden;font-weight:300;position:absolute;left:0;text-align:right;}
+.Dname strong{width:100px;height:22px;line-height:22px;display:inline-table;display:inline-block;zoom:1;*display:inline;overflow:hidden;font-weight:300;position:absolute;left:120px;text-align:left;}
+.Dname span{width:20px;height:22px;line-height:22px;display:inline-table;display:inline-block;zoom:1;*display:inline;position:absolute;left:100px;}
+/**/
+.hacker{width:800px;padding:0;margin:0;text-align:center;font-size:12px;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.hacker tr:hover{background:#FFE3C1;}
+.hacker td{height:28px;line-height:28px;padding:0;margin:0;border-bottom:1px solid #e2e2e2;padding:0 3px;border-right:1px solid #e2e2e2;}
+.hacker td.show{border-right:1px solid #fff;}
+.hacker th{background:#545454;font-weight:900;padding:0;margin:0;color:#fff;font-size:12px;font-weight:300;height:22px;border-right:1px solid #fff;}
+.hacker th.show{border-right:1px solid #545454;}
+.hacker table{margin:0 auto;width:960px;text-align:center;}
+.hacker table tr th{line-height:22px;background:#545454;color:#fff;text-align:center;font-size:12px;font-weight:300;height:24px;}
+.zshu{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zshu p{display:inline-table;display:inline-block;zoom:1;*display:inline;width:40px;height:24px;line-height:24px;text-align:center;color:#fff;}
+.jjC{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.jjC p strong{display:inline-table;display:inline-block;zoom:1;*display:inline;width:40px;height:24px;line-height:24px;text-align:center;padding:0;margin:0;font-size:12px;font-weight:300;}
+.jjFw{}
+.jjFw b{font-size:12px;font-weight:300;display:block;position:relative;top:3px;}
+.jjFw ul{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;}
+.jjFw ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;height:24px;line-height:24px;text-align:center;width:60px;text-align:center;padding:0;margin:0;}
+.jjFw ul li span{font-size:12px;font-weight:300;}
+.tdcc{border-bottom:none;border-right:none;text-align:right;}
+.tdcc span{color:#dc0000;padding:0 15px 0 0;}
+.MXLisT{}
+.MXLisT ul{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0;margin:0;}
+.MXLisT ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:150px;height:24px;line-height:24px;padding:0;margin:0;text-align:left;}
+.MXLisT ul li.show{text-align:right;}
+.MXLisT ul li a{text-decoration:none;color:#dc0000;padding:0 0 0 5px;}
+.MXLisT ul li a:hover{text-decoration:none;color:#000;}
+.MXLisT ul li b{font-size:12px;font-weight:300;display:inline-table;display:inline-block;zoom:1;*display:inline;height:24px;line-height:24px;width:50px;text-align:center;}
+.MXLisT ul li strong{font-size:12px;font-weight:300;display:inline-table;display:inline-block;zoom:1;*display:inline;height:24px;line-height:24px;width:50px;text-align:center;}
+.jjmxi p{height:24px;line-height:24px;}
+.jjmxi p b{font-size:12px;color:#000;padding:0 0 0 5px;}
+.Jhj{text-align:right;padding:10px;}
+.Jhj b{font-size:14px;font-weight:900;color:#dc0000;}
+.borderWeight{border-right:1px solid #fff;}
+.borderBot{border-bottom:1px solid #fff;}
+.tH1{border-right:1px solid #545454;}
+
+/*----------北京单场----------*/
+.dc1{width:41px;height:36px;line-height:36px;overflow:hidden;text-align:left;overflow:hidden;}
+.dc1 a{background:url(../i/jianshao.jpg) no-repeat left center;padding:0 0 0 15px;}
+.dc1 a:hover{background:url(../i/jianshao_hover.jpg) no-repeat left center;padding:0 0 0 15px;}
+.dc2{width:66px;text-align:center;}
+.dc3{width:66px;text-align:center;}
+.dc4{width:126px;text-align:center;}
+.dc5{width:210px;}
+.dc6{}
+.dc7{width:73px;}
+.dc8{width:213px;}
+.dc9{width:481px;}
+.dc11{width:67px;text-align:center;overflow:hidden;}
+.dc12{width:424px;}
+.dc13{width:119px;}
+.dc14{width:73px;}
+.dc15{width:431px;}
+.ouYaxi{}
+.ouYaxi a{text-decoration:none;padding:0 3px;}
+.ouYaxi a:hover{text-decoration:underline;}
+/*botomTips*/
+.botomTips{background:#fff;clear:both;padding:11px 0;border-top:1px solid #999;}
+.botomTipsC{width:1000px;margin:0 auto;text-align:left;line-height:24px;}
+.botomTipsC h1{font-size:18px;font-family:'微软雅黑';font-weight:300;padding:0 0 0 20px;background:url(../i/thbottomTips.png) no-repeat left center;height:40px;line-height:40px;color:#000;}
+.botomTipsC p{text-indent:22px;color:#666;}
+.botomTipsC p span{color:#dc0000;padding:0 18px 0 0;}
+.botomTipsC p a{}
+.botomTipsC p a:hover{text-decoration:underline;color:#dc0000;}
+/*北京单场胜负过关nav*/
+.bjdc_Nav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.bjdc_Nav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.bjdc_Nav dl.one{width:43px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_Nav dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_Nav dl.three{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_Nav dl.four{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_Nav dl.five{width:210px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_Nav dl.five b{}
+.bjdc_Nav dl.five span{padding:0 10px;}
+.bjdc_Nav dl.five strong{}
+.bjdc_Nav dl.six{width:475px;text-align:center;height:48px;display:inline;float:left;border-right:none;}
+.bjdc_Nav dl.six dt{font-size:14px;font-weight:900;line-height:26px;}
+.bjdc_Nav dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_Nav dl.six dd.show{width:95px;font-size:12px;padding:0 20px;}
+.bjdc_Nav dl.six dd.zhufu{width:95px;font-size:12px;padding:0 20px;}
+.bjdc_Nav dl.six dd.rq{width:95px;font-size:12px;padding:0 20px;}
+.bjdc_Nav dl.seven{width:68px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+/*北京单场比分及竞足*/
+.bjdc_bfNav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.bjdc_bfNav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.bjdc_bfNav dl.one{text-align:center;width:44px;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bfNav dl.two{text-align:center;width:66px;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bfNav dl.three{text-align:center;width:126px;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bfNav dl.four{text-align:center;width:259px;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bfNav dl.four b{font-size:12px;font-weight:300;}
+.bjdc_bfNav dl.five{text-align:center;width:495px;height:48px;line-height:48px;display:inline;float:left;border-right:none;font-size:12px;font-weight:900;font-family:'';}
+.bjdc_bfNav dl.five b{font-size:14px;font-weight:900;}
+.bjdc_bfNav dl.five span{padding:0 10px;}
+.bjdc_bfNav dl.five strong{}
+.bjdc_bfNav dl.six{text-align:center;height:48px;display:inline;float:left;border-right:none;}
+.bjdc_bfNav dl.six dt{font-size:14px;font-weight:900;line-height:26px;}
+.bjdc_bfNav dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_bfNav dl.six dd.show{width:100px;font-size:12px;}
+.bjdc_bfNav dl.six dd.rq{width:30px;font-size:12px;}
+.bjdc_bfNav dl.six dd.zj{width:51px;text-align:center;font-size:12px;overflow:hidden;height:22px;line-height:22px;font-size:14px;}
+.bjdc_bfNav dl.six dd.shangxiads{width:98px;text-align:center;font-size:12px;overflow:hidden;height:22px;line-height:22px;font-size:14px;margin:0 10px;}
+.teshubifen{text-align:left;height:36px;line-height:36px;overflow:hidden;}
+.teshubifen dl{display:inline-table;display:inline-block;zoom:1;*display:inline;height:36px;line-height:36px;overflow:hidden;overflow:hidden;}
+.teshubifen dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;border-right:1px solid #fff;height:36px;line-height:36px;overflow:hidden;}
+.teshubifen dl dt.b1{width:42px;}
+.teshubifen dl dt.b1 a{background:url(../i/jianshao.jpg) no-repeat left center;padding:0 0 0 15px;}
+.teshubifen dl dt.b1 a:hover{background:url(../i/jianshao_hover.jpg) no-repeat left center;padding:0 0 0 15px;}
+.teshubifen dl dt.b2{width:126px;}
+.teshubifen dl dt.b6{}
+.teshubifen dl dt.b6 b{font-size:12px;font-weight:300;color:red;width:66px;height:36px;line-height:36px;overflow:hidden;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;}
+.teshubifen dl dt.b5 b{font-size:12px;font-weight:300;}
+.teshubifen dl dt.b3{width:259px;}
+.teshubifen dl dt.b3 b{font-size:12px;font-weight:300;}
+.teshubifen dl dt.b3 strong{font-size:12px;font-weight:300;}
+.teshubifen dl dt.b3 u{padding:0 5px;text-decoration:none;}
+.teshubifen dl dt.b4{width:490px;border:none;}
+.teshubifen dl dt.b4 a{position:relative;left:5px;}
+.bdboxbifenBox{border:1px solid #ccc;height:150px;margin:auto auto 5px auto;padding:5px 0 0 0;width:985px overflow:hidden;}
+.bdboxbifen p{float:left;width:88px;height:48px;line-height:20px;margin:0 1px 0 0;}
+.bdboxbifen p a{text-decoration:none;color:#555;width:83px;height:40px;line-height:20px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:block;overflow:hidden;margin:3px;color:#000;}
+.bdboxbifen p a:hover{text-decoration:none;color:#fff;width:83px;height:40px;line-height:20px;border-top:1px solid #6F6F6F;border-left:1px solid #6F6F6F;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;display:block;overflow:hidden;}
+.bdboxbifen p a.active{text-decoration:none;color:#fff;width:83px;height:40px;line-height:20px;border-top:1px solid #dc0000;border-left:1px solid #dc0000;border-right:1px solid #dc0000;border-bottom:1px solid #dc0000;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#e02312;display:block;overflow:hidden;}
+.bdboxbifen p a b{font-size:12px;font-weight:900;}
+.bdboxbifen p a strong{font-size:12px;font-weight:300;color:#000;}
+.bdboxbifen p.qx a{width:30px;height:40px;line-height:40px;border:none;color:#0B6DB8;}
+.bdboxbifen p.qx a:hover{width:30px;height:40px;line-height:40px;border:none;background:none;color:#dc0000;}
+.bdboxbifen p.qx a.active{color:#0B6DB8;background:none;}
+.bdboxbifen p a b{letter-spacing:2px;font-size:12px;font-weight:300;}
+/*北京单场上下单双*/
+.danchangsxds{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.danchangsxds dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.danchangsxds dl.one{text-align:center;width:44px;height:48px;line-height:48px;display:inline;float:left;}
+.danchangsxds dl.two{text-align:center;width:65px;height:48px;line-height:48px;display:inline;float:left;}
+.danchangsxds dl.three{text-align:center;width:126px;height:48px;line-height:48px;display:inline;float:left;}
+.danchangsxds dl.four{text-align:center;width:210px;height:48px;line-height:48px;display:inline;float:left;}
+.danchangsxds dl.four b{font-size:12px;font-weight:300;}
+.danchangsxds dl.five{text-align:center;width:200px;height:48px;line-height:48px;display:inline;float:left;border-right:none;font-size:14px;font-weight:900;}
+.danchangsxds dl.five b{font-size:14px;font-weight:900;}
+.danchangsxds dl.five span{padding:0 10px;}
+.danchangsxds dl.five strong{}
+.danchangsxds dl.six{text-align:center;height:48px;display:inline;float:left;border-right:none;width:543px;}
+.danchangsxds dl.six dt{font-size:14px;font-weight:900;line-height:26px;}
+.danchangsxds dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.danchangsxds dl.six dd.show{width:100px;font-size:12px;}
+.danchangsxds dl.six dd.rq{width:30px;font-size:12px;}
+.danchangsxds dl.six dd.zj{width:51px;text-align:center;font-size:12px;overflow:hidden;height:22px;line-height:22px;font-size:14px;}
+.danchangsxds dl.six dd.shangxiads{width:98px;text-align:center;font-size:12px;overflow:hidden;height:22px;line-height:22px;font-size:14px;margin:0 10px;}
+/*北京单场半全场nav*/
+.bjdc_bqcNav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.bjdc_bqcNav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.bjdc_bqcNav dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_bqcNav dl.one{width:42px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.three{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.four{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.five{width:210px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.five b{}
+.bjdc_bqcNav dl.five span{padding:0 10px;}
+.bjdc_bqcNav dl.five strong{}
+.bjdc_bqcNav dl.six{width:431px;text-align:center;height:48px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_bqcNav dl.six dt{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_bqcNav dl.six dt b{width:47px;display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:middle;height:26px;line-height:26px;overflow:hidden;font-size:12px;font-weight:900;}
+.bjdc_bqcNav dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bjdc_bqcNav dl.six dd b{width:47px;display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:middle;height:20px;line-height:20px;overflow:hidden;font-size:12px;font-weight:300;letter-spacing:3px;}
+.bjdc_bqcNav dl.seven{width:73px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.bjdc_bqcNav dl.eight{width:112px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+.bqcsf{height:30px;line-height:30px;width:431px;overflow:hidden;}
+.bqcsf ul{}
+.bqcsf ul li{width:47px;display:inline-table;display:inline-block;zoom:1;*display:inline;vertical-align:middle;height:28px;line-height:28px;overflow:hidden;vertical-align:middle;text-align:center;position:relative;top:-1px;}
+.bqcsf ul a{display:inline-table;display:inline-block;zoom:1;*display:inline;cursor:pointer;text-decoration:none;color:#000;width:42px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;overflow:hidden;}
+.bqcsf ul a:hover{text-decoration:none;text-decoration:none;color:#fff;width:42px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6F6F6F;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;}
+.bqcsf ul a.active{text-decoration:none;text-decoration:none;color:#fff;width:42px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;}
+
+/*北京单场胜负过关投注区*/
+.beidansftouzhu{}
+.beidansftouzhu b{width:100px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansftouzhu span{width:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidansftouzhu span i{color:#3D7A35;font-style:normal;}
+.beidansftouzhu b a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;width:45px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.beidansftouzhu b a:hover{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6F6F6F;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.beidansftouzhu b a.active{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.beidansftouzhu b a.visited{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.beidansftouzhu span u{color:#dc0000;text-decoration:none;}
+.beidansftouzhu strong{width:270px;background:blue;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+/*北京单场胜平负投注区*/
+.beidanspftouzhu{}
+.beidanspftouzhu ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.beidanspftouzhu ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;width:100px;font-size:12px;margin:0 20px;}
+.beidanspftouzhu ul li span{color:#dc0000;}
+.beidanspftouzhu ul li b{font-size:12px;font-weight:300;color:green;}
+.beidanspftouzhu ul li strong{font-size:12px;font-weight:300;color:#444;}
+
+
+.beidanspftouzhu ul li a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:block;font-size:12px;}
+.beidanspftouzhu ul li a:hover{font-size:14px;cursor:pointer;text-decoration:none;color:#000;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6f6f6f;display:block;color:#fff;font-size:12px;}
+.beidanspftouzhu ul li a.active{font-size:14px;cursor:pointer;text-decoration:none;color:#000;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:block;color:#fff;font-size:12px;}
+.stype span{color:#0B7A01;}
+.stype em{font-style:normal;color:#dc0000;}
+.danczjq{font-size:12px;}
+.danczjq ol li{width:100px;display:inline-table;display:inline-block;zoom:1;*display:inline;margin:0 10px;height:26px;line-height:26px;vertical-align:middle;}
+.danczjq ol li a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;width:100px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;display:block;position:relative;top:-2px;}
+.danczjq ol li a:hover{text-decoration:none;text-decoration:none;color:#fff;width:100px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6F6F6F;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;}
+.danczjq ol li a.active{text-decoration:none;text-decoration:none;color:#fff;width:100px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:12px;}
+/*北京单场总进球*/
+/*北京单场比分nav*/
+.zqj_bfNav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.zqj_bfNav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.zqj_bfNav dl.one{width:43px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zqj_bfNav dl.two{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zqj_bfNav dl.three{width:66px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zqj_bfNav dl.four{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zqj_bfNav dl.five{width:210px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zqj_bfNav dl.five b{}
+.zqj_bfNav dl.five span{padding:0 10px;}
+.zqj_bfNav dl.five strong{}
+.zqj_bfNav dl.six{width:544px;text-align:center;height:48px;display:inline;float:left;border-right:none;}
+.zqj_bfNav dl.six dt{font-size:14px;font-weight:900;line-height:26px;}
+.zqj_bfNav dl.six dd{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zqj_bfNav dl.six dd.show{width:100px;font-size:12px;}
+.zqj_bfNav dl.six dd.rq{width:30px;font-size:12px;}
+.zqj_bfNav dl.six dd.zj{width:59px;text-align:center;overflow:hidden;height:22px;line-height:22px;font-size:14px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zqj_bfNav dl.six dd.shangxiads{width:98px;text-align:center;font-size:12px;overflow:hidden;height:22px;line-height:22px;font-size:14px;margin:0 10px;}
+.zqj_bfNav dl.seven{width:73px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+.bdboxzjq{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bdboxzjq ul{display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.bdboxzjq ul li{display:inline-table;display:inline-block;zoom:1;*display:inline;overflow:hidden;position:relative;top:5px;}
+.bdboxzjq ul li a{text-decoration:none;color:#000;width:60px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff;display:block;overflow:hidden;}
+.bdboxzjq ul li a:hover{text-decoration:none;color:#fff;width:60px;height:26px;line-height:28px;border-top:1px solid #6F6F6F;border-left:1px solid #6F6F6F;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#6F6F6F;display:block;overflow:hidden;}
+.bdboxzjq ul li a.active{text-decoration:none;color:#fff;width:60px;height:26px;line-height:26px;border-top:1px solid #E02321;border-left:1px solid #E02321;border-right:1px solid #E02321;border-bottom:1px solid #888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#E02321;display:block;overflow:hidden;}
+
+
+
+/*...........................................................*/
+/*足彩胜负nav*/
+.zcsf_Nav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.zcsf_Nav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.zcsf_Nav dl.one{width:41px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zcsf_Nav dl.two{width:67px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zcsf_Nav dl.three{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.zcsf_Nav dl.four{width:686px;text-align:center;height:48px;line-height:48px;display:inline;float:left;font-size:14px;font-family:'微软雅黑';font-weight:900;}
+.zcsf_Nav dl.four dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:220px;}
+.zcsf_Nav dl.five{width:72px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border:none;}
+.laozctouzhuqu{}
+.laozctouzhuqu dl{}
+.laozctouzhuqu dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:220px;}
+.laozctouzhuqu dl dt a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;width:200px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;position:relative;vertical-align:middle;}
+.laozctouzhuqu dl dt a:hover{text-decoration:none;text-decoration:none;color:#fff;width:200px;height:26px;line-height:26px;border:1px solid #E02321;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.laozctouzhuqu dl dt a.active{text-decoration:none;text-decoration:none;color:#fff;width:200px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6F6F6F;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.laozctouzhuqu dl dt a b{ width:100px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:left;}
+.laozctouzhuqu dl dt a em{ font-style:normal;width:60px;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:right;}
+.laozcxuhao{background:#fff;display:block;height:34px;line-height:34px;}
+/*足彩胜负投注区*/
+.zcsftouzhu{}
+.zcsftouzhu b{width:75px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zcsftouzhu span{width:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zcsftouzhu span i{color:#3D7A35;font-style:normal;}
+.zcsftouzhu b{font-size:12px;text-decoration:none;color:#000;width:45px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;font-weight:300;margin:0 9px;}
+.zcsf310{}
+.zcsf310 b{width:75px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zcsf310 span{width:30px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.zcsf310 span i{color:#3D7A35;font-style:normal;}
+.zcsf310 b a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;width:45px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.zcsf310 b a:hover{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid #6F6F6F;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#6F6F6F;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.zcsf310 b a.active{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.zcsf310 b a.visited{text-decoration:none;text-decoration:none;color:#fff;width:45px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.zcsf310 span u{color:#dc0000;text-decoration:none;}
+.zcsf310 strong{width:270px;background:blue;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+/*积分投注*/
+.2015top{height:60px; background:#BC1E1F;}
+.2015topC{width:1000px; margin:0 auto; position:relative; height:60px; text-align:left;}
+.2015i1{position:absolute;top:30px;left:14px;}
+.2015i2{position:absolute;top:30px;right:20px;}
+.daiyu{position:absolute;top:0;left:110px;}
+.daiyu h1{width:572px; height:60px; line-height:60px;color:#fff;font-weight:300;font-family:'宋体'; font-size:14px;}
+.tipsters{height:132px;margin:0 auto;background:#fff url(http://www.zhiying365365.com/www/statics/i/bg_footballer_2.jpg) no-repeat top center;}
+.NewsNav{padding:10px 0 0 0;line-height:50px;position:relative;}
+.NewsNav h1{font-size:12px;font-weight:300;width:1000px;margin:0 auto;text-align:left;height:50px;position:relative; line-height:40px;}
+.NewsNav h1 em{font-size:30px;font-weight:300;color:#555;font-family:'微软雅黑';}
+.NewsNav h1 em span{font-size:26px;font-weight:300;color:#555;font-family:'微软雅黑';}
+.jfc{ width:1000px; margin:0 auto; text-align:left; line-height:30px; padding:0 0 30px 0;}
+.jfc h1{ font-size:20px; font-weight:900;font-family:'微软雅黑';}
+.jf_Nav{background:#545454;width:998px;margin:0 auto;height:48px;border:1px solid #ccc;text-align:center;}
+.jf_Nav dl{border-right:1px solid #fff;height:48px;text-align:center;color:#fff;font-size:12px;font-weight:300;float:left;font-family:'';}
+.jf_Nav dl.one{width:41px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.two{width:67px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.three{width:67px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.four{width:126px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.five{width:220px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.five b{ font-weight:300;padding:0 0 0 10px;}
+.jf_Nav dl.five span{padding:0 10px;}
+.jf_Nav dl.six{width:232px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jf_Nav dl.six dt{font-weight:300;}
+.jf_Nav dl.eight{width:232px;text-align:center;height:48px;line-height:48px;display:inline;float:left;border-right:none;}
+.jf_Nav dl.eight dt{font-weight:300;}
+.jf_Nav dl.seven{width:73px;text-align:center;height:48px;line-height:48px;display:inline;float:left;}
+.jftouzhu b a{font-size:14px;cursor:pointer;text-decoration:none;color:#000;width:145px;height:26px;line-height:26px;border-top:1px solid #F4F4F4;border-left:1px solid #D3D3D3;border-right:1px solid #D3D3D3;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.jftouzhu b a:hover{text-decoration:none;text-decoration:none;color:#fff;width:145px;height:26px;line-height:26px;border:1px solid #E02321;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.jftouzhu b a.active{text-decoration:none;text-decoration:none;color:#fff;width:145px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.jftouzhu b a.visited{text-decoration:none;text-decoration:none;color:#fff;width:145px;height:26px;line-height:26px;border:1px solid red;border-bottom:1px solid #888;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;background:#E02321;display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;}
+.jftouzhu span u{color:#dc0000;text-decoration:none;}
+.Tiptouz{width:100%;padding:0 0 15px 0;}
+.Tiptouzc{width:1000px;margin:0 auto;text-align:left;}
+.optimize{ position:relative;top:-50px;left:750px;width:80px;height:24px;line-height:24px;}
+.Tiptouzc p{line-height:24px;color:#777;}
+.Tiptouzc p b{font-weight:900;}
+.Tiptouzc p span{color:red;}

@@ -1,0 +1,90 @@
+<{include file="../admin/header.html"}>
+<script type="text/javascript">
+
+TMJF(function ($) {
+
+});
+</script>
+
+<{include file="../admin/nav.html"}>
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li> 彩种：
+        <select name="sport">
+        <option value="fb">===竞猜足球===</option>
+        <option value="bk">===竞猜篮球===</option>
+        </select>
+          <input type="submit" value="查询最近三期即时比分">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+</div>
+<h1>比分对比(彩果信息是即时比分转换而来)</h1>
+<table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+<{if $sport=='fb'}>
+<tr>
+<td>赛事ID</td><td>赛事场次</td><td>赛事日期</td><td>联赛</td><td>主队VS客队</td><td>开赛时间</td>
+<td>上半场比分(即时|现有)</td><td>全场比分(即时|现有)</td>
+<{foreach from=$sportPoolFb item=item}><td><{$sport|getPoolDesc:$item}></td><{/foreach}>
+</tr>
+<tbody>
+<{foreach from=$return item=item key=key name=match}>
+	<tr <{if $smarty.foreach.match.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>> 
+		<td class="show"><{$item.matchId}></td>
+		<td class="show"><{$item.num}></td>
+		<td class="show"><{$item.b_date}></td>
+		<td class="show"><{$item.l_cn}></td>
+		<td class="show"><{$item.h_cn}>&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;<{$item.a_cn}></td>
+		<td class="show"><{$item.date}> <{$item.time}></td>
+		<td class="show">
+		<{$item.half_jishi}><{if !$item.half_jishi}>暂无<{/if}>
+		&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<{$item.half_leida}><{if !$item.half_leida}>暂无<{/if}>
+		<{if $item.half_jishi != $item.half_leida}><font style="color:red;">(有误)</font><{/if}>
+		</td>
+		<td class="show">
+		<{$item.full_jishi}><{if !$item.full_jishi}>暂无<{/if}>
+		&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<{$item.full_leida}><{if !$item.full_leida}>暂无<{/if}>
+		<{if $item.full_jishi != $item.full_leida}><font style="color:red;">(有误)</font><{/if}></td>
+		<{foreach from=$sportPoolFb item=item1}>
+		<td><{$item.poolResult[$item1].desc}></td>
+		<{/foreach}>
+	</tr>
+<{/foreach}>
+</tbody>
+<{else}>
+<tr>
+<td>赛事ID</td><td>赛事场次</td><td>赛事日期</td><td>联赛</td><td>客队VS主队</td><td>开赛时间</td>
+<td>全场比分(即时|现有)</td><{foreach from=$sportPoolBk item=item key=key}><td><{$sport|getPoolDesc:$item}></td><{/foreach}>
+</tr>
+<tbody>
+<{foreach from=$return item=item key=key name=match}>
+	<tr <{if $smarty.foreach.match.iteration % 2==0 }>style='background-color:#DCF2FC'<{/if}>> 
+		<td class="show"><{$item.matchId}></td>
+		<td class="show"><{$item.num}></td>
+		<td class="show"><{$item.b_date}></td>
+		<td class="show"><{$item.l_cn}></td>
+		<td class="show"><{$item.a_cn}>&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;<{$item.h_cn}></td>
+		<td class="show"><{$item.date}> <{$item.time}></td>
+		<td class="show">
+		<{$item.full_jishi}><{if !$item.full_jishi}>暂无<{/if}>
+		&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<{$item.full_leida}><{if !$item.full_leida}>暂无<{/if}>
+		<{if $item.full_jishi != $item.full_leida}><font style="color:red;">(有误)</font><{/if}>
+		</td>
+		<{foreach from=$sportPoolBk item=item1}>
+		<td><{$item.poolResult[$item1].desc}></td>
+		<{/foreach}>
+	</tr>
+<{/foreach}>
+</tbody>
+<{/if}>
+</table>
+
+</body>
+</html>

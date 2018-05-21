@@ -1,0 +1,85 @@
+<{include file="../admin/header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+
+<!--投注记录 start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li>用户名
+          <input type="text" name="u_name" id="u_name" value="<{$u_name}>">
+        </li>
+        <li>
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <h2> <b>●</b>专家推广方案管理列表</h2>
+    <div>
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <td>系统ID</td>
+            <td>专家帐号</td>
+            <td>比赛日期</td>
+            <td>订阅截止</td>
+            <td> 赛事</td>
+            <td>主队 VS 客队</td>
+            <td>推荐</td>
+            <td>单场金额</td>
+            <td>申请时间</td>
+            <td>是否推荐</td>
+            <td>是否通过</td>
+            <td>当前排序</td>
+            <td>排序</td>
+            <td>操作</td>
+          </tr>
+        <{section name=a loop=$datalist}>
+        <tr>
+          <td><{$datalist[a].sysid}></td>
+          <td><{$datalist[a].u_name}></td>
+          <td><{$datalist[a].pubdate}></td>
+          <td><{$datalist[a].out_time}></td>
+          <td> <{$datalist[a].macth}></td>
+          <td><{$datalist[a].duiwu}></td>
+          <td><{$datalist[a].recommond}></td>
+          <td><{$datalist[a].pmoney}></td>
+          <td><{$datalist[a].addtime}></td>
+          <td><strong  <{ if $datalist[a].iscommon==1}>style="color:#F00" <{/if}>><{$datalist[a].iscommon_status}></strong> <{ if $datalist[a].iscommon!=1}> <a href="zhuanjia_recommend.php?action=iscommon&iscommon=1&sysid=<{$datalist[a].sysid}>">点击推荐</a> <{/if}> <{ if $datalist[a].iscommon==1}> <a href="zhuanjia_recommend.php?action=iscommon&iscommon=2&sysid=<{$datalist[a].sysid}>">取消推荐</a> <{/if}></td>
+          <td><{$datalist[a].ifuse_status}><{ if $datalist[a].ifuse==0}> <a href="zhuanjia_recommend.php?action=sh&ifuse=1&sysid=<{$datalist[a].sysid}>">通过</a> <a href="zhuanjia_recommend.php?action=sh&ifuse=2&sysid=<{$datalist[a].sysid}>">拒绝</a><{/if}> <{ if $datalist[a].ifuse==1}> <a href="zhuanjia_recommend.php?action=sh&ifuse=2&sysid=<{$datalist[a].sysid}>">拒绝</a><{/if}> <{ if $datalist[a].ifuse==2}> <a href="zhuanjia_recommend.php?action=sh&ifuse=1&sysid=<{$datalist[a].sysid}>">通过</a> <{/if}></td>
+          <td><{$datalist[a].orderby}></td>
+          <td><a href="zhuanjia_recommend.php?action=order&add=1&sysid=<{$datalist[a].sysid}>">前+1</a>&nbsp;&nbsp;<a href="zhuanjia_recommend.php?action=order&desc=1&sysid=<{$datalist[a].sysid}>">后-1</a>&nbsp;&nbsp; <a href="zhuanjia_recommend.php?action=order&first=1&sysid=<{$datalist[a].sysid}>">首位</a> </td>
+          <td><a href="zhuanjia_recommend.php?action=del&id=<{$datalist[a].sysid}>&cur_page=<{$cur_page}>">删除</a></td>
+        </tr>
+        
+        <{/section}>
+        
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="13"><div align="center">每页<font color="#FF0000"> 
+              <{ $pageSize }> 
+              </font>条 共<font color="#FF0000"> 
+              <{ $page }> 
+              </font>页  共<font color="#FF0000"> 
+              <{ $totalRecord }> 
+              </font>条记录 
+              <{ $multi }> 
+            </div></td>
+        </tr>
+          </tbody>
+        
+      </table>
+    </div>
+    <br/>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

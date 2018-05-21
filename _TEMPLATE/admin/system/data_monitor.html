@@ -1,0 +1,70 @@
+<{include file="../admin/header.html"}>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#data").submit(function(){
+		if (!confirm('检测过程可能较长，确定要开始检测吗？')) {
+			return false;
+		}
+		return true;
+	});
+});
+</script>
+<div class="UserRight">
+<form method="post" id="data">
+<div class="timechaxun" style="height:45px;">
+  <ul>
+  <li>
+  	<input type="hidden" name='action' value='show'>
+      <input type="submit" name="" value="检测数据源状态">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+</div>
+<div>
+  <h2><b>●</b>数据源状态</h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td>监测项目</td>
+          <td>状态</td>
+        </tr>
+        <{foreach from=$return.source item=item key=key}>
+        <tr>
+        <td class="show"><{$item.desc}></td>
+        <td class="show"><{$item.status}></td>
+        </tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+<div>
+  <h2><b>●</b>数据文件状态</h2>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td>文件名称</td>
+          <td>说明</td>
+          <td>状态</td>
+          <td>最后更新时间</td>
+        </tr>
+        <{foreach from=$return.files item=item key=key}>
+        <tr>
+        <td class="show"><{$key}></td>
+        <td class="show"><{$item.desc}></td>
+        <td class="show"><{$item.status}></td>
+        <td class="show"><{$item.updatetime}></td>
+        </tr>
+        <{/foreach}>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

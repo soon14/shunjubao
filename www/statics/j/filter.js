@@ -1,0 +1,66 @@
+﻿
+var htmlStr = "<div class=\"DangQian\"><u></u>" +
+"      <ul>" +
+"        <li class=\"two\"><b>比赛筛选</b><i>▼</i>&nbsp;&nbsp;&nbsp;<span><strong></strong> ";
+
+if (curPool == "had") {
+    htmlStr += "          <b>&rsaquo;&nbsp;让球</b><div id='fLetBall'><em>" +
+"          <input type=\"checkbox\" name=\"\">" +
+"          主让1球[49场]</em><em>" +
+"          <input type=\"checkbox\" name=\"\">" +
+"          客让1球[11场]</em></div><i ctl='fLetBall'><a href=\"javascript:void(0)\">全选</a><a href=\"javascript:void(0)\">反选</a><a href=\"javascript:void(0)\">全清</a></i>";
+}
+
+htmlStr += "          <b>&rsaquo;&nbsp;赛事</b><div id='fMatches'><em>" +
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          欧冠[2场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          苏超[1场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          法甲[1场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          西甲[1场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          西甲[1场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          亚冠杯[8场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          西甲[1场]</em></div><i ctl='fMatches'><a href=\"javascript:void(0)\">全选</a><a href=\"javascript:void(0)\">反选</a><a href=\"javascript:void(0)\">全清</a></i> <b>&rsaquo;&nbsp;日期</b><div id='fDate'><em>" +
+"          <input type=\"checkbox\" name=\"\">"+
+"          星期三[9场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          星期四[24场]</em><em>"+
+"          <input type=\"checkbox\" name=\"\">"+
+"          星期五[14场]</em></div><br/>"+
+"          </span>"+
+"          <div class=\"clear\"></div>"+
+"        </li>"+
+"        <li class='hidden'></li>" +
+"        <li class=\"show\">"+
+"          <select id=\"jsSelLotNum\" name=\"selectLotteryNum\" class=\"selectLotteryNum\">"+
+"            <option selected=\"selected\" value=\"2014-02-25\">2014-02-25(当前期)</option>"+
+"            <option value=\"2014-02-24\">2014-02-24</option>"+
+"            <option value=\"2014-02-23\">2014-02-23</option>"+
+"            <option value=\"2014-02-22\">2014-02-22</option>"+
+"            <option value=\"2014-02-21\">2014-02-21</option>"+
+"            <option value=\"2014-02-20\">2014-02-20</option>"+
+"            <option value=\"2014-02-19\">2014-02-19</option>"+
+"            <option value=\"2014-02-18\">2014-02-18</option>"+
+"          </select>"+
+"        </li>" +
+"        <li class='wangqi'>点击日期查看往期</li>" +
+"        <li id='tip'></li>" +
+"      </ul>"+
+"      <div class=\"clear\"></div>" +
+"    </div>";
+document.writeln(htmlStr);

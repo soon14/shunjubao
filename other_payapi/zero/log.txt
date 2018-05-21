@@ -1,0 +1,12 @@
+2018-01-09 11:07:20   ==========210110 微信扫码支付=============
+2018-01-09 11:07:20   需签名报文末尾未加密钥串:Amount=10000&MerNo=06781478&NotifyUrl=http://www.zhiying365.com/other_payapi/zero/AsynCallBack.php&PdtName=测试&ProductId=0601&Remark=测试&TxCode=210110&TxSN=20180109110720&Version=2.5
+2018-01-09 11:07:20   生成的签名:ea58bbdd2d0dd8063eb7810c7a2f373c
+2018-01-09 11:07:20   转换请求数据中特殊字段的值为Base64的报文:Amount=10000&MerNo=06781478&NotifyUrl=aHR0cDovL3d3dy56aGl5aW5nMzY1LmNvbS9vdGhlcl9wYXlhcGkvemVyby9Bc3luQ2FsbEJhY2sucGhw&PdtName=测试&ProductId=0601&Remark=测试&SignMethod=MD5&Signature=ea58bbdd2d0dd8063eb7810c7a2f373c&TxCode=210110&TxSN=20180109110720&Version=2.5
+2018-01-09 11:07:20   Url编码后的请求报文:Version=2.5&SignMethod=MD5&TxCode=210110&ProductId=0601&MerNo=06781478&TxSN=20180109110720&Amount=10000&PdtName=%E6%B5%8B%E8%AF%95&Remark=%E6%B5%8B%E8%AF%95&NotifyUrl=aHR0cDovL3d3dy56aGl5aW5nMzY1LmNvbS9vdGhlcl9wYXlhcGkvemVyby9Bc3luQ2FsbEJhY2sucGhw&Signature=ea58bbdd2d0dd8063eb7810c7a2f373c
+2018-01-09 11:07:20   返回数据:RspMsg=%E4%BA%A4%E6%98%93%E9%87%91%E9%A2%9D%E5%8F%97%E9%99%90%2C%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%98%93%E9%87%91%E9%A2%9D%3A1.00%2C%E6%9C%80%E5%A4%A7%E4%BA%A4%E6%98%93%E9%87%91%E9%A2%9D%3A10.00&Signature=8ebbe75bf8961364e883ae8ef8478d9c&RspCod=09002&SignMethod=MD5
+2018-01-09 11:07:20   URL解码后返回数据:RspCod=09002&RspMsg=交易金额受限,最小交易金额:1.00,最大交易金额:10.00&SignMethod=MD5&Signature=8ebbe75bf8961364e883ae8ef8478d9c
+2018-01-09 11:07:20   转换返回数据中Base64的值:RspCod=09002&RspMsg=交易金额受限,最小交易金额:1.00,最大交易金额:10.00&SignMethod=MD5&Signature=8ebbe75bf8961364e883ae8ef8478d9c
+2018-01-09 11:07:20   签名字符串未加加密串:RspCod=09002&RspMsg=交易金额受限,最小交易金额:1.00,最大交易金额:10.00
+2018-01-09 11:07:20   生成的签名:8ebbe75bf8961364e883ae8ef8478d9c
+2018-01-09 11:07:20   验证签名成功:
+2018-01-09 11:07:20   失败!!!

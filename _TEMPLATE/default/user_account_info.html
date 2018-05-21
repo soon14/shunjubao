@@ -1,0 +1,46 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<!--uesr right start-->
+<!--用户中心账户信息 start-->
+<div class="URcenterTop">
+  <ul>
+    <li><span></span>个人信息已经完善</li>
+    <li><i></i>银行卡信息未完善</li>
+    <li class="none"><strong>可用余额：<{$userAccount.cash}>元</strong></li>
+    <li  class="none"><b>彩金：<{$userAccount.gift}>元</b></li>
+    <li  class="none"><strong>可提现：<{$userAccount.cash}>元</strong></li>
+    <{*
+    <li  class="none"><b>冻结资金：(帐户0.00元+红包0.00元)</b></li>
+    *}>
+  </ul>
+  <div class="clear"></div>
+</div>
+<div class="caiList">
+  <ul>
+    <li class="show">
+      <dl>
+        <dt class="t1">
+          <p><b>2013-09-24</b></p>
+          <p>01:23:45</p>
+        </dt>
+        <dt class="t2">【精彩球胜平负】</dt>
+        <dt>期次：32432</dt>
+        <dt><u>合买</u></dt>
+        <dt><span>1124.4元</span></dt>
+        <dt>出票成功</dt>
+        <dt><a href="">继续购买</a></dt>
+      </dl>
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<!---dade start-->
+<div class="" id="URcenter">
+  <div class="URcenterTop">
+    <h2><span><a href="<{$smarty.const.ROOT_DOMAIN}>" target="_blank">查看明细</a></span>2014年2月份统计报表</h2>
+  </div>
+  <div style="padding:10px 0 0 0;"><img src="<{$smarty.const.STATICS_BASE_URL}>/i/c2.jpg" /></div>
+</div>
+<!---dade end-->
+<!--用户中心账户信息 end-->
+</body></html>

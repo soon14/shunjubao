@@ -1,0 +1,134 @@
+<{include file="../admin/header.html"}>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+      /* 当鼠标在表格上移动时，离开的那一行背景恢复 */
+      $(document).ready(function(){ 
+            $(".admintable tr td").mouseout(function(){
+                var bgc = $(this).parent().attr("bg");
+                $(this).parent().find("td").css("background-color",bgc);
+            });
+      })
+      
+      $(document).ready(function(){ 
+            var color="#DCF2FC"
+            $(".admintable tr:odd td").css("background-color",color);  //改变偶数行背景色
+            /* 把背景色保存到属性中 */
+            $(".admintable tr:odd").attr("bg",color);
+            $(".admintable tr:even").attr("bg","#fff");
+      })
+</script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";
+	$("#start_time").focus(function(){
+		showCalendar('start_time', 'y-mm-dd');
+	});
+	
+	$("#end_time").focus(function(){
+	    showCalendar('end_time', 'y-mm-dd');
+	});
+	$(".delete_log").click(function(){
+		if(!confirm('确定删除这条记录吗？')) return false;
+		$.post(root_domain + '/admin/admin_operate.php'
+                , {id: $(this).attr('log_id'),
+					type:'delete_log'
+                  }
+                , function(data) {
+                	alert(data.msg);
+                	if (data.ok) {
+                		window.location.reload(true);
+                	}
+                }
+                , 'json'
+            );
+	});
+	$("#delete_log_all").click(function(){
+		if(!confirm('确定全部删除记录吗？')) return false;
+		var ids = '';
+		$(".delete_log").each(function(){
+			ids += $(this).attr('log_id')+',';
+		});
+		$.post(root_domain + '/admin/admin_operate.php'
+                , {ids: ids,
+					type:'delete_log_all'
+                  }
+                , function(data) {
+                	alert(data.msg);
+                	if (data.ok) {
+                		window.location.reload(true);
+                	}
+                }
+                , 'json'
+            );
+	});
+});
+</script>
+<!--投注记录 start-->
+<div class="UserRight">
+  <form method="post">
+    <div class="timechaxun" style="height:45px;">
+      <ul>
+        <li>
+        ID：
+          <input type="text" name="id" id="id"  style="width:60px;" value="<{$id}>">
+          ,
+        状态：
+          <select name='status' id='status' >
+            <option value="all" selected>全部状态</option>
+            <option value="1" <{if $status==1}> selected <{/if}> >正常
+            </option>
+            <option value="2" <{if $status==2}> selected <{/if}> >错误
+            </option>
+          </select>
+          |
+          类型：
+          <input type="text" name="type" id="type" value="<{$type}>">
+          |
+          开始时间：
+          <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+          结束时间：
+          <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </form>
+  <div>
+    <h2> <b>●</b>充值信息(<{$num}>)</h2>
+    <div class="admintable">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+        <tbody>
+          <tr>
+            <th>序号</th>
+            <th>状态</th>
+            <th>类型</th>
+            <th>日志</th>
+            <th>时间</th>
+            <th>操作<a href="javascript::void(0);"  id="delete_log_all">全删</a></th>
+          </tr>
+        <{foreach from=$logInfos item=item key=key}>
+        <tr>
+          <td><{$item.id}></td>
+          <td><{$item.status}></td>
+          <td><{$item.type}></td>
+          <td><textarea style="width:300px;"><{$item.log}></textarea></td>
+          <td><{$item.create_time}></td>
+          <td><a href="javascript::void(0);" class="delete_log" log_id="<{$item.id}>">删除</a> </td>
+        </tr>
+        <{/foreach}>
+        </tbody>
+        
+      </table>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pageC">
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+      </div>
+      <{/if}> </div>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

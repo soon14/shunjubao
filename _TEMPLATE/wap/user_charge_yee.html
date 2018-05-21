@@ -1,0 +1,72 @@
+<{include file="header.html"}>
+<script language="javascript" src="<{'payment.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+});
+</script>
+<!--center start-->
+<div class="paytop">
+  <h1>智赢用户充值中心</h1>
+</div>
+<div class="center">
+  <div class="pay">
+    <div class="paytips"><b><{$userInfo.u_name}></b>&nbsp;当前账户余额:<b><{$userAccount.cash}>元</b></div>
+    <!---->
+    <form action='' method="post" id="gotocash">
+	<div class="paycenter">
+	<dl>
+      <dt><b>充值金额：</b></dt>
+      <dd>
+        <ul>
+          <li class="paypal"><a href="" class="charge_cash" payment="50">50元</a></li>
+          <li class="paypal"><a href="" class="charge_cash" payment="100">100元</a></li>
+          <li class="paypal"><a href="" class="charge_cash" payment="500">500元</a></li>
+          <li class="mpay">
+            <input type="text" name="" value="其他金额" id="inputc1" />
+          </li>
+        </ul>
+      </dd>
+    </dl>
+	<dl>
+    <dt style="width:100%;"><b>支付方式：</b><span>（网上充值0手续费，资金即刻到账。）</span></dt>
+    <dd>
+     <ol>
+	         <li class="fastpay"><a href="" class="pay_bank" pay_bank="fastpay">手机快捷支付</a></li>
+		   
+              <li class="zhongguo"><a href="" class="pay_bank" pay_bank="BOC-NET-B2C">中国银行</a></li>
+              <li class="gongshang"><a href="" class="pay_bank" pay_bank="ICBC-NET-B2C">工商银行</a></li>
+              <li class="jianshe"><a href="" class="pay_bank" pay_bank="CCB-NET-B2C">建设银行</a></li>
+			  <li class="nongye"><a href="" class="pay_bank" pay_bank="ABC-NET-B2C">农业银行</a></li>
+              <li class="zhaoshang"><a href="" class="pay_bank" pay_bank="CMBCHINA-NET-B2C">招商银行</a></li>            
+              <li class="jiaotong"><a href="" class="pay_bank" pay_bank="BOCO-NET-B2C">交通银行</a></li>
+              <li class="xingye"><a href="" class="pay_bank" pay_bank="CIB-NET-B2C">兴业银行</a></li>
+              <li class="minsheng"><a href="" class="pay_bank" pay_bank="CMBC-NET-B2C">民生银行</a></li>
+              <li class="guangda"><a href="" class="pay_bank" pay_bank="CEB-NET-B2C">光大银行</a></li>             
+              <li class="pingan"><a href="" class="pay_bank" pay_bank="PINGANBANK-NET-B2C">平安银行</a></li>
+              <li class="zhongxin"><a href="" class="pay_bank" pay_bank="ECITIC-NET-B2C">中信银行</a></li>
+              <li class="shenfa"><a href="" class="pay_bank" pay_bank="SDB-NET-B2C">深圳发展银行</a></li>
+              <li class="guangfa"><a href="" class="pay_bank" pay_bank="GDB-NET-B2C">广发银行</a></li>
+              <li class="shanghai"><a href="" class="pay_bank" pay_bank="SHB-NET-B2C">上海银行</a></li>
+              <li class="pufa"><a href="" class="pay_bank" pay_bank="SPDB-NET-B2C">浦发银行</a></li>
+              <li class="huaxia"><a href="" class="pay_bank" pay_bank="HXB-NET-B2C">华夏银行</a></li>
+              <li class="beijing"><a href="" class="pay_bank" pay_bank="BCCB-NET-B2C">北京银行</a></li>              
+              <li class="youzheng"><a href="" class="pay_bank" pay_bank="POST-NET-B2C">邮政银行</a></li>
+            </ol>
+          </dd>
+        </dl>
+	</div>
+	<div class="clear"></div>
+	<div class="payNext">
+        <p><a href="" id="payment" target="_blank">下一步
+          <input id="u_id" type="hidden" value="<{$userAccount.u_id}>"/>
+          </a></p>
+      </div>
+    </form>
+    <!---->
+  </div>
+</div>
+<div class="yiwen">如您有问题，请联系智赢网客服。</div>
+<!--center end-->
+<{include file="../wap/footer.html"}> 

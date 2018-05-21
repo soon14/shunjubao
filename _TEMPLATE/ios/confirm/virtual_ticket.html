@@ -1,0 +1,87 @@
+<{include file="header.html"}> 
+<{include file="top.html"}>
+<link href="<{'confirmbet.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script language="javascript">
+window.onload=function showtable(){
+var tablename=document.getElementById("hacker");
+var li=tablename.getElementsByTagName("tr");
+for (var i=0;i<=li.length;i++){
+if (i%2==0){
+li[i].style.backgroundColor="#f1f1f1";
+}else li[i].style.backgroundColor="#fff";
+}
+}
+</script>
+<script type="text/javascript">
+</script>
+<body>
+<{include file="menu.html"}>
+<div class="center">
+  <!--确认投注center start-->
+  <div class="BitCenter">
+    <div class="ConfirmationTz">
+      <!--投注确认过关方式 start-->
+      <div class="querenguoguan">
+        <div class="TouXiang">
+          <dl>
+            <dt><img src="<{if $userInfo.u_img}><{$userInfo.u_img}><{else}><{$smarty.const.STATICS_BASE_URL}>/i/touxiang.jpg<{/if}>" /><{$userInfo.u_name}></dt>
+            <dd class="first">
+              <p id="ticket_prize"><span>方案奖金：</span><strong>&yen;<{$userTicketInfo.prize}></strong></p>
+              <p>方案类型：<i>积分投注</i></p>
+            </dd>
+            <dd>
+              <p>方案积分：<i><{$userTicketInfo.money}></i></p>
+              <p>方案倍数：<i><{$userTicketInfo.multiple}></i>&nbsp;倍</p>
+            </dd>
+            <dd>
+              <p>过关方式：<em>单关</em></p>
+              <p>认购时间：<i><{$userTicketInfo.create_time}></i></p>
+            </dd>
+          </dl>
+          <div class="clear"></div>
+        </div>
+        <h1>方案内容
+          <div class="Fshare">
+            <div class="share"><strong data-bd-bind="1406510964710" class="bdsharebuttonbox bdshare-button-style0-32"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到豆瓣网" href="#" class="bds_douban" data-cmd="douban"></a></strong>
+              <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["tsina","tqq","weixin","qzone","douban"],"viewText":"分享到：","viewSize":"32"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","tqq","weixin","qzone","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </h1>
+        <!--方案内容 start-->
+        <table class="hacker" border="0" cellpadding="0" cellspacing="0" id="hacker">
+          <tbody id="detail_tr">
+            <tr>
+              <th>序号</th>
+              <th>场次</th>
+              <th>主队VS客队</th>
+              <th>我的选择</th>
+              <th>彩果</th>
+              <th>比分</th>
+              <th style="border-right:1px solid #6f6f6f;">状态</th>
+            </tr>
+          </tbody>
+          <{foreach from=$matchInfos item=matchInfo name=matchInfo}>    
+              <tr>
+                <td><{$smarty.foreach.matchInfo.iteration}></td>
+                <td><{$matchInfo.num}></td>
+                <td><div class=""><{if $s == 'bk'}><{$matchInfo.guest_team}><{else}><{$matchInfo.host_team}><{/if}></div>&nbsp;VS&nbsp;<div class=""><{if $s == 'bk'}><{$matchInfo.host_team}><{else}><{$matchInfo.guest_team}><{/if}></div></td>
+                <td><{$matchInfo.key_str}></td>
+                <td><{$resultDesc[$matchInfo.lottery_result].desc}></td>
+                <td>
+                <{if $userTicketInfo.prize>0}><div class="zhuangTai"><strong><span>奖</span></strong></div><{/if}>
+                <{if $userTicketInfo.status==2}><div class="zhuangTai"><b class="">未中奖</b></div><{/if}>
+                </td>
+              </tr>
+              <{/foreach}>
+        </table>
+        <!--方案内容 end-->
+        
+      </div>
+    </div>
+    <!--投注确认过关方式 end-->
+  </div>
+</div>
+<{include file="foot.html"}>
+</body>
+</html>

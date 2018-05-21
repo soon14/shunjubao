@@ -1,0 +1,68 @@
+<{include file="../admin/header.html"}>
+<script type="text/javascript">
+
+TMJF(function ($) {
+	$("#sub").click(function () {
+		var u_name = $("#u_name").text();
+		var cash = $("#frozen_cash").val();
+		if(confirm("确定为： " + u_name + "将冻结资金： " + cash + "元转为余额吗？")) {
+			return true;
+		}
+		return false;
+	});
+});
+</script>
+<{if !$userAccountInfo}>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+        <form method="post" action="">
+    <table width="20%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+            <td>用户名：</td><td><input id="u_name" name="u_name" value="" type="text" /></td>
+        </tr>
+        <tr>
+            <td><input id="sub_search" type="submit" value="提交" name="submit"/></td>
+        </tr>
+    </table>
+    </form>
+    </td>
+  </tr>
+</table>
+<{else}>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+        <form method="post" action="">
+    <table width="20%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+            <td>用户名：</td><td><span id="u_name"><{$user.u_name}></span></td>
+        </tr>
+        <tr>
+            <td>账户余额：<{$userAccountInfo.cash}></td><td>冻结资金：<{$userAccountInfo.frozen_cash}></td>
+        </tr>
+        <tr>
+            <td>转移(元)：</td><td><input id="frozen_cash" name="frozen_cash" value="<{$userAccountInfo.frozen_cash}>" type="text" /></td>
+        </tr>
+        <{*
+        <tr>
+        	<td>类型：</td>
+        	<td>
+        	<select name="type" id="type">
+        	<option value="frozentocash" selected>冻结资金转余额</option>
+        	</select>
+        	</td>
+        </tr>
+        *}>
+        <tr>
+            <td><input id="sub" type="submit" value="提交" name="submit"/><input type="hidden" value="<{$user.u_name}>" name="u_name"/></td>
+        </tr>
+    </table>
+    </form>
+    </td>
+  </tr>
+</table>
+<{/if}>
+
+</body>
+</html>

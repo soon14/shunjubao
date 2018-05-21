@@ -1,0 +1,289 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'newshaidan.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'navigator.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'jquery-1.9.1.min.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'winmac.js'|getStaticsUrl}>"></script>
+<script language="javascript">
+var Domain = '<{$smarty.const.ROOT_DOMAIN}>';
+var ZY_CDN = '<{$smarty.const.STATICS_BASE_URL}>';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "<{$smarty.const.STATICS_BASE_URL}>/i"
+    	, domain: "<{$smarty.const.ROOT_DOMAIN}>"
+};
+</script>
+</head><body>
+<script type="text/javascript">
+TMJF(function($) {
+	//(window.parent.document).find("#main").load(function(){
+		//var main = $(window.parent.document).find("#main");
+		//var thisheight = $(document).height()+30;
+		//main.height(thisheight);
+	//});
+	$("#start_time").focus(function(){
+		//if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		//}
+	});
+	
+	$("#end_time").focus(function(){
+	   // if (!$("#end_time").val()) {
+	    showCalendar('end_time', 'y-mm-dd');
+	   // }
+	});
+	var org_details_html = $("#detail_tr").html();
+	$(".show_details").click(function(){
+		$(".URcenter").show();
+		
+		$.post(Domain + '/getUserTicketInfo.php'
+                , {id: $(this).attr('userTicketId')
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var ticketInfo = data.msg;
+                    	var html = '';
+                    	for(var i = 0; i<ticketInfo.length;i++) {
+                    		var k= i+1;
+                    		html += '<tr>';
+                    		html += '<td>'+ k +'</td>';
+                    		html += '<td>'+ ticketInfo[i].num +'</td>';
+                    		html += '<td>'+ ticketInfo[i].l_code+'</td>';
+                    		html += '<td>'+ ticketInfo[i].date +'&nbsp;&nbsp;'+ ticketInfo[i].time +'</td>';
+                    		html += '<td>'+ ticketInfo[i].h_cn +'&nbsp;VS&nbsp;'+ ticketInfo[i].a_cn +'</td>';
+                    		html += '<td>'+ ticketInfo[i].spool +'</td>';
+                    		var option = ticketInfo[i].option;
+                    		var option_html = '';
+                    		for(var key in option) {
+                    			if (key == 'red') {
+                    				option_html += '<font color="red">'+option[key] +'</font>';
+                    			} else {
+                    				option_html += option[key];
+                    			}
+                    		}
+                    		html += '<td>'+ option_html +'</td>';
+                    		html += '<td>'+ ticketInfo[i].results +'</td>';
+                    		html += '</tr>'
+                    		$("#user_select").html(ticketInfo[i].user_select);
+                        }
+                    	$("#detail_tr").html(org_details_html + html);
+                    	//$("#detail_tr").append(html);
+                    } 
+                }
+                , 'json'
+            );
+	});
+	$(".add_show_ticket").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+	
+	$(".add_show_ticket2").click(function(){
+		$("#add_show_ticket2").val($(this).attr('userTicketId'));
+		$("#light1").show();
+		$("#fade").show();
+		return ;
+	});
+	
+	$(".show_ticket_cancel").click(function(){
+		$.post(Domain + '/operate.php'
+                , {id: $(this).attr('userTicketId'),
+					operate:'show_ticket_cancel'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+});
+
+function mysd(){
+	var userTicketId = $("#add_show_ticket2").val();
+
+	var show_range = $('input[name="show_range"]:checked').val();//显示人群
+	var pay_rate = $('input[name="pay_rate"]:checked').val();//分成比例
+	
+	
+		$.post(Domain + '/operate.php'
+                , {id: userTicketId,show_range: show_range,pay_rate: pay_rate,
+					operate:'show_ticket'
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	alert('操作成功');
+                    	window.location.reload(true);
+                    } else {
+						$("#light1").hide();
+						$("#fade").hide();
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );	
+	
+}
+</script>
+<!--投注记录 start-->
+<div>
+  <div class="rightcenetr">
+    <h1><span>▌</span>投注管理-投注记录</h1>
+    <div>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="stripese">
+        <form method="get">
+          <tr>
+            <td colspan="8" class="show" style="padding: 30px 0 10px 0;border-bottom:none;">投注总额：<span style="color:#dc0000;"><{if $totalTicketMoney}><{$totalTicketMoney}><{else}>0.00<{/if}>元</span>&nbsp;&nbsp;&nbsp;中奖总额：<span style="color:#dc0000;"><{if $totalPrizeMoney}><{$totalPrizeMoney}><{else}>0.00<{/if}></span></td>
+          </tr>
+          <tr>
+            <td colspan="8" class="show" style="padding: 0 0 20px 0;border-bottom:none;">开始时间：
+              <input type="text" name="start_time" id="start_time" value="<{$start_time}>">
+              &nbsp;结束时间：
+              <input type="text" name="end_time" id="end_time" value="<{$end_time}>">
+              &nbsp;<input  type="checkbox" name="is_prize" id="is_prize" <{if $is_prize}>checked<{/if}> value="1" style="width:15px; height:15px; position:relative;top:4px;">只看红单
+              &nbsp;
+              <input class="sub"  style="width:188px;" name="" type="submit" value="查询"></td>
+        </form>
+        </tr>
+        
+        <tr>
+          <th>方案类型</th>
+          <th align="center">总金额</th>
+          <th align="center">倍数</th>
+          <th align="center">彩票标识</th>
+          <th align="center">状态</th>
+          <th align="center">认购时间</th>
+          <th align="center">方案详情</th>
+		  <{if $can_show_ticket}><th align="center" >操作</th><{/if}>
+        </tr>
+        <{assign var=trade_money_in value=0}>
+        <{foreach from=$userTicketInfo item=userTicket name=ticket}>
+        <{assign var=trade_money_in value=$userTicket.money+$trade_money_in}>
+        <tr>
+          <td><div class="gdtype"> <{if $userTicket.partent_id}><span class="">&nbsp;跟&nbsp;</span><{/if}>&nbsp;<{$userTicket.sport|getPoolDesc:$userTicket.pool}>
+              <{*<strong class="" title="晒单"  title="晒单"><b>晒单</b></strong>*}> </div></td>
+          <td align="center"><{$userTicket.money}>元</td>
+          <td align="center"><{$userTicket.multiple}></td>
+          <td align="center"><{if $userTicket.print_state == 1}>
+            已出票
+            <{*$userTicketPrintStateDesc[$userTicket.print_state].desc*}> 
+            <{elseif $userTicket.print_state == 3}>
+            未出票
+            <{elseif $userTicket.print_state == 8}>
+            出票失败已退款
+            <{else}>
+            出票中
+            <{/if}> </td>
+          <td align="center"><div class="jiesuancaozuo"> <{if $userTicket.prize_state == 1}> <b>奖</b><{$userTicket.prize}>元&nbsp;
+              <{else}> <strong class=""> <{if $userTicket.prize_state}>
+              <{$userTicketPrizeStateDesc[$userTicket.prize_state].desc}>
+              <{else}>
+              未开奖
+              <{/if}> </strong> <{/if}> </div></td>
+          <td align="center"><{$userTicket.datetime}></td>
+          <td align="center"><div class="caozuo"><a target="_blank" href="<{$smarty.const.ROOT_DOMAIN}>/account/ticket/<{$userTicket.id}>.html" class="show_details1" userTicketId="<{$userTicket.id}>">方案详情</a></div></td>
+		  <{if $can_show_ticket}>
+		  	<{if $userTicket.combination_type==1}>
+		  	<td align="right"><div class="yishai"><a href="javascript::void(0);" class="show_ticket_cancel1" userTicketId="<{$userTicket.id}>">已晒单</a></div></td>
+		  	<{else}>
+		  	<td align="right"><div class="caozuo">
+              <{if $userTicket.partent_id==0}>
+            <a href="javascript::void(0);" class="add_show_ticket2" userTicketId="<{$userTicket.id}>">我要晒单</a>
+             <{/if}>
+            <{if $userTicket.u_id==3084 || $userTicket.u_id==1 || $userTicket.u_id==15510  || $userTicket.u_id==457 }>
+             
+            <{else}>
+             <!-- <a href="javascript::void(0);" class="add_show_ticket" userTicketId="<{$userTicket.id}>">加入晒单</a>-->
+            <{/if}>
+           
+          
+            </div></td>
+		  	<{/if}>
+		  	
+		  <{/if}>
+        </tr>
+        <{/foreach}>
+      </table>
+      <{if $previousUrl || $nextUrl}>
+      <div class="pageC">
+        <div class="pages"> <{if $previousUrl}> <a href="<{$previousUrl}>">上页</a> <{/if}>
+          <{if $nextUrl}> <a href="<{$nextUrl}>">下页</a> <{/if}> </div>
+      </div>
+      <{/if}> </div>
+  </div>
+</div>
+<!--投注记录 end-->
+<div id="light1" class="white_content">
+    <div class="MSCenter">
+      <h1>晒单设置<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+      <div class="sdanopenwindows">
+        <dl>
+          <dt>权限设置：</dt>
+          <dd>
+            <input type="radio" name="show_range" value="1" checked>
+            所有人可见</dd>
+          <dd>
+            <input type="radio" name="show_range" value="2">
+            跟单人可见</dd>
+           <dd>
+            <input type="radio" name="show_range" value="3">
+            方案截止后可见
+            </dd>  
+        </dl>
+        <dl>
+          <dt>跟单提成比例：</dt>
+          <dd>
+            <input type="radio" name="pay_rate" value="0" checked>
+            无</dd>
+          <dd>
+            <input type="radio" name="pay_rate" value="1">
+            1%</dd>
+          <dd>
+            <input type="radio" name="pay_rate" value="2">
+            2%</dd>
+          <dd>
+            <input type="radio" name="pay_rate" value="3">
+            3%</dd>
+          <dd>
+            <input type="radio" name="pay_rate" value="4">
+            4%</dd>
+			<dd>
+            <input type="radio" name="pay_rate" value="5">
+            5%</dd>
+        </dl>
+        <dl class="tips">
+          <dd><span>*</span><strong>温馨提示：</strong>提成比例指用户进行跟单后，方案中奖，需要扣除对应的比例给到晒单人。中奖奖金（指的是中奖额度-投注本金）！</dd>
+        </dl>
+        <dl>
+          <dd class="sub">
+          	<input id="add_show_ticket2" type="hidden" value="">
+            <input type="button" name="sd" value="提交" id="sd"  onClick="return mysd()">
+          </dd>
+        </dl>
+      </div>
+      <h2>智赢晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
+    </div>
+  </div>
+
+</body>
+</html>

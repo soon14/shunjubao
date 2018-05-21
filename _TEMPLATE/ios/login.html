@@ -1,0 +1,41 @@
+<{include file="header.html"}>
+<link href="<{'wap_login.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script language="javascript" src="<{'float.js'|getStaticsUrl}>"></script>
+<script type="text/javascript" src="<{'login.js'|getStaticsUrl}>"></script>
+</head><body>
+<div class="center">
+  <div class="logincenter">
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/passport/login.php?from=<{$from}>" name='frm_login' id='frm_login'>
+      <div class="wap_loginC">
+        <p class="name">您的用户名</p>
+        <p>
+          <input name="u_name" type="text" size="25" class="inputc1" id="u_name"/>
+        </p>
+        <p class="tip"><{if $msg.u_name}><span class=""><{$msg.u_name}></span><{else}><u class="none">此用户名可用</u><{/if}></p>
+        <p class="name">请输入密码</p>
+        <p>
+          <input name="u_pwd" type="password" size="25" class="inputc1" id="u_pwd"/>
+        </p>
+        <p class="tip"><{if $msg.pwd}><span class="none"><{$msg.pwd}></span><{else}><u class="none">密码正确</u><{/if}></p>
+        <{if $msg.loginerror}>
+        <p class="error"><{$msg.loginerror}></p>
+        <{/if}>
+        
+        <{*
+        <p><b>验证码：</b>
+          <input type="text" name="" size="15" class="inputc1" style="width:125px;">
+          <strong><img src="<{$smarty.const.STATICS_BASE_URL}>/i/yzm.gif"></strong><i>看不清？<a href="">换一张</a></i></p>
+        *}>
+        <p class="denglu">
+          <input name="submit" type="submit" value="登&nbsp;录" class="loginsub" />
+        </p>
+      </div>
+      <input type="hidden" name="from" value="<{$from}>" />
+    </form>
+  </div>
+</div>
+<!--center end-->
+<{include file="../ios/footer.html"}>
+<!--footer end-->
+</body>
+</html>

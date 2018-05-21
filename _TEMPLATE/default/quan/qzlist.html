@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>智赢圈子智赢竞彩智赢网</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="keywords" content=">" />
+<meta name="description" content="" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/wap_header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/wap_footer.css" />
+<link type="text/css" href="http://www.zhiying365365.com/www/statics/i/lib/css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="http://www.zhiying365365.com/www/statics/i/lib/css/nanoscroller.css" rel="stylesheet">
+<link type="text/css" href="http://www.zhiying365365.com/www/statics/i/lib/css/emoji.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/quan.css" />
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/q_top.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/nanoscroller.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/tether.min.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/config.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/util.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/jquery.emojiarea.js"></script>
+<script src="http://www.zhiying365365.com/www/statics/i/lib/js/emoji-picker.js"></script>
+<script>
+$(function() {
+  // Initializes and creates emoji set from sprite sheet
+  window.emojiPicker = new EmojiPicker({
+	emojiable_selector: '[data-emojiable=true]',
+	assetsPath: 'http://www.zhiying365365.com/www/statics/i/lib/img/',
+	popupButtonClasses: 'fa fa-smile-o'
+  });
+  // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+  // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+  // It can be called as many times as necessary; previously converted input fields will not be converted again
+  window.emojiPicker.discover();
+});
+</script>
+</head>
+<body>
+<div id="ffade" class="fblack_overlay"></div>
+<div id="dfade" class="d_overlay"></div>
+<!---->
+<!--打赏弹出start-->
+<div id="dlight1" class="d_content">
+  <div class="qshuo">
+    <dl>
+      <dt><a href="javascript:void(0)" onClick="document.getElementById('dlight1').style.display='none';document.getElementById('dfade').style.display='none'">取消</a><span> 打赏
+        <input type="submit" name="" value="打赏" >
+        </span></dt>
+    </dl>
+	<style>
+	.dashang h1{ font-size:14px; line-height:24px; font-weight:300; padding:0 0 10px 0;}
+	.dashang h1 em{ font-style:normal;color:#dc0000;}
+	</style>
+    <div class="dashang">
+	  <h1>您当前要给"<em>一注高富帅"</em>打赏，请选择以下打赏类型！</h1>
+      <ul>
+        <li>
+          <input type="radio" name="">
+          打赏积分</li>
+        <li>
+          <input type="radio" name="">
+          打赏彩金</li>
+      </ul>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><a href="" class="active">1元</a></td>
+          <td><a href="">2元</a></td>
+          <td><a href="">3元</a></td>
+          <td><a href="">4元</a></td>
+        </tr>
+        <tr>
+          <td><a href="">5元</a></td>
+          <td><a href="">6元</a></td>
+          <td><a href="">7元</a></td>
+          <td><a href="">8元</a></td>
+        </tr>
+        <tr>
+          <td><a href="">9元</a></td>
+          <td><a href="">10元</a></td>
+          <td><a href="">20元</a></td>
+          <td><a href="">50元</a></td>
+        </tr>
+      </table>
+      <div class="dssr">
+        <input type="text" value="输入打赏金额..." name="" >
+      </div>
+      <p>打赏说明：</p>
+      <p class="active">打赏可以选择以上默认额度或自行输入。打赏后将从自己账户扣除到对方账户上！</p>
+    </div>
+  </div>
+</div>
+<!--打赏弹出end-->
+<!---->
+<!--弹出评论start-->
+<form action="qzlist.php" method="post"  enctype="multipart/form-data" >
+  <div id="qlight1" class="q_content">
+    <div class="qshuo">
+      <dl>
+        <dt><a href="javascript:void(0)" onClick="document.getElementById('qlight1').style.display='none';document.getElementById('qfade').style.display='none'">取消</a><span> 发表信息
+          <input type="submit" name="" value="发&nbsp;表" >
+          <input name="action" type="hidden" value="add_action">
+          <input name="qid"  id="qid" type="hidden" value="<{$qid}>">
+          <input name="postid"  id="postid" type="hidden" value="<{$postid}>">
+          </span></dt>
+        <dd>
+      </dl>
+    </div>
+    <!--新更改 start-->
+    <div class="inner cover" style="width:97%; margin:0 auto;">
+      <p class="lead emoji-picker-container">
+        <textarea class="form-control textarea-control tmp" rows="3" placeholder="来说点什么吧...." id="q_content" name="q_content" data-emojiable="true"></textarea>
+      </p>
+    </div>
+    <!--新更改 end-->
+    <div class="qup">&nbsp;上传图片
+      <input type="file" class="file2" style="background:url(http://www.zhiying365365.com/www/statics/i/upjia.jpg) no-repeat 50%;color:#fff;overflow:hidden;" name="q_pic" id="q_pic" value="" />
+    </div>
+  </div>
+</form>
+<!--弹出评论end-->
+<!--center start--->
+<div class="qcenter">
+  <div class="qclist">
+    <div class="qclistTop" style="background:url(http://www.zhiying365365.com/www/statics/i/quanbg/<{$quan_info.tvalue2}>) no-repeat scroll transparent;background-size:100% 100%;height:100%;">
+      <dl>
+        <dt><a href=""><img src="http://www.zhiying365365.com/www/statics/i/<{$quan_info.tvalue2}>"></a></dt>
+        <dd><b><{$quan_info.tname}><span></span></b>
+          <p><{$quan_info.qnums|string_format:"%d"}>人&nbsp;&nbsp;帖子<{$quan_info.tnums|string_format:"%d"}></p>
+        </dd>
+      </dl>
+    </div>
+    <div class="qf">
+      <ul>
+        <li class="qb"> <a href="javascript:void(0)" onClick="document.getElementById('qlight1').style.display='block';document.getElementById ('qfade').style.display='block'">说点什么吧...</a> <span>
+          <input type="file" class="file" style=" background:url(http://www.zhiying365365.com/www/statics/i/icq1.jpg) no-repeat 10px;width:40px;height:40px;line-height:40px;overflow:hidden;" name="" id="" value="" />
+          </span></li>
+      </ul>
+    </div>
+    <div class="qnav">
+      <ul>
+        <li><a href="qzlist.php?t=nf&qid=<{$qid}>" <{if $t=="nf"}>class="active"<{/if}>>最新发布</a></li>
+        <li><a href="qzlist.php?t=nh&qid=<{$qid}>"  <{if $t=="nh"}>class="active"<{/if}>>最新回复</a></li>
+      </ul>
+    </div>
+    <!-- 所有贴子列表-->
+    <{if $t=="nf"}>
+    <div class="centerQz"> <{section name=a loop=$datalist}>
+      <dl>
+        <dt>
+          <p class="img"><img src="<{$datalist[a].img}>"></p>
+          <p><b><{$datalist[a].u_nick}>  <{if $datalist[a].isman=="1"}><strong>管理员</strong><{/if}> <br/>
+            <em><{$datalist[a].dtime|timeFormat}></em></b></p>
+        </dt>
+        <dd><em><{if $datalist[a].istop=="1"}>【置顶】<{/if}> </em><{$datalist[a].q_content}><br>
+<{if $datalist[a].q_pic!=""}><img width="100%" src="<{$datalist[a].q_pic}>"><{/if}>
+</dd>
+        <dd class="show"><em><a href="javascript:void(0)" onClick="document.getElementById('dlight1').style.display='block';document.getElementById ('dfade').style.display='block'">打赏</a></em> <b><a href="javasrcipt:void();" onClick="sogood('<{$datalist[a].id}>');">赞&nbsp;
+          <cc id='goods_<{$datalist[a].id}>'><{$datalist[a].goodnum}></cc>
+          </a></b><span><a  target="_blank" href="qzlist_replay.php?qid=<{$qid}>&postid=<{$datalist[a].id}>"><u>...</u><{$datalist[a].postnums}></a><i></i></span></dd>
+      </dl>
+      <{/section}> </div>
+    <div class="page"> <{$multi}> </div>
+    <{/if}>
+    <!-- end贴子列表-->
+    <!-- 所有回复列表-->
+    <{if $t=="nh"}>
+    <div class="centerQz"> <{section name=a loop=$datalist}>
+      <dl>
+        <dt>
+          <p class="img"><img src="<{$datalist[a].img}>"></p>
+          <p><b><{$datalist[a].u_nick}><br/>
+            <em><{$datalist[a].dtime|timeFormat}></em></b></p>
+        </dt>
+        <dd><{$datalist[a].q_content}><br>
+<{if $datalist[a].q_pic!=""}><img width="100%" src="<{$datalist[a].q_pic}>"><{/if}></dd>
+        <dd class="show">
+          <!--<strong><a href="">置顶</a></strong>-->
+          <b><a href="javasrcipt:void();" onClick="sogood_replay('<{$datalist[a].id}>');">赞&nbsp;
+          <cc id='goods_replay_<{$datalist[a].id}>'><{$datalist[a].goodnum}></cc>
+          </a></b></dd>
+      </dl>
+      <{/section}> </div>
+    <!--<div class="more">
+      <dd class="more"><a href="">查看更多</a></dd>
+    </div>
+    -->
+    <div class="page"> <{$multi}> </div>
+    <{/if}>
+    <!-- end回复列表-->
+  </div>
+</div>
+<script>
+
+	function sogood_replay(postid){
+		if(!postid){//未定义
+			alert('点赞出错!');
+				return true;
+		}
+		
+		$.ajax({
+				type:'POST', //URL方式为POST
+				url:'ajax_sogood_replay.php', //这里是指向登录验证的頁面
+				data:'postid='+postid, //把要验证的参数传过去 
+				dataType: 'json', //数据类型为JSON格式的验证 
+				success: function(data) {
+					if(data.status == "success") {
+						
+						var cur_num= Number($("#goods_replay_"+postid).html())+1;
+						$("#goods_replay_"+postid).html(cur_num);
+	
+						//alert('点赞成功');
+						return true;
+					}else{
+						alert('点赞出错!');
+						return true;
+					}
+				}
+			});
+
+}
+
+
+	function sogood(qid){
+		if(!qid){//未定义
+			alert('点赞出错!');
+				return true;
+		}
+		
+		$.ajax({
+				type:'POST', //URL方式为POST
+				url:'ajax_sogood.php', //这里是指向登录验证的頁面a
+				data:'qid='+qid, //把要验证的参数传过去 
+				dataType: 'json', //数据类型为JSON格式的验证 
+				success: function(data) {
+					if(data.status == "success") {
+						
+						var cur_num= Number($("#goods_"+qid).html())+1;
+						$("#goods_"+qid).html(cur_num);
+	
+						//alert('点赞成功');
+						return true;
+					}else{
+						alert('点赞出错!');
+						return true;
+					}
+				}
+			});
+
+}
+
+</script>
+<!--center end--->
+<!--footer start-->
+<div class="footer" style="background:none;"></div>
+<!--footer end-->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+</head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="9">
+	<div style="float:right; padding-right:15px;"> <a href="bascdata_value.php?action=add&bd_id=<!--{$bd_id}-->"><strong>添加数据</strong></a>  </div>
+    	<div  style="float:left; padding-left:10px;"><div align="left"><strong >查看</strong><strong style="color:#FF0000"><!--{$bd_id|show_datalist_type_name}--></strong>列表值</div></div>
+		
+		
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名称：<input name="keywords" id="keywords" value="<!--{$keywords}-->"/>
+         		<input type="submit" name="Submit" value="搜索" />
+		 		<input name="action" type="hidden" id="action" value="search" />	
+				<input name="bdid" type="hidden" id="bdid" value="<!--{$bd_id}-->" />	
+		
+		</td>
+  </tr>
+  <tr bgcolor="#F7F7F7">
+  	<td width="61"><div align="center"><STRONG>选中</STRONG></div></td>
+    <td width="205" bgcolor="#F7F7F7"><div align="center">名称</div></td>
+    <td width="176" bgcolor="#F7F7F7"><div align="center">值</div>      </td>
+    <td bgcolor="#F7F7F7"><div align="center">排序</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">备注</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">其它值</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">状态</div></td>
+    <td colspan="2" bgcolor="#F7F7F7"><div align="center"><strong>操作</strong></div></td>
+  </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#fff06d'">
+  	<td width="61"><div align="center"><input name='delid' type='checkbox' onclick="unselectall()" id="delid" value="<!--{$datalist[a].sysid}-->" /></div></td>
+    <td><div align="center"><!--{$datalist[a].tname}--></div></td>
+    <td><div align="center"><!--{$datalist[a].tvalue}-->
+      </div></td>
+    <td width="165"><div align="center"><!--{$datalist[a].orderby}--></div></td>
+    <td width="165"><div align="center"><!--{$datalist[a].tdesc}--></div></td>
+    <td width="165"><div align="center"><!--{$datalist[a].tvalue2}--></div></td>
+    <td width="165"><div align="center"><!--{$datalist[a].tstatus|show_tstatus}--></div></td>
+    <td width="127"><div align="center">[<a href="bascdata_value.php?action=edit&sysid=<!--{$datalist[a].sysid}-->&bd_id=<!--{$bd_id}-->"> 修改 </a>]</div></td>
+    <td width="76">[<a href="bascdata_value.php?action=delete&sysid=<!--{$datalist[a].sysid}-->&bd_id=<!--{$bd_id}-->" onclick="javascript:return confirm('您确认要删除吗？一旦删除将不可恢复');"> 删除 </a>]</td>
+  </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+  <td width="61"><div align="center">
+      <input name="chkAll" type="checkbox" id="chkAll" onclick=CheckAll(this.form) value="checkbox">全选
+    </div></td>
+    <td colspan="8">&nbsp;
+      
+      <label>
+      <input type="button" name="Submit3" onclick="funcDoAllData('删除将无法恢复，确认删除?','bascdata_value.php','1')"  value="删除选中" />
+      </label>
+    </a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="9"><div align="center">每页<font color="#FF0000"> <!--{ $pageSize }--></font>条 共<font color="#FF0000"><!--{ $page }--> </font>页  共<font color="#FF0000"><!--{ $totalRecord }--> </font>条记录<!--{ $multi }--></div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="9"><div align="center"></div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

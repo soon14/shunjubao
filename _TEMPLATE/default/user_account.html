@@ -1,0 +1,337 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$("#start_time").focus(function(){
+		if (!$("#start_time").val()) {
+		showCalendar('start_time', 'y-mm-dd');
+		}
+    });
+	
+	$("#end_time").focus(function(){
+        if (!$("#end_time").val()) {
+        showCalendar('end_time', 'y-mm-dd');
+        }
+    });	
+});
+</script>
+<!--用户中心账户明细 start-->
+<div class="URcenterTop none">
+  <ul>
+    <li><span></span>个人信息已经完善</li>
+    <li><i></i>银行卡信息未完善</li>
+    <{*
+    <li  class="none"><strong>可用红包余额：<{$userAccountInfo.rebate}>元</strong></li>
+    *}>
+    <li  class="none"><b>彩金：<{$userAccountInfo.gift}>元</b></li>
+    <li  class="none"><strong>可提现：<{$userAccountInfo.cash}>元</strong></li>
+    <{*
+    <li  class="none"><b>冻结资金：(帐户0.00元+红包0.00元)</b></li>
+    *}>
+  </ul>
+  <div class="clear"></div>
+</div>
+</div>
+<div class="Paymingxi">
+<div>
+  <div class="Paymingxi-top">
+    <ul id="tags">
+      <li class="selectTag"><a onClick="selectTag('tagContent0',this)" href="javascript:void(0)">账户明细</a></li>
+      <li><a onClick="selectTag('tagContent1',this)" href="javascript:void(0)">彩金明细</a></li>
+      <li><a onClick="selectTag('tagContent2',this)" href="javascript:void(0)">充值记录</a></li>
+      <li><a onClick="selectTag('tagContent3',this)" href="javascript:void(0)">购买记录</a></li>
+      <li><a onClick="selectTag('tagContent4',this)" href="javascript:void(0)">奖金派送</a></li>
+      <li class="show"><a onClick="selectTag('tagContent5',this)" href="javascript:void(0)">提款记录</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <form method="post">
+    <div class="timechaxun">
+      <ul>
+        <li>开始时间：
+          <input type="text" name="" id="start_time">
+        </li>
+        <li>结束时间：
+          <input type="text" name="" id="end_time">
+        </li>
+        <li>
+          <input type="submit" name="" value="查询">
+        </li>
+      </ul>
+    </div>
+  </form>
+  <div id="tagContent">
+    <div class="tagContent selectTag" id="tagContent0">
+      <!---->
+      <div>
+        <div>
+          <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>收入</td>
+                <td>支出</td>
+                <td>余额</td>
+                <td>交易类型</td>
+                <td>订单号</td>
+                <td>备注</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">213元 </td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">213元 </td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="pages"><a href="">上页</a><a href="" class="active">1</a><a href="">2</a><a href="">3</a><a href="">末页</a></div>
+        <div class="jiaoyi">
+          <p><b>支出交易笔数：<strong>0</strong></b><b>收入交易笔数：<strong>0</strong></b><b>支出金额合计：<span>0.00元</span></b><b>收入金额合计：<span>0.00元</span></b></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>
+		    1.您可以查询您的账户最近3个月内的账户明细，如需要查询全部明细，请联系智赢网客服服务电话：010-64344882 。 </p>
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div class="tagContent" id="tagContent1">
+      <div>
+        <div>
+          <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>收入</td>
+                <td>支出</td>
+                <td>余额</td>
+                <td>交易类型</td>
+                <td>订单号</td>
+                <td>备注</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">213元 </td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="jiaoyi">
+          <p><b>支出交易笔数：<strong>0</strong></b><b>收入交易笔数：<strong>0</strong></b><b>支出金额合计：<span>0.00元</span></b><b>收入金额合计：<span>0.00元</span></b></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>1.您可以查询您的账户最近3个月内的账户明细。<br/>
+            2.如果您添加了预付款，银行账户钱扣了，您在“智赢”账户还没有加上，请及时与我们联系，我们将第一时间为您处理！<br/>
+            3.如需要查询全部明细，请联系智赢网客服服务电话：010-64344882 。 </p>
+        </div>
+      </div>
+    </div>
+    <div class="tagContent" id="tagContent2" >
+      <div>
+        <div>
+          <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>收入</td>
+                <td>手续费</td>
+                <td>交易类型</td>
+                <td>订单号</td>
+                <td>备注</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="jiaoyi">
+          <p><b>充值次数：<strong>0</strong></b><span>充值金额：<strong>0</strong></span></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>1.您可以查询您的账户最近3个月内的账户明细。<br/>
+            2.如果您添加了预付款，银行账户钱扣了，您在“智赢”账户还没有加上，请及时与我们联系，我们将第一时间为您处理！<br/>
+            3.如需要查询全部明细，请联系智赢网客服服务电话：010-64344882 。 </p>
+        </div>
+      </div>
+    </div>
+    <div class="tagContent" id="tagContent3">
+      <div>
+        <div>
+          <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>支出</td>
+                <td>收入</td>
+                <td>手续费</td>
+                <td>交易类型</td>
+                <td>订单号</td>
+                <td>备注</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">23313元</td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+              <tr>
+                <td class="show">2024-02-11 </td>
+                <td class="show">13元</td>
+                <td class="show">213元</td>
+                <td class="show">2元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">67元</td>
+                <td class="show">0元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+              <tr>
+                <td class="show">2024-02-11 </td>
+                <td class="show">1213元</td>
+                <td class="show">3245元</td>
+                <td class="show">2元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="jiaoyi">
+          <p><b>支出交易笔数：<strong>0</strong></b><span>支出金额合计：<strong>0</strong></span></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>1.您可以查询您的账户最近3个月内的账户明细。<br/>
+            2.如果您添加了预付款，银行账户钱扣了，您在“智赢”账户还没有加上，请及时与我们联系，我们将第一时间为您处理！<br/>
+            3.如需要查询全部明细，请联系智赢网客服服务电话：010-64344882 。 </p>
+        </div>
+      </div>
+    </div>
+    <div class="tagContent" id="tagContent4">
+      <div>
+        <div>
+          <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>支出</td>
+                <td>收入</td>
+                <td>手续费</td>
+                <td>交易类型</td>
+                <td>订单号</td>
+                <td>备注</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">23313元</td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">双色球</td>
+                <td class="show">2014091233 </td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="jiaoyi">
+          <p><b>收入交易笔数：<strong>0</strong></b><span>收入金额合计：<strong>0</strong></span></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>1.您可以查询您的账户最近3个月内的账户明细。<br/>
+            2.如果您添加了预付款，银行账户钱扣了，您在“智赢”账户还没有加上，请及时与我们联系，我们将第一时间为您处理！<br/>
+            3.如需要查询全部明细，请联系智赢网客服服务电话：010-64344882 。 </p>
+        </div>
+      </div>
+    </div>
+    <div class="tagContent" id="tagContent5">
+      <div>
+        <div>
+         <table class="" width="850" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="width:850px; overflow:hidden;">
+            <tbody>
+              <tr>
+                <td>交易时间</td>
+                <td>支出</td>
+                <td>手续费</td>
+                <td>订单号</td>
+                <td>状态</td>
+                <td>备注</td>
+                <td>操作</td>
+              </tr>
+              <tr>
+                <td class="show">2014-02-11 </td>
+                <td class="show">213元</td>
+                <td class="show">0元</td>
+                <td class="show">2014091233</td>
+                <td class="show">正常 </td>
+                <td class="show">无</td>
+                <td class="show">无</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tips">暂时没有您的信息! </div>
+        <div class="jiaoyi">
+          <p><b>充值次数：<strong>0</strong></b><span>充值金额：<strong>0</strong></span></p>
+          <div class="clear"></div>
+        </div>
+        <div class="jiaoyi">
+          <p style="color:#999;"> <u>说明：</u>1.您可以查询您的账户最近3个月内的账户明细。<br/>
+            2.每个银行的到账时间是根据银行与我公司的结算频率计算的最长周期，如果实际到账时间过长，影响到您的正常消费，您可以联系我们的24小时
+            客服热线：4000-500-500 。<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--用户中心账户明细 end-->
+</body>
+</html>

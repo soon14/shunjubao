@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<script>
+function checkad_add(frm){
+    if(frm.dp_id.value==''){
+	  alert('请输入部门ID');
+	  frm.dp_id.focus();
+	  return false;
+	}
+    if(frm.dp_name.value==''){
+	  alert('请输入部门名称');
+	  frm.dp_name.focus();
+	  return false;
+	}
+}
+function CheckAll(form)
+  {
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled==false)
+       e.checked = form.chkAll.checked;
+    }
+  }
+</script>
+
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+<body style="margin:20px 0px 0px 8px;">
+   <form action="dept.php?action=add_action" method="post" enctype="multipart/form-data" name="frm" id="frm" onSubmit="return checkad_add(this);">
+	<table width="99%" border="0" align=center cellpadding="3" cellspacing=1 class="p_table_order">
+	<tr bgcolor="#FFFFFF">
+      <td><div align="right">部门ID：</div></td>
+	  <td width="942"><label>
+	    <input name="dp_id" class="input_text" type="text" id="dp_id" size="20">
+	  </label></td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+	  <td width="133"><div align="right">部门名称：</div></td>
+		<td><input name="dp_name" type="text" class="input_text" id="dp_name" size="32"></td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+	  <td><div align="right">部门权限：</div></td>
+	  <td> <table><tr>
+	  <!--{section name=a loop=$per_list}-->
+	    <td> <input type="checkbox" name="permission[<!--{$per_list[a].i}-->]" value="<!--{$per_list[a].mr_id}-->" />&nbsp;<!--{$per_list[a].mr_name}--></td>
+			<!--{if ($smarty.section.a.index+1) % 5 == 0}-->
+			</tr><tr>
+			<!--{/if}-->
+	  <!--{/section}-->
+	 </tr></table><input name="chkAll" type="checkbox" id="chkAll" onclick=CheckAll(this.form) value="checkbox">(全选)</td>
+	  </tr>
+	<tr bgcolor="#FFFFFF">
+	  <td><div align="right">备注：</div></td>
+	  <td><label>
+	    <textarea name="dp_desc" cols="30" class="input_text" rows="6" id="dp_desc"></textarea>
+	  </label></td>
+	  </tr>
+	<tr bgcolor="#FFFFFF">
+	  <td height="40" colspan="2"><div align="center">
+          <input type=submit name=btnSubmit value=" 提　交 " class="input_submit">     　　　　　
+          <input type=reset name=btnReset value=" 重　填 " class="input_submit">
+      </div></td>
+	  </tr>
+	</table>
+   </form>
+</body>
+</html>

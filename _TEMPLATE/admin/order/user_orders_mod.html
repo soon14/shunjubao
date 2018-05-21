@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<title>修改投注赔率</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3430318831" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/navigator.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/float.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/winmac.js"></script>
+<script language="javascript">
+var Domain = 'http://www.zhiying365365.com';
+var ZY_CDN = 'http://www.zhiying365365.com/www/statics';
+var TMJF = jQuery.noConflict(true);
+TMJF.conf = {
+    	cdn_i: "http://www.zhiying365365.com/www/statics/i"
+    	, domain: "http://www.zhiying365365.com"
+};
+</script>
+<script language="javascript" src="http://www.zhiying365365.com/www/statics/j/common.js"></script>
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/pms.js"></script>
+<link rel="shortcut icon" href="http://www.zhiying365365.com/www/statics/i/zy.icon" type="image/x-icon" />
+</head>
+<div class="clear"></div>
+<link href="http://www.zhiying365365.com/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
+<body>
+
+<form action="user_orders_mod.php?action=update" method="post">
+<input name="action" id="action" type="hidden" value="update">
+<input name="userTicketId" id="userTicketId" type="hidden" value="<{$userTicketId}>">
+
+
+<div class="center"> 
+  <!--确认投注center start-->
+  <div class="ConfirmationTz"> 
+    <!--投注确认过关方式 start-->
+    <div>
+      <div class="TouXiang">
+        <dl>
+          <dt><img src="<{$userInfo.u_img}>" /><{$userInfo.u_name}></dt>
+          <dd class="first">
+            <p id="ticket_prize"><span>方案奖金：</span><strong>0.00</strong></p>
+           
+          </dd>
+          <dd>
+            <p>方案类型：<i><{$userTicketInfo_list[0].spool}></i></p>
+            <p>认购时间：<i><{$userTicketInfo_total.datetime}></i></p>
+          </dd>
+          <dd>
+            <p>方案金额：<strong class="f300"><{$userTicketInfo_total.money}></strong></p>
+            <p>方案倍数：<i><{$userTicketInfo_total.multiple}></i>&nbsp;倍</p>
+          </dd>
+          <dd>
+            <p>过关方式：<em><{$userTicketInfo_total.user_select}></em></p>
+            <p><a href="http://www.zhiying365365.com/ticket/detail.php?userTicketId=<{$userTicketInfo_total.id}>" target="_blank">奖金明细</a></p>
+          </dd>
+          <dd>
+            <p>&nbsp;</p>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+      </div>
+      <!--方案内容 start-->
+      <table class="hacker" border="0" cellpadding="0" cellspacing="0" id="hacker">
+        <tbody id="detail_tr">
+          <tr>
+            <th>序号</th>
+            <th>场次</th>
+            <th>赛事</th>
+            <th>主队VS客队</th>
+            <th>我的选择</th>
+          </tr>
+          
+         <{foreach from=$userTicketInfo_list item=userTicket name=ticket}> 
+          
+          <tr>
+            <td valign="middle" class="x1"><{$smarty.foreach.ticket.iteration}></td>
+            <td valign="middle" class="x2"><{$userTicket.num}></td>
+            <td valign="middle" class="x3"><{$userTicket.l_code}></td>
+            <td valign="middle" class="x4"><div class="XinagQingL"><b><{$userTicket.h_cn}></b><span>VS</span><b><{$userTicket.a_cn}></b></div></td>
+            <td valign="middle" class="x5"><div><{$userTicket.option}></div></td>
+          </tr>
+          <{/foreach}>
+          
+          <tr>
+            <td colspan="5" valign="middle" class="x1"><input type="submit" name="button" id="button" value="确认修改">(请注意录入半角数字格式)
+            
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <!--方案内容 end--> 
+      <!--跟单用户 end--> 
+    </div>
+  </div>
+  <!--投注确认过关方式 end--> 
+</div>
+</form>
+
+</body>
+</html>

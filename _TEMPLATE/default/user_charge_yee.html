@@ -1,0 +1,88 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body style=" background:#f9f9f9;">
+<script language="javascript" src="<{'payment.js'|getStaticsUrl}>"></script> 
+<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script> 
+<script type="text/javascript">
+TMJF(function($) {
+});
+</script>
+<div class="head">
+  <h1><a href="/"></a><u></u>
+    <ul>
+      <li><!--<a href="/">返回首页</a>--><!--<span>|</span><a href="<{$smarty.const.ROOT_DOMAIN}>/account/user_center.php?p=account_log">用户中心</a>--></li>
+    </ul>
+  </h1>
+</div>
+<!--center start-->
+<div class="cnetr">
+  <div class="payname">
+    <ul>
+      <li>您当前使用的是易宝支付，实时到账，手续费为0。</li>
+      <li>充值账户：<b><{$userInfo.u_name}></b></li>
+      <li>账户余额：<strong>&yen;<{$userAccount.cash}>元</strong></li>
+    </ul>
+  </div>
+  <div class="pay"> 
+    <!---->
+    <form action='' method="post" id="gotocash">
+      <div class="paycenter">
+        <dl>
+          <dt>充值金额：</dt>
+          <dd>
+            <ul>
+              <li><a href="" class="charge_cash" payment="50">50元</a></li>
+              <li><a href="" class="charge_cash" payment="100">100元</a></li>
+              <li><a href="" class="charge_cash" payment="500">500元</a></li>
+              <li>
+                <div>
+                  <input type="text" name="" value="其他金额" style="width:90px;height:32px;line-height:32px;border-radius:2px;border:1px solid #ccc;text-align:center;" id="inputc1"/>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <dl class="show">
+          <dt>易宝支付：</dt>
+          <dd>
+            <ol>
+			  <li class="zhongguo"><a href="" class="pay_bank" pay_bank="BOC-NET-B2C">中国银行</a></li>
+              <li class="gongshang"><a href="" class="pay_bank" pay_bank="ICBC-NET-B2C">工商银行</a></li>
+              <li class="jianshe"><a href="" class="pay_bank" pay_bank="CCB-NET-B2C">建设银行</a></li>
+			  <li class="nongye"><a href="" class="pay_bank" pay_bank="ABC-NET-B2C">农业银行</a></li>
+              <li class="zhaoshang"><a href="" class="pay_bank" pay_bank="CMBCHINA-NET-B2C">招商银行</a></li>            
+              <li class="jiaotong"><a href="" class="pay_bank" pay_bank="BOCO-NET-B2C">交通银行</a></li>
+              <li class="xingye"><a href="" class="pay_bank" pay_bank="CIB-NET-B2C">兴业银行</a></li>
+              <li class="minsheng"><a href="" class="pay_bank" pay_bank="CMBC-NET-B2C">民生银行</a></li>
+              <li class="guangda"><a href="" class="pay_bank" pay_bank="CEB-NET-B2C">光大银行</a></li>             
+              <li class="pingan"><a href="" class="pay_bank" pay_bank="PINGANBANK-NET-B2C">平安银行</a></li>
+              <li class="zhongxin"><a href="" class="pay_bank" pay_bank="ECITIC-NET-B2C">中信银行</a></li>
+              <li class="shenfa"><a href="" class="pay_bank" pay_bank="SDB-NET-B2C">深圳发展银行</a></li>
+              <li class="guangfa"><a href="" class="pay_bank" pay_bank="GDB-NET-B2C">广发银行</a></li>
+              <li class="shanghai"><a href="" class="pay_bank" pay_bank="SHB-NET-B2C">上海银行</a></li>
+              <li class="pufa"><a href="" class="pay_bank" pay_bank="SPDB-NET-B2C">浦发银行</a></li>
+              <li class="huaxia"><a href="" class="pay_bank" pay_bank="HXB-NET-B2C">华夏银行</a></li>
+              <li class="beijing"><a href="" class="pay_bank" pay_bank="BCCB-NET-B2C">北京银行</a></li>              
+              <li class="youzheng"><a href="" class="pay_bank" pay_bank="POST-NET-B2C">邮政银行</a></li>
+            </ol>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="payNext">
+          <p><a href="" id="payment" target="_blank">下一步
+            <input id="u_id" type="hidden" value="<{$userAccount.u_id}>"/>
+            </a></p>
+        </div>
+      </div>
+    </form>
+    <!---->
+    <div class="bottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="<{$smarty.const.ROOT_DOMAIN}>/www/statics/i/ServicesQ.jpg"></a><br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>
+<!--center end--> 
+<{include file="foot.html"}> 

@@ -1,0 +1,155 @@
+<{include file="../admin/header.html"}>
+<style>
+.show input{width:35px;}
+</style>
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	$(".start_time").focus(function(){
+		showCalendar($(this).attr('itemId')+'start_time', 'y-mm-dd');
+	});
+	$(".end_time").focus(function(){
+		showCalendar($(this).attr('itemId')+'end_time', 'y-mm-dd');
+	});
+	$(".del").click(function(){
+		if(!confirm('确定删除这条记录吗？')) return false;
+		return true;
+	});
+	
+	$(".h").blur(function(){
+		var a = $(this).closest('tr').find('.a');
+// 		a.val(getHA($(this).val()));
+	});
+	$(".a").blur(function(){
+		var h = $(this).closest('tr').find('.h');
+// 		h.val(getHA($(this).val()));
+	});
+	function getHA(num) {
+		return 2-Number(num);
+	}
+});
+</script>
+<div class="UserRight">
+<form method="post">
+<div class="timechaxun" style="height:45px;">
+  <ul>
+  <li>
+    开始时间：
+      <input type="text" id="0start_time" name="start_time" itemId="0" class="start_time" value="<{$start_time}>">
+    结束时间：
+      <input type="text" id="0end_time" name="end_time" itemId="0" class="end_time" value="<{$end_time}>">&nbsp;&nbsp;|&nbsp;&nbsp;
+      <input type="submit" name="" value="查询">
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+</form>
+</div>
+<div class="URcenter" style="border:none;">
+  <h2>
+  <b>●</b>运营赛事信息修改</h2>
+  <br/>
+  <h3>说明：1、查询条件的开始和结束时间是创建运营比赛的时间；2、只需填写上盘或下盘赔率，然后点击空白处，另一个赔率自动计算；3、比赛的开始和结束时间需要填写完整格式,例如：2015-02-14 08:00:00</h3>
+  <div class="tabpading">
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="overflow:hidden;">
+      <tbody>
+        <tr>
+        <td>赛事id</td>
+        <td>玩法</td>
+        <td>场次(星期一第一场比赛：101)</td>
+        <td>主VS客</td>
+        <td>比赛开始时间</td>
+        <td>比赛结束时间</td>
+        <td>上盘赔率</td>
+        <td>让球数(+1,0,-1)</td>
+        <td>下盘赔率</td>
+        <td>赛果</td>
+        <td>彩果</td>
+        <td>比分</td>
+        <td>操作</td>
+        </tr>
+        <{*修改*}>
+        <{foreach from=$results item=item key=key}>
+        <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/admin/game/virtual_game.php">
+        <tr>
+        <input name="operate" type="hidden" value="edit"/>
+        <input name="id"  type="hidden" value="<{$item.id}>"/>
+        <td class="show"><{$item.id}></td>
+        <td class="show">
+        <select name="sport">
+        <{foreach from=$sportDesc item=item1 key=key1}>
+        <option value="<{$key1}>" <{if $item.sport==$key1}>selected<{/if}>><{$item1.desc}></option>
+        <{/foreach}>
+        </select>
+        </td>
+        <td class="show"><input type="text" name="num" value="<{$item.num}>"/></td>
+        <td><input type="text" name="host_team" value="<{$item.host_team}>"/>VS<input type="text" name="guest_team" value="<{$item.guest_team}>"/></td>
+        <td><input id="<{$item.id}>start_time" type="text" name="start_time" itemId="<{$item.id}>" class="start_time" value="<{$item.start_time}>"></td>
+        <td><input id="<{$item.id}>end_time" type="text" name="end_time" itemId="<{$item.id}>" class="end_time" value="<{$item.end_time}>"></td>
+        <td class="show"><input class="h" type="text" name="h" value="<{$item.h}>"></td>
+        <td class="show"><input type="text" name="remark" value="<{$item.remark}>"></td>
+        <td class="show"><input class="a" type="text" name="a" value="<{$item.a}>"></td>
+        <td class="show">
+         <select name="result">
+        <{foreach from=$resultDesc item=item1 key=key1}>
+        <option value="<{$key1}>" <{if $item.result==$key1}>selected<{/if}>><{$item1.desc}></option>
+        <{/foreach}>
+        </select></td>
+        <td class="show">
+         <select name="lottery_result">
+        <{foreach from=$resultDesc item=item1 key=key1}>
+        <option value="<{$key1}>" <{if $item.lottery_result==$key1}>selected<{/if}>><{$item1.desc}></option>
+        <{/foreach}>
+        </select></td>
+        <td class="show"><input type="text" name="score" value="<{$item.score}>"></td>
+        <td class="show"><input type='submit' value="修改">
+        <a href="<{$smarty.const.ROOT_DOMAIN}>/admin/game/virtual_game.php?operate=del&id=<{$item.id}>" class="del">删除</a>
+        </td>
+        </tr>
+        </form>
+        <{/foreach}>
+        <form method="post" action="">
+        <tr>
+        <{*新建*}>
+        <td class="show">创建比赛后自动生成</td>
+        <td class="show">
+        <select name="sport">
+        <{foreach from=$sportDesc item=item1 key=key1}>
+        <option value="<{$key1}>"><{$item1.desc}></option>
+        <{/foreach}>
+        </select>
+        </td>
+        <td class="show"><input type="text" name="num" value=""/></td>
+        <td><input type="text" name="host_team" value=""/>VS<input type="text" name="guest_team" value=""/></td>
+        <td><input id="newstart_time" type="text" name="start_time" itemId="new" class="start_time" value=""></td>
+        <td><input id="newend_time" type="text" name="end_time" itemId="new" class="end_time" value=""></td>
+        <td class="show"><input class="h" type="text" name="h" value=""></td>
+        <td class="show"><input type="text" name="remark" value="0"></td>
+        <td class="show"><input class="a" type="text" name="a" value=""></td>
+        <td class="show"><select name="result">
+        <{foreach from=$resultDesc item=item1 key=key1}>
+        <option value="<{$key1}>"><{$item1.desc}></option>
+        <{/foreach}>
+        </select></td>
+        <td class="show">
+         <select name="lottery_result">
+        <{foreach from=$resultDesc item=item1 key=key1}>
+        <option value="<{$key1}>"><{$item1.desc}></option>
+        <{/foreach}>
+        </select></td>
+        <td class="show"><input type="text" name="score" value=""></td>
+        <td class="show"><input type='submit' value="添加"><input type="hidden" name="operate" value="add"></td>
+        </tr>
+        </form>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

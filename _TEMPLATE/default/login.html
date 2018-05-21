@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<title>用户登录-智赢网智赢彩票，中奖率最高的网站。</title>
+<meta name="keywords" content="用户登录,智赢网,智赢彩票" />
+<meta name="description" content="用户登录-智赢网智赢彩票，中奖率最高的网站。" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="<{'header.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link href="<{'footer.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<{'login.js'|getStaticsUrl}>"></script>
+</head>
+<body>
+<!--页面头部 start-->
+<div class="head">
+  <h1><a href="/"><i>用户登录</i></a></h1>
+</div>
+<!--页面头部 end-->
+<!--center start-->
+<div class="loginC">
+  <div class="loginCleft">
+    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/passport/login.php?from=<{$from}>" name='frm_login' id='frm_login'>
+      <div class="error"> <{if $msg.pwd}><span class="none"><{$msg.pwd}></span><{else}><u class="none">密码正确</u><{/if}>
+        <{if $msg.loginerror}> <span><{$msg.loginerror}></span> <{/if}> </div>
+      <dl>
+        <dt>用户名</dt>
+        <dd>
+          <input name="u_name" type="text" size="25" id="u_name"/>
+          <{if $msg.u_name}><span><{$msg.u_name}></span><{else}><em style="display:none">用户名可用</em><{/if}> </dd>
+      </dl>
+      <dl>
+        <dt>登录密码</dt>
+        <dd>
+          <input name="u_pwd" type="password" size="25" id="u_pwd"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd class="tijiao">
+          <input name="submit" type="submit" value="登&nbsp;录" />
+        </dd>
+      </dl>
+      <input type="hidden" name="from" value="<{$from}>" />
+    </form>
+    <dl>
+      <dt></dt>
+      <dd><a href="<{$smarty.const.ROOT_DOMAIN}>/passport/forgot.php">忘记密码？</a></dd>
+    </dl>
+    <div class="lianhelogin">
+      <h2>使用合作网站登录</h2>
+      <ul>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/QQlogin.gif"><a href="<{$connect_urls[2]}>">QQ登录</a></li>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/alipaylogin.gif"><a href="<{$connect_urls[1]}>">支付宝登录</a></li>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weixin2.gif"><a href="<{$connect_urls[3]}>">微信登录</a></li>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weibologin.gif"><a href="<{$connect_urls[4]}>">微博登录</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="loginRight">
+    <h1>我们的优势</h1>
+    <p>业界中奖率最高的网站</p>
+    <p>数千万彩民的信赖</p>
+    <p>每日赛事精选推荐</p>
+    <p>晒单中心红的不要不要</p>
+    <p>最及时、最全面、最专业的彩票新闻</p>
+    <p>提款瞬间秒到</p>
+    <p></p>
+    <p><a href="http://www.zhiying365365.com/passport/reg.php" style="font-size:14px;color:#dc0000;">我要注册</a></p>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--center end-->
+<!--footer start-->
+<{include file="foot.html"}>
+<!--footer end-->
+</div>

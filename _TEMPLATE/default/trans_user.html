@@ -1,0 +1,114 @@
+<{include file="header.html"}>
+<link href="<{'header.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<script>
+TMJF(function($) {
+	var root_domain = "<{$smarty.const.ROOT_DOMAIN}>";var connect_id = "<{$connect_info.id}>";$("#verify_pwd").click(function(){
+		$.post(root_domain + '/connect/ajax_connect.php'
+	            , {	connect_id:connect_id,
+					u_name: $("#u_name").val(),
+					u_pwd:$("#u_pwd").val(),
+					type:'verify_pwd'
+	              }
+	            , function(data) {
+	            	alert(data.msg);if (data.ok) {
+// 	            		window.location.reload(true);} else {
+	            		
+	            	}
+	            }
+	            , 'json'
+	        );});$("#verify_uname").click(function(){
+		$.post(root_domain + '/connect/ajax_connect.php'
+	            , {	connect_id:connect_id,
+					u_name: $("#u_name1").val(),
+					type:'verify_uname'
+	              }
+	            , function(data) {
+	            	alert(data.msg);if (data.ok) {
+// 	            		window.location.reload(true);} else {
+	            		
+	            	}
+	            }
+	            , 'json'
+	        );});$("#bind_user").click(function(){
+		$.post(root_domain + '/connect/ajax_connect.php'
+	            , {	connect_id:connect_id,
+					u_name: $("#u_name").val(),
+					u_pwd:$("#u_pwd").val(),
+					type:'bind_user'
+	              }
+	            , function(data) {
+	            	alert(data.msg);if (data.ok) {
+// 	            		window.location.reload(true);} else {
+	            		
+	            	}
+	            }
+	            , 'json'
+	        );});$("#create_new").click(function(){
+		$.post(root_domain + '/connect/ajax_connect.php'
+	            , {	connect_id:connect_id,
+					u_name: $("#u_name1").val(),
+					type:'create_new'
+	              }
+	            , function(data) {
+	            	alert(data.msg);if (data.ok) {
+// 	            		window.location.reload(true);} else {
+	            		
+	            	}
+	            }
+	            , 'json'
+	        );});});</script>
+</head><body>
+<div class="head">
+  <h1><a href="/"><i>第三方联合登录</i></a></h1>
+</div>
+<div class="loginC">
+  <div class="loginCleft">
+    <h1 style="font-size:20px; font-family:'微软雅黑';font-weight:300;height:70px;line-height:20px;padding:0 0 0 20px;"><img src="http://www.zhiying365365.com/www/statics/i/scrollTip.gif" style=" position:relative;top:4px;">&nbsp;&nbsp;您正在使用<b style="color:#dc0000;font-size:20px;">“<{$typeDesc[$connect_info.type].desc}>帐号”</b>登录智赢网！</h1>
+    <{if $same_user}>
+    <div class="error"> 您的用户名在智赢网已经被注册过！</div>
+    <{/if}>
+    <dl>
+      <dt>用户名</dt>
+      <dd>
+        <input type='text'  style="width:135px;" id='u_name1' value="<{$connect_info.c_name}>"/>
+        <input type='button' style="width:115px;height:34px;line-height:30px;top:1px;" class="code" value='验证用户名' id="verify_uname"/>
+      </dd>
+    </dl>
+    <dl>
+      <dt></dt>
+      <dd class="tijiao">
+        <input type='submit' value='创建新帐号' id="create_new"/>
+      </dd>
+    </dl>
+    <dl>
+      <dt>已有帐号</dt>
+      <dd>
+        <input type='text' class="inputc1" id='u_name' value=""/>
+      </dd>
+    </dl>
+    <dl>
+      <dt>登录密码</dt>
+      <dd>
+        <input type='password' style="width:135px;" id='u_pwd' value=""/>
+        <input type='button' style="width:115px;height:34px;line-height:30px;top:1px;" class="code" value='验证密码' id="verify_pwd"/>
+      </dd>
+    </dl>
+    <dl>
+      <dt></dt>
+      <dd class="tijiao">
+        <input type='submit' value='关联此帐号' id="bind_user"/>
+      </dd>
+    </dl>
+  </div>
+  <div class="loginRight">
+    <h1>合作网站登录</h1>
+    <p>用合作站账号直接登录，方便又快捷。 </p>
+    <p>用户购彩信息，保证您的隐私和安全。</p>
+    <p>合作站账户操作便捷，购彩、充值提款畅通无阻。</p>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--页面底部-->
+<{include file="foot.html"}>
+<!--页面底部-->

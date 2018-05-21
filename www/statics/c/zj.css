@@ -1,0 +1,198 @@
+.center{background:url(http://www.zhiying365365.com/www/statics/i/bg_footballer_zj.jpg) repeat-x;}
+.NewsNav{padding:10px 0 0 0;line-height:40px;position:relative;}
+.NewsNav h1{font-size:12px;font-weight:300;width:1000px;margin:0 auto;text-align:left;height:50px;position:relative;}
+.NewsNav h1 ul{float:left;position:absolute;top:40px;right:5px;}
+.NewsNav h1 ul li{float:left;}
+.NewsNav h1 ul li a{height:40px;line-height:40px;width:200px;background:#CA002F;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:16px;font-weight:300;font-family:'微软雅黑';}
+.NewsNav h1 ul li a:hover{background:#ac0000;}
+.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://www.zhiying365365.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:50px;line-height:50px;display:block;float:left;text-align:center; display:none;}
+.NewsNav h1 em{font-size:26px;font-weight:300;color:#555;font-family:'微软雅黑';padding:0 0 0 10px; position:relative;top:20px;}
+.NewsNav h1 em span{font-size:26px;font-weight:300;color:#555;font-family:'微软雅黑';}
+.center{text-align:left;overflow:hidden;}
+.tipsters{height:132px;margin:0 auto;background:url(http://www.zhiying365365.com/www/statics/i/bg_footballer_2.jpg) no-repeat top center;}
+.haochu{width:1000px;margin:10px auto;text-align:left;}
+.haochu dl{height:50px;line-height:50px;position:relative;}
+.haochu dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:30px;height:30px;line-height:30px;text-align:center;background:#ddd url(http://www.zhiying365365.com/www/statics/i/n1bj.png) no-repeat;color:#fff;font-size:24px;font-weight:300;position:relative;top:2px;}
+.haochu dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;font-size:12px;}
+.haochu dl dd.link{padding:0 0 0 35px;position:absolute;top:0;}
+.haochu dl dd.link a{height:48px;line-height:22px;width:50px;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:16px;font-weight:300;font-family:'微软雅黑';background:#0099CC url(http://www.zhiying365365.com/www/statics/i/T1CmSdFHpcXXaCG0rh-50-50.png) no-repeat;padding:2px 0 0 0;}
+.haochu dl dd.link a:hover{}
+.zjfengyunbang{}
+.zjfengyunbang h1{background:#eeeee0;}
+.zjfengyunbang h1 b{width:1000px;margin:0 auto;text-align:left;font-size:20px;font-weight:300;padding:15px 0;font-family:'微软雅黑';display:block;}
+.zjfengyunbang h1 b em{position:relative;right:5px;top:-4px; float:right; font-style:normal;}
+.zjfengyunbang h1 b em a{color:#0099CC;}
+.zjfengyunbang h1 b em a:hover{color:#dc0000; text-decoration:underline;}
+.zjfengyunbang dl{width:1000px;margin:0 auto;text-align:left;padding:15px 0 0 0;clear:both;}
+.zjfengyunbang dl dt{width:200px;float:left;height:310px;}
+.zjfengyunbang dl dt p{width:185px;height:295px;border:1px solid #ccc;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;position:relative;}
+.zjfengyunbang dl dt p:hover{border:1px solid #dc0000;}
+.zjfengyunbang dl dt p img{width:183px;height:200px;padding:1px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.zjfengyunbang dl dt p b{display:block;height:30px;line-height:30px;font-size:14px;font-weight:900;}
+.zjfengyunbang dl dt p strong{display:block;height:24px;line-height:24px;font-size:12px;font-weight:300;}
+.zjfengyunbang dl dt p strong em{color:#dc0000;font-style:normal;}
+.zjfengyunbang dl dt p strong u{color:#dc0000;font-style:normal;text-decoration:none;}
+.zjfengyunbang dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.zhiying365365.com/www/statics/i/typecur.png) no-repeat left center;padding:0 0 0 15px;}
+.zjfengyunbang dl dt p span{position:absolute;bottom:94px;left:0;height:24px;line-height:24px;text-align:center;width:185px;display:;}
+.zjfengyunbang dl dt p span a{padding:0;background:none;height:24px;line-height:24px;width:185px;cursor:pointer;opacity:0.7;filter:alpha(opacity=70);display:block;background:#fff;}
+.zjfengyunbang dl dd{float:left;width:146px;height:292px;border:2px dashed #ccc;text-align:left;line-height:44px;padding:0 0 0 50px;font-family:'微软雅黑';}
+.zjfengyunbang dl dd h2{font-size:18px;font-weight:300;padding:50px 0 0 0;}
+.zjfengyunbang dl dd h3{font-size:18px;font-weight:300;}
+.zjfengyunbang dl dd h4{font-size:18px;font-weight:300;}
+.zjfengyunbang dl dd h5{font-size:18px;font-weight:300;margin:10px 0 0 15px;}
+.zjlist{}
+.zjlist h1{background:#eeeee0;}
+.zjlist h1 b{width:1000px;margin:0 auto;text-align:left;font-size:26px;font-weight:300;padding:15px 0;font-family:'微软雅黑';display:block;}
+.zjlist h1 b em{float:right;font-style:normal;font-size:12px;font-weight:300;font-family:'宋体';}
+.zjlist h1 b em span{font-size:12px;font-weight:300;padding:0 5px;}
+.zjlist h1 b em a{text-decoration:none;color:#000;}
+.zjlist h1 b em a:hover{text-decoration:none;}
+.zjlist dl{width:1010px;margin:0 auto;text-align:left;padding:15px 0 0 0;position:relative;left:-5px;}
+.zjlist dl dt{float:left;height:310px;padding:0 0 0 15px;}
+.zjlist dl dt p{width:185px;height:295px;border:1px solid #ccc;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;text-align:center;position:relative;}
+.zjlist dl dt p img{width:183px;height:200px;padding:1px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.zjlist dl dt p b{display:block;height:30px;line-height:30px;font-size:14px;font-weight:900;}
+.zjlist dl dt p strong{display:block;height:24px;line-height:24px;font-size:12px;font-weight:300;}
+.zjlist dl dt p strong em{color:#dc0000;font-style:normal;}
+.zjlist dl dt p strong u{color:#dc0000;font-style:normal;text-decoration:none;}
+.zjlist dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.zhiying365365.com/www/statics/i/typecur.png) no-repeat left center;padding:0 15px 0 15px;}
+.zjlist dl dt p span{position:absolute;bottom:94px;left:0;height:24px;line-height:24px;text-align:center;width:185px;}
+.zjlist dl dt p span a{padding:0;background:none;height:24px;line-height:24px;width:185px;cursor:pointer;opacity:0.7;filter:alpha(opacity=70);display:block;background:#fff;}
+.zjlist dl dd{float:left;width:133px;height:292px;border:2px dashed #ccc;text-align:left;line-height:44px;padding:0 0 0 50px;font-family:'微软雅黑';position:relative;left:14px;margin:0 15px 0 0;}
+.zjlist dl dd h2{font-size:18px;font-weight:300;padding:50px 0 0 0;}
+.zjlist dl dd h3{font-size:18px;font-weight:300;}
+.zjlist dl dd h4{font-size:18px;font-weight:300;}
+.zjlist dl dd h5{font-size:18px;font-weight:300;margin:10px 0 0 15px;}
+.hacker{width:1000px;padding:0;margin:10px auto;text-align:center;}
+.hacker tr:hover{background:#FFE3C1;}
+.odd{background:#fff;height:32px;line-height:32px;padding:0;margin:0;}
+.even{background:#F2F2F2;height:32px;line-height:32px;padding:0;margin:0;}
+.hacker td{border-right:1px solid #e2e2e2;padding:0;margin:0;border-bottom:1px solid #ccc;padding:0 3px;height:30px;}
+.hacker th{background:#545454;border-right:1px solid #fff;font-weight:300;border-bottom:1px solid #fff;padding:2px 0;margin:0;color:#fff;}
+.hackermx td{border-right:1px solid #e2e2e2;padding:0;margin:0;border-bottom:1px solid #ccc;padding:0 3px;height:auto;}
+.hackermx th{background:#545454;border-right:1px solid #fff;font-weight:300;border-bottom:1px solid #fff;padding:0;margin:0;}
+.hackermx tr:hover{background:#FFE3C1;}
+table{margin:0 auto;width:100%;text-align:center;border:1px solid #ccc;border-bottom:none;border-right:none;font-size:12px;}
+.pic{}
+.pic img{width:25px;height:25px;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; position:relative;top:6px;}
+.duiName{text-align:center;height:30px;width:200px;margin:0 auto;position:relative;left:5px;}
+.duiName b{width:80px;text-align:right;float:left;font-size:12px;font-weight:300;height:30px;line-height:30px;overflow:hidden;color:#000;}
+.duiName u{text-decoration:none;float:left;width:20px;text-align:center;padding:0 3px;font-size:12px;color:#000;height:30px;line-height:30px;}
+.duiName strong{width:80px;text-align:left;float:left;font-size:12px;font-weight:300;height:30px;line-height:30px;overflow:hidden;color:#000;}
+.shenglv{color:#dc0000;}
+.hdingyue{}
+.hdingyue a{background:#CA002F;color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:68px;height:24px;line-height:24px;display:block;margin:0 auto;text-align:center;font-size:12px;}
+.hdingyue a:hover{}
+.sharepages{clear:both;text-align:center;padding:20px 0;height:30px;line-height:30px;width:600px;margin:0 auto;}
+.sharepages a{border:1px solid #ccc;padding:5px 10px;color:#000;font-size:14px;margin:0 3px;border-radius:1px;}
+.sharepages span{background:#dc0000;padding:5px 10px;color:#000;font-size:14px;margin:0 3px;border-radius:1px;color:#fff;}
+.sharepages span.disabled{border:1px solid #ccc;padding:5px 10px;color:#000;font-size:14px;margin:0 3px;border-radius:1px; background:none;}
+.sharepages a:hover{border:1px solid #dc0000;background:#f9f9f9;}
+.sharepages a.hover{border:1px solid #dc0000;background:#fff;background:#416C97;color:#fff;}
+.black_overlay{display:none;background-color:#999;width:100%;height:100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+.white_content{display:none;left:0%;/*FF IE7*/
+top:10%;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/}
+.dyCenter{border:2px solid #888;width:600px;height:400px;margin:0 auto;text-align:left;background:#fff;padding:10px;position:relative;margin:28px auto auto auto;}
+.dyCenter h1{font-size:18px;font-weight:300;font-family:'微软雅黑';border-bottom:1px solid #ccc;height:40px;line-height:40px;position:relative;background:url(http://www.zhiying365365.com/www/statics/i/msg.gif) no-repeat left center;padding:0 0 0 18px;}
+.dyCenter h1 a{padding:0 0 0 10px;position:relative;top:-3px;color:#565656;}
+.dyCenter h2{font-size:12px;font-weight:300;font-family:'';height:24px;line-height:24px;text-align:center;background:#f6f6f6;position:absolute;left:0;bottom:0;display:block;width:620px;color:#aaa;}
+.dyCenter h2 span{color:red;padding:0 3px 0;position:relative;top:2px;}
+.dyCenter h1 span{position:absolute;right:5px;}
+.dyCenter h1 span a{color:#dc0000;font-size:14px;font-weight:300;}
+.dyCenter h1 span a:hover{}
+.dyother{padding:10px 0;}
+.tips{-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;border:1px solid #FFFF66;padding:3px 0 5px 0;background:#FFFF99;margin:15px auto auto auto;}
+.tips p{background:url(http://www.zhiying365365.com/www/statics/i/mini_warning.png) no-repeat left center;padding:0 0 0 18px;}
+.dyother{padding:20px 0 0 0;}
+.dyother dl{width:500px;margin:0 auto;text-align:left;height:30px;display:block;height:36px;line-height:36px;}
+.dyother dl.dy{padding:20px 0 0 60px;}
+.dyother dl dt{float:left;width:90px;text-align:right;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.dyother dl dd{float:left;}
+.dyother dl dd ul{float:left;}
+.dyother dl dd ul li{float:left;padding:0 2px;}
+.dyother dl dd ul li input{position:relative;top:1px;}
+.dingyuesub{background:#b70408;border:none;border-radius:5px;color:#fff;cursor:pointer;font-family:'微软雅黑';font-size:18px;font-weight:300;letter-spacing:2px;line-height:40px;margin:0;text-align:center;width:140px;}
+.feiyong{width:480px;margin:0 auto;text-align:left;line-height:24px;padding:20px 0 0 0;color:#565656;}
+.feiyong span{color:red;padding:0 3px 0;position:relative;top:2px;}
+.feiyong em{display:block;font-style:normal;padding:0 0 0 11px;}
+.zjshow{margin:0 auto;text-align:left;background:#fff;}
+.showTop{height:315px;margin:0 auto 15px auto;text-align:left;background:#fff;}
+.showTop h1{font-size:20px;font-weight:300;font-family:'微软雅黑';height:40px;line-height:40px;border-bottom:1px dotted #ccc;width:1000px;margin:0 auto;padding:0;position:relative;}
+.showTop h1 span{font-size:12px;font-weight:300;position:absolute;right:0;font-family:'宋体';color:#666;}
+.showTop h1 span em{font-style:normal;color:red;padding:0 5px 0 0;position:relative;top:0px;}
+.showTop dl{padding:15px 0;}
+.showTop dl dt{float:left;}
+.showTop dl dt img{width:200px;height:240px;border:1px solid #fff; margin:2px; padding:3px; background:#fff;}
+.showTop dl dd{float:left;padding:5px 0 0 25px;}
+.showTop dl dd h2{width:700px;font-size:12px;font-weight:300;text-indent:25px;padding:0 0 20px 0; line-height:24px;}
+.showTop dl dd p{padding:0 0 0 25px;height:30px;line-height:30px;}
+.showTop dl dd p input{position:relative;top:2px;}
+.showTop dl dd ul{padding:20px 0 0 25px;}
+.showTop dl dd ul li{}
+.showTop dl dd ul li input{}
+.showCur{width:1000px;margin:0 auto;text-align:left; padding:0 0 30px 0;}
+.zjtop{height:335px;}
+.zjtab{height:40px;line-height:40px;}
+.zjtab ul{float:left;height:40px;line-height:40px; padding:0 0 0 10px;}
+.zjtab ul li{float:left;width:100px;height:39px;line-height:39px;border:1px solid #ccc;margin:0 10px 0 0;text-align:center;}
+.zjtab ul li a{display:block;background:#f9f9f9;color:#333;font-size:12px;font-weight:300;}
+.zjtab ul li a:hover{}
+.zjtab ul li a.active{background:#fff;border-bottom:1px solid #fff;overflow:hidden;color:#dc0000;font-weight:900; font-size:14px; font-family:'';}
+.zjinfor{border:1px solid #ccc;padding:10px;background:#fff; min-height:300px;}
+.service{text-indent:25px;line-height:25px;}
+.zhuangTai{}
+.zhuangTai b{font-size:12px;font-weight:300;}
+.zhuangTai strong{position:relative;top:3px;}
+.zhuangTai strong span{background:url(http://www.zhiying365365.com/www/statics/i/spc1.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
+.zhuangTai strong em{background:url(http://www.zhiying365365.com/www/statics/i/apc2.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
+.shenqingC{width:1000px;margin:15px auto;text-align:left;padding:20px 0 40px 0;height:270px;}
+.shenqingC ol{width:1000px;margin:0 auto;display:block;clear:both;}
+.shenqingC ol li{float:left;height:50px;}
+.shenqingC ol li b{float:left;width:100px;height:30px;line-height:30px;text-align:right;font-size:12px;font-weight:300;}
+.input{border:1px solid #ccc;padding: 8px 5px 9px;width:268px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+textarea{width:410px;height:100px;font-size:12px;padding:8px;line-height:22px;border:1px solid #ccc;}
+.sqxg{padding:55px 0 0 130px;line-height:30px;color:#888;}
+.sqxg h2{font-size:18px;font-weight:300;font-family:'微软雅黑';color:#000;padding:0 0 10px 0;color:#000;}
+.sqbiaodan{width:500px;background:url(http://www.zhiying365365.com/www/statics/i/category_lbg.png) no-repeat right center;padding:20px 0 10px 0;}
+.sqbiaodan p{height:50px;display:block;}
+.sqbiaodan p.name{background:url(http://www.zhiying365365.com/www/statics/i/Userman.jpg) no-repeat 25px 5px;}
+.sqbiaodan p b{width:80px;height:50px;line-height:50px;text-align:right;float:left;}
+.sqbiaodan p.sub{padding:10px 0 0 100px;}
+.sqbiaodan p.sub input{padding: 8px 5px 9px;width:268px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;border:none;background:#CE050B;color:#fff;font-size:14px;font-weight:900;}
+.sqbiaodan p.sub:hover{#EC0000}
+.sqbiaodan p span{color:#888;padding:0 0 0 10px;}
+.sqbiaodan p span em{ font-style:normal;color:#dc0000;position:relative;top:2px;padding:0 3px 0 0;}
+.text{line-height:24px;padding:10px;color:#888;border-bottom:1px solid #e7e7e7; background:#F8F6EE; width:940px; margin:0 auto; text-align:left;}
+.box h1{padding:0 0 0 10px;height:34px;line-height:34px;border-bottom:1px solid #e7e7e7;font-weight:bold; font-size:12px; font-weight:300; background:url(http://www.zhiying365365.com/www/statics/i/Icon1.jpg) no-repeat left center; margin:0 10px;}
+.box h1 span{ float:right; font-size:12px; font-weight:300;color:#999;}
+.box{position:relative;}
+.listtd{background:#f9f9f9;}
+

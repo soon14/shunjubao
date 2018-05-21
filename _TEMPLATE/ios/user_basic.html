@@ -1,0 +1,58 @@
+<{include file="header.html"}>
+<{include file="top.html"}>
+<{include file="userinfor.html"}>
+<link href="<{'app_user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="<{'calendar.css'|getStaticsUrl}>" >
+<script type="text/javascript" src="<{'calendar.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-zh.js'|getStaticsUrl}>" ></script>
+<script type="text/javascript" src="<{'calendar-setup.js'|getStaticsUrl}>"></script>
+</head><body>
+<!--center start-->
+<script>
+TMJF(function($){
+	$("#birth_date").focus(function(){
+	    if (!$("#birth_date").val()) {
+	    showCalendar('birth_date', 'y-mm-dd');
+	    }
+	});	
+});
+</script>
+<!--用户中心基本信息 start-->
+<div class="center">
+  <div class="ustitle">
+    <h1><em>基本资料<b></b><i></i></em></h1>
+    <div class="usTips">
+      <p><b>温馨提示：</b>您的个人信息将被严格保密。</p>
+    </div>
+    <form action="<{$smarty.const.ROOT_DOMAIN}>/account/user_basic.php" method="post">
+      <div class="wap_loginC">
+        <!--<p class="name"><b><{$userInfo.u_name}></b></p>-->
+        <p>昵称</p>
+        <p>
+          <input type='text' class="inputc1" value="<{$userInfo.u_nick}>" name="u_nick">
+        </p>
+        <p>手机号</p>
+        <p>
+          <input type='text' class="inputc1"  value="<{$userRealInfo.mobile}>" name="mobile">
+        </p>
+        <p>居住地</p>
+        <p>
+          <input type='text' class="inputc1" value="<{$userInfo.u_address}>" name="u_address">
+        </p>
+        <p class="tijiao">
+          <input type="submit" class="loginsub" value="保&nbsp;&nbsp;&nbsp;存"/>
+        </p>
+        <{if $msg_error}>
+        <p class="error"><{$msg_error}></p>
+        <{/if}>
+        <{if $msg_success}>
+        <p class="right"><{$msg_success}></p>
+        <{/if}> </div>
+    </form>
+  </div>
+</div>
+<!--用户中心基本信息 end-->
+<div class="clear"></div>
+<{include file="../ios/footer.html"}>
+</body>
+</html>

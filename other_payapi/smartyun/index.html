@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>支付接口测试</title> 
+<style type="text/css">
+<!--
+body {
+	background-color: #FFFFFF;
+}
+body,td,th {
+	font-family: 宋体;
+	font-size: large;
+}
+.STYLE1 {font-size: x-large}
+.STYLE2 {font-size: large}
+.STYLE4 {color: #FF0000}
+input{width:500px;}
+-->
+</style></head>
+
+<body>
+<form id="pay" action="pay.php" method="post">
+  <div align="center">
+    <table width="713" border="0">
+      <tr>
+        <td width="164">订单号:</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="text" name="orderid" value="" id="orderid">
+          </label>
+        </span> </td>
+      </tr>
+      
+      <tr>
+        <td width="164">交易金额</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="text" name="price" value="0.01">
+          </label>
+        </span> </td>
+      </tr>
+      <tr>
+        <td width="164">订单名称</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="text" name="goodsname" value="test">
+          </label>
+        </span> </td>
+      </tr>
+      <tr>
+        <td width="164">订单标记</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="tag" name="orderuid" id="orderuid" value="1">
+          </label>
+        </span> </td>
+      </tr>
+
+	  <tr>
+        <td width="164">支付完成跳转地址</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="text" name="return_url" value="http://www.zhiying365.com/other_payapi/smartyun/ok.php">
+          </label>
+        </span> </td>
+      </tr>
+      <tr>
+        <td width="164">后台通知的地址</td>
+        <td><span class="STYLE1">
+          <label>
+          <input type="text" name="notify_url" value="http://www.zhiying365.com/other_payapi/smartyun/callback.php">
+          </label>
+        </span> </td>
+      </tr>
+      <tr>
+        <td width="164">付款方式</td>
+        <td><span class="STYLE1">
+          <label>
+           <select name="istype">
+			  <!--option value="30001">网银快捷</option-->
+			  <option value="10001">企业支付宝扫码</option>
+			  <option value="20001">微信扫码</option>
+		   </select>
+          </label>
+        </span> 
+		</td>
+      </tr>
+
+   
+      <tr>
+        <td><input name="提交" type="submit" style="width:100px;" /></td>
+		<td></td>
+      </tr>
+	 
+    </table>
+
+</form> 
+</body>
+<script type="text/javascript">
+ document.getElementById("orderid").value=new Date().valueOf();
+ document.getElementById("orderuid").value=new Date().valueOf();
+</script>
+</html>

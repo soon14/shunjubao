@@ -1,0 +1,65 @@
+<{include file="header.html"}>
+<body>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<!--center start-->
+<!--用户中心专家申请 start-->
+<div class="UserRight">
+  <h1>智赢专家</h1>
+  <div class="URcenter"> <{if $not_shengqing}>
+    <div class="userpayment">
+      <p class="show">“智赢专家”指的是智赢网提供遴选出的专家进行赛事分析和推荐，用户根据自己的喜好和需要进行付费订阅！</p>
+    </div>
+    <div class="sqzj"><a href="zhuanjiashenqing.php" target="_blank">专家申请</a></div>
+    <div class="zjtype"><b>专家订阅提供的内容：</b>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;竞彩：竞彩所有玩法皆可推荐；</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北单：北单所有玩法皆可推荐;</p>
+      <p>传统足彩：胜负14、任9、六半全、四场进球 </p>
+    </div>
+    <div class="userpayment">
+      <p>&nbsp;&nbsp;<b>温馨提示：</b>您在提交申请之后，客服会在2个小时内给您反馈！如有疑问请致电至智赢网官方客服：010-57284085&nbsp;&nbsp;&nbsp;&nbsp;在线客服&nbsp;&nbsp;&nbsp;<a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.sunkf.net/codes/one/images/q_1.gif"></a></p>
+    </div>
+    <{else}>
+    <div class="userzj">
+      <form action="" method="post">
+        <ul>
+          <li><b>申请人：</b></li>
+          <li><img src="http://www.zhiying365365.com/www/statics/i/Userman.jpg"><{$value.u_nick}>&nbsp;&nbsp;&nbsp;<span><{$value.ifuse_s}></span><em><{$value.iscommon_s}></em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机号：<{$value.mobile}>&nbsp;&nbsp;&nbsp;QQ号：<{$value.sqqq}></li>
+        </ul>
+        <ul>
+          <li><b>擅长赛事：</b></li>
+          <li>
+            <input  class="ustezj" type='text' value="<{$value.sqsc}>" name="sqsc">
+          </li>
+        </ul>
+        <ul>
+          <li><b>订阅周金额：</b></li>
+          <li>
+            <input class="ustezj" type='text' value="<{$value.week_money}>"  name="week_money">
+            <span><i>*</i>默认为50元</span> </li>
+        </ul>
+        <ul>
+          <li><b>订阅月金额：</b></li>
+          <li>
+            <input class="ustezj" type='text' value="<{$value.month_money}>" name="month_money">
+            <span><i>*</i>默认为188元</span> </li>
+        </ul>
+        <ul style="position:relative;top:10px;left:20px;">
+          <li>专家简介：</li>
+          <li>
+            <textarea name="ddesc" cols="60" rows="3" ><{$value.ddesc}></textarea>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        <div style="padding:30px 0 0 75px;">
+          <input type="submit" value="修&nbsp;&nbsp;改" style=" border:none;cursor:pointer;background:#2984D3;color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:230px;height:32px;line-height:32px;text-align:center;font-size:14px;font-weight:300;table-layout:auto;display:inline-table;overflow:hidden;" />
+          &nbsp;&nbsp;
+          <input type="hidden" name="action" id="hiddenField" value="update">
+        </div>
+      </form>
+    </div>
+    <{/if}> </div>
+</div>
+</div>
+<!--用户中心专家申请 end-->
+</body>
+</html>

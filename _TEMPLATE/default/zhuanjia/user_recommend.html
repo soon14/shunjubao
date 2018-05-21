@@ -1,0 +1,50 @@
+<{include file="header.html"}>
+<link type="text/css" rel="stylesheet" href="<{'user.css'|getStaticsUrl}>" >
+<body>
+<!--专家推荐方案 start-->
+<div class="UserRight">
+  <h3>我的推荐-<strong><em>（比赛结束后，按照实际的赛果请点击“中奖”及“未中奖”，请务必操作！）</em></strong><span><a href="<{$smarty.const.ROOT_DOMAIN}>/zhuanjia/user_recommend.php?action=add" target="rightFrame" >添加方案</a></span></h3>
+  <div class="URcenter">
+    <div class="tabpading">
+      <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="4" style="font-size:12px;border:1px solid ddd;" >
+        <tr>
+          <th>日期</th>
+          <th>赛事</th>
+          <th>主队 VS 客队</th>
+          <th>推荐</th>
+          <th>单场金额</th>
+          <th>状态</th>
+          <th>提交时间</th>
+          <th>订阅人数</th>
+          <th>是否中奖</th>
+        </tr>
+        <{section name=a loop=$datalist}>
+        <tr>
+          <td class="show"><{$datalist[a].pubdate}></td>
+          <td class="show"><{$datalist[a].macth}></td>
+          <td class="show"><{$datalist[a].duiwu}></td>
+          <td class="show"><{$datalist[a].recommond}></td>
+          <td class="show"><{$datalist[a].pmoney}></td>
+          <td class="show"><{$datalist[a].ifuse_status}></td>
+          <td class="show"><{$datalist[a].addtime}></td>
+          <td class="show"><{$datalist[a].dingyue_nums}></td>
+          <td class="show"><{ if $datalist[a].ifuse==1}>    
+            <{ if $datalist[a].islottey==0}> <a href="user_recommend.php?action=mod&tag=1&id=<{$datalist[a].sysid}>">已中</a>&nbsp;<a href="user_recommend.php?action=mod&tag=2&id=<{$datalist[a].sysid}>">未中</a> <{else}>
+            <{$datalist[a].islottey_status}>             
+            <{/if}>
+            <{ elseif $datalist[a].ifuse==2}>       
+            审核未通过 <a href="user_recommend.php?action=edit&id=<{$datalist[a].sysid}>">修改</a> <{ else}> 审核中<{/if}> </td>
+        </tr>
+        <{/section}>
+      </table>
+      <div class="dytips"><{$error_tips}></div>
+      <div class="clear"></div>
+      <div class="sharepages">
+        <div align="center"><{ $multi }></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--专家推荐方案 end-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+<{include file="header.html"}>
+<{include file="../default/top.html"}>
+<{include file="../default/menu.html"}>
+<link type="text/css" rel="stylesheet" href="<{'zj.css'|getStaticsUrl}>" >
+<body>
+<!--专家中心center-->
+<div class="center">
+  <div class="tipsters">
+    <div class="NewsNav">
+      <h1><b>智赢专家</b><em>专业人士干专业事情<br/>
+        <span>为用户购彩提供专业服务</span></em> </h1>
+    </div>
+  </div>
+  <div class="zjlist">
+    <h1><b>申请智赢专家</b></h1>
+    <div class="shenqingC">
+      <ol>
+        <li>
+          <form action="zhuanjiashenqing.php" method="post">
+            <div class="sqbiaodan">
+              <p class="name"><b>申请人：</b>
+                <input type="text" class="input" name="u_name" id="u_name" value="">
+                <span style="color:#F00"><em>*</em><{if $msg.u_name}><{$msg.u_name}><{else}>您智赢网的用户名<{/if}></span> </p>
+              <p><b>手机号：</b>
+                <input type="text" class="input" name="mobile" id="mobile" value="">
+                <span style=" color:#F00"><{$msg.mobile}></span> </p>
+              <p><b>QQ号：</b>
+                <input type="text" class="input" name="sqqq" id="sqqq" value="">
+              </p>
+              <p><b>擅长赛事：</b>
+                <input type="text" class="input" name="sqsc" id="sqsc" value="">
+              </p>
+              <p><b>自我介绍：</b>
+                <input name="ddesc" class="input" type="text" id="ddesc" value="">
+                <span><em>*</em>可输入300内字！</span> </p>
+              <p class="sub">
+                <input type="submit" class="submit" name="submit" id="submit" value="提交申请">
+              </p>
+            </div>
+          </form>
+        </li>
+        <li>
+          <div class="sqxg">
+            <h2>专家订阅提供的内容</h2>
+            <p>1、亚盘盘口：非竞彩/北单玩法</p>
+            <p>2、竞彩：竞彩所有玩法皆可推荐</p>
+            <p>3、北单：北单所有玩法皆可推荐</p>
+            <p>4、传统足彩：胜负14、任9、六半全、四场进球</p>
+          </div>
+        </li>
+      </ol>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<!--专家中心end-->
+<!--智赢页面底部 start-->
+<{include file="foot.html"}>
+<!--智赢页面底部 end-->
+</body>
+</html>

@@ -1,0 +1,21 @@
+.top{height:30px;line-height:30px;background:#fff;padding:0 5px;text-align:left;position:relative;color:#000;}
+.top h3{ text-align:center; display:none;}
+.logo{height:30px;text-align:center;z-index:9999;float:left;display:block;}
+.logo h1{height:30px;}
+.logo h1 b{font-family:'时尚中黑简体';font-size:16px;font-weight:300;color:#000;}
+.logo h1 b a{font-family:'时尚中黑简体';font-size:16px;font-weight:300;color:#000;}
+.logo h1 span{font-size:12px;color:#000; font-weight:300; position:relative;top:-1px;left:2px;color:#000;}
+.logo h1 span a{ font-size:12px;color:#000;}
+.topCenter{float:right;padding:0 6px 0 0;}
+.topCenter h1{font-size:14px;color:#fff;font-family:'时尚中黑简体';font-size:12px;font-weight:300;z-index:99999999999;}
+.topCenter h1 b{float:right;color:#000;}
+.topCenter h1 b em{font-style:normal;}
+.topCenter h1 b em a{padding:5px 8px;font-size:12px;color:#0B6DB8;}
+.topCenter h1 b span{ padding:0 1px;color:#ccc;}
+.topCenter h1 b a{color:#000;}
+.topCenter h1 em stong{display:none;}
+.topCenter h1 em u a{ display:none;text-decoration:none;}
+.paytop{background:#BC1E1F;height:40px;line-height:40px;text-align:center;}
+.paytop h1{ color:#fff;font-size:14px;}
+.topucr{ width:250px;border-bottom:1px solid #ccc; margin:0 auto; height:50px; display:none;}
+.topucr h3{ font-size:14px; font-weight:300; height:50px; line-height:50px;}

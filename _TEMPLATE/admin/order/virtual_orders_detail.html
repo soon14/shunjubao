@@ -1,0 +1,63 @@
+<{include file="../admin/header.html"}>
+<body>
+<script type="text/javascript">
+TMJF(function($) {
+	
+});
+</script>
+<!--投注记录 start-->
+<div>
+  <h2>
+  <b>●</b>积分订单信息-用户：<{$userTicketInfo.u_name}></h2>
+  <table class="" width="20%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5" style="overflow:hidden;">
+      <tbody>
+        <tr>
+        <td>总金额</td>
+          <td>倍数</td>
+          <td>出票状态</td>
+          <td>中奖信息</td>
+          <td>认购时间</td>
+        </tr>
+        <tr>
+        	<td><{$userTicketInfo.money}></td>
+        	<td><{$userTicketInfo.multiple}></td>
+        	<td><{$statusDesc[$userTicketInfo.status].desc}></td>
+        	<td><{if $userTicketInfo.prize>0}><{$userTicketInfo.prize}><{/if}></td>
+        	<td><{$userTicketInfo.create_time}></td>
+        </tr>
+        </tbody>
+  </table>
+  <div>
+    <table class="" width="100%" bordercolor="#ddd" border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+                <th>序号</th>
+                <th>场次</th>
+                <th>主队</th>
+                <th>VS</th>
+                <th>客队</th>
+                <th>选项</th>
+                <th>彩果</th>
+              </tr>
+              <{foreach from=$return item=item key=key name=matchInfo}>
+              <tr>
+              <{if $item.matchInfo}>
+                <td><{$smarty.foreach.matchInfo.iteration}></td>
+                <td><{$item.matchInfo.num}></td>
+                <td><{$item.matchInfo.host_team}></td>
+                <td>VS</td>
+                <td><{$item.matchInfo.guest_team}></td>
+                <td><{$item.key_str}></td>
+                <td><{$resultDesc[$item.matchInfo.lottery_result].desc}></td>
+              <{else}>
+              <td>赛事被删除，无法获取（id:<{$key}>;combination:<{$item}>）</td>
+              <{/if}>
+              </tr>
+              <{/foreach}> 
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--投注记录 end-->
+</body>
+</html>

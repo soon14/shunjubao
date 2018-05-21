@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自动跟单日志</title>
+<link href="./js/common.css" type="text/css" rel="stylesheet">
+<link href="./css/layout.css" rel="stylesheet" type="text/css">
+<SCRIPT language=javascript src="js/jquery.js"></SCRIPT>
+<SCRIPT language=javascript src="js/common.js" ></SCRIPT>
+<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style></head>
+<body style="margin:30px 0px 0px 8px;">
+<form name="myform"  id="myform" method="Post">
+<table width="99%"  border="0" cellpadding="3" cellspacing="1" class="p_table_order">
+  <tr bgcolor="#F7F7F7">
+  	<td colspan="15">
+	
+	<div align="left">
+       <strong><span>自动跟单日志</span>,订单号
+           <input name="order_id" id="order_id" value="<!--{$order_id}-->" size="8"/>,<span style="color:red">被</span>定制用户帐号</strong>:
+         <input name="follow_name" id="follow_name" value="<!--{$follow_name}-->" size="8"/>,
+    <strong>定制用户帐号</strong>:
+         <input name="u_name" id="u_name" value="<!--{$u_name}-->" size="8"/>
+         	 ，跟注时间 <input name="s_date" type="text" class="Wdate" id="s_date"  onFocus="var e_date=$dp.$('e_date');WdatePicker({onpicked:function(){e_date.focus();},maxDate:'#F{$dp.$D(\'e_date\')}'})" value="<!--{$s_date}-->" size="10"/>
+          至
+          <input name="e_date" type="text" value="<!--{$e_date}-->" class="Wdate" id="e_date" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'s_date\')}'})" size="10"/>
+          ,状态：
+          <label for="select"></label>
+          <select name="tags" id="tags">
+			<option value="0">请选择</option>
+         	 <option value="1" <!--{if $tags==1}-->  selected="selected" <!--{/if}-->>成功</option>
+              <option value="2" <!--{if $tags==2}-->  selected="selected" <!--{/if}-->>失败</option>
+          </select>,说明
+           <input name="logs" id="logs" value="<!--{$logs}-->" size="8"/>
+          <input name="spage" type="hidden" id="spage" value="1" />
+      <input type="submit" name="Submit" value=" 搜 索 " /></div></td>
+  </tr>
+ 
+  <tr bgcolor="#F7F7F7">
+  	<td ><div align="center"><STRONG>系统ID</STRONG></div></td>
+  	<td bgcolor="#F7F7F7"><div align="center">定制id</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">被定制用户</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制用户</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">被跟订单</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">被跟详情</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制订单</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">定制详情</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">状态</div></td>
+    <td bgcolor="#F7F7F7"><div align="center">说明</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">添加时间</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">分成</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">范围</div></td>
+    <td  bgcolor="#F7F7F7"><div align="center">时长</div></td>
+    <td  bgcolor="#F7F7F7">操作</td>
+    </tr>
+  <!--{section name=a loop=$datalist}-->
+  <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
+  	<td  ><div align="center"><!--{$datalist[a].id}--></div></td>
+  	<td><div align="center"><!--{$datalist[a].dingzhi_id}--></div></td>
+    <td><div align="center"><!--{$datalist[a].follow_id|show_post_member}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].u_id|show_post_member}--></div></td>
+    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<!--{$datalist[a].partent_id}-->"><!--{$datalist[a].partent_id}--></a></div></td>
+    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<!--{$datalist[a].partent_id}-->"><!--{$datalist[a].partent_show}--></a></div></td>
+    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<!--{$datalist[a].ticket_id}-->"><!--{$datalist[a].ticket_id}--></a></div></td>
+    <td ><div align="center"><!--{if $datalist[a].tags>0}--><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<!--{$datalist[a].ticket_id}-->"><!--{$datalist[a].ticket_show}--></a><!--{/if}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].tags_show}--></div></td>
+    <td ><div align="center"><!--{$datalist[a].msg}--></div></td>
+    <td><div align="center"><!--{$datalist[a].create_time}--></div></td>
+    <td><div align="center"><!--{if $datalist[a].pay_rate>0}--><!--{$datalist[a].pay_rate}-->%<!--{/if}--></div></td>
+    <td><div align="center"><!--{$datalist[a].show_range}--></div></td>
+    <td><div align="center"><!--{$datalist[a].exc_time}--></div></td>
+    <td><div align="center">[<a href="follow_ticket_log.php?action=delete&id=<!--{$datalist[a].id}-->" onclick="javascript:return confirm('确认删除？一旦删除将不可恢复');"> 删除 </a>]</div></td>
+    </tr>
+  <!--{/section}-->
+  <tr bgcolor="#FFFFFF">
+    <td colspan="15"><div align="center">每页<font color="#FF0000"> 
+      <!--{ $pageSize }-->
+      </font>条 共<font color="#FF0000">
+        <!--{ $page }--> 
+        </font>页  共<font color="#FF0000">
+          <!--{ $totalRecord }--> 
+          </font>条记录
+      <!--{ $multi }-->
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="height:30px;">
+    <td colspan="15"><div align="center"></div></td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>
