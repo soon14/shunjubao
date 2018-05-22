@@ -1,0 +1,179 @@
+<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+         compiled from ../default/top.html */ ?>
+<script type="text/javascript">
+$(document).ready(function(){
+	var u_name = '';
+	var cash = 0.00;
+	var arrCookie = document.cookie.split(/;\s*/); 
+	//遍历cookie数组，处理每个cookie对 
+	for(var i=0;i<arrCookie.length;i++){
+		var arr = arrCookie[i].split("=");
+		//找到名称为userId的cookie，并返回它的值
+		if("u_name" == arr[0]){
+			u_name = decodeURIComponent(arr[1]); 
+		}
+		if("cash" == arr[0]){
+			cash = arr[1];
+		}
+		if("u_img" == arr[0]){
+		u_img = decodeURIComponent(arr[1]); 
+	}
+	}	
+	var welcome_str = "<li>&nbsp;</li>";
+	if (u_name != '') {
+		welcome_str += "<li class=\"name\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=ticket\">"+u_name+"</a></li>";
+		welcome_str += "<li class=\"loginout\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/passport/logout.php\">退出</a></li>"+
+        "<li class=\"Navlist account\"><span><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=basic\">我的账户<i>&nbsp;</i></a></span>"+
+        "<div class=\"Navlist\">"+
+          "<div class=\"connectaccount\">"+
+            "<div class=\"k3\"></div>"+
+            "<p><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=basic\">基本信息</a></p>"+
+            "<p><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=account_log\">账户明细</a></p>"+
+            "<p><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=ticket\">投注记录</a></p>"+
+            "<p><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php\">查看余额</a></p>"+
+            "<dl>"+
+              "<dt><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_charge.php\" class=\"hover\">充值</a></dt>"+
+              "<dt><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/account/user_center.php?p=withdraw\">提现</a></dt>"+
+            "</dl>"+
+          "</div>"+
+        "</div>"+
+      "</li>";
+	} else {
+		welcome_str += "<li class=\"login\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/passport/login.php\">登录</a></li>"+        
+	        "<li class=\"reg\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
+/passport/reg.php\">注册</a></li>"+
+	}
+	$("#topCenter").append(welcome_str);
+});
+</script>
+
+<div style="height:34px;line-height:34px;background:#f1f1f1;">
+  <div class="topNav">
+    <div class="navC">
+      <ul>
+        <li class="Navlist first" style="display:none;"><span><a href="http://www.shunjubao.com/" target="_blank">手机版<i>&nbsp;</i></a></span>
+          <div class="Navlist">
+            <div class="Navmobile">
+              <div class="kl"></div>
+              <dl>
+                <dt><b>智赢网安卓APP</b><img src="<?php echo @STATICS_BASE_URL; ?>
+/i/android.png">
+                  <p><a href="<?php echo @ROOT_DOMAIN; ?>
+/upload/zhiying365_v0.1.apk" target="_blank">点击下载</a></p>
+                </dt>
+                <dd>
+                  <p>IOS即将上架敬请期待!</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul id="topCenter">
+      </ul>
+      <ol>
+        <li class="Navlist"><em><img src="<?php echo @ROOT_DOMAIN; ?>
+/www/statics/i/weixin.gif"></em>
+          <div class="Navlist">
+            <div class="erweima"> <img src="<?php echo @ROOT_DOMAIN; ?>
+/www/statics/i/tuijianw.jpg">
+              <p><img src="<?php echo @ROOT_DOMAIN; ?>
+/www/statics/i/dalishuishou.jpg"></p>
+            </div>
+          </div>
+        </li>
+        <li class="tel">&nbsp;&nbsp;&nbsp;&nbsp;7*24TH&nbsp;010-64344882&nbsp;&nbsp;</li>
+        <li><a onclick="AddFavorite(window.location,document.title)">加入收藏</a><span>|</span></li>
+        <li><a href="/help" target="_blank">帮助中心</a><span>|</span></li>
+        <li><a href="<?php echo @ROOT_DOMAIN; ?>
+/help/contact.html" target="_blank">客服中心</a><span>|</span></li>
+		<li><a href="<?php echo @ROOT_DOMAIN; ?>
+/ticket/paihang.php" target="_blank">中奖排行</a><span>|</span></li>
+        <li class="Navlist account"><span> <a href='javascript:void(0);'>网站导航<i>&nbsp;</i></a></span>
+          <div class="Navlist">
+            <div class="map">
+              <div class="k4">&nbsp;</div>
+              <dl>
+                <dt><b><a href="<?php echo @ROOT_DOMAIN; ?>
+/football/hhad_list.php" target="_blank">竞彩足球</a></b></dt>
+                <dd>
+                  <p><a href="<?php echo @ROOT_DOMAIN; ?>
+/football/hhad_list.php" target="_blank">胜平负/让球</a> </p>
+                  <p><a href="http://news.shunjubao.com/football/fb_crosspool.php" target="_blank">混合过关</a> </p>
+                  <p><a href="http://news.shunjubao.com/football/ttg_list.php" target="_blank">总进球</a> </p>
+                  <p><a href="http://news.shunjubao.com/football/hafu_list.php" target="_blank">半全场</a> </p>
+                  <p><a href="http://news.shunjubao.com/football/crs_list.php" target="_blank">比分</a> </p>
+                </dd>
+                <dt><b><a href="http://news.shunjubao.com/basketball/hdc_list.php" target="_blank">竞彩篮球</a></b></dt>
+                <dd>
+                  <p><a href="http://news.shunjubao.com/basketball/hdc_list.php" target="_blank">胜负\让分胜负</a> </p>
+                  <p><a href="http://news.shunjubao.com/basketball/bk_crosspool.php" target="_blank">混合过关</a> </p>
+                  <p><a href="http://news.shunjubao.com/basketball/wnm_list.php" target="_blank">胜分差</a> </p>
+                  <p><a href="http://news.shunjubao.com/basketball/hilo_list.php" target="_blank">大小分</a> </p>
+                </dd>
+                <!--                <dt><b><a href="http://news.shunjubao.com/beidan/spf.php" target="_blank">北京单场</a></b></dt>
+                <dd>
+                  <p><a href="http://news.shunjubao.com/beidan/spf.php" target="_blank">胜平负</a> </p>
+                  <p><a href="http://news.shunjubao.com/beidan/sf.php" target="_blank">胜负过关</a> </p>
+                  <p><a href="http://news.shunjubao.com/beidan/jqs.php" target="_blank">进球数</a> </p>
+                  <p><a href="http://news.shunjubao.com/beidan/bqc.php" target="_blank">半全场</a> </p>
+                  <p><a href="http://news.shunjubao.com/beidan/bf.php" target="_blank">比分</a> </p>
+                  <p><a href="http://news.shunjubao.com/beidan/sxds.php" target="_blank">上下单双</a> </p>
+                </dd>-->
+                <dt><b><a href="http://new.shunjubao.com/footballtj/" target="_blank">资讯中心</a></b></dt>
+                <dd>
+                  <p><a href="http://news.shunjubao.com/basketball/hdc_list.php" target="_blank">足球推荐</a> </p>
+                  <p><a href="http://new.shunjubao.com/NBAtj/" target="_blank">篮球推荐</a> </p>
+                  <p><a href="http://new.shunjubao.com/footballxw/" target="_blank">足球新闻</a> </p>
+                  <p><a href="http://new.shunjubao.com/NBAxw/" target="_blank">篮球新闻</a> </p>
+                  <p><a href="http://new.shunjubao.com/touzhujiqiao/" target="_blank">投注技巧</a> </p>
+                  <p><a href="http://new.shunjubao.com/zhongchao/" target="_blank">论剑中超</a> </p>
+                </dd>
+                <dt><b><a href="http://news.shunjubao.com/livescore/fb_livescore.php" target="_blank">即时比分</a></b></dt>
+                <dd>
+                  <p><a href="http://news.shunjubao.com/livescore/fb_livescore.php" target="_blank">竞彩足球</a> </p>
+                  <p><a href="http://news.shunjubao.com/livescore/bk_livescore.php">竞彩篮球</a> </p>
+                </dd>
+                <dt><b><a href="http://new.shunjubao.com/footballtj/" target="_blank">赛果开奖</a></b></dt>
+                <dd>
+                  <p><a href="http://news.shunjubao.com/livescore/fb_match_result.php" target="_blank">竞彩足球</a> </p>
+                  <p><a href="http://news.shunjubao.com/livescore/bk_match_result.php">竞彩篮球</a> </p>
+                </dd>
+                <dd class="show">
+                  <p><a href="http://news.shunjubao.com/ticket/show.php" target="_blank">晒单中心</a> </p>
+				  <p><a href="http://news.shunjubao.com/ticket/dingzhi.php" target="_blank">跟单定制</a> </p>
+                  <p><a href="http://news.shunjubao.com/ticket/paihang.php" target="_blank">中奖排行</a> </p>
+                  <p><a href="http://news.shunjubao.com/ticket/virtual_list.php" target="_blank">积分投注</a> </p>
+                  <p><a href="http://news.shunjubao.com/help/" target="_blank">帮助中心</a> </p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<script>
+$(function(){
+	lanrenzhijia(".Navlist");});function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);var theMenu = $this.find(".Navlist");var tarHeight = theMenu.height();theMenu.css({height:0});$this.hover(
+			function(){
+				$(this).addClass("topmenu_hover");theMenu.stop().show().animate({height:tarHeight},5);},
+			function(){
+				$(this).removeClass("topmenu_hover");theMenu.stop().animate({height:0},5,function(){
+					$(this).css({display:"none"});});}
+		);});}
+</script>

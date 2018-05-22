@@ -6,7 +6,7 @@ $z[0][4]['titlelen']="40";
 $z[0][4]['orderby']="id";
 $z[0][4]['orderway']="desc";
 $z[0][4]['row']="22";
-$z[1]=Array("arclist","\r\n        <li>\r\n          <p><span>[公告]</span><a href=\"http://news.zhiying365365.com/[field:arcurl/]\" target=\"_blank\" title=\"[field:title/]\">[field:title/]</a></p>\r\n        </li>\r\n        ",2486,2784);
+$z[1]=Array("arclist","\r\n        <li>\r\n          <p><span>[公告]</span><a href=\"http://new.shunjubao.com/[field:arcurl/]\" target=\"_blank\" title=\"[field:title/]\">[field:title/]</a></p>\r\n        </li>\r\n        ",2486,2784);
 $z[1][4]['channelid']="1";
 $z[1][4]['typeid']="11";
 $z[1][4]['titlelen']="40";

@@ -1,20 +1,20 @@
 <?php
 $z[0]=Array("include","",19759,19793);
 $z[0][4]['file']="header.htm";
-$z[1]=Array("arclist","\r\n              <li><a href=\"http://news.zhiying365365.com[field:arcurl/]\" target=\"_blank\"><img src=\"http://news.zhiying365365.com[field:litpic/]\" />\r\n                <p><b>[field:title/]</b><span>[field:shorttitle/]</span></p>\r\n                </a></li>\r\n              ",23075,23439);
+$z[1]=Array("arclist","\r\n              <li><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\"><img src=\"http://new.shunjubao.com[field:litpic/]\" />\r\n                <p><b>[field:title/]</b><span>[field:shorttitle/]</span></p>\r\n                </a></li>\r\n              ",23075,23439);
 $z[1][4]['typeid']="13";
 $z[1][4]['titlelen']="32";
 $z[1][4]['orderby']="id";
 $z[1][4]['orderway']="desc";
 $z[1][4]['row']="10";
-$z[2]=Array("arclist","\r\n                <p><a href=\"http://news.zhiying365365.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a></p>\r\n                ",24370,24609);
+$z[2]=Array("arclist","\r\n                <p><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a></p>\r\n                ",24370,24609);
 $z[2][4]['channelid']="1";
 $z[2][4]['typeid']="10";
 $z[2][4]['titlelen']="42";
 $z[2][4]['orderby']="id";
 $z[2][4]['orderway']="desc";
 $z[2][4]['row']="10";
-$z[3]=Array("arclist","\r\n                <p><b><a href=\"http://news.zhiying365365.com/gonggao\" target=\"_blank\">[告]</a></b><a href=\"http://news.zhiying365365.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a><em>[field:pubdate function='strftime(\"%m-%d\",@me)'/]</em></p>\r\n                ",24762,25139);
+$z[3]=Array("arclist","\r\n                <p><b><a href=\"http://new.shunjubao.com/gonggao\" target=\"_blank\">[告]</a></b><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a><em>[field:pubdate function='strftime(\"%m-%d\",@me)'/]</em></p>\r\n                ",24762,25139);
 $z[3][4]['channelid']="1";
 $z[3][4]['typeid']="11";
 $z[3][4]['titlelen']="42";
