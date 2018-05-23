@@ -34,7 +34,7 @@ exit;
 $CACHE['db'] = array(
 		'default'   => "mysqli://root:1q2w3e4R!@{$host}:3306/zhiying",
 		'leida'   	=> "mysqli://root:1q2w3e4R!@{$host}:3306/leida",
-		'log_data'	=>	"mysqli://root:hushiyu@{$host}:3306/log_data",
+		'log_data'	=>	"mysqli://root:1q2w3e4R!@{$host}:3306/log_data",
 );
 $dsn = $CACHE['db']['default'];
 $offset = 0;
