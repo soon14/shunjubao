@@ -168,7 +168,7 @@ $tpl->d('../admin/game/score_match_sp2');
 
 
 function new_leida_sp($sport,$pool,$m_id){
-	$conn = @mysql_connect("localhost", "root","meijun820526^&LKASI") or die("Could not connect to database");
+	$conn = @mysql_connect("localhost", "root","1q2w3e4R!") or die("Could not connect to database");
 	@mysql_select_db("org_spdata", $conn) or die ("Could not select database");
 
 	$sql ="SELECT * FROM ".$sport."_".$pool." where m_id='".$m_id."' limit 0,1";		

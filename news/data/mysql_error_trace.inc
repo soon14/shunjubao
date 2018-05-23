@@ -355,3 +355,17 @@ Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数
 Time2018-03-29 10:18:24
 */
 ?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=25722
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-23 22:18:39
+*/
+?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=25694
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-23 22:18:52
+*/
+?>

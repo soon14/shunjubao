@@ -28,7 +28,7 @@ foreach($dingzhi_array as $key =>$value){
 
 
 function show_prize_state($u_id,$prize_state,$start_time=0){//查会员红单量，黑单量，胜率
-	$conn = @mysql_connect("localhost", "root","meijun820526^&LKASI") or die("Could not connect to database");
+	$conn = @mysql_connect("localhost", "root","1q2w3e4R!") or die("Could not connect to database");
 	
 	@mysql_select_db("zhiying", $conn) or die ("Could not select database");
 

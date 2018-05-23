@@ -59,7 +59,7 @@ $value["num_show"]= show_num($value["num"]);//周三049
 //var_dump($show_betting);//exit();
 //增加临时实时比分数据
 function bk_result(){
-	$conn = @mysql_connect("localhost", "root","meijun820526^&LKASI") or die("Could not connect to database");
+	$conn = @mysql_connect("localhost", "root","1q2w3e4R!") or die("Could not connect to database");
 	@mysql_select_db("org_spdata", $conn) or die ("Could not select database");
 
 	$sql ="SELECT * FROM bk_result_org where starttime > '".date('Y-m-d 00:00:00',time())."' order by starttime desc ";		

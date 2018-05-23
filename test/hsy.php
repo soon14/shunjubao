@@ -32,8 +32,8 @@ for ($m_id=81435;$m_id>=80400;$m_id--) {
 pr('完成');
 exit;
 $CACHE['db'] = array(
-		'default'   => "mysqli://root:meijun820526^&LKASI@{$host}:3306/zhiying",
-		'leida'   	=> "mysqli://root:meijun820526^&LKASI@{$host}:3306/leida",
+		'default'   => "mysqli://root:1q2w3e4R!@{$host}:3306/zhiying",
+		'leida'   	=> "mysqli://root:1q2w3e4R!@{$host}:3306/leida",
 		'log_data'	=>	"mysqli://root:hushiyu@{$host}:3306/log_data",
 );
 $dsn = $CACHE['db']['default'];

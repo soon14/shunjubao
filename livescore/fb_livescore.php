@@ -79,7 +79,7 @@ foreach($show_betting as $key=>$value){
 //var_dump($show_betting);//exit();
 //增加临时实时比分数据
 function result_org($m_id){
-	$conn = @mysql_connect("localhost", "root","meijun820526^&LKASI") or die("Could not connect to database");
+	$conn = @mysql_connect("localhost", "root","1q2w3e4R!") or die("Could not connect to database");
 	@mysql_select_db("org_spdata", $conn) or die ("Could not select database");
 
 	$sql ="SELECT * FROM fb_result_org where m_id='".$m_id."' limit 0,1";		

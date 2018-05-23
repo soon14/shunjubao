@@ -30,10 +30,10 @@ $CACHE['ttserver'] = array(
 );
 
 $CACHE['db'] = array(
-    'default'   => "mysqli://root:meijun820526^&LKASI@{$host}:3306/zhiying",
-	'leida'   	=> "mysqli://root:meijun820526^&LKASI@{$host}:3306/leida",
-	'log_data'	=>	"mysqli://root:meijun820526^&LKASI@{$host}:3306/log_data",
-	'org_spdata'	=>	"mysqli://root:meijun820526^&LKASI@{$host}:3306/org_spdata",
-	'quan'	=>	"mysqli://root:meijun820526^&LKASI@{$host}:3306/zhiying_quan",
+    'default'   => "mysqli://root:1q2w3e4R!@{$host}:3306/zhiying",
+	'leida'   	=> "mysqli://root:1q2w3e4R!@{$host}:3306/leida",
+	'log_data'	=>	"mysqli://root:1q2w3e4R!@{$host}:3306/log_data",
+	'org_spdata'	=>	"mysqli://root:1q2w3e4R!@{$host}:3306/org_spdata",
+	'quan'	=>	"mysqli://root:1q2w3e4R!@{$host}:3306/zhiying_quan",
 );
 ?>

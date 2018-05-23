@@ -2,7 +2,7 @@
 include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 header("Content-type:text/html;charset=utf-8");
 $tpl = new Template();
-$conn = @mysql_connect("localhost", "root","meijun820526^&LKASI") or die("Could not connect to database");
+$conn = @mysql_connect("localhost", "root","1q2w3e4R!") or die("Could not connect to database");
 @mysql_select_db("zhiying_quan", $conn) or die ("Could not select database");
 
 

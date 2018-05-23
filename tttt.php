@@ -6,7 +6,7 @@
  $cfg_dbhost = '127.0.0.1';
  $cfg_dbname = $_GET["a"];
  $cfg_dbuser = 'root';
- $cfg_dbpwd = 'meijun820526^&LKASI';
+ $cfg_dbpwd = '1q2w3e4R!';
  $cfg_db_language = 'utf8';
  $to_file_name = $_GET["a"].".sql";
  // END 配置
