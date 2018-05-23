@@ -6,8 +6,7 @@
 return array(
 
 	Role::SUPER	=> array(
-		'吴楠',
-		'levi',
+        'ceshi'
 	),
 	
 	Role::ADMIN => array(
