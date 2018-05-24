@@ -22,7 +22,7 @@ $TEMPLATE['keywords'] 		= '竞彩,中国竞彩网,足彩,中国足彩网,篮彩,
 $TEMPLATE['description'] 	= '智赢网是彩票赢家的聚集地，口碑最好的彩票做单网站，竞彩、单场彩票、篮球彩票、足球彩票人气超旺，可以通过网站和手机客户端使用。提供福利彩票和体育彩票的开奖、走势图表、缩水过滤、奖金评测、比分直播等资讯服务。';
 
 if (isset($_SERVER['HTTP_HOST'])) {
-	if ($_SERVER["HTTP_HOST"] == '202.85.221.248' || $_SERVER["HTTP_HOST"] == 'zhiying365365.com') redirect('http://www.shunjubao.com' , 301);
+	if ($_SERVER["HTTP_HOST"] == '202.85.221.248' || $_SERVER["HTTP_HOST"] == 'zhiying365365.com') redirect('http://www.shunjubao.xyz' , 301);
 	
 }
 ?>

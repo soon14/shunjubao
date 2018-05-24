@@ -23,7 +23,7 @@ var system = {
 
 // if(system.win||system.mac||system.xll){
 // }else{
-// window.location.href="http://www.shunjubao.com";
+// window.location.href="http://www.shunjubao.xyz";
 // }
 var href = document.location.href;
 

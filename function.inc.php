@@ -228,7 +228,7 @@ function output_404() {
 function badDomainLocation() {
 	//ip访问时
 	if (isset($_SERVER['HTTP_HOST']) && $_SERVER["HTTP_HOST"] == '202.85.221.248') {
-		redirect('http://www.shunjubao.com' , 301);
+		redirect('http://www.shunjubao.xyz' , 301);
 	}
 	//其他域名访问时
 	$all_domain_preg_match = '/^http:\/\/([hsy|wzc]*\.){0,1}(wap|m|www|pma|cms|news|bbs)\.(zhiying|zhiying365365|hsy|wzc)\.com$/i';

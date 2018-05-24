@@ -41,7 +41,7 @@ $tmp_http_host = empty($_SERVER['HTTP_HOST']) ? '127.0.0.1' : $_SERVER['HTTP_HOS
 /**
  * 新闻系统地址
  */
-define('ROOT_WEBSITE', "http://www.shunjubao.com");
+define('ROOT_WEBSITE', "http://www.shunjubao.xyz");
 /**
  * 新闻系统地址
  */
@@ -49,7 +49,7 @@ define('ROOT_BBS_SITE', "http://bbs.shunjubao.com");
 /**
  * 新闻系统地址
  */
-define('ROOT_CMS_SITE', "http://news.shunjubao.com");
+define('ROOT_CMS_SITE', "http://news.shunjubao.xyz");
 
 //此项目的根目录URL
 define('ROOT_DOMAIN',"http://{$tmp_http_host}");
