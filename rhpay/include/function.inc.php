@@ -117,7 +117,7 @@ function show_img($u_id){//查看会员头像
 	$query = $conn->Query($sql);
 	$value = $conn -> FetchArray($query);
 	if(empty($value["u_img"])){
-		$value["u_img"]='http://www.zhiying365.com/www/statics/i/touxiang.jpg';
+		$value["u_img"]='http://www.shunjubao.xyz/www/statics/i/touxiang.jpg';
 	}
 	
 	return $value["u_img"];	

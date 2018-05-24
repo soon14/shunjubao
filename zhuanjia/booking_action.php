@@ -21,7 +21,7 @@ switch (get_param('action')){
 				$query = $conn -> Query($sql);
 				$value = $conn -> FetchArray($query);
 				if(!empty($value)){
-					message("你已订阅过,请不要重复订阅!","http://www.zhiying365.com/zhuanjia/");
+					message("你已订阅过,请不要重复订阅!","http://www.shunjubao.xyz/zhuanjia/");
 					exit();
 				}
 		
@@ -29,12 +29,12 @@ switch (get_param('action')){
 				$query = $conn -> Query($sql);
 				$value = $conn -> FetchArray($query);
 				if(empty($value)){
-					message("订阅出错!","http://www.zhiying365.com/zhuanjia/");
+					message("订阅出错!","http://www.shunjubao.xyz/zhuanjia/");
 					exit();
 				}else{
 					$e_id = $value["u_id"];//专家ID
 					if($e_id==$u_id){
-						message("不能订阅自己推荐的方案!","http://www.zhiying365.com/zhuanjia/");
+						message("不能订阅自己推荐的方案!","http://www.shunjubao.xyz/zhuanjia/");
 						exit();	
 					}
 					
@@ -53,12 +53,12 @@ switch (get_param('action')){
 						$query = $conn -> Query($sql);
 						$value = $conn -> FetchArray($query);
 						if(empty($value)){
-							message("订阅出错!","http://www.zhiying365.com/zhuanjia/");
+							message("订阅出错!","http://www.shunjubao.xyz/zhuanjia/");
 							exit();
 						}else{
 							$e_id = $value["u_id"];//专家ID
 							if($e_id==$u_id){
-								message("不能订阅自己推荐的方案!","http://www.zhiying365.com/zhuanjia/");
+								message("不能订阅自己推荐的方案!","http://www.shunjubao.xyz/zhuanjia/");
 								exit();	
 							}
 							
@@ -93,7 +93,7 @@ switch (get_param('action')){
 				}else{
 					
 					if(empty($bookid)){
-					message("订阅出错!","http://www.zhiying365.com/zhuanjia/");
+					message("订阅出错!","http://www.shunjubao.xyz/zhuanjia/");
 					exit();
 				}
 				
@@ -101,7 +101,7 @@ switch (get_param('action')){
 				
 				
 				if($bookid==$u_id){
-						message("不能订阅自己推荐的方案!","http://www.zhiying365.com/zhuanjia/");
+						message("不能订阅自己推荐的方案!","http://www.shunjubao.xyz/zhuanjia/");
 						exit();	
 				}
 				
@@ -137,18 +137,18 @@ switch (get_param('action')){
 			
 			$this_date = date("Y-m-d H:i:s");	
 			if($value["end_time"]>$this_date){
-				message("不能重复订阅，之前订阅还未过期哦!","http://www.zhiying365.com/zhuanjia/");
+				message("不能重复订阅，之前订阅还未过期哦!","http://www.shunjubao.xyz/zhuanjia/");
 				exit();
 			}
 			
-			//message("你已订阅过,请不要重复订阅!","http://www.zhiying365.com/zhuanjia/");
+			//message("你已订阅过,请不要重复订阅!","http://www.shunjubao.xyz/zhuanjia/");
 			//exit();
 		}
 		$objUserAccountFront = new UserAccountFront();
 		$userAccountInfo = $objUserAccountFront->get($u_id);
 		$balance = $userAccountInfo["cash"];
 		if($balance<$booking_money){
-			message("你的余额不足，请先充值!","http://www.zhiying365.com/account/user_charge.php");
+			message("你的余额不足，请先充值!","http://www.shunjubao.xyz/account/user_charge.php");
 			exit();
 		}
 			$tmpResult = $objUserAccountFront->consumeCash($u_id, $booking_money);
@@ -190,10 +190,10 @@ switch (get_param('action')){
 				$res = add_record($conn, "booking", $arr);
 				if($res['rows'] <= 0)
 				{
-					message("订阅出错!","http://www.zhiying365.com/zhuanjia/");
+					message("订阅出错!","http://www.shunjubao.xyz/zhuanjia/");
 					exit();
 				}else{
-					message("订阅成功!","http://www.zhiying365.com/zhuanjia/zhuanjia_show.php?id=$e_id");
+					message("订阅成功!","http://www.shunjubao.xyz/zhuanjia/zhuanjia_show.php?id=$e_id");
 					exit();
 				}
 			break;	

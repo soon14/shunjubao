@@ -55,16 +55,16 @@ class CorefireAliPayNotifyCallBack extends CorefireAliPayNotify
 			$keyw = "zy3658786787676";
 			$dtime = time();
 			$sign = md5($out_trade_no.$mchId.$keyw.$dtime);
-			$turl2='http://www.zhiying365.com/services/mppay_update.php?will_out_trade_no='.$out_trade_no.'&will_mchId='.$mchId.'&dtime='.$dtime.'&sign='.$sign;
+			$turl2='http://www.shunjubao.xyz/services/mppay_update.php?will_out_trade_no='.$out_trade_no.'&will_mchId='.$mchId.'&dtime='.$dtime.'&sign='.$sign;
 			$result = file_get_contents($turl2);
 			$this->log_result("corefire_alipay_notify_url2.txt",$turl2); 	
 
 			$sign = md5($out_trade_no.$keyw.$dtime);
-			$turl='http://www.zhiying365.com/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$mchId;
+			$turl='http://www.shunjubao.xyz/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$mchId;
 			$result = file_get_contents($turl);
 			$this->log_result("corefire_alipay_notify_url.txt",$turl); 
 			
-			$turl2='http://www.zhiying365.com/services/mppay_update.php?will_out_trade_no='.$out_trade_no.'&will_mchId='.$mchId.'&dtime='.$dtime.'&sign='.$sign;
+			$turl2='http://www.shunjubao.xyz/services/mppay_update.php?will_out_trade_no='.$out_trade_no.'&will_mchId='.$mchId.'&dtime='.$dtime.'&sign='.$sign;
 			
 		
 		}

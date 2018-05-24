@@ -23,16 +23,16 @@ foreach($show_betting as $key=>$value){
 
 	switch($show_betting[$key]["weather"]){
 		case "天晴":
-			$weather= "<img src='http://www.zhiying365.com/www/statics/i/sunny.png' title='".$show_betting[$key]["weather"]."' border=0>";
+			$weather= "<img src='http://www.shunjubao.xyz/www/statics/i/sunny.png' title='".$show_betting[$key]["weather"]."' border=0>";
 			break;
 		case "大致多云":
-			$weather= "<img src='http://www.zhiying365.com/www/statics/i/cloudy.png' title='".$show_betting[$key]["weather"]."' border=0>";
+			$weather= "<img src='http://www.shunjubao.xyz/www/statics/i/cloudy.png' title='".$show_betting[$key]["weather"]."' border=0>";
 			break;
 		case "阵雨":
-			$weather= "<img src='http://www.zhiying365.com/www/statics/i/rain.png' title='".$show_betting[$key]["weather"]."' border=0>";
+			$weather= "<img src='http://www.shunjubao.xyz/www/statics/i/rain.png' title='".$show_betting[$key]["weather"]."' border=0>";
 			break;				
 		case "微雨":
-			$weather= "<img src='http://www.zhiying365.com/www/statics/i/sprinkle.png' title='".$show_betting[$key]["weather"]."' border=0>";
+			$weather= "<img src='http://www.shunjubao.xyz/www/statics/i/sprinkle.png' title='".$show_betting[$key]["weather"]."' border=0>";
 			break;		
 		default:
 			$weather="";

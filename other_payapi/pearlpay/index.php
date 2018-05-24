@@ -33,7 +33,7 @@ $params = array(
 	'payAmount' => $payAmount, // 支付金额
 	'spUno' => $_GET['u_id'] ? $_GET['u_id'] : 'test'.time() ,  // 用户唯一ID
 	'signType' => 'md5',
-	'notifyUrl' => 'http://www.zhiying365.com/other_payapi/pearlpay/notify.php',
+	'notifyUrl' => 'http://www.shunjubao.xyz/other_payapi/pearlpay/notify.php',
 	
 );
 

@@ -8,14 +8,14 @@
 <meta content='telephone=no' name='format-detection' />
 <meta name="keywords" content="赛事取消或者延迟公告-智赢网。" />
 <meta name="description" content="赛事取消或者延迟公告-智赢网。" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/wap_header.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/wap_footer.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/wap_header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/wap_footer.css" />
 <style>
 .saishi{ width:100%; margin:0 auto; text-align:center;}
 .saishi ul{border-bottom:1px solid #dedede; width:97%; text-align:left; margin:10px auto 15px auto; line-height:28px; padding:0 0 18px 0;}
 .saishi ul li{ line-height:22px; font-size:12px;color:#444; padding:0 5px;}
 .saishi ul li.cc{ padding:0 5px;}
-.saishi ul li b{display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:14px; font-weight:300;color:#D20000; background:url(http://www.zhiying365.com/www/statics/i/cailogo.jpg) no-repeat left center; padding:0 0 0 35px; height:30px; line-height:30px; font-family:'微软雅黑';}
+.saishi ul li b{display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:14px; font-weight:300;color:#D20000; background:url(http://www.shunjubao.xyz/www/statics/i/cailogo.jpg) no-repeat left center; padding:0 0 0 35px; height:30px; line-height:30px; font-family:'微软雅黑';}
 .footer{line-height:40px;text-align:center;height:40px;background:#ddd;font-size:12px;color:#777;}
 </style>
 <body>

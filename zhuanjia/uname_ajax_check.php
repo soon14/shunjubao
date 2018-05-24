@@ -49,7 +49,7 @@ if(empty($u_id)){//找不到手机号
 
 	
 	$result=0;
-	$url="http://www.zhiying365.com/sms/send.php?time=".$time."&u_name=".$uname."&key=".$key;
+	$url="http://www.shunjubao.xyz/sms/send.php?time=".$time."&u_name=".$uname."&key=".$key;
 	$result = file_get_contents($url);	
 	$status=1;//成功发送
 

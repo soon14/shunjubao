@@ -13,7 +13,7 @@ class Config{
 		
 		/*'mchId'=>'101590136183',//测试商户号，商户需改为自己的
         'key'=>'9f692f321f95b3de6e1c6670857cfae7',//测试密钥，商户需改为自己*/
-		'notify_url'=>'http://www.zhiying365.com/other_payapi/cib2/request.php?method=callback',
+		'notify_url'=>'http://www.shunjubao.xyz/other_payapi/cib2/request.php?method=callback',
         'version'=>'2.0'//版本号，默认2.0
        );
 	   

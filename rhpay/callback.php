@@ -24,7 +24,7 @@ if($retCode=="0000" && $r8_orderStatus=="SUCCESS"){
 	$keyw = "zy3658786787676";
 	$dtime = time();
 	$sign = md5($outTradeNo.$keyw.$dtime);
-	$turl='http://www.zhiying365.com/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$r1_merchantNo;
+	$turl='http://www.shunjubao.xyz/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$r1_merchantNo;
 	log_result("callback_url.txt",$turl);
 	$result = file_get_contents($turl);
 	echo 'SUCCESS';
@@ -38,8 +38,8 @@ if($retCode=="0000" && $r8_orderStatus=="SUCCESS"){
 
 /* $merchantNo = "B100001906";
  $goodsName = "智赢充值"; 
- $callbackUrl = "http://www.zhiying365.com/rhpay/callback.php"; 
- $serverCallbackUrl = "http://www.zhiying365.com/rhpay/serverCallback.php";  
+ $callbackUrl = "http://www.shunjubao.xyz/rhpay/callback.php"; 
+ $serverCallbackUrl = "http://www.shunjubao.xyz/rhpay/serverCallback.php";  
  $toibkn = "310651000048";//行号
  $cardNo = "6217921851778004";//帐号
  $idCardNo = "420104197805052010";//身份证

@@ -72,7 +72,7 @@ Class Request{
         
         //通知地址，必填项，接收威富通通知的URL，需给绝对路径，255字符内格式如:http://wap.tenpay.com/tenpay.asp
         //$notify_url = 'http://'.$_SERVER['HTTP_HOST'];
-        $this->reqHandler->setParameter('notify_url','http://www.zhiying365.com/wx/native/request.php?method=callback');
+        $this->reqHandler->setParameter('notify_url','http://www.shunjubao.xyz/wx/native/request.php?method=callback');
 		//$this->reqHandler->setParameter('notify_url',' ');//通知回调地址，目前默认是空格，商户在测试支付和上线时必须改为自己的，且保证外网能访问到
         $this->reqHandler->setParameter('nonce_str',mt_rand(time(),time()+rand()));//随机字符串，必填项，不长于 32 位
         $this->reqHandler->createSign();//创建签名
@@ -86,7 +86,7 @@ Class Request{
 		$keyw = "zy3658786787676";
 		$dtime = time();
 		$sign = md5($will_out_trade_no.$will_mchId.$keyw.$dtime);
-		$turl='http://www.zhiying365.com/services/mppay_update.php?will_out_trade_no='.$will_out_trade_no.'&will_mchId='.$will_mchId.'&dtime='.$dtime.'&sign='.$sign; 
+		$turl='http://www.shunjubao.xyz/services/mppay_update.php?will_out_trade_no='.$will_out_trade_no.'&will_mchId='.$will_mchId.'&dtime='.$dtime.'&sign='.$sign; 
 		$result = file_get_contents($turl);
 		log_result("wx_sub_log03.txt",$turl); 
 		log_result("wx_sub_log02.txt",$will_mchId."_".$will_out_trade_no); 
@@ -279,7 +279,7 @@ Class Request{
 				$keyw = "zy3658786787676";
 				$dtime = time();
 				$sign = md5($out_trade_no.$keyw.$dtime);
-				$turl='http://www.zhiying365.com/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$this->cfg->C('mchId');
+				$turl='http://www.shunjubao.xyz/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$this->cfg->C('mchId');
 				log_result("error_log.txt",$turl);
 				$result = file_get_contents($turl);
 				

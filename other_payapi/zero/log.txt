@@ -1,5 +1,5 @@
 2018-01-09 11:07:20   ==========210110 微信扫码支付=============
-2018-01-09 11:07:20   需签名报文末尾未加密钥串:Amount=10000&MerNo=06781478&NotifyUrl=http://www.zhiying365.com/other_payapi/zero/AsynCallBack.php&PdtName=测试&ProductId=0601&Remark=测试&TxCode=210110&TxSN=20180109110720&Version=2.5
+2018-01-09 11:07:20   需签名报文末尾未加密钥串:Amount=10000&MerNo=06781478&NotifyUrl=http://www.shunjubao.xyz/other_payapi/zero/AsynCallBack.php&PdtName=测试&ProductId=0601&Remark=测试&TxCode=210110&TxSN=20180109110720&Version=2.5
 2018-01-09 11:07:20   生成的签名:ea58bbdd2d0dd8063eb7810c7a2f373c
 2018-01-09 11:07:20   转换请求数据中特殊字段的值为Base64的报文:Amount=10000&MerNo=06781478&NotifyUrl=aHR0cDovL3d3dy56aGl5aW5nMzY1LmNvbS9vdGhlcl9wYXlhcGkvemVyby9Bc3luQ2FsbEJhY2sucGhw&PdtName=测试&ProductId=0601&Remark=测试&SignMethod=MD5&Signature=ea58bbdd2d0dd8063eb7810c7a2f373c&TxCode=210110&TxSN=20180109110720&Version=2.5
 2018-01-09 11:07:20   Url编码后的请求报文:Version=2.5&SignMethod=MD5&TxCode=210110&ProductId=0601&MerNo=06781478&TxSN=20180109110720&Amount=10000&PdtName=%E6%B5%8B%E8%AF%95&Remark=%E6%B5%8B%E8%AF%95&NotifyUrl=aHR0cDovL3d3dy56aGl5aW5nMzY1LmNvbS9vdGhlcl9wYXlhcGkvemVyby9Bc3luQ2FsbEJhY2sucGhw&Signature=ea58bbdd2d0dd8063eb7810c7a2f373c

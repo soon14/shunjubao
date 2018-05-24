@@ -21,7 +21,7 @@ switch (get_param('action')){
 			 
 			$data['merid'] = $merid;
 			$data['merchantOutOrderNo'] = $orderNum;
-			$data['notifyUrl'] = 'http://www.zhiying365.com/other_payapi/yizhibank/callback.php';
+			$data['notifyUrl'] = 'http://www.shunjubao.xyz/other_payapi/yizhibank/callback.php';
 			$data['noncestr'] = '12345678910';
 			$data['orderMoney'] = $amount;
 			$data['orderTime'] = date('YmdHis');

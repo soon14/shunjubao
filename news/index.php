@@ -35,6 +35,6 @@ if(isset($_GET['upcache']) || !file_exists('index.html'))
 else
 {
     header('HTTP/1.1 301 Moved Permanently');
-    header('Location:http://www.zhiying365.com/');
+    header('Location:http://www.shunjubao.xyz/');
 }
 ?>

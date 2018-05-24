@@ -58,7 +58,7 @@ class base
 		  'appId' => 4
 		);
 		$token=$this->getToken($params);
-		$url="http://www.zhiying365.com/api/getMatchInfo.php?token=".$token."&time=".$time."&matchId=".$matchId."&sport=fb&appId=4";
+		$url="http://www.shunjubao.xyz/api/getMatchInfo.php?token=".$token."&time=".$time."&matchId=".$matchId."&sport=fb&appId=4";
 	    $ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

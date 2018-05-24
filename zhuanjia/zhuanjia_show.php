@@ -21,7 +21,7 @@ $value = $conn -> FetchArray($query);
 if(empty($value)){
 		$dinyue_not = 1;
 		$tpl -> assign('dinyue_not', $dinyue_not);
-	//message("请先订阅","http://www.zhiying365.com/zhuanjia/");
+	//message("请先订阅","http://www.shunjubao.xyz/zhuanjia/");
 	//exit();
 }*/
 //检查是否已经过期
@@ -52,7 +52,7 @@ if(!$value["u_name"]){
 	 $myuser = show_user($value["eid"]);
 	$value["u_img"] = $myuser["u_img"];
 	if(empty($value["u_img"])){
-		$value["u_img"]="http://www.zhiying365.com/www/statics/i/touxiang.jpg";
+		$value["u_img"]="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg";
 	}
 	$tpl -> assign('value', $value);	
 }

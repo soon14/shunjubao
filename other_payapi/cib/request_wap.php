@@ -84,7 +84,7 @@ Class Request{
 		$keyw = "zy3658786787676";
 		$dtime = time();
 		$sign = md5($will_out_trade_no.$will_mchId.$keyw.$dtime);
-		$turl='http://www.zhiying365.com/services/mppay_update.php?will_out_trade_no='.$will_out_trade_no.'&will_mchId='.$will_mchId.'&dtime='.$dtime.'&sign='.$sign; 
+		$turl='http://www.shunjubao.xyz/services/mppay_update.php?will_out_trade_no='.$will_out_trade_no.'&will_mchId='.$will_mchId.'&dtime='.$dtime.'&sign='.$sign; 
 		
 		$result = file_get_contents($turl);
 		//var_dump($result);exit();
@@ -169,7 +169,7 @@ Class Request{
 				$keyw = "zy3658786787676";
 				$dtime = time();
 				$sign = md5($out_trade_no.$keyw.$dtime);
-				$turl='http://www.zhiying365.com/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$this->cfg->C('mchId');
+				$turl='http://www.shunjubao.xyz/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$this->cfg->C('mchId');
 				log_result("ali_error_log.txt",$turl);
 				$result = file_get_contents($turl);
 				

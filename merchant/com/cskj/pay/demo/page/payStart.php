@@ -153,7 +153,7 @@ date_default_timezone_set("PRC");
 
 </div>
 </body>
-<script type="text/javascript" src="http://www.zhiying365.com/zx_alipay/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="http://www.shunjubao.xyz/zx_alipay/js/jquery-2.1.0.min.js"></script>
 <script>
 $(window).load(function() {
 	$('#showlayerButton').click();

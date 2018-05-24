@@ -54,7 +54,7 @@ include_once ("zjconfig.inc.php");
 				}
 				
 				if(empty($result)){
-					$error_tips = " 未订阅,点击<a href='http://www.zhiying365.com/zhuanjia/' target='_blank'>订阅</a>";	
+					$error_tips = " 未订阅,点击<a href='http://www.shunjubao.xyz/zhuanjia/' target='_blank'>订阅</a>";	
 					$tpl -> assign('error_tips',$error_tips);
 				}
 				

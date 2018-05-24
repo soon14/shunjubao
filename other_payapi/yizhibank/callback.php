@@ -21,7 +21,7 @@ if(IS_POST){
 				$keyw = "zy3658786787676";
 				$dtime = time();
 				$sign = md5($outTradeNo.$keyw.$dtime);
-				$turl='http://www.zhiying365.com/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$mchId;
+				$turl='http://www.shunjubao.xyz/services/wypay_return.php?out_trade_no='.$outTradeNo.'&total_fee='.$total_fee.'&trade_status='.$trade_status.'&dtime='.$dtime.'&sign='.$sign.'&mchId='.$mchId;
 				
 				
 				log_result("callback_url.txt",$turl);

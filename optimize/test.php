@@ -1,5 +1,5 @@
 <html>
-<script src="http://www.zhiying365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
 <body>
 <div><a id="jjyh">奖金优化</a></div>
 <form action="index.php?act=jc" name="jjyh_form" id="jjyh_form" method="post">

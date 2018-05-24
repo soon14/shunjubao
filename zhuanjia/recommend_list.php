@@ -21,7 +21,7 @@ include_once ("config.inc.php");
 $query = $conn -> Query($sql);
 while($value = $conn -> FetchArray($query)){
 	if(empty($value["u_img"])){
-		$value["u_img"]="http://www.zhiying365.com/www/statics/i/touxiang.jpg";
+		$value["u_img"]="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg";
 	}
 	
 	
@@ -50,7 +50,7 @@ while($value = $conn -> FetchArray($query)){
 	$myuser = show_user($value["u_id"]);
 	$value["u_img"] = $myuser["u_img"];
 	if(empty($myuser["u_img"])){
-		$value["u_img"]="http://www.zhiying365.com/www/statics/i/touxiang.jpg";
+		$value["u_img"]="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg";
 	}
 	$value["u_nick"] = $myuser["u_nick"];
 	

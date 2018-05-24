@@ -105,7 +105,7 @@ switch (get_param('action')){
 					}
 				}else{
 					
-					$error_tips = " 未申请专家,点击<a href='http://www.zhiying365.com/zhuanjia/zhuanjiashenqing.php' target='_blank'>申请</a>";	
+					$error_tips = " 未申请专家,点击<a href='http://www.shunjubao.xyz/zhuanjia/zhuanjiashenqing.php' target='_blank'>申请</a>";	
 				}
 				$tpl -> assign('error_tips',$error_tips);
 		
@@ -215,7 +215,7 @@ switch (get_param('action')){
 					}
 				}else{
 					
-					$error_tips = " 未申请专家,点击<a href='http://www.zhiying365.com/zhuanjia/zhuanjiashenqing.php' target='_blank'>申请</a>";	
+					$error_tips = " 未申请专家,点击<a href='http://www.shunjubao.xyz/zhuanjia/zhuanjiashenqing.php' target='_blank'>申请</a>";	
 				}
 				$tpl -> assign('error_tips',$error_tips);
 				

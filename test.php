@@ -11,7 +11,7 @@
 
 
 
-<form action="http://www.zhiying365.com/merchant/com/cskj/pay/demo/action/AsynNotifyAction.php" method="post">
+<form action="http://www.shunjubao.xyz/merchant/com/cskj/pay/demo/action/AsynNotifyAction.php" method="post">
 amount： <input type="txt" name="amount" value="200.00"><br />
 
  resultCode：<input type="txt" name="resultCode" value="0"><br />

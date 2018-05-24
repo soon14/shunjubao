@@ -20,8 +20,8 @@
 "      <li><a href=\"http://www.shunjubao.xyz/basketball/hdc_list.html\">赛果开奖</a><span> <strong>赛果开奖</strong><em>&nbsp;</em>"+
 "        <h2><a href=\"http://www.shunjubao.xyz/livescore/fb_match_result.php\">竞彩足球</a><a href=\"http://www.shunjubao.xyz/livescore/bk_match_result.php\">竞彩篮球</a></h2>"+
 "        </span></li>"+
-"      <li><a href=\"http://new.shunjubao.com/footballtj/\">资讯推荐</a><span> <strong>资讯推荐</strong><em>&nbsp;</em>"+
-"        <h2><a href=\"http://new.shunjubao.com/footballtj/\">足球推荐</a><a href=\"http://new.shunjubao.com/footballxw/\">足球资讯</a><a href=\"http://new.shunjubao.com/NBAtj/\">篮球推荐</a><a href=\"http://new.shunjubao.com/NBAxw/\">篮球资讯</a><a href=\"http://new.shunjubao.com/touzhujiqiao/\">投注技巧</a><a href=\"http://new.shunjubao.com/zhongchao/\">论剑中超</a></h2>"+
+"      <li><a href=\"http://new.shunjubao.xyz/footballtj/\">资讯推荐</a><span> <strong>资讯推荐</strong><em>&nbsp;</em>"+
+"        <h2><a href=\"http://new.shunjubao.xyz/footballtj/\">足球推荐</a><a href=\"http://new.shunjubao.xyz/footballxw/\">足球资讯</a><a href=\"http://new.shunjubao.xyz/NBAtj/\">篮球推荐</a><a href=\"http://new.shunjubao.xyz/NBAxw/\">篮球资讯</a><a href=\"http://new.shunjubao.xyz/touzhujiqiao/\">投注技巧</a><a href=\"http://new.shunjubao.xyz/zhongchao/\">论剑中超</a></h2>"+
 "        </span></li>"+
 
 "      <li><a href=\"http://quan.zhiying365365.com/\" target=\"_blank\">圈子</a></li>"+

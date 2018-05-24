@@ -137,7 +137,7 @@
 				$value["gz_money"] =$value2["gz_money"];*/
 				//$value["money"] = "余额:".$value2["cash"].",冻结金额:".$value2["frozen_cash"].",积分:".$value2["score"].",彩金:".$value2["gift"];
 				if($value["partent_id"]!=0){
-					$value["partent_id"] ='<a target="_blank" href="http://www.zhiying365.com/ticket/follow/'.$value["partent_id"].'.html">'.$value["partent_id"].'</a>';
+					$value["partent_id"] ='<a target="_blank" href="http://www.shunjubao.xyz/ticket/follow/'.$value["partent_id"].'.html">'.$value["partent_id"].'</a>';
 				}else{
 					$value["partent_id"] ='';
 				}
@@ -339,7 +339,7 @@
 				$value["gz_money"] =$value2["gz_money"];*/
 				//$value["money"] = "余额:".$value2["cash"].",冻结金额:".$value2["frozen_cash"].",积分:".$value2["score"].",彩金:".$value2["gift"];
 				if($value["partent_id"]!=0){
-					$value["partent_id"] ='<a target="_blank" href="http://www.zhiying365.com/ticket/follow/'.$value["partent_id"].'.html">'.$value["partent_id"].'</a>';
+					$value["partent_id"] ='<a target="_blank" href="http://www.shunjubao.xyz/ticket/follow/'.$value["partent_id"].'.html">'.$value["partent_id"].'</a>';
 				}else{
 					$value["partent_id"] ='';
 				}

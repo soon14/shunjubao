@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.0.7, created on 2017-03-08 22:25:46
-         compiled from "/home/wwwroot/www.zhiying365.com/www/optimize/optimize.html" */ ?>
+         compiled from "/home/wwwroot/www.shunjubao.xyz/www/optimize/optimize.html" */ ?>
 <?php /*%%SmartyHeaderCode:14816722758c0146ada06f6-70717363%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '63d47b0e57125ced32a99c1376347d9595316421' => 
     array (
-      0 => '/home/wwwroot/www.zhiying365.com/www/optimize/optimize.html',
+      0 => '/home/wwwroot/www.shunjubao.xyz/www/optimize/optimize.html',
       1 => 1488818616,
       2 => 'file',
     ),
@@ -23,9 +23,9 @@ $_smarty_tpl->decodeProperties(array (
 <title>智赢网智赢彩票奖金优化！</title>
 <meta name="keywords" content="智赢网智赢彩票奖金优化！" />
 <meta name="description" content="智赢网智赢彩票奖金优化！" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/header.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/footer.css" />
-<script src="http://www.zhiying365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/footer.css" />
+<script src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="htyouhua.js"></script>
 <style>
 
@@ -79,8 +79,8 @@ $_smarty_tpl->decodeProperties(array (
 </head>
 <body onload="xlh()" >
 <!--智赢页面头部 start-->
-<script src="http://www.zhiying365.com/www/statics/j/top.js" type="text/javascript"></script>
-<script src="http://www.zhiying365.com/www/statics/j/menu.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/menu.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 
@@ -216,7 +216,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 <!--center end-->
 <!---->
 <!--智赢页面底部 start-->
-<script src="http://www.zhiying365.com/www/statics/j/footer.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/footer.js" type="text/javascript"></script>
 <!--智赢页面底部 end-->
 </body>
 </html>

@@ -59,7 +59,7 @@ switch (get_param('action')){
 		
 		
 		if(empty($u_id)){
-			message("请先登录!","http://www.zhiying365.com/passport/login.php");
+			message("请先登录!","http://www.shunjubao.xyz/passport/login.php");
 			exit();	
 		}		
 
@@ -158,7 +158,7 @@ switch (get_param('action')){
 			while($value = $conn -> FetchArray($query)){
 				$value["img"]=show_img($value["u_id"]);
 				if(empty($value["img"])){
-					$value["img"]='http://www.zhiying365.com/www/statics/i/touxiang.jpg	';
+					$value["img"]='http://www.shunjubao.xyz/www/statics/i/touxiang.jpg	';
 				}
 				
 				//查看贴子还有没有回复

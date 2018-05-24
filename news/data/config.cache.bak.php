@@ -1,5 +1,5 @@
 <?php
-$cfg_basehost = 'http://www.zhiying365.com';
+$cfg_basehost = 'http://www.shunjubao.xyz';
 $cfg_cmspath = '/cms';
 $cfg_cookie_encode = 'XruXfVgqekhy4ASKoquK4Ou6V1KT';
 $cfg_indexurl = '/cms';

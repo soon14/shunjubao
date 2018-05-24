@@ -203,7 +203,7 @@ unset($_smarty_tpl_vars);
       <ul>
         <li><a href="<?php echo @ROOT_WEBSITE; ?>
 /help/showFgz.html">玩法规则</a></li>
-        <li><a href="http://new.shunjubao.com/saishi/index.php" class="active">销售公告</a></li>
+        <li><a href="http://new.shunjubao.xyz/saishi/index.php" class="active">销售公告</a></li>
       </ul>
       <div class="clear"></div>
     </div>

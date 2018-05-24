@@ -10,8 +10,8 @@ $key_code2 = 't5Vv4yt9E700cu8UH9334238';//加密秘钥
 	 
  $merchantNo = "B100198839";
  $goodsName = "智赢充值"; 
- $callbackUrl = "http://www.zhiying365.com/rhpay/callback.php"; 
- $serverCallbackUrl = "http://www.zhiying365.com/rhpay/serverCallback.php";  
+ $callbackUrl = "http://www.shunjubao.xyz/rhpay/callback.php"; 
+ $serverCallbackUrl = "http://www.shunjubao.xyz/rhpay/serverCallback.php";  
  $toibkn = "310651000048";//行号
  $cardNo = "6217921851778004";//帐号
  $idCardNo = "420104197805052010";//身份证

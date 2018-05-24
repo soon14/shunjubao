@@ -6,7 +6,7 @@ class Config{
         'url'=>'https://pay.swiftpass.cn/pay/gateway',	//支付请求url，无需更改
         'mchId'=>'103510006590',		
         'key'=>'6e148e3ffccfe186fd04377b26e390e0',  
-		'notify_url'=>'http://www.zhiying365.com/zx_alipay/request.php?method=callback',//通知url，此处默认为空格商户需更改为自己的，保证能被外网访问到（否则支付成功后收不到威富通服务器所发通知）
+		'notify_url'=>'http://www.shunjubao.xyz/zx_alipay/request.php?method=callback',//通知url，此处默认为空格商户需更改为自己的，保证能被外网访问到（否则支付成功后收不到威富通服务器所发通知）
         'version'=>'2.0'		//版本号
        );
     
@@ -33,7 +33,7 @@ class Config{
 				'url'=>'https://pay.swiftpass.cn/pay/gateway',	//支付请求url，无需更改
 				'mchId'=>$mchId,
 				'key'=>$mkey,
-				'notify_url'=>'http://www.zhiying365.com/zx_alipay/request.php?method=callback',//通知url，此处默认为空格商户需更改为自己的，保证能被外网访问到（否则支付成功后收不到威富通服务器所发通知）
+				'notify_url'=>'http://www.shunjubao.xyz/zx_alipay/request.php?method=callback',//通知url，此处默认为空格商户需更改为自己的，保证能被外网访问到（否则支付成功后收不到威富通服务器所发通知）
 				'version'=>'2.0'		//版本号
      		  );
 			  

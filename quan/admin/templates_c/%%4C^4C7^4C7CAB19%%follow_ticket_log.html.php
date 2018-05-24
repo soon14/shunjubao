@@ -100,16 +100,16 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
 </div></td>
     <td ><div align="center"><?php echo ((is_array($_tmp=$this->_tpl_vars['datalist'][$this->_sections['a']['index']]['u_id'])) ? $this->_run_mod_handler('show_post_member', true, $_tmp) : show_post_member($_tmp)); ?>
 </div></td>
-    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_id']; ?>
+    <td ><div align="center"><a target="_blank" href="http://www.shunjubao.xyz/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_id']; ?>
 "><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_id']; ?>
 </a></div></td>
-    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_id']; ?>
+    <td ><div align="center"><a target="_blank" href="http://www.shunjubao.xyz/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_id']; ?>
 "><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['partent_show']; ?>
 </a></div></td>
-    <td ><div align="center"><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_id']; ?>
+    <td ><div align="center"><a target="_blank" href="http://www.shunjubao.xyz/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_id']; ?>
 "><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_id']; ?>
 </a></div></td>
-    <td ><div align="center"><?php if ($this->_tpl_vars['datalist'][$this->_sections['a']['index']]['tags'] > 0): ?><a target="_blank" href="http://www.zhiying365.com/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_id']; ?>
+    <td ><div align="center"><?php if ($this->_tpl_vars['datalist'][$this->_sections['a']['index']]['tags'] > 0): ?><a target="_blank" href="http://www.shunjubao.xyz/account/ticket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_id']; ?>
 "><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['ticket_show']; ?>
 </a><?php endif; ?></div></td>
     <td ><div align="center"><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['tags_show']; ?>
@@ -150,4 +150,4 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
 
 </form>
 </body>
-</html>
+</html>

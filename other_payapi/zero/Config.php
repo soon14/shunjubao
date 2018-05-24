@@ -10,7 +10,7 @@ $merconfig = Array(
 		"Md5Key"     => "9a2585a737ebcfddc83a3f6c5f119608",    		  //密钥
 		//请求地址
 		"ReqUrl"      => "http://api.1yigou.com.cn:8881/merchant-trade-api/command",
-		"NotifyUrl"      => "http://www.zhiying365.com/other_payapi/zero/AsynCallBack.php", //异步通知URL  商户 修改 设置为自己项目域名
+		"NotifyUrl"      => "http://www.shunjubao.xyz/other_payapi/zero/AsynCallBack.php", //异步通知URL  商户 修改 设置为自己项目域名
 		"Charset"   => "UTF-8", //字符编码
 		"SignMethod"=> "MD5",//签名类型
 		"Url_Param_Connect_Flag"=>"&",//参数分隔符

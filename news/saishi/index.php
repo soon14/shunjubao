@@ -4,25 +4,25 @@
 <title>赛事取消或者延迟公告-智赢网。</title>
 <meta name="keywords" content="赛事取消或者延迟公告-智赢网。" />
 <meta name="description" content="赛事取消或者延迟公告-智赢网。" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/header.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/news.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/footer.css" />
-<script src="http://www.zhiying365.com/www/statics/j/jquery-1.9.1.min.js"></script>
-<script src="http://www.zhiying365.com/www/statics/j/float.js"></script>
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/news.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/footer.css" />
+<script src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/float.js"></script>
 
-<script src="http://www.zhiying365.com/www/statics/j/top.js"></script>
-<script src="http://www.zhiying365.com/www/statics/j/menu.js"></script>
-<script src="http://www.zhiying365.com/www/statics/j/winmac.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/top.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/menu.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/winmac.js"></script>
 <style>
 .saishi{ width:1000px; margin:0 auto; text-align:center;}
 .saishi ul{border-bottom:1px solid #dedede; width:1000px; text-align:left; margin:15px auto; line-height:28px; padding:0 0 15px 0;}
 .saishi ul li{ line-height:28px; font-size:12px;color:#444;}
-.saishi ul li b{display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:14px; font-weight:900;color:#D20000; background:url(http://www.zhiying365.com/www/statics/i/cailogo.jpg) no-repeat left center; padding:0 0 0 35px; height:35px; line-height:35px;}
+.saishi ul li b{display:inline-table;display:inline-block;zoom:1;*display:inline;font-size:14px; font-weight:900;color:#D20000; background:url(http://www.shunjubao.xyz/www/statics/i/cailogo.jpg) no-repeat left center; padding:0 0 0 35px; height:35px; line-height:35px;}
 </style>
 <body>
 <div class="nav-box">
   <ul>
-    <li class="cur"><img src="http://www.zhiying365.com/www/statics/i/ciapiaoxiaoshou.gif"></li>
+    <li class="cur"><img src="http://www.shunjubao.xyz/www/statics/i/ciapiaoxiaoshou.gif"></li>
   </ul>
 </div>
 <?php
@@ -83,5 +83,5 @@ for($i=0;$i<count($contents_list_array)-1;$i++){
 ?>
 
 </body>
-<script src="http://www.zhiying365.com/www/statics/j/footer.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/footer.js"></script>
 </html>

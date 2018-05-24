@@ -64,19 +64,19 @@ if($bRet){
 			
 				$userChargeInfo = $tmpChargeResult->getData();
 				if ($userChargeInfo['charge_status'] == UserCharge::CHARGE_STATUS_SUCCESS) {//已经充值成功，不能再改变了
-					$tmpUrl = "http://www.zhiying365.com/account/user_center.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_center.php";
 					redirect($tmpUrl);
 					exit('已经成功了，不需要再更新');	
 				}
 				
 				if ($userChargeInfo['charge_status'] == UserCharge::CHARGE_STATUS_FAILED) {
-					$tmpUrl = "http://www.zhiying365.com/account/user_charge.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_charge.php";
 					redirect($tmpUrl);
 					exit('订单已经充值失败,，不允许充值');	
 				}
 				
 				if($total_fee!=$userChargeInfo['money']){
-					$tmpUrl = "http://www.zhiying365.com/account/user_charge.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_charge.php";
 					redirect($tmpUrl);
 					exit('金额不一致！');	
 				}
@@ -86,7 +86,7 @@ if($bRet){
 				$objUserMemberFront = new UserMemberFront();
 				$userInfo = $objUserMemberFront->get($u_id);
 				if (!$userInfo) {
-					$tmpUrl = "http://www.zhiying365.com/account/user_charge.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_charge.php";
 					redirect($tmpUrl);
 					exit('用户信息未找到');
 				}
@@ -129,7 +129,7 @@ if($bRet){
 					$logMsg = '添加账户日志失败，pay_order_id:'.$out_trade_no;
 					log_result($logMsg, 'add_account_log', true);
 					
-					$tmpUrl = "http://www.zhiying365.com/account/user_charge.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_charge.php";
 					redirect($tmpUrl);
 					failExit('用户充值失败');
 				}
@@ -141,11 +141,11 @@ if($bRet){
 				$userChargeInfo['return_message']	= $trade_status;
 				$tmpResult = $objUserChargeFront->modify($userChargeInfo);
 				if (!$tmpResult->isSuccess()) {
-					$tmpUrl = "http://www.zhiying365.com/account/user_charge.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_charge.php";
 					redirect($tmpUrl);
 					exit('用户充值失败');
 				}else{
-					$tmpUrl = "http://www.zhiying365.com/account/user_center.php";
+					$tmpUrl = "http://www.shunjubao.xyz/account/user_center.php";
 					redirect($tmpUrl);
 					exit('用户充值成功');	
 				}

@@ -11,7 +11,7 @@ $attach = "附加信息";
 $total_fee = trim($_GET["total_fee"]);
 $mch_create_ip = $_SERVER["REMOTE_ADDR"];
 //根据提交的参数，生成微信支付二维码
-/*$url = 'http://www.zhiying365.com/wx/native/request.php';
+/*$url = 'http://www.shunjubao.xyz/wx/native/request.php';
 $post_data['out_trade_no']       = $out_trade_no;
 $post_data['body']      		 = $body;
 $post_data['attach']			 = $attach;

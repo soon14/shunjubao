@@ -57,7 +57,7 @@
 			
 			
 			
-			$turl='http://www.zhiying365.com/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status;
+			$turl='http://www.shunjubao.xyz/services/mppay_return.php?out_trade_no='.$out_trade_no.'&total_fee='.$total_fee.'&trade_status='.$trade_status;
 			$result = file_get_contents($turl);
 			
 			

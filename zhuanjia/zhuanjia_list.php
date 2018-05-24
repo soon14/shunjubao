@@ -40,7 +40,7 @@ $pageSize = 9;
 			$value["u_img"] = $myuser["u_img"];
 			
 			if(empty($value["u_img"])){
-			$value["u_img"]="http://www.zhiying365.com/www/statics/i/touxiang.jpg";
+			$value["u_img"]="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg";
 			}
 
 			$recommond =show_win_lv($value["eid"]);

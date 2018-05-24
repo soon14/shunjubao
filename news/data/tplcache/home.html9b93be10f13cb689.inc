@@ -14,7 +14,7 @@ $z[2][4]['titlelen']="42";
 $z[2][4]['orderby']="id";
 $z[2][4]['orderway']="desc";
 $z[2][4]['row']="10";
-$z[3]=Array("arclist","\r\n                <p><b><a href=\"http://new.shunjubao.com/gonggao\" target=\"_blank\">[告]</a></b><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a><em>[field:pubdate function='strftime(\"%m-%d\",@me)'/]</em></p>\r\n                ",24762,25139);
+$z[3]=Array("arclist","\r\n                <p><b><a href=\"http://new.shunjubao.xyz/gonggao\" target=\"_blank\">[告]</a></b><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a><em>[field:pubdate function='strftime(\"%m-%d\",@me)'/]</em></p>\r\n                ",24762,25139);
 $z[3][4]['channelid']="1";
 $z[3][4]['typeid']="11";
 $z[3][4]['titlelen']="42";
