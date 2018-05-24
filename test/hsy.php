@@ -32,7 +32,7 @@ for ($m_id=81435;$m_id>=80400;$m_id--) {
 pr('完成');
 exit;
 $CACHE['db'] = array(
-		'default'   => "mysqli://root:1q2w3e4R!@{$host}:3306/zhiying",
+		'default'   => "mysqli://root:1q2w3e4R@{$host}:3306/zhiying",
 		'leida'   	=> "mysqli://root:1q2w3e4R!@{$host}:3306/leida",
 		'log_data'	=>	"mysqli://root:1q2w3e4R!@{$host}:3306/log_data",
 );

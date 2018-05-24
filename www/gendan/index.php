@@ -4,9 +4,9 @@
 <title>����Ӯ������ƱӮ����ѡ_�й�������_���_����_����_����_���_���������Ĳ�Ʊ��վ</title>
 <meta name="keywords" content="����,�й�������,���,�й������,����,����,����,���,�����Ʊ,�����Ʊ" />
 <meta name="description" content="��Ӯ���ǲ�ƱӮ�ҵľۼ��أ��ڱ���õĲ�Ʊ������վ�����ʡ�������Ʊ�������Ʊ�������Ʊ��������������ͨ����վ���ֻ��ͻ���ʹ�á��ṩ������Ʊ��������Ʊ�Ŀ���������ͼ����ˮ���ˡ��������⡢�ȷ�ֱ������Ѷ����" />
-<link href="http://www.shunjubao.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="css/shaidan.css">
-<link type="text/css" rel="stylesheet" href="http://www.shunjubao.com/zy/www/statics/c/footer.css">
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/zy/www/statics/c/footer.css">
 <?php
 require_once "../include/init.php";
 $s=$_REQUEST["s"]?$_REQUEST["s"]:"fb";
@@ -21,13 +21,13 @@ $page_info=page_all($page,$count_sql);
 </head>
 <body>
 <!--ҳ��ͷ�� start-->
-<script src="http://www.shunjubao.com/zy/www/statics/j/top.js" type="text/javascript"></script>
-<script src="http://www.shunjubao.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/zy/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/zy/www/statics/j/headNav.js" type="text/javascript"></script>
 <!--ҳ��ͷ�� end-->
 <!--��ǰλ�� start-->
 <div class="Cailocation">
     <div class="location_center">
-        <h1><b>��Ӯ��</b><img src="http://www.shunjubao.com/www/statics/i/showRight.png"><strong>ɹ��</strong></h1>
+        <h1><b>��Ӯ��</b><img src="http://www.shunjubao.xyz/www/statics/i/showRight.png"><strong>ɹ��</strong></h1>
     </div>
 </div>
 <!--��ǰλ�� end-->
@@ -93,7 +93,7 @@ $page_info=page_all($page,$count_sql);
 <!--Help start-->
 <!--Help end-->
 <!--footer start-->
-<script src="http://www.shunjubao.com/www/statics/j/footer.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/footer.js" type="text/javascript"></script>
 <!--footer end-->
 </body>
 </html>

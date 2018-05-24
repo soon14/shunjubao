@@ -1,5 +1,5 @@
 (function ($) {
-  if (!!window.ActiveXObject && !window.XMLHttpRequest && (location.href=='http://www.shunjubao.com' || location.href=='http://www.shunjubao.com/')) return;
+  if (!!window.ActiveXObject && !window.XMLHttpRequest && (location.href=='http://www.shunjubao.com' || location.href=='http://www.shunjubao.xyz/')) return;
   $(function () {
     nav();
     bnrSilder();

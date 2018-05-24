@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-23 20:43:01
+<?php /* Smarty version 2.6.17, created on 2018-05-24 20:55:37
          compiled from foot.html */ ?>
 <div class="footer">
   <div class="footdaodu">
@@ -12,16 +12,16 @@
     <p><a href="/about/xieyi.html" target="_blank">网站协议</a></p>
   </div>
   <div class="FooterOhter">
-    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：010-64344882&nbsp;&nbsp;&nbsp;<a href="http://www.shunjubao.com/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
+    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：010-64344882&nbsp;&nbsp;&nbsp;<a href="http://www.shunjubao.xyz/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
   </div>
   <div class="FootPic">
     <ul>
-      <li><a href="http://www.pinpaibao.com.cn/intro/index/" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic2.jpg"/></a></li>
-      <li><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic1.jpg"/></a></li>
-      <li><a href="http://www.315online.com.cn/" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic3.jpg"/></a></li>
-      <li><a href="http://www.mps.gov.cn/n16/index.html?_v=1438535553945" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic4.jpg"/></a></li>
-      <li><a href="http://www.itrust.org.cn/" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic5.jpg"/></a></li>
-      <li><a href="http://www.bj.cyberpolice.cn/index.jsp" target="_blank"><img src="http://www.shunjubao.com/www/statics/i/FootPic6.jpg"/></a></li>
+      <li><a href="http://www.pinpaibao.com.cn/intro/index/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic2.jpg"/></a></li>
+      <li><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic1.jpg"/></a></li>
+      <li><a href="http://www.315online.com.cn/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic3.jpg"/></a></li>
+      <li><a href="http://www.mps.gov.cn/n16/index.html?_v=1438535553945" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic4.jpg"/></a></li>
+      <li><a href="http://www.itrust.org.cn/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic5.jpg"/></a></li>
+      <li><a href="http://www.bj.cyberpolice.cn/index.jsp" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic6.jpg"/></a></li>
     </ul>
   </div>
   <div class="FooterOhter">

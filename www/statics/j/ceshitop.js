@@ -13,9 +13,9 @@ for(var i=0;i<arrCookie.length;i++){
 }
 var welcome_str = "&nbsp;";
 	if (u_name != '') {
-		welcome_str += "<a href=\"http://www.shunjubao.com/passport/login.php\"> " + u_name + "</a>&nbsp;&nbsp;<em><a href=\"http://www.shunjubao.com/account/user_center.php\">我的账户</a></em>&nbsp;&nbsp;<a href=\"http://www.shunjubao.com/passport/logout.php\">退出</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.xyz/passport/login.php\"> " + u_name + "</a>&nbsp;&nbsp;<em><a href=\"http://www.shunjubao.xyz/account/user_center.php\">我的账户</a></em>&nbsp;&nbsp;<a href=\"http://www.shunjubao.xyz/passport/logout.php\">退出</a></h1>";
 	} else {
-		welcome_str += "<a href=\"http://www.shunjubao.com/passport/login.php\">登录</a><span>|</span><a href=\"javascript:void(0)\" onClick=\"document.getElementById('flight1').style.display='block';document.getElementById ('ffade').style.display='block'\">联合登录</a><span>|</span><a href=\"http://www.shunjubao.com/passport/reg.php\">注册</a></h1>";
+		welcome_str += "<a href=\"http://www.shunjubao.xyz/passport/login.php\">登录</a><span>|</span><a href=\"javascript:void(0)\" onClick=\"document.getElementById('flight1').style.display='block';document.getElementById ('ffade').style.display='block'\">联合登录</a><span>|</span><a href=\"http://www.shunjubao.xyz/passport/reg.php\">注册</a></h1>";
 }
 document.writeln(
 "<div class=\"top\">"+

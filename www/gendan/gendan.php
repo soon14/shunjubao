@@ -3,13 +3,13 @@
 <title>��������-����Ӯ������ƱӮ����ѡ_�й�������_���_����_����_����_���_���������Ĳ�Ʊ��վ</title>
 <meta name="keywords" content="����,�й�������,���,�й������,����,����,����,���,�����Ʊ,�����Ʊ" />
 <meta name="description" content="��Ӯ���ǲ�ƱӮ�ҵľۼ��أ��ڱ���õĲ�Ʊ������վ�����ʡ�������Ʊ�������Ʊ�������Ʊ��������������ͨ����վ���ֻ��ͻ���ʹ�á��ṩ������Ʊ��������Ʊ�Ŀ���������ͼ����ˮ���ˡ��������⡢�ȷ�ֱ������Ѷ����" />
-<link href="http://www.shunjubao.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
-<link href="http://www.shunjubao.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
-<link href="http://www.shunjubao.com/www/statics/c/user.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="http://www.shunjubao.com/www/statics/j/jquery.js"></script>
-<script type="text/javascript" src="http://www.shunjubao.com/www/statics/j/jquery-1.9.1.min.js"></script>
-<script language="javascript" src="http://www.shunjubao.com/www/statics/j/common.js"></script>
-<link rel="shortcut icon" href="http://www.shunjubao.com/www/statics/i/zhiying.icon" type="image/x-icon" />
+<link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/user.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
+<script language="javascript" src="http://www.shunjubao.xyz/www/statics/j/common.js"></script>
+<link rel="shortcut icon" href="http://www.shunjubao.xyz/www/statics/i/zhiying.icon" type="image/x-icon" />
 <?php
 require_once "../include/init.php";
 $id=$_REQUEST["id"];
@@ -32,11 +32,11 @@ if($combination_type==0){
 */
 ?>
 </head>
-<link href="http://www.shunjubao.com/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/confirmbet.css" type="text/css" rel="stylesheet" />
 <body>
 <!--ҳ��ͷ�� start-->
-<script src="http://www.shunjubao.com/zy/www/statics/j/top.js" type="text/javascript"></script>
-<script src="http://www.shunjubao.com/zy/www/statics/j/headNav.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/zy/www/statics/j/top.js" type="text/javascript"></script>
+<script src="http://www.shunjubao.xyz/zy/www/statics/j/headNav.js" type="text/javascript"></script>
 <!--center start-->
 <div class="center">
   <!--ȷ��Ͷעcenter start-->
@@ -45,7 +45,7 @@ if($combination_type==0){
       <!--Ͷעȷ�Ϲ��ط�ʽ start-->
     <div class="querenguoguan">
     <div class="TouXiang">
-    <dl><dt><img src="http://www.shunjubao.com/www/statics/i/touxiang.jpg" /> <a href="http://www.shunjubao.com/account/user_center.php"><?php echo $uname?></a> </dt>
+    <dl><dt><img src="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg" /> <a href="http://www.shunjubao.xyz/account/user_center.php"><?php echo $uname?></a> </dt>
         <dd><p>�������ͣ�<i><?php echo $SPORT[$d["sport"]]."-".$POOL[$d["pool"]]?></i></p>
             <p>�ۼ��н���<strong>&yen;</strong></p></dd>
         <dd><p>������<i>&yen;<?php echo $d["money"]?></i></p>
@@ -161,18 +161,18 @@ if($d=mysql_fetch_array($query)){
   <div id="Rightsubnav">
     <ul>
       <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=2733292184&site=qq&menu=yes" target="_blank">���߿ͷ�</a></li>
-      <li class="help"><a href="http://www.shunjubao.com/help" target="_blank">��������</a></li>
+      <li class="help"><a href="http://www.shunjubao.xyz/help" target="_blank">��������</a></li>
     </ul>
   </div>
-  <div class="footerNav"> <a href="http://www.shunjubao.com/passport/reg.php" target="_blank">�û�ע��</a><span>|</span> <a href="http://www.shunjubao.com/about/index.html" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.com/about/baozhang.html" target="_blank">��ȫ����</a><span>|</span> <a href="http://www.shunjubao.com/about/contactus.html" target="_blank">��ϵ��ʽ</a><span>|</span> <a href="http://www.shunjubao.com/about/job.html" target="_blank">�˲���Ƹ</a><span>|</span> <a href="http://www.shunjubao.com/about/bd.html" target="_blank">�������</a><span>|</span> <a href="http://www.shunjubao.com/about/Sitemap.html" target="_blank">վ���ͼ</a><span>|</span> <a href="http://www.shunjubao.com/about/lawfirm.html" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.com/about/xieyi.html" target="_blank">��վЭ��</a> </div>
-  <div class="footdaodu">�ȵ㵼���� <a href="http://www.shunjubao.com/zixun/" target="_blank">��Ѷ����</a><span>|</span> <a href="#" target="_blank">��Ӯ2��1</a><span>|</span> <a href="http://www.shunjubao.com/news/footballtj/" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.com/news/NBAxw/" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.com/news/footballtj/" target="_blank">�����Ƽ�</a><span>|</span> <a href="http://www.shunjubao.com/news/NBAtj/" target="_blank">�����Ƽ�</a><span>|</span> <a href="http://www.shunjubao.comnews/touzhujiqiao/" target="_blank">Ͷע����</a></div>
+  <div class="footerNav"> <a href="http://www.shunjubao.xyz/passport/reg.php" target="_blank">�û�ע��</a><span>|</span> <a href="http://www.shunjubao.xyz/about/index.html" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.xyz/about/baozhang.html" target="_blank">��ȫ����</a><span>|</span> <a href="http://www.shunjubao.xyz/about/contactus.html" target="_blank">��ϵ��ʽ</a><span>|</span> <a href="http://www.shunjubao.xyz/about/job.html" target="_blank">�˲���Ƹ</a><span>|</span> <a href="http://www.shunjubao.xyz/about/bd.html" target="_blank">�������</a><span>|</span> <a href="http://www.shunjubao.xyz/about/Sitemap.html" target="_blank">վ���ͼ</a><span>|</span> <a href="http://www.shunjubao.xyz/about/lawfirm.html" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.xyz/about/xieyi.html" target="_blank">��վЭ��</a> </div>
+  <div class="footdaodu">�ȵ㵼���� <a href="http://www.shunjubao.xyz/zixun/" target="_blank">��Ѷ����</a><span>|</span> <a href="#" target="_blank">��Ӯ2��1</a><span>|</span> <a href="http://www.shunjubao.xyz/news/footballtj/" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.xyz/news/NBAxw/" target="_blank">��������</a><span>|</span> <a href="http://www.shunjubao.xyz/news/footballtj/" target="_blank">�����Ƽ�</a><span>|</span> <a href="http://www.shunjubao.xyz/news/NBAtj/" target="_blank">�����Ƽ�</a><span>|</span> <a href="http://www.shunjubao.comnews/touzhujiqiao/" target="_blank">Ͷע����</a></div>
   <div class="FootPic">
     <ul>
-      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic2.jpg"/></a></li>
-      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic3.jpg"/></a></li>
-      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic4.jpg"/></a></li>
-      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic5.jpg"/></a></li>
-      <li><a href=""><img src="http://www.shunjubao.com/www/statics/i/FootPic6.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.xyz/www/statics/i/FootPic2.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.xyz/www/statics/i/FootPic3.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.xyz/www/statics/i/FootPic4.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.xyz/www/statics/i/FootPic5.jpg"/></a></li>
+      <li><a href=""><img src="http://www.shunjubao.xyz/www/statics/i/FootPic6.jpg"/></a></li>
     </ul>
   </div>
   <div class="FooterOhter"> 2014&nbsp;&nbsp;&copy;&nbsp;Copyright&nbsp;&nbsp;&nbsp;&nbsp;��Ӯ��&nbsp;&nbsp;&nbsp;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$.post('http://www.shunjubao.com/prize/getPrize.php', {
+	$.post('http://www.shunjubao.xyz/prize/getPrize.php', {
 		type : 1,
 		limit : 40
 	}, function(data) {

@@ -1,6 +1,16 @@
-<{include file="header.html"}>
-<link href="<{'user.css'|getStaticsUrl}>" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="<{'reg.js'|getStaticsUrl}>"></script>
+<?php /* Smarty version 2.6.17, created on 2018-05-23 23:16:12
+         compiled from reg.html */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'reg.html', 2, false),)), $this); ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<link href="<?php echo ((is_array($_tmp='user.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
+" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo ((is_array($_tmp='reg.js')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
+"></script>
 <body>
 <!--页面头部 start-->
 <div class="head">
@@ -10,36 +20,43 @@
 <!--center start-->
 <div class="loginC">
   <div class="loginCleft">
-    <form method="post" action="<{$smarty.const.ROOT_DOMAIN}>/passport/reg.php?refer=<{$refer}>" name='frm_reg' id='frm_reg'>
+    <form method="post" action="<?php echo @ROOT_DOMAIN; ?>
+/passport/reg.php?refer=<?php echo $this->_tpl_vars['refer']; ?>
+" name='frm_reg' id='frm_reg'>
       <dl>
         <dt>用户名</dt>
         <dd>
           <input name="u_name" type="text" size="25"  id='u_name'/>
-          <font class="<{if $msg.u_name}><{else}>none<{/if}>" id='tips1'> <{if $msg.u_name}><span class="" id='u_name_err'><{$msg.u_name}></span><{else}><u class="none" id='tips1'></u><{/if}> </font> </dd>
+          <font class="<?php if ($this->_tpl_vars['msg']['u_name']): ?><?php else: ?>none<?php endif; ?>" id='tips1'> <?php if ($this->_tpl_vars['msg']['u_name']): ?><span class="" id='u_name_err'><?php echo $this->_tpl_vars['msg']['u_name']; ?>
+</span><?php else: ?><u class="none" id='tips1'></u><?php endif; ?> </font> </dd>
       </dl>
       <dl>
         <dt>登录密码</dt>
         <dd>
           <input name="u_pwd" type="password" size="25"  id="u_pwd"/>
-          <font class="<{if $msg.newpas}><{else}>none<{/if}>" id='tips2'> <{if $msg.newpas}><span class=""><{$msg.newpas}></span><{else}><u class="">请输入密码</u><{/if}> </font> </dd>
+          <font class="<?php if ($this->_tpl_vars['msg']['newpas']): ?><?php else: ?>none<?php endif; ?>" id='tips2'> <?php if ($this->_tpl_vars['msg']['newpas']): ?><span class=""><?php echo $this->_tpl_vars['msg']['newpas']; ?>
+</span><?php else: ?><u class="">请输入密码</u><?php endif; ?> </font> </dd>
       </dl>
       <dl>
         <dt>确认密码</dt>
         <dd>
           <input name="repas" type="password" size="25"  id="repas"/>
-          <font class="<{if $msg.repas}><{else}>none<{/if}>" id='tips3'> <{if $msg.repas}><span class=""><{$msg.repas}></span><{else}><u class="none">&nbsp;&nbsp;</u><{/if}> </font> </dd>
+          <font class="<?php if ($this->_tpl_vars['msg']['repas']): ?><?php else: ?>none<?php endif; ?>" id='tips3'> <?php if ($this->_tpl_vars['msg']['repas']): ?><span class=""><?php echo $this->_tpl_vars['msg']['repas']; ?>
+</span><?php else: ?><u class="none">&nbsp;&nbsp;</u><?php endif; ?> </font> </dd>
       </dl>
       <dl>
         <dt>手机号</dt>
         <dd>
           <input name="mobile" type="text" size="25"  id="mobile" onBlur="hidetipsCode()"  />
-          <font class="<{if $msg.mobile}><{else}>none<{/if}>" id='tips4'> <{if $msg.mobile}><span class=""><{$msg.mobile}></span><{else}><u class="none">&nbsp;&nbsp;</u><{/if}> </font> </dd>
+          <font class="<?php if ($this->_tpl_vars['msg']['mobile']): ?><?php else: ?>none<?php endif; ?>" id='tips4'> <?php if ($this->_tpl_vars['msg']['mobile']): ?><span class=""><?php echo $this->_tpl_vars['msg']['mobile']; ?>
+</span><?php else: ?><u class="none">&nbsp;&nbsp;</u><?php endif; ?> </font> </dd>
       </dl>
        <dl>
        <dt>验证码</dt>
        <dd> <input id="Validate_Code" name="Validate_Code" maxlength="4" size="15" type="text" class="form-control" style=" width:130px;" placeholder="验证码" onBlur="hidetipsCode()" onFocus="hidetips5()">
        
-       <font class="<{if $msg.Validate_Code}><{else}>none<{/if}>" id='tips5'><{if $msg.Validate_Code}><span class="" id='Validate_Code_err'><{$msg.Validate_Code}></span><{else}><u class="none" id='tips5'></u><{/if}> </font> 
+       <font class="<?php if ($this->_tpl_vars['msg']['Validate_Code']): ?><?php else: ?>none<?php endif; ?>" id='tips5'><?php if ($this->_tpl_vars['msg']['Validate_Code']): ?><span class="" id='Validate_Code_err'><?php echo $this->_tpl_vars['msg']['Validate_Code']; ?>
+</span><?php else: ?><u class="none" id='tips5'></u><?php endif; ?> </font> 
         <a href="javascript:void(0);" onClick="reflash_image_reg()"><img src="/include/Imagecode/Imagecode.php" id="imgCaptcha" height="40" width="100" style="position:relative;left:4px;"></a>
         <a class="refresh" href="javascript:void(0);" onClick="reflash_image_reg()">&nbsp;&nbsp;换一张</a>
          <font id="tipsCode" style="color:#F00;" class="none"></font>
@@ -66,10 +83,14 @@
     <div class="lianhelogin">
       <h2>使用合作网站登录</h2>
       <ul>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/QQlogin.gif"><a href="<{$connect_urls[2]}>">QQ登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/alipaylogin.gif"><a href="<{$connect_urls[1]}>">支付宝登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weixin2.gif"><a href="<{$connect_urls[3]}>">微信登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weibologin.gif"><a href="<{$connect_urls[4]}>">微博登录</a></li>
+        <li><img src="http://www.shunjubao.xyz/www/statics/i/QQlogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
+">QQ登录</a></li>
+        <li><img src="http://www.shunjubao.xyz/www/statics/i/alipaylogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][1]; ?>
+">支付宝登录</a></li>
+        <li><img src="http://www.shunjubao.xyz/www/statics/i/weixin2.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][3]; ?>
+">微信登录</a></li>
+        <li><img src="http://www.shunjubao.xyz/www/statics/i/weibologin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
+">微博登录</a></li>
       </ul>
     </div>
   </div>
@@ -170,7 +191,11 @@
 	
 </script>
 <!--center end-->
-<{include file="foot.html"}>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 <!--footer end-->
 </body>
 </html>

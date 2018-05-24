@@ -12,7 +12,7 @@
 				  "appId"=>'3',);	
 
 	$token = getToken($params);
-	$url = 'http://www.shunjubao.com/api/'.$php_handle.'?token='.$token.'&time='.$dtime.'&u_id='.$u_id.'&total='.$total.'&appId=3';
+	$url = 'http://www.shunjubao.xyz/api/'.$php_handle.'?token='.$token.'&time='.$dtime.'&u_id='.$u_id.'&total='.$total.'&appId=3';
 	$json = file_get_contents($url);
 	$result = json_decode($json, true);
 	var_dump($result);

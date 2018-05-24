@@ -54,7 +54,7 @@ img.emoji {
 }
 
 .emoji-picker-icon { position:relative;left:10px;top:10px;
-	background:url(http://www.shunjubao.com/www/statics/i/smail.png) no-repeat left center;
+	background:url(http://www.shunjubao.xyz/www/statics/i/smail.png) no-repeat left center;
     font-size: 20px;
     opacity: 0.7;
     z-index: 100;
@@ -158,13 +158,13 @@ img.emoji {
     display: inline-block;
     width: 24px;
     height: 29px;
-    background: url('http://www.shunjubao.com/www/statics/i/lib/img/IconsetSmiles.png') no-repeat;
+    background: url('http://www.shunjubao.xyz/www/statics/i/lib/img/IconsetSmiles.png') no-repeat;
     background-size: 42px 350px;
     border: 0;
 }
 
 .is_1x .emoji-menu-tabs .emoji-menu-tab {
-    background-image: url('http://www.shunjubao.com/www/statics/i/lib/img/IconsetSmiles_1x.png');
+    background-image: url('http://www.shunjubao.xyz/www/statics/i/lib/img/IconsetSmiles_1x.png');
 }
 
 .emoji-menu-tabs .icon-recent { background-position: -9px -306px; }

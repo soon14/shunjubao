@@ -92,7 +92,7 @@ $total_fee = $payment*100;
 
 
 
-$get_ali_url = "http://www.shunjubao.com/other_payapi/pearlpay/index.php?subject=$subject&payAmount=$total_fee&payType=".$payType."&out_trade_no=$out_trade_no&u_id=$u_id";
+$get_ali_url = "http://www.shunjubao.xyz/other_payapi/pearlpay/index.php?subject=$subject&payAmount=$total_fee&payType=".$payType."&out_trade_no=$out_trade_no&u_id=$u_id";
 $to_ali_url = file_get_contents($get_ali_url);
 
 

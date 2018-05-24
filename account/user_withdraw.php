@@ -125,7 +125,7 @@ if ($_REQUEST['u_id'] && $_REQUEST['money']) {
     	
 		$msg_success = '操作成功';
 		//发送站内信，通知管理员
-		sendUserPms(1, '提现申请','<a href="http://www.shunjubao.com/admin/user/encash.php" target="_blank">查看</a>');
+		sendUserPms(1, '提现申请','<a href="http://www.shunjubao.xyz/admin/user/encash.php" target="_blank">查看</a>');
 	}
 	while (false);
 	

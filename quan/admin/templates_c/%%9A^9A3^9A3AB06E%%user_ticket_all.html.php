@@ -99,7 +99,7 @@ $this->_sections['a']['first']      = ($this->_sections['a']['iteration'] == 1);
 $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $this->_sections['a']['total']);
 ?>
   <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#F7F8F8'">
-  	<td ><div align="center"><a target="_blank" href="http://www.shunjubao.com/account/tlcket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['id']; ?>
+  	<td ><div align="center"><a target="_blank" href="http://www.shunjubao.xyz/account/tlcket.php?userTicketId=<?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['id']; ?>
 "><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['id']; ?>
 </a></div></td>
   	<td ><div align="center"><?php echo $this->_tpl_vars['datalist'][$this->_sections['a']['index']]['u_name']; ?>

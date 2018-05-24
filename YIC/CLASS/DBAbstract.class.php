@@ -64,8 +64,10 @@ abstract class DBAbstract {
     	if (!isset($CACHE['db'][$master_flag]) || !is_string($CACHE['db'][$master_flag])) {
     		throw new ParamsException("传递进来的主库标志对应的dsn不存在：{$master_flag}");
     	}
+//    	var_dump($CACHE);
     	$dsn = $CACHE['db'][$master_flag];
     	$this->db = new MySQLite($dsn);
+//    	var_dump($this->db);die;
     }
 
     /**

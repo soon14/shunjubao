@@ -13,7 +13,7 @@ class yeepay{
 	public $p5_Pid = '';
 	public $p6_Pcat = '';
 	public $p7_Pdesc = '';
-	public $p8_Url = 'http://www.shunjubao.com/services/yeepay_return.php'; //֪ͨ��ַ ����2��
+	public $p8_Url = 'http://www.shunjubao.xyz/services/yeepay_return.php'; //֪ͨ��ַ ����2��
 	//�̻�����������д1K ���ַ���,֧���ɹ�ʱ��ԭ������.												
 	public $pa_MP = '';
 	//��չ����

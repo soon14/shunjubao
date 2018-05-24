@@ -104,7 +104,7 @@ foreach($point_list as $key=>$value2){
 						);	
 		
 		$token = getToken($params);
-		$url = 'http://www.shunjubao.com/api/'.$php_handle.'?token='.$token.'&time='.$dtime.'&to_uid='.$to_uid.'&total='.$total.'&appId=3';
+		$url = 'http://www.shunjubao.xyz/api/'.$php_handle.'?token='.$token.'&time='.$dtime.'&to_uid='.$to_uid.'&total='.$total.'&appId=3';
 		
 		$json = file_get_contents($url);
 		$result = json_decode($json, true);

@@ -61,7 +61,7 @@ $(document).ready(function(){
   <div class="topNav">
     <div class="navC">
       <ul>
-        <li class="Navlist first" style="display:none;"><span><a href="http://www.shunjubao.com/" target="_blank">手机版<i>&nbsp;</i></a></span>
+        <li class="Navlist first" style="display:none;"><span><a href="http://www.shunjubao.xyz/" target="_blank">手机版<i>&nbsp;</i></a></span>
           <div class="Navlist">
             <div class="Navmobile">
               <div class="kl"></div>
@@ -176,4 +176,4 @@ $(function(){
 				$(this).removeClass("topmenu_hover");theMenu.stop().animate({height:0},5,function(){
 					$(this).css({display:"none"});});}
 		);});}
-</script>
+</script>

@@ -1,21 +1,21 @@
-.center{background:url(http://www.shunjubao.com/www/statics/i/bg_footballer_zj.jpg) repeat-x;}
+.center{background:url(http://www.shunjubao.xyz/www/statics/i/bg_footballer_zj.jpg) repeat-x;}
 .NewsNav{padding:10px 0 0 0;line-height:40px;position:relative;}
 .NewsNav h1{font-size:12px;font-weight:300;width:1000px;margin:0 auto;text-align:left;height:50px;position:relative;}
 .NewsNav h1 ul{float:left;position:absolute;top:40px;right:5px;}
 .NewsNav h1 ul li{float:left;}
 .NewsNav h1 ul li a{height:40px;line-height:40px;width:200px;background:#CA002F;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:16px;font-weight:300;font-family:'微软雅黑';}
 .NewsNav h1 ul li a:hover{background:#ac0000;}
-.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://www.shunjubao.com/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:50px;line-height:50px;display:block;float:left;text-align:center; display:none;}
+.NewsNav h1 b{color:#fff;font-size:12px;text-decoration:none;font-weight:300;font-family:'';background:url(http://www.shunjubao.xyz/www/statics/i/zyzj.png) no-repeat left center;width:70px;height:50px;line-height:50px;display:block;float:left;text-align:center; display:none;}
 .NewsNav h1 em{font-size:26px;font-weight:300;color:#555;font-family:'微软雅黑';padding:0 0 0 10px; position:relative;top:20px;}
 .NewsNav h1 em span{font-size:26px;font-weight:300;color:#555;font-family:'微软雅黑';}
 .center{text-align:left;overflow:hidden;}
-.tipsters{height:132px;margin:0 auto;background:url(http://www.shunjubao.com/www/statics/i/bg_footballer_2.jpg) no-repeat top center;}
+.tipsters{height:132px;margin:0 auto;background:url(http://www.shunjubao.xyz/www/statics/i/bg_footballer_2.jpg) no-repeat top center;}
 .haochu{width:1000px;margin:10px auto;text-align:left;}
 .haochu dl{height:50px;line-height:50px;position:relative;}
-.haochu dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:30px;height:30px;line-height:30px;text-align:center;background:#ddd url(http://www.shunjubao.com/www/statics/i/n1bj.png) no-repeat;color:#fff;font-size:24px;font-weight:300;position:relative;top:2px;}
+.haochu dl dt{display:inline-table;display:inline-block;zoom:1;*display:inline;width:30px;height:30px;line-height:30px;text-align:center;background:#ddd url(http://www.shunjubao.xyz/www/statics/i/n1bj.png) no-repeat;color:#fff;font-size:24px;font-weight:300;position:relative;top:2px;}
 .haochu dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline;padding:0 5px;font-size:12px;}
 .haochu dl dd.link{padding:0 0 0 35px;position:absolute;top:0;}
-.haochu dl dd.link a{height:48px;line-height:22px;width:50px;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:16px;font-weight:300;font-family:'微软雅黑';background:#0099CC url(http://www.shunjubao.com/www/statics/i/T1CmSdFHpcXXaCG0rh-50-50.png) no-repeat;padding:2px 0 0 0;}
+.haochu dl dd.link a{height:48px;line-height:22px;width:50px;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;font-size:16px;font-weight:300;font-family:'微软雅黑';background:#0099CC url(http://www.shunjubao.xyz/www/statics/i/T1CmSdFHpcXXaCG0rh-50-50.png) no-repeat;padding:2px 0 0 0;}
 .haochu dl dd.link a:hover{}
 .zjfengyunbang{}
 .zjfengyunbang h1{background:#eeeee0;}
@@ -32,7 +32,7 @@
 .zjfengyunbang dl dt p strong{display:block;height:24px;line-height:24px;font-size:12px;font-weight:300;}
 .zjfengyunbang dl dt p strong em{color:#dc0000;font-style:normal;}
 .zjfengyunbang dl dt p strong u{color:#dc0000;font-style:normal;text-decoration:none;}
-.zjfengyunbang dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.shunjubao.com/www/statics/i/typecur.png) no-repeat left center;padding:0 0 0 15px;}
+.zjfengyunbang dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.shunjubao.xyz/www/statics/i/typecur.png) no-repeat left center;padding:0 0 0 15px;}
 .zjfengyunbang dl dt p span{position:absolute;bottom:94px;left:0;height:24px;line-height:24px;text-align:center;width:185px;display:;}
 .zjfengyunbang dl dt p span a{padding:0;background:none;height:24px;line-height:24px;width:185px;cursor:pointer;opacity:0.7;filter:alpha(opacity=70);display:block;background:#fff;}
 .zjfengyunbang dl dd{float:left;width:146px;height:292px;border:2px dashed #ccc;text-align:left;line-height:44px;padding:0 0 0 50px;font-family:'微软雅黑';}
@@ -55,7 +55,7 @@
 .zjlist dl dt p strong{display:block;height:24px;line-height:24px;font-size:12px;font-weight:300;}
 .zjlist dl dt p strong em{color:#dc0000;font-style:normal;}
 .zjlist dl dt p strong u{color:#dc0000;font-style:normal;text-decoration:none;}
-.zjlist dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.shunjubao.com/www/statics/i/typecur.png) no-repeat left center;padding:0 15px 0 15px;}
+.zjlist dl dt p a{height:30px;line-height:30px;font-size:12px;color:#000;margin:0 auto;text-align:center;background:url(http://www.shunjubao.xyz/www/statics/i/typecur.png) no-repeat left center;padding:0 15px 0 15px;}
 .zjlist dl dt p span{position:absolute;bottom:94px;left:0;height:24px;line-height:24px;text-align:center;width:185px;}
 .zjlist dl dt p span a{padding:0;background:none;height:24px;line-height:24px;width:185px;cursor:pointer;opacity:0.7;filter:alpha(opacity=70);display:block;background:#fff;}
 .zjlist dl dd{float:left;width:133px;height:292px;border:2px dashed #ccc;text-align:left;line-height:44px;padding:0 0 0 50px;font-family:'微软雅黑';position:relative;left:14px;margin:0 15px 0 0;}
@@ -121,7 +121,7 @@ this.offsetHeight)/2 :/*IE6*/
 
 this.clientHeight)/2);/*IE5 IE5.5*/}
 .dyCenter{border:2px solid #888;width:600px;height:400px;margin:0 auto;text-align:left;background:#fff;padding:10px;position:relative;margin:28px auto auto auto;}
-.dyCenter h1{font-size:18px;font-weight:300;font-family:'微软雅黑';border-bottom:1px solid #ccc;height:40px;line-height:40px;position:relative;background:url(http://www.shunjubao.com/www/statics/i/msg.gif) no-repeat left center;padding:0 0 0 18px;}
+.dyCenter h1{font-size:18px;font-weight:300;font-family:'微软雅黑';border-bottom:1px solid #ccc;height:40px;line-height:40px;position:relative;background:url(http://www.shunjubao.xyz/www/statics/i/msg.gif) no-repeat left center;padding:0 0 0 18px;}
 .dyCenter h1 a{padding:0 0 0 10px;position:relative;top:-3px;color:#565656;}
 .dyCenter h2{font-size:12px;font-weight:300;font-family:'';height:24px;line-height:24px;text-align:center;background:#f6f6f6;position:absolute;left:0;bottom:0;display:block;width:620px;color:#aaa;}
 .dyCenter h2 span{color:red;padding:0 3px 0;position:relative;top:2px;}
@@ -130,7 +130,7 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
 .dyCenter h1 span a:hover{}
 .dyother{padding:10px 0;}
 .tips{-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;border:1px solid #FFFF66;padding:3px 0 5px 0;background:#FFFF99;margin:15px auto auto auto;}
-.tips p{background:url(http://www.shunjubao.com/www/statics/i/mini_warning.png) no-repeat left center;padding:0 0 0 18px;}
+.tips p{background:url(http://www.shunjubao.xyz/www/statics/i/mini_warning.png) no-repeat left center;padding:0 0 0 18px;}
 .dyother{padding:20px 0 0 0;}
 .dyother dl{width:500px;margin:0 auto;text-align:left;height:30px;display:block;height:36px;line-height:36px;}
 .dyother dl.dy{padding:20px 0 0 60px;}
@@ -171,8 +171,8 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
 .zhuangTai{}
 .zhuangTai b{font-size:12px;font-weight:300;}
 .zhuangTai strong{position:relative;top:3px;}
-.zhuangTai strong span{background:url(http://www.shunjubao.com/www/statics/i/spc1.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
-.zhuangTai strong em{background:url(http://www.shunjubao.com/www/statics/i/apc2.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
+.zhuangTai strong span{background:url(http://www.shunjubao.xyz/www/statics/i/spc1.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
+.zhuangTai strong em{background:url(http://www.shunjubao.xyz/www/statics/i/apc2.gif) no-repeat;padding:5px 6px;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';}
 .shenqingC{width:1000px;margin:15px auto;text-align:left;padding:20px 0 40px 0;height:270px;}
 .shenqingC ol{width:1000px;margin:0 auto;display:block;clear:both;}
 .shenqingC ol li{float:left;height:50px;}
@@ -181,9 +181,9 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
 textarea{width:410px;height:100px;font-size:12px;padding:8px;line-height:22px;border:1px solid #ccc;}
 .sqxg{padding:55px 0 0 130px;line-height:30px;color:#888;}
 .sqxg h2{font-size:18px;font-weight:300;font-family:'微软雅黑';color:#000;padding:0 0 10px 0;color:#000;}
-.sqbiaodan{width:500px;background:url(http://www.shunjubao.com/www/statics/i/category_lbg.png) no-repeat right center;padding:20px 0 10px 0;}
+.sqbiaodan{width:500px;background:url(http://www.shunjubao.xyz/www/statics/i/category_lbg.png) no-repeat right center;padding:20px 0 10px 0;}
 .sqbiaodan p{height:50px;display:block;}
-.sqbiaodan p.name{background:url(http://www.shunjubao.com/www/statics/i/Userman.jpg) no-repeat 25px 5px;}
+.sqbiaodan p.name{background:url(http://www.shunjubao.xyz/www/statics/i/Userman.jpg) no-repeat 25px 5px;}
 .sqbiaodan p b{width:80px;height:50px;line-height:50px;text-align:right;float:left;}
 .sqbiaodan p.sub{padding:10px 0 0 100px;}
 .sqbiaodan p.sub input{padding: 8px 5px 9px;width:268px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;border:none;background:#CE050B;color:#fff;font-size:14px;font-weight:900;}
@@ -191,7 +191,7 @@ textarea{width:410px;height:100px;font-size:12px;padding:8px;line-height:22px;bo
 .sqbiaodan p span{color:#888;padding:0 0 0 10px;}
 .sqbiaodan p span em{ font-style:normal;color:#dc0000;position:relative;top:2px;padding:0 3px 0 0;}
 .text{line-height:24px;padding:10px;color:#888;border-bottom:1px solid #e7e7e7; background:#F8F6EE; width:940px; margin:0 auto; text-align:left;}
-.box h1{padding:0 0 0 10px;height:34px;line-height:34px;border-bottom:1px solid #e7e7e7;font-weight:bold; font-size:12px; font-weight:300; background:url(http://www.shunjubao.com/www/statics/i/Icon1.jpg) no-repeat left center; margin:0 10px;}
+.box h1{padding:0 0 0 10px;height:34px;line-height:34px;border-bottom:1px solid #e7e7e7;font-weight:bold; font-size:12px; font-weight:300; background:url(http://www.shunjubao.xyz/www/statics/i/Icon1.jpg) no-repeat left center; margin:0 10px;}
 .box h1 span{ float:right; font-size:12px; font-weight:300;color:#999;}
 .box{position:relative;}
 .listtd{background:#f9f9f9;}

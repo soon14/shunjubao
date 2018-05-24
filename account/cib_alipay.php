@@ -68,7 +68,7 @@ $body = "智赢商城";
 $attach = "智赢商城";
 $total_fee = $payment*100;
 
-$get_ali_url = "http://www.shunjubao.com/other_payapi/cib/request_wap.php?method=submitOrderInfo&body=$body&attach=$attach&total_fee=$total_fee&mch_create_ip=$mch_create_ip&out_trade_no=$out_trade_no";
+$get_ali_url = "http://www.shunjubao.xyz/other_payapi/cib/request_wap.php?method=submitOrderInfo&body=$body&attach=$attach&total_fee=$total_fee&mch_create_ip=$mch_create_ip&out_trade_no=$out_trade_no";
 $to_ali_url = file_get_contents($get_ali_url);
 /*header("Location: ".$to_ali_url); 
 exit();

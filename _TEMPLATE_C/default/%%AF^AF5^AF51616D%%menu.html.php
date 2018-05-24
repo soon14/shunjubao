@@ -3,7 +3,7 @@
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.shunjubao.com/"><strong class="none">智赢网</strong><em>365</em><b>以智慧赢取人生</b></a></h1>
+      <h1><a href="http://www.shunjubao.xyz/"><strong class="none">智赢网</strong><em>365</em><b>以智慧赢取人生</b></a></h1>
     </div>
     <div class="nav">
       <ul>
@@ -36,13 +36,13 @@
 /beidan/bf.php">比分</a> <a href="<?php echo @ROOT_DOMAIN; ?>
 /beidan/sxds.php">上下单双</a></h2>
           </span></li>
-        <li><a href="http://www.shunjubao.com/ticket/show.html" target="_blank">晒单中心</a><i><img src="<?php echo @STATICS_BASE_URL; ?>
+        <li><a href="http://www.shunjubao.xyz/ticket/show.html" target="_blank">晒单中心</a><i><img src="<?php echo @STATICS_BASE_URL; ?>
 /i/new.gif"></i></li>
-        <li><a href="http://www.shunjubao.com/ticket/dingzhi.php" target="_blank">跟单定制</a></li>
-        <li><a href="http://www.shunjubao.com/ticket/virtual_list.php" target="_blank">积分投注</a></li>
+        <li><a href="http://www.shunjubao.xyz/ticket/dingzhi.php" target="_blank">跟单定制</a></li>
+        <li><a href="http://www.shunjubao.xyz/ticket/virtual_list.php" target="_blank">积分投注</a></li>
 		<li><a href="<?php echo @ROOT_DOMAIN; ?>
 /football/hhad_list.php">赛果开奖</a></b><span><strong>赛果开奖</strong><em>&nbsp;</em>
-          <h2><a href="http://www.shunjubao.com/livescore/fb_match_result.php">竞彩足球</a> <a href="http://www.shunjubao.com/livescore/bk_match_result.php">竞彩篮球</a></h2>
+          <h2><a href="http://www.shunjubao.xyz/livescore/fb_match_result.php">竞彩足球</a> <a href="http://www.shunjubao.xyz/livescore/bk_match_result.php">竞彩篮球</a></h2>
           </span></li>
         <li><a href="http://new.shunjubao.com/footballtj/">资讯推荐</a></b><span><strong>资讯推荐</strong><em>&nbsp;</em>
           <h2><a href="http://new.shunjubao.com/footballtj/" target="_blank">足球推荐</a><a href="http://new.shunjubao.com/footballxw/" target="_blank">足球资讯</a><a href="http://new.shunjubao.com/NBAtj/" target="_blank">篮球推荐</a><a href="http://new.shunjubao.com/NBAxw/" target="_blank">篮球资讯</a><a href="http://new.shunjubao.com/touzhujiqiao/" target="_blank">投注技巧</a><a href="http://new.shunjubao.com/zhongchao/" target="_blank">论剑中超</a></h2>
@@ -51,4 +51,4 @@
       </ul>
     </div>
   </div>
-</div>
+</div>
