@@ -103,9 +103,9 @@ $show_users = $objUserMemberFront->gets($uids);
 foreach ($show_users as $key=>$value) {
 	$show_users[$key]['u_img'] = str_replace('zhiying365', 'zhiying365365', $value['u_img']);
 }
-$TEMPLATE['title'] = '智赢网|智赢晒单跟单中心。';
-$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,智赢网跟单,智赢网竞猜跟单,竞彩投注,智赢网晒单中心,智赢网跟单中心,智赢网大力水手,大力水手,智赢网竞彩熊超,智赢熊超,竞彩熊超,王忠仓,寻鸡情求鸭迫,红姐,智赢红姐。 ';
-$TEMPLATE['description'] = '停止盲目投注...跟随智赢高手，让您的利润蒸蒸日上 ! 晒单中心展现的是智赢网专家和明星会员推荐方案的页面，致力于打造竞彩中奖的福地。';
+$TEMPLATE['title'] = '聚宝网|聚宝晒单跟单中心。';
+$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,聚宝网跟单,聚宝网竞猜跟单,竞彩投注,聚宝网晒单中心,聚宝网跟单中心,聚宝网大力水手,大力水手,聚宝网竞彩熊超,聚宝熊超,竞彩熊超,王忠仓,寻鸡情求鸭迫,红姐,聚宝红姐。 ';
+$TEMPLATE['description'] = '停止盲目投注...跟随聚宝高手，让您的利润蒸蒸日上 ! 晒单中心展现的是聚宝网专家和明星会员推荐方案的页面，致力于打造竞彩中奖的福地。';
 //pr($show_tickets);
 $tpl = new Template();
 $tpl->assign('sport', $sport);

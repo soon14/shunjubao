@@ -20,9 +20,9 @@ $_smarty_tpl->decodeProperties(array (
 <!DOCTYPE>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>智赢网智赢彩票奖金优化！</title>
-<meta name="keywords" content="智赢网智赢彩票奖金优化！" />
-<meta name="description" content="智赢网智赢彩票奖金优化！" />
+<title>聚宝网聚宝彩票奖金优化！</title>
+<meta name="keywords" content="聚宝网聚宝彩票奖金优化！" />
+<meta name="description" content="聚宝网聚宝彩票奖金优化！" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/footer.css" />
 <script src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
@@ -78,7 +78,7 @@ $_smarty_tpl->decodeProperties(array (
 </style>
 </head>
 <body onload="xlh()">
-<!--智赢页面头部 start-->
+<!--聚宝页面头部 start-->
 <script src="http://www.shunjubao.xyz/www/statics/j/top.js" type="text/javascript"></script>
 <script src="http://www.shunjubao.xyz/www/statics/j/menu.js" type="text/javascript"></script>-->
 <script type="text/javascript">
@@ -88,7 +88,7 @@ function xlh(){var tbl = document.getElementById("tbl");var rows = tbl.rows.leng
 }
 
 </script>
-<!--智赢页面头部 end-->
+<!--聚宝页面头部 end-->
 <!--当前位置start-->
 <div class="youhuaTop">
   <div class="youhuaTopc">
@@ -210,8 +210,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 </div>
 <!--center end-->
 <!---->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <script src="http://www.shunjubao.xyz/www/statics/j/footer.js" type="text/javascript"></script>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

@@ -19,7 +19,7 @@ var welcome_str = "&nbsp;";
 }
 document.writeln(
 "<div class=\"top\">"+
-"<div class=\"logo\"><h1><b><a href=\"http://ios.shunjubao.xyz/\">智赢网</a></b></h1></div>"+
+"<div class=\"logo\"><h1><b><a href=\"http://ios.shunjubao.xyz/\">聚宝网</a></b></h1></div>"+
 "  <div class=\"topCenter\">"+
 "    <h1>"+ welcome_str +
 "  </div>"+

@@ -9,7 +9,7 @@ $key_code2 = 't5Vv4yt9E700cu8UH9334238';//加密秘钥
 
 	 
  $merchantNo = "B100198839";
- $goodsName = "智赢商城"; 
+ $goodsName = "聚宝商城";
  $callbackUrl = "http://www.shunjubao.xyz/rhpay/callback.php"; 
  $serverCallbackUrl = "http://www.shunjubao.xyz/rhpay/serverCallback.php";  
  $toibkn = "310651000048";//行号

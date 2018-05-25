@@ -19,9 +19,9 @@ $img_error = '';//报错信息
 
 $tpl = new Template();
 $tpl->assign('userInfo', $userInfo);
-$TEMPLETE['title'] = '智赢网用户中心上传头像';
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户中心上传头像。';
+$TEMPLETE['title'] = '聚宝网用户中心上传头像';
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户中心上传头像。';
 
 if (!$_FILES['fileField']['tmp_name']) {
 	$objUserRealInfoFront = new UserRealInfoFront();

@@ -16,7 +16,7 @@ if (!$userInfo) {
 $tpl = new Template();
 
 #标题
-$TEMPLATE ['title'] = "智赢网用户中心 ";
+$TEMPLATE ['title'] = "聚宝网用户中心 ";
 
 #埋藏跳转页面
 $tpl->assign ( 'refer', $refer );

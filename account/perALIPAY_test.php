@@ -11,9 +11,9 @@ $tpl = new Template();
 
 
 #标题
-$TEMPLATE ['title'] = "智赢网充值中心-支付宝支付！ ";
-$TEMPLATE['keywords'] = '智赢网充值中心-支付宝支付！';
-$TEMPLATE['description'] = '智赢网充值中心-支付宝支付！。';
+$TEMPLATE ['title'] = "聚宝网充值中心-支付宝支付！ ";
+$TEMPLATE['keywords'] = '聚宝网充值中心-支付宝支付！';
+$TEMPLATE['description'] = '聚宝网充值中心-支付宝支付！。';
 
 #埋藏跳转页面
 $payment 	= Request::r('payment');//单位为元，充值金额
@@ -82,8 +82,8 @@ if (!$tmpChargeResult) {
 }
 
 $mch_create_ip = Request::getIpAddress();
-$subject = "智赢商城";
-$attach = "智赢商城";
+$subject = "聚宝商城";
+$attach = "聚宝商城";
 $total_fee = $payment*100;
 
 

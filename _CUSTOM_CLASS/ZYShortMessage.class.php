@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * desc: 智赢短信基础类
+ * desc: 聚宝短信基础类
  * 阿里api：http://open.taobao.com/doc2/apiDetail?spm=0.0.0.0.D1PYJd&apiId=25450
  * User: hushiyu
  * Date: 16-3-17
@@ -77,7 +77,7 @@ class ZYShortMessage {
         $info = array();
         $info['mobile'] = $mobile;
         $info['code'] = $this->_createCode();
-        $info['product'] = '智赢网';
+        $info['product'] = '聚宝网';
         $info['SmsTemplateCode'] = 'SMS_100810102';
         return $this->_sendOne($info);
     }
@@ -89,7 +89,7 @@ class ZYShortMessage {
         $info = array();
         $info['mobile'] = $mobile;
         $info['code'] = $this->_createCode();
-        $info['product'] = '智赢网';
+        $info['product'] = '聚宝网';
         $info['SmsTemplateCode'] = 'SMS_3390016';
         return $this->_sendOne($info);
     }
@@ -114,7 +114,7 @@ class ZYShortMessage {
         $info = array();
         $info['mobile'] = $mobile;
         $info['code'] = $this->_createCode();
-        $info['product'] = '智赢网';
+        $info['product'] = '聚宝网';
         $info['SmsTemplateCode'] = 'SMS_5365793';
 		
         return $this->_sendOne($info);

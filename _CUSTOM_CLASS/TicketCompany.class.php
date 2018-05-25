@@ -20,7 +20,7 @@ class TicketCompany {
 	CONST COMPANY_MANUAL = 3;
 	
 	/**
-	 * 智赢科技
+	 * 聚宝科技
 	 */
 	CONST COMPANY_ZHIYING = 4;
 	
@@ -39,7 +39,7 @@ class TicketCompany {
 						'kw'	=> 'COMPANY_MANUAL',
 				),
 				self::COMPANY_ZHIYING	=> array(
-						'desc'	=> '智赢',
+						'desc'	=> '聚宝',
 						'kw'	=> 'COMPANY_ZHIYING',
 				),
 			);

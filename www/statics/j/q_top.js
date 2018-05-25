@@ -19,7 +19,7 @@ var welcome_str = "&nbsp;";
 }
 document.writeln(
 "<div class=\"top\">"+
-"<div class=\"logo\"><h4><a href=\"/\">智赢圈子</a></h4></div>"+
+"<div class=\"logo\"><h4><a href=\"/\">聚宝圈子</a></h4></div>"+
 "  <div class=\"topCenter\">"+
 "    <h1>"+ welcome_str +
 "  </div>"+

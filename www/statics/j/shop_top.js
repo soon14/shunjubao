@@ -13,7 +13,7 @@
 	var welcome_str = "";
 	if (u_name != '') {
 		welcome_str += "<a href=\"http://shop.shunjubao.xyz/person/\">"+u_name+"</a></li>";
-		welcome_str +=",欢迎登录智赢商城<a href=\"http://shop.shunjubao.xyz\" target=\"_top\" class=\"h\">个人中心</a> <a href=\"http://www.shunjubao.xyz/passport/logout.php\">退出</a>";
+		welcome_str +=",欢迎登录聚宝商城<a href=\"http://shop.shunjubao.xyz\" target=\"_top\" class=\"h\">个人中心</a> <a href=\"http://www.shunjubao.xyz/passport/logout.php\">退出</a>";
 	} else {
 		welcome_str += "<a href=\"http://www.shunjubao.xyz/passport/login.php\" target=\"_top\" class=\"h\">亲，请登录</a> <a href=\"http://www.shunjubao.xyz/shop/home/register.html\" target=\"_top\">免费注册</a>";
 	}

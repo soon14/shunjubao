@@ -51,7 +51,7 @@ document.writeln(
 "            <div class=\"Navmobile\">"+
 "              <div class=\"kl\"></div>"+
 "              <dl>"+
-"                <dt><b>智赢网安卓APP</b><img src=\"http://www.shunjubao.xyz/www/statics/i/android.png\">"+
+"                <dt><b>聚宝网安卓APP</b><img src=\"http://www.shunjubao.xyz/www/statics/i/android.png\">"+
 "                  <p><a href=\"http://www.shunjubao.xyz/upload/zhiying365_v0.1.apk\" target=\"_blank\">点击下载</a></p>"+
 "                </dt>"+
 "                <dd>"+

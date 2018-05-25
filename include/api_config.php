@@ -1,6 +1,6 @@
 <?php
 /**
- * 智赢项目api接口配置信息
+ * 聚宝项目api接口配置信息
  * 接口输入必要参数：
  * appId->int
  * timastamp->时间戳
@@ -11,12 +11,12 @@ return array(
 	ZYAPI::APPID_WWW => array(
 		'appId'		=> ZYAPI::APPID_WWW,
 		'appKey'	=> 'b35977a00ebd8086',
-		'desc'		=> '智赢主项目',
+		'desc'		=> '聚宝主项目',
 	),
 	ZYAPI::APPID_SHOP => array(
 		'appId'		=> ZYAPI::APPID_SHOP,
 		'appKey'	=> '992b96d001bb16e8',
-		'desc'		=> '智赢商城',
+		'desc'		=> '聚宝商城',
 	),
 	ZYAPI::APPID_WANGZUOZHU => array(
 		'appId'		=> ZYAPI::APPID_WANGZUOZHU,

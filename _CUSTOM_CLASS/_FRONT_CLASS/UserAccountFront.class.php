@@ -119,7 +119,7 @@ class UserAccountFront {
     	}
     	
     	$user['gift'] = $user['gift'] + $gift;
-		sendUserPms($u_id, '赠送彩金', '尊敬的会员，谢谢您参与智赢网活动，彩金&yen'.$gift.'元已派送至账户，<a href="'.ROOT_WEBSITE.'/account/user_gift_log.php">请查收！</a>');
+		sendUserPms($u_id, '赠送彩金', '尊敬的会员，谢谢您参与聚宝网活动，彩金&yen'.$gift.'元已派送至账户，<a href="'.ROOT_WEBSITE.'/account/user_gift_log.php">请查收！</a>');
     	return $this->modify($user);
     } 
     

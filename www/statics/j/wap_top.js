@@ -30,7 +30,7 @@ var welcome_str = "&nbsp;";
 }
 document.writeln(
 "<div class=\"top\">"+
-"<div class=\"logo\"><h1><a href=\"/\">智赢网</a></h1></div>"+
+"<div class=\"logo\"><h1><a href=\"/\">聚宝网</a></h1></div>"+
 "  <div class=\"topCenter\">"+
 "    <h1>"+ welcome_str +
 "  </div>"+

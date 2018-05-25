@@ -35,9 +35,9 @@ switch ($type) {
 		ajax_success_exit($return);
 		break;
 	default:
-		$TEMPLATE['title'] = '智赢网投注奖金明细';
-		$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,智赢网跟单,智赢网竞猜跟单,竞彩投注,智赢晒单中心,大力水手,王忠仓,寻鸡情求鸭迫,红姐,智赢红姐。 ';
-		$TEMPLATE['description'] = '智赢网奖金评测的为即时竞彩奖金指数，最终实际奖金请按照出票后票样中的指数计算，该奖金评测计算中已包含单一玩法的奖金，仅供参考。';
+		$TEMPLATE['title'] = '聚宝网投注奖金明细';
+		$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,聚宝网跟单,聚宝网竞猜跟单,竞彩投注,聚宝晒单中心,大力水手,王忠仓,寻鸡情求鸭迫,红姐,聚宝红姐。 ';
+		$TEMPLATE['description'] = '聚宝网奖金评测的为即时竞彩奖金指数，最终实际奖金请按照出票后票样中的指数计算，该奖金评测计算中已包含单一玩法的奖金，仅供参考。';
 		$tpl = new Template();
 		$tpl->assign('return', $return);
 		echo_exit($tpl->r('detail'));

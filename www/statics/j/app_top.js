@@ -19,7 +19,7 @@ var welcome_str = "&nbsp;";
 }
 document.writeln(
 "<div class=\"top\">"+
-"<div class=\"logo\"><h1><b>智赢网</b><span>才智聚宝，财富人生</span></h1></div>"+
+"<div class=\"logo\"><h1><b>聚宝网</b><span>才智聚宝，财富人生</span></h1></div>"+
 "  <div class=\"topCenter\">"+
 "    <h1>"+ welcome_str +
 "  </div>"+

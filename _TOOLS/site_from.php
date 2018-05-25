@@ -174,7 +174,7 @@ function siteFromRebate() {
 		'Oteucy'		=> 0.07,
 		'桀骜不羁'		=> 0.05,
 		'fengzhenrong'	=> 0.03,
-		'智赢小生'		=> 0.03,
+		'聚宝小生'		=> 0.03,
 		'hellenjoey'	=> 0.03,
 		'15239955819'	=> 0.03,
 		'kevin871011'	=> 0.03,

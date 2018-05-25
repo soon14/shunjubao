@@ -57,7 +57,7 @@ date_default_timezone_set("PRC");
       <input type="txt" name="mchId" value="<?php echo ConfigUtil::get_val_by_key('merchantNum');?>">
       <br/>
       <label>商品描述-body:</label>
-      <input type="txt" name="body" value="智赢在线安全支付">
+      <input type="txt" name="body" value="聚宝在线安全支付">
       <br/>
       <label>商户订单号-outTradeNo:</label>
       <input type="txt" name="outTradeNo" value="<?=$out_trade_no?>">
@@ -78,7 +78,7 @@ date_default_timezone_set("PRC");
       <input type="txt" name="timeExpire" value="">
       <br/>
       <label>商品的标题-subject:</label>
-      <input type="txt" name="subject" value="智赢在线安全支付">
+      <input type="txt" name="subject" value="聚宝在线安全支付">
       <br/>
       <div id="wxPub" style="display:none">
         <label>指定支付方式-limitPay:</label>

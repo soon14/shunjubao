@@ -7,7 +7,7 @@
 
 <body>
 <!--
-200.00,智赢在线安全支付,gateway,CNY,wy170511802048,rongbao,0,0,02,智赢在线安全支付,20170511074018,33b1e1c89aac4685930c15a6f69b6b30-->
+200.00,聚宝在线安全支付,gateway,CNY,wy170511802048,rongbao,0,0,02,聚宝在线安全支付,20170511074018,33b1e1c89aac4685930c15a6f69b6b30-->
 
 
 
@@ -21,7 +21,7 @@ amount： <input type="txt" name="amount" value="200.00"><br />
  gateway：<input type="txt" name="channel" value="gateway"><br />
 
 key：<input type="txt" name="key" value="33b1e1c89aac4685930c15a6f69b6b30"><br />
- body： <input type="txt" name="body" value="智赢在线安全支付"><br />
+ body： <input type="txt" name="body" value="聚宝在线安全支付"><br />
 
 outChannelNo：  <input type="txt" name="outChannelNo" value=""> <br />
 
@@ -33,7 +33,7 @@ outChannelNo：  <input type="txt" name="outChannelNo" value=""> <br />
  
  status：  <input type="txt" name="status" value="2">   <br />
  
-subject：   <input type="txt" name="subject" value="智赢在线安全支付">  <br />
+subject：   <input type="txt" name="subject" value="聚宝在线安全支付">  <br />
 
   transTime： <input type="txt" name="transTime" value="20170511074018">  <br />
 <input name="测试提交" type="submit" />

@@ -1,6 +1,6 @@
 <?php
 /**
- * 智赢api接口
+ * 聚宝api接口
  * @author hushiyu
  */
 class ZYAPI {
@@ -8,8 +8,8 @@ class ZYAPI {
 	/**
 	 * 应用id和key为一一对应的关系
 	 */
-	const APPID_WWW 		= 1;//智赢主项目
-	const APPID_SHOP 		= 2;//智赢商城项目
+	const APPID_WWW 		= 1;//聚宝主项目
+	const APPID_SHOP 		= 2;//聚宝商城项目
 	const APPID_WANGZUOZHU 	= 3;//王作柱同学的项目
 	const APPID_HEZHENGDE 	= 4;//何正德同学的项目
 	

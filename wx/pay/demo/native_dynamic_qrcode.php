@@ -22,7 +22,7 @@
 	//noncestr已填,商户无需重复填写
 	//spbill_create_ip已填,商户无需重复填写
 	//sign已填,商户无需重复填写
-	$unifiedOrder->setParameter("body","智赢充值");//商品描述
+	$unifiedOrder->setParameter("body","聚宝充值");//商品描述
 	//自定义订单号，此处仅作举例
 	$timeStamp = time();
 	$total_fee = intval(trim($_GET["total_fee"]));

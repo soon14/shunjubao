@@ -1,7 +1,7 @@
 ﻿document.writeln(
 "<div class=\"header\">"+
 "<div class=\"headerCnetr\">"+
-"<div class=\"logo\"><h1><a href=\"http://www.shunjubao.xyz/\"><strong class=\"none\">智赢网</strong><em>365</em><b>才智聚宝，财富人生</b></a></h1></div>"+
+"<div class=\"logo\"><h1><a href=\"http://www.shunjubao.xyz/\"><strong class=\"none\">聚宝网</strong><em>365</em><b>才智聚宝，财富人生</b></a></h1></div>"+
 "  <div class=\"nav\">"+
 "    <ul>"+
 "      <li><a href=\"http://www.shunjubao.xyz/\">首页</a></li>"+

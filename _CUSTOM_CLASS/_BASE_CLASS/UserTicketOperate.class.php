@@ -37,14 +37,14 @@ class UserTicketOperate extends DBSpeedyPattern {
 	CONST TYPE_REFUND_TICKET = 3;
 	
 	/**
-	 * 操作类型之智赢出票
+	 * 操作类型之聚宝出票
 	 */
 	CONST TYPE_ZHIYING_TICKET = 4;
 	
 	static public function getTypeDesc() {
 		return array(
 				self::TYPE_ZHIYING_TICKET => array(
-						'desc' => '智赢出票',
+						'desc' => '聚宝出票',
 				),
 				self::TYPE_REFUND_TICKET => array(
 						'desc' => '退票',

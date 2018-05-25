@@ -10,7 +10,7 @@ $roles = array(
 	Role::ADMIN,
 	Role::CUSTOMER_SERVICE,
 );
-//是否智赢出票页面
+//是否聚宝出票页面
 $is_company_zhiying = Request::r('company_zhiying');
 $company_zhiying_limit_money = 100;
 if ($is_company_zhiying) {

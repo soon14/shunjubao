@@ -65,9 +65,9 @@ if(count($userTicketInfo)>0){
 }
 $tpl->assign('count',count($userTicketInfo));
 #标题
-$TEMPLATE ['title'] = "智赢出票记录";
-$TEMPLATE['keywords'] = '智赢竞彩投注,竞彩投注,竞彩篮球投注,竞彩足球投注。';
-$TEMPLATE['description'] = '智赢网积分投注记录。';
+$TEMPLATE ['title'] = "聚宝出票记录";
+$TEMPLATE['keywords'] = '聚宝竞彩投注,竞彩投注,竞彩篮球投注,竞彩足球投注。';
+$TEMPLATE['description'] = '聚宝网积分投注记录。';
 
 $tpl->assign('userTicketInfo', $userTicketInfo);
 $YOKA ['output'] = $tpl->r ('daletou_chupiao');

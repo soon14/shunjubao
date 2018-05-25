@@ -1,6 +1,6 @@
 <?php
 /**
- * 智赢日志类：记录各种日志
+ * 聚宝日志类：记录各种日志
  */
 
 class ZYLog extends DBSpeedyPattern {

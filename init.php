@@ -19,7 +19,7 @@ header('P3P: CP="ALL ADM DEV PSAi COM OUR OTRo STP IND ONL"');
 Session::Init(SESSION_EXPIRE_TIME, '/', ROOT_DOMAIN);
 
 $TEMPLATE['keywords'] 		= '竞彩,中国竞彩网,足彩,中国足彩网,篮彩,单场,福彩,体彩,足球彩票,篮球彩票';
-$TEMPLATE['description'] 	= '智赢网是彩票赢家的聚集地，口碑最好的彩票做单网站，竞彩、单场彩票、篮球彩票、足球彩票人气超旺，可以通过网站和手机客户端使用。提供福利彩票和体育彩票的开奖、走势图表、缩水过滤、奖金评测、比分直播等资讯服务。';
+$TEMPLATE['description'] 	= '聚宝网是彩票赢家的聚集地，口碑最好的彩票做单网站，竞彩、单场彩票、篮球彩票、足球彩票人气超旺，可以通过网站和手机客户端使用。提供福利彩票和体育彩票的开奖、走势图表、缩水过滤、奖金评测、比分直播等资讯服务。';
 
 if (isset($_SERVER['HTTP_HOST'])) {
 	if ($_SERVER["HTTP_HOST"] == '202.85.221.248' || $_SERVER["HTTP_HOST"] == 'shunjubao.xyz') redirect('http://www.shunjubao.xyz' , 301);

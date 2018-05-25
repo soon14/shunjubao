@@ -6,9 +6,9 @@ include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 $objMySQLite = new MySQLite($CACHE['db']['org_spdata']);
 $tpl = new Template();
 $TEMPLATE['title'] = getChineseByPoolCode('pool', 'crs');
-$TEMPLATE['title'] = '智赢网竞彩足球比分直播';
-$TEMPLATE['keywords'] = '比分,竞猜比分,比分玩法,波胆,竞猜足球,足球竞猜,智赢网,智赢2串1,竞彩2串1,竞猜专家,专家推荐,足彩专家,王忠仓,大力水手';
-$TEMPLATE['description'] = '智赢网提供竞彩足球比分玩法直播，最专业的彩民赢取最高额回报，波胆命中变身人生赢家。。';
+$TEMPLATE['title'] = '聚宝网竞彩足球比分直播';
+$TEMPLATE['keywords'] = '比分,竞猜比分,比分玩法,波胆,竞猜足球,足球竞猜,聚宝网,聚宝2串1,竞彩2串1,竞猜专家,专家推荐,足彩专家,王忠仓,大力水手';
+$TEMPLATE['description'] = '聚宝网提供竞彩足球比分玩法直播，最专业的彩民赢取最高额回报，波胆命中变身人生赢家。。';
 
 $mdate = date("Y-m-d");
 $sql ="SELECT * FROM fb_result_org where  DATE_FORMAT(starttime,'%Y-%m-%d')='".$mdate."'  ORDER BY FIELD(`status`, '上', '下','Fixture','Played'),m_num asc";		

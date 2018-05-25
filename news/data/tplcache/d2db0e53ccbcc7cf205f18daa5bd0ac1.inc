@@ -1,0 +1,1 @@
+<li><span>[field:pubdate function='strftime("%m-%d",@me)'/]<i>|</i></span><a href="http://new.shunjubao.xyz/[field:arcurl/]" target="_blank">[field:title/]</a></li>

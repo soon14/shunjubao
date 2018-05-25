@@ -11,9 +11,9 @@ $uid 		= Runtime::getUid();
 $tpl = new Template();
 
 #标题
-$TEMPLATE ['title'] = "智赢网充值中心 ";
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网充值中心。';
+$TEMPLATE ['title'] = "聚宝网充值中心 ";
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网充值中心。';
 
 #埋藏跳转页面
 
@@ -40,7 +40,7 @@ $new_key = json_decode($get_key,true);
 $wap_charge_mark = $new_key["charge_mark"];
 
 //==================================================================================
-//判断是否频繁出错帐号，使用智赢充值帐号
+//判断是否频繁出错帐号，使用聚宝充值帐号
 $user_charge=2;//wap支付宝
 $sign = md5($user_charge.$keyw.$dtime);
 $url="http://quan.shunjubao.xyz/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
@@ -51,7 +51,7 @@ if(in_array($uid,$unusual_list)){
 	$wap_charge_mark="ALIPAY";
 }
 
-//判断是否频繁出错帐号，使用智赢充值帐号
+//判断是否频繁出错帐号，使用聚宝充值帐号
 $user_charge=1;//wap支付宝
 $sign = md5($user_charge.$keyw.$dtime);
 $url="http://quan.shunjubao.xyz/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";

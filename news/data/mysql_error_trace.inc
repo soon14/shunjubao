@@ -369,3 +369,31 @@ Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数
 Time2018-05-23 22:18:52
 */
 ?>
+<?php  exit();
+/*
+Page: /WQ2GNJQk8MSUPER/login.php
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-25 17:49:18
+*/
+?>
+<?php  exit();
+/*
+Page: /WQ2GNJQk8MSUPER/login.php
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-25 17:50:16
+*/
+?>
+<?php  exit();
+/*
+Page: /WQ2GNJQk8MSUPER/login.php
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-25 17:50:18
+*/
+?>
+<?php  exit();
+/*
+Page: /WQ2GNJQk8MSUPER/login.php
+Error: DedeCms错误警告：<font color='red'>连接数据库失败，可能数据库密码不对或数据库服务器出错！</font>
+Time2018-05-25 17:50:33
+*/
+?>

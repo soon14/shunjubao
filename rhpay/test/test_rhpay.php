@@ -4,7 +4,7 @@ $key_code1 = 'XCHFiJe78TE3CE4UXAawmpxjhDzyKAfm';//签名秘钥
 $key_code2 = 'tCZfuo6NyEtd2YMDANVZivoi';//加密秘钥
 	 
  $merchantNo = "B100001906";
- $goodsName = "智赢充值"; 
+ $goodsName = "聚宝充值";
  $callbackUrl = "http://www.shunjubao.xyz/rhpay/callback.php"; 
  $serverCallbackUrl = "http://www.shunjubao.xyz/rhpay/serverCallback.php";  
  $toibkn = "310651000048";//行号

@@ -6,9 +6,9 @@ include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 $objMySQLite = new MySQLite($CACHE['db']['default']);
 $tpl = new Template();
 $TEMPLATE['title'] = getChineseByPoolCode('pool', 'crs');
-$TEMPLATE['title'] = '竞彩足球赛果开奖-智赢网';
+$TEMPLATE['title'] = '竞彩足球赛果开奖-聚宝网';
 $TEMPLATE['keywords'] = '足球比分直播,足彩直播,足球即时比分,足彩即时比分,足球彩票比分,比分直播网,足球数据中心。';
-$TEMPLATE['description'] = '智赢网足球数据中智赢网竞彩足球赛果开奖结果。';
+$TEMPLATE['description'] = '聚宝网足球数据中聚宝网竞彩足球赛果开奖结果。';
 
 $mdate = date("Y-m-d",(time()-60*60*24*3));
 

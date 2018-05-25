@@ -19,7 +19,7 @@ _</title>
 <TABLE cellSpacing=0 cellPadding=0 id="maintab">
   <TR>
     <TD id="m_top"><div id="A_head">
-        <div id="hostname"><h1 style="font-family:微软雅黑; font-size:20px; position:relative;top:6px;">智赢后台管理系统</h1></div>
+        <div id="hostname"><h1 style="font-family:微软雅黑; font-size:20px; position:relative;top:6px;">聚宝后台管理系统</h1></div>
         <div id="mtright">
           <div id="mt_menu"> 当前日期: 
             <script>DateInfo();</script></div>
@@ -35,13 +35,13 @@ _</title>
     <TD id="m_middle"><DIV id="sidebar">
     
   	  <div class="item_list open" id="item_list_10" >
-          <div class="il_title" onClick="onechangClass('item_list_10','item_list','item_list open')">智赢管理</div>
+          <div class="il_title" onClick="onechangClass('item_list_10','item_list','item_list open')">聚宝管理</div>
           <ul>
           
          
           
           
-            <li><a href="member_list.php" target="if_content_t">智赢会员列表</a>  </li>
+            <li><a href="member_list.php" target="if_content_t">聚宝会员列表</a>  </li>
      	 <li><a href="member_list.php?action=show_area" target="if_content_t">出票权限列表</a>  </li>
          <li><a href="user_ticket_all.php" target="if_content_t">投注列表 </a> </li>
          
@@ -51,7 +51,7 @@ _</title>
           </ul>
         </div>
         <div class="item_list" id="item_list_14" >
-          <div class="il_title" onClick="onechangClass('item_list_14','item_list','item_list open')">智赢充值管理</div>
+          <div class="il_title" onClick="onechangClass('item_list_14','item_list','item_list open')">聚宝充值管理</div>
           <ul>
                      <li><a href="payment_list.php" target="if_content_t">扫码商户列表</a> [<a href="payment_list.php?action=add" target="if_content_t">添加</a> ] </li>
          <li><a href="user_charge_list.php" target="if_content_t">支付帐号管理</a> [<a href="user_charge_list.php?action=add" target="if_content_t">添加</a> ] </li>

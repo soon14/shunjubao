@@ -9,9 +9,9 @@ $userInfo = Runtime::getUser();
 $tpl = new Template();
 
 #标题
-$TEMPLATE ['title'] = "智赢网充值中心-微信支付！ ";
-$TEMPLATE['keywords'] = '智赢网充值中心-微信支付！';
-$TEMPLATE['description'] = '智赢网充值中心-微信支付！。';
+$TEMPLATE ['title'] = "聚宝网充值中心-微信支付！ ";
+$TEMPLATE['keywords'] = '聚宝网充值中心-微信支付！';
+$TEMPLATE['description'] = '聚宝网充值中心-微信支付！。';
 
 #埋藏跳转页面
 $payment 	= Request::r('payment');//单位为元，充值金额

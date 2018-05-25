@@ -146,7 +146,7 @@ define("SMTP_SERVER", "42.120.219.42");
 define("SMTP_PORT", 25);
 define("SMTP_USERNAME", "noreply");
 define("SMTP_FROM", "noreply@shunjubao.com");
-define("SMTP_FROMNAME", "智赢网");
+define("SMTP_FROMNAME", "聚宝网");
 define("SMTP_PASSWORD", "YXqUG0vF8LxQ6");
 define("SMTP_CHARSET", "UTF-8");
 define("SMTP_TIMEOUT", 20);

@@ -3,9 +3,9 @@ include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 $userInfo = Runtime::getUser();
 
 #标题
-$TEMPLATE ['title'] = "智赢网竞彩专家";
-$TEMPLATE['keywords'] = '智赢竞彩投注,竞彩投注,竞彩篮球投注,竞彩足球投注。';
-$TEMPLATE['description'] = '智赢网竞彩专家。';
+$TEMPLATE ['title'] = "聚宝网竞彩专家";
+$TEMPLATE['keywords'] = '聚宝竞彩投注,竞彩投注,竞彩篮球投注,竞彩足球投注。';
+$TEMPLATE['description'] = '聚宝网竞彩专家。';
 $u_id = $userInfo['u_id'];
 $u_name = $userInfo['u_name'];
 

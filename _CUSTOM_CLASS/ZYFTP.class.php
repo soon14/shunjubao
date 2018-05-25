@@ -1,6 +1,6 @@
 <?php
 /**
- * 智赢ftp管理类 
+ * 聚宝ftp管理类
  */
 class ZYFTP {
 	

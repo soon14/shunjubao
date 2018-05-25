@@ -25,10 +25,10 @@
     </ul>
   </div>
   <div class="FooterOhter">
-    <p>2014-2017&nbsp;智赢网&nbsp;&copy;&nbsp;版权所有&nbsp;All rights reserved</p>
+    <p>2014-2017&nbsp;聚宝网&nbsp;&copy;&nbsp;版权所有&nbsp;All rights reserved</p>
     <p>京ICP备14016851-1号</p>
     <p>京ICP证150586号</p>
     <p>京公安网备11011402000202</p>
   </div>
 </div>
-
+

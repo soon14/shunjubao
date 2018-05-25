@@ -5,8 +5,8 @@
 include_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php';
 
 $TEMPLATE['title'] = '积分投注-竞猜中超';
-$TEMPLATE['content'] = '中超联赛,中国足球,2015中超,2015中国足球联赛，智赢网';
-$TEMPLATE['description'] = '中超联赛中国足球，智赢积分投注竞猜换大奖！';
+$TEMPLATE['content'] = '中超联赛,中国足球,2015中超,2015中国足球联赛，聚宝网';
+$TEMPLATE['description'] = '中超联赛中国足球，聚宝积分投注竞猜换大奖！';
 
 $currentDate = getCurrentDate();
 $condition = array();

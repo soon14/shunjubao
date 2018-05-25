@@ -56,7 +56,7 @@ if(isset($order['return_code'])&&isset($order['result_code'])&&$order['return_co
 <html>
 <head> 
 <meta charset="UTF-8"> 
-<title>智赢商城在线支付</title> 
+<title>聚宝商城在线支付</title>
 <meta name="apple-mobile-web-app-capable" content="yes"> 
 <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
 <meta name="format-detection" content="telephone=no"> 

@@ -6,7 +6,7 @@
 //mch_create_ip
 
 $out_trade_no = trim($_GET["out_trade_no"]);
-$body = "智赢微信支付";
+$body = "聚宝微信支付";
 $attach = "附加信息";
 $total_fee = trim($_GET["total_fee"]);
 $mch_create_ip = $_SERVER["REMOTE_ADDR"];
@@ -40,7 +40,7 @@ $(window).load(function() {
 </script>
 <div id="pay_platform" style="display:none">
 <div id="orderInfo">
-    <div class="ico_title">智赢微信支付</div>
+    <div class="ico_title">聚宝微信支付</div>
     <div class="form_wrap account">
         <div class="form_list">
             <span class="list_title">商户订单号：</span>
@@ -52,7 +52,7 @@ $(window).load(function() {
         <div class="form_list">
             <span class="list_title">商品描述：</span>
             <span class="list_val">
-                <input name="body" value="智赢微信支付" maxlength="64" size="32" placeholder="长度127">
+                <input name="body" value="聚宝微信支付" maxlength="64" size="32" placeholder="长度127">
             </span>
             <i>*</i><em>长度64</em>
         </div>

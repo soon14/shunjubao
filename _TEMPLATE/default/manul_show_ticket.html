@@ -111,7 +111,7 @@ TMJF(function($) {
 	
 	$("#batch_manul_ticket_zhiying").click(function(){
 		if(batch_manul_ticket_ing) return false;
-		if(!confirm('确定全部置为智赢出票吗？')) return false;
+		if(!confirm('确定全部置为聚宝出票吗？')) return false;
 		$(".batch_manul_ticket").each(function(){
 			var id = $(this).val();
 			if ($(this).attr('checked')) {
@@ -276,7 +276,7 @@ TMJF(function($) {
   <div style="position:relative;top:-1px;left:450px; width:600px; font-size:18px">
     <ul>
       <li> <{if $is_company_zhiying}>
-        <input type="button" id="batch_manul_ticket_zhiying" value='智赢出票'  style="font-size:18px"/>
+        <input type="button" id="batch_manul_ticket_zhiying" value='聚宝出票'  style="font-size:18px"/>
         <{/if}> 
         <!--<input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6780" operate_uname="安徽赵凯" value='安徽赵凯'/>安徽赵凯
   <input type='radio' name='ticket_person' class='manul_ticket' operate_uid="6781" operate_uname="安徽老杨" value='安徽老杨'/>安徽老杨

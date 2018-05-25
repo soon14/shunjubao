@@ -1,7 +1,7 @@
 ﻿document.writeln(
 "<div class=\"top\">"+
 "  <div class=\"topCenter\">"+
-"    <h1>您好！欢迎来到智赢网&nbsp;&nbsp;<span><a href=\"\">登录</a><a href=\"\">注册</a></span><span class=\"none\"><em>其实我是成成</em></span></h1>"+
+"    <h1>您好！欢迎来到聚宝网&nbsp;&nbsp;<span><a href=\"\">登录</a><a href=\"\">注册</a></span><span class=\"none\"><em>其实我是成成</em></span></h1>"+
 "    <ul>"+
 "      <li><a href=\"\">我的账户</a></li>"+
 "      <li class=\"show\"><a href=\"\">帮助中心</a></li>"+
@@ -12,7 +12,7 @@
 "</div>"+
 "<div class=\"topLogo\">"+
 "  <div class=\"logo\">"+
-"    <h1><b></b><a href=\"\">智赢网</a><b>win</b></h1>"+
+"    <h1><b></b><a href=\"\">聚宝网</a><b>win</b></h1>"+
 "  </div>"+
 "  <div class=\"topService\">"+
 "    <div class=\"serviceTell\"><img src=\"http://202.85.221.248/zy/www/statics/i/serviceTell.jpg\" /></div>"+

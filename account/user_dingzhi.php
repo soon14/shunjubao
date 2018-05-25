@@ -113,9 +113,9 @@ if ($nextPage) {
 
 
 #标题
-$TEMPLATE ['title'] = "智赢网用户账户充值明细 ";
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户账户充值明细。';
+$TEMPLATE ['title'] = "聚宝网用户账户充值明细 ";
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户账户充值明细。';
 $tpl->assign('userInfo', $userInfo);
 $tpl->assign('dingzhi_array', $dingzhi_array);
 $tpl->assign('start_time', $start_time);

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>赛事取消或者延迟公告-智赢网。</title>
-<meta name="keywords" content="赛事取消或者延迟公告-智赢网。" />
-<meta name="description" content="赛事取消或者延迟公告-智赢网。" />
+<title>赛事取消或者延迟公告-聚宝网。</title>
+<meta name="keywords" content="赛事取消或者延迟公告-聚宝网。" />
+<meta name="description" content="赛事取消或者延迟公告-聚宝网。" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/news.css" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/footer.css" />

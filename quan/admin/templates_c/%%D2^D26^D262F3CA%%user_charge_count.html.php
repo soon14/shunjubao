@@ -123,19 +123,19 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
  </strong>笔,<strong ><?php echo ((is_array($_tmp=$this->_tpl_vars['value01']['totalmoney'])) ? $this->_run_mod_handler('string_format', true, $_tmp, "%.2f") : smarty_modifier_string_format($_tmp, "%.2f")); ?>
 元</strong><br /> 
     
-    智赢支付宝指定帐号：<strong><?php echo $this->_tpl_vars['value02']['nums']; ?>
+    聚宝支付宝指定帐号：<strong><?php echo $this->_tpl_vars['value02']['nums']; ?>
  </strong>笔,<strong ><?php echo ((is_array($_tmp=$this->_tpl_vars['value02']['totalmoney'])) ? $this->_run_mod_handler('string_format', true, $_tmp, "%.2f") : smarty_modifier_string_format($_tmp, "%.2f")); ?>
 元</strong><br /> 
     
- 	智赢支付宝非指定帐号：<strong  ><?php echo $this->_tpl_vars['value03']['nums']; ?>
+ 	聚宝支付宝非指定帐号：<strong  ><?php echo $this->_tpl_vars['value03']['nums']; ?>
  </strong>笔,<strong ><?php echo ((is_array($_tmp=$this->_tpl_vars['value03']['totalmoney'])) ? $this->_run_mod_handler('string_format', true, $_tmp, "%.2f") : smarty_modifier_string_format($_tmp, "%.2f")); ?>
 元</strong><br /> 
     
-    智赢支付宝在线网银：<strong ><?php echo $this->_tpl_vars['value04']['nums']; ?>
+    聚宝支付宝在线网银：<strong ><?php echo $this->_tpl_vars['value04']['nums']; ?>
  </strong>笔,<strong ><?php echo ((is_array($_tmp=$this->_tpl_vars['value04']['totalmoney'])) ? $this->_run_mod_handler('string_format', true, $_tmp, "%.2f") : smarty_modifier_string_format($_tmp, "%.2f")); ?>
 元</strong><br /> 
     
-    智赢支付宝总入帐：<strong   style="color:red"><?php echo $this->_tpl_vars['value01']['nums']+$this->_tpl_vars['value02']['nums']+$this->_tpl_vars['value03']['nums']+$this->_tpl_vars['value04']['nums']; ?>
+    聚宝支付宝总入帐：<strong   style="color:red"><?php echo $this->_tpl_vars['value01']['nums']+$this->_tpl_vars['value02']['nums']+$this->_tpl_vars['value03']['nums']+$this->_tpl_vars['value04']['nums']; ?>
  </strong>笔,<strong  style="color:red"><?php echo $this->_tpl_vars['value01']['totalmoney']+$this->_tpl_vars['value02']['totalmoney']+$this->_tpl_vars['value03']['totalmoney']+$this->_tpl_vars['value04']['totalmoney']; ?>
 </strong>元<br /> 
     
@@ -148,4 +148,4 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
 
 </form>
 </body>
-</html>
+</html>

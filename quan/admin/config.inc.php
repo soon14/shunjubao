@@ -37,7 +37,7 @@ $dtime = time();//当时时间
 $adminid = $_SESSION["adminid"];
 $pageSize = 20;
 
-$shop_title = "智赢圈子后台";
+$shop_title = "聚宝圈子后台";
 
 
 ?>

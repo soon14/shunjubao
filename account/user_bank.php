@@ -100,9 +100,9 @@ $userRealInfo = $objUserRealInfoFront->get($userInfo['u_id']);
 
 //pr($userRealInfo);
 #标题
-$TEMPLATE ['title'] = "智赢网用户绑定银行 ";
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户绑定银行。';
+$TEMPLATE ['title'] = "聚宝网用户绑定银行 ";
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户绑定银行。';
 $tpl->assign('msg_error', $msg_error);
 $tpl->assign('msg_success', $msg_success);
 $tpl->assign('userInfo', $userInfo);

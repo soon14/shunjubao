@@ -49,9 +49,9 @@ if ($u_id) {
 }
 
 $tpl = new Template();
-$TEMPLATE['title'] = "智赢网-智赢彩票留言墙-智赢网|智赢网竞彩|智赢网北单,彩票赢家首选人气最旺的网站！";
-$TEMPLATE['keywords'] = '智赢网,智赢彩票,智赢留言墙。';
-$TEMPLATE['description'] = '智赢网,智赢彩票,智赢留言墙您的意见与建议对我们很重要。';
+$TEMPLATE['title'] = "聚宝网-聚宝彩票留言墙-聚宝网|聚宝网竞彩|聚宝网北单,彩票赢家首选人气最旺的网站！";
+$TEMPLATE['keywords'] = '聚宝网,聚宝彩票,聚宝留言墙。';
+$TEMPLATE['description'] = '聚宝网,聚宝彩票,聚宝留言墙您的意见与建议对我们很重要。';
 $tpl->assign('messages', $show_messages);
 $tpl->assign('img_num', $img_num);
 $tpl->d('msg');

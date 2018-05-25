@@ -5,7 +5,7 @@
   <div id="Rightsubnav">
     <ul>
       <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=2733292184&site=qq&menu=yes" target="_blank">在线客服</a></li>
-      <li class="msg"><a href="http://www.shunjubao.xyz/help/contact.html" target="_blank">联系智赢</a></li>
+      <li class="msg"><a href="http://www.shunjubao.xyz/help/contact.html" target="_blank">联系聚宝</a></li>
       <li class="help"><a href="http://www.shunjubao.xyz/help/" target="_blank">帮助中心</a></li>
     </ul>
   </div>
@@ -33,7 +33,7 @@
     </ul>
   </div>
   <div class="FooterOhter">
-    <p>2014-2017&nbsp;智赢网&nbsp;&copy;&nbsp;版权所有&nbsp;All rights reserved</p>
+    <p>2014-2017&nbsp;聚宝网&nbsp;&copy;&nbsp;版权所有&nbsp;All rights reserved</p>
     <p>京ICP备14016851-1号</p>
     <p>京ICP证150586号</p>
     <p>京公安网备11011402000202</p>

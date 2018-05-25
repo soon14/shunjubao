@@ -142,9 +142,9 @@ if ($userPaymentInfo) {
 $tpl->assign('userPaymentInfo', $userPaymentInfo);
 
 $userAccountInfo = $objUserAccountFront->get($u_id);
-$TEMPLETE['title'] = '智赢网用户提现';
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户提现。';
+$TEMPLETE['title'] = '聚宝网用户提现';
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户提现。';
 $tpl->assign('userInfo', $userInfo);
 $tpl->assign('userRealInfo', $userRealInfo);
 $tpl->assign('userAccountInfo', $userAccountInfo);

@@ -27,7 +27,7 @@ return array(
 		
 	Role::CUSTOMER_SERVICE	=> array(
 		'桀骜不羁',
-		'智赢小生',	
+		'聚宝小生',
 	),
 		
 	Role::OUTSIDE => array(
@@ -42,7 +42,7 @@ return array(
 	
 	Role::GAME_MANAGER => array(
 		'桀骜不羁',
-		'智赢小生',
+		'聚宝小生',
 	),
 	
 );

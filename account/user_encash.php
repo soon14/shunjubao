@@ -61,9 +61,9 @@ if ($nextPage) {
     $nextUrl = jointUrl(ROOT_DOMAIN."/account/user_encash.php", $args);
 }
 
-$TEMPLETE['title'] = '智赢网用户提现记录';
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户提现记录。';
+$TEMPLETE['title'] = '聚宝网用户提现记录';
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户提现记录。';
 
 $tpl->assign('previousUrl', $previousUrl);
 $tpl->assign('nextUrl', $nextUrl);

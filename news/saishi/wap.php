@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>赛事取消或者延迟公告-智赢网。</title>
+<title>赛事取消或者延迟公告-聚宝网。</title>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
 <meta content='yes' name='apple-mobile-web-app-capable' />
 <meta content='black' name='apple-mobile-web-app-status-bar-style' />
 <meta content='telephone=no' name='format-detection' />
-<meta name="keywords" content="赛事取消或者延迟公告-智赢网。" />
-<meta name="description" content="赛事取消或者延迟公告-智赢网。" />
+<meta name="keywords" content="赛事取消或者延迟公告-聚宝网。" />
+<meta name="description" content="赛事取消或者延迟公告-聚宝网。" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/wap_header.css" />
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/wap_footer.css" />
 <style>
@@ -75,7 +75,7 @@ for($i=0;$i<count($contents_list_array)-1;$i++){
 <?php
 }
 ?>
-<div class="footer" style="height:auto; line-height:26px;padding:14px 0; background:#f4f4f4;position:relative;top:-15px;"><p style=" height:32px;width:40%;padding:0 30px; line-height:30px;border:1px solid #e2e2e2; border-radius:5px; margin:0 auto;">客服热线：010-57190959</p><p style="padding:5px 0 0 0;">京ICP备14016851-1号&nbsp;京ICP证150586号</p><p>2014-2016&copy;智赢彩票&nbsp;京公安网备11011402000202</p></div>
+<div class="footer" style="height:auto; line-height:26px;padding:14px 0; background:#f4f4f4;position:relative;top:-15px;"><p style=" height:32px;width:40%;padding:0 30px; line-height:30px;border:1px solid #e2e2e2; border-radius:5px; margin:0 auto;">客服热线：010-57190959</p><p style="padding:5px 0 0 0;">京ICP备14016851-1号&nbsp;京ICP证150586号</p><p>2014-2016&copy;聚宝彩票&nbsp;京公安网备11011402000202</p></div>
 <span class="none">
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https:\/\/" : " http:\/\/");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000441119'%3E%3C\/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com\/z_stat.php%3Fid%3D1000441119%26show%3Dpic' type='text\/javascript'%3E%3C\/script%3E"));</script>
 <span id="cnzz_stat_icon_1000441119"><a title="站长统计" target="_blank" href="http://www.cnzz.com/stat/website.php?web_id=1000441119"><img vspace="0" hspace="0" border="0" src="http://icon.cnzz.com/img/pic.gif"></a></span>

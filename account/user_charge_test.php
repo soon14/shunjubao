@@ -11,9 +11,9 @@ $userInfo = Runtime::getUser();
 $tpl = new Template();
 
 #标题
-$TEMPLATE ['title'] = "智赢网充值中心 ";
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网充值中心。';
+$TEMPLATE ['title'] = "聚宝网充值中心 ";
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网充值中心。';
 
 #埋藏跳转页面
 

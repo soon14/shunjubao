@@ -10,9 +10,9 @@ $userInfo = Runtime::getUser();
 #错误信息
 $msg_error = '';
 $tpl = new Template ();
-$TEMPLETE['title'] = '智赢网用户个人基本信息';
-$TEMPLATE['keywords'] = '智赢竞彩,智赢网,智赢用户中心';
-$TEMPLATE['description'] = '智赢网用户个人基本信息。';
+$TEMPLETE['title'] = '聚宝网用户个人基本信息';
+$TEMPLATE['keywords'] = '聚宝竞彩,聚宝网,聚宝用户中心';
+$TEMPLATE['description'] = '聚宝网用户个人基本信息。';
 $objUserMemberFront = new UserMemberFront();
 $objUserRealInfoFront = new UserRealInfoFront();
 $objUserAccountFront = new UserAccountFront();

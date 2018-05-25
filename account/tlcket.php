@@ -92,7 +92,7 @@ switch ($userTicketInfo['sport']) {
 		break;
 }
 
-$TEMPLATE['title'] = '智赢网-智赢彩票“'.$userInfo['u_name'].'”用户' . $sport . substr($userTicketInfo['datetime'], 5, 5).'投注';
+$TEMPLATE['title'] = '聚宝网-聚宝彩票“'.$userInfo['u_name'].'”用户' . $sport . substr($userTicketInfo['datetime'], 5, 5).'投注';
 
 $tpl = new Template();
 $tpl->assign('endtime_forbin', $endtime_forbin);

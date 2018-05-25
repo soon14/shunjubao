@@ -50,7 +50,7 @@
 				
 				switch($value["charge_type"]){
 					case "1":	
-						$value["charge_type"]="智赢支付宝";
+						$value["charge_type"]="聚宝支付宝";
 						break;
 					case "2":	
 						$value["charge_type"]="手工充值";

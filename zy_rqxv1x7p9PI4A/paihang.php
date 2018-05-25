@@ -4,9 +4,9 @@
  */
 include_once dirname( __FILE__).DIRECTORY_SEPARATOR.'init.php';
 
-$TEMPLATE['title'] = '智赢网智赢中奖排行';
-$TEMPLATE['keywords'] = '智赢中奖排行榜,智赢网,智赢彩票,竞彩足球,北京单场,竞彩篮球,智赢大力水手,智赢红姐,智赢竞彩熊超,智赢竞彩小仙,智赢奶茶,智赢头号红人,智赢半边芸,智赢专注2串1。';
-$TEMPLATE['description'] = '智赢网智赢中奖排行榜';
+$TEMPLATE['title'] = '聚宝网聚宝中奖排行';
+$TEMPLATE['keywords'] = '聚宝中奖排行榜,聚宝网,聚宝彩票,竞彩足球,北京单场,竞彩篮球,聚宝大力水手,聚宝红姐,聚宝竞彩熊超,聚宝竞彩小仙,聚宝奶茶,聚宝头号红人,聚宝半边芸,聚宝专注2串1。';
+$TEMPLATE['description'] = '聚宝网聚宝中奖排行榜';
 
 $type = Request::r('type');
 

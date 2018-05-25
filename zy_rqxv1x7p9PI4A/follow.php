@@ -87,10 +87,10 @@ switch ($follow_ticket['sport']) {
 		break;
 }
 
-$TEMPLATE['title'] = '智赢网-智赢彩票“'.$follow_ticket_user['u_name'].'”用户' . $sport . substr($follow_ticket['datetime'], 5, 5).'投注';
+$TEMPLATE['title'] = '聚宝网-聚宝彩票“'.$follow_ticket_user['u_name'].'”用户' . $sport . substr($follow_ticket['datetime'], 5, 5).'投注';
 
-$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,智赢网跟单,智赢网竞猜跟单,竞彩投注,智赢晒单中心,大力水手,王忠仓,寻鸡情求鸭迫,红姐,智赢红姐。 ';
-$TEMPLATE['description'] = '晒单中心展现的是智赢网专家和明星会员推荐方案的页面，致力于打造竞彩中奖的福地。';
+$TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,聚宝网跟单,聚宝网竞猜跟单,竞彩投注,聚宝晒单中心,大力水手,王忠仓,寻鸡情求鸭迫,红姐,聚宝红姐。 ';
+$TEMPLATE['description'] = '晒单中心展现的是聚宝网专家和明星会员推荐方案的页面，致力于打造竞彩中奖的福地。';
 $tpl->assign('is_end', $is_end);
 $tpl->assign('follow_info', $follow_info);
 $tpl->assign('follow_infos', $follow_infos);
