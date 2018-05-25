@@ -3,7 +3,7 @@
  * 比分异常接口
  */
 class UnResult {
-	protected $host = 'http://prize.zhiying365365.com/KJCenter/getUnResult.php';
+	protected $host = 'http://prize.shunjubao.xyz/KJCenter/getUnResult.php';
 	
 	public function __construct() {
 		

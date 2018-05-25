@@ -3,7 +3,7 @@
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.shunjubao.xyz/"><strong class="none">智赢网</strong><em>365</em><b>以智慧赢取人生</b></a></h1>
+      <h1><a href="http://www.shunjubao.xyz/"><strong class="none">智赢网</strong><em>365</em><b>才智聚宝，财富人生</b></a></h1>
     </div>
     <div class="nav">
       <ul>
@@ -47,7 +47,7 @@
         <li><a href="http://new.shunjubao.xyz/footballtj/">资讯推荐</a></b><span><strong>资讯推荐</strong><em>&nbsp;</em>
           <h2><a href="http://new.shunjubao.xyz/footballtj/" target="_blank">足球推荐</a><a href="http://new.shunjubao.xyz/footballxw/" target="_blank">足球资讯</a><a href="http://new.shunjubao.xyz/NBAtj/" target="_blank">篮球推荐</a><a href="http://new.shunjubao.xyz/NBAxw/" target="_blank">篮球资讯</a><a href="http://new.shunjubao.xyz/touzhujiqiao/" target="_blank">投注技巧</a><a href="http://new.shunjubao.xyz/zhongchao/" target="_blank">论剑中超</a></h2>
           </span></li>
-        <li><a href="http://quan.zhiying365365.com/" target="_blank">圈子</a></li>
+
       </ul>
     </div>
   </div>

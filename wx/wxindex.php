@@ -48,12 +48,12 @@ class wechatCallbackapiTest
 					//推送
 					case "event":
 						if($Event=="subscribe"){
-							$content = "欢迎您加入我们智赢的大家庭（智赢网--以智慧赢取人生）--智赢网汇集国内一流竞彩分析师团队，每日（足球、篮球）推送赛事分析及推荐！
+							$content = "欢迎您加入我们智赢的大家庭（智赢网--才智聚宝，财富人生）--智赢网汇集国内一流竞彩分析师团队，每日（足球、篮球）推送赛事分析及推荐！
 	您还未有智赢网账户？<a href='http://mp.zhiying365.com/passport/reg.php'>点击注册</a>";
 							sendText($content);
 							
 						}elseif($Event=="unsubscribe"){//取消关注
-							$content = "欢迎您加入我们智赢的大家庭（智赢网--以智慧赢取人生）--智赢网汇集国内一流竞彩分析师团队，每日（足球、篮球）推送赛事分析及推荐！
+							$content = "欢迎您加入我们智赢的大家庭（智赢网--才智聚宝，财富人生）--智赢网汇集国内一流竞彩分析师团队，每日（足球、篮球）推送赛事分析及推荐！
 	您还未有智赢网账户？<a href='http://mp.zhiying365.com/passport/reg.php'>点击注册</a>";
 							sendText($content);
 						}elseif($Event=="click"){

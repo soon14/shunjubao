@@ -13,13 +13,13 @@ for(var i=0;i<arrCookie.length;i++){
 }
 var welcome_str = "&nbsp;";
 	if (u_name != '') {
-		welcome_str += "<b><a href=\"http://ios.zhiying365365.com/passport/login.php\"> " + u_name + "</a>&nbsp;&nbsp;<em><a href=\"http://ios.zhiying365365.com/account/user_center.php\">我的账户</a></em>&nbsp;&nbsp;<a href=\"http://ios.zhiying365365.com/passport/logout.php\">退出</a></b></h1>";
+		welcome_str += "<b><a href=\"http://ios.shunjubao.xyz/passport/login.php\"> " + u_name + "</a>&nbsp;&nbsp;<em><a href=\"http://ios.shunjubao.xyz/account/user_center.php\">我的账户</a></em>&nbsp;&nbsp;<a href=\"http://ios.shunjubao.xyz/passport/logout.php\">退出</a></b></h1>";
 	} else {
-		welcome_str += "<b><em><a href=\"http://ios.zhiying365365.com/passport/login.php\">登录</a><span></span><a href=\"http://ios.zhiying365365.com/passport/reg.php\">注册</a></em></b></h1>";
+		welcome_str += "<b><em><a href=\"http://ios.shunjubao.xyz/passport/login.php\">登录</a><span></span><a href=\"http://ios.shunjubao.xyz/passport/reg.php\">注册</a></em></b></h1>";
 }
 document.writeln(
 "<div class=\"top\">"+
-"<div class=\"logo\"><h1><b><a href=\"http://ios.zhiying365365.com/\">智赢网</a></b></h1></div>"+
+"<div class=\"logo\"><h1><b><a href=\"http://ios.shunjubao.xyz/\">智赢网</a></b></h1></div>"+
 "  <div class=\"topCenter\">"+
 "    <h1>"+ welcome_str +
 "  </div>"+

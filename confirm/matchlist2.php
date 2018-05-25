@@ -35,7 +35,7 @@ foreach ($results as $value) {
 	$value['h_cn'] = gb2312toU8($value['h_cn']);
 	$value['a_cn'] = gb2312toU8($value['a_cn']);
 	//获取即时比分
-	$url = "http://prize.zhiying365365.com/KJCenter/getResult.php?sport={$sport}&lotttime=".$lotttime."&ballid=".$ballid;
+	$url = "http://prize.shunjubao.xyz/KJCenter/getResult.php?sport={$sport}&lotttime=".$lotttime."&ballid=".$ballid;
 	$objCurl = new Curl($url);
 	$res = $objCurl->get();
 	

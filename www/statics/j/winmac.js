@@ -33,7 +33,7 @@ if (hostname.match(/www\.zhiying365365\.com/i) && checkMobile()) {
 	if(href.indexOf("admin")!=-1){
 		//window.location.href = href;
 	}else{
-		href = href.replace(/www\.zhiying365365\.com/i, "m.zhiying365365.com");
+		href = href.replace(/www\.zhiying365365\.com/i, "m.shunjubao.xyz");
 		window.location.href = href;
 	}
 	

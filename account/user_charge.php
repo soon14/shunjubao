@@ -25,7 +25,7 @@ $dtime = time();
 //获取当前在用的支付方式
 $user_charge=1;//pc支付宝
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $new_key = json_decode($get_key,true); 
 $pc_charge_mark = $new_key["charge_mark"];
@@ -34,7 +34,7 @@ $pc_charge_mark = $new_key["charge_mark"];
 //获取当前在用的支付方式
 $user_charge=2;//wap支付宝
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $new_key = json_decode($get_key,true); 
 $wap_charge_mark = $new_key["charge_mark"];
@@ -43,7 +43,7 @@ $wap_charge_mark = $new_key["charge_mark"];
 //判断是否频繁出错帐号，使用智赢充值帐号
 $user_charge=2;//wap支付宝
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $unusual_list = json_decode($get_key,true); 
 //var_dump($unusual_list);
@@ -54,7 +54,7 @@ if(in_array($uid,$unusual_list)){
 //判断是否频繁出错帐号，使用智赢充值帐号
 $user_charge=1;//wap支付宝
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_charge_alipay_unusual.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $unusual_list = json_decode($get_key,true); 
 //var_dump($unusual_list);

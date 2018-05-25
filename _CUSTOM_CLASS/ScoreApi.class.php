@@ -3,7 +3,7 @@
  * 即时比分接口
  */
 class ScoreApi {
-	protected $host = 'http://prize.zhiying365365.com/KJCenter/getResult.php';
+	protected $host = 'http://prize.shunjubao.xyz/KJCenter/getResult.php';
 	
 	public function __construct() {
 		

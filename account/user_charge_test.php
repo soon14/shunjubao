@@ -23,7 +23,7 @@ $user_charge=1;//pc支付宝
 $keyw = "zy3658786787676";
 $dtime = time();
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $new_key = json_decode($get_key,true); 
 $pc_charge_mark = $new_key["charge_mark"];
@@ -34,7 +34,7 @@ $user_charge=2;//wap支付宝
 $keyw = "zy3658786787676";
 $dtime = time();
 $sign = md5($user_charge.$keyw.$dtime);
-$url="http://quan.zhiying365365.com/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
+$url="http://quan.shunjubao.xyz/get_user_charge.php?user_charge=$user_charge&dtime=$dtime&sign=$sign";
 $get_key = file_get_contents($url);
 $new_key = json_decode($get_key,true); 
 $wap_charge_mark = $new_key["charge_mark"];

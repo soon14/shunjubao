@@ -1,7 +1,7 @@
 ﻿document.writeln(
 "<div class=\"header\">"+
 "<div class=\"headerCnetr\">"+
-"<div class=\"logo\"><h1><a href=\"http://www.shunjubao.xyz/\"><strong class=\"none\">智赢网</strong><em>365</em><b>以智慧赢取人生</b></a></h1></div>"+
+"<div class=\"logo\"><h1><a href=\"http://www.shunjubao.xyz/\"><strong class=\"none\">智赢网</strong><em>365</em><b>才智聚宝，财富人生</b></a></h1></div>"+
 "  <div class=\"nav\">"+
 "    <ul>"+
 "      <li><a href=\"http://www.shunjubao.xyz/\">首页</a></li>"+
@@ -24,7 +24,7 @@
 "        <h2><a href=\"http://new.shunjubao.xyz/footballtj/\">足球推荐</a><a href=\"http://new.shunjubao.xyz/footballxw/\">足球资讯</a><a href=\"http://new.shunjubao.xyz/NBAtj/\">篮球推荐</a><a href=\"http://new.shunjubao.xyz/NBAxw/\">篮球资讯</a><a href=\"http://new.shunjubao.xyz/touzhujiqiao/\">投注技巧</a><a href=\"http://new.shunjubao.xyz/zhongchao/\">论剑中超</a></h2>"+
 "        </span></li>"+
 
-"      <li><a href=\"http://quan.zhiying365365.com/\" target=\"_blank\">圈子</a></li>"+
+"      <li><a href=\"http://quan.shunjubao.xyz/\" target=\"_blank\">圈子</a></li>"+
 "    </ul>"+
 "    <ol>"+
 "  </div>"+

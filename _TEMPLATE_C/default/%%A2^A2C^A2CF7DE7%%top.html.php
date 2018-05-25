@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2018-05-25 10:48:40
          compiled from ../default/top.html */ ?>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -51,7 +51,7 @@ $(document).ready(function(){
 		welcome_str += "<li class=\"login\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
 /passport/login.php\">登录</a></li>"+        
 	        "<li class=\"reg\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
-/passport/reg.php\">注册</a></li>"+
+/passport/reg.php\">注册</a></li>";
 	}
 	$("#topCenter").append(welcome_str);
 });
@@ -176,4 +176,4 @@ $(function(){
 				$(this).removeClass("topmenu_hover");theMenu.stop().animate({height:0},5,function(){
 					$(this).css({display:"none"});});}
 		);});}
-</script>
+</script>

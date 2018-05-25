@@ -11,7 +11,7 @@ var is_confirm = false;
 		return true;
 	});
 	$("#jjyh").click(function(){
-	   $("#form1").attr('action','http://prize.zhiying365365.com/j/index.php?act=jc');
+	   $("#form1").attr('action','http://prize.shunjubao.xyz/j/index.php?act=jc');
        $("#form1").submit();	   
 	})
 });
@@ -26,7 +26,7 @@ var is_confirm = false;
 <{include file="cailocation.html"}>
 <!--当前位置 end-->
 <{if $prize}>
-<form action="http://prize.zhiying365365.com/j/index.php?act=jc" target="_self" id="form1" name="form1" method="post">
+<form action="http://prize.shunjubao.xyz/j/index.php?act=jc" target="_self" id="form1" name="form1" method="post">
 <{else}>
 <form action="<{$smarty.const.ROOT_DOMAIN}>/confirm/combination_submit<{if $s == 'bd'}>_bd<{/if}>.php" target="_self"  id="form1" name="form1" method="post">
 <{/if}>
