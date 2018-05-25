@@ -20,7 +20,7 @@ $z[7][4]['runphp']="yes";
 $z[8]=Array("field","",3561,3580);
 $z[8][4]['name']="body";
 $z[9]=Array("pagebreak","",3619,3636);
-$z[10]=Array("arclist","\r\n              <dt><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\"><img src=\"http://new.shunjubao.com[field:litpic/]\"></a>\r\n                <p><a href=\"http://new.shunjubao.com[field:arcurl/]\" target=\"_blank\">[field:title/]</a></p>\r\n              </dt>\r\n              ",5004,5408);
+$z[10]=Array("arclist","\r\n              <dt><a href=\"http://new.shunjubao.xyz[field:arcurl/]\" target=\"_blank\"><img src=\"http://new.shunjubao.xyz[field:litpic/]\"></a>\r\n                <p><a href=\"http://new.shunjubao.xyz[field:arcurl/]\" target=\"_blank\">[field:title/]</a></p>\r\n              </dt>\r\n              ",5004,5408);
 $z[10][4]['flag']="c";
 $z[10][4]['titlelen']="60";
 $z[10][4]['type']=".image";

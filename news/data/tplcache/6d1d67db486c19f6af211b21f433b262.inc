@@ -1,1 +1,1 @@
-<p><b><a href="http://new.shunjubao.xyz/gonggao" target="_blank">[告]</a></b><a href="http://new.shunjubao.com[field:arcurl/]" target="_blank">[field:title/]</a><em>[field:pubdate function='strftime("%m-%d",@me)'/]</em></p>
+<p><b><a href="http://new.shunjubao.xyz/gonggao" target="_blank">[告]</a></b><a href="http://new.shunjubao.xyz[field:arcurl/]" target="_blank">[field:title/]</a><em>[field:pubdate function='strftime("%m-%d",@me)'/]</em></p>

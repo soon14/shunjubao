@@ -1,1 +1,1 @@
-<p><span>●</span><a href="http://new.shunjubao.com[field:arcurl/]">[field:title function="( strlen('@me')>60 ? cn_substr('@me',40).'…' : '@me' )" /]</a></p>
+<p><span>●</span><a href="http://new.shunjubao.xyz[field:arcurl/]">[field:title function="( strlen('@me')>60 ? cn_substr('@me',40).'…' : '@me' )" /]</a></p>
