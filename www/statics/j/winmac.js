@@ -28,12 +28,12 @@ var system = {
 var href = document.location.href;
 
 var hostname = document.location.hostname;
-if (hostname.match(/www\.zhiying365365\.com/i) && checkMobile()) {
+if (hostname.match(/www\.shunjubao\.xyz/i) && checkMobile()) {
 
 	if(href.indexOf("admin")!=-1){
 		//window.location.href = href;
 	}else{
-		href = href.replace(/www\.zhiying365365\.com/i, "m.shunjubao.xyz");
+		href = href.replace(/www\.shunjubao\.xyz/i, "m.shunjubao.xyz");
 		window.location.href = href;
 	}
 	
