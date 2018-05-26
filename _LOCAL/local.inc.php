@@ -87,7 +87,7 @@ define('LOG_PATH',ROOT_PATH . '/_LOG');
 define('TEST_DOMAIN_MATCH', '#http://test.www.gaojie.com#i');
 
 //wap版域名正则
-define('WAP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(localm|wap|m)\.(shunjubao)\.com$/i');
+define('WAP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(localm|wap|m)\.(shunjubao)\.xyz$/i');
 
 //微信版域名正则
 define('MP_DOMAIN_MATCH', '/^http:\/\/([a-zA-Z0-9]*\.){0,1}(mp)\.(shunjubao)\.com$/i');
