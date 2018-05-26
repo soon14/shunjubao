@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2018-03-04 22:54:49
          compiled from confirm/hhad_list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'confirm/hhad_list.html', 161, false),)), $this); ?>
@@ -203,7 +203,7 @@ unset($_smarty_tpl_vars);
       <ul>
         <li><a href="<?php echo @ROOT_WEBSITE; ?>
 /help/showFgz.html">玩法规则</a></li>
-        <li><a href="http://new.shunjubao.xyz/saishi/index.php" class="active">销售公告</a></li>
+        <li><a href="http://news.zhiying365365.com/saishi/index.php" class="active">销售公告</a></li>
       </ul>
       <div class="clear"></div>
     </div>

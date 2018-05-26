@@ -1,12 +1,12 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-23 20:43:01
+<?php /* Smarty version 2.6.17, created on 2018-03-04 22:55:28
          compiled from login.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'login.html', 7, false),)), $this); ?>
 <!DOCTYPE html>
 <head>
-<title>用户登录-聚宝网聚宝彩票，中奖率最高的网站。</title>
-<meta name="keywords" content="用户登录,聚宝网,聚宝彩票" />
-<meta name="description" content="用户登录-聚宝网聚宝彩票，中奖率最高的网站。" />
+<title>用户登录-智赢网智赢彩票，中奖率最高的网站。</title>
+<meta name="keywords" content="用户登录,智赢网,智赢彩票" />
+<meta name="description" content="用户登录-智赢网智赢彩票，中奖率最高的网站。" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link href="<?php echo ((is_array($_tmp='header.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 " type="text/css" rel="stylesheet" />
@@ -63,13 +63,13 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
     <div class="lianhelogin">
       <h2>使用合作网站登录</h2>
       <ul>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/QQlogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/QQlogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
 ">QQ登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/alipaylogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][1]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/alipaylogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][1]; ?>
 ">支付宝登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weixin2.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][3]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weixin2.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][3]; ?>
 ">微信登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weibologin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weibologin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
 ">微博登录</a></li>
       </ul>
     </div>
@@ -83,7 +83,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
     <p>最及时、最全面、最专业的彩票新闻</p>
     <p>提款瞬间秒到</p>
     <p></p>
-    <p><a href="http://www.shunjubao.xyz/passport/reg.php" style="font-size:14px;color:#dc0000;">我要注册</a></p>
+    <p><a href="http://www.zhiying365365.com/passport/reg.php" style="font-size:14px;color:#dc0000;">我要注册</a></p>
   </div>
   <div class="clear"></div>
 </div>
@@ -95,4 +95,4 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 <!--footer end-->
-</div>
+</div>

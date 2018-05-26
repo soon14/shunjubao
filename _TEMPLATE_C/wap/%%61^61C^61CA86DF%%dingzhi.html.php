@@ -1,0 +1,349 @@
+<?php /* Smarty version 2.6.17, created on 2018-03-04 22:55:01
+         compiled from dingzhi.html */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'string_format', 'dingzhi.html', 223, false),)), $this); ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<style>
+/**/
+.shaidantable{border-top:none; font-size:12px; margin:0 auto; width:98%;}
+.shaidantable table{text-align:center;border-bottom-width:0;border-collapse:collapse;background:#fff;margin:0 0 30px 0;}
+.shaidantable table tr{}
+.shaidantable table tr:hover{background:#f9f9f9;}
+.shaidantable table tr th{height:28px;line-height:28px;font-weight:300; background:#eee;}
+.shaidantable table tr th span{ padding:0 0 0 5px;}
+.shaidantable table tr td{height:36px;line-height:36px;border-bottom:1px solid #eee;}
+.shaidantable table tr td.first{text-align:left;}
+.shaidantable table tr td b{ont-weight:300;}
+.shaidantable table tr td u{text-decoration:none;color:#666;}
+.shaidantable table tr td em{font-style:normal;color:#dc0000;}
+.shaidantable table tr td b span{}
+.shaidantable table tr td u{ text-decoration:none;border:1px solid #dc0000; padding:3px 5px;color:#dc0000; margin:0 8px 0 0;}
+.shaidantable table tr td b img{width:30px;height:30px;border:1px solid #ccc;border-radius:30px;margin:0 10px 0 2px;position:relative;top:7px;}
+.shaidantable table tr td strong{ display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.shaidantable table tr td strong a{background:#BC1E1F;color:#fff;display:inline-table;display:inline-block;zoom:1;*display:inline;text-align:center;border-radius:5px;height:26px;line-height:26px; padding:0 3px; width:60px;}
+.shaidantable table tr td strong a:hover{}
+.shaidantab{width:1000px;margin:15px auto auto auto;text-align:left;position:relative;}
+.shaidantab h1{color:red;}
+.listtd{background:#fff;}
+.sdanTop{height:50px;margin:5px auto;border-bottom:1px solid #ccc;width:99%;line-height:50px;text-align:left;}
+.sdanTop h1{font-size:14px;font-weight:900;font-family:'微软雅黑';width:100%;}
+.sdanTop h1 strong{display:inline-table;display:inline-block;zoom:1;*display:inline;width:80px;border:1px solid #ccc;height:36px;line-height:36px;border-bottom:2px solid #fff;text-align:center;position:relative;top:6px;}
+.sdanTop h1 span{ font-size:12px;font-weight:300;float:right;font-family:'宋体'; position:relative;top:2px;}
+.black_overlay{display:none;background-color:#999;width:100%;height:100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+
+
+.black_overla{display:none;background-color:#999;width:100%;height:100%;left:0;top:0;/*FF IE7*/
+filter:alpha(opacity=80);/*IE*/
+opacity:0.8;/*FF*/
+z-index:9999999999999999999999;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+
+
+.white_content{display:none;left:0%;/*FF IE7*/
+top:0;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/}
+
+
+.white_conten{display:none;left:0%;/*FF IE7*/
+top:0;/*FF IE7*/
+
+z-index:9999999999999999999999;margin:0 auto;width:100%;position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top:e&shy;xpression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-
+
+this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - 
+
+this.clientHeight)/2);/*IE5 IE5.5*/background:#000;opacity:0.9;filter:alpha(opacity=90);height:100%;}
+.MSCenter{border:2px solid #888;width:96%;height:100%;margin:0 auto;text-align:left;background:#fff;padding:10px;position:relative;margin:0 auto;font-size:14px;}
+.MSCenter h1{font-size:18px;font-weight:300;font-family:'微软雅黑';border-bottom:1px solid #ccc;height:40px;line-height:40px;position:relative;position:relative; padding:0 0 10px 0;}
+.MSCenter h1 a{padding:0 0 0 10px;position:absolute;right:10px;top:0;color:#565656;font-size:14px;color:#dc0000;}
+.MSCenter h2{font-size:12px;font-weight:300;font-family:'';height:24px;line-height:24px;text-align:center;background:#ccc;position:absolute;left:0;bottom:0;display:block;width:100%;color:#999;}
+.sdanopenwindows{}
+.sdanopenwindows h4{ height:30px;line-height:30px;font-weight:300;padding:20px 0 0 5px;}
+.sdanopenwindows h4 strong{ font-size:14px;font-weight:300;color:#dc0000;}
+.sdanopenwindows ul li.sub{padding:15px 0 0 45px;}
+.sdanopenwindows ul li.sub input{border:none;background:#CE050B;color:#fff;width:234px;height:38px;line-height:38px;text-align:center;font-size:16px;font-weight:900;cursor:pointer;font-family:'微软雅黑';display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.sdanopenwindows dl{ padding:5px;}
+.sdanopenwindows dl.tips{ padding:0 8px 18px 8px;color:#777; text-align:left; line-height:24px; font-size:12px;}
+.sdanopenwindows dl.tips dd{ font-size:12px;}
+.sdanopenwindows dl.tips span{color:#dc0000;}
+.sdanopenwindows dl dt{ font-size:14px;height:50px;line-height:50px;font-weight:900;}
+.sdanopenwindows dl dd{display:inline-table;display:inline-block;zoom:1;*display:inline; padding:0 2px 0 0; }
+.sdanopenwindows dl dd.text{width:97%; height:36px; line-height:36px;border:1px solid #ccc;}
+.sdanopenwindows dl dd.text input{ border:none; background:none; height:34px; line-height:34px;width:96%;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.sdanopenwindows dl dd input{ position:relative;top:1px;}
+.sdanopenwindows dl dd.sub{margin:45px 0 150px 0;background:#CE050B; width:97%; height:38px; line-height:38px;display:inline-table;display:inline-block;zoom:1;*display:inline;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.sdanopenwindows dl dd.sub input{border:none; background:none;color:#fff;height:36px;line-height:36px;text-align:center;font-weight:900;cursor:pointer;font-family:'微软雅黑';display:inline-table;display:inline-block;zoom:1;*display:inline; width:100%; font-size:18px; letter-spacing:3px;}
+.sharepages{ padding:10px 0 50px 0;}
+.sharepages a{display:inline-table;display:inline-block;zoom:1;*display:inline; padding:8px 10px;border:1px solid #ccc;color:#000; margin:0 3px;}
+.sharepages a:hover{color:#dc0000;border:1px solid #dc0000;}
+#showtips{ font-size:14px; font-weight:300; height:120px; line-height:120px;}
+#showtips a{font-size:14px; font-weight:300;}
+.wapTAB{ height:40px; line-height:40px;border-bottom:2px solid #ddd; width:99%; margin:0 auto; text-align:center;}
+.wapTAB dl{ height:40px; line-height:40px;}
+.wapTAB dl dt{ float:left;margin:0 15px 0 0; position:relative;}
+.wapTAB dl dt span{ border-bottom:2px solid red; height:40px; line-height:40px; display:block; position:relative;top:-1px;}
+.wapTAB dl dt em{ border-bottom:2px solid red; height:40px; line-height:40px; display:block; font-style:normal;width:60px;}
+.wapTAB dl dt a{color:#000;height:40px; line-height:40px;color:#000; display:block; font-size:14px; font-weight:300;}
+.wapTAB dl dd{ font-size:12px; position:absolute;right:2%;}
+.wapTAB dl dd span{color:#dc0000;}
+.Dinzhism{ width:98%; margin:0 auto; text-align:left; line-height:22px; padding:10px 0; font-size:12px;}
+</style>
+</head><body>
+<div id="fade" class="black_overlay"></div>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "top.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<div class="wapTAB">
+  <dl>
+    <dt style="border-bottom:2px solid red; position:relative;top:0px;"><a href="<?php echo @ROOT_DOMAIN; ?>
+/account/user_account_log.php">跟单定制</a></dt>
+    <dd><a href="http://www.zhiying365365.com/help/help_20.html" style="color:#999;">定制说明</a></dd>
+  </dl>
+</div>
+<div class="Dinzhism">
+  <p>停止盲目投注，让您的利润蒸蒸日上 !</p>
+  <p>专家和明星会员推荐，打造竞彩中奖的福地！</p>
+</div>
+<!--弹出定制 start-->
+<div id="light2" class="white_content" >
+  <div class="MSCenter" style="height:200px;">
+    <h1>定制提醒<span><a href="javascript:void(0)" onClick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+    <div id="showtips"></div>
+  </div>
+</div>
+<div id="light1" class="white_content" >
+  <form   method="post" >
+    <div class="MSCenter">
+      <h1>定制跟单<span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+      <div class="sdanopenwindows">
+        <h4>您当前定制的跟单人是：<strong id="u_name">大力水手</strong></h4>
+        <dl>
+          <dt>订制周期：</dt>
+          <dd>
+            <input type="radio" name="cycle" checked value="1">
+            一个星期</dd>
+          <dd>
+            <input type="radio" name="cycle" value="2">
+            两个星期</dd>
+          <dd>
+            <input type="radio" name="cycle" value="3">
+            一个月</dd>
+        </dl>
+        <dl>
+          <dt>定制倍数：</dt>
+          <dd>
+            <input type="radio" name="multiple" checked value="1">
+            1倍</dd>
+          <dd>
+            <input type="radio" name="multiple" value="20">
+            20倍</dd>
+          <dd>
+            <input type="radio" name="multiple" value="30">
+            30倍</dd>
+          <dd>
+            <input type="radio" name="multiple" value="50">
+            50倍</dd>
+          <dd>
+            <input type="radio" name="multiple" value="100">
+            100倍</dd>
+        </dl>
+        <dl>
+          <dt>其他倍数：</dt>
+          <dd class="text">
+            <input type="text" name="other_multiple" id="other_multiple"  value="" onKeyUp="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+          </dd>
+          <dd>
+        </dl>
+        <dl class="tips">
+          <dd><span>温馨提示：</span>一旦定制，晒单人晒单后，您将自动进行跟单，并扣除账户余额。如需退订，请到用户中心-我的定制进行操作！</dd>
+        </dl>
+        <dl>
+          <dd class="sub" >
+            <input id="u_id" name="u_id" type="hidden" value="">
+            <input type="button" name="submit" value="提交"  onClick="return save_dingzhi()" id="submit">
+          </dd>
+        </dl>
+      </div>
+      <h2>跟单定制，不错失任何一红单，专家和明星会员推荐！</h2>
+    </div>
+  </form>
+</div>
+<!--弹出定制 end-->
+<!--center start-->
+<div class="gendanCenter">
+  <div class="shaidantable">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="list">
+      <tr>
+        <th align="left"><span>可定制专家</span></th>
+        <th>战绩</th>
+        <th>胜率(周)</th>
+        <th align="right" style="padding:0 30px 0 0;">操作</th>
+      </tr>
+      <?php $_from = $this->_tpl_vars['results']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['name'] = array('total' => count($_from), 'iteration' => 0);
+if ($this->_foreach['name']['total'] > 0):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['item']):
+        $this->_foreach['name']['iteration']++;
+?>
+      <tr>
+        <td class="first">
+          <!--<img src="<?php if ($this->_tpl_vars['item']['u_img']): ?><?php echo $this->_tpl_vars['item']['u_img']; ?>
+<?php else: ?><?php echo @STATICS_BASE_URL; ?>
+/i/touxiang.jpg<?php endif; ?>">-->
+          <?php if ($this->_tpl_vars['item']['s_recomond'] == 2): ?><u>推荐</u><?php endif; ?><span><?php echo $this->_tpl_vars['item']['u_name']; ?>
+</span></td>
+        <td>红单<?php echo ((is_array($_tmp=$this->_tpl_vars['item']['show_prize_state1'])) ? $this->_run_mod_handler('string_format', true, $_tmp, "%d") : smarty_modifier_string_format($_tmp, "%d")); ?>
+</td>
+        <td><?php echo $this->_tpl_vars['item']['s_shenglv']; ?>
+%</td>
+        <td align="right"><strong><a href="javascript:void(0)" onClick="dingzhi('<?php echo $this->_tpl_vars['item']['show_uid']; ?>
+','<?php echo $this->_tpl_vars['item']['show_name']; ?>
+')">定制</a></strong></td>
+      </tr>
+      <?php endforeach; endif; unset($_from); ?>
+    </table>
+  </div>
+</div>
+<?php if ($this->_tpl_vars['total_page'] > 1): ?>
+<div class="sharepages"> <a href="<?php echo @ROOT_DOMAIN; ?>
+/ticket/dingzhi.php">首页</a> <?php if ($this->_tpl_vars['previousUrl']): ?> <a href="<?php echo $this->_tpl_vars['previousUrl']; ?>
+" class="active">上一页</a> <?php endif; ?>
+  <?php if ($this->_tpl_vars['nextUrl']): ?> <a href="<?php echo $this->_tpl_vars['nextUrl']; ?>
+" class="active">下一页</a> <?php endif; ?> <a href="<?php echo @ROOT_DOMAIN; ?>
+/ticket/dingzhi.php?page=<?php echo $this->_tpl_vars['total_page']; ?>
+">末页</a> </div>
+<?php endif; ?>
+<div style="padding:20px 10px; font-size:12px; text-align:left; line-height:24px; display:none;">
+  <p style="color:#dc0000;font-weight:900;">3）特别说明：</p>
+  <p>A、目前不能针对非晒单用户进行跟单定制，即您跟单定制的都是有晒单权限用户；</p>
+  <p>B、一旦定制，晒单人晒单后，您将自动进行跟单，并扣除账户余额</p>
+  <p>C、余额不足，所定制的自动跟单，将无法正常投注，自动跟单失败，后进行的充值，也不能在进行自动跟单，下一自动跟单账户余额足够进行扣款时，自动跟单状态成功；</p>
+  <p>D、定制跟单必须进行过实名认证，未实名认证将无法投注及定制自动跟单;</p>
+  <p>E、可对多人进行定制；</p>
+  <p>F、如需”退订“，请到“用户中心”-“定制管理””-我的定制“进行操作！。</p>
+</div>
+<script>
+
+function dingzhi(u_id,u_name){
+	$("#u_id").val(u_id);
+	$("#u_name").html(u_name);
+	document.getElementById('light1').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+}
+
+function save_dingzhi(){
+
+var u_id=$("#u_id").val();
+var cycle= $('input[name="cycle"]:checked').val();
+var multiple= $('input[name="multiple"]:checked').val();
+
+var other_multiple=$("#other_multiple").val();//倍数
+
+if(parseInt(other_multiple)>0){
+var	multiple = other_multiple;
+}
+
+
+if(cycle==""){
+  $("#showtips").html('定制周期出错');
+	document.getElementById('light1').style.display='none';
+	document.getElementById('light2').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+	return false;
+}
+
+if(u_id==""){
+	$("#showtips").html('定制ID出错');
+	document.getElementById('light1').style.display='none';
+	document.getElementById('light2').style.display='block';
+	document.getElementById ('fade').style.display='block';	
+
+	return false;
+}
+	
+	$.ajax({
+	type:'POST', //URL方式为POST
+	url:'ajax_post_dingzhi.php', //这里是指向登录验证的頁面
+	data:'follow_id='+u_id+'&cycle='+cycle+'&multiple='+multiple, //把要验证的参数传过去 
+	dataType: 'json', //数据类型为JSON格式的验证 
+	success: function(data) {
+		if(data.status == "success"){
+		
+			$("#showtips").html('恭喜您已成功定制，查看<a href="http://m.zhiying365365.com/account/user_dingzhi.php" >我的定制</a');
+			document.getElementById('light1').style.display='none';
+			document.getElementById('light2').style.display='block';
+			document.getElementById ('fade').style.display='block';	
+			
+			return false;		
+		}else{
+			$("#showtips").html(data.mess);
+			document.getElementById('light1').style.display='none';
+			document.getElementById('light2').style.display='block';
+			document.getElementById ('fade').style.display='block';	
+	
+			return false;	
+		}
+	}
+});	
+	
+}
+
+</script>
+<!--center end-->
+<!--footer start--->
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "footer.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<!--footer end-->
+</body>
+</html>

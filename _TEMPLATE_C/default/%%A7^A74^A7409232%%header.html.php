@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2017-10-14 18:06:18
          compiled from ../default/confirm/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', '../default/confirm/header.html', 7, false),)), $this); ?>
@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $this->_tpl_vars['TEMPLATE']['title']; ?>
--聚宝网|聚宝竞彩|彩票赢家首选人气最旺的网站！</title>
+-智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
 <meta name="keywords" content="<?php echo $this->_tpl_vars['TEMPLATE']['keywords']; ?>
 " />
 <meta name="description" content="<?php echo $this->_tpl_vars['TEMPLATE']['description']; ?>

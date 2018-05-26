@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2018-03-04 22:54:49
          compiled from ../default/mp.html */ ?>
 <div class="mp">
 	<dl>
-		<dt><img src="http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg"></dt>
-		<dd class="active"><p>聚宝推荐团队</p></dd>
-		<dt><img src="http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg"></dt>
+		<dt><img src="http://www.zhiying365365.com/www/statics/i/tuijianw.jpg"></dt>
+		<dd class="active"><p>智赢推荐团队</p></dd>
+		<dt><img src="http://www.zhiying365365.com/www/statics/i/dalishuishou.jpg"></dt>
 		<dd><p>大水手订阅号</p></dd>
 	</dl>
 </div>

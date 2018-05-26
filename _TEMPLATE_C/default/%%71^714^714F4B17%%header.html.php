@@ -1,11 +1,11 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-23 23:16:12
+<?php /* Smarty version 2.6.17, created on 2017-10-14 18:06:01
          compiled from header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'header.html', 7, false),)), $this); ?>
 <!DOCTYPE html>
 <head>
 <title><?php echo $this->_tpl_vars['TEMPLATE']['title']; ?>
--聚宝网|聚宝竞彩|彩票赢家首选人气最旺的网站！</title>
+-智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
 <meta name="keywords" content="<?php echo $this->_tpl_vars['TEMPLATE']['keywords']; ?>
 " />
 <meta name="description" content="<?php echo $this->_tpl_vars['TEMPLATE']['description']; ?>
@@ -44,4 +44,4 @@ TMJF.conf = {
 "></script>
 <link rel="shortcut icon" href="<?php echo @STATICS_BASE_URL; ?>
 /i/zy.icon" type="image/x-icon" />
-</head>
+</head>

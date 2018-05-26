@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-23 23:16:12
+<?php /* Smarty version 2.6.17, created on 2018-03-04 23:19:56
          compiled from reg.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'reg.html', 2, false),)), $this); ?>
@@ -83,13 +83,13 @@ unset($_smarty_tpl_vars);
     <div class="lianhelogin">
       <h2>使用合作网站登录</h2>
       <ul>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/QQlogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/QQlogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
 ">QQ登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/alipaylogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][1]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/alipaylogin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][1]; ?>
 ">支付宝登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weixin2.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][3]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weixin2.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][3]; ?>
 ">微信登录</a></li>
-        <li><img src="http://www.shunjubao.xyz/www/statics/i/weibologin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
+        <li><img src="http://www.zhiying365365.com/www/statics/i/weibologin.gif"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
 ">微博登录</a></li>
       </ul>
     </div>
@@ -103,7 +103,7 @@ unset($_smarty_tpl_vars);
     <p>最及时、最全面、最专业的彩票新闻</p>
     <p>提款瞬间秒到</p>
 	<p></p>
-	<p>已有帐号？<a href="http://www.shunjubao.xyz/passport/login.php" style="font-size:14px;color:#dc0000;">登录</a></p>
+	<p>已有帐号？<a href="http://www.zhiying365365.com/passport/login.php" style="font-size:14px;color:#dc0000;">登录</a></p>
   </div>
   <div class="clear"></div>
 </div>

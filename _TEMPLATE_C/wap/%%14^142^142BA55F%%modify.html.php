@@ -1,0 +1,234 @@
+<?php /* Smarty version 2.6.17, created on 2017-10-24 22:28:45
+         compiled from ../admin/user/modify.html */ ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../admin/header.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<script type="text/javascript">
+
+TMJF(function ($) {
+	var root_domain = "<?php echo @ROOT_DOMAIN; ?>
+";
+	$("#search").click(function () {
+		$.post(root_domain + '/admin/user/getUserInfo.php'
+                , {user_id: $("#user_id").val(),
+			user_name: $("#user_name").val(),
+			realname: $("#user_realname").val(),
+			idcard: $("#user_idcard").val(),
+			mobile: $("#user_mobile").val()
+                  }
+                , function(data) {
+                    if (data.ok) {
+                    	var info = data.msg;
+                    	var userInfo = info['userInfo'];
+                    	var userRealInfo = info['userRealInfo'];
+                    	var userPaymentInfo = info['userPaymentInfo'];
+                    	for(var key in userInfo) {
+                    		$("#"+key).val(userInfo[key]);
+                        }
+                    	for(var key in userRealInfo) {
+                    		$("#"+key).val(userRealInfo[key]);
+                        }
+                    	for(var key in userPaymentInfo) {
+                    		if(key=='id') $("#user_payment_id").val(userPaymentInfo[key]);
+                    		else $("#"+key).val(userPaymentInfo[key]);
+                        }
+                    	$(".modify_uid").val(userInfo['u_id']);
+                    } else {
+                    	alert(data.msg);
+                    }
+                }
+                , 'json'
+            );
+	});
+	$(".sub_button").click(function(){
+		var tips = '';
+		if($("#user_id").val()) {
+			tips = 'UID为:'+$("#user_id").val();
+		}
+		if($("#user_name").val()) {
+			tips = '用户名为:'+$("#user_name").val();
+		}
+		if($("#user_realname").val()) {
+			tips = '真实姓名为:'+$("#user_realname").val();
+		}
+		if($("#user_idcard").val()) {
+			tips = '身份证号为:'+$("#user_idcard").val();
+		}
+		if($("#user_mobile").val()) {
+			tips = '手机号为:'+$("#user_mobile").val();
+		}
+		if(confirm("确定修改" + tips + "的相关信息吗?")) {
+			return true;
+		}
+		return false;
+	});
+});
+</script>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../admin/nav.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="33%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+          <td><h3>查询条件<span style="font-size:12px;color:red; font-weight:300;">暂不支持多条件查询</span></h3></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="270" align="right">UID：</td>
+          <td><input id="user_id" value="" type="text" /></td>
+        </tr>
+        <tr>
+          <td width="270" align="right">用户名：</td>
+          <td><input id="user_name" value="" type="text" /></td>
+        </tr>
+        <tr>
+          <td width="270" align="right">真实姓名：</td>
+          <td><input id="user_realname" value="" type="text" /></td>
+        </tr>
+        <tr>
+          <td width="270" align="right">身份证号：</td>
+          <td><input id="user_idcard" value="" type="text" /></td>
+        </tr>
+        <tr>
+          <td width="270" align="right">手机号：</td>
+          <td><input id="user_mobile" value="" type="text" /></td>
+        </tr>
+        <tr>
+          <td width="270" align="right"></td>
+          <td><input id="search" type="button" value="查询" name="submit"/></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><form action="" method="post">
+        <table width="33%" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td><h3>用户基本信息修改</h3></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户id(不可修改)：</td>
+            <td><input id="u_id" name="u_id" value="" type="text" readOnly="true"/></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户名(不可修改)：</td>
+            <td><input id="u_name" name="u_name" value="" type="text" readOnly="true"/></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户昵称：</td>
+            <td><input id="u_nick" name="u_nick" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户创建时间(不可修改)：</td>
+            <td><input id="u_jointime" name="u_jointime" value="" type="text" readOnly="true"/></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户地址：</td>
+            <td><input id="u_address" name="u_address" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户生日：</td>
+            <td><input id="u_birthday" name="u_birthday" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">用户邮箱：</td>
+            <td><input id="u_email" name="u_email" value="" type="text" /></td>
+          </tr>
+          <tr>
+		  	<td width="270" align="right"></td>
+            <td><input id="sub1" type="submit" value="修改" name="submit" class="sub_button"/>
+              <input type="hidden" value="UserMemberFront" name="class_name">
+              <input type="hidden" value="" name="u_id" class="modify_uid">
+            </td>
+          </tr>
+        </table>
+      </form></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><form action="" method="post">
+        <table width="33%" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td><h3>用户扩展信息修改</h3></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">真实姓名：</td>
+            <td><input id="realname" name="realname" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">身份证号：</td>
+            <td><input id="idcard" name="idcard" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">手机号：</td>
+            <td><input id="mobile" name="mobile" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">开户银行：</td>
+            <td><input id="bank" name="bank" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">支行名称：</td>
+            <td><input id="bank_branch" name="bank_branch" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">银行卡号：</td>
+            <td><input id="bankcard" name="bankcard" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">银行所在省份：</td>
+            <td><input id="bank_province" name="bank_province" value="" type="text" /></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">银行所在城市：</td>
+            <td><input id="bank_city" name="bank_city" value="" type="text" /></td>
+          </tr>
+          <tr>
+		  	<td width="270" align="right"></td>
+            <td><input id="sub2" type="submit" value="修改" name="submit" class="sub_button"/>
+              <input type="hidden" value="UserRealInfoFront" name="class_name">
+              <input type="hidden" value="" name="u_id" class="modify_uid">
+            </td>
+          </tr>
+        </table>
+      </form></td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><form action="" method="post">
+        <table width="33%" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="270" align="right"><h3>用户支付帐号信息修改</h3></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">支付类型：(1为支付宝；2为财付通)</td>
+            <td><input id="pay_type" name="pay_type" value="" type="text"/></td>
+          </tr>
+          <tr>
+            <td width="270" align="right">支付账户：</td>
+            <td><input id="pay_account" name="pay_account" value="" type="text" /></td>
+          </tr>
+          <tr>
+		  	<td width="270" align="right"></td>
+            <td><input id="sub3" type="submit" value="修改" name="submit" class="sub_button"/>
+              <input type="hidden" value="" id="user_payment_id" name="id">
+              <input type="hidden" value="" name="u_id" class="modify_uid">
+              <input type="hidden" value="UserPaymentFront" name="class_name">
+            </td>
+          </tr>
+        </table>
+      </form></td>
+  </tr>
+</table>
+</body></html>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2017-10-14 18:06:18
          compiled from ../default/confirm/betbox.html */ ?>
   <div id="fade" class="black_overlay"></div>
   <div id="light1" class="white_content">

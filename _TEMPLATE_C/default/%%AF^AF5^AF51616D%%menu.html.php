@@ -1,9 +1,9 @@
-<?php /* Smarty version 2.6.17, created on 2018-05-21 23:03:22
+<?php /* Smarty version 2.6.17, created on 2018-03-04 22:54:49
          compiled from ../default/menu.html */ ?>
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.shunjubao.xyz/"><strong class="none">聚宝网</strong><em>365</em><b>才智聚宝，财富人生</b></a></h1>
+      <h1><a href="http://www.zhiying365365.com/"><strong class="none">智赢网</strong><em>365</em><b>以智慧赢取人生</b></a></h1>
     </div>
     <div class="nav">
       <ul>
@@ -36,19 +36,19 @@
 /beidan/bf.php">比分</a> <a href="<?php echo @ROOT_DOMAIN; ?>
 /beidan/sxds.php">上下单双</a></h2>
           </span></li>
-        <li><a href="http://www.shunjubao.xyz/ticket/show.html" target="_blank">晒单中心</a><i><img src="<?php echo @STATICS_BASE_URL; ?>
+        <li><a href="http://www.zhiying365365.com/ticket/show.html" target="_blank">晒单中心</a><i><img src="<?php echo @STATICS_BASE_URL; ?>
 /i/new.gif"></i></li>
-        <li><a href="http://www.shunjubao.xyz/ticket/dingzhi.php" target="_blank">跟单定制</a></li>
-        <li><a href="http://www.shunjubao.xyz/ticket/virtual_list.php" target="_blank">积分投注</a></li>
+        <li><a href="http://www.zhiying365365.com/ticket/dingzhi.php" target="_blank">跟单定制</a></li>
+        <li><a href="http://www.zhiying365365.com/ticket/virtual_list.php" target="_blank">积分投注</a></li>
 		<li><a href="<?php echo @ROOT_DOMAIN; ?>
 /football/hhad_list.php">赛果开奖</a></b><span><strong>赛果开奖</strong><em>&nbsp;</em>
-          <h2><a href="http://www.shunjubao.xyz/livescore/fb_match_result.php">竞彩足球</a> <a href="http://www.shunjubao.xyz/livescore/bk_match_result.php">竞彩篮球</a></h2>
+          <h2><a href="http://www.zhiying365365.com/livescore/fb_match_result.php">竞彩足球</a> <a href="http://www.zhiying365365.com/livescore/bk_match_result.php">竞彩篮球</a></h2>
           </span></li>
-        <li><a href="http://new.shunjubao.xyz/footballtj/">资讯推荐</a></b><span><strong>资讯推荐</strong><em>&nbsp;</em>
-          <h2><a href="http://new.shunjubao.xyz/footballtj/" target="_blank">足球推荐</a><a href="http://new.shunjubao.xyz/footballxw/" target="_blank">足球资讯</a><a href="http://new.shunjubao.xyz/NBAtj/" target="_blank">篮球推荐</a><a href="http://new.shunjubao.xyz/NBAxw/" target="_blank">篮球资讯</a><a href="http://new.shunjubao.xyz/touzhujiqiao/" target="_blank">投注技巧</a><a href="http://new.shunjubao.xyz/zhongchao/" target="_blank">论剑中超</a></h2>
+        <li><a href="http://news.zhiying365365.com/footballtj/">资讯推荐</a></b><span><strong>资讯推荐</strong><em>&nbsp;</em>
+          <h2><a href="http://news.zhiying365365.com/footballtj/" target="_blank">足球推荐</a><a href="http://news.zhiying365365.com/footballxw/" target="_blank">足球资讯</a><a href="http://news.zhiying365365.com/NBAtj/" target="_blank">篮球推荐</a><a href="http://news.zhiying365365.com/NBAxw/" target="_blank">篮球资讯</a><a href="http://news.zhiying365365.com/touzhujiqiao/" target="_blank">投注技巧</a><a href="http://news.zhiying365365.com/zhongchao/" target="_blank">论剑中超</a></h2>
           </span></li>
-
+        <li><a href="http://quan.zhiying365365.com/" target="_blank">圈子</a></li>
       </ul>
     </div>
   </div>
-</div>
+</div>
