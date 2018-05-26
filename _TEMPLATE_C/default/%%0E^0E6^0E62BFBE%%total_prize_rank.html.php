@@ -30,7 +30,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 </head>
 <body>
 <div class="paihangC">
-  <h1><b>中奖排行</b><span><a href="http://www.zhiying365365.com/ticket/paihang.php" target="_blank">总排行</a></span></h1>
+  <h1><b>中奖排行</b><span><a href="http://www.shunjubao.xyz/ticket/paihang.php" target="_blank">总排行</a></span></h1>
   <div class="paihang">
     <ul>
       <li class="first">排名</li>

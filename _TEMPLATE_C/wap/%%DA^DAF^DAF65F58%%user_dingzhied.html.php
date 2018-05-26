@@ -48,7 +48,7 @@ unset($_smarty_tpl_vars);
 /account/user_dingzhi.php">我的定制</a></td>
         <td><a href="<?php echo @ROOT_DOMAIN; ?>
 /ticket/dingzhi.php" style="color:#777;">我要定制</a></td>
-		<td><a href="http://www.zhiying365365.com/help/help_20.html" style="color:#777;">定制说明</a></td>
+		<td><a href="http://www.shunjubao.xyz/help/help_20.html" style="color:#777;">定制说明</a></td>
       </tr>
     </table>
   </div>

@@ -43,8 +43,8 @@ unset($_smarty_tpl_vars);
 <div class="NavphTab">
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td><a href="http://m.zhiying365365.com/livescore/fb_match_result.php" class="active">竞彩足球</a></td>
-      <td><a href="http://m.zhiying365365.com/livescore/bk_match_result.php">竞彩篮球</a></td>
+      <td><a href="http://m.shunjubao.xyz/livescore/fb_match_result.php" class="active">竞彩足球</a></td>
+      <td><a href="http://m.shunjubao.xyz/livescore/bk_match_result.php">竞彩篮球</a></td>
     </tr>
   </table>
 </div>

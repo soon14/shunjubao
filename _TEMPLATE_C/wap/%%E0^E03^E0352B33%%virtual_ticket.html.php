@@ -13,11 +13,11 @@ unset($_smarty_tpl_vars);
 <style>
 .touzhutips{margin:0 auto;background:#FFFFCC;font-size:12px; height:30px; line-height:30px; text-align:center; clear:both;}
 .touzhutips  strong{font-size:12px;font-weight:300;color:#dc0000;}
-table tr th{ height:30px;line-height:30px;font-weight:300;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;border-top:1px solid #e9e9e9;background:url(http://m.zhiying365365.com/www/statics/i/thBj.jpg) repeat-x;}
+table tr th{ height:30px;line-height:30px;font-weight:300;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;border-top:1px solid #e9e9e9;background:url(http://m.shunjubao.xyz/www/statics/i/thBj.jpg) repeat-x;}
 table tr td{ height:32px;line-height:32px;border-right:1px solid #e9e9e9;}
 .zhuangTai b{font-size:12px;font-weight:300;}
 .zhuangTai strong{color:#dc0000;}
-.zhuangTai strong span{background:url(http://m.zhiying365365.com/www/statics/i/bonus_redball.gif) no-repeat;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';display:inline-table;display:inline-block;zoom:1;*display:inline; width:23px; height:23px; line-height:23px;}
+.zhuangTai strong span{background:url(http://m.shunjubao.xyz/www/statics/i/bonus_redball.gif) no-repeat;text-align:center;color:#fff;font-size:12px;font-weight:300;font-family:'';display:inline-table;display:inline-block;zoom:1;*display:inline; width:23px; height:23px; line-height:23px;}
 </style>
 <body>
 <div class="center" style="font-size:12px;">

@@ -49,9 +49,9 @@ $(function() {
 <div class="NavphTab">
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td><a href="http://m.zhiying365365.com/account/user_score_tran.php">积分换彩金</a></td>
-      <td><a href="http://m.zhiying365365.com/account/user_gift_tran.php" class="active">彩金换积分</a></td>
-      <td><a href="http://m.zhiying365365.com/account/user_money_tran.php">余额换积分</a></td>
+      <td><a href="http://m.shunjubao.xyz/account/user_score_tran.php">积分换彩金</a></td>
+      <td><a href="http://m.shunjubao.xyz/account/user_gift_tran.php" class="active">彩金换积分</a></td>
+      <td><a href="http://m.shunjubao.xyz/account/user_money_tran.php">余额换积分</a></td>
     </tr>
   </table>
 </div>

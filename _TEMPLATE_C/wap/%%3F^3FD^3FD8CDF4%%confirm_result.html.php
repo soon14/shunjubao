@@ -7,14 +7,14 @@ unset($_smarty_tpl_vars);
  ?>
 <style>
 .Tipcenter{padding:20px 0 0 0; background:#fff;margin:5px;}
-.Tips{text-align:center;border-top:1px dashed #fff;height:24px;line-height:18px;color:#000;font-size:12px; background:url(http://www.zhiying365365.com/www/statics/i/wbg.gif) repeat-x;}
+.Tips{text-align:center;border-top:1px dashed #fff;height:24px;line-height:18px;color:#000;font-size:12px; background:url(http://www.shunjubao.xyz/www/statics/i/wbg.gif) repeat-x;}
 .systemtips{padding:20px 0 0 0;width:280px; margin:0 auto; text-align:cenetr;}
 .systemtips p{font-size:12px;font-family:'';line-height:32px;height:32px;}
-.systemtips p span{background:url(http://www.zhiying365365.com/www/statics/i/raster.jpg) no-repeat 0 -96px;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
-.systemtips p em{background:url(http://www.zhiying365365.com/www/statics/i/raster.jpg) no-repeat 61% 90%;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-style:normal;}
+.systemtips p span{background:url(http://www.shunjubao.xyz/www/statics/i/raster.jpg) no-repeat 0 -96px;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.systemtips p em{background:url(http://www.shunjubao.xyz/www/statics/i/raster.jpg) no-repeat 61% 90%;width:50px;display:inline-table;display:inline-block;zoom:1;*display:inline;font-style:normal;}
 .ohter{height:100px;}
 .ohter p{height:30px;line-height:30px;padding:28px 0 0 10px;}
-.ohter p span{background:url(http://www.zhiying365365.com/www/statics/i/showRight.png) no-repeat left bottom;width:16px;height:14px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
+.ohter p span{background:url(http://www.shunjubao.xyz/www/statics/i/showRight.png) no-repeat left bottom;width:16px;height:14px;display:inline-table;display:inline-block;zoom:1;*display:inline;}
 .ohter p em{ font-style:normal;position:relative;top:-2px; font-size:12px;}
 .ohter p a{text-decoration:none;color:#000;font-size:12px;padding:0 10px 0 5px;position:relative;top:-3px;}
 .ohter p a:hover{text-decoration:none;color:#dc0000;}
@@ -38,7 +38,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
 ">继续投注</a><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
-/account/user_center.php">用户中心</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+/account/user_center.php">用户中心</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--投注成功 end-->
@@ -52,7 +52,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--投注失败 end-->
@@ -64,7 +64,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--体育类型错误 end-->
@@ -77,7 +77,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--体育类型错误 end-->
@@ -89,7 +89,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--投注金额错误 end-->
@@ -101,7 +101,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--投注玩法错误 end-->
@@ -114,7 +114,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+">继续投注</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <!--投注其他错误 end-->
@@ -141,7 +141,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span> <a href="<?php echo @ROOT_WEBSITE; ?>
 /football/hafu_list.html">投注竞彩足球</a>| <a href="<?php echo @ROOT_WEBSITE; ?>
-/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--比赛已开赛 end-->
@@ -155,7 +155,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
 /football/hafu_list.html">投注竞彩足球</a>| <a href="<?php echo @ROOT_WEBSITE; ?>
-/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--比赛已截止 end-->
@@ -168,7 +168,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span> <a href="<?php echo @ROOT_DOMAIN; ?>
 /passport/login.php?from=<?php echo $this->_tpl_vars['from']; ?>
-">去登录</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+">去登录</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--比赛已截止 end-->
@@ -182,7 +182,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
 /football/hafu_list.html">投注竞彩足球</a>| <a href="<?php echo @ROOT_WEBSITE; ?>
-/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--比赛已截止 end-->
@@ -196,7 +196,7 @@ unset($_smarty_tpl_vars);
     <div class="ohter">
       <p><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
 /football/hafu_list.html">投注竞彩足球</a>| <a href="<?php echo @ROOT_WEBSITE; ?>
-/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.zhiying365365.com/">返回首页</a></p>
+/football/hdc_list.html">投注竞彩篮球</a><span></span><a href="http://m.shunjubao.xyz/">返回首页</a></p>
     </div>
   </div>
   <!--比赛已截止 end-->
@@ -209,7 +209,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
-/account/user_center.php?p=realinfo">去认证</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
+/account/user_center.php?p=realinfo">去认证</a><em>联系客服</em><a style="position:relative;top:6px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg" style=" position:relative;top:-4px;"></a></p>
     </div>
   </div>
   <?php endif; ?>

@@ -10,19 +10,19 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'truncate', 
 <meta content='telephone=no' name='format-detection' />
 <meta name="keywords" content="积分投注,CBA,CBA投注,中超投注,中超联赛,中国足球智赢网，智赢彩票"/>
 <meta name="description" content="积分投注，专为中国CBA、中超球迷提供！" />
-<link href="http://m.zhiying365365.com/www/statics/c/wap_header.css" type="text/css" rel="stylesheet" />
-<link href="http://m.zhiying365365.com/www/statics/c/wap_footer.css" type="text/css" rel="stylesheet" />
-<link type="text/css" rel="stylesheet" href="http://m.zhiying365365.com/www/statics/c/wap_Jf.css" >
-<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/jquery.js"></script>
-<script type="text/javascript" src="http://m.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
-<script language="javascript" src="http://m.zhiying365365.com/www/statics/j/common.js"></script>
+<link href="http://m.shunjubao.xyz/www/statics/c/wap_header.css" type="text/css" rel="stylesheet" />
+<link href="http://m.shunjubao.xyz/www/statics/c/wap_footer.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="http://m.shunjubao.xyz/www/statics/c/wap_Jf.css" >
+<script type="text/javascript" src="http://m.shunjubao.xyz/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://m.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
+<script language="javascript" src="http://m.shunjubao.xyz/www/statics/j/common.js"></script>
 <script language="javascript">
-var Domain = 'http://m.zhiying365365.com';
-var ZY_CDN = 'http://m.zhiying365365.com/www/statics';
+var Domain = 'http://m.shunjubao.xyz';
+var ZY_CDN = 'http://m.shunjubao.xyz/www/statics';
 var TMJF = jQuery.noConflict(true);
 TMJF.conf = {
-    	cdn_i: "http://m.zhiying365365.com/www/statics/i"
-    	, domain: "http://m.zhiying365365.com"
+    	cdn_i: "http://m.shunjubao.xyz/www/statics/i"
+    	, domain: "http://m.shunjubao.xyz"
 };
 </script>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;

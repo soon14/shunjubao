@@ -52,7 +52,7 @@ $(document).ready(function(){
 /passport/login.php\">登录</a></li>"+        
 	        "<li class=\"reg\"><a href=\"<?php echo @ROOT_DOMAIN; ?>
 /passport/reg.php\">注册</a></li>"+
-			"<li class=\"hezuo\">&nbsp;&nbsp;合作登录&nbsp<a href=\"https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101179991&redirect_uri=http%3A%2F%2Fwww.zhiying365365.com%2Fconnect%2Fqq_connect.php&state=d8fde422ac693070830df92d8b61bf11&scope=get_user_info,add_share,add_weibo\"><img src=\"http://www.zhiying365365.com/www/statics/i/QQlogin.gif\"></a><a href=\"https://mapi.alipay.com/gateway.do?_input_charset=utf-8&partner=2088311949386932&return_url=http://www.zhiying365365.com/connect/alipay_connect.php&service=alipay.auth.authorize&target_service=user.auth.quick.login&sign=eec67941b9a9e81899e345ed53b2873b&sign_type=MD5\"><img src=\"http://www.zhiying365365.com/www/statics/i/alipaylogin.gif\"></a><a href=\"https://open.weixin.qq.com/connect/qrconnect?appid=wxc1b1ad8efd2af8eb&redirect_uri=http%3A%2F%2Fwww.zhiying365365.com%2Fconnect%2Fweixin_connect.php&response_type=code&scope=snsapi_login&state=94819a2f2176dd83da86bd10c1db699d#wechat_redirect\"><img src=\"http://www.zhiying365365.com/www/statics/i/weixin2.gif\"></a><a href=\"https://api.weibo.com/oauth2/authorize?client_id=3430318831&redirect_uri=http%3A%2F%2Fwww.zhiying365365.com%2Fconnect%2Fweibo_connect.php&response_type=code&display=default\"><img src=\"http://www.zhiying365365.com/www/statics/i/weibologin.gif\"></a>"+
+			"<li class=\"hezuo\">&nbsp;&nbsp;合作登录&nbsp<a href=\"https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101179991&redirect_uri=http%3A%2F%2Fwww.shunjubao.xyz%2Fconnect%2Fqq_connect.php&state=d8fde422ac693070830df92d8b61bf11&scope=get_user_info,add_share,add_weibo\"><img src=\"http://www.shunjubao.xyz/www/statics/i/QQlogin.gif\"></a><a href=\"https://mapi.alipay.com/gateway.do?_input_charset=utf-8&partner=2088311949386932&return_url=http://www.shunjubao.xyz/connect/alipay_connect.php&service=alipay.auth.authorize&target_service=user.auth.quick.login&sign=eec67941b9a9e81899e345ed53b2873b&sign_type=MD5\"><img src=\"http://www.shunjubao.xyz/www/statics/i/alipaylogin.gif\"></a><a href=\"https://open.weixin.qq.com/connect/qrconnect?appid=wxc1b1ad8efd2af8eb&redirect_uri=http%3A%2F%2Fwww.shunjubao.xyz%2Fconnect%2Fweixin_connect.php&response_type=code&scope=snsapi_login&state=94819a2f2176dd83da86bd10c1db699d#wechat_redirect\"><img src=\"http://www.shunjubao.xyz/www/statics/i/weixin2.gif\"></a><a href=\"https://api.weibo.com/oauth2/authorize?client_id=3430318831&redirect_uri=http%3A%2F%2Fwww.shunjubao.xyz%2Fconnect%2Fweibo_connect.php&response_type=code&display=default\"><img src=\"http://www.shunjubao.xyz/www/statics/i/weibologin.gif\"></a>"+
 	        "</li>";
 	}
 	$("#topCenter").append(welcome_str);
@@ -63,14 +63,14 @@ $(document).ready(function(){
   <div class="topNav">
     <div class="navC">
       <ul>
-        <li class="Navlist first" style="display:none;"><span><a href="http://m.zhiying365365.com/" target="_blank">手机版<i>&nbsp;</i></a></span>
+        <li class="Navlist first" style="display:none;"><span><a href="http://m.shunjubao.xyz/" target="_blank">手机版<i>&nbsp;</i></a></span>
           <div class="Navlist">
             <div class="Navmobile">
               <div class="kl"></div>
               <dl>
                 <dt><b>智赢网安卓APP</b><img src="<?php echo @STATICS_BASE_URL; ?>
 /i/android.png">
-                  <p><a href="http://www.zhiying365365.com/upload/zhiying365_v0.1.apk" target="_blank">点击下载</a></p>
+                  <p><a href="http://www.shunjubao.xyz/upload/zhiying365_v0.1.apk" target="_blank">点击下载</a></p>
                 </dt>
                 <dd>
                   <p>IOS即将上架敬请期待!</p>
@@ -83,72 +83,72 @@ $(document).ready(function(){
       <ul id="topCenter">
       </ul>
       <ol>
-        <li class="Navlist"><em><img src="http://www.zhiying365365.com/www/statics/i/weixin.gif"></em>
+        <li class="Navlist"><em><img src="http://www.shunjubao.xyz/www/statics/i/weixin.gif"></em>
           <div class="Navlist">
-            <div class="erweima"> <img src="http://www.zhiying365365.com/www/statics/i/tuijianw.jpg">
-              <p><img src="http://www.zhiying365365.com/www/statics/i/dalishuishou.jpg"></p>
+            <div class="erweima"> <img src="http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg">
+              <p><img src="http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg"></p>
             </div>
           </div>
         </li>
         <li class="tel">&nbsp;&nbsp;&nbsp;&nbsp;7*24TH&nbsp;010-64344882&nbsp;&nbsp;</li>
         <li><a onclick="AddFavorite(window.location,document.title)">加入收藏</a><span>|</span></li>
         <li><a href="/help" target="_blank">帮助中心</a><span>|</span></li>
-        <li><a href="http://www.zhiying365365.com/help/contact.html" target="_blank">客服中心</a><span>|</span></li>
-		<li><a href="http://www.zhiying365365.com/ticket/paihang.php" target="_blank">中奖排行</a><span>|</span></li>
+        <li><a href="http://www.shunjubao.xyz/help/contact.html" target="_blank">客服中心</a><span>|</span></li>
+		<li><a href="http://www.shunjubao.xyz/ticket/paihang.php" target="_blank">中奖排行</a><span>|</span></li>
         <li class="Navlist account"><span> <a href='javascript:void(0);'>网站导航<i>&nbsp;</i></a></span>
           <div class="Navlist">
             <div class="map">
               <div class="k4">&nbsp;</div>
               <dl>
-                <dt><b><a href="http://www.zhiying365365.com/football/hhad_list.php" target="_blank">竞彩足球</a></b></dt>
+                <dt><b><a href="http://www.shunjubao.xyz/football/hhad_list.php" target="_blank">竞彩足球</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/football/hhad_list.php" target="_blank">胜平负/让球</a> </p>
-                  <p><a href="http://www.zhiying365365.com/football/fb_crosspool.php" target="_blank">混合过关</a> </p>
-                  <p><a href="http://www.zhiying365365.com/football/ttg_list.php" target="_blank">总进球</a> </p>
-                  <p><a href="http://www.zhiying365365.com/football/hafu_list.php" target="_blank">半全场</a> </p>
-                  <p><a href="http://www.zhiying365365.com/football/crs_list.php" target="_blank">比分</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/football/hhad_list.php" target="_blank">胜平负/让球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/football/fb_crosspool.php" target="_blank">混合过关</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/football/ttg_list.php" target="_blank">总进球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/football/hafu_list.php" target="_blank">半全场</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/football/crs_list.php" target="_blank">比分</a> </p>
                 </dd>
-                <dt><b><a href="http://www.zhiying365365.com/basketball/hdc_list.php" target="_blank">竞彩篮球</a></b></dt>
+                <dt><b><a href="http://www.shunjubao.xyz/basketball/hdc_list.php" target="_blank">竞彩篮球</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/basketball/hdc_list.php" target="_blank">胜负\让分胜负</a> </p>
-                  <p><a href="http://www.zhiying365365.com/basketball/bk_crosspool.php" target="_blank">混合过关</a> </p>
-                  <p><a href="http://www.zhiying365365.com/basketball/wnm_list.php" target="_blank">胜分差</a> </p>
-                  <p><a href="http://www.zhiying365365.com/basketball/hilo_list.php" target="_blank">大小分</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/basketball/hdc_list.php" target="_blank">胜负\让分胜负</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/basketball/bk_crosspool.php" target="_blank">混合过关</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/basketball/wnm_list.php" target="_blank">胜分差</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/basketball/hilo_list.php" target="_blank">大小分</a> </p>
                 </dd>
-                <!--                <dt><b><a href="http://www.zhiying365365.com/beidan/spf.php" target="_blank">北京单场</a></b></dt>
+                <!--                <dt><b><a href="http://www.shunjubao.xyz/beidan/spf.php" target="_blank">北京单场</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/beidan/spf.php" target="_blank">胜平负</a> </p>
-                  <p><a href="http://www.zhiying365365.com/beidan/sf.php" target="_blank">胜负过关</a> </p>
-                  <p><a href="http://www.zhiying365365.com/beidan/jqs.php" target="_blank">进球数</a> </p>
-                  <p><a href="http://www.zhiying365365.com/beidan/bqc.php" target="_blank">半全场</a> </p>
-                  <p><a href="http://www.zhiying365365.com/beidan/bf.php" target="_blank">比分</a> </p>
-                  <p><a href="http://www.zhiying365365.com/beidan/sxds.php" target="_blank">上下单双</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/spf.php" target="_blank">胜平负</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/sf.php" target="_blank">胜负过关</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/jqs.php" target="_blank">进球数</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/bqc.php" target="_blank">半全场</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/bf.php" target="_blank">比分</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/beidan/sxds.php" target="_blank">上下单双</a> </p>
                 </dd>-->
-                <dt><b><a href="http://news.zhiying365365.com/footballtj/" target="_blank">资讯中心</a></b></dt>
+                <dt><b><a href="http://news.shunjubao.xyz/footballtj/" target="_blank">资讯中心</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/basketball/hdc_list.php" target="_blank">足球推荐</a> </p>
-                  <p><a href="http://news.zhiying365365.com/NBAtj/" target="_blank">篮球推荐</a> </p>
-                  <p><a href="http://news.zhiying365365.com/footballxw/" target="_blank">足球新闻</a> </p>
-                  <p><a href="http://news.zhiying365365.com/NBAxw/" target="_blank">篮球新闻</a> </p>
-                  <p><a href="http://news.zhiying365365.com/touzhujiqiao/" target="_blank">投注技巧</a> </p>
-                  <p><a href="http://news.zhiying365365.com/zhongchao/" target="_blank">论剑中超</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/basketball/hdc_list.php" target="_blank">足球推荐</a> </p>
+                  <p><a href="http://news.shunjubao.xyz/NBAtj/" target="_blank">篮球推荐</a> </p>
+                  <p><a href="http://news.shunjubao.xyz/footballxw/" target="_blank">足球新闻</a> </p>
+                  <p><a href="http://news.shunjubao.xyz/NBAxw/" target="_blank">篮球新闻</a> </p>
+                  <p><a href="http://news.shunjubao.xyz/touzhujiqiao/" target="_blank">投注技巧</a> </p>
+                  <p><a href="http://news.shunjubao.xyz/zhongchao/" target="_blank">论剑中超</a> </p>
                 </dd>
-                <dt><b><a href="http://www.zhiying365365.com/livescore/fb_livescore.php" target="_blank">即时比分</a></b></dt>
+                <dt><b><a href="http://www.shunjubao.xyz/livescore/fb_livescore.php" target="_blank">即时比分</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/livescore/fb_livescore.php" target="_blank">竞彩足球</a> </p>
-                  <p><a href="http://www.zhiying365365.com/livescore/bk_livescore.php">竞彩篮球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/livescore/fb_livescore.php" target="_blank">竞彩足球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/livescore/bk_livescore.php">竞彩篮球</a> </p>
                 </dd>
-                <dt><b><a href="http://news.zhiying365365.com/footballtj/" target="_blank">赛果开奖</a></b></dt>
+                <dt><b><a href="http://news.shunjubao.xyz/footballtj/" target="_blank">赛果开奖</a></b></dt>
                 <dd>
-                  <p><a href="http://www.zhiying365365.com/livescore/fb_match_result.php" target="_blank">竞彩足球</a> </p>
-                  <p><a href="http://www.zhiying365365.com/livescore/bk_match_result.php">竞彩篮球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/livescore/fb_match_result.php" target="_blank">竞彩足球</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/livescore/bk_match_result.php">竞彩篮球</a> </p>
                 </dd>
                 <dd class="show">
-                  <p><a href="http://www.zhiying365365.com/ticket/show.php" target="_blank">晒单中心</a> </p>
-				  <p><a href="http://www.zhiying365365.com/ticket/dingzhi.php" target="_blank">跟单定制</a> </p>
-                  <p><a href="http://www.zhiying365365.com/ticket/paihang.php" target="_blank">中奖排行</a> </p>
-                  <p><a href="http://www.zhiying365365.com/ticket/virtual_list.php" target="_blank">积分投注</a> </p>
-                  <p><a href="http://www.zhiying365365.com/help/" target="_blank">帮助中心</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/ticket/show.php" target="_blank">晒单中心</a> </p>
+				  <p><a href="http://www.shunjubao.xyz/ticket/dingzhi.php" target="_blank">跟单定制</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/ticket/paihang.php" target="_blank">中奖排行</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/ticket/virtual_list.php" target="_blank">积分投注</a> </p>
+                  <p><a href="http://www.shunjubao.xyz/help/" target="_blank">帮助中心</a> </p>
                 </dd>
               </dl>
             </div>
@@ -170,4 +170,4 @@ $(function(){
 				$(this).removeClass("topmenu_hover");theMenu.stop().animate({height:0},5,function(){
 					$(this).css({display:"none"});});}
 		);});}
-</script>
+</script>

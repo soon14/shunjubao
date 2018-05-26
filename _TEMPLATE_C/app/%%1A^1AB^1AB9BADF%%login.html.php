@@ -53,7 +53,7 @@ unset($_smarty_tpl_vars);
 ">支付宝登录</a></li>
         <li class="qq"><a href="<?php echo $this->_tpl_vars['connect_urls'][2]; ?>
 ">QQ登录</a></li>
-        <li class="weixin"><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc1b1ad8efd2af8eb&redirect_uri=http%3A%2F%2Fwww.zhiying365365.com%2Fconnect%2Fweixin_connect.php&response_type=code&scope=snsapi_login&state=79ec3e6d6a0a3b4168f79dc88ce57525#wechat_redirect">微信登录</a></li>
+        <li class="weixin"><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc1b1ad8efd2af8eb&redirect_uri=http%3A%2F%2Fwww.shunjubao.xyz%2Fconnect%2Fweixin_connect.php&response_type=code&scope=snsapi_login&state=79ec3e6d6a0a3b4168f79dc88ce57525#wechat_redirect">微信登录</a></li>
         <li class="weibo"><a href="<?php echo $this->_tpl_vars['connect_urls'][4]; ?>
 ">新浪微博登录</a></li>
       </ul>

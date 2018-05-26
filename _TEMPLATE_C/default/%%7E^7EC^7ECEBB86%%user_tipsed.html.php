@@ -5,9 +5,9 @@
 <meta name="keywords" content="智赢竞彩,智赢网,智赢打赏管理管理" />
 <meta name="description" content="账户明细，打赏管理-收到的打赏。" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
-<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/user.css" >
+<link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/user.css" >
 <!--用户中心我的定制 start-->
 
 <div>

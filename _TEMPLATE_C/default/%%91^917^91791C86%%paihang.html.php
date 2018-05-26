@@ -17,7 +17,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 " type="text/css" rel="stylesheet" />
 <link href="<?php echo ((is_array($_tmp='footer.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 " type="text/css" rel="stylesheet" />
-<link rel="shortcut icon" type="image/ico" href="http://www.zhiying365365.com/www/statics/i/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="http://www.shunjubao.xyz/www/statics/i/favicon.ico">
 <script type="text/javascript" src="<?php echo ((is_array($_tmp='jquery-1.9.1.min.js')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 "></script>
 </head>
@@ -81,9 +81,9 @@ toubang dl dd p{ line-height:24px; height:24px;}
       <dl>
         <dd class="first"><span style="position:relative;left:-15px;">排名</span></dd>
         <dd class="three">姓名</dd>
-        <dd class="four">升降<a class="tooltips" href="#tooltips"><img src="http://www.zhiying365365.com/www/statics/i/question.png"><span>用户排名的升降规则为开奖之后，依照用户的中奖情况而做出的升降。</span></a></dd>
+        <dd class="four">升降<a class="tooltips" href="#tooltips"><img src="http://www.shunjubao.xyz/www/statics/i/question.png"><span>用户排名的升降规则为开奖之后，依照用户的中奖情况而做出的升降。</span></a></dd>
         <dd class="eight">注册日期</dd>
-        <dd class="five">积分<a class="tooltips" href="#tooltips"><img src="http://www.zhiying365365.com/www/statics/i/question.png"><span>各位会员，积分是智赢网回馈用户的一种方式，积分可用于虚拟投注中超或CBA，并可以兑换彩金！</span></a></dd>
+        <dd class="five">积分<a class="tooltips" href="#tooltips"><img src="http://www.shunjubao.xyz/www/statics/i/question.png"><span>各位会员，积分是智赢网回馈用户的一种方式，积分可用于虚拟投注中超或CBA，并可以兑换彩金！</span></a></dd>
         <dd class="six" style="text-align:right;">累积中奖</dd>
       </dl>
       <div class="clear"></div>

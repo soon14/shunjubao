@@ -161,7 +161,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div class="2015top" style="height:60px; background:#BC1E1F;">
   <div style="width:1000px; margin:0 auto; position:relative; height:120px; text-align:left;">
-    <div><a href="http://www.zhiying365365.com/"><img src="http://www.zhiying365365.com/www/statics/i/logo.jpg"></a></div>
+    <div><a href="http://www.shunjubao.xyz/"><img src="http://www.shunjubao.xyz/www/statics/i/logo.jpg"></a></div>
     <div class="daiyu">
       <h1>积分投注，专为中国CBA、中超球迷提供！</h1>
     </div>
@@ -178,9 +178,9 @@ unset($_smarty_tpl_vars);
 <div class="jflocation">
   <div class="jflc_center">
     <ul>
-      <li><a href="http://www.zhiying365365.com/ticket/virtual_list.php" class="active">积分投注</a></li>
-      <li><a href="http://zhiying365365.com/Activities/zhongchao/tzgz.html">投注规则</a></li>
-      <li><a href="http://zhiying365365.com/Activities/zhongchao/jfgz.html">积分规则</a></li>
+      <li><a href="http://www.shunjubao.xyz/ticket/virtual_list.php" class="active">积分投注</a></li>
+      <li><a href="http://shunjubao.xyz/Activities/zhongchao/tzgz.html">投注规则</a></li>
+      <li><a href="http://shunjubao.xyz/Activities/zhongchao/jfgz.html">积分规则</a></li>
     </ul>
     <div class="zhongjiang"><b>最新中奖用户：</b>
       <div id="scrollDiv_keleyi_com" class="scrollDiv"> </div>
@@ -300,4 +300,4 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?></div>
 </body>
-</html>
+</html>

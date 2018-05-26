@@ -146,7 +146,7 @@ unset($_smarty_tpl_vars);
   <dl>
     <dt style="border-bottom:2px solid red; position:relative;top:0px;"><a href="<?php echo @ROOT_DOMAIN; ?>
 /account/user_account_log.php">跟单定制</a></dt>
-    <dd><a href="http://www.zhiying365365.com/help/help_20.html" style="color:#999;">定制说明</a></dd>
+    <dd><a href="http://www.shunjubao.xyz/help/help_20.html" style="color:#999;">定制说明</a></dd>
   </dl>
 </div>
 <div class="Dinzhism">
@@ -317,7 +317,7 @@ if(u_id==""){
 	success: function(data) {
 		if(data.status == "success"){
 		
-			$("#showtips").html('恭喜您已成功定制，查看<a href="http://m.zhiying365365.com/account/user_dingzhi.php" >我的定制</a');
+			$("#showtips").html('恭喜您已成功定制，查看<a href="http://m.shunjubao.xyz/account/user_dingzhi.php" >我的定制</a');
 			document.getElementById('light1').style.display='none';
 			document.getElementById('light2').style.display='block';
 			document.getElementById ('fade').style.display='block';	

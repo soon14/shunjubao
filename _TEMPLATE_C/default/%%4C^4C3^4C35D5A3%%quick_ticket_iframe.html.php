@@ -143,7 +143,7 @@ $(document).ready(function() {
 .xuanxiang{ display:block; margin:0 5px; height:48px; text-align:center;}
 .xuanxiang strong{ display:block; text-align:center;color:#666; font-size:12px; font-weight:300; font-family:'宋体';color:#555;}
 .xuanxiang a{ display:block;border:1px solid #ccc;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; font-weight:900; font-size:18px; font-family:'微软雅黑'; line-height:24px;color:#000;}
-.xuanxiang a.active{background: url(http://www.zhiying365365.com/www/statics/i/T1_pgo.gif) no-repeat right bottom;border:1px solid #E53C3F;}
+.xuanxiang a.active{background: url(http://www.shunjubao.xyz/www/statics/i/T1_pgo.gif) no-repeat right bottom;border:1px solid #E53C3F;}
 .touzhudanguan{ font-size:12px;margin:0 auto;display:inline-table;display:inline-block;zoom:1;*display:inline; text-align:left;}
 .touzhudanguan ul{display:inline-table;display:inline-block;zoom:1;*display:inline; position:relative;left:-30px; width:100%;}
 .touzhudanguan ul li{display:inline-table;display:inline-block;zoom:1;*display:inline; vertical-align:text-top; position:relative;}

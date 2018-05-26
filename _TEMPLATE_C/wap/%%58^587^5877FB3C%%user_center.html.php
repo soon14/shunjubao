@@ -87,7 +87,7 @@ TMJF(function($) {
         <td><a href="<?php echo @ROOT_DOMAIN; ?>
 /account/user_pms.php">站内<br/>
           消息</a></td>
-        <td><a href="http://zhiying365365.com/account.html">账户<br/>
+        <td><a href="http://shunjubao.xyz/account.html">账户<br/>
           明细</a></td>
         <td><a href="<?php echo @ROOT_DOMAIN; ?>
 /account/user_score_tran.php">积分<br/>
@@ -124,4 +124,4 @@ TMJF(function($) {
 $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

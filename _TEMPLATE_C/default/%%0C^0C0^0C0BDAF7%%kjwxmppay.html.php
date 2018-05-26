@@ -6,9 +6,9 @@
 <meta name="keywords" content="智赢网充值中心-微信支付！" />
 <meta name="description" content="智赢网充值中心-微信支付！。" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link href="http://www.zhiying365365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
-<link href="http://www.zhiying365365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
+<link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
+<link href="http://www.shunjubao.xyz/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery.js"></script>
 </head>
 <body>
 <div class="head">
@@ -23,7 +23,7 @@ body{ background:#f9f9f9;}
 .payname ul li b{color:#dc0000;font-size:20px;font-weight:900;}
 .payname ul li strong{color:#444;font-size:12px;font-weight:300;}
 .payname ul li.cc{ position:absolute;right:0;top:65px;color:#dc0000;font-size:30px;}
-.mppay{width:1000px;margin:0 auto 30px auto;text-align:left;border-bottom:1px solid #ccc;min-height:350px;background:#fff url(http://www.zhiying365365.com/www/statics/i/saoyisao.jpg) no-repeat 650px 0;}
+.mppay{width:1000px;margin:0 auto 30px auto;text-align:left;border-bottom:1px solid #ccc;min-height:350px;background:#fff url(http://www.shunjubao.xyz/www/statics/i/saoyisao.jpg) no-repeat 650px 0;}
 .mppaycenter{ text-align:center; padding:48px 0 0 0; position:relative;left:-30px;}
 .mppaycenter p{ padding:10px 0 0 0;}
 .mpbottips{ padding:30px 0;color:#999;text-align:center;}
@@ -60,7 +60,7 @@ iframe img{ width:250px; height:250px;}
       <p>
         <a style="font-size: 25px;color: red;" href="/account/user_center.php?p=basic">扫码支付完成后请点击这里<i>&nbsp;</i></a>
       </p>
-      <div class="mpbottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.zhiying365365.com/www/statics/i/ServicesQ.jpg"></a></div>
+      <div class="mpbottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></div>
     </div>
     <!---->
   </div>
@@ -103,4 +103,4 @@ var orderid = '<?php echo $this->_tpl_vars['out_trade_no']; ?>
 $this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

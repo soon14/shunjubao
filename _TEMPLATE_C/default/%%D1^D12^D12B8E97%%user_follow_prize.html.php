@@ -98,7 +98,7 @@ if ($this->_foreach['item']['total'] > 0):
         <tr>
           <td><?php echo $this->_tpl_vars['item']['u_name']; ?>
 </td>
-          <td align="center" style="color:#999;"><a target="_blank" href="http://www.zhiying365365.com/account/ticket/<?php echo $this->_tpl_vars['item']['partent_id']; ?>
+          <td align="center" style="color:#999;"><a target="_blank" href="http://www.shunjubao.xyz/account/ticket/<?php echo $this->_tpl_vars['item']['partent_id']; ?>
 .html"><?php echo $this->_tpl_vars['item']['partent_id']; ?>
 </a></td>
           <td align="center" style="color:#999;"><?php echo $this->_tpl_vars['item']['ticket_id']; ?>

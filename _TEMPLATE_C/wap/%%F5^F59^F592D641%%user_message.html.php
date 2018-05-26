@@ -138,7 +138,7 @@ $(document).ready(function() {//vendor script
 <!-- Content -->
 <div class="wapxtags">
   <ul>
-    <li class="active"><a href="http://m.zhiying365365.com/account/user_pms.php" >留言智赢</a> </li>
+    <li class="active"><a href="http://m.shunjubao.xyz/account/user_pms.php" >留言智赢</a> </li>
   </ul>
   <div class="clear"></div>
 </div>
@@ -333,4 +333,4 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 <!--footer end-->
-</body>
+</body>

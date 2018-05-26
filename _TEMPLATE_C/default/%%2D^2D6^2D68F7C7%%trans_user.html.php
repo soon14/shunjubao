@@ -76,7 +76,7 @@ TMJF(function($) {
 </div>
 <div class="loginC">
   <div class="loginCleft">
-    <h1 style="font-size:20px; font-family:'微软雅黑';font-weight:300;height:70px;line-height:20px;padding:0 0 0 20px;"><img src="http://www.zhiying365365.com/www/statics/i/scrollTip.gif" style=" position:relative;top:4px;">&nbsp;&nbsp;您正在使用<b style="color:#dc0000;font-size:20px;">“<?php echo $this->_tpl_vars['typeDesc'][$this->_tpl_vars['connect_info']['type']]['desc']; ?>
+    <h1 style="font-size:20px; font-family:'微软雅黑';font-weight:300;height:70px;line-height:20px;padding:0 0 0 20px;"><img src="http://www.shunjubao.xyz/www/statics/i/scrollTip.gif" style=" position:relative;top:4px;">&nbsp;&nbsp;您正在使用<b style="color:#dc0000;font-size:20px;">“<?php echo $this->_tpl_vars['typeDesc'][$this->_tpl_vars['connect_info']['type']]['desc']; ?>
 帐号”</b>登录智赢网！</h1>
     <?php if ($this->_tpl_vars['same_user']): ?>
     <div class="error"> 您的用户名在智赢网已经被注册过！</div>
@@ -129,4 +129,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_i
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--页面底部-->
+<!--页面底部-->

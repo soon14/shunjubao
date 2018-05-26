@@ -70,7 +70,6 @@ class Template extends Smarty
 		$this->template_dir = getCustomConstants('TEMPLATE_PATH');
 		$this->compile_dir = getCustomConstants('COMPILER_PATH');
 		$this->tpl_type = getCustomConstants('TEMPLATE_TYPE');
-		var_dump($this);
 		$this->assign('CFG', $CFG);
 		$this->assign('YOKA', $YOKA);
 		$this->assign('TEMPLATE', $TEMPLATE);

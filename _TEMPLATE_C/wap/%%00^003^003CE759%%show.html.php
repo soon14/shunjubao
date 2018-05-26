@@ -129,7 +129,7 @@ unset($_smarty_tpl_vars);
 </div>
 <div class="gendanCenter">
   <div style=" height:80px;">
-    <div style="background:url(http://www.zhiying365365.com/www/statics/i/64.png) no-repeat scroll transparent;background-size:100% 100%;height:100%;"><a href="https://mp.weixin.qq.com/s/PzoAsxEnJeGNDy_uZL4j1w">
+    <div style="background:url(http://www.shunjubao.xyz/www/statics/i/64.png) no-repeat scroll transparent;background-size:100% 100%;height:100%;"><a href="https://mp.weixin.qq.com/s/PzoAsxEnJeGNDy_uZL4j1w">
       <div style=" display:block; width:100%; height:100%;">&nbsp;</div>
       </a></div>
   </div>

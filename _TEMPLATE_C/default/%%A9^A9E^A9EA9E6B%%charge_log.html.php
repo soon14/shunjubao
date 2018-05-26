@@ -5,7 +5,7 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "../admin/header.html"
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
 <body>
 <script type="text/javascript">
 TMJF(function($) {

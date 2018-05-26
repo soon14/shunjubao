@@ -8,12 +8,12 @@
 <meta name="description" content="竞彩篮球赛果派奖，智赢网智赢竞彩智赢彩票数据中心" />
 </head>
 <body>
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/header.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/bifen.css" />
-<link type="text/css" rel="stylesheet" href="http://www.zhiying365365.com/www/statics/c/footer.css" />
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script>
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery-1.9.1.min.js"></script>
-<script src="http://www.zhiying365365.com/www/statics/j/float.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/bifen.css" />
+<link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/footer.css" />
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery.js"></script>
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery-1.9.1.min.js"></script>
+<script src="http://www.shunjubao.xyz/www/statics/j/float.js" type="text/javascript"></script>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../default/top.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -141,7 +141,7 @@ if ($this->_foreach['name']['total'] > 0):
         </table>
       </div>
     </div>
-    <div class="gonggao">声明：即时比分有待核实，请以【赛果开奖】→内容为准！暂停、取消、推迟：因场地或天气等原因比赛被迫暂停、取消或推迟开赛时间。详情请查看<a href="http://news.zhiying365365.com/saishi/index.php">销售公告</a>。</div>
+    <div class="gonggao">声明：即时比分有待核实，请以【赛果开奖】→内容为准！暂停、取消、推迟：因场地或天气等原因比赛被迫暂停、取消或推迟开赛时间。详情请查看<a href="http://news.shunjubao.xyz/saishi/index.php">销售公告</a>。</div>
   </div>
 </div>
 </div>
@@ -155,4 +155,4 @@ unset($_smarty_tpl_vars);
  ?>
 <!--智赢页面底部 end-->
 </body>
-</html>
+</html>

@@ -193,7 +193,7 @@ if ($this->_foreach['ticket']['total'] > 0):
 ">已晒</a></div></td>
           <?php else: ?>
           <td align="center"><div class="caozuo" style=" padding:9px 0 0 0;"><a href="javascript::void(0);" class="add_show_ticket" userTicketId="<?php echo $this->_tpl_vars['userTicket']['id']; ?>
-"><img src="http://www.zhiying365365.com/www/statics/i/shai.gif"></a></div></td>
+"><img src="http://www.shunjubao.xyz/www/statics/i/shai.gif"></a></div></td>
           <?php endif; ?>
           
           <?php endif; ?> </tr>

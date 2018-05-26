@@ -12,7 +12,7 @@ unset($_smarty_tpl_vars);
 <body style=" background:#f9f9f9;">
 <script language="javascript" src="<?php echo ((is_array($_tmp='payment.js')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 "></script> 
-<script type="text/javascript" src="http://www.zhiying365365.com/www/statics/j/jquery.js"></script> 
+<script type="text/javascript" src="http://www.shunjubao.xyz/www/statics/j/jquery.js"></script> 
 <script type="text/javascript">
 TMJF(function($) {
 });

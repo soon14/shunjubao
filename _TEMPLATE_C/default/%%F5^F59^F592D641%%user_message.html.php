@@ -140,7 +140,7 @@ $(document).ready(function() {//vendor script
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.zhiying365365.com/"><strong class="none">智赢网</strong><b style="top:-1px;left:100px;">留言智赢</b></a></h1>
+      <h1><a href="http://www.shunjubao.xyz/"><strong class="none">智赢网</strong><b style="top:-1px;left:100px;">留言智赢</b></a></h1>
     </div>
   </div>
 </div>
@@ -226,4 +226,4 @@ $("#backMarquee").html(id+"::::::::::::::::::::"+con);
 " ></script>
 </div>
 <!--footer end-->
-</body>
+</body>

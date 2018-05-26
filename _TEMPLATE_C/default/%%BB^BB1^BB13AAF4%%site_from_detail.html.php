@@ -42,7 +42,7 @@ TMJF(function($) {
 ">
           <input type="submit" name="" value="查询">
         </li>
-        <li style="padding:20px 0;">外站链接格式：1、全部链接=>http://www.zhiying365365.com/sites?ZYsiteFrom=xxx; 2、外站参数=>xxx</li>
+        <li style="padding:20px 0;">外站链接格式：1、全部链接=>http://www.shunjubao.xyz/sites?ZYsiteFrom=xxx; 2、外站参数=>xxx</li>
       </ul>
       <div class="clear"></div>
     </div>

@@ -102,7 +102,7 @@ TMJF(function($) {
           <p><a href="<?php echo @ROOT_DOMAIN; ?>
 /account/user_payment.php" target="rightFrame" >绑定支付宝</a></p>
           <p><a href="<?php echo @ROOT_DOMAIN; ?>
-/account/user_site_from.php" target="rightFrame" >我要推广</a><img src="http://www.zhiying365365.com/www/statics/i/new.gif"></p>
+/account/user_site_from.php" target="rightFrame" >我要推广</a><img src="http://www.shunjubao.xyz/www/statics/i/new.gif"></p>
         </dd>
       </dl>
       <dl>
@@ -177,16 +177,16 @@ TMJF(function($) {
     <p><a href="/about/xieyi.html" target="_blank">网站协议</a></p>
   </div>
   <div class="FooterOhter">
-    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：010-64344882&nbsp;&nbsp;&nbsp;<a href="http://www.zhiying365365.com/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
+    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：010-64344882&nbsp;&nbsp;&nbsp;<a href="http://www.shunjubao.xyz/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
   </div>
   <div class="FootPic">
     <ul>
-      <li><a href="http://www.pinpaibao.com.cn/intro/index/" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic2.jpg"/></a></li>
-      <li><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic1.jpg"/></a></li>
-      <li><a href="http://www.315online.com.cn/" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic3.jpg"/></a></li>
-      <li><a href="http://www.mps.gov.cn/n16/index.html?_v=1438535553945" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic4.jpg"/></a></li>
-      <li><a href="http://www.itrust.org.cn/" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic5.jpg"/></a></li>
-      <li><a href="http://www.bj.cyberpolice.cn/index.jsp" target="_blank"><img src="http://www.zhiying365365.com/www/statics/i/FootPic6.jpg"/></a></li>
+      <li><a href="http://www.pinpaibao.com.cn/intro/index/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic2.jpg"/></a></li>
+      <li><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic1.jpg"/></a></li>
+      <li><a href="http://www.315online.com.cn/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic3.jpg"/></a></li>
+      <li><a href="http://www.mps.gov.cn/n16/index.html?_v=1438535553945" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic4.jpg"/></a></li>
+      <li><a href="http://www.itrust.org.cn/" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic5.jpg"/></a></li>
+      <li><a href="http://www.bj.cyberpolice.cn/index.jsp" target="_blank"><img src="http://www.shunjubao.xyz/www/statics/i/FootPic6.jpg"/></a></li>
     </ul>
   </div>
   <div class="FooterOhter">
@@ -209,4 +209,4 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-</div>
+</div>

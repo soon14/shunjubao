@@ -28,9 +28,9 @@ TMJF(function($) {
 			var u_img_str ='<img src="'+u_img+'">';
 			
 		}else{
-			var u_img_str ='<img src="http://www.zhiying365365.com/www/statics/i/touxiang.jpg">';
+			var u_img_str ='<img src="http://www.shunjubao.xyz/www/statics/i/touxiang.jpg">';
 		}
-		welcome_str += "<a href=\"http://m.zhiying365365.com/account/user_center.php\">" + u_img_str +"<b>" + u_name + "</b></a><span>|</span><a href=\"http://m.zhiying365365.com/account/user_charge.php\">充值</a><span>|</span><a href=\"http://m.zhiying365365.com/passport/logout.php\">退出</a></h1>";
+		welcome_str += "<a href=\"http://m.shunjubao.xyz/account/user_center.php\">" + u_img_str +"<b>" + u_name + "</b></a><span>|</span><a href=\"http://m.shunjubao.xyz/account/user_charge.php\">充值</a><span>|</span><a href=\"http://m.shunjubao.xyz/passport/logout.php\">退出</a></h1>";
 	} else {
 		welcome_str += "<a href=\"<?php echo @ROOT_DOMAIN; ?>
 /passport/login.php\">登录</a><span>|</span><a href=\"<?php echo @ROOT_DOMAIN; ?>
@@ -43,10 +43,10 @@ var $ = jQuery.noConflict(true);
 </script>
 
 <div class="top">
-  <div class="logo"><h1><a href="http://m.zhiying365365.com/">智赢网</a></h1></div>
+  <div class="logo"><h1><a href="http://m.shunjubao.xyz/">智赢网</a></h1></div>
   <div class="topCenter">
     <h1></h1>
     <div class="clear"></div>
   </div>
 </div>
-
+

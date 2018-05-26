@@ -19,7 +19,7 @@ var is_confirm = false;
 		return true;
 	});
 	$("#jjyh").click(function(){
-	   $("#form1").attr('action','http://prize.zhiying365365.com/j/index.php?act=jc');
+	   $("#form1").attr('action','http://prize.shunjubao.xyz/j/index.php?act=jc');
        $("#form1").submit();	   
 	})
 });
@@ -47,7 +47,7 @@ unset($_smarty_tpl_vars);
  ?>
 <!--当前位置 end-->
 <?php if ($this->_tpl_vars['prize']): ?>
-<form action="http://prize.zhiying365365.com/j/index.php?act=jc" target="_self" id="form1" name="form1" method="post">
+<form action="http://prize.shunjubao.xyz/j/index.php?act=jc" target="_self" id="form1" name="form1" method="post">
 <?php else: ?>
 <form action="<?php echo @ROOT_DOMAIN; ?>
 /confirm/combination_submit<?php if ($this->_tpl_vars['s'] == 'bd'): ?>_bd<?php endif; ?>.php" target="_self"  id="form1" name="form1" method="post">

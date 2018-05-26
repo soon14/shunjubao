@@ -155,7 +155,7 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
         <h2>最优秀专家</h2>
         <h3>最好的服务</h3>
         <h4>谁是下一个</h4>
-        <h5><img src="http://www.zhiying365365.com/www/statics/i/sbgs.png"></h5>
+        <h5><img src="http://www.shunjubao.xyz/www/statics/i/sbgs.png"></h5>
       </dd>
     </dl>
   </div>
@@ -241,7 +241,7 @@ function booking_expert(id){
 
 			type: "post",
 
-			url : "http://www.zhiying365365.com/zhuanjia/booking_expert.php",
+			url : "http://www.shunjubao.xyz/zhuanjia/booking_expert.php",
 
 			dataType:'json',
 
@@ -255,7 +255,7 @@ function booking_expert(id){
 
 					alert('请先登录!');	
 
-					window.location.href="http://www.zhiying365365.com/passport/login.php";
+					window.location.href="http://www.shunjubao.xyz/passport/login.php";
 
 					return false;
 
@@ -312,7 +312,7 @@ function booking_sigle(id){
 
 			type: "get",
 
-			url : "http://www.zhiying365365.com/zhuanjia/booking.php",
+			url : "http://www.shunjubao.xyz/zhuanjia/booking.php",
 
 			dataType:'json',
 
@@ -326,7 +326,7 @@ function booking_sigle(id){
 
 					alert('请先登录!');	
 
-					window.location.href="http://www.zhiying365365.com/passport/login.php";
+					window.location.href="http://www.shunjubao.xyz/passport/login.php";
 
 					return false;
 
