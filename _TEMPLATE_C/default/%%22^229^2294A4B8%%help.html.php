@@ -54,7 +54,7 @@
         <p class="weibo"><a href="http://weibo.com/u/5107700124">新浪微博</a></p>
         <p class="weibo none"><a href="">腾讯微博</a></p>
         <strong>客服电话</strong><br/>
-        <strong><b>010-64344882</b></strong> </dd>
+        <strong><b>QQ:1323698651</b></strong> </dd>
     </dl>
   </div>
 </div>

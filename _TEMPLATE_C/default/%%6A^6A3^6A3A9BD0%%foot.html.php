@@ -12,7 +12,7 @@
     <p><a href="/about/xieyi.html" target="_blank">网站协议</a></p>
   </div>
   <div class="FooterOhter">
-    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：010-64344882&nbsp;&nbsp;&nbsp;<a href="http://www.shunjubao.xyz/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
+    <p>彩票有风险，投注需谨慎，不向未满18周岁的青少年出售彩票&nbsp;&nbsp;客服热线：QQ:1323698651&nbsp;&nbsp;&nbsp;<a href="http://www.shunjubao.xyz/message/show.php" target="_blank">您的建议对我们很重要!</a></p>
   </div>
   <div class="FootPic">
     <ul>

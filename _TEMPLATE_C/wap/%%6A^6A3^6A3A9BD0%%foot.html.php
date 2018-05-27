@@ -8,5 +8,5 @@
 </style>
 <div class="footer">
   <div class="botlink"><a href="">关于我们</a><span>|</span><a href="">联系客服</a><span>|</span><a href="">帮助</a></div>
-  <div class="botService">客服热线：010-64344882</div>
-
+  <div class="botService">客服热线：QQ:1323698651</div>
+

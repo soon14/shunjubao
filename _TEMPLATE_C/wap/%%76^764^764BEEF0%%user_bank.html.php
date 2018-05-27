@@ -48,7 +48,7 @@ TMJF.conf = {
   <?php if ($this->_tpl_vars['userRealInfo']['realname']): ?>
   <div class="tipss">
     <p><b>温馨提示：</b></p>
-    <p>如信息变更，请致电010-64344882或联系我们的在线客服。</p>
+    <p>如信息变更，请致电QQ:1323698651或联系我们的在线客服。</p>
   </div>
   <div class="biaodan">
     <form method="post">

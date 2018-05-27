@@ -60,7 +60,7 @@ iframe img{ width:300px; height:350px;}
 &out_trade_no=<?php echo $this->_tpl_vars['out_trade_no']; ?>
 "></iframe>
       <p> 手机一扫，支付宝轻松支付！</p>
-      <div class="mpbottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.zhiying365.com/www/statics/i/ServicesQ.jpg"></a></div>
+      <div class="mpbottips">如您在充值过程中遇到问题，请联系我们客服热线:QQ:1323698651,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="http://www.zhiying365.com/www/statics/i/ServicesQ.jpg"></a></div>
     </div>
     <!---->
   </div>
