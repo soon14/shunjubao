@@ -133,7 +133,7 @@ TMJF(function($) {
       </div>
     </form>
     <!---->
-    <div class="bottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="<?php echo @ROOT_DOMAIN; ?>
+    <div class="bottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="<?php echo @ROOT_DOMAIN; ?>
 /www/statics/i/ServicesQ.jpg"></a><br/>
       <br/>
       <br/>
@@ -198,7 +198,7 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
         <div class="openwindowspage">
           <div class="tips">温馨提示</div>
           <div class="aaaaa">
-            <p><span></span>需充值的会员请联系客服进行手工充值（客服微信：zy365118或a37573231,客服QQ3043163441或2733292184）为避免充不上，请于赛前20分钟完成充值<span></span></p>
+            <p><span></span>需充值的会员请联系客服进行手工充值（客服微信：zy365118或a37573231,客服QQ3043163441或1323698651）为避免充不上，请于赛前20分钟完成充值<span></span></p>
             <p>
             <p style="text-align:right;font-size:14px;">智赢网官方</p>
           </div>

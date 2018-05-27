@@ -139,7 +139,7 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
         <div class="openwindowspage">
           <div class="tips">温馨提示</div>
           <div class="aaaaa">
-            <p><span></span>需充值的会员请联系客服进行手工充值（客服微信：a37573231    QQ:2733292184）为避免充不上，请于赛前20分钟完成充值<span></span></p>
+            <p><span></span>需充值的会员请联系客服进行手工充值（客服微信：a37573231    QQ:1323698651）为避免充不上，请于赛前20分钟完成充值<span></span></p>
             <p>
             <p style="text-align:right;font-size:14px;">智赢网官方</p>
           </div>
@@ -155,4 +155,4 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
 $this->_smarty_include(array('smarty_include_tpl_file' => "../app/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

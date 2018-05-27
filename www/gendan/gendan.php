@@ -160,7 +160,7 @@ if($d=mysql_fetch_array($query)){
   <div id="gotop"><a href="javascript:void(0)">���ض���</a></div>
   <div id="Rightsubnav">
     <ul>
-      <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=2733292184&site=qq&menu=yes" target="_blank">���߿ͷ�</a></li>
+      <li class="service"><a href="http://wpa.qq.com/msgrd?v=1&uin=1323698651&site=qq&menu=yes" target="_blank">���߿ͷ�</a></li>
       <li class="help"><a href="http://www.shunjubao.xyz/help" target="_blank">��������</a></li>
     </ul>
   </div>

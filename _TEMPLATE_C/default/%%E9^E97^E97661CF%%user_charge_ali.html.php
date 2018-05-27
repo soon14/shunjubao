@@ -74,7 +74,7 @@ TMJF(function($) {
       </div>
     </form>
     <!---->
-    <div class="bottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="<?php echo @ROOT_DOMAIN; ?>
+    <div class="bottips">如您在充值过程中遇到问题，请联系我们客服热线:010-64344882,或联系我们在线客服&nbsp;<a style="position:relative;top:3px;" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img border="0" title="在线客服" alt="在线客服" src="<?php echo @ROOT_DOMAIN; ?>
 /www/statics/i/ServicesQ.jpg"></a><br/><br/><br/><br/></div>
   </div>
 </div>

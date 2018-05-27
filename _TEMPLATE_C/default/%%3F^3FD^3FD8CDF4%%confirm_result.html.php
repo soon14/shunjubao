@@ -48,7 +48,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--投注失败 end-->
@@ -60,7 +60,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--体育类型错误 end-->
@@ -73,7 +73,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--体育类型错误 end-->
@@ -85,7 +85,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--投注金额错误 end-->
@@ -97,7 +97,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--投注玩法错误 end-->
@@ -110,7 +110,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo $this->_tpl_vars['from']; ?>
-">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+">继续投注</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <!--投注其他错误 end-->
@@ -210,7 +210,7 @@ unset($_smarty_tpl_vars);
     </div>
     <div class="ohter">
       <p><span></span><a href="<?php echo @ROOT_WEBSITE; ?>
-/account/user_center.php?p=realinfo">去认证</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2733292184&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
+/account/user_center.php?p=realinfo">去认证</a><em>联系客服？</em><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1323698651&amp;site=qq&amp;menu=yes" target="_blank"><img title="在线客服" alt="在线客服" src="http://www.shunjubao.xyz/www/statics/i/ServicesQ.jpg"></a></p>
     </div>
   </div>
   <?php endif; ?>
