@@ -123,21 +123,21 @@ $(document).ready(function(){
                   <p><a href="http://www.shunjubao.xyz/beidan/bf.php" target="_blank">比分</a> </p>
                   <p><a href="http://www.shunjubao.xyz/beidan/sxds.php" target="_blank">上下单双</a> </p>
                 </dd>-->
-                <dt><b><a href="http://news.shunjubao.xyz/footballtj/" target="_blank">资讯中心</a></b></dt>
+                <dt><b><a href="http://new.shunjubao.xyz/footballtj/" target="_blank">资讯中心</a></b></dt>
                 <dd>
                   <p><a href="http://www.shunjubao.xyz/basketball/hdc_list.php" target="_blank">足球推荐</a> </p>
-                  <p><a href="http://news.shunjubao.xyz/NBAtj/" target="_blank">篮球推荐</a> </p>
-                  <p><a href="http://news.shunjubao.xyz/footballxw/" target="_blank">足球新闻</a> </p>
-                  <p><a href="http://news.shunjubao.xyz/NBAxw/" target="_blank">篮球新闻</a> </p>
-                  <p><a href="http://news.shunjubao.xyz/touzhujiqiao/" target="_blank">投注技巧</a> </p>
-                  <p><a href="http://news.shunjubao.xyz/zhongchao/" target="_blank">论剑中超</a> </p>
+                  <p><a href="http://new.shunjubao.xyz/NBAtj/" target="_blank">篮球推荐</a> </p>
+                  <p><a href="http://new.shunjubao.xyz/footballxw/" target="_blank">足球新闻</a> </p>
+                  <p><a href="http://new.shunjubao.xyz/NBAxw/" target="_blank">篮球新闻</a> </p>
+                  <p><a href="http://new.shunjubao.xyz/touzhujiqiao/" target="_blank">投注技巧</a> </p>
+                  <p><a href="http://new.shunjubao.xyz/zhongchao/" target="_blank">论剑中超</a> </p>
                 </dd>
                 <dt><b><a href="http://www.shunjubao.xyz/livescore/fb_livescore.php" target="_blank">即时比分</a></b></dt>
                 <dd>
                   <p><a href="http://www.shunjubao.xyz/livescore/fb_livescore.php" target="_blank">竞彩足球</a> </p>
                   <p><a href="http://www.shunjubao.xyz/livescore/bk_livescore.php">竞彩篮球</a> </p>
                 </dd>
-                <dt><b><a href="http://news.shunjubao.xyz/footballtj/" target="_blank">赛果开奖</a></b></dt>
+                <dt><b><a href="http://new.shunjubao.xyz/footballtj/" target="_blank">赛果开奖</a></b></dt>
                 <dd>
                   <p><a href="http://www.shunjubao.xyz/livescore/fb_match_result.php" target="_blank">竞彩足球</a> </p>
                   <p><a href="http://www.shunjubao.xyz/livescore/bk_match_result.php">竞彩篮球</a> </p>

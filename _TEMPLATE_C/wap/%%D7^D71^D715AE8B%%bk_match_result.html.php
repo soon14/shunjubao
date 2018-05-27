@@ -78,7 +78,7 @@ if ($this->_foreach['name']['total'] > 0):
         </div>
         <?php endforeach; endif; unset($_from); ?> </div>
     </div>
-    <div class="gonggao">声明：即时比分有待核实，请以<a href="http://m.shunjubao.xyz/livescore/fb_match_result.php">赛果开奖</a>为准！暂停、取消、推迟：因场地或天气等原因比赛被迫暂停、取消或推迟开赛时间。详情请查看<a href="http://news.shunjubao.xyz/saishi/wap.php">销售公告</a>。</div>
+    <div class="gonggao">声明：即时比分有待核实，请以<a href="http://m.shunjubao.xyz/livescore/fb_match_result.php">赛果开奖</a>为准！暂停、取消、推迟：因场地或天气等原因比赛被迫暂停、取消或推迟开赛时间。详情请查看<a href="http://new.shunjubao.xyz/saishi/wap.php">销售公告</a>。</div>
   </div>
 </div>
 </div>
