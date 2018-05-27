@@ -80,14 +80,6 @@ var $ = jQuery.noConflict(true);
   <ul>
     <li style=" width:330px;">
       <dl>
-        <dt><img src="http://www.zhiying365.com/www/statics/i/dalishuishou.jpg"></dt>
-        <dd>
-          <p>大力水手订阅号</p>
-          <p>wanbocai</p>
-          <p>每日精选赛事推荐！</p>
-        </dd>
-      </dl>
-      <dl>
         <dt><img src="http://www.zhiying365.com/www/statics/i/tuijianw.jpg"></dt>
         <dd>
           <p>智赢团队推荐号</p>
@@ -168,4 +160,4 @@ if ($this->_foreach['a']['total'] > 0):
 		$('#container').pinto();
 	</script>
 </body>
-</html>
+</html>

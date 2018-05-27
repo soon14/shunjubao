@@ -38,12 +38,6 @@ unset($_smarty_tpl_vars);
             <p>zhiyingwangtuandui</p>
             <p>第一手资讯及推荐！</p>
           </li>
-          <li><img src="http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg"></li>
-          <li>
-            <p><strong>大力水手订阅号</strong></p>
-            <p>wanbocai</p>
-            <p>每日精选赛事推荐！</p>
-          </li>
         </ol>
       </dd>
     </dl>

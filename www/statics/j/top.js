@@ -66,11 +66,6 @@ document.writeln(
 "      </ul>"+
 "      <ol>"+
 "        <li class=\"Navlist\"><em><img src=\"http://www.shunjubao.xyz/www/statics/i/weixin.gif\"></em>"+
-"          <div class=\"Navlist\">"+
-"            <div class=\"erweima\">"+
-"              <img src=\"http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg\"><p><img src=\"http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg\"></p>"+
-"            </div>"+
-"          </div>"+
 "        </li>"+
 "        <li class=\"tel\">&nbsp;&nbsp;&nbsp;&nbsp;7*24TH&nbsp;QQ:1323698651&nbsp;&nbsp;</li>"+
 "        <li><a onclick=\"AddFavorite(window.location,document.title)\">加入收藏</a><span>|</span></li>"+

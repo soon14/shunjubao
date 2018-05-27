@@ -4,8 +4,6 @@
 	<dl>
 		<dt><img src="http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg"></dt>
 		<dd class="active"><p>智赢推荐团队</p></dd>
-		<dt><img src="http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg"></dt>
-		<dd><p>大水手订阅号</p></dd>
 	</dl>
 </div>
 <form action="/optimize/index.php?act=jc" name="jjyh_form" id="jjyh_form" method="post">

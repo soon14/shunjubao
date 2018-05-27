@@ -86,7 +86,6 @@ $(document).ready(function(){
         <li class="Navlist"><em><img src="http://www.shunjubao.xyz/www/statics/i/weixin.gif"></em>
           <div class="Navlist">
             <div class="erweima"> <img src="http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg">
-              <p><img src="http://www.shunjubao.xyz/www/statics/i/dalishuishou.jpg"></p>
             </div>
           </div>
         </li>
