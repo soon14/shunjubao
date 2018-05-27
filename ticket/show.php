@@ -101,7 +101,7 @@ foreach ($show_tickets as $key=>$value) {
 $objUserMemberFront = new UserMemberFront();
 $show_users = $objUserMemberFront->gets($uids);
 foreach ($show_users as $key=>$value) {
-	$show_users[$key]['u_img'] = str_replace('zhiying365', 'zhiying365365', $value['u_img']);
+	$show_users[$key]['u_img'] = str_replace('zhiying365', 'shunjubao', $value['u_img']);
 }
 $TEMPLATE['title'] = '聚宝网|聚宝晒单跟单中心。';
 $TEMPLATE['keywords'] = '竞彩晒单,竞彩跟单,晒单跟单,聚宝网跟单,聚宝网竞猜跟单,竞彩投注,聚宝网晒单中心,聚宝网跟单中心,聚宝网大力水手,大力水手,聚宝网竞彩熊超,聚宝熊超,竞彩熊超,王忠仓,寻鸡情求鸭迫,红姐,聚宝红姐。 ';

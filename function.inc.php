@@ -231,7 +231,7 @@ function badDomainLocation() {
 		redirect('http://www.shunjubao.xyz' , 301);
 	}
 	//其他域名访问时
-	$all_domain_preg_match = '/^http:\/\/([hsy|wzc]*\.){0,1}(wap|m|www|pma|cms|news|bbs)\.(zhiying|zhiying365365|hsy|wzc)\.com$/i';
+	$all_domain_preg_match = '/^http:\/\/([hsy|wzc]*\.){0,1}(wap|m|www|pma|cms|news|bbs)\.(zhiying|shunjubao|hsy|wzc)\.com$/i';
 	if(isset($_SERVER['HTTP_HOST']) && !preg_match($all_domain_preg_match, ROOT_DOMAIN)) {
 		output_404();
 	}
