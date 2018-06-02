@@ -206,7 +206,7 @@ if ($this->_foreach['ticket']['total'] > 0):
         <?php if ($this->_tpl_vars['nextUrl']): ?> <a href="<?php echo $this->_tpl_vars['nextUrl']; ?>
 ">下一页</a> <?php endif; ?> </div>
       <?php endif; ?> </div>
-    <div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录智赢网站进行查询！</div>
+    <div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录聚宝网站进行查询！</div>
   </div>
 </div>
 <!--投注记录 end-->

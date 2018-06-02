@@ -2,9 +2,9 @@
          compiled from zxwy.html */ ?>
 <!DOCTYPE html>
 <head>
-<title>智赢网充值中心-在线网银支付！</title>
-<meta name="keywords" content="智赢网充值中心-在线网银支付！" />
-<meta name="description" content="智赢网充值中心-在线网银支付！。" />
+<title>聚宝网充值中心-在线网银支付！</title>
+<meta name="keywords" content="聚宝网充值中心-在线网银支付！" />
+<meta name="description" content="聚宝网充值中心-在线网银支付！。" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link href="http://www.zhiying365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link href="http://www.zhiying365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />

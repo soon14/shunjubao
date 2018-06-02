@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 <html>
 <head>
 <title><?php echo $this->_tpl_vars['TEMPLATE']['title']; ?>
--为家乡的球队加油，CBA\中超-积分投注，竞猜CBA\中超来智赢!!</title>
+-为家乡的球队加油，CBA\中超-积分投注，竞猜CBA\中超来聚宝!!</title>
 <meta name="keywords" content="<?php echo $this->_tpl_vars['TEMPLATE']['keywords']; ?>
 " />
 <meta name="description" content="<?php echo $this->_tpl_vars['TEMPLATE']['description']; ?>
@@ -173,7 +173,7 @@ unset($_smarty_tpl_vars);
       积分竞猜CBA/中超赢取彩金...</span></em> </h1>
   </div>
 </div>
-<!--智赢页面头部 end-->
+<!--聚宝页面头部 end-->
 <!--当前位置 start-->
 <div class="jflocation">
   <div class="jflc_center">

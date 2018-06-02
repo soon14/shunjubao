@@ -19,7 +19,7 @@ unset($_smarty_tpl_vars);
 <div class="tipsters">
   <div class="NewsNav">
     <h1><b>跟单中心</b><em>停止盲目投注...<br/>
-      <span>跟随智赢高手，让您的利润蒸蒸日上 ! </span></em></h1>
+      <span>跟随聚宝高手，让您的利润蒸蒸日上 ! </span></em></h1>
   </div>
 </div>
 <div class="gendanCenter">

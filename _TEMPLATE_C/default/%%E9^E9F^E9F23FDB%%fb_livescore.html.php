@@ -3,19 +3,19 @@
 <!DOCTYPE>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>足球比分直播-足球即时比分-足彩即时比分-足球彩票比分-智赢竞彩智赢网数据中心！</title>
+<title>足球比分直播-足球即时比分-足彩即时比分-足球彩票比分-聚宝竞彩聚宝网数据中心！</title>
 <meta name="keywords" content="足球比分直播,足彩比分直播,足球即时比分,足彩即时比分,足球彩票比分,比分直播网,足球数据中心" />
-<meta name="description" content="足球比分直播-足球即时比分-足彩即时比分-足球彩票比分-智赢竞彩智赢网数据中心！" />
+<meta name="description" content="足球比分直播-足球即时比分-足彩即时比分-足球彩票比分-聚宝竞彩聚宝网数据中心！" />
 </head>
 <body>
 <link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/header.css" />
 <link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/bifen.css" />
 <link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/footer.css" />
-<!--智赢页面头部 start-->
+<!--聚宝页面头部 start-->
 <script type="text/javascript" src="http://www.zhiying365.com/www/statics/j/jquery.js"></script>
 <script type="text/javascript" src="http://www.zhiying365.com/www/statics/j/jquery-1.9.1.min.js"></script>
 <script src="http://www.zhiying365.com/www/statics/j/float.js" type="text/javascript"></script>
-<!--智赢页面头部 end-->
+<!--聚宝页面头部 end-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../default/top.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -24,7 +24,7 @@ unset($_smarty_tpl_vars);
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.zhiying365.com/"><strong class="none">智赢网</strong><b style="top:-1px;left:100px;">即时比分</b></a></h1>
+      <h1><a href="http://www.zhiying365.com/"><strong class="none">聚宝网</strong><b style="top:-1px;left:100px;">即时比分</b></a></h1>
     </div>
     <div class="nav">
       <ul>
@@ -263,12 +263,12 @@ Date.prototype.Format = function (fmt) {
 
 </script>
 <!--center end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../default/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

@@ -6,9 +6,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>【大乐透】少花钱中大奖_大乐透投注_超级大乐透预测_体彩大乐透中奖规则_体育彩票大乐透-智赢网智赢彩票！</title>
+<title>【大乐透】少花钱中大奖_大乐透投注_超级大乐透预测_体彩大乐透中奖规则_体育彩票大乐透-聚宝网聚宝彩票！</title>
 <meta name="keywords" content="大乐透,体彩大乐透,超级大乐透,大乐透投注,超级大乐透预测,体彩大乐透中奖规则,体育彩票大乐透" />
-<meta name="description" content="智赢网智赢彩票免费提供大乐透缩水过滤，帮您少花钱中大奖，免费提供体彩大乐透预测专家、大乐透中奖规则，同时还提供大乐透投注、方案保存、缩水过滤、奖金评测、杀号定胆，方便彩民在线购买超级大乐透" />
+<meta name="description" content="聚宝网聚宝彩票免费提供大乐透缩水过滤，帮您少花钱中大奖，免费提供体彩大乐透预测专家、大乐透中奖规则，同时还提供大乐透投注、方案保存、缩水过滤、奖金评测、杀号定胆，方便彩民在线购买超级大乐透" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link href="<?php echo ((is_array($_tmp='header.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 " type="text/css" rel="stylesheet" />
@@ -709,4 +709,4 @@ _gaq.push(['_trackPageview', '/virtual/t/SuperLotto/ljtz-1']);
   </div>
 </div>
 </body>
-</html>
+</html>

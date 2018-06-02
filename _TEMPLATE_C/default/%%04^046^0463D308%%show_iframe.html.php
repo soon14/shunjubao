@@ -2,7 +2,7 @@
          compiled from show_iframe.html */ ?>
 <!DOCTYPE html>
 <head>
-<title>智赢晒单中心-智赢用户最新晒单</title>
+<title>聚宝晒单中心-聚宝用户最新晒单</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 .newshaidan{ height:363px;clear:both;width:240px;border:1px solid #ddd; overflow:hidden;}

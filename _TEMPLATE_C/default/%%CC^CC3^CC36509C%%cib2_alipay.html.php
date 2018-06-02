@@ -2,9 +2,9 @@
          compiled from cib2_alipay.html */ ?>
 <!DOCTYPE html>
 <head>
-<title>智赢网充值中心-支付宝支付！</title>
-<meta name="keywords" content="智赢网充值中心-支付宝支付！" />
-<meta name="description" content="智赢网充值中心-支付宝支付！。" />
+<title>聚宝网充值中心-支付宝支付！</title>
+<meta name="keywords" content="聚宝网充值中心-支付宝支付！" />
+<meta name="description" content="聚宝网充值中心-支付宝支付！。" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link href="http://www.zhiying365.com/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link href="http://www.zhiying365.com/www/statics/c/footer.css" type="text/css" rel="stylesheet" />
@@ -38,7 +38,7 @@ iframe img{ width:300px; height:350px;}
 </b></li>
       <li>账户余额：<strong>&yen;<?php echo $this->_tpl_vars['userAccount']['cash']; ?>
 元</strong></li>
-      <li>收款方：智赢网</li>
+      <li>收款方：聚宝网</li>
       <li>订单号：<?php echo $this->_tpl_vars['out_trade_no']; ?>
 </li>
       <li>交易金额：<span><?php echo $this->_tpl_vars['payment']; ?>
@@ -48,7 +48,7 @@ iframe img{ width:300px; height:350px;}
     </ul>
   </div>
   <div class="mppay">
-    <div class="mppaytips none">网上充值0手续费！支付宝为智赢网合作商户，请您放心充值，资金即刻到账。</div>
+    <div class="mppaytips none">网上充值0手续费！支付宝为聚宝网合作商户，请您放心充值，资金即刻到账。</div>
     <!---->
     <div class="mppaycenter">
       <p style="color:#dc0000;font-size:30px;"><?php echo $this->_tpl_vars['payment']; ?>

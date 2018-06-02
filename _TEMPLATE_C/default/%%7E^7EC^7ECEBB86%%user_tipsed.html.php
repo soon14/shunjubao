@@ -1,8 +1,8 @@
 <?php /* Smarty version 2.6.17, created on 2018-03-05 05:30:33
          compiled from user_tipsed.html */ ?>
 <!DOCTYPE html><head>
-<title>账户明细-打赏管理-用户中心-智赢网</title>
-<meta name="keywords" content="智赢竞彩,智赢网,智赢打赏管理管理" />
+<title>账户明细-打赏管理-用户中心-聚宝网</title>
+<meta name="keywords" content="聚宝竞彩,聚宝网,聚宝打赏管理管理" />
 <meta name="description" content="账户明细，打赏管理-收到的打赏。" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />

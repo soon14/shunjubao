@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title><?php echo $this->_tpl_vars['TEMPLATE']['title']; ?>
--智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
+-聚宝网|聚宝竞彩|彩票赢家首选人气最旺的网站！</title>
 <meta name="keywords" content="<?php echo $this->_tpl_vars['TEMPLATE']['keywords']; ?>
 " />
 <meta name="description" content="<?php echo $this->_tpl_vars['TEMPLATE']['description']; ?>
@@ -83,7 +83,7 @@ toubang dl dd p{ line-height:24px; height:24px;}
         <dd class="three">姓名</dd>
         <dd class="four">升降<a class="tooltips" href="#tooltips"><img src="http://www.shunjubao.xyz/www/statics/i/question.png"><span>用户排名的升降规则为开奖之后，依照用户的中奖情况而做出的升降。</span></a></dd>
         <dd class="eight">注册日期</dd>
-        <dd class="five">积分<a class="tooltips" href="#tooltips"><img src="http://www.shunjubao.xyz/www/statics/i/question.png"><span>各位会员，积分是智赢网回馈用户的一种方式，积分可用于虚拟投注中超或CBA，并可以兑换彩金！</span></a></dd>
+        <dd class="five">积分<a class="tooltips" href="#tooltips"><img src="http://www.shunjubao.xyz/www/statics/i/question.png"><span>各位会员，积分是聚宝网回馈用户的一种方式，积分可用于虚拟投注中超或CBA，并可以兑换彩金！</span></a></dd>
         <dd class="six" style="text-align:right;">累积中奖</dd>
       </dl>
       <div class="clear"></div>

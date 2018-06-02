@@ -350,7 +350,7 @@ if ($this->_foreach['ticket']['total'] > 0):
           &nbsp;&nbsp;|
           <a href="javascript::void(0);" target="_blank" class="company_to_zhiying" userTicketId="<?php echo $this->_tpl_vars['userTicket']['id']; ?>
 " u_name="<?php echo $this->_tpl_vars['all_users'][$this->_tpl_vars['userTicket']['u_id']]['u_name']; ?>
-">智赢出票</a>
+">聚宝出票</a>
           <?php endif; ?>
           </td>
                   </tr>

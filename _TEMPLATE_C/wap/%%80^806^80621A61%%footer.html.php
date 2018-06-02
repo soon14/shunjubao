@@ -1,3 +1,3 @@
 <?php /* Smarty version 2.6.17, created on 2017-10-18 11:35:07
          compiled from footer.html */ ?>
-<div class="footer" style="height:auto; line-height:26px;padding:14px 0; background:#f4f4f4;"><p style=" height:32px;width:48%;padding:0 5px; line-height:30px;border:1px solid #e2e2e2; border-radius:5px; margin:0 auto;">客服热线：QQ:1323698651</p><p style="padding:5px 0 0 0;">京ICP备14016851-1号&nbsp;京ICP证150586号</p><p>2014-2017&copy;智赢彩票&nbsp;京公安网备11011402000202</p></div>
+<div class="footer" style="height:auto; line-height:26px;padding:14px 0; background:#f4f4f4;"><p style=" height:32px;width:48%;padding:0 5px; line-height:30px;border:1px solid #e2e2e2; border-radius:5px; margin:0 auto;">客服热线：QQ:1323698651</p><p style="padding:5px 0 0 0;">京ICP备14016851-1号&nbsp;京ICP证150586号</p><p>2014-2017&copy;聚宝彩票&nbsp;京公安网备11011402000202</p></div>

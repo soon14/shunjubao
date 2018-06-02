@@ -27,14 +27,14 @@ unset($_smarty_tpl_vars);
   <div class="NewsNav">
     <dl>
       <dt>
-        <h1><em>智赢网智赢晒单、跟单中心！停止盲目投注...</em></h1>
-        <h2><em>跟随智赢高手<span>，</span>让您的利润蒸蒸日上 ! </em></h2>
+        <h1><em>聚宝网聚宝晒单、跟单中心！停止盲目投注...</em></h1>
+        <h2><em>跟随聚宝高手<span>，</span>让您的利润蒸蒸日上 ! </em></h2>
       </dt>
       <dd>
         <ol>
           <li><img src="http://www.shunjubao.xyz/www/statics/i/tuijianw.jpg"></li>
           <li>
-            <p><strong>智赢团队推荐号</strong></p>
+            <p><strong>聚宝团队推荐号</strong></p>
             <p>zhiyingwangtuandui</p>
             <p>第一手资讯及推荐！</p>
           </li>

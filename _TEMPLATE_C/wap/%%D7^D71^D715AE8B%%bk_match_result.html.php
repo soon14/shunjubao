@@ -4,14 +4,14 @@
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'livescore/bk_match_result.html', 11, false),)), $this); ?>
 <!DOCTYPE>
 <head>
-<title>竞彩篮球赛果派奖-智赢网智赢竞彩智赢彩票触屏版！</title>
+<title>竞彩篮球赛果派奖-聚宝网聚宝竞彩聚宝彩票触屏版！</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
 <meta content='yes' name='apple-mobile-web-app-capable' />
 <meta content='black' name='apple-mobile-web-app-status-bar-style' />
 <meta content='telephone=no' name='format-detection' />
 <meta name="keywords" content="篮球比分直播,篮球比分直播,篮球即时比分,篮球即时比分,篮球彩票比分,比分直播网,篮球数据中心" />
-<meta name="description" content="竞彩篮球赛果派奖，智赢网智赢竞彩智赢彩票触屏版" />
+<meta name="description" content="竞彩篮球赛果派奖，聚宝网聚宝竞彩聚宝彩票触屏版" />
 <link href="<?php echo ((is_array($_tmp='wap_header.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 " type="text/css" rel="stylesheet" />
 <link href="<?php echo ((is_array($_tmp='wap_footer.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
@@ -84,12 +84,12 @@ if ($this->_foreach['name']['total'] > 0):
 </div>
 </div>
 <!--center end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

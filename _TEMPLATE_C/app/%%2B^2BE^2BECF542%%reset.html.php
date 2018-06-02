@@ -28,9 +28,9 @@ function resetpass(){
 </head>
 <body>
 <div class="top">
-  <h3>重置密码-智赢网</h3>
+  <h3>重置密码-聚宝网</h3>
   <div class="logo none">
-    <h1 ><a href="/">智赢网</a><em>重置密码</em></h1>
+    <h1 ><a href="/">聚宝网</a><em>重置密码</em></h1>
   </div>
 </div>
 <div class="center">

@@ -10,7 +10,7 @@ unset($_smarty_tpl_vars);
 <div class="top">
   <h3>找回密码<a href="/">返回</a></h3>
   <div class="logo none">
-    <h1 ><a href="/">智赢网</a><em>找回密码</em></h1>
+    <h1 ><a href="/">聚宝网</a><em>找回密码</em></h1>
   </div>
 </div>
 <div class="center">

@@ -385,7 +385,7 @@ if ($this->_foreach['ticket']['total'] > 0):
         </dd>
       </dl>
     </div>
-    <h2>智赢晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
+    <h2>聚宝晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
   </div>
 </div>
 <div id="light2" class="white_content">

@@ -3,9 +3,9 @@
 <!DOCTYPE>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>篮球比分直播-篮球即时比分-篮球即时比分，智赢竞彩智赢网数据中心！</title>
+<title>篮球比分直播-篮球即时比分-篮球即时比分，聚宝竞彩聚宝网数据中心！</title>
 <meta name="keywords" content="篮球比分直播,篮球比分直播,篮球即时比分,篮球即时比分,篮球彩票比分,比分直播网,篮球数据中心" />
-<meta name="description" content="篮球比分直播-篮球即时比分-篮球即时比分，智赢竞彩智赢网数据中心！" />
+<meta name="description" content="篮球比分直播-篮球即时比分-篮球即时比分，聚宝竞彩聚宝网数据中心！" />
 </head>
 <body>
 <link type="text/css" rel="stylesheet" href="http://www.zhiying365.com/www/statics/c/header.css" />
@@ -22,7 +22,7 @@ unset($_smarty_tpl_vars);
 <div class="header">
   <div class="headerCnetr">
     <div class="logo">
-      <h1><a href="http://www.zhiying365.com/"><strong class="none">智赢网</strong><b style="top:-1px;left:100px;">即时比分</b></a></h1>
+      <h1><a href="http://www.zhiying365.com/"><strong class="none">聚宝网</strong><b style="top:-1px;left:100px;">即时比分</b></a></h1>
     </div>
     <div class="nav">
       <ul>
@@ -193,12 +193,12 @@ if ($this->_foreach['name']['total'] > 0):
 </div>
 </div>
 <!--center end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../default/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

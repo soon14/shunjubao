@@ -1,9 +1,9 @@
 <?php /* Smarty version 2.6.17, created on 2018-03-05 05:30:18
          compiled from user_tips.html */ ?>
 <!DOCTYPE html><head>
-<title>我的打赏-打赏管理-用户中心-智赢网</title>
-<meta name="keywords" content="智赢竞彩,智赢网,智赢跟单打赏管理" />
-<meta name="description" content="我的打赏，打赏管理，智赢打赏跟单不错失任何一红单。" />
+<title>我的打赏-打赏管理-用户中心-聚宝网</title>
+<meta name="keywords" content="聚宝竞彩,聚宝网,聚宝跟单打赏管理" />
+<meta name="description" content="我的打赏，打赏管理，聚宝打赏跟单不错失任何一红单。" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link href="http://www.shunjubao.xyz/www/statics/c/footer.css" type="text/css" rel="stylesheet" />

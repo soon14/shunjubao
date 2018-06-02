@@ -17,7 +17,7 @@ TMJF(function($) {
 </script>
 <!--center start-->
 <div class="paytop">
-  <h1>智赢用户充值中心</h1>
+  <h1>聚宝用户充值中心</h1>
 </div>
 <div class="center">
   <div class="pay">
@@ -64,10 +64,10 @@ TMJF(function($) {
     <!---->
   </div>
 </div>
-<div class="yiwen">如您有问题，请联系智赢网客服。</div>
+<div class="yiwen">如您有问题，请联系聚宝网客服。</div>
 <!--center end-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

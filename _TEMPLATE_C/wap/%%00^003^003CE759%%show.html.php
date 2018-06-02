@@ -124,8 +124,8 @@ unset($_smarty_tpl_vars);
  ?>
 <!--center start-->
 <div class="Dinzhism">
-  <p>智赢晒单跟单中心！停止盲目投注...</p>
-  <p>跟随智赢高手，让您的利润蒸蒸日上 ! </p>
+  <p>聚宝晒单跟单中心！停止盲目投注...</p>
+  <p>跟随聚宝高手，让您的利润蒸蒸日上 ! </p>
 </div>
 <div class="gendanCenter">
   <div style=" height:80px;">

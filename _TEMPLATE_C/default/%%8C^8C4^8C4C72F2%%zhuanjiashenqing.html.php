@@ -24,12 +24,12 @@ unset($_smarty_tpl_vars);
 <div class="center">
   <div class="tipsters">
     <div class="NewsNav">
-      <h1><b>智赢专家</b><em>专业人士干专业事情<br/>
+      <h1><b>聚宝专家</b><em>专业人士干专业事情<br/>
         <span>为用户购彩提供专业服务</span></em> </h1>
     </div>
   </div>
   <div class="zjlist">
-    <h1><b>申请智赢专家</b></h1>
+    <h1><b>申请聚宝专家</b></h1>
     <div class="shenqingC">
       <ol>
         <li>
@@ -38,7 +38,7 @@ unset($_smarty_tpl_vars);
               <p class="name"><b>申请人：</b>
                 <input type="text" class="input" name="u_name" id="u_name" value="">
                 <span style="color:#F00"><em>*</em><?php if ($this->_tpl_vars['msg']['u_name']): ?><?php echo $this->_tpl_vars['msg']['u_name']; ?>
-<?php else: ?>您智赢网的用户名<?php endif; ?></span> </p>
+<?php else: ?>您聚宝网的用户名<?php endif; ?></span> </p>
               <p><b>手机号：</b>
                 <input type="text" class="input" name="mobile" id="mobile" value="">
                 <span style=" color:#F00"><?php echo $this->_tpl_vars['msg']['mobile']; ?>
@@ -74,12 +74,12 @@ unset($_smarty_tpl_vars);
 </div>
 <div class="clear"></div>
 <!--专家中心end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

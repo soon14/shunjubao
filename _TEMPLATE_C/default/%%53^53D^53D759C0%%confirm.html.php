@@ -152,7 +152,7 @@ if ($this->_foreach['matchInfo']['total'] > 0):
             <p class="check">
               <input type="checkbox" checked>
               同意<a href="<?php echo @ROOT_DOMAIN; ?>
-/about/xieyi.html" target="_blank">《智赢网代购协议》</a>，并已确认投注详情。</p>
+/about/xieyi.html" target="_blank">《聚宝网代购协议》</a>，并已确认投注详情。</p>
             <p>
               <input type="submit" id="form_submit" class="confiRmaSub" value="确认购买" />
             </p>

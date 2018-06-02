@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsU
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $this->_tpl_vars['TEMPLATE']['title']; ?>
--智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
+-聚宝网|聚宝竞彩|彩票赢家首选人气最旺的网站！</title>
 <meta name="keywords" content="<?php echo $this->_tpl_vars['TEMPLATE']['keywords']; ?>
 " />
 <meta name="description" content="<?php echo $this->_tpl_vars['TEMPLATE']['description']; ?>

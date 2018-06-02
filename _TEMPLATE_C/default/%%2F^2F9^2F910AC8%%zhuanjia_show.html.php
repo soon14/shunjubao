@@ -219,7 +219,7 @@ $this->_sections['b']['last']       = ($this->_sections['b']['iteration'] == $th
             
             <?php endif; ?> </div>
         </div>
-        <div class="service" id="showc3" style="display:none">智赢网保证每位分析师一周至少推荐场次不低于7场；包月的专家一月至少推荐场次不低于30场。 无论出于任何原因，如果您收到的推荐没有达到我们承诺的数目，那么，您的订阅将会免费延长，直到您收到补还的推荐为止。</div>
+        <div class="service" id="showc3" style="display:none">聚宝网保证每位分析师一周至少推荐场次不低于7场；包月的专家一月至少推荐场次不低于30场。 无论出于任何原因，如果您收到的推荐没有达到我们承诺的数目，那么，您的订阅将会免费延长，直到您收到补还的推荐为止。</div>
       </div>
     </div>
   </div>
@@ -227,12 +227,12 @@ $this->_sections['b']['last']       = ($this->_sections['b']['iteration'] == $th
 </div>
 <div class="clear"></div>
 <!--专家中心end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

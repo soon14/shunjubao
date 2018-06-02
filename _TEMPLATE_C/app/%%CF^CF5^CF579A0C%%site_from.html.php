@@ -42,7 +42,7 @@ table tr td{background:#fff;border:1px solid #e9e9e9;height:22px;line-height:22p
     <br/>
     <p>1）用户推广领彩金(充值并投注)；</p>
 	<p>2）用户投注再拿1%返点；
-    <p>3）复制下边的链接可进行推广，让您在智赢的帐号更具价值！</p>
+    <p>3）复制下边的链接可进行推广，让您在聚宝的帐号更具价值！</p>
     <br/>
     <p>我的推广链接地址：</p>
     <p><?php echo $this->_tpl_vars['siteFromInfo']['link']; ?>

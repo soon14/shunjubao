@@ -27,7 +27,7 @@ body{font-size:12px;font-family:'宋体';}
 .tijiao a{ display:block;text-align:center;color:#fff;font-size:14px;font-weight:900;}
 </style>
 <div class="toptitle">
-  <h2>智赢支付宝H5充值</h2>
+  <h2>聚宝支付宝H5充值</h2>
 </div>
 <div>
 <div class="center">
@@ -44,7 +44,7 @@ body{font-size:12px;font-family:'宋体';}
     </tr>
     <tr>
       <td align="left">收款方</td>
-      <td align="right">智赢网</td>
+      <td align="right">聚宝网</td>
     </tr>
     <tr>
       <td align="left">订单号</td>
@@ -82,4 +82,4 @@ var orderid = '<?php echo $this->_tpl_vars['out_trade_no']; ?>
 $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

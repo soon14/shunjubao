@@ -18,7 +18,7 @@ unset($_smarty_tpl_vars);
 <script src="<?php echo ((is_array($_tmp='timecount.js')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 "></script>
 <div class="head_tips">
-  <h1><b><a href="">智赢网</a></b><strong style="left:90px;">System Tips</strong></h1>
+  <h1><b><a href="">聚宝网</a></b><strong style="left:90px;">System Tips</strong></h1>
 </div>
 <!--center start-->
 <div class="Tipcenter">
@@ -35,11 +35,11 @@ unset($_smarty_tpl_vars);
 ">进入首页>></a><br />
     </p>
   </div>
-  <div class="Tips">智赢网业界中奖率最高的网站，数千万彩民的信赖！</div>
+  <div class="Tips">聚宝网业界中奖率最高的网站，数千万彩民的信赖！</div>
 </div>
 <!--center end-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "bottom.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

@@ -68,12 +68,12 @@ TMJF(function($) {
 <body>
 <div class="top">
   <h3>您正在使用<b>“<?php echo $this->_tpl_vars['typeDesc'][$this->_tpl_vars['connect_info']['type']]['desc']; ?>
-帐号”</b>登录智赢网</h3>
+帐号”</b>登录聚宝网</h3>
   <div class="logo none">
-    <h1 ><a href="/">智赢网</a><em>注册</em></h1>
+    <h1 ><a href="/">聚宝网</a><em>注册</em></h1>
   </div>
 </div>
-<div class="tips"><?php if ($this->_tpl_vars['same_user']): ?><em>!</em>&nbsp;您的用户名在智赢网已经被注册过
+<div class="tips"><?php if ($this->_tpl_vars['same_user']): ?><em>!</em>&nbsp;您的用户名在聚宝网已经被注册过
   <?php endif; ?></div>
 <div class="biaodan">
   <dl>
@@ -114,4 +114,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--页面底部-->
+<!--页面底部-->

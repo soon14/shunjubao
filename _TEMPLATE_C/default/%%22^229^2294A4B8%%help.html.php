@@ -7,7 +7,7 @@
       <dd>
         <div><img src="<?php echo @STATICS_BASE_URL; ?>
 /i/eweiMa.jpg" /></div>
-        <span>智赢竞彩网</span> </dd>
+        <span>聚宝竞彩网</span> </dd>
     </dl>
     <dl>
       <dt><b>购买流程</b></dt>
@@ -31,7 +31,7 @@
 /help/showFgz.html">竞彩足球</a></p>
         <p><a href="<?php echo @ROOT_WEBSITE; ?>
 /help/showFgz.html">竞彩篮球</a></p>
-        <p><a href="">智赢2串1</a></p>
+        <p><a href="">聚宝2串1</a></p>
       </dd>
     </dl>
     <dl>
@@ -49,7 +49,7 @@
       </dd>
     </dl>
     <dl>
-      <dt><b>智赢网官方微博</b></dt>
+      <dt><b>聚宝网官方微博</b></dt>
       <dd>
         <p class="weibo"><a href="http://weibo.com/u/5107700124">新浪微博</a></p>
         <p class="weibo none"><a href="">腾讯微博</a></p>

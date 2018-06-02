@@ -4,9 +4,9 @@
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'quick_ticket_iframe.html', 11, false),)), $this); ?>
 <!DOCTYPE html>
 <head>
-<title>智赢网单关投注华山论剑，谁是今日英雄！微博@智赢网，最IN的分析将赢取10积分！</title>
-<meta name="keywords" content="智赢，智赢网，智赢彩票，体育彩票，单关投注！" />
-<meta name="description" content="智赢网单关投注华山论剑，谁是今日英雄！微博@智赢网，最IN的分析将赢取10积分！" />
+<title>聚宝网单关投注华山论剑，谁是今日英雄！微博@聚宝网，最IN的分析将赢取10积分！</title>
+<meta name="keywords" content="聚宝，聚宝网，聚宝彩票，体育彩票，单关投注！" />
+<meta name="description" content="聚宝网单关投注华山论剑，谁是今日英雄！微博@聚宝网，最IN的分析将赢取10积分！" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
 <meta content='yes' name='apple-mobile-web-app-capable' />
@@ -86,7 +86,7 @@ var $ = jQuery.noConflict(true);
 <div id="fade" class="black_overlay"></div>
 <div class="top">
   <div class="logo">
-    <h1><a href="http://m.zhiying365.com/">智赢网</a></h1>
+    <h1><a href="http://m.zhiying365.com/">聚宝网</a></h1>
   </div>
   <div class="topCenter">
     <h1></h1>
@@ -227,7 +227,7 @@ $(document).ready(function() {
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td style="width:60px;"><div class="jiaoju"><span>[</span>聚焦<br/>单关<span>]</span></div></td>
-    <td style="text-align:left; line-height:24px;color:#555; font-size:12px;">华山论剑，谁是今日英雄！<p>微博@智赢网，最IN的分析将赢取10积分！</p></td>
+    <td style="text-align:left; line-height:24px;color:#555; font-size:12px;">华山论剑，谁是今日英雄！<p>微博@聚宝网，最IN的分析将赢取10积分！</p></td>
   </tr>
 </table>
 </div>

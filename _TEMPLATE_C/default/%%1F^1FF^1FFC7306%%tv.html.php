@@ -25,7 +25,7 @@ unset($_smarty_tpl_vars);
 <div>
   <div class="s11">
     <div class="s11top">
-      <h1><a href="http://www.zhiying365.com/"><img src="http://www.zhiying365.com/www/statics/i/11logo.jpg"></a><span>智赢TV直播间足球直播！</span></h1>
+      <h1><a href="http://www.zhiying365.com/"><img src="http://www.zhiying365.com/www/statics/i/11logo.jpg"></a><span>聚宝TV直播间足球直播！</span></h1>
       <div class="fenxiang">
         <div class="share">
           <ul>

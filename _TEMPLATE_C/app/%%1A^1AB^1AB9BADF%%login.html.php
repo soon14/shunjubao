@@ -12,9 +12,9 @@ unset($_smarty_tpl_vars);
 </head>
 <body>
 <div class="top">
-  <h3>登录智赢网</h3>
+  <h3>登录聚宝网</h3>
   <div class="logo none">
-    <h1 ><a href="/">智赢网</a><em>登录</em></h1>
+    <h1 ><a href="/">聚宝网</a><em>登录</em></h1>
   </div>
 </div>
 <div class="center">

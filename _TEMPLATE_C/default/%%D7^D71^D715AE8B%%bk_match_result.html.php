@@ -3,9 +3,9 @@
 <!DOCTYPE>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>竞彩篮球赛果派奖-智赢网智赢竞彩智赢彩票数据中心！</title>
+<title>竞彩篮球赛果派奖-聚宝网聚宝竞彩聚宝彩票数据中心！</title>
 <meta name="keywords" content="篮球比分直播,篮球直播,篮球即时比分,足彩即时比分,篮球彩票比分,比分直播网,篮球数据中心。" />
-<meta name="description" content="竞彩篮球赛果派奖，智赢网智赢竞彩智赢彩票数据中心" />
+<meta name="description" content="竞彩篮球赛果派奖，聚宝网聚宝竞彩聚宝彩票数据中心" />
 </head>
 <body>
 <link type="text/css" rel="stylesheet" href="http://www.shunjubao.xyz/www/statics/c/header.css" />
@@ -147,12 +147,12 @@ if ($this->_foreach['name']['total'] > 0):
 </div>
 </div>
 <!--center end-->
-<!--智赢页面底部 start-->
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../default/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--智赢页面底部 end-->
+<!--聚宝页面底部 end-->
 </body>
 </html>

@@ -43,7 +43,7 @@ var $ = jQuery.noConflict(true);
 </script>
 
 <div class="top">
-  <div class="logo"><h1><a href="http://m.shunjubao.xyz/">智赢网</a></h1></div>
+  <div class="logo"><h1><a href="http://m.shunjubao.xyz/">聚宝网</a></h1></div>
   <div class="topCenter">
     <h1></h1>
     <div class="clear"></div>

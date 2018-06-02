@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>智赢后台管理工作平台</title>
+<title>聚宝后台管理工作平台</title>
 </head>
 <frameset rows="127,*,11" frameborder="no" border="0" framespacing="0">
     <frame src="<?php echo @ROOT_DOMAIN; ?>

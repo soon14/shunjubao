@@ -17,7 +17,7 @@ TMJF(function($) {
 </script>
 <!--center start-->
 <div class="paytop">
-  <h1>智赢用户充值中心</h1>
+  <h1>聚宝用户充值中心</h1>
 </div>
 <div class="center">
   <div class="pay">
@@ -85,7 +85,7 @@ TMJF(function($) {
     <!---->
   </div>
 </div>
-<div class="yiwen">如您有问题，请联系智赢网客服。</div>
+<div class="yiwen">如您有问题，请联系聚宝网客服。</div>
 <!--center end-->
 <style>
 .tips{margin:0 auto;width:350px;text-align:center;font-size:26px;font-family:'Microsoft YaHei';font-weight:900;padding:12px 0 0 0;}
@@ -145,7 +145,7 @@ this.clientHeight)/2);/*IE5 IE5.5*/}
           <div class="aaaaa">
             <p><span></span>需充值的会员请联系客服进行手工充值（客服微信：zy365118或a37573231,客服QQ3043163441或1323698651）为避免充不上，请于赛前20分钟完成充值<span></span></p>
             <p>
-            <p style="text-align:right;font-size:14px;">智赢网官方</p>
+            <p style="text-align:right;font-size:14px;">聚宝网官方</p>
           </div>
         </div>
       </div>

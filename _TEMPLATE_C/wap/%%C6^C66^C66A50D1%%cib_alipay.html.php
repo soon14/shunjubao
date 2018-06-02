@@ -42,7 +42,7 @@ body{background:#f1f1f1; font-size:12px; font-family:'宋体';}
 </b></li>
         <li>交易金额：<span><?php echo $this->_tpl_vars['payment']; ?>
 元</span></li>
-        <li>收款方：智赢网</li>
+        <li>收款方：聚宝网</li>
         <li>订单号：<?php echo $this->_tpl_vars['out_trade_no']; ?>
 </li>
       </ul>
@@ -107,4 +107,4 @@ var orderid = '<?php echo $this->_tpl_vars['out_trade_no']; ?>
 $this->_smarty_include(array('smarty_include_tpl_file' => "../wap/footer.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?> 
+ ?> 

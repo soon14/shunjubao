@@ -29,9 +29,9 @@ unset($_smarty_tpl_vars);
 <body>
 <!--页面头部 start-->
 <div class="top">
-  <h3>注册智赢<a href="/">返回</a></h3>
+  <h3>注册聚宝<a href="/">返回</a></h3>
   <div class="logo none">
-    <h1 ><a href="/">智赢网</a><em>注册</em></h1>
+    <h1 ><a href="/">聚宝网</a><em>注册</em></h1>
   </div>
 </div>
 <!--页面头部 end--

@@ -29,8 +29,8 @@ $("#hacker tr:odd").addClass('listtd');});</script>
 <div class="center">
   <div class="tipsters">
     <div class="NewsNav">
-      <h1><b>智赢专家</b><em>停止盲目猜测...<br/>
-        <span>跟随智赢网专业分析师的建议</span></em>
+      <h1><b>聚宝专家</b><em>停止盲目猜测...<br/>
+        <span>跟随聚宝网专业分析师的建议</span></em>
         <ul>
           <li class="active"><a href="zhuanjia_list.php">浏览订阅分析师</a></li>
         </ul>
@@ -40,7 +40,7 @@ $("#hacker tr:odd").addClass('listtd');});</script>
   <div class="haochu">
     <dl>
       <dt>1</dt>
-      <dd>智赢网的专家都是实战派</dd>
+      <dd>聚宝网的专家都是实战派</dd>
       <dt>2</dt>
       <dd>跟随专家推荐</dd>
       <dt>3</dt>
@@ -165,9 +165,9 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
 <!--弹出订阅 start-->
 <div id="light1" class="white_content">
   <div class="dyCenter">
-    <h1>订阅智赢专家<a href="">服务细则</a><span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
+    <h1>订阅聚宝专家<a href="">服务细则</a><span><a href="javascript:void(0)" onClick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></span></h1>
     <div class="tips">
-      <p>在订阅智赢专家之前，请您确保您在智赢网里的账户余额够支付此次订阅的费用!
+      <p>在订阅聚宝专家之前，请您确保您在聚宝网里的账户余额够支付此次订阅的费用!
       <p> 
     </div>
     <form action="booking_action.php" method="post">
@@ -211,7 +211,7 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
         <div class="feiyong"><span>*</span>包周的专家一周至少推荐场次不低于7场；<em>包月的专家一月至少推荐场次不低于30场。</em></div>
       </div>
     </form>
-    <h2>停止盲目猜测...跟随智赢网专业分析师的建议。</h2>
+    <h2>停止盲目猜测...跟随聚宝网专业分析师的建议。</h2>
   </div>
 </div>
 <!--弹出订阅 end--> 
@@ -222,13 +222,13 @@ $this->_sections['a']['last']       = ($this->_sections['a']['iteration'] == $th
 </script>
 <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
 </div>
-<!--智赢页面底部 start--> 
+<!--聚宝页面底部 start-->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "foot.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?> 
-<!--智赢页面底部 end--> 
+<!--聚宝页面底部 end-->
 <script>
 
 function booking_expert(id){ 

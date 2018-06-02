@@ -214,7 +214,7 @@ unset($_smarty_tpl_vars);
     </div>
   </div>
   <?php endif; ?>
-  <div class="Tips">智赢网是彩票赢家的聚集地，口碑最好的彩票做单网站</div>
+  <div class="Tips">聚宝网是彩票赢家的聚集地，口碑最好的彩票做单网站</div>
 </div>
 <!--center end-->
 <!--footer start-->

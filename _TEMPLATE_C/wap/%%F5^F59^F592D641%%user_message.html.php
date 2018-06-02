@@ -138,7 +138,7 @@ $(document).ready(function() {//vendor script
 <!-- Content -->
 <div class="wapxtags">
   <ul>
-    <li class="active"><a href="http://m.shunjubao.xyz/account/user_pms.php" >留言智赢</a> </li>
+    <li class="active"><a href="http://m.shunjubao.xyz/account/user_pms.php" >留言聚宝</a> </li>
   </ul>
   <div class="clear"></div>
 </div>

@@ -484,7 +484,7 @@ if ($this->_foreach['ticket']['total'] > 0):
     <?php if ($this->_tpl_vars['nextUrl']): ?> <a href="<?php echo $this->_tpl_vars['nextUrl']; ?>
 ">下一页</a> <?php endif; ?> </div>
   <?php endif; ?> </div>
-<div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录智赢网站进行查询！</div>
+<div class="yiwen"><span style="color:red;padding:0 5px 0 0; position:relative;top:3px;">*</span>中奖详情请登录聚宝网站进行查询！</div>
 </div>
 </div>
 <div id="light1" class="white_content">
@@ -534,7 +534,7 @@ if ($this->_foreach['ticket']['total'] > 0):
         </dd>
       </dl>
     </div>
-    <h2>智赢晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
+    <h2>聚宝晒单中心-专家和明星会员推荐,打造竞彩中奖的福地！</h2>
   </div>
 </div>
 <div id="light2" class="white_content">

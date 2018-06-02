@@ -5,9 +5,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'string_form
 <!DOCTYPE html>
 <html xmlns:wb=“http://open.weibo.com/wb”>
 <head>
-<title>定制跟单-智赢网|智赢竞彩|彩票赢家首选人气最旺的网站！</title>
-<meta name="keywords" content="竞彩晒单,竞彩跟单,晒单跟单,智赢网跟单,智赢网竞猜跟单,足彩跟单,篮彩跟单,彩票跟单,竞彩熊超,专注2串1,竞彩投注,智赢网晒单中心,智赢网跟单中心,跟单大力水手,智赢网竞彩熊超。 " />
-<meta name="description" content="定制跟单，智赢定制跟单,专家和明星会员推荐方案的跟单方案，不错失任何一红单，致力于打造竞彩中奖的福地。" />
+<title>定制跟单-聚宝网|聚宝竞彩|彩票赢家首选人气最旺的网站！</title>
+<meta name="keywords" content="竞彩晒单,竞彩跟单,晒单跟单,聚宝网跟单,聚宝网竞猜跟单,足彩跟单,篮彩跟单,彩票跟单,竞彩熊超,专注2串1,竞彩投注,聚宝网晒单中心,聚宝网跟单中心,跟单大力水手,聚宝网竞彩熊超。 " />
+<meta name="description" content="定制跟单，聚宝定制跟单,专家和明星会员推荐方案的跟单方案，不错失任何一红单，致力于打造竞彩中奖的福地。" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link href="http://www.shunjubao.xyz/www/statics/c/header.css" type="text/css" rel="stylesheet" />
 <link href="http://www.shunjubao.xyz/www/statics/c/dingzhi.css" type="text/css" rel="stylesheet" />

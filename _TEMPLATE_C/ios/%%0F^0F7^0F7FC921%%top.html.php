@@ -46,10 +46,10 @@ var $ = jQuery.noConflict(true);
 <div id="fade" class="black_overlay"></div>
 <div class="top">
   <div class="logo">
-    <h1><b>智赢网</b><span>智取人生</span></h1>
+    <h1><b>聚宝网</b><span>智取人生</span></h1>
   </div>
   <div class="topCenter">
     <h1></h1>
   </div>
   <div class="clear"></div>
-</div>
+</div>

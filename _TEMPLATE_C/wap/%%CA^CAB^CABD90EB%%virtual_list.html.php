@@ -2,13 +2,13 @@
          compiled from virtual_list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'truncate', 'virtual_list.html', 196, false),)), $this); ?>
-<title>CBA\中超-积分投注触屏版，竞猜CBA\中超来智赢!!</title>
+<title>CBA\中超-积分投注触屏版，竞猜CBA\中超来聚宝!!</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
 <meta content='yes' name='apple-mobile-web-app-capable' />
 <meta content='black' name='apple-mobile-web-app-status-bar-style' />
 <meta content='telephone=no' name='format-detection' />
-<meta name="keywords" content="积分投注,CBA,CBA投注,中超投注,中超联赛,中国足球智赢网，智赢彩票"/>
+<meta name="keywords" content="积分投注,CBA,CBA投注,中超投注,中超联赛,中国足球聚宝网，聚宝彩票"/>
 <meta name="description" content="积分投注，专为中国CBA、中超球迷提供！" />
 <link href="http://m.shunjubao.xyz/www/statics/c/wap_header.css" type="text/css" rel="stylesheet" />
 <link href="http://m.shunjubao.xyz/www/statics/c/wap_footer.css" type="text/css" rel="stylesheet" />
@@ -176,7 +176,7 @@ function cal() {
 }
 </script>
 <body>
-<!--智赢页面头部 end-->
+<!--聚宝页面头部 end-->
 <div class="touzhutips"><em>!</em>所有赛事只能投注单场，不能串关!</div>
 <!---->
 <div class="tipsters">

@@ -4,7 +4,7 @@
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getStaticsUrl', 'total_prize_rank.html', 5, false),)), $this); ?>
 <!DOCTYPE html>
 <head>
-<title>中奖排行-智赢网-彩票赢家首选人气最旺的网站！</title>
+<title>中奖排行-聚宝网-彩票赢家首选人气最旺的网站！</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="<?php echo ((is_array($_tmp='footer.css')) ? $this->_run_mod_handler('getStaticsUrl', true, $_tmp) : getStaticsUrl($_tmp)); ?>
 "/>
