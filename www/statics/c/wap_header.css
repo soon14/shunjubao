@@ -1,7 +1,7 @@
 .top{height:48px;line-height:48px;background:#BC1E1F;padding:0 1%;text-align:left;position:relative;}
 .logo{position:absolute;width:120px;height:48px;top:0;left:2px;text-align:center;}
 .logo h1{ font-size:14px;width:120px;height:48px;}
-.logo h1 a{width:75px;height:48px;display:block;font-size:22px;color:#fff;font-family:'时尚中黑简体';font-weight:300;background:url(../i/applogo.jpg) no-repeat left center;text-indent:-50000px;}
+.logo h1 a{width:75px;height:48px;display:block;font-size:22px;color:#fff;font-family:'时尚中黑简体';font-weight:300;background:url(../i/logo.jpg) no-repeat left center;text-indent:-50000px;}
 .logo h1 em{ font-size:12px;font-weight:300;font-style:normal;color:#fff;position:absolute;top:0;left:80px;}
 .logo h2{ font-size:14px;width:120px;height:48px;}
 .logo h3{ font-size:16px;font-family:'Microsoft YaHei';font-weight:900;text-align:center;color:#fff;}
