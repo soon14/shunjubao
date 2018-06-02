@@ -39,8 +39,8 @@ do {
 	$username = $HYconfigs['huayang']['username'];//计费账户用户名
 	$ticketuser = '王忠仓';//彩票持有人真实姓名
 	$identify = '130684198401098893';//身份证号码
-	$phone = '13716778164';//
-	$email = '328378851@qq.com';//
+	$phone = '15238713049';//
+	$email = '1323698651@qq.com';//
 	$transactiontype = 13010;
 
 do{
